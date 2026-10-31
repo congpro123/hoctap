@@ -8,7 +8,12 @@ const subjects = [
   ['Lịch sử', '☸', '#fff4df', '#dba546']
 ];
 
-// Hàm làm sạch tiền tố a), b), c), d) nếu dữ liệu câu hỏi đã có sẵn
+// Hàm lọc bỏ tiền tố trùng lặp 'A.', 'B.', 'C.', 'D.' hoặc 'a)', 'b)', 'c)', 'd)'
+function cleanOptionText(text) {
+  if (!text) return '';
+  return String(text).replace(/^[A-Da-d][\)\.\:\-]\s*/, '').trim();
+}
+
 function cleanItemText(text) {
   if (!text) return '';
   return String(text).replace(/^[a-dA-D][\)\.\:\-]\s*/, '').trim();
@@ -36,6 +41,9 @@ function normalizeExam(e) {
     e.questions.forEach(q => {
       if (typeof q[2] === 'string' && letterMap[q[2].toUpperCase()] !== undefined) {
         q[2] = letterMap[q[2].toUpperCase()];
+      }
+      if (Array.isArray(q[1])) {
+        q[1] = q[1].map(cleanOptionText);
       }
     });
   } else {
@@ -364,7 +372,7 @@ function renderExam() {
           <div class="options">
             ${q[1].map((o, j) => `<label class="option ${answers['m' + i] === j ? 'selected' : ''}">
               <input type="radio" name="m${i}" value="${j}" data-kind="m" data-index="${i}" ${answers['m' + i] === j ? 'checked' : ''}>
-              <span>${'ABCD'[j]}. ${o}</span>
+              <span>${'ABCD'[j]}. ${cleanOptionText(o)}</span>
             </label>`).join('')}
           </div>
         </div>`).join('')}
@@ -543,7 +551,7 @@ function renderResult(r) {
             <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q[0]}</b>
             <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
               ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa trả lời</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn chọn (${'ABCD'[user]})</span>`}
-              <span style="font-size: 14px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 15px;">${'ABCD'[q[2]]}. ${q[1][q[2]]}</b></span>
+              <span style="font-size: 14px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 15px;">${'ABCD'[q[2]]}. ${cleanOptionText(q[1][q[2]])}</b></span>
             </div>
             <div class="explain" style="margin-top: 6px; padding: 10px 14px; background: #f8fafc; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 14px; color: #334155;">${q[3] || 'Không có giải thích bổ sung.'}</div>
           </div>`;
