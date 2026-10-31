@@ -8,6 +8,12 @@ const subjects = [
   ['Lịch sử', '☸', '#fff4df', '#dba546']
 ];
 
+// Hàm làm sạch tiền tố a), b), c), d) nếu dữ liệu câu hỏi đã có sẵn
+function cleanItemText(text) {
+  if (!text) return '';
+  return String(text).replace(/^[a-dA-D][\)\.\:\-]\s*/, '').trim();
+}
+
 // Hàm chuẩn hóa dữ liệu đề thi tự động tương thích
 function normalizeExam(e) {
   if (!e.source) {
@@ -36,6 +42,18 @@ function normalizeExam(e) {
     e.questions = [];
   }
 
+  if (Array.isArray(e.tf)) {
+    e.tf.forEach(tfItem => {
+      if (Array.isArray(tfItem.items)) {
+        tfItem.items.forEach(it => {
+          if (it && it[0]) it[0] = cleanItemText(it[0]);
+        });
+      }
+    });
+  } else {
+    e.tf = [];
+  }
+
   if (Array.isArray(e.short)) {
     e.short.forEach(s => {
       if (!s.text && s.question) s.text = s.question;
@@ -46,11 +64,10 @@ function normalizeExam(e) {
   } else {
     e.short = [];
   }
-  if (!Array.isArray(e.tf)) e.tf = [];
   return e;
 }
 
-// Khởi tạo danh sách đề thi (khai báo dạng let để không bị lỗi gán const)
+// Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
   ? suppliedExams
@@ -359,7 +376,7 @@ function renderExam() {
             <span>${q.stem}</span>
           </div>
           ${(q.items || []).map((item, j) => `<div class="tf-row">
-            <span>${'abcd'[j]}) ${item[0]}</span>
+            <span><b>${'abcd'[j]})</b> ${cleanItemText(item[0])}</span>
             <div class="tf-options">
               <label><input type="radio" name="t${i}-${j}" value="true" data-kind="t" data-index="${i}-${j}" ${answers['t' + i + '-' + j] === true ? 'checked' : ''}> Đúng</label>
               <label><input type="radio" name="t${i}-${j}" value="false" data-kind="t" data-index="${i}-${j}" ${answers['t' + i + '-' + j] === false ? 'checked' : ''}> Sai</label>
@@ -522,24 +539,29 @@ function renderResult(r) {
         ${(e.questions || []).map((q, i) => {
           const user = r.answers['m' + i];
           const ok = user === q[2];
-          return `<div class="review-item">
-            <b>Câu ${i + 1}. ${q[0]}</b>
-            <span class="${ok ? 'ok' : 'wrong'}">${user === undefined ? 'Chưa trả lời' : ok ? 'Đúng' : `Chọn sai (${'ABCD'[user]})`}</span>
-            <small>Đáp án đúng: <b>${'ABCD'[q[2]]}. ${q[1][q[2]]}</b></small>
-            <div class="explain">${q[3] || 'Không có giải thích bổ sung.'}</div>
+          return `<div class="review-item" style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+            <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q[0]}</b>
+            <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa trả lời</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn chọn (${'ABCD'[user]})</span>`}
+              <span style="font-size: 14px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 15px;">${'ABCD'[q[2]]}. ${q[1][q[2]]}</b></span>
+            </div>
+            <div class="explain" style="margin-top: 6px; padding: 10px 14px; background: #f8fafc; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 14px; color: #334155;">${q[3] || 'Không có giải thích bổ sung.'}</div>
           </div>`;
         }).join('')}
 
         <h3>Phần II · Trắc nghiệm Đúng / Sai (2 câu)</h3>
-        ${(e.tf || []).map((q, i) => `<div class="review-item">
-          <b>Câu ${i + 1}. ${q.stem}</b>
+        ${(e.tf || []).map((q, i) => `<div class="review-item" style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+          <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q.stem}</b>
           ${(q.items || []).map((item, j) => {
             const user = r.answers['t' + i + '-' + j];
             const ok = user === item[1];
-            return `<div class="sub-review">
-              <span>${'abcd'[j]}) ${item[0]}</span>
-              <span class="${ok ? 'ok' : 'wrong'}">${user === undefined ? 'Chưa chọn' : ok ? 'Đúng' : `Chọn sai (${user ? 'Đúng' : 'Sai'})`}</span>
-              <small>Đáp án: <b>${item[1] ? 'Đúng' : 'Sai'}</b> ${item[2] ? `(${item[2]})` : ''}</small>
+            return `<div class="sub-review" style="margin: 10px 0; padding: 10px 14px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px;">
+              <div style="font-size: 14px; color: #1e293b; line-height: 1.5;"><b>${'abcd'[j]})</b> ${cleanItemText(item[0])}</div>
+              <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa chọn</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn chọn: ${user ? 'Đúng' : 'Sai'}</span>`}
+                <span style="font-size: 13px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 14px;">${item[1] ? 'Đúng' : 'Sai'}</b></span>
+              </div>
+              ${item[2] ? `<div style="font-size: 13px; color: #475569; font-style: italic; background: #f8fafc; padding: 6px 10px; border-radius: 4px; line-height: 1.5;">${item[2]}</div>` : ''}
             </div>`;
           }).join('')}
         </div>`).join('')}
@@ -548,11 +570,13 @@ function renderResult(r) {
         ${(e.short || []).map((q, i) => {
           const user = r.answers['s' + i];
           const ok = shortCorrect(user, q.answer);
-          return `<div class="review-item">
-            <b>Câu ${i + 1}. ${q.text || q.question}</b>
-            <span class="${ok ? 'ok' : 'wrong'}">${user === undefined || String(user).trim() === '' ? 'Chưa điền' : ok ? 'Đúng' : `Điền sai (${esc(user)})`}</span>
-            <small>Đáp án: <b>${esc(q.answer)} ${esc(q.unit || '')}</b></small>
-            <div class="explain">${esc(q.explain || q.explanation || 'Không có giải thích bổ sung.')}</div>
+          return `<div class="review-item" style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+            <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q.text || q.question}</b>
+            <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined || String(user).trim() === '' ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa điền</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn điền: ${esc(user)}</span>`}
+              <span style="font-size: 14px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 15px;">${esc(q.answer)} ${esc(q.unit || '')}</b></span>
+            </div>
+            <div class="explain" style="margin-top: 6px; padding: 10px 14px; background: #f8fafc; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 14px; color: #334155; line-height: 1.6;">${q.explain || q.explanation || 'Không có giải thích bổ sung.'}</div>
           </div>`;
         }).join('')}
       </div>
@@ -561,6 +585,7 @@ function renderResult(r) {
   setNav('result');
 }
 
+// Lắng nghe sự kiện toàn cục
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-start],[data-viewto],[data-subjectto],[data-submit],[data-jump]');
   if (!b) return;
@@ -592,5 +617,6 @@ window.addEventListener('hashchange', () => {
   else home();
 });
 
+// Khởi chạy khi nạp trang
 if (location.hash) window.dispatchEvent(new Event('hashchange'));
 else home();
