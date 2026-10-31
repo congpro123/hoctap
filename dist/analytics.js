@@ -1,4 +1,8 @@
 // Trang dùng JavaScript để đổi mục nên gửi page_view cho các lượt chuyển nội bộ.
+window.dataLayer=window.dataLayer||[];
+window.gtag=function(){window.dataLayer.push(arguments)};
+gtag('js',new Date());
+gtag('config','G-66GXVD429S');
 const originalGo=go;
 go=function(view){
   const previous=currentView;
