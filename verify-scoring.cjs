@@ -1,0 +1,16 @@
+const fs=require('node:fs');
+const vm=require('node:vm');
+const assert=require('node:assert/strict');
+const exam={questions:Array.from({length:12},()=>['Q',['A','B','C','D'],0]),tf:Array.from({length:2},()=>({items:[[1,true],[2,true],[3,true],[4,true]]})),short:Array.from({length:3},()=>({answer:5}))};
+const ctx={submitExam(){},renderExam(){},renderResult(){},history(){},reviewPast(){},shortCorrect:(input,answer)=>Number(input)===answer,exams:[exam]};
+vm.createContext(ctx);
+vm.runInContext(fs.readFileSync('dist/scoring.js','utf8'),ctx);
+const empty=ctx.scoreExam(exam,{});
+assert.equal(empty.points,0);assert.equal(empty.max,6.5);
+const all={};exam.questions.forEach((_,i)=>all['m'+i]=0);for(let i=0;i<2;i++)for(let j=0;j<4;j++)all[`t${i}-${j}`]=true;for(let i=0;i<3;i++)all['s'+i]='5';
+assert.equal(ctx.scoreExam(exam,all).points,6.5);
+const partial={'m0':0,'t0-0':true,'t0-1':true,'t0-2':true,'s0':'5'};
+const result=ctx.scoreExam(exam,partial);
+assert.equal(result.mc,.25);assert.equal(result.tf,.5);assert.equal(result.short,.5);assert.equal(result.points,1.25);
+assert.equal(ctx.scoreExam(exam,all,true).max,3);
+console.log('Đã kiểm tra điểm tối đa, điểm từng phần và bài cũ.');
