@@ -75,9 +75,13 @@ exams.push({id:'VL10-GKI-03',title:'Vật lý 10 · Giữa kì I — Đà Nẵng
  {text:'Một xe chạy thẳng 72 km trong 2 giờ. Tốc độ trung bình là bao nhiêu km/h?',answer:36,unit:'km/h',explain:'72/2 = 36 km/h.'},
  {text:'Ba lần đo chiều dài là 119 cm, 120 cm và 121 cm. Giá trị trung bình là bao nhiêu cm?',answer:120,unit:'cm',explain:'(119 + 120 + 121)/3 = 120 cm.'}]
 });
-exams.forEach(e=>e.subject='physics');
-exams.push(...extraExams);
-exams.push(...mathExams);
+if (typeof suppliedExams !== 'undefined' && suppliedExams.length > 0) {
+  exams = [...suppliedExams];
+} else {
+  exams.forEach(e => e.subject = 'physics');
+  exams.push(...extraExams);
+  exams.push(...mathExams);
+}
 const app=document.getElementById('app');let currentView='home',activeExam=null,answers={},deadline=0,ticker=null;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const saved=()=>{try{return JSON.parse(localStorage.getItem('hoctap-results')||'[]')}catch{return[]}};
