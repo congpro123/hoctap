@@ -77,6 +77,7 @@ exams.push({id:'VL10-GKI-03',title:'Vật lý 10 · Giữa kì I — Đà Nẵng
 });
 exams.forEach(e=>e.subject='physics');
 exams.push(...extraExams);
+exams.push(...mathExams);
 const app=document.getElementById('app');let currentView='home',activeExam=null,answers={},deadline=0,ticker=null;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const saved=()=>{try{return JSON.parse(localStorage.getItem('hoctap-results')||'[]')}catch{return[]}};
