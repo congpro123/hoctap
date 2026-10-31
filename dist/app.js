@@ -1,116 +1,596 @@
-const subjects=[['Toán','∑','#e9e7ff','#6155e8'],['Vật lý','⚛','#e7f4ff','#4b9ad8'],['Tin học','⌘','#e7f8f0','#26a979'],['Công nghệ nông nghiệp','♣','#eef7e7','#72ae4b'],['Tiếng Anh','Aa','#fff0e8','#ec8e63'],['Hoá học','⚗','#fceaf4','#d76fab'],['Lịch sử','◷','#fff4df','#dba546']];
-const exams=[
-{id:'VL10-GKI-01',title:'Vật lý 10 · Giữa kì I — Đề 01',description:'Đo lường, sai số, chuyển động thẳng và đồ thị chuyển động.',minutes:25,questions:[
-['Đại lượng nào sau đây là đại lượng vectơ?',['Quãng đường','Tốc độ','Độ dịch chuyển','Thời gian'],2,'Độ dịch chuyển có độ lớn và hướng.'],
-['Một vật đi 3 m về phía Đông rồi 4 m về phía Bắc. Độ lớn độ dịch chuyển của vật là bao nhiêu?',['1 m','5 m','7 m','12 m'],1,'Áp dụng định lý Pythagore: √(3² + 4²) = 5 m.'],
-['Đơn vị SI của tốc độ là gì?',['km/h','m/s','m/s²','s/m'],1,'Tốc độ bằng quãng đường chia thời gian, đơn vị SI là m/s.'],
-['Một xe đi được 120 m trong 20 s. Tốc độ trung bình của xe là bao nhiêu?',['4 m/s','5 m/s','6 m/s','8 m/s'],2,'v = s/t = 120/20 = 6 m/s.'],
-['Phát biểu nào mô tả đúng chuyển động thẳng đều?',['Tốc độ tăng đều theo thời gian','Vật đi trên đường thẳng với tốc độ không đổi','Hướng chuyển động thay đổi liên tục','Gia tốc luôn tăng'],1,'Chuyển động thẳng đều có quỹ đạo thẳng và tốc độ không đổi.'],
-['Độ dốc của đồ thị độ dịch chuyển – thời gian cho biết đại lượng nào?',['Gia tốc','Lực','Vận tốc','Quãng đường'],2,'Độ dốc của đồ thị d–t bằng vận tốc.'],
-['Một người đi 60 m về phía Đông rồi 20 m về phía Tây trong 20 s. Vận tốc trung bình của người đó là bao nhiêu?',['2 m/s về phía Đông','4 m/s về phía Đông','2 m/s về phía Tây','4 m/s về phía Tây'],0,'Độ dịch chuyển là 40 m về phía Đông; vtb = 40/20 = 2 m/s.'],
-['Đồng hồ đo thời gian hiện 12,3 s. Độ chia nhỏ nhất là 0,1 s. Chữ số nào là chữ số có nghĩa cuối cùng?',['1','2','3','0'],2,'Chữ số hàng phần mười là 3.'],
-['Sai số tuyệt đối của phép đo thường có cùng đặc điểm gì với đại lượng được đo?',['Cùng đơn vị','Cùng hướng','Cùng giá trị','Không có đơn vị'],0,'Sai số tuyệt đối có cùng đơn vị với đại lượng đo.'],
-['Một vật chuyển động theo chiều dương với vận tốc 4 m/s trong 5 s. Độ dịch chuyển là bao nhiêu?',['0,8 m','9 m','20 m','25 m'],2,'d = v·t = 4·5 = 20 m.'],
-['Đồ thị vận tốc – thời gian là một đường thẳng song song với trục thời gian. Vật đang chuyển động như thế nào?',['Nhanh dần đều','Chậm dần đều','Vận tốc không đổi','Đổi chiều liên tục'],2,'Đường nằm ngang thể hiện vận tốc không đổi theo thời gian.'],
-['Khi tính tốc độ trung bình cho cả hành trình, ta lấy:',['Độ dịch chuyển chia thời gian','Tổng quãng đường chia tổng thời gian','Tốc độ lớn nhất chia thời gian','Trung bình cộng các tốc độ ở mọi chặng'],1,'Tốc độ trung bình bằng tổng quãng đường chia tổng thời gian.']]},
-{id:'VL10-GKI-02',title:'Vật lý 10 · Giữa kì I — Đề 02',description:'Ôn luyện vận tốc, gia tốc và chuyển động biến đổi đều.',minutes:25,questions:[
-['Gia tốc là đại lượng đặc trưng cho:',['Mức độ thay đổi vận tốc theo thời gian','Quãng đường vật đi được','Khối lượng của vật','Thời gian chuyển động'],0,'Gia tốc mô tả tốc độ biến thiên của vận tốc.'],
-['Đơn vị SI của gia tốc là gì?',['m','m/s','m/s²','km/h'],2,'Gia tốc bằng độ biến thiên vận tốc chia thời gian.'],
-['Vận tốc tăng từ 2 m/s lên 10 m/s sau 4 s theo một đường thẳng. Gia tốc là bao nhiêu?',['1 m/s²','2 m/s²','3 m/s²','4 m/s²'],1,'a = (10 − 2)/4 = 2 m/s².'],
-['Trong chuyển động thẳng biến đổi đều, đại lượng nào không đổi?',['Vận tốc','Gia tốc','Độ dịch chuyển mỗi giây','Tốc độ'],1,'Chuyển động thẳng biến đổi đều có gia tốc không đổi.'],
-['Một vật bắt đầu từ trạng thái nghỉ, chuyển động nhanh dần đều với a = 2 m/s². Sau 3 s, vận tốc là:',['3 m/s','5 m/s','6 m/s','9 m/s'],2,'v = v₀ + at = 0 + 2·3 = 6 m/s.'],
-['Diện tích dưới đồ thị vận tốc – thời gian (khi vận tốc dương) biểu diễn:',['Gia tốc','Độ dịch chuyển','Tốc độ trung bình','Thời gian'],1,'Diện tích dưới đường v–t bằng độ dịch chuyển.'],
-['Một xe giảm tốc đều từ 12 m/s xuống 4 m/s trong 4 s. Nếu chọn chiều chuyển động là chiều dương, gia tốc bằng:',['−2 m/s²','2 m/s²','−4 m/s²','4 m/s²'],0,'a = (4 − 12)/4 = −2 m/s².'],
-['Khi vật rơi tự do gần mặt đất và bỏ qua lực cản không khí, chuyển động của vật có đặc điểm nào?',['Tốc độ không đổi','Gia tốc hướng xuống gần như không đổi','Gia tốc bằng 0','Vật đi lên rồi đi xuống'],1,'Gia tốc rơi tự do hướng xuống và gần như không đổi.'],
-['Một vật chuyển động thẳng đều với tốc độ 5 m/s. Trong 8 s, vật đi được:',['13 m','25 m','40 m','80 m'],2,'s = vt = 5·8 = 40 m.'],
-['Trong công thức v = v₀ + at, ký hiệu v₀ là:',['Vận tốc ban đầu','Vận tốc trung bình','Gia tốc ban đầu','Độ dịch chuyển ban đầu'],0,'v₀ là vận tốc tại thời điểm bắt đầu xét.'],
-['Nếu vận tốc và gia tốc cùng chiều, tốc độ của vật:',['Giảm','Tăng','Luôn bằng 0','Không xác định được'],1,'Gia tốc cùng chiều vận tốc khiến độ lớn vận tốc tăng.'],
-['Một vật bắt đầu từ nghỉ và chuyển động nhanh dần đều với a = 2 m/s². Quãng đường trong 4 s đầu là:',['8 m','12 m','16 m','32 m'],2,'s = ½at² = ½·2·4² = 16 m.']]}
+const subjects = [
+  ['Toán', '∑', '#e9e7ff', '#6155e8'],
+  ['Vật lý', '⚛️', '#e7f4ff', '#4b9ad8'],
+  ['Tin học', '⌘', '#e7f8f0', '#26a979'],
+  ['Công nghệ nông nghiệp', '♣', '#eef7e7', '#72ae4b'],
+  ['Tiếng Anh', 'Aa', '#fff0e8', '#ec8e63'],
+  ['Hoá học', '🧪', '#fceaf4', '#d76fab'],
+  ['Lịch sử', '☸', '#fff4df', '#dba546']
 ];
-// Các bài luyện dưới đây được biên soạn lại theo chủ đề của đề công khai,
-// không phải bản chép nguyên văn hay đáp án chính thức của trường.
-exams[0].title='Vật lý 10 · Giữa kì I — Quảng Nam';
-exams[0].description='Bài luyện theo chủ đề đề THPT Âu Cơ, Quảng Nam (2024–2025).';
-exams[0].minutes=45;
-exams[0].source={school:'THPT Âu Cơ',province:'Quảng Nam',year:'2024–2025',url:'https://tailieu.vn/doc/de-thi-giua-ki-1-vat-ly-10-au-co-quang-nam-2903996.html',note:'Nguồn có ba phần trắc nghiệm; câu hỏi và đáp án trong bài luyện được biên soạn lại.'};
-exams[0].tf=[
- {stem:'Một học sinh đi 300 m về hướng Đông rồi đi 100 m về hướng Tây.',items:[['Tổng quãng đường đi được là 400 m.',true],['Độ lớn độ dịch chuyển là 200 m.',true],['Độ dịch chuyển hướng về phía Tây.',false],['Quãng đường và độ lớn độ dịch chuyển bằng nhau.',false]]},
- {stem:'Xét một vật chuyển động thẳng đều theo chiều dương với vận tốc 5 m/s trong 4 s.',items:[['Gia tốc của vật bằng 0.',true],['Độ dịch chuyển trong 4 s là 20 m.',true],['Đồ thị độ dịch chuyển – thời gian là đường thẳng nằm ngang.',false],['Tốc độ trung bình trong 4 s là 5 m/s.',true]]}
-];
-exams[0].short=[
- {text:'Một phép đo chiều dài được ghi là (120 ± 3) cm. Sai số tỉ đối của phép đo là bao nhiêu phần trăm? Chỉ nhập số.',answer:2.5,unit:'%',explain:'δ = (3/120) × 100% = 2,5%.'},
- {text:'Một người đi 90 m trong 15 s. Tốc độ trung bình là bao nhiêu m/s?',answer:6,unit:'m/s',explain:'v = 90/15 = 6 m/s.'},
- {text:'Một xe đi 60 m về phía Đông rồi 20 m về phía Tây trong 20 s. Độ lớn vận tốc trung bình là bao nhiêu m/s?',answer:2,unit:'m/s',explain:'Độ dịch chuyển 40 m; |v| = 40/20 = 2 m/s.'}
-];
-exams[1].title='Vật lý 10 · Giữa kì I — Kon Tum';
-exams[1].description='Bài luyện theo chủ đề đề THPT Nguyễn Văn Cừ, Kon Tum (2024–2025).';
-exams[1].minutes=45;
-exams[1].source={school:'THPT Nguyễn Văn Cừ',province:'Kon Tum',year:'2024–2025',url:'https://cdn.tailieu.vn/files/samples/2024/20241219/gaupanda066/de_thi_giua_hoc_ki_1_mon_vat_ly_lop_10_nam_2024_2025_truong_thpt_nguyen_van_cu_kon_tum_8702.pdf',note:'Nguồn có ba phần trắc nghiệm; số liệu và cách diễn đạt trong bài luyện được biên soạn lại.'};
-exams[1].tf=[
- {stem:'Một xe tăng vận tốc đều từ 4 m/s lên 12 m/s trong 4 s trên đường thẳng.',items:[['Gia tốc của xe là 2 m/s².',true],['Vận tốc trung bình trong khoảng này là 8 m/s.',true],['Quãng đường xe đi được là 32 m.',true],['Xe chuyển động thẳng đều.',false]]},
- {stem:'Một vật được thả rơi tự do từ trạng thái nghỉ; lấy g = 10 m/s² và bỏ qua lực cản.',items:[['Gia tốc của vật hướng xuống.',true],['Sau 2 s, tốc độ của vật là 20 m/s.',true],['Sau 2 s, vật rơi được 40 m.',false],['Tốc độ tăng đều theo thời gian.',true]]}
-];
-exams[1].short=[
- {text:'Thả rơi một vật từ trạng thái nghỉ trong 3 s; lấy g = 10 m/s². Vật rơi được bao nhiêu mét?',answer:45,unit:'m',explain:'h = ½gt² = ½ × 10 × 3² = 45 m.'},
- {text:'Một xe giảm vận tốc đều từ 20 m/s xuống 0 sau khi đi 100 m. Độ lớn gia tốc là bao nhiêu m/s²?',answer:2,unit:'m/s²',explain:'0 = 20² + 2a·100 nên a = −2 m/s², độ lớn là 2.'},
- {text:'Một vật đi thẳng đều 180 km trong 6 giờ. Tốc độ bằng bao nhiêu km/h?',answer:30,unit:'km/h',explain:'v = 180/6 = 30 km/h.'}
-];
-exams.push({id:'VL10-GKI-03',title:'Vật lý 10 · Giữa kì I — Đà Nẵng',description:'Bài luyện theo chủ đề đề THPT Lý Tự Trọng, Đà Nẵng (2025–2026).',minutes:45,source:{school:'THPT Lý Tự Trọng',province:'Đà Nẵng',year:'2025–2026',url:'https://grade.vn/de-thi/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-ly-tu-trong-da-nang-4462',note:'Nguồn công khai có phần nhiều lựa chọn; phần đúng/sai và trả lời ngắn do trang biên soạn thêm theo cùng chủ đề.'},questions:[
- ['Gia tốc cho biết điều gì?',['Sự thay đổi nhanh hay chậm của vận tốc','Độ dài quãng đường','Khối lượng của vật','Thời điểm vật xuất phát'],0,'Gia tốc là tốc độ biến thiên của vận tốc.'],
- ['Trong phòng thực hành, cách nào an toàn khi tắt đèn cồn?',['Thổi trực tiếp','Dùng nắp đậy đèn','Đổ nước lên ngọn lửa','Để đèn tự cháy hết'],1,'Dùng nắp đậy đèn cồn để ngắt nguồn oxy.'],
- ['Khi một vật đi thẳng và không đổi chiều, quãng đường và độ lớn độ dịch chuyển:',['Luôn khác nhau','Bằng nhau','Đều bằng 0','Không thể so sánh'],1,'Đường đi thẳng một chiều có quãng đường bằng độ lớn độ dịch chuyển.'],
- ['Dụng cụ nào dùng để đo trực tiếp thời gian?',['Thước mét','Đồng hồ bấm giây','Lực kế','Cân điện tử'],1,'Đồng hồ bấm giây đo thời gian.'],
- ['Đại lượng nào có phương và chiều?',['Tốc độ','Quãng đường','Độ dịch chuyển','Thời gian'],2,'Độ dịch chuyển là vectơ.'],
- ['Một vật đi 24 m trong 6 s. Tốc độ trung bình bằng:',['2 m/s','3 m/s','4 m/s','6 m/s'],2,'24/6 = 4 m/s.'],
- ['Độ dốc của đồ thị độ dịch chuyển – thời gian là:',['Vận tốc','Gia tốc','Thời gian','Quãng đường'],0,'Độ dốc đồ thị d–t cho vận tốc.'],
- ['Phương pháp thực nghiệm bao gồm việc nào?',['Chỉ suy luận','Đề xuất và kiểm tra giả thuyết bằng thí nghiệm','Chỉ đọc sách','Bỏ qua số liệu'],1,'Giả thuyết cần được kiểm tra bằng quan sát hoặc thí nghiệm.'],
- ['Sai số tuyệt đối của một phép đo chiều dài có đơn vị nào?',['Mét','Giây','m/s','Không có đơn vị'],0,'Sai số tuyệt đối có cùng đơn vị với đại lượng đo.'],
- ['Tốc kế của xe đang chạy hiển thị:',['Tốc độ tức thời','Tốc độ trung bình cả chuyến','Vận tốc trung bình','Gia tốc'],0,'Tốc kế cho biết tốc độ tức thời.'],
- ['Một vật đi 5 m về Đông rồi 5 m về Tây. Độ dịch chuyển là:',['0 m','5 m','10 m','25 m'],0,'Vị trí cuối trùng vị trí đầu.'],
- ['Đơn vị SI của vận tốc là:',['m','s','m/s','m/s²'],2,'Vận tốc có đơn vị m/s.']],tf:[
- {stem:'Một học sinh đo chiều dài bàn ba lần: 119 cm, 120 cm, 121 cm.',items:[['Giá trị trung bình là 120 cm.',true],['Các lần đo cho cùng một kết quả.',false],['Có thể dùng nhiều lần đo để ước lượng sai số ngẫu nhiên.',true],['Đơn vị của sai số tuyệt đối là cm.',true]]},
- {stem:'Một bạn đi 40 m về Bắc rồi 30 m về Đông trên hai đoạn đường vuông góc.',items:[['Quãng đường đi được là 70 m.',true],['Độ lớn độ dịch chuyển là 50 m.',true],['Độ lớn độ dịch chuyển là 70 m.',false],['Độ dịch chuyển là đại lượng vectơ.',true]]}
-],short:[
- {text:'Một bạn đi 40 m về Bắc rồi 30 m về Đông. Độ lớn độ dịch chuyển là bao nhiêu mét?',answer:50,unit:'m',explain:'√(40² + 30²) = 50 m.'},
- {text:'Một xe chạy thẳng 72 km trong 2 giờ. Tốc độ trung bình là bao nhiêu km/h?',answer:36,unit:'km/h',explain:'72/2 = 36 km/h.'},
- {text:'Ba lần đo chiều dài là 119 cm, 120 cm và 121 cm. Giá trị trung bình là bao nhiêu cm?',answer:120,unit:'cm',explain:'(119 + 120 + 121)/3 = 120 cm.'}]
-});
-if (typeof suppliedExams !== 'undefined' && suppliedExams.length > 0) {
-  exams = [...suppliedExams];
-} else {
-  exams.forEach(e => e.subject = 'physics');
-  exams.push(...extraExams);
-  exams.push(...mathExams);
+
+// Hàm chuẩn hóa dữ liệu đề thi tự động tương thích
+function normalizeExam(e) {
+  if (!e.source) {
+    e.source = {
+      school: e.school || 'Đề thi chuẩn',
+      province: e.province || '',
+      year: e.year || '',
+      url: e.sourceUrl || '#',
+      note: 'Chuẩn ma trận Bộ GD&ĐT 2026–2027'
+    };
+  }
+  if (!e.minutes && e.duration) e.minutes = e.duration;
+  if (!e.minutes) e.minutes = e.subject === 'math' ? 90 : 45;
+  if (!e.description) {
+    e.description = `Bộ đề kiểm tra giữa học kì I môn ${e.subject === 'math' ? 'Toán 10' : e.subject === 'chemistry' ? 'Hóa học 10' : 'Vật lí 10'}.`;
+  }
+  
+  const letterMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 };
+  if (Array.isArray(e.questions)) {
+    e.questions.forEach(q => {
+      if (typeof q[2] === 'string' && letterMap[q[2].toUpperCase()] !== undefined) {
+        q[2] = letterMap[q[2].toUpperCase()];
+      }
+    });
+  } else {
+    e.questions = [];
+  }
+
+  if (Array.isArray(e.short)) {
+    e.short.forEach(s => {
+      if (!s.text && s.question) s.text = s.question;
+      if (!s.question && s.text) s.question = s.text;
+      if (s.explain && !s.explanation) s.explanation = s.explain;
+      if (s.explanation && !s.explain) s.explain = s.explanation;
+    });
+  } else {
+    e.short = [];
+  }
+  if (!Array.isArray(e.tf)) e.tf = [];
+  return e;
 }
-const app=document.getElementById('app');let currentView='home',activeExam=null,answers={},deadline=0,ticker=null;
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const saved=()=>{try{return JSON.parse(localStorage.getItem('hoctap-results')||'[]')}catch{return[]}};
-const formatDate=d=>new Intl.DateTimeFormat('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date(d));
-document.getElementById('today').textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'long',day:'numeric',month:'long'}).format(new Date());
-document.getElementById('subject-nav').innerHTML=subjects.map((s,i)=>`<a href="#subject-${i}" class="subject-link" data-subject="${i}"><span class="subject-icon">${s[1]}</span>${s[0]}</a>`).join('');
-function setNav(view){document.querySelectorAll('.nav-link').forEach(x=>x.classList.toggle('active',x.dataset.view===view));document.querySelectorAll('.subject-link').forEach(x=>x.classList.toggle('active',view==='subject-'+x.dataset.subject));document.getElementById('crumb').textContent=({home:'TỔNG QUAN',subjects:'KHO ĐỀ THI',history:'LỊCH SỬ LÀM BÀI',exam:'PHÒNG THI',result:'KẾT QUẢ'})[view]||'MÔN HỌC'}
-function sourceLine(e){return `<div class="source-line">Nguồn tham khảo: <a href="${e.source.url}" target="_blank" rel="noopener noreferrer">${e.source.school} · ${e.source.province} · ${e.source.year} ↗</a><small>${e.source.note}</small></div>`}
-function card(e){return `<article class="exam-card"><div class="card-top"><span class="subject-pill">⚛ &nbsp; VẬT LÝ 10</span><span class="card-code">${e.id}</span></div><h3>${e.title}</h3><p>${e.description}</p><div class="meta"><span>◷ &nbsp; ${e.minutes} phút</span><span>☷ &nbsp; ${e.questions.length} nhiều lựa chọn</span><span>✓ &nbsp; ${e.tf.length} đúng/sai</span><span>✎ &nbsp; ${e.short.length} trả lời ngắn</span></div>${sourceLine(e)}<div class="card-bottom"><span>Giữa học kì I</span><button class="primary" data-start="${e.id}">Bắt đầu làm bài →</button></div></article>`}
-function home(){const n=saved().length;app.innerHTML=`<div class="content"><section class="hero"><div class="hero-copy"><span class="eyebrow">✦ &nbsp; KHÔNG GIAN HỌC TẬP CỦA BẠN</span><h1>Học tập hôm nay,<br>tự tin ngày mai.</h1><p>Ôn tập, thử sức với đề thi và theo dõi tiến bộ của mình trong một không gian dành riêng cho tổ hợp Tin lớp 10.</p></div><div class="hero-art"><div class="orbit"></div><div class="planet one">📚</div><div class="planet two">⚛</div><div class="planet three">✦</div></div></section><section class="stats"><div class="stat"><span class="stat-icon purple">▦</span><div><b>07</b><small>Môn học</small></div></div><div class="stat"><span class="stat-icon orange">☷</span><div><b>${String(exams.length).padStart(2,'0')}</b><small>Đề thi sẵn sàng</small></div></div><div class="stat"><span class="stat-icon green">◷</span><div><b>${String(n).padStart(2,'0')}</b><small>Lượt thi đã hoàn thành</small></div></div></section><section><div class="section-head"><div><h2>Đề thi Vật lý giữa kì I</h2><p>Bài luyện biên soạn theo nguồn đề miền Trung; mỗi bài có ba phần, chưa có tự luận.</p></div><button class="text-link" data-viewto="subjects">Xem kho đề →</button></div><div class="cards">${exams.map(card).join('')}</div></section><section class="lower-section"><div class="section-head"><div><h2>Khám phá môn học</h2><p>7 môn trong tổ hợp học tập của bạn</p></div></div>${tiles()}</section></div>`;setNav('home')}
-function tiles(){return `<div class="subject-grid">${subjects.map((s,i)=>`<button class="subject-tile" data-subjectto="${i}"><span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span><b>${s[0]}</b><small>${i===1?exams.length+' đề thi':'Sắp cập nhật đề thi'}</small></button>`).join('')}</div>`}
-function catalog(index){const physics=index===undefined||index===1;const name=index===undefined?'Kho đề thi':subjects[index][0];app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${index===undefined?'Chọn môn học và bộ đề để bắt đầu một lượt thi thử.':physics?'Bộ đề trắc nghiệm Vật lý 10 giữa học kì I.':'Không gian dành cho môn học này đã sẵn sàng.'}</p></div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${subjects.map((s,i)=>`<button class="filter" data-subjectto="${i}">${s[0]}</button>`).join('')}</div>`:''}${physics?`<div class="cards">${exams.map(card).join('')}</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Các bộ đề ${name} sẽ xuất hiện tại đây. Trước mắt, bạn có thể luyện với đề Vật lý 10 giữa kì I.<br><br><button class="primary" data-subjectto="1">Xem đề Vật lý →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;setNav(index===undefined?'subjects':'subject-'+index)}
-function history(){const items=saved();app.innerHTML=`<div class="content"><div class="page-heading"><h1>Lịch sử làm bài</h1><p>Kết quả được lưu trên trình duyệt của thiết bị này.</p></div>${items.length?`<div class="history-list">${items.map(x=>`<div class="history-item"><div><strong>${esc(x.title)}</strong><small>${formatDate(x.date)} · ${x.reason==='time'?'Hết giờ':'Đã nộp bài'}</small></div><div class="history-score">${x.correct}/${x.total}</div></div>`).join('')}</div>`:`<div class="notice"><b>Chưa có bài thi nào</b>Hãy thử một đề Vật lý để bắt đầu theo dõi kết quả của bạn.<br><br><button class="primary" data-subjectto="1">Khám phá đề thi →</button></div>`}</div>`;setNav('history')}
-function startExam(id){const e=exams.find(x=>x.id===id);if(!e)return;const draft=localStorage.getItem('hoctap-draft');if(draft){try{const d=JSON.parse(draft);if(d.id===id&&d.deadline>Date.now()){answers=d.answers||{};deadline=d.deadline}else{answers={};deadline=Date.now()+e.minutes*60000}}catch{answers={};deadline=Date.now()+e.minutes*60000}}else{answers={};deadline=Date.now()+e.minutes*60000}activeExam=e;persistDraft();renderExam();clearInterval(ticker);ticker=setInterval(tick,1000);tick()}
-function persistDraft(){if(activeExam)localStorage.setItem('hoctap-draft',JSON.stringify({id:activeExam.id,answers,deadline}))}
-function totalItems(e){return e.questions.length+e.tf.reduce((n,q)=>n+q.items.length,0)+e.short.length}
-function renderExam(){const e=activeExam;app.innerHTML=`<div class="content"><div class="exam-layout"><div class="exam-main"><div class="exam-heading"><div><span class="subject-pill">⚛ &nbsp; PHÒNG THI ẢO</span><h1>${e.title}</h1><p>Phần I: ${e.questions.length} nhiều lựa chọn · Phần II: ${e.tf.length} đúng/sai · Phần III: ${e.short.length} trả lời ngắn</p></div><div class="timer" id="timer">--:--</div></div>${sourceLine(e)}<h2 class="part-heading">Phần I · Nhiều lựa chọn</h2>${e.questions.map((q,i)=>`<div class="question" id="q-${i}"><div class="q-title"><span class="q-number">Câu ${i+1}.</span><span>${q[0]}</span></div><div class="options">${q[1].map((o,j)=>`<label class="option ${answers['m'+i]===j?'selected':''}"><input type="radio" name="m${i}" value="${j}" data-kind="m" data-index="${i}" ${answers['m'+i]===j?'checked':''}><span>${'ABCD'[j]}. ${o}</span></label>`).join('')}</div></div>`).join('')}<h2 class="part-heading">Phần II · Đúng / Sai</h2>${e.tf.map((q,i)=>`<div class="question" id="tf-${i}"><div class="q-title"><span class="q-number">Câu ${i+1}.</span><span>${q.stem}</span></div>${q.items.map((item,j)=>`<div class="tf-row"><span>${'abcd'[j]}) ${item[0]}</span><label><input type="radio" name="t${i}-${j}" value="true" data-kind="t" data-index="${i}-${j}" ${answers['t'+i+'-'+j]===true?'checked':''}> Đúng</label><label><input type="radio" name="t${i}-${j}" value="false" data-kind="t" data-index="${i}-${j}" ${answers['t'+i+'-'+j]===false?'checked':''}> Sai</label></div>`).join('')}</div>`).join('')}<h2 class="part-heading">Phần III · Trả lời ngắn</h2><p class="short-hint">Chỉ nhập số; có thể dùng dấu phẩy hoặc dấu chấm cho phần thập phân.</p>${e.short.map((q,i)=>`<div class="question" id="short-${i}"><div class="q-title"><span class="q-number">Câu ${i+1}.</span><span>${q.text}</span></div><div class="short-field"><input type="text" inputmode="decimal" autocomplete="off" data-kind="s" data-index="${i}" value="${esc(answers['s'+i]??'')}" aria-label="Trả lời ngắn câu ${i+1}"><span>${q.unit}</span></div></div>`).join('')}</div><aside class="exam-aside"><div class="aside-label">TIẾN ĐỘ BÀI LÀM</div><div class="progress-text" id="progress-text"></div><div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div><div class="q-grid">${e.questions.map((_,i)=>`<button class="q-jump" data-jump="${i}">${i+1}</button>`).join('')}</div><div class="aside-note">Đáp án được lưu tự động trên thiết bị này. Bài thi tự nộp khi hết giờ. Bảng số chỉ hiển thị Phần I.</div><button class="primary submit" data-submit="1">Nộp bài</button></aside></div></div>`;setNav('exam');updateProgress()}
-function updateProgress(){if(!activeExam)return;let n=Object.keys(answers).filter(k=>answers[k]!==''&&answers[k]!==undefined).length,total=totalItems(activeExam);document.getElementById('progress-text').textContent=`${n}/${total} ý`;document.getElementById('progress-fill').style.width=`${100*n/total}%`;document.querySelectorAll('.q-jump').forEach((x,i)=>x.classList.toggle('done',answers['m'+i]!==undefined))}
-function tick(){if(!activeExam)return;const left=Math.max(0,deadline-Date.now()),m=Math.floor(left/60000),s=Math.floor(left%60000/1000),el=document.getElementById('timer');if(el){el.textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;el.classList.toggle('urgent',left<=60000)}if(left<=0)submitExam('time')}
-function shortCorrect(input,answer){if(input===undefined||String(input).trim()==='')return false;const normalized=String(input).trim().replace(',','.');return /^-?\d+(\.\d+)?$/.test(normalized)&&Math.abs(Number(normalized)-answer)<0.00001}
-function submitExam(reason){if(!activeExam)return;const e=activeExam;clearInterval(ticker);let correct=e.questions.reduce((n,q,i)=>n+(answers['m'+i]===q[2]?1:0),0);e.tf.forEach((q,i)=>q.items.forEach((item,j)=>{if(answers['t'+i+'-'+j]===item[1])correct++}));e.short.forEach((q,i)=>{if(shortCorrect(answers['s'+i],q.answer))correct++});const result={id:e.id,title:e.title,total:totalItems(e),correct,answers:{...answers},date:new Date().toISOString(),reason};const all=saved();all.unshift(result);localStorage.setItem('hoctap-results',JSON.stringify(all.slice(0,50)));localStorage.removeItem('hoctap-draft');activeExam=null;renderResult(result)}
-function renderResult(r){const e=exams.find(x=>x.id===r.id);app.innerHTML=`<div class="content"><div class="result-panel"><div class="result-icon">${r.correct/r.total>=.7?'🏅':'📘'}</div><h1>${r.reason==='time'?'Đã hết giờ làm bài':'Bạn đã hoàn thành bài thi!'}</h1><p>${e.title} · ${formatDate(r.date)}</p><div class="score">${r.correct}/${r.total}</div><p>Điểm luyện tập tham khảo: ${(r.correct/r.total*10).toFixed(1).replace('.',',')} / 10 · Mỗi ý đúng tính 1 điểm như nhau.</p>${sourceLine(e)}<button class="primary" data-start="${e.id}">Làm lại đề này</button> <button class="secondary" data-viewto="subjects">Về kho đề</button><div class="review"><div class="section-head"><h2>Xem lại đáp án</h2></div><h3>Phần I · Nhiều lựa chọn</h3>${e.questions.map((q,i)=>`<div class="review-item"><b>Câu ${i+1}. ${q[0]}</b><span class="${r.answers['m'+i]===q[2]?'correct':'incorrect'}">${r.answers['m'+i]===q[2]?'✓ Đúng':'✗ '+(r.answers['m'+i]===undefined?'Chưa trả lời':'Đã chọn '+ 'ABCD'[r.answers['m'+i]])}</span> · Đáp án: ${'ABCD'[q[2]]}. ${q[1][q[2]]}<br><span style="color:#8190a7">${q[3]}</span></div>`).join('')}<h3>Phần II · Đúng / Sai</h3>${e.tf.map((q,i)=>`<div class="review-item"><b>Câu ${i+1}. ${q.stem}</b>${q.items.map((item,j)=>`<div><span class="${r.answers['t'+i+'-'+j]===item[1]?'correct':'incorrect'}">${'abcd'[j]}) ${item[0]} — ${item[1]?'Đúng':'Sai'} ${r.answers['t'+i+'-'+j]===item[1]?'✓':'✗'}</span></div>`).join('')}</div>`).join('')}<h3>Phần III · Trả lời ngắn</h3>${e.short.map((q,i)=>`<div class="review-item"><b>Câu ${i+1}. ${q.text}</b><span class="${shortCorrect(r.answers['s'+i],q.answer)?'correct':'incorrect'}">Bạn nhập: ${esc(r.answers['s'+i]||'—')}</span> · Đáp án: ${q.answer} ${q.unit}<br><span style="color:#8190a7">${q.explain}</span></div>`).join('')}</div></div></div>`;setNav('result')}
-function go(view){if(activeExam&&view!=='exam'){if(!confirm('Rời phòng thi? Thời gian vẫn tiếp tục chạy và bài làm được lưu tự động.'))return}if(view==='home')home();else if(view==='subjects')catalog();else if(view==='history')history();else if(view.startsWith('subject-'))catalog(Number(view.split('-')[1]));currentView=view;window.scrollTo(0,0)}
-document.addEventListener('click',e=>{const a=e.target.closest('[data-start],[data-viewto],[data-subjectto],[data-jump],[data-submit],.nav-link,.subject-link');if(!a)return;if(a.matches('a'))e.preventDefault();if(a.dataset.start){if(activeExam&&!confirm('Bắt đầu đề mới? Bài thi hiện tại sẽ được thay thế.'))return;clearInterval(ticker);activeExam=null;startExam(a.dataset.start);window.scrollTo(0,0)}else if(a.dataset.submit){if(confirm('Bạn muốn nộp bài ngay?'))submitExam('manual')}else if(a.dataset.jump!==undefined)document.getElementById('q-'+a.dataset.jump)?.scrollIntoView({behavior:'smooth'});else if(a.dataset.subjectto!==undefined)go('subject-'+a.dataset.subjectto);else if(a.dataset.subject!==undefined)go('subject-'+a.dataset.subject);else go(a.dataset.viewto||a.dataset.view)});
-document.addEventListener('change',e=>{if(!e.target.matches('[data-kind]')||!activeExam)return;const kind=e.target.dataset.kind,index=e.target.dataset.index;if(kind==='m'){answers['m'+index]=Number(e.target.value);document.querySelectorAll(`#q-${index} .option`).forEach(x=>x.classList.toggle('selected',x.contains(e.target)))}else if(kind==='t')answers['t'+index]=e.target.value==='true';persistDraft();updateProgress()});
-document.addEventListener('input',e=>{if(e.target.dataset.kind!=='s'||!activeExam)return;answers['s'+e.target.dataset.index]=e.target.value;persistDraft();updateProgress()});
-// Giao diện kho đề cho cả Vật lý và Hóa học.
-function card(e){const chem=e.subject==='chemistry';return `<article class="exam-card"><div class="card-top"><span class="subject-pill">${chem?'⚗ &nbsp; HÓA HỌC 10':'⚛ &nbsp; VẬT LÝ 10'}</span><span class="card-code">${e.id}</span></div><h3>${e.title}</h3><p>${e.description}</p><div class="meta"><span>◷ &nbsp; ${e.minutes} phút</span><span>☷ &nbsp; ${e.questions.length} nhiều lựa chọn</span><span>✓ &nbsp; ${e.tf.length} đúng/sai</span><span>✎ &nbsp; ${e.short.length} trả lời ngắn</span></div>${sourceLine(e)}<div class="card-bottom"><span>Giữa học kì I</span><button class="primary" data-start="${e.id}">Bắt đầu làm bài →</button></div></article>`}
-function tiles(){return `<div class="subject-grid">${subjects.map((s,i)=>`<button class="subject-tile" data-subjectto="${i}"><span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span><b>${s[0]}</b><small>${i===1?exams.filter(e=>e.subject==='physics').length+' đề thi':i===5?exams.filter(e=>e.subject==='chemistry').length+' đề thi':'Sắp cập nhật đề thi'}</small></button>`).join('')}</div>`}
-function home(){const n=saved().length,phy=exams.filter(e=>e.subject==='physics'),chem=exams.filter(e=>e.subject==='chemistry');app.innerHTML=`<div class="content"><section class="hero"><div class="hero-copy"><span class="eyebrow">✦ &nbsp; KHÔNG GIAN HỌC TẬP CỦA BẠN</span><h1>Học tập hôm nay,<br>tự tin ngày mai.</h1><p>Luyện đề Vật lý và Hóa học lớp 10 theo nguồn tham khảo miền Trung, với đồng hồ thi và ba dạng câu hỏi.</p></div><div class="hero-art"><div class="orbit"></div><div class="planet one">📚</div><div class="planet two">⚛</div><div class="planet three">✦</div></div></section><section class="stats"><div class="stat"><span class="stat-icon purple">▦</span><div><b>07</b><small>Môn học</small></div></div><div class="stat"><span class="stat-icon orange">☷</span><div><b>${String(exams.length).padStart(2,'0')}</b><small>Đề thi sẵn sàng</small></div></div><div class="stat"><span class="stat-icon green">◷</span><div><b>${String(n).padStart(2,'0')}</b><small>Lượt thi đã hoàn thành</small></div></div></section><section><div class="section-head"><div><h2>Vật lý 10 · Giữa kì I</h2><p>${phy.length} bài luyện · Ưu tiên Quảng Trị và miền Trung</p></div><button class="text-link" data-subjectto="1">Xem tất cả →</button></div><div class="cards">${phy.slice(0,4).map(card).join('')}</div></section><section class="lower-section"><div class="section-head"><div><h2>Hóa học 10 · Giữa kì I</h2><p>${chem.length} bài luyện · Cấu tạo nguyên tử và bảng tuần hoàn</p></div><button class="text-link" data-subjectto="5">Xem tất cả →</button></div><div class="cards">${chem.slice(0,4).map(card).join('')}</div></section><section class="lower-section"><div class="section-head"><div><h2>Khám phá môn học</h2><p>7 môn trong tổ hợp học tập của bạn</p></div></div>${tiles()}</section></div>`;setNav('home')}
-function catalog(index){const list=index===1?exams.filter(e=>e.subject==='physics'):index===5?exams.filter(e=>e.subject==='chemistry'):index===undefined?exams:[];const name=index===undefined?'Kho đề thi':subjects[index][0];app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện giữa kì I lớp 10 · Nhiều lựa chọn, đúng/sai và trả lời ngắn · Không có tự luận.`:'Không gian dành cho môn học này đã sẵn sàng.'}</p></div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button><button class="filter" data-subjectto="1">Vật lý (${exams.filter(e=>e.subject==='physics').length})</button><button class="filter" data-subjectto="5">Hóa học (${exams.filter(e=>e.subject==='chemistry').length})</button></div>`:''}${list.length?`<div class="cards">${list.map(card).join('')}</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề. Bạn có thể luyện Vật lý hoặc Hóa học trước.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;setNav(index===undefined?'subjects':'subject-'+index)}
-home();
+
+// Khởi tạo danh sách đề thi (khai báo dạng let để không bị lỗi gán const)
+let exams = [];
+const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
+  ? suppliedExams
+  : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
+    ? window.suppliedExams
+    : [];
+
+if (rawData.length > 0) {
+  exams = rawData.map(normalizeExam);
+} else {
+  exams = [
+    {
+      id: 'TOAN10-GKI-01',
+      title: 'Toán 10 · Giữa kì I – Đề 01',
+      description: 'Mệnh đề, tập hợp và bất phương trình bậc nhất hai ẩn.',
+      subject: 'math',
+      minutes: 90,
+      source: { school: 'THPT Hướng Hóa', province: 'Quảng Trị', year: '2026–2027', url: '#', note: 'Đề minh họa' },
+      questions: [['Câu nào là mệnh đề toán học?', ['Trời đẹp quá!', '17 là số nguyên tố.', 'Bạn khỏe không?', 'Cố lên!'], 1, '17 là số nguyên tố là mệnh đề đúng.']],
+      tf: [{ stem: 'Cho tập hợp A = {1, 2, 3}.', items: [['1 thuộc A', true, 'Đúng'], ['4 thuộc A', false, 'Sai']] }],
+      short: [{ text: 'Số phần tử của tập A = {1, 2, 3} là bao nhiêu?', answer: 3, unit: '', explain: 'Tập A có 3 phần tử.' }]
+    }
+  ];
+}
+
+const app = document.getElementById('app');
+let currentView = 'home', activeExam = null, answers = {}, deadline = 0, ticker = null;
+const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const saved = () => { try { return JSON.parse(localStorage.getItem('hoctap-results') || '[]'); } catch { return []; } };
+const formatDate = d => {
+  try {
+    return new Intl.DateTimeFormat('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(d));
+  } catch {
+    return String(d);
+  }
+};
+
+const todayEl = document.getElementById('today');
+if (todayEl) {
+  todayEl.textContent = new Intl.DateTimeFormat('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
+}
+
+const subjectNavEl = document.getElementById('subject-nav');
+if (subjectNavEl) {
+  subjectNavEl.innerHTML = subjects.map((s, i) =>
+    `<a href="#subject-${i}" class="subject-link" data-subjectto="${i}"><span class="subject-icon">${s[1]}</span>${s[0]}</a>`
+  ).join('');
+}
+
+function getSubjectMeta(subj) {
+  if (subj === 'math') return { icon: '∑', name: 'TOÁN 10', color: '#6155e8', bg: '#e9e7ff', id: 0 };
+  if (subj === 'chemistry') return { icon: '🧪', name: 'HÓA HỌC 10', color: '#d76fab', bg: '#fceaf4', id: 5 };
+  return { icon: '⚛️', name: 'VẬT LÝ 10', color: '#4b9ad8', bg: '#e7f4ff', id: 1 };
+}
+
+function setNav(view) {
+  document.querySelectorAll('.nav-link').forEach(x => x.classList.toggle('active', x.dataset.view == view));
+  document.querySelectorAll('.subject-link').forEach(x => x.classList.toggle('active', view == 'subject-' + x.dataset.subjectto));
+  const crumbEl = document.getElementById('crumb');
+  if (crumbEl) {
+    crumbEl.textContent = ({ home: 'TỔNG QUAN', subjects: 'KHO ĐỀ THI', history: 'LỊCH SỬ LÀM BÀI', exam: 'PHÒNG THI', result: 'KẾT QUẢ' })[view] || 'MÔN HỌC';
+  }
+}
+
+function sourceLine(e) {
+  const src = e.source || {};
+  const url = src.url || e.sourceUrl || '#';
+  const school = src.school || e.school || 'Tài liệu chuẩn cấu trúc Bộ GD&ĐT';
+  const prov = src.province || e.province || '';
+  const yr = src.year || e.year || '';
+  const note = src.note || '';
+  return `<div class="source-line">Nguồn tham khảo: <a href="${url}" target="_blank" rel="noopener noreferrer">${esc(school)}${prov ? ' · ' + esc(prov) : ''}${yr ? ' · ' + esc(yr) : ''} ↗</a>${note ? `<small>${esc(note)}</small>` : ''}</div>`;
+}
+
+function totalItems(e) {
+  const qLen = e.questions ? e.questions.length : 0;
+  const tfLen = e.tf ? e.tf.reduce((n, q) => n + (q.items ? q.items.length : 0), 0) : 0;
+  const shortLen = e.short ? e.short.length : 0;
+  return qLen + tfLen + shortLen;
+}
+
+function card(e) {
+  const sm = getSubjectMeta(e.subject);
+  const qCount = e.questions ? e.questions.length : 0;
+  const tfCount = e.tf ? e.tf.length : 0;
+  const shortCount = e.short ? e.short.length : 0;
+  const minutes = e.minutes || e.duration || 45;
+  return `<article class="exam-card">
+    <div class="card-top">
+      <span class="subject-pill" style="background:${sm.bg};color:${sm.color}">${sm.icon}&nbsp; ${sm.name}</span>
+      <span class="card-code">${esc(e.id)}</span>
+    </div>
+    <h3>${esc(e.title)}</h3>
+    <p>${esc(e.description || 'Đề kiểm tra giữa học kì I theo cấu trúc mới Bộ GD&ĐT.')}</p>
+    <div class="meta">
+      <span>⏱&nbsp; ${minutes} phút</span>
+      <span>📋&nbsp; ${qCount} trắc nghiệm</span>
+      <span>☑&nbsp; ${tfCount} đúng/sai</span>
+      <span>✍&nbsp; ${shortCount} trả lời ngắn</span>
+    </div>
+    ${sourceLine(e)}
+    <div class="card-bottom">
+      <span>Giữa học kì I</span>
+      <button class="primary" data-start="${esc(e.id)}">Bắt đầu làm bài ➔</button>
+    </div>
+  </article>`;
+}
+
+function tiles() {
+  return `<div class="subject-grid">${subjects.map((s, i) => {
+    let cnt = 0;
+    if (i === 0) cnt = exams.filter(e => e.subject === 'math').length;
+    else if (i === 1) cnt = exams.filter(e => e.subject === 'physics').length;
+    else if (i === 5) cnt = exams.filter(e => e.subject === 'chemistry').length;
+    const label = cnt > 0 ? `${cnt} đề thi sẵn sàng` : 'Sắp cập nhật đề thi';
+    return `<button class="subject-tile" data-subjectto="${i}">
+      <span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span>
+      <b>${s[0]}</b>
+      <small>${label}</small>
+    </button>`;
+  }).join('')}</div>`;
+}
+
+function home() {
+  const n = saved().length;
+  app.innerHTML = `<div class="content">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">🚀&nbsp; PHÒNG LUYỆN THI TRỰC TUYẾN 2026–2027</span>
+        <h1>Học tập hôm nay,<br>tự tin ngày mai.</h1>
+        <p>Hệ thống ôn luyện trực tuyến với trọn bộ 30 đề thi chuẩn cấu trúc mới Bộ GD&ĐT (Toán 10, Vật lí 10, Hóa học 10), chấm điểm tức thì và hướng dẫn giải chi tiết.</p>
+      </div>
+      <div class="hero-art">
+        <div class="orbit"></div>
+        <div class="planet one">∑</div>
+        <div class="planet two">⚛️</div>
+        <div class="planet three">🧪</div>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="stat"><span class="stat-icon purple">▦</span><div><b>07</b><small>Môn học</small></div></div>
+      <div class="stat"><span class="stat-icon orange">📋</span><div><b>${String(exams.length).padStart(2, '0')}</b><small>Đề thi sẵn sàng</small></div></div>
+      <div class="stat"><span class="stat-icon green">🎯</span><div><b>${String(n).padStart(2, '0')}</b><small>Lượt thi đã hoàn thành</small></div></div>
+    </section>
+    
+    <section class="section-head">
+      <div>
+        <h2>Đề thi nổi bật giữa kì I</h2>
+        <p>Kho 30 đề chọn lọc chuẩn cấu trúc mới kèm đáp án và hướng dẫn giải chi tiết</p>
+      </div>
+      <button class="text-link" data-viewto="subjects">Xem toàn bộ kho đề ➔</button>
+    </section>
+    
+    <div class="cards">
+      ${exams.slice(0, 6).map(card).join('')}
+    </div>
+
+    <section class="lower-section">
+      <div class="section-head">
+        <div>
+          <h2>Khám phá các môn học</h2>
+          <p>Lựa chọn môn học để xem toàn bộ danh sách 10 đề thi từng môn</p>
+        </div>
+      </div>
+      ${tiles()}
+    </section>
+  </div>`;
+  setNav('home');
+}
+
+function catalog(index) {
+  let filtered = exams;
+  let title = 'Kho đề thi';
+  let subtitle = 'Chọn môn học và bộ đề để bắt đầu một lượt thi thử.';
+  
+  if (index === 0) {
+    filtered = exams.filter(e => e.subject === 'math');
+    title = 'Toán 10 · Kho đề thi giữa kì I';
+    subtitle = `Trọn bộ ${filtered.length} đề thi Toán 10 (thời gian làm bài 90 phút), cấu trúc chuẩn 3 phần có lời giải chi tiết.`;
+  } else if (index === 1) {
+    filtered = exams.filter(e => e.subject === 'physics');
+    title = 'Vật lý 10 · Kho đề thi giữa kì I';
+    subtitle = `Trọn bộ ${filtered.length} đề thi Vật lý 10 (thời gian làm bài 45 phút), cấu trúc chuẩn 3 phần có lời giải chi tiết.`;
+  } else if (index === 5) {
+    filtered = exams.filter(e => e.subject === 'chemistry');
+    title = 'Hóa học 10 · Kho đề thi giữa kì I';
+    subtitle = `Trọn bộ ${filtered.length} đề thi Hóa học 10 (thời gian làm bài 45 phút), cấu trúc chuẩn 3 phần có lời giải chi tiết.`;
+  } else if (index !== undefined) {
+    filtered = [];
+    title = subjects[index][0];
+    subtitle = 'Bộ đề ôn luyện cho môn học này đang được chuẩn bị và sẽ sớm ra mắt.';
+  }
+
+  app.innerHTML = `<div class="content">
+    <div class="page-heading">
+      <h1>${esc(title)}</h1>
+      <p>${esc(subtitle)}</p>
+    </div>
+    <div class="filter-row">
+      <button class="filter ${index === undefined ? 'active' : ''}" data-viewto="subjects">Tất cả (${exams.length})</button>
+      <button class="filter ${index === 0 ? 'active' : ''}" data-subjectto="0">Toán 10 (${exams.filter(e => e.subject === 'math').length})</button>
+      <button class="filter ${index === 1 ? 'active' : ''}" data-subjectto="1">Vật lý 10 (${exams.filter(e => e.subject === 'physics').length})</button>
+      <button class="filter ${index === 5 ? 'active' : ''}" data-subjectto="5">Hóa học 10 (${exams.filter(e => e.subject === 'chemistry').length})</button>
+    </div>
+    ${filtered.length ? `<div class="cards">${filtered.map(card).join('')}</div>` : `<div class="notice"><b>Bộ đề ${esc(title)} sẽ xuất hiện tại đây.</b><br>Trước mắt, bạn có thể luyện tập với 30 đề Toán 10, Vật lý 10 và Hóa học 10.<br><br><button class="primary" data-viewto="subjects">Xem tất cả đề thi ➔</button></div>`}
+    ${index === undefined ? `<section class="lower-section"><div class="section-head"><h2>Danh mục môn học</h2></div>${tiles()}</section>` : ''}
+  </div>`;
+  setNav(index === undefined ? 'subjects' : `subject-${index}`);
+}
+
+function history() {
+  const items = saved();
+  app.innerHTML = `<div class="content">
+    <div class="page-heading">
+      <h1>Lịch sử làm bài</h1>
+      <p>Kết quả làm bài thi được lưu tự động trên trình duyệt thiết bị này.</p>
+    </div>
+    ${items.length ? `<div class="history-list">${items.map(x => `<div class="history-item">
+      <div>
+        <strong>${esc(x.title)}</strong>
+        <small>${formatDate(x.date)} · ${x.reason === 'time' ? 'Hết giờ' : 'Đã nộp bài'}</small>
+      </div>
+      <div class="history-score">${x.correct}/${x.total} (${(x.correct / x.total * 10).toFixed(1).replace('.', ',')} đ)</div>
+    </div>`).join('')}</div>` : `<div class="notice">
+      <b>Chưa có bài thi nào được hoàn thành</b><br>Hãy thử sức với một đề thi để bắt đầu theo dõi tiến bộ của bạn.<br><br>
+      <button class="primary" data-viewto="subjects">Khám phá kho đề thi ➔</button>
+    </div>`}
+  </div>`;
+  setNav('history');
+}
+
+function startExam(id) {
+  const e = exams.find(x => x.id === id);
+  if (!e) return;
+  const draft = localStorage.getItem('hoctap-draft');
+  if (draft) {
+    try {
+      const d = JSON.parse(draft);
+      if (d.id === id && d.deadline > Date.now()) {
+        answers = d.answers || {};
+        deadline = d.deadline;
+      } else {
+        answers = {};
+        deadline = Date.now() + (e.minutes || e.duration || 45) * 60000;
+      }
+    } catch {
+      answers = {};
+      deadline = Date.now() + (e.minutes || e.duration || 45) * 60000;
+    }
+  } else {
+    answers = {};
+    deadline = Date.now() + (e.minutes || e.duration || 45) * 60000;
+  }
+  activeExam = e;
+  persistDraft();
+  renderExam();
+  clearInterval(ticker);
+  ticker = setInterval(tick, 1000);
+  tick();
+}
+
+function persistDraft() {
+  if (activeExam) {
+    localStorage.setItem('hoctap-draft', JSON.stringify({ id: activeExam.id, answers, deadline }));
+  }
+}
+
+function renderExam() {
+  const e = activeExam;
+  const sm = getSubjectMeta(e.subject);
+  const qLen = e.questions ? e.questions.length : 0;
+  const tfLen = e.tf ? e.tf.length : 0;
+  const shortLen = e.short ? e.short.length : 0;
+  
+  app.innerHTML = `<div class="content">
+    <div class="exam-layout">
+      <div class="exam-main">
+        <div class="exam-heading">
+          <div>
+            <span class="subject-pill" style="background:${sm.bg};color:${sm.color}">${sm.icon}&nbsp; PHÒNG THI ${sm.name}</span>
+            <h1>${esc(e.title)}</h1>
+            <p>Phần I: ${qLen} trắc nghiệm (0,25đ/câu) · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)</p>
+          </div>
+          <div class="timer" id="timer">--:--</div>
+        </div>
+        ${sourceLine(e)}
+        
+        <h2 class="part-heading">Phần I · Nhiều lựa chọn (12 câu)</h2>
+        ${(e.questions || []).map((q, i) => `<div class="question" id="q-${i}">
+          <div class="q-title">
+            <span class="q-number">Câu ${i + 1}.</span>
+            <span>${q[0]}</span>
+          </div>
+          <div class="options">
+            ${q[1].map((o, j) => `<label class="option ${answers['m' + i] === j ? 'selected' : ''}">
+              <input type="radio" name="m${i}" value="${j}" data-kind="m" data-index="${i}" ${answers['m' + i] === j ? 'checked' : ''}>
+              <span>${'ABCD'[j]}. ${o}</span>
+            </label>`).join('')}
+          </div>
+        </div>`).join('')}
+
+        <h2 class="part-heading">Phần II · Đúng / Sai (2 câu, mỗi câu 4 ý a, b, c, d)</h2>
+        ${(e.tf || []).map((q, i) => `<div class="question" id="tf-${i}">
+          <div class="q-title">
+            <span class="q-number">Câu ${i + 1}.</span>
+            <span>${q.stem}</span>
+          </div>
+          ${(q.items || []).map((item, j) => `<div class="tf-row">
+            <span>${'abcd'[j]}) ${item[0]}</span>
+            <div class="tf-options">
+              <label><input type="radio" name="t${i}-${j}" value="true" data-kind="t" data-index="${i}-${j}" ${answers['t' + i + '-' + j] === true ? 'checked' : ''}> Đúng</label>
+              <label><input type="radio" name="t${i}-${j}" value="false" data-kind="t" data-index="${i}-${j}" ${answers['t' + i + '-' + j] === false ? 'checked' : ''}> Sai</label>
+            </div>
+          </div>`).join('')}
+        </div>`).join('')}
+
+        <h2 class="part-heading">Phần III · Trả lời ngắn (4 câu)</h2>
+        <p class="short-hint">Điền số đáp án chính xác (chấp nhận cả dấu phẩy và dấu chấm thập phân).</p>
+        ${(e.short || []).map((q, i) => `<div class="question" id="short-${i}">
+          <div class="q-title">
+            <span class="q-number">Câu ${i + 1}.</span>
+            <span>${q.text || q.question}</span>
+          </div>
+          <div class="short-field">
+            <input type="text" inputmode="decimal" autocomplete="off" data-kind="s" data-index="${i}" value="${esc(answers['s' + i] ?? '')}" aria-label="Trả lời ngắn câu ${i + 1}">
+            <span>${esc(q.unit || '')}</span>
+          </div>
+        </div>`).join('')}
+      </div>
+
+      <aside class="exam-aside">
+        <div class="aside-label">TIẾN ĐỘ BÀI LÀM</div>
+        <div class="progress-text" id="progress-text"></div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="aside-label" style="margin-top:16px;">BẢNG NHẢY CÂU HỎI</div>
+        <div class="q-grid">
+          ${(e.questions || []).map((_, i) => `<button class="q-jump" data-jump="${i}">${i + 1}</button>`).join('')}
+        </div>
+        <div class="aside-note">Tiến độ bài làm được lưu tự động trên máy. Khi hết thời gian đếm ngược, bài thi sẽ tự động được thu và chấm điểm.</div>
+        <button class="primary submit" data-submit="1">Nộp bài thi</button>
+      </aside>
+    </div>
+  </div>`;
+  
+  setNav('exam');
+  updateProgress();
+}
+
+function updateProgress() {
+  if (!activeExam) return;
+  const n = Object.keys(answers).filter(k => answers[k] !== '' && answers[k] !== undefined).length;
+  const total = totalItems(activeExam);
+  const progText = document.getElementById('progress-text');
+  const progFill = document.getElementById('progress-fill');
+  if (progText) progText.textContent = `${n}/${total} ý đã hoàn thành`;
+  if (progFill) progFill.style.width = `${total > 0 ? (100 * n / total) : 0}%`;
+  document.querySelectorAll('.q-jump').forEach((x, i) => {
+    x.classList.toggle('done', answers['m' + i] !== undefined);
+  });
+}
+
+function tick() {
+  if (!activeExam) return;
+  const left = Math.max(0, deadline - Date.now());
+  const m = Math.floor(left / 60000);
+  const s = Math.floor((left % 60000) / 1000);
+  const el = document.getElementById('timer');
+  if (el) {
+    el.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    el.classList.toggle('urgent', left <= 60000);
+  }
+  if (left <= 0) submitExam('time');
+}
+
+function shortCorrect(input, answer) {
+  if (input === undefined || String(input).trim() === '') return false;
+  const normInput = String(input).trim().replace(',', '.');
+  const normAns = String(answer).trim().replace(',', '.');
+  if (/^-?\d+(\.\d+)?$/.test(normInput) && /^-?\d+(\.\d+)?$/.test(normAns)) {
+    return Math.abs(Number(normInput) - Number(normAns)) < 0.001;
+  }
+  return normInput.toLowerCase() === normAns.toLowerCase();
+}
+
+function submitExam(reason) {
+  if (!activeExam) return;
+  const e = activeExam;
+  clearInterval(ticker);
+  
+  let correct = 0;
+  let scoreP1 = 0;
+  (e.questions || []).forEach((q, i) => {
+    if (answers['m' + i] === q[2]) {
+      correct++;
+      scoreP1 += 0.25;
+    }
+  });
+
+  let scoreP2 = 0;
+  (e.tf || []).forEach((q, i) => {
+    let subCorrect = 0;
+    (q.items || []).forEach((item, j) => {
+      if (answers['t' + i + '-' + j] === item[1]) {
+        correct++;
+        subCorrect++;
+      }
+    });
+    if (subCorrect === 1) scoreP2 += 0.1;
+    else if (subCorrect === 2) scoreP2 += 0.25;
+    else if (subCorrect === 3) scoreP2 += 0.5;
+    else if (subCorrect === 4) scoreP2 += 1.0;
+  });
+
+  let scoreP3 = 0;
+  (e.short || []).forEach((q, i) => {
+    if (shortCorrect(answers['s' + i], q.answer)) {
+      correct++;
+      scoreP3 += 0.5;
+    }
+  });
+
+  const totalScore = Math.min(10, Math.round((scoreP1 + scoreP2 + scoreP3) * 100) / 100);
+
+  const result = {
+    id: e.id,
+    title: e.title,
+    total: totalItems(e),
+    correct,
+    score: totalScore,
+    answers: { ...answers },
+    date: new Date().toISOString(),
+    reason
+  };
+
+  const all = saved();
+  all.unshift(result);
+  localStorage.setItem('hoctap-results', JSON.stringify(all.slice(0, 50)));
+  localStorage.removeItem('hoctap-draft');
+  activeExam = null;
+  renderResult(result);
+}
+
+function renderResult(r) {
+  const e = exams.find(x => x.id === r.id) || { title: r.title, questions: [], tf: [], short: [] };
+  const scoreNum = r.score !== undefined ? r.score : (r.correct / r.total * 10);
+  
+  app.innerHTML = `<div class="content">
+    <div class="result-panel">
+      <div class="result-icon">${scoreNum >= 7 ? '🎉' : scoreNum >= 5 ? '📘' : '💪'}</div>
+      <h1>${r.reason === 'time' ? 'Đã hết giờ làm bài!' : 'Bạn đã hoàn thành bài thi!'}</h1>
+      <p><b>${esc(r.title)}</b> · Hoàn thành: ${formatDate(r.date)}</p>
+      
+      <div class="score">${scoreNum.toFixed(2).replace('.', ',')} / 10 Điểm</div>
+      <p style="color:#64748b;font-size:15px;margin-bottom:24px;">Trả lời đúng: <b>${r.correct}</b> / ${r.total} ý hỏi · Điểm chuẩn cấu trúc Bộ GD&ĐT 2026–2027.</p>
+      
+      ${sourceLine(e)}
+      
+      <div style="display:flex;gap:12px;justify-content:center;margin:24px 0;">
+        <button class="primary" data-start="${esc(r.id)}">Làm lại đề này ↺</button>
+        <button class="secondary" data-viewto="subjects">Về kho đề thi ➔</button>
+      </div>
+
+      <div class="review">
+        <div class="section-head">
+          <h2>Chi tiết lời giải & hướng dẫn chấm</h2>
+        </div>
+
+        <h3>Phần I · Trắc nghiệm 4 lựa chọn (12 câu)</h3>
+        ${(e.questions || []).map((q, i) => {
+          const user = r.answers['m' + i];
+          const ok = user === q[2];
+          return `<div class="review-item">
+            <b>Câu ${i + 1}. ${q[0]}</b>
+            <span class="${ok ? 'ok' : 'wrong'}">${user === undefined ? 'Chưa trả lời' : ok ? 'Đúng' : `Chọn sai (${'ABCD'[user]})`}</span>
+            <small>Đáp án đúng: <b>${'ABCD'[q[2]]}. ${q[1][q[2]]}</b></small>
+            <div class="explain">${q[3] || 'Không có giải thích bổ sung.'}</div>
+          </div>`;
+        }).join('')}
+
+        <h3>Phần II · Trắc nghiệm Đúng / Sai (2 câu)</h3>
+        ${(e.tf || []).map((q, i) => `<div class="review-item">
+          <b>Câu ${i + 1}. ${q.stem}</b>
+          ${(q.items || []).map((item, j) => {
+            const user = r.answers['t' + i + '-' + j];
+            const ok = user === item[1];
+            return `<div class="sub-review">
+              <span>${'abcd'[j]}) ${item[0]}</span>
+              <span class="${ok ? 'ok' : 'wrong'}">${user === undefined ? 'Chưa chọn' : ok ? 'Đúng' : `Chọn sai (${user ? 'Đúng' : 'Sai'})`}</span>
+              <small>Đáp án: <b>${item[1] ? 'Đúng' : 'Sai'}</b> ${item[2] ? `(${item[2]})` : ''}</small>
+            </div>`;
+          }).join('')}
+        </div>`).join('')}
+
+        <h3>Phần III · Trả lời ngắn (4 câu)</h3>
+        ${(e.short || []).map((q, i) => {
+          const user = r.answers['s' + i];
+          const ok = shortCorrect(user, q.answer);
+          return `<div class="review-item">
+            <b>Câu ${i + 1}. ${q.text || q.question}</b>
+            <span class="${ok ? 'ok' : 'wrong'}">${user === undefined || String(user).trim() === '' ? 'Chưa điền' : ok ? 'Đúng' : `Điền sai (${esc(user)})`}</span>
+            <small>Đáp án: <b>${esc(q.answer)} ${esc(q.unit || '')}</b></small>
+            <div class="explain">${esc(q.explain || q.explanation || 'Không có giải thích bổ sung.')}</div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
+  </div>`;
+  setNav('result');
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-start],[data-viewto],[data-subjectto],[data-submit],[data-jump]');
+  if (!b) return;
+  if (b.dataset.start) startExam(b.dataset.start);
+  else if (b.dataset.viewto) ({ home, subjects: () => catalog(), history })[b.dataset.viewto]();
+  else if (b.dataset.subjectto !== undefined) catalog(Number(b.dataset.subjectto));
+  else if (b.dataset.submit) submitExam('manual');
+  else if (b.dataset.jump) {
+    const el = document.getElementById('q-' + b.dataset.jump);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (!t.dataset.kind) return;
+  if (t.dataset.kind === 'm') answers['m' + t.dataset.index] = Number(t.value);
+  else if (t.dataset.kind === 't') answers['t' + t.dataset.index] = t.value === 'true';
+  else if (t.dataset.kind === 's') answers['s' + t.dataset.index] = t.value;
+  persistDraft();
+  updateProgress();
+});
+
+window.addEventListener('hashchange', () => {
+  const h = location.hash;
+  if (h === '#history') history();
+  else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
+  else if (h === '#subjects') catalog();
+  else home();
+});
+
+if (location.hash) window.dispatchEvent(new Event('hashchange'));
+else home();
