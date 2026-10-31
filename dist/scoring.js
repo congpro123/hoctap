@@ -10,12 +10,12 @@ function scoreExam(e,a={},legacy=false){
   }
   return {mc,tf,short,points:Math.round((mc+tf+short)*100)/100,max:e.questions.length*.25+(legacy?0:e.tf.length+e.short.length*.5),correct:mcCorrect+tfCorrect+shortCorrectCount,total:e.questions.length+(legacy?0:e.tf.reduce((n,q)=>n+q.items.length,0)+e.short.length)};
 }
-function scoreForResult(r){const e=exams.find(x=>x.id===r.id);return e?scoreExam(e,r.answers||{},r.total===e.questions.length):null}
+function scoreForResult(r){const e=typeof historicalExamForResult==='function'?historicalExamForResult(r):exams.find(x=>x.id===r.id);return e?scoreExam(e,r.answers||{},r.total===e.questions.length):null}
 submitExam=function(reason){
   if(!activeExam)return;
   const e=activeExam;clearInterval(ticker);
   const score=scoreExam(e,answers);
-  const result={id:e.id,title:e.title,total:score.total,correct:score.correct,points:score.points,maxPoints:score.max,answers:{...answers},date:new Date().toISOString(),reason};
+  const result={id:e.id,title:e.title,total:score.total,correct:score.correct,points:score.points,maxPoints:score.max,questionSetVersion:2,answers:{...answers},date:new Date().toISOString(),reason};
   const all=saved();all.unshift(result);
   localStorage.setItem('hoctap-results',JSON.stringify(all.slice(0,50)));
   localStorage.removeItem('hoctap-draft');activeExam=null;renderResult(result);

@@ -25,7 +25,7 @@ function history(){
 }
 function reviewPast(index){
   const r=saved()[index];if(!r)return history();
-  const e=exams.find(x=>x.id===r.id);
+  const e=typeof historicalExamForResult==='function'?historicalExamForResult(r):exams.find(x=>x.id===r.id);
   if(!e){app.innerHTML=`<div class="content"><div class="notice"><b>Không tìm thấy bộ đề gốc</b>Điểm của bài vẫn được lưu: ${r.correct}/${r.total}.<br><br><button class="primary" data-viewto="history">Về lịch sử</button></div></div>`;return setNav('history')}
   const a=r.answers||{},legacy=r.total===e.questions.length,wrong=[];
   e.questions.forEach((q,i)=>{const chosen=a['m'+i]??a[i];if(chosen!==q[2])wrong.push(`<div class="review-item"><b>Phần I · Câu ${i+1}. ${q[0]}</b><span class="incorrect">Bạn chọn: ${chosen===undefined?'Chưa trả lời':`${'ABCD'[chosen]}. ${q[1][chosen]}`}</span><br><span class="correct">Đáp án đúng: ${'ABCD'[q[2]]}. ${q[1][q[2]]}</span><br><span class="review-explain">${q[3]}</span></div>`)});
