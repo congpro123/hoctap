@@ -73,7 +73,7 @@ for (const file of [
 }
 
 const exams = vm.runInContext('exams', context);
-assert.equal(exams.length, 32, 'Tổng số đề thi phải là 32');
+assert.equal(exams.length, 34, 'Tổng số đề thi phải là 34');
 
 for (const examId of ['toan-10-de-11', 'toan-10-de-12']) {
   const e = exams.find(x => x.id === examId);
@@ -95,4 +95,22 @@ for (const examId of ['toan-10-de-11', 'toan-10-de-12']) {
   assert.equal(score.total, 24, 'Tổng 24 ý');
 }
 
-console.log('✅ ĐÃ KIỂM TRA THÀNH CÔNG 2 BỘ ĐỀ MỚI: toan-10-de-11 và toan-10-de-12!');
+for (const examId of ['hoahoc-10-de-11', 'hoahoc-10-de-12']) {
+  const e = exams.find(x => x.id === examId);
+  assert.ok(e, `Tìm thấy ${examId}`);
+  assert.ok(e.questions.length >= 10, 'Ít nhất 10 câu trắc nghiệm');
+  assert.ok(e.tf.length >= 2, 'Ít nhất 2 câu đúng sai');
+  assert.equal(e.short.length, 4, '4 câu trả lời ngắn');
+
+  const perfectAnswers = {};
+  e.questions.forEach((q, i) => { perfectAnswers['m' + i] = q[2]; });
+  e.tf.forEach((q, i) => { q.items.forEach((it, j) => { perfectAnswers['t' + i + '-' + j] = it[1]; }); });
+  e.short.forEach((q, i) => { perfectAnswers['s' + i] = String(q.answer); });
+
+  const score = vm.runInContext(`scoreExam(exams.find(x => x.id === '${examId}'), ${JSON.stringify(perfectAnswers)}, false)`, context);
+  console.log(`Điểm số tối đa của ${examId}:`, score);
+  assert.equal(score.points, score.max, 'Điểm trắc nghiệm tự động đạt tối đa');
+  assert.equal(score.correct, score.total, 'Tất cả các ý trả lời đúng');
+}
+
+console.log('✅ ĐÃ KIỂM TRA THÀNH CÔNG TẤT CẢ CÁC BỘ ĐỀ MỚI BỔ SUNG (Toán 11, 12 & Hóa học 11, 12)!');

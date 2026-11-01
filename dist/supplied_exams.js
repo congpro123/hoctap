@@ -1,5 +1,5 @@
-// Danh sách 32 bộ đề thi chính thức chuẩn cấu trúc ma trận mới 2026–2027
-// 12 đề Toán học, 10 đề Vật lí, 10 đề Hóa học
+// Danh sách 34 bộ đề thi chính thức chuẩn cấu trúc ma trận mới 2026–2027
+// 12 đề Toán học, 10 đề Vật lí, 12 đề Hóa học (bổ sung 2 đề thực tế từ tài liệu luyện tập 2025–2026)
 // Hoàn toàn không trùng lặp câu hỏi, số liệu hay mô hình giữa các đề
 const suppliedExams = [
   {
@@ -7440,6 +7440,648 @@ const suppliedExams = [
         "title": "Câu 3 (1,0 điểm): Xác định hai nguyên tố cùng nhóm IIA và so sánh tính kim loại",
         "question": "Hai nguyên tố kim loại X và Y cùng thuộc nhóm IIA của Bảng tuần hoàn và nằm ở hai chu kì liên tiếp, có tổng số proton trong hai hạt nhân là 32 (biết Z<sub>X</sub> < Z<sub>Y</sub>).<br>a) Xác định số hiệu nguyên tử và gọi tên hai nguyên tố X và Y.<br>b) So sánh tính kim loại giữa X và Y, giải thích dựa theo quy luật biến đổi tuần hoàn trong Bảng tuần hoàn.",
         "solution": "a) Vì X và Y thuộc cùng nhóm A ở hai chu kì liên tiếp (chu kì 3 và 4) nên số hiệu nguyên tử hơn kém nhau 8 đơn vị: Z<sub>Y</sub> - Z<sub>X</sub> = 8 (1).<br>Theo đề bài: Z<sub>X</sub> + Z<sub>Y</sub> = 32 (2).<br>Giải hệ phương trình:<br>• Z<sub>X</sub> = (32 - 8) / 2 = 12 &rArr; X là Magnesium (Mg).<br>• Z<sub>Y</sub> = 12 + 8 = 20 &rArr; Y là Calcium (Ca) (0,50 điểm).<br>b) So sánh tính kim loại:<br>X (Mg, Z = 12) và Y (Ca, Z = 20) đều thuộc nhóm IIA trong Bảng tuần hoàn.<br>Theo quy luật biến đổi tuần hoàn: Trong cùng một nhóm A, theo chiều tăng của điện tích hạt nhân (từ trên xuống dưới), bán kính nguyên tử tăng dần, lực hút giữa hạt nhân và electron ngoài cùng giảm dần nên khả năng nhường electron tăng &rArr; tính kim loại tăng dần.<br>Do Ca ở chu kì 4 (dưới Mg ở chu kì 3) nên: Tính kim loại của Calcium mạnh hơn Magnesium (Ca &gt; Mg) (0,50 điểm)."
+      }
+    ]
+  },
+  {
+    "id": "hoahoc-10-de-11",
+    "title": "Hóa học 10 - Đề 11 - Đề luyện tập số 4: Tổng hợp (Năm học 2025–2026)",
+    "subject": "chemistry",
+    "duration": 45,
+    "school": "Đề luyện tập số 4: Tổng hợp (Năm học 2025–2026)",
+    "province": "Tài liệu học tập THPT",
+    "year": "2025–2026",
+    "sourceUrl": "#",
+    "mcUnit": 0.2,
+    "shortUnit": 1,
+    "essayPoints": 0,
+    "questions": [
+      [
+        "Theo nguyên lí Pauli, trong mỗi orbital nguyên tử, số electron tối đa là ...(1)..., và các electron này có chiều tự quay quanh trục của chúng là ...(2)... Các từ thích hợp để điền vào vị trí (1), (2) lần lượt là:",
+        [
+          "A. 1, không đổi.",
+          "B. 2, cùng chiều nhau.",
+          "C. 2, ngược chiều nhau.",
+          "D. 1, thay đổi."
+        ],
+        2,
+        "Theo nguyên lí Pauli, trong một orbital nguyên tử (AO) chỉ có thể chứa tối đa 2 electron và hai electron này phải có chiều tự quay quanh trục ngược nhau (spin ngược dấu)."
+      ],
+      [
+        "Theo nguyên lí vững bền, khi electron phân bố vào các AO của nguyên tử, chúng sẽ lần lượt được lấp đầy vào các AO theo thứ tự:",
+        [
+          "A. từ lớp thấp đến lớp cao.",
+          "B. mức năng lượng từ thấp đến cao.",
+          "C. từ lớp trong ra lớp ngoài.",
+          "D. các phân lớp s, p, d, f cho từng lớp trong ra ngoài."
+        ],
+        1,
+        "Theo nguyên lí vững bền: Ở trạng thái cơ bản, trong nguyên tử các electron lần lượt chiếm các orbital có mức năng lượng từ thấp đến cao."
+      ],
+      [
+        "Số phân lớp electron có trong lớp thứ 2 là:",
+        [
+          "A. 3.",
+          "B. 2.",
+          "C. 1.",
+          "D. 4."
+        ],
+        1,
+        "Lớp thứ n có đúng n phân lớp electron. Do đó lớp thứ 2 (lớp L, n = 2) có đúng 2 phân lớp là 2s và 2p."
+      ],
+      [
+        "Các phân lớp electron có trong lớp N là:",
+        [
+          "A. 1s.",
+          "B. 2s, 2p.",
+          "C. 3s, 3p, 3d.",
+          "D. 4s, 4p, 4d, 4f."
+        ],
+        3,
+        "Lớp N tương ứng với n = 4, gồm 4 phân lớp electron kí hiệu là 4s, 4p, 4d, 4f."
+      ],
+      [
+        "Số electron tối đa trong phân lớp p là:",
+        [
+          "A. 6.",
+          "B. 2.",
+          "C. 10.",
+          "D. 14."
+        ],
+        0,
+        "Phân lớp p gồm 3 orbital p (px, py, pz). Mỗi orbital chứa tối đa 2 electron nên số electron tối đa của phân lớp p là 3 × 2 = 6 electron."
+      ],
+      [
+        "Số electron tối đa trong phân lớp d là:",
+        [
+          "A. 2.",
+          "B. 6.",
+          "C. 10.",
+          "D. 14."
+        ],
+        2,
+        "Phân lớp d gồm 5 orbital d. Mỗi orbital chứa tối đa 2 electron nên số electron tối đa của phân lớp d là 5 × 2 = 10 electron."
+      ],
+      [
+        "Cấu hình electron đúng của nguyên tử Li (Z = 3) là:",
+        [
+          "A. 1s²1p¹.",
+          "B. 1s²2s¹.",
+          "C. 1s¹2s².",
+          "D. 1s³."
+        ],
+        1,
+        "Lithium có Z = 3. Thứ tự lấp đầy năng lượng: 1s² 2s¹."
+      ],
+      [
+        "Cấu hình electron đúng của nguyên tử F (Z = 9) là:",
+        [
+          "A. 1s²2s²2p⁵.",
+          "B. 1s²2s²2p⁴3s¹.",
+          "C. 1s²1p⁶1d¹.",
+          "D. 1s²2s²2p⁴."
+        ],
+        0,
+        "Fluorine có Z = 9 electron. Cấu hình electron theo thứ tự năng lượng là 1s² 2s² 2p⁵."
+      ],
+      [
+        "Nguyên tử X có cấu hình e là: 1s²2s²2p⁶3s²3p¹. Chọn phát biểu đúng.",
+        [
+          "A. Số electron ở lớp ngoài cùng trong nguyên tử X là 1.",
+          "B. Nguyên tử X chứa 2 lớp electron.",
+          "C. Lớp electron ngoài cùng của nguyên tử X là lớp N.",
+          "D. Ở trạng thái cơ bản, nguyên tử X chứa 1 electron độc thân."
+        ],
+        3,
+        "Cấu hình của X có 3 lớp electron (lớp ngoài cùng là lớp 3 gồm phân lớp 3s² 3p¹ với 3 electron). Phân lớp 3p có 1 electron nằm trong 1 AO nên nguyên tử X chứa đúng 1 electron độc thân."
+      ],
+      [
+        "Nguyên tử Y có cấu hình e là: 1s²2s²2p⁶3s²3p⁶3d⁵4s². Cho các nhận xét: (1) Số hiệu nguyên tử của Y là 25; (2) Nguyên tố Y là một kim loại; (3) Ở trạng thái cơ bản, nguyên tử Y chứa 5 electron độc thân. Các nhận xét đúng bao gồm:",
+        [
+          "A. chỉ (1) và (2).",
+          "B. cả (1), (2) và (3).",
+          "C. chỉ (1) và (3).",
+          "D. chỉ (2) và (3)."
+        ],
+        1,
+        "Tổng số electron của Y = 25 &rArr; Z = 25 (Mn, (1) đúng). Y là kim loại chuyển tiếp (2 đúng). Phân lớp 3d⁵ có 5 orbital, theo quy tắc Hund mỗi AO chứa 1e &rArr; có 5 electron độc thân (3 đúng). Vậy cả 3 nhận xét đều đúng."
+      ]
+    ],
+    "tf": [
+      {
+        "stem": "Xét tính Đúng/Sai của các phát biểu về kích thước và cấu tạo nguyên tử:",
+        "items": [
+          [
+            "a) Hạt nhân nguyên tử có kích thước rất nhỏ so với lớp vỏ nguyên tử.",
+            true,
+            "Phát biểu ĐÚNG. Kích thước hạt nhân chỉ bằng khoảng 1/10.000 đến 1/100.000 lần kích thước của toàn nguyên tử."
+          ],
+          [
+            "b) Hạt nhân nguyên tử chiếm gần như toàn bộ khối lượng nguyên tử.",
+            true,
+            "Phát biểu ĐÚNG. Khối lượng nguyên tử tập trung hầu hết ở hạt nhân vì khối lượng electron ở vỏ rất bé không đáng kể."
+          ],
+          [
+            "c) Các electron trong cùng một lớp có năng lượng bằng nhau.",
+            false,
+            "Phát biểu SAI. Các electron trong cùng một lớp chỉ có mức năng lượng GẦN BẰNG NHAU; các electron trong cùng một phân lớp mới có năng lượng bằng nhau."
+          ],
+          [
+            "d) Các electron trong cùng một phân lớp có năng lượng bằng nhau.",
+            true,
+            "Phát biểu ĐÚNG theo định nghĩa phân lớp electron."
+          ]
+        ]
+      },
+      {
+        "stem": "Xét tính Đúng/Sai của các phát biểu về orbital nguyên tử và sự phân bố electron:",
+        "items": [
+          [
+            "a) Trong một orbital nguyên tử, số electron tối đa là 6.",
+            false,
+            "Phát biểu SAI. Theo nguyên lí Pauli, mỗi orbital nguyên tử chỉ chứa tối đa 2 electron."
+          ],
+          [
+            "b) Số electron tối đa trong các phân lớp s, p, d, f lần lượt là 1, 3, 5, 7.",
+            false,
+            "Phát biểu SAI. 1, 3, 5, 7 là số lượng orbital nguyên tử trong các phân lớp s, p, d, f; số electron tối đa tương ứng phải là 2, 6, 10, 14."
+          ],
+          [
+            "c) Số phân lớp electron trong một lớp đúng bằng số thứ tự của lớp đó.",
+            true,
+            "Phát biểu ĐÚNG. Lớp thứ n có đúng n phân lớp electron (đối với n &le; 4)."
+          ],
+          [
+            "d) Trật tự năng lượng các AO: 4s < 4p < 4d < 4f.",
+            true,
+            "Phát biểu ĐÚNG. Trong cùng một lớp (n = 4), mức năng lượng tăng dần từ phân lớp s đến p, d và f."
+          ]
+        ]
+      },
+      {
+        "stem": "Cấu hình electron lớp ngoài cùng của nguyên tử R là: 4s²4p⁵. Xét tính Đúng/Sai của các phát biểu sau:",
+        "items": [
+          [
+            "a) Số hiệu nguyên tử của R là 35.",
+            true,
+            "Phát biểu ĐÚNG. Cấu hình đầy đủ: 1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁵ &rArr; Z = 35 (Bromine)."
+          ],
+          [
+            "b) Ở trạng thái cơ bản, nguyên tử R chứa 5 electron độc thân.",
+            false,
+            "Phát biểu SAI. Phân lớp 4p⁵ gồm 2 cặp electron ghép đôi và chỉ có 1 electron độc thân."
+          ],
+          [
+            "c) Nguyên tố R là một phi kim.",
+            true,
+            "Phát biểu ĐÚNG. R có 7 electron ở lớp ngoài cùng (4s² 4p⁵) nên là một phi kim điển hình."
+          ],
+          [
+            "d) Nếu nguyên tử R nhận thêm 1 electron, nó có cấu hình electron giống khí hiếm.",
+            true,
+            "Phát biểu ĐÚNG. Khi nhận thêm 1 electron, R tạo anion R⁻ có cấu hình 4s² 4p⁶ bền vững giống khí hiếm Kr."
+          ]
+        ]
+      },
+      {
+        "stem": "Điện tích hạt nhân nguyên tử T là +4,165.10⁻¹⁸ Coulomb. Xét tính Đúng/Sai của các phát biểu sau:",
+        "items": [
+          [
+            "a) Cấu hình electron của nguyên tử T là: [Ar] 3d⁸.",
+            false,
+            "Phát biểu SAI. Số proton Z = 4,165.10⁻¹⁸ / (1,602.10⁻¹⁹) &approx; 26 (Sắt - Fe). Cấu hình e đúng là [Ar] 3d⁶ 4s²."
+          ],
+          [
+            "b) Nguyên tố T là một phi kim.",
+            false,
+            "Phát biểu SAI. T có Z = 26 là kim loại sắt (Fe)."
+          ],
+          [
+            "c) Phân lớp d của nguyên tử T chưa bão hoà.",
+            true,
+            "Phát biểu ĐÚNG. Phân lớp 3d chứa 6 electron (chưa đạt tối đa 10 electron) nên chưa bão hòa."
+          ],
+          [
+            "d) Trong nguyên tử T có chứa 4 electron độc thân ở trạng thái cơ bản.",
+            true,
+            "Phát biểu ĐÚNG. Cấu hình 3d⁶ có 1 ô orbital chứa cặp ghép đôi và 4 ô orbital mỗi ô chứa 1 electron độc thân."
+          ]
+        ]
+      }
+    ],
+    "short": [
+      {
+        "question": "Tổng số hạt proton, electron, neutron trong một nguyên tử X là 22, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là 6 hạt. Số hiệu nguyên tử của X bằng bao nhiêu?",
+        "answer": "7",
+        "explanation": "Hệ phương trình: 2Z + N = 22 và 2Z - N = 6 &rArr; 4Z = 28 &rArr; Z = 7 (Nitrogen), N = 8."
+      },
+      {
+        "question": "Một nguyên tử Calcium có kí hiệu là ⁴⁰₂₀Ca. Ở trạng thái cơ bản, nguyên tử này có bao nhiêu electron độc thân?",
+        "answer": "0",
+        "explanation": "Ca (Z = 20) có cấu hình: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² = [Ar] 4s². Tất cả các phân lớp đều bão hòa nên có 0 electron độc thân."
+      },
+      {
+        "question": "Nickel thường được dùng để đúc tiền xu. Biết tổng số hạt mang điện trong một nguyên tử Nickel bằng 56. Số hiệu nguyên tử (Z) của Nickel bằng bao nhiêu?",
+        "answer": "28",
+        "explanation": "Số hạt mang điện trong nguyên tử trung hòa gồm proton và electron: 2Z = 56 &rArr; Z = 28."
+      },
+      {
+        "question": "Boron (B) tồn tại trong tự nhiên dưới hai đồng vị bền là ¹⁰₅B (chiếm 19,9%) và ¹¹₅B (chiếm 80,1%). Tính nguyên tử khối trung bình của Boron (làm tròn kết quả đến 2 chữ số thập phân).",
+        "answer": "10.80",
+        "explanation": "Nguyên tử khối trung bình = (10 × 19,9 + 11 × 80,1) / 100 = 1080,1 / 100 = 10,801 amu &approx; 10,80 amu."
+      }
+    ],
+    "essay": [
+      {
+        "title": "Bài số 1 (1,0 điểm). Cấu tạo hạt nguyên tử X.",
+        "question": "Tổng số hạt proton, electron, neutron trong một nguyên tử X là 22, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là 6 hạt.<br>a) Xác định số hiệu nguyên tử của X.<br>b) Viết kí hiệu hạt nhân nguyên tử của X.<br>c) Cho biết nguyên tử khối của X.<br>d) Tính khối lượng 1 nguyên tử X ra gam.<br>e) Viết cấu hình electron của nguyên tử X.",
+        "solution": "Theo đề bài, gọi Z là số proton (Z = E) và N là số neutron của nguyên tử X:<br>• Tổng số hạt: 2Z + N = 22 (1)<br>• Số hạt mang điện nhiều hơn không mang điện: 2Z - N = 6 (2)<br>Cộng (1) và (2): 4Z = 28 &rArr; Z = 7 (0,2 điểm).<br>Thay Z = 7 vào (1): N = 22 - 2(7) = 8 hạt.<br>a) Số hiệu nguyên tử của X là Z = 7 (0,2 điểm).<br>b) Số khối A = Z + N = 7 + 8 = 15. Kí hiệu hạt nhân: <sup>15</sup><sub>7</sub>X (hoặc <sup>15</sup><sub>7</sub>N) (0,2 điểm).<br>c) Nguyên tử khối của X là 15 amu (0,2 điểm).<br>d) Khối lượng 1 nguyên tử X: m = 15 &times; 1,6605 &times; 10<sup>-24</sup> gam &approx; 2,49075 &times; 10<sup>-23</sup> gam (0,2 điểm).<br>e) Cấu hình electron của X (Z = 7): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup> (0,2 điểm)."
+      },
+      {
+        "title": "Bài số 2 (1,0 điểm). Khảo sát nguyên tử Y (⁴⁰₂₀Ca).",
+        "question": "Một nguyên tử có kí hiệu như sau: <sup>40</sup><sub>20</sub>Y.<br>a) Cho biết số proton, neutron, electron có trong 1 nguyên tử Y.<br>b) Viết cấu hình electron của nguyên tử Y.<br>c) Ở trạng thái cơ bản, nguyên tử Y có bao nhiêu electron độc thân?<br>d) Dự đoán tính chất hoá học của nguyên tố Y.<br>e) Tính số electron có mặt trong một mẫu Y có khối lượng là 2 gam.",
+        "solution": "a) Từ kí hiệu <sup>40</sup><sub>20</sub>Y &rArr; Z = 20, A = 40.<br>• Số proton = số electron = Z = 20.<br>• Số neutron = A - Z = 40 - 20 = 20 (0,2 điểm).<br>b) Cấu hình electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup> (hoặc [Ar] 4s<sup>2</sup>) (0,2 điểm).<br>c) Lớp ngoài cùng 4s<sup>2</sup> đã bão hòa (1 AO chứa 2 electron ghép đôi). Vậy số electron độc thân ở trạng thái cơ bản là 0 (0,2 điểm).<br>d) Y có 2 electron ở lớp ngoài cùng (4s<sup>2</sup>) nên Y là một kim loại hoạt động mạnh (Calcium) (0,2 điểm).<br>e) Số mol Y trong 2 gam: n = 2 / 40 = 0,05 mol.<br>Mỗi nguyên tử Y có 20 electron. Số electron có trong 2 gam mẫu là:<br>N<sub>e</sub> = 0,05 &times; 6,022 &times; 10<sup>23</sup> &times; 20 = 6,022 &times; 10<sup>23</sup> electron (0,2 điểm)."
+      },
+      {
+        "title": "Bài số 3 (1,0 điểm). Cấu tạo và tính chất nguyên tử Nickel.",
+        "question": "Nickel thường được dùng để đúc tiền xu. Số hạt mang điện có trong một nguyên tử Ni là 56.<br>a) Số hiệu nguyên tử của Nickel là bao nhiêu?<br>b) Viết cấu hình electron của nguyên tử Nickel.<br>c) Dự đoán tính chất hoá học của Nickel. Giải thích.<br>d) Biểu diễn sự phân bố các electron vào các AO của nguyên tử Nickel.",
+        "solution": "a) Tổng số hạt mang điện trong nguyên tử trung hòa: 2Z = 56 &rArr; Z = 28. Vậy số hiệu nguyên tử của Nickel là 28 (0,25 điểm).<br>b) Cấu hình electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>8</sup> 4s<sup>2</sup> (hoặc viết gọn là [Ar] 3d<sup>8</sup> 4s<sup>2</sup>) (0,25 điểm).<br>c) Tính chất hóa học: Nickel là một kim loại vì có 2 electron ở lớp ngoài cùng (4s<sup>2</sup>) và phân lớp d đang được điền dở (kim loại chuyển tiếp nhóm VIIIB) (0,25 điểm).<br>d) Biểu diễn AO lớp sát ngoài cùng và ngoài cùng:<br>• Phân lớp 3d<sup>8</sup> (5 ô orbital): 3 ô đầu chứa cặp electron ghép đôi [↑↓][↑↓][↑↓] và 2 ô sau mỗi ô chứa 1 electron độc thân [↑][↑] &rArr; có 2 electron độc thân.<br>• Phân lớp 4s<sup>2</sup> (1 ô orbital): chứa 1 cặp electron ghép đôi [↑↓] (0,25 điểm)."
+      },
+      {
+        "title": "Bài số 4 (1,0 điểm). Đồng vị của Boron và ứng dụng trong hàn the.",
+        "question": "Boron (B) tồn tại trong tự nhiên dưới 2 dạng đồng vị bền <sup>10</sup><sub>5</sub>B và <sup>11</sup><sub>5</sub>B với tỉ lệ phần trăm số nguyên tử lần lượt là 19,9% và 80,1%.<br>a) Tính nguyên tử khối trung bình của B.<br>b) Tính khối lượng của <sup>10</sup><sub>5</sub>B có trong 1,080 gam B.<br>c) Tính phần trăm khối lượng của <sup>11</sup><sub>5</sub>B trong hàn the Na<sub>2</sub>B<sub>4</sub>O<sub>7</sub>·5H<sub>2</sub>O. Cho Na = 23, O = 16, H = 1.",
+        "solution": "a) Nguyên tử khối trung bình của Boron:<br>Ā<sub>B</sub> = (10 &times; 19,9 + 11 &times; 80,1) / 100 = 10,801 amu (0,25 điểm).<br>b) Số mol B trong 1,080 g Boron: n<sub>B</sub> = 1,080 / 10,801 &approx; 0,1 mol.<br>Vì đồng vị <sup>10</sup>B chiếm 19,9% số nguyên tử nên số mol <sup>10</sup>B = 0,1 &times; 19,9% = 0,0199 mol.<br>Khối lượng <sup>10</sup>B là: m(<sup>10</sup>B) = 0,0199 &times; 10 = 0,199 gam (0,25 điểm).<br>c) Phân tử khối của hàn the Na<sub>2</sub>B<sub>4</sub>O<sub>7</sub>·5H<sub>2</sub>O:<br>M = 23 &times; 2 + 10,801 &times; 4 + 16 &times; 7 + 5 &times; 18 = 46 + 43,204 + 112 + 90 = 291,204 g/mol.<br>Trong 1 mol hàn the có 4 mol B, số mol đồng vị <sup>11</sup>B là 4 &times; 80,1% = 3,204 mol.<br>Khối lượng của <sup>11</sup>B trong 1 mol hàn the: 3,204 &times; 11 = 35,244 gam.<br>Phần trăm khối lượng của <sup>11</sup>B trong hàn the là:<br>%m(<sup>11</sup>B) = (35,244 / 291,204) &times; 100% &approx; 12,10% (0,50 điểm)."
+      }
+    ]
+  },
+  {
+    "id": "hoahoc-10-de-12",
+    "title": "Hóa học 10 - Đề 12 - Kiểm tra Cấu tạo nguyên tử - Đề số 1 (Năm học 2025–2026)",
+    "subject": "chemistry",
+    "duration": 45,
+    "school": "Kiểm tra Cấu tạo nguyên tử - Đề số 1 (Năm học 2025–2026)",
+    "province": "Tài liệu học tập THPT",
+    "year": "2025–2026",
+    "sourceUrl": "#",
+    "mcUnit": 0.2,
+    "shortUnit": 0.25,
+    "essayPoints": 2,
+    "questions": [
+      [
+        "Năm 1897, J.J. Thomson đã phát hiện ra electron từ thí nghiệm:",
+        [
+          "A. phóng điện cao áp qua không khí.",
+          "B. phóng điện cao áp qua không khí rất loãng.",
+          "C. bắn phá nguyên tử nito bằng tia α.",
+          "D. quan sát nguyên tử qua kính hiển vi STM."
+        ],
+        1,
+        "Năm 1897, J.J. Thomson thực hiện thí nghiệm phóng điện cao áp qua một ống thủy tinh chứa không khí ở áp suất rất loãng và phát hiện ra chùm tia âm cực (tia electron)."
+      ],
+      [
+        "Khi dẫn tia âm cực đi qua khe hai bản của tụ điện đã tích điện, tia âm cực sẽ:",
+        [
+          "A. đi lệch về phía bản tích điện dương.",
+          "B. đi lệch về phía bản tích điện âm.",
+          "C. đi thẳng.",
+          "D. đi lệch về cả hai phía."
+        ],
+        0,
+        "Tia âm cực là chùm hạt electron mang điện tích âm, do đó khi đi qua điện trường giữa hai bản tụ điện, chúng bị lệch về phía bản tích điện dương."
+      ],
+      [
+        "Khi nghiên cứu về chùm tia âm cực có độ lớn điện tích là q và khối lượng là m, một số nhận định được đưa ra như sau: (1) m tăng thì q giảm; (2) m tăng thì q tăng; (3) tỉ số m/q = hằng số. Các nhận định đúng bao gồm:",
+        [
+          "A. chỉ (1).",
+          "B. chỉ (2).",
+          "C. chỉ (2) và (3).",
+          "D. chỉ (3)."
+        ],
+        2,
+        "Vì chùm hạt gồm các electron giống hệt nhau có điện tích e và khối lượng me xác định, khi số electron tăng thì m tăng đồng thời q cũng tăng theo, và tỉ số m/q luôn là hằng số."
+      ],
+      [
+        "Điện tích của một chùm electron không thể nhận giá trị nào sau đây nếu điện tích của electron có giá trị là e₀ = -1,60.10⁻¹⁹ C?",
+        [
+          "A. -1,60.10⁻¹⁸ C.",
+          "B. -2,56.10⁻¹⁶ C.",
+          "C. -8,0.10⁻¹⁶ C.",
+          "D. -1,65.10⁻¹⁷ C."
+        ],
+        3,
+        "Điện tích chùm electron phải bằng một số nguyên lần điện tích của 1 electron. Với D: (-1,65.10⁻¹⁷) / (-1,60.10⁻¹⁹) = 103,125 (không phải số nguyên), nên không thể nhận giá trị này."
+      ],
+      [
+        "Hạt α dùng để bắn phá các hạt nhân trong thí nghiệm phát hiện ra prôton là:",
+        [
+          "A. nguyên tử heli, ⁴₂He.",
+          "B. hạt nhân nguyên tử heli, ⁴₂He²⁺.",
+          "C. hạt neutron.",
+          "D. nguyên tử ²₁D."
+        ],
+        1,
+        "Hạt alpha (α) chính là dòng hạt nhân nguyên tử Helium, kí hiệu là ⁴₂He²⁺ (gồm 2 proton và 2 neutron, mất 2 electron)."
+      ],
+      [
+        "Khi E. Rutherford và các cộng sự bắn hạt α vào một lá vàng rất mỏng, hầu hết các hạt xuyên qua lá vàng, một số ít lệch hướng và một số rất ít bị bật ngược trở lại. Một số nhận định về cấu tạo nguyên tử được đưa ra như sau: (1) Nguyên tử có cấu tạo rỗng; (2) Toàn bộ khối lượng nguyên tử chủ yếu tập trung ở hạt nhân. Nhận định đúng bao gồm:",
+        [
+          "A. chỉ (1).",
+          "B. chỉ (2).",
+          "C. cả (1) và (2).",
+          "D. không phải (1) lẫn (2)."
+        ],
+        2,
+        "Hầu hết hạt α đi thẳng chứng minh nguyên tử có cấu tạo rỗng. Một số ít bị lệch hoặc bật ngược lại chứng tỏ hạt nhân có kích thước rất nhỏ mang điện tích dương và tập trung hầu hết khối lượng nguyên tử."
+      ],
+      [
+        "Đặc điểm nào dưới đây là của hạt proton?",
+        [
+          "A. Khối lượng bằng khối lượng electron, điện tích có độ lớn là e₀ nhưng ngược dấu với electron.",
+          "B. Khối lượng xấp xỉ 1 u, điện tích có giá trị +1,60.10⁻¹⁹ C.",
+          "C. Khối lượng là 1,6.10⁻¹⁹ kg, điện tích có giá trị là 1+ đơn vị điện tích.",
+          "D. Khối lượng xấp xỉ 1 u và không mang điện."
+        ],
+        1,
+        "Hạt proton có khối lượng mp &approx; 1 amu (1,6726.10⁻²⁷ kg) và mang điện tích dương qp = +1,602.10⁻¹⁹ C (+1 đơn vị điện tích nguyên tố)."
+      ],
+      [
+        "Năm 1932, J. Chadwick dùng hạt α bắn phá hạt nhân nguyên tử beri đã phát hiện được một loại hạt cơ bản không mang điện, có khối lượng xấp xỉ khối lượng prôton. Hạt cơ bản này là:",
+        [
+          "A. neutron.",
+          "B. proton.",
+          "C. electron.",
+          "D. α."
+        ],
+        0,
+        "Hạt neutron (n) được James Chadwick phát hiện năm 1932: hạt không mang điện và có khối lượng xấp xỉ 1 amu (gần bằng khối lượng proton)."
+      ],
+      [
+        "Hạt nhân nguyên tử được cấu tạo nên bởi các loại hạt cơ bản là:",
+        [
+          "A. proton và electron.",
+          "B. proton và neutron.",
+          "C. neutron và electron.",
+          "D. proton, neutron, electron."
+        ],
+        1,
+        "Hạt nhân nguyên tử gồm 2 loại hạt cơ bản là proton và neutron (riêng đồng vị phổ biến ¹₁H chỉ có 1 proton)."
+      ],
+      [
+        "Để biểu thị kích thước nguyên tử, người ta thường dùng đơn vị nanomet (nm) hay angstrom (Å). Biết rằng 1 nm = 10⁻⁹ m và 1 Å = 10⁻¹⁰ m. Cho biết 1 nm ứng với bao nhiêu Å?",
+        [
+          "A. 0,1.",
+          "B. 10.",
+          "C. 1.10⁻¹⁹.",
+          "D. 100."
+        ],
+        1,
+        "1 nm = 10⁻⁹ m = 10 × 10⁻¹⁰ m = 10 Å."
+      ],
+      [
+        "Nguyên tử hydrogen là nguyên tử nhỏ nhất với bán kính r_H = 0,53 angstrom. Bán kính nguyên tử hydrogen theo nanomet là bao nhiêu?",
+        [
+          "A. 0,053 nm.",
+          "B. 5,3 nm.",
+          "C. 53 nm.",
+          "D. 5,3.10⁻¹⁹ nm."
+        ],
+        0,
+        "Vì 1 nm = 10 Å nên r_H = 0,53 Å = 0,53 / 10 = 0,053 nm."
+      ],
+      [
+        "Phát biểu nào sau đây luôn chính xác?",
+        [
+          "A. Nguyên tử của một nguyên tố luôn luôn được tạo nên từ ba loại hạt proton, neutron và electron.",
+          "B. Electron chuyển động xung quanh hạt nhân nguyên tử rất nhanh tạo nên lớp vỏ nguyên tử.",
+          "C. Với những nguyên tử có nhiều electron, không thể bỏ qua khối lượng electron so với khối lượng của nguyên tử do chúng cũng đáng kể.",
+          "D. Hạt nhân nguyên tử của mọi nguyên tố luôn được tạo ra từ hai loại hạt là proton, neutron."
+        ],
+        1,
+        "Trong nguyên tử, các electron chuyển động rất nhanh trong không gian xung quanh hạt nhân tạo nên lớp vỏ nguyên tử."
+      ],
+      [
+        "Hạt nhân một nguyên tử nguyên tố Vonfram, dùng làm dây tóc bóng đèn, chứa 74 proton và 110 neutron. Khối lượng nguyên tử Vonfram, W, có giá trị gần nhất với: (Cho mp ≈ mn ≈ 1,67.10⁻²⁴ gam và me = 9,1.10⁻²⁸ gam)",
+        [
+          "A. 184 gam.",
+          "B. 1,24.10⁻²⁴ gam.",
+          "C. 3,07.10⁻²² gam.",
+          "D. 4,28.10⁻²² gam."
+        ],
+        2,
+        "Tổng số nucleon = 74 + 110 = 184. Khối lượng nguyên tử m &approx; 184 × 1,67.10⁻²⁴ gam &approx; 3,07.10⁻²² gam."
+      ],
+      [
+        "Nguyên tử calcium có 20 proton trong hạt nhân nguyên tử. Điện tích hạt nhân theo đơn vị Coulomb của nguyên tử calcium là bao nhiêu?",
+        [
+          "A. 20+ C.",
+          "B. +3,2.10⁻¹⁹ C.",
+          "C. +3,2.10⁻¹⁸ C.",
+          "D. +6,4.10⁻¹⁸ C."
+        ],
+        2,
+        "Điện tích hạt nhân q = +Z × e = +20 × 1,602.10⁻¹⁹ C &approx; +3,2.10⁻¹⁸ C."
+      ],
+      [
+        "Cho các nhận định liên quan đến một nguyên tử thuỷ ngân có kí hiệu là ¹⁹⁸₈₀Hg như sau: (1) Nguyên tử ²⁰⁰₈₀Hg là đồng vị của nguyên tử trên; (2) Số khối của hạt nhân nguyên tử ¹⁹⁸₈₀Hg là 198; (3) Số hạt mang điện có trong nguyên tử ¹⁹⁸₈₀Hg là 80. Số lượng nhận xét đúng là:",
+        [
+          "A. 2.",
+          "B. 0.",
+          "C. 1.",
+          "D. 3."
+        ],
+        0,
+        "(1) đúng vì cùng có Z = 80; (2) đúng vì số khối A = 198; (3) sai vì tổng số hạt mang điện trong nguyên tử là 2Z = 160 hạt. Vậy có 2 nhận xét đúng."
+      ],
+      [
+        "Tổng số proton, neutron và electron trong một nguyên tử X là 13. Kí hiệu nguyên tử của X là:",
+        [
+          "A. ⁷₄X.",
+          "B. ⁹₄X.",
+          "C. ¹³₆X.",
+          "D. ¹⁰₅X."
+        ],
+        1,
+        "Ta có 2Z + N = 13. Với các nguyên tố bền (Z &le; 82): Z &le; N &le; 1,5Z &rArr; 13/3,5 &le; Z &le; 13/3 &rArr; 3,7 &le; Z &le; 4,3 &rArr; Z = 4 (Be), N = 5, A = 9 &rArr; ⁹₄X."
+      ],
+      [
+        "Nhận xét nào luôn chính xác?",
+        [
+          "A. Trong hạt nhân nguyên tử, số proton bằng số neutron.",
+          "B. Hạt α chứa 2 electron ở lớp vỏ của nó.",
+          "C. Trong một nguyên tử, số proton trong hạt nhân luôn bằng số electron ở lớp vỏ.",
+          "D. Hạt nhân nguyên tử luôn chứa hai loại hạt neutron, proton."
+        ],
+        2,
+        "Nguyên tử luôn trung hòa về điện, do đó số đơn vị điện tích dương của hạt nhân (số proton) luôn bằng số đơn vị điện tích âm ở lớp vỏ (số electron)."
+      ],
+      [
+        "Biết rằng 1 mol nguyên tử hydrogen gồm 6,02.10²³ nguyên tử hydrogen có khối lượng là 1,008 gam. Khối lượng nguyên tử hydrogen, ¹₁H, tính theo gam là:",
+        [
+          "A. 6,02.10⁻²³ gam.",
+          "B. 1,66.10⁻²⁴ gam.",
+          "C. 3,01.10⁻²³ gam.",
+          "D. 6,02.10⁻²⁴ gam."
+        ],
+        1,
+        "Khối lượng 1 nguyên tử H = 1,008 / (6,02.10²³) &approx; 1,67.10⁻²⁴ gam (gần nhất với 1,66.10⁻²⁴ gam)."
+      ],
+      [
+        "Một nguyên tử Mg có khối lượng là 4,15.10⁻²³ g. Số khối của hạt nhân nguyên tử này là:",
+        [
+          "A. 25.",
+          "B. 23.",
+          "C. 24.",
+          "D. 26."
+        ],
+        0,
+        "Số khối A &approx; m / (1 amu) = 4,15.10⁻²³ / (1,6605.10⁻²⁴) &approx; 25."
+      ],
+      [
+        "Đơn vị khối lượng nguyên tử, u hay amu, bằng:",
+        [
+          "A. khối lượng của 1/12 khối lượng nguyên tử cacbon.",
+          "B. khối lượng của 1 nguyên tử hydro bất kì.",
+          "C. 1/16 khối lượng của một nguyên tử đồng vị oxi 17.",
+          "D. 1/12 khối lượng một nguyên tử đồng vị cacbon 12."
+        ],
+        3,
+        "Theo quy ước quốc tế: 1 amu (hoặc 1 u) được định nghĩa bằng đúng 1/12 khối lượng của một nguyên tử đồng vị carbon-12 (¹²₆C)."
+      ],
+      [
+        "Nguyên tố Ytrium, một nguyên tố được ứng dụng làm vật liệu siêu dẫn, tạo được oxide Y₂O₃ trong đó oxi chiếm 21,26% khối lượng. Tìm nguyên tử khối của Ytri biết nguyên tử khối của oxygen là 16,0 u.",
+        [
+          "A. 39,0 u.",
+          "B. 88,9 u.",
+          "C. 168,0 u.",
+          "D. 177,8 u."
+        ],
+        1,
+        "Trong Y₂O₃: %m(O) = 48 / (2M_Y + 48) = 0,2126 &rArr; 2M_Y + 48 &approx; 225,78 &rArr; M_Y &approx; 88,9 u."
+      ],
+      [
+        "Điện tích hạt nhân nguyên tử nguyên tố chromium, thường được dùng làm thép chống gỉ, là 3,84.10⁻¹⁸ C. Tổng số hạt mang điện trong một nguyên tử chromium là bao nhiêu?",
+        [
+          "A. 26 hạt.",
+          "B. 24 hạt.",
+          "C. 48 hạt.",
+          "D. 52 hạt."
+        ],
+        2,
+        "Z = 3,84.10⁻¹⁸ / (1,6.10⁻¹⁹) = 24. Tổng số hạt mang điện trong nguyên tử trung hòa = 2Z = 48 hạt."
+      ],
+      [
+        "Số khối hạt nhân một nguyên tử A là 63, điện tích hạt nhân nguyên tử này là 4,64.10⁻¹⁸ C. Số hạt không mang điện trong một nguyên tử A là:",
+        [
+          "A. 64.",
+          "B. 35.",
+          "C. 34.",
+          "D. 29."
+        ],
+        2,
+        "Z = 4,64.10⁻¹⁸ / (1,6.10⁻¹⁹) = 29. Số hạt không mang điện (neutron) N = A - Z = 63 - 29 = 34 hạt."
+      ],
+      [
+        "Nguyên tử của nguyên tố Y có tổng số hạt cơ bản là 82 trong đó số hạt mang điện nhiều hơn số hạt không mang điện là 22 hạt. Kí hiệu nguyên tử của Y là:",
+        [
+          "A. ⁵²₃₀Y.",
+          "B. ³⁶₁₆Y.",
+          "C. ⁵⁶₂₆Y.",
+          "D. ¹⁴₆Y."
+        ],
+        2,
+        "2Z + N = 82 và 2Z - N = 22 &rArr; 4Z = 104 &rArr; Z = 26 (Fe), N = 30 &rArr; A = 56. Kí hiệu là ⁵⁶₂₆Y."
+      ],
+      [
+        "Nếu coi nguyên tử là một quả cầu thì khối lượng riêng của một nguyên tử ⁶³Cu là bao nhiêu g/cm³ biết bán kính nguyên tử Cu là 1,35 Å?",
+        [
+          "A. 10,52 g/cm³.",
+          "B. 10,15 g/cm³.",
+          "C. 8,91 gam/cm³.",
+          "D. 6,12 gam/cm³."
+        ],
+        1,
+        "r = 1,35 Å = 1,35.10⁻⁸ cm &rArr; V = (4/3)πr³ &approx; 1,0306.10⁻²³ cm³. Khối lượng 1 nguyên tử ⁶³Cu = 63 × 1,6605.10⁻²⁴ gam &approx; 1,0461.10⁻²² gam &rArr; D = m/V &approx; 10,15 g/cm³."
+      ]
+    ],
+    "tf": [
+      {
+        "stem": "Hydrogen sulfide là một khí độc, có mùi trứng thối. Một loại phân tử hydrogen sulfide được tạo ra từ các nguyên tử ¹₁H và ³²₁₆S. Xét tính Đúng/Sai của các phát biểu sau:",
+        "items": [
+          [
+            "a) Hydrogen sulfide nhẹ hơn không khí.",
+            false,
+            "Phát biểu SAI. Khối lượng mol của H₂S = 2(1) + 32 = 34 g/mol > M(không khí) &approx; 29 g/mol nên H₂S nặng hơn không khí."
+          ],
+          [
+            "b) Số electron có trong một phân tử hydrogen sulfide là 34.",
+            false,
+            "Phát biểu SAI. Tổng số electron trong phân tử H₂S = 2(1) + 16 = 18 electron."
+          ],
+          [
+            "c) Số neutron có trong một phân tử hydrogen sulfide là 34.",
+            false,
+            "Phát biểu SAI. Nguyên tử ¹₁H có N = 0, nguyên tử ³²₁₆S có N = 32 - 16 = 16 &rArr; tổng số neutron là 16."
+          ],
+          [
+            "d) Số electron có trong anion HS⁻ là 33.",
+            false,
+            "Phát biểu SAI. Anion HS⁻ có 1 + 16 + 1 = 18 electron."
+          ]
+        ]
+      },
+      {
+        "stem": "Một giọt dầu trung hòa điện bay qua vùng không gian chứa electron thì bị electron bám vào, đo được điện tích là -8,01.10⁻¹⁹ C. Xét tính Đúng/Sai của các phát biểu sau:",
+        "items": [
+          [
+            "a) Các electron mang điện tích âm làm cho giọt dầu mang điện tích âm.",
+            true,
+            "Phát biểu ĐÚNG. Do electron mang điện tích âm (-1,602.10⁻¹⁹ C) nên khi bám vào làm giọt dầu tích điện âm."
+          ],
+          [
+            "b) Nếu giọt dầu chuyển động qua điện trường của một tụ điện thì nó bị lệch về phía bản tích điện dương.",
+            true,
+            "Phát biểu ĐÚNG. Điện tích âm bị bản tụ điện mang điện tích dương hút."
+          ],
+          [
+            "c) Số electron đã bám lên giọt dầu là 9.",
+            false,
+            "Phát biểu SAI. Số electron bám lên giọt dầu là n = -8,01.10⁻¹⁹ / (-1,602.10⁻¹⁹) = 5 electron."
+          ],
+          [
+            "d) Nếu có thêm vài electron bám vào giọt dầu thì tỉ số m(giọt dầu)/q(giọt dầu) đo được bằng thực nghiệm gần như không thay đổi.",
+            false,
+            "Phát biểu SAI. Khối lượng electron rất nhỏ khiến m hầu như không đổi, nhưng độ lớn điện tích q tăng lên đáng kể, do đó tỉ số m/q thay đổi rõ rệt."
+          ]
+        ]
+      }
+    ],
+    "short": [
+      {
+        "question": "Lithium (Li) trong tự nhiên gồm hai đồng vị bền là ⁶₃Li và ⁷₃Li, trong đó phần trăm số nguyên tử của ⁷Li là 92,5%. Tính nguyên tử khối trung bình của Lithium (lấy kết quả đến 3 chữ số thập phân).",
+        "answer": "6.925",
+        "explanation": "Nguyên tử khối trung bình của Lithium: Ā = (6 × 7,5 + 7 × 92,5) / 100 = (45 + 647,5) / 100 = 6,925 amu."
+      },
+      {
+        "question": "Cho biết nguyên tử khối trung bình của Lithium là 6,925 amu và đồng vị ⁷Li chiếm 92,5% số nguyên tử. Tính khối lượng của đồng vị ⁷Li có trong 1,00 gam liti (theo gam, làm tròn đến 3 chữ số thập phân).",
+        "answer": "0.935",
+        "explanation": "Số mol Li trong 1,00 gam = 1 / 6,925 mol. Số mol ⁷Li = 0,925 / 6,925 mol. Khối lượng ⁷Li = (0,925 / 6,925) × 7 ≈ 0,935 gam."
+      },
+      {
+        "question": "Tính phần trăm khối lượng của đồng vị ⁷₃Li có trong hợp chất LiOH (làm tròn kết quả đến 2 chữ số thập phân). Cho biết nguyên tử khối trung bình của Li là 6,925; O = 16; H = 1.",
+        "answer": "27.06",
+        "explanation": "M(LiOH) = 6,925 + 16 + 1 = 23,925 g/mol. Khối lượng ⁷Li trong 1 mol LiOH = 7 × 92,5% = 6,475 gam. %m(⁷Li) = (6,475 / 23,925) × 100% ≈ 27,06%."
+      },
+      {
+        "question": "Tính khối lượng của đồng vị ⁷₃Li (theo gam, làm tròn đến 4 chữ số thập phân) có thể tách ra được từ 2,05 gam một mẫu quặng chứa 10% Li₂CO₃ theo khối lượng (biết các tạp chất còn lại không chứa lithium). Cho C = 12, O = 16, Ā(Li) = 6,925.",
+        "answer": "0.0360",
+        "explanation": "m(Li₂CO₃) = 2,05 × 10% = 0,205 gam. M(Li₂CO₃) = 2(6,925) + 12 + 48 = 73,85 g/mol. n(Li₂CO₃) = 0,205 / 73,85 ≈ 0,002776 mol. Khối lượng ⁷Li = 0,002776 × 2 × 0,925 × 7 ≈ 0,03595 gam ≈ 0,0360 gam."
+      }
+    ],
+    "essay": [
+      {
+        "title": "Bài toán tự luận (3,0 điểm). Đồng vị của Lithium và định lượng trong khoáng sản.",
+        "question": "Lithium (Li) tồn tại trong tự nhiên dưới dạng hai đồng vị bền là <sup>6</sup><sub>3</sub>Li và <sup>7</sup><sub>3</sub>Li trong đó phần trăm số nguyên tử của đồng vị <sup>7</sup><sub>3</sub>Li là 92,5%.<br>a) Tính nguyên tử khối trung bình của Li.<br>b) Tính khối lượng <sup>7</sup><sub>3</sub>Li có trong 1,00 gam liti.<br>c) Tính phần trăm khối lượng của <sup>7</sup><sub>3</sub>Li trong LiOH. Cho O = 16; H = 1, C = 12.<br>d) Tính khối lượng <sup>7</sup><sub>3</sub>Li có thể được tách ra từ 2,05 gam một mẫu đá chứa 10% Li<sub>2</sub>CO<sub>3</sub> theo khối lượng, còn lại là tạp chất không chứa lithium.",
+        "solution": "a) Phần trăm số nguyên tử của đồng vị <sup>6</sup>Li là: 100% - 92,5% = 7,5%.<br>Nguyên tử khối trung bình của Lithium:<br>Ā<sub>Li</sub> = (6 &times; 7,5 + 7 &times; 92,5) / 100 = 6,925 amu (0,75 điểm).<br><br>b) Trong 1,00 gam liti:<br>• Số mol nguyên tử Li: n<sub>Li</sub> = 1,00 / 6,925 &approx; 0,1444 mol.<br>• Số mol đồng vị <sup>7</sup>Li: n(<sup>7</sup>Li) = 0,1444 &times; 92,5% &approx; 0,1336 mol.<br>• Khối lượng đồng vị <sup>7</sup>Li: m(<sup>7</sup>Li) = 0,1336 &times; 7 &approx; 0,935 gam (0,75 điểm).<br><br>c) Phân tử khối của LiOH:<br>M(LiOH) = Ā<sub>Li</sub> + 16 + 1 = 6,925 + 17 = 23,925 g/mol.<br>Trong 1 mol LiOH có 1 mol nguyên tử Li, chứa 0,925 mol đồng vị <sup>7</sup>Li.<br>Khối lượng đồng vị <sup>7</sup>Li trong 1 mol LiOH: m = 0,925 &times; 7 = 6,475 gam.<br>Phần trăm khối lượng của <sup>7</sup>Li trong LiOH là:<br>%m(<sup>7</sup>Li) = (6,475 / 23,925) &times; 100% &approx; 27,06% (0,75 điểm).<br><br>d) Khối lượng Li<sub>2</sub>CO<sub>3</sub> nguyên chất trong 2,05 gam mẫu đá:<br>m(Li<sub>2</sub>CO<sub>3</sub>) = 2,05 &times; 10% = 0,205 gam.<br>Phân tử khối Li<sub>2</sub>CO<sub>3</sub>: M = 2 &times; 6,925 + 12 + 16 &times; 3 = 13,85 + 12 + 48 = 73,85 g/mol.<br>Số mol Li<sub>2</sub>CO<sub>3</sub> = 0,205 / 73,85 &approx; 0,002776 mol.<br>Mỗi phân tử Li<sub>2</sub>CO<sub>3</sub> chứa 2 nguyên tử Li, do đó số mol đồng vị <sup>7</sup>Li là:<br>n(<sup>7</sup>Li) = 0,002776 &times; 2 &times; 92,5% &approx; 0,005135 mol.<br>Khối lượng <sup>7</sup>Li tách được là:<br>m(<sup>7</sup>Li) = 0,005135 &times; 7 &approx; 0,03595 gam &approx; 0,0360 gam (tức 35,95 mg) (0,75 điểm)."
       }
     ]
   },
