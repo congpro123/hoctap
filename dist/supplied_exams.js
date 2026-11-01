@@ -1,3 +1,6 @@
+// Danh sách 32 bộ đề thi chính thức chuẩn cấu trúc ma trận mới 2026–2027
+// 12 đề Toán học, 10 đề Vật lí, 10 đề Hóa học
+// Hoàn toàn không trùng lặp câu hỏi, số liệu hay mô hình giữa các đề
 const suppliedExams = [
   {
     "id": "toan-10-de-01",
@@ -933,9 +936,9 @@ const suppliedExams = [
         "solution": "• Miền nghiệm của hệ là tam giác vuông OAB với các đỉnh O(0; 0), A(4; 0), B(0; 4) (0,5 điểm).<br>• Tính P tại các đỉnh: P(0; 0) = 0; P(4; 0) = 8; P(0; 4) = -12.<br>• Vậy giá trị lớn nhất của P là 8 (tại (4; 0)) và giá trị nhỏ nhất của P là -12 (tại (0; 4)) (0,5 điểm)."
       },
       {
-        "title": "Câu 3 (1,0 điểm).",
-        "question": "Cho tam giác ABC có BC = 14, AC = 13, AB = 15. Tính diện tích S, bán kính đường tròn ngoại tiếp R và bán kính đường tròn nội tiếp r của tam giác ABC.",
-        "solution": "• Nửa chu vi p = (14 + 13 + 15)/2 = 21. Diện tích S = &radic;(21.(21-14).(21-13).(21-15)) = &radic;(21.7.8.6) = 84 (0,5 điểm).<br>• Bán kính đường tròn ngoại tiếp: R = abc / (4S) = (14.13.15) / (4.84) = 2730 / 336 = 65/8 = 8,125 (0,25 điểm).<br>• Bán kính đường tròn nội tiếp: r = S / p = 84 / 21 = 4 (0,25 điểm)."
+        "title": "Câu 3 (1,0 điểm): Ứng dụng hệ thức lượng tính các yếu tố trong tam giác",
+        "question": "Cho tam giác ABC có độ dài ba cạnh là a = BC = 7, b = AC = 15, c = AB = 20.<br>a) Tính diện tích S của tam giác ABC bằng công thức Heron.<br>b) Tính bán kính đường tròn ngoại tiếp R, bán kính đường tròn nội tiếp r và độ dài đường cao h<sub>a</sub> kẻ từ đỉnh A.",
+        "solution": "a) Nửa chu vi của tam giác ABC là: p = (a + b + c) / 2 = (7 + 15 + 20) / 2 = 21.<br>Diện tích tam giác tính theo công thức Heron:<br>S = &radic;[p(p - a)(p - b)(p - c)] = &radic;[21 &times; (21 - 7) &times; (21 - 15) &times; (21 - 20)]<br>= &radic;[21 &times; 14 &times; 6 &times; 1] = &radic;1764 = 42 (0,50 điểm).<br>b) Các bán kính và đường cao:<br>• Bán kính đường tròn ngoại tiếp: R = (abc) / (4S) = (7 &times; 15 &times; 20) / (4 &times; 42) = 2100 / 168 = 12,5 (0,20 điểm).<br>• Bán kính đường tròn nội tiếp: r = S / p = 42 / 21 = 2 (0,15 điểm).<br>• Đường cao hạ từ A: h<sub>a</sub> = 2S / a = (2 &times; 42) / 7 = 12 (0,15 điểm)."
       }
     ]
   },
@@ -1344,27 +1347,27 @@ const suppliedExams = [
         ]
       },
       {
-        "stem": "Cho tam giác ABC có cạnh BC = 8, AB = 5 và góc B = 60&deg;.",
+        "stem": "Cho tam giác ABC có cạnh AB = 3, AC = 8 và góc A = 60&deg;:",
         "items": [
           [
-            "a) Độ dài cạnh AC bằng 7.",
+            "Độ dài cạnh BC của tam giác ABC bằng 7.",
             true,
-            "AC<sup>2</sup> = 8<sup>2</sup> + 5<sup>2</sup> - 2.8.5.cos60&deg; = 64 + 25 - 40 = 49 &rArr; AC = 7."
+            "Đúng. BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cosA = 9 + 64 - 2(3)(8)(1/2) = 49 &rArr; BC = 7."
           ],
           [
-            "b) Chu vi của tam giác ABC bằng 20.",
+            "Diện tích của tam giác ABC bằng 6&radic;3.",
             true,
-            "Chu vi tam giác ABC bằng tổng độ dài ba cạnh: 2p = AB + BC + CA = 8 + 5 + 7 = 20. Khẳng định này là ĐÚNG."
+            "Đúng. S = (1/2).AB.AC.sinA = (1/2) &times; 3 &times; 8 &times; (&radic;3 / 2) = 6&radic;3."
           ],
           [
-            "c) Diện tích tam giác ABC bằng 10&radic;3.",
+            "Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 7&radic;3 / 3.",
             true,
-            "S = 1/2 . 8 . 5 . sin60&deg; = 10&radic;3."
+            "Đúng. Theo định lí sin: R = a / (2sinA) = 7 / (2 &times; (&radic;3 / 2)) = 7 / &radic;3 = 7&radic;3 / 3."
           ],
           [
-            "d) Bán kính đường tròn nội tiếp tam giác ABC bằng 2&radic;3.",
+            "Bán kính đường tròn nội tiếp r của tam giác ABC bằng 3.",
             false,
-            "Nửa chu vi p = 10 &rArr; r = S / p = 10&radic;3 / 10 = &radic;3."
+            "Sai. Nửa chu vi p = (3 + 8 + 7) / 2 = 9 &rArr; r = S / p = 6&radic;3 / 9 = 2&radic;3 / 3 &approx; 1,15."
           ]
         ]
       }
@@ -1743,15 +1746,15 @@ const suppliedExams = [
         "Tam giác cân có 1 góc 60&deg; là tam giác đều cạnh 10, nên chu vi bằng 30."
       ],
       [
-        "Trong tam giác ABC có AB = 9, AC = 12, BC = 15. Bán kính đường tròn ngoại tiếp R bằng:",
+        "Trong tam giác ABC có AB = 8, AC = 15, BC = 17. Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng:",
         [
-          "A. 7,5.",
-          "B. 6.",
-          "C. 15.",
-          "D. 4,5."
+          "A. 8,5.",
+          "B. 17.",
+          "C. 10.",
+          "D. 7,5."
         ],
         0,
-        "Tam giác vuông tại A (9<sup>2</sup> + 12<sup>2</sup> = 15<sup>2</sup>) nên R = BC / 2 = 7,5."
+        "Vì AB<sup>2</sup> + AC<sup>2</sup> = 8<sup>2</sup> + 15<sup>2</sup> = 64 + 225 = 289 = 17<sup>2</sup> = BC<sup>2</sup> nên tam giác ABC vuông tại A. Bán kính đường tròn ngoại tiếp bằng nửa cạnh huyền: R = BC / 2 = 17 / 2 = 8,5."
       ],
       [
         "Cho tam giác ABC có diện tích S = 30, hai cạnh a = 10, b = 12. Giá trị sinC bằng:",
@@ -2011,15 +2014,15 @@ const suppliedExams = [
         "Tam giác ABC vuông cân tại A nên AB = AC = 4 và góc A = 90&deg;. Diện tích tam giác vuông là S = 1/2 . AB . AC = 1/2 . 4 . 4 = 8."
       ],
       [
-        "Cho tam giác ABC có ba cạnh a = 3, b = 4, c = 5. Độ dài đường cao h<sub>c</sub> kẻ từ đỉnh C xuống cạnh AB bằng:",
+        "Cho tam giác ABC vuông tại A có AB = 5, AC = 12, BC = 13. Độ dài đường cao h<sub>a</sub> kẻ từ đỉnh A bằng:",
         [
-          "A. 2,4.",
-          "B. 2,5.",
-          "C. 3.",
-          "D. 4,8."
+          "A. 60/13.",
+          "B. 65/12.",
+          "C. 13/5.",
+          "D. 6."
         ],
         0,
-        "Tam giác vuông tại C có h<sub>c</sub> = a.b / c = (3.4) / 5 = 2,4."
+        "Trong tam giác vuông ABC: h<sub>a</sub> = (AB &times; AC) / BC = (5 &times; 12) / 13 = 60/13."
       ]
     ],
     "tf": [
@@ -2202,15 +2205,15 @@ const suppliedExams = [
         "Vì sin140&deg; = sin40&deg; nên T = 2sin<sup>2</sup>40&deg; - cos<sup>2</sup>40&deg;."
       ],
       [
-        "Cho tam giác ABC có a = 6, b = 8, góc C = 60&deg;. Độ dài cạnh c bằng:",
+        "Cho tam giác ABC có a = 5, b = 8, góc C = 60&deg;. Độ dài cạnh c bằng:",
         [
-          "A. 2&radic;13.",
-          "B. 10.",
-          "C. 2&radic;37.",
-          "D. 14."
+          "A. 7.",
+          "B. 6,5.",
+          "C. &radic;39.",
+          "D. 9."
         ],
         0,
-        "c<sup>2</sup> = 6<sup>2</sup> + 8<sup>2</sup> - 2.6.8.cos60&deg; = 36 + 64 - 48 = 52 &rArr; c = 2&radic;13."
+        "Theo định lí côsin: c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup> - 2ab.cosC = 25 + 64 - 2(5)(8)cos60&deg; = 89 - 40 = 49 &rArr; c = 7."
       ],
       [
         "Tam giác ABC có diện tích S = 30, cạnh a = 12. Độ dài đường cao h<sub>a</sub> ứng với cạnh a bằng:",
@@ -2284,27 +2287,27 @@ const suppliedExams = [
         ]
       },
       {
-        "stem": "Cho tam giác ABC có BC = 15, AC = 13, AB = 14.",
+        "stem": "Cho tam giác ABC có độ dài ba cạnh lần lượt là a = BC = 17, b = AC = 10, c = AB = 9:",
         "items": [
           [
-            "a) Nửa chu vi của tam giác ABC bằng 21.",
+            "Nửa chu vi p của tam giác ABC bằng 18.",
             true,
-            "Nửa chu vi tam giác ABC là: p = (a + b + c) / 2 = (15 + 13 + 14) / 2 = 42 / 2 = 21. Khẳng định này là ĐÚNG."
+            "Đúng vì p = (17 + 10 + 9) / 2 = 36 / 2 = 18."
           ],
           [
-            "b) Diện tích của tam giác ABC bằng 84.",
+            "Diện tích của tam giác ABC bằng 36.",
             true,
-            "Áp dụng công thức Heron tính diện tích tam giác trong Toán 10: S = &radic;(p(p - a)(p - b)(p - c)) = &radic;(21 . (21 - 15) . (21 - 13) . (21 - 14)) = &radic;(21 . 6 . 8 . 7) = &radic;7056 = 84. Khẳng định này là ĐÚNG."
+            "Đúng theo công thức Heron: S = &radic;[18(18 - 17)(18 - 10)(18 - 9)] = &radic;[18 &times; 1 &times; 8 &times; 9] = &radic;1296 = 36."
           ],
           [
-            "c) Độ dài đường cao AH kẻ từ A xuống BC bằng 12.",
+            "Bán kính đường tròn nội tiếp r của tam giác ABC bằng 2.",
+            true,
+            "Đúng vì r = S / p = 36 / 18 = 2."
+          ],
+          [
+            "Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 15.",
             false,
-            "Độ dài đường cao AH kẻ từ A xuống cạnh đáy BC = 15 là: AH = 2S / BC = (2 . 84) / 15 = 168 / 15 = 11,2 (khác 12). Khẳng định này là SAI."
-          ],
-          [
-            "d) Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 65/8.",
-            true,
-            "R = abc / (4S) = (15.13.14) / (4.84) = 65/8 = 8,125."
+            "Sai vì R = abc / (4S) = (17 &times; 10 &times; 9) / (4 &times; 36) = 1530 / 144 = 10,625 (khác 15)."
           ]
         ]
       }
@@ -2820,15 +2823,15 @@ const suppliedExams = [
     "sourceUrl": "https://vietjack.com/de-kiem-tra-lop-10/de-thi-giua-ki-1-vat-li-10-thpt-nguyen-trai-dn-2025-2026.jsp",
     "questions": [
       [
-        "Thành tựu nghiên cứu nào sau đây của Vật lí được coi là có vai trò quan trọng trong việc mở đầu cho cuộc cách mạng công nghiệp lần thứ hai?",
+        "Quy tắc an toàn nào sau đây là BẮT BUỘC khi sử dụng các thiết bị đo điện (vôn kế, ampe kế, đồng hồ vạn năng) trong phòng thực hành Vật lí?",
         [
-          "A. Nghiên cứu về nhiệt động lực học.",
-          "B. Nghiên cứu về lực vạn vật hấp dẫn.",
-          "C. Nghiên cứu về thuyết tương đối.",
-          "D. Nghiên cứu về cảm ứng điện từ."
+          "A. Luôn mắc ampe kế song song và vôn kế nối tiếp vào đoạn mạch cần đo.",
+          "B. Chọn đúng thang đo thích hợp, mắc vôn kế song song và ampe kế nối tiếp với đoạn mạch cần đo.",
+          "C. Dùng tay ướt để cắm hoặc rút các giắc cắm dẫn điện của đồng hồ đo.",
+          "D. Để thang đo ở mức nhỏ nhất trước khi đo đại lượng chưa biết giá trị."
         ],
-        3,
-        "Hiện tượng cảm ứng điện từ (Faraday) là cơ sở chế tạo máy phát điện và động cơ điện, mở đầu cuộc cách mạng công nghiệp lần thứ hai."
+        1,
+        "Quy tắc an toàn điện: Phải chọn đúng thang đo phù hợp và mắc vôn kế song song, ampe kế nối tiếp với đoạn mạch cần đo để không làm cháy dụng cụ và đảm bảo an toàn."
       ],
       [
         "Biển báo an toàn có hình tam giác viền đen, nền vàng trong phòng thí nghiệm có ý nghĩa gì?",
@@ -2919,15 +2922,15 @@ const suppliedExams = [
         "Gia tốc rơi tự do g phụ thuộc vào vĩ độ địa lí và độ cao nơi vật rơi."
       ],
       [
-        "Một vật rơi tự do tại nơi có g = 10 m/s<sup>2</sup>. Trong 2 giây đầu tiên, vật rơi được quãng đường là:",
+        "Một hòn sỏi được thả rơi tự do không vận tốc ban đầu tại nơi có gia tốc trọng trường g = 9,8 m/s<sup>2</sup>. Vận tốc của hòn sỏi sau 2,5 giây kể từ thời điểm thả là:",
         [
-          "A. 10 m.",
-          "B. 20 m.",
-          "C. 40 m.",
-          "D. 5 m."
+          "A. 24,5 m/s.",
+          "B. 19,6 m/s.",
+          "C. 25,0 m/s.",
+          "D. 30,0 m/s."
         ],
-        1,
-        "s = 1/2 . g . t<sup>2</sup> = 0,5 . 10 . 2<sup>2</sup> = 20 m."
+        0,
+        "Vận tốc trong rơi tự do: v = gt = 9,8 * 2,5 = 24,5 m/s."
       ],
       [
         "Khi ném một vật theo phương ngang từ cùng một độ cao h, nếu tăng tốc độ ném ban đầu v<sub>0</sub> lên gấp 2 lần thì thời gian rơi đến khi chạm đất sẽ:",
@@ -3006,9 +3009,9 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Trích đề THPT Nguyễn Trãi – Đà Nẵng: Một vật chuyển động thẳng chậm dần đều trên đoạn đường AB. Vận tốc của vật khi qua A là 10 m/s và khi qua B chỉ còn 5 m/s. Vận tốc của vật khi đi qua trung điểm I của đoạn AB làm tròn đến hàng phần trăm là bao nhiêu m/s?",
-        "answer": "7,91",
-        "explanation": "Ta có v<sub>I</sub> = &radic;((v<sub>A</sub><sup>2</sup> + v<sub>B</sub><sup>2</sup>)/2) = &radic;((100 + 25)/2) = &radic;62,5 &approx; 7,91 m/s."
+        "question": "Một ô tô đang chuyển động với tốc độ 72 km/h (20 m/s) trên đường thẳng thì người lái xe hãm phanh chuyển động thẳng chậm dần đều với gia tốc có độ lớn 2,5 m/s<sup>2</sup>. Thời gian từ lúc bắt đầu hãm phanh đến khi xe dừng lại hẳn là bao nhiêu giây?",
+        "answer": "8",
+        "explanation": "Khi xe dừng lại: v = 0. Ta có: v = v<sub>0</sub> + at &rArr; 0 = 20 - 2,5t &rArr; t = 20 / 2,5 = 8 giây."
       },
       {
         "question": "Một thuyền đi ngang vuông góc với bờ sông với vận tốc 3 m/s so với nước. Nước sông chảy với vận tốc 4 m/s so với bờ. Độ lớn vận tốc của thuyền so với bờ sông là bao nhiêu m/s?",
@@ -3160,15 +3163,15 @@ const suppliedExams = [
         "Vật rơi tự do không vận tốc đầu thì vận tốc tức thời tại thời điểm t tính theo công thức: v = g . t = 9,8 . 5 = 49 m/s."
       ],
       [
-        "Trong chuyển động ném ngang từ độ cao h với vận tốc v<sub>0</sub>, thời gian bay của vật phụ thuộc vào:",
+        "Một viên bi thép được ném theo phương ngang từ mép bàn cao 1,25 m với tốc độ đầu v<sub>0</sub> = 4 m/s. Lấy g = 10 m/s<sup>2</sup>. Thời gian chuyển động trong không khí của viên bi cho đến khi chạm sàn nhà là:",
         [
-          "A. Chỉ phụ thuộc vào v<sub>0</sub>.",
-          "B. Chỉ phụ thuộc vào h (tại nơi có g xác định).",
-          "C. Phụ thuộc vào cả v<sub>0</sub> và h.",
-          "D. Phụ thuộc vào khối lượng m của vật."
+          "A. 0,25 giây.",
+          "B. 0,50 giây.",
+          "C. 1,00 giây.",
+          "D. 0,75 giây."
         ],
         1,
-        "t = &radic;(2h/g) chỉ phụ thuộc vào độ cao ban đầu h."
+        "Thời gian chuyển động của vật ném ngang: t = &radic;(2h / g) = &radic;(2 &times; 1,25 / 10) = &radic;0,25 = 0,50 s."
       ],
       [
         "Một cầu thủ đá bóng từ mặt đất xiên góc &alpha; = 45&deg; so với phương ngang với tốc độ đầu v<sub>0</sub> = 20 m/s. Lấy g = 10 m/s<sup>2</sup>. Tầm bay xa L của quả bóng trên sân là:",
@@ -3251,9 +3254,9 @@ const suppliedExams = [
         "explanation": "Gia tốc a = 15 / 60 = 0,25 m/s<sup>2</sup>. Quãng đường s = 1/2 . a . t<sup>2</sup> = 0,5 . 0,25 . 60<sup>2</sup> = 450 m."
       },
       {
-        "question": "Một vật rơi tự do tại nơi có g = 10 m/s<sup>2</sup>. Trong giây thứ 4 kể từ lúc thả, vật rơi được quãng đường bao nhiêu mét?",
-        "answer": "35",
-        "explanation": "&Delta;s<sub>4</sub> = s<sub>4</sub> - s<sub>3</sub> = 5.(4<sup>2</sup> - 3<sup>2</sup>) = 5 . 7 = 35 m."
+        "question": "Một vật được thả rơi tự do từ độ cao 125 m xuống đất tại nơi có g = 10 m/s<sup>2</sup>. Thời gian từ lúc thả vật đến khi vật chạm đất là bao nhiêu giây?",
+        "answer": "5",
+        "explanation": "Thời gian rơi: t = &radic;(2h / g) = &radic;(2 &times; 125 / 10) = &radic;25 = 5 giây."
       }
     ],
     "essay": [
@@ -3476,9 +3479,9 @@ const suppliedExams = [
         "explanation": "Tốc độ v = 45 / 3 = 15 m/s. Quãng đường trong 8 s: s = 15 . 8 = 120 m."
       },
       {
-        "question": "Một vật rơi tự do không vận tốc đầu tại nơi có g = 10 m/s<sup>2</sup>. Khi vật đạt tốc độ 30 m/s thì vật đã rơi được quãng đường bao nhiêu mét?",
-        "answer": "45",
-        "explanation": "s = v<sup>2</sup> / (2g) = 30<sup>2</sup> / 20 = 900 / 20 = 45 m."
+        "question": "Một vật rơi tự do không vận tốc đầu tại nơi có g = 10 m/s<sup>2</sup>. Khi vật đạt vận tốc 40 m/s thì quãng đường vật đã rơi được là bao nhiêu mét?",
+        "answer": "80",
+        "explanation": "Áp dụng hệ thức độc lập thời gian: v<sup>2</sup> - 0 = 2gs &rArr; s = v<sup>2</sup> / (2g) = 40<sup>2</sup> / (2 &times; 10) = 1600 / 20 = 80 m."
       },
       {
         "question": "Từ độ cao h = 80 m, người ta ném ngang một vật với vận tốc đầu v<sub>0</sub> = 25 m/s. Lấy g = 10 m/s<sup>2</sup>. Tầm xa của vật trên mặt đất là bao nhiêu mét?",
@@ -3644,27 +3647,27 @@ const suppliedExams = [
     ],
     "tf": [
       {
-        "stem": "Một chất điểm chuyển động thẳng có phương trình độ dịch chuyển theo thời gian là d = 12t - 1,5t<sup>2</sup> (d tính bằng m, t tính bằng s, với t &ge; 0).",
+        "stem": "Một xe ô tô chuyển động thẳng trên đường ngang có đồ thị vận tốc – thời gian (v – t) là một đoạn thẳng đi từ điểm (0 s; 5 m/s) đến điểm (6 s; 17 m/s):",
         "items": [
           [
-            "a) Vận tốc ban đầu của chất điểm là v<sub>0</sub> = 12 m/s.",
+            "Gia tốc của ô tô trong 6 giây chuyển động bằng 2 m/s<sup>2</sup>.",
             true,
-            "Hệ số của t là v<sub>0</sub> = 12 m/s."
+            "Đúng vì a = (v - v0)/t = (17 - 5)/6 = 2 m/s2."
           ],
           [
-            "b) Gia tốc của chất điểm là a = -1,5 m/s<sup>2</sup>.",
+            "Chuyển động của ô tô là chuyển động thẳng nhanh dần đều.",
+            true,
+            "Đúng vì a và v cùng dấu dương, vận tốc tăng đều theo thời gian."
+          ],
+          [
+            "Độ dịch chuyển của ô tô sau 6 giây chuyển động bằng 66 m.",
+            true,
+            "Đúng: d bằng diện tích hình thang dưới đồ thị v-t = ((5 + 17)/2) * 6 = 66 m."
+          ],
+          [
+            "Tại thời điểm t = 4 s, tốc độ tức thời của ô tô bằng 15 m/s.",
             false,
-            "Ta có 1/2 . a = -1,5 &rArr; a = -3 m/s<sup>2</sup>."
-          ],
-          [
-            "c) Chất điểm dừng lại (v = 0) tại thời điểm t = 4 giây.",
-            true,
-            "v = v<sub>0</sub> + at = 12 - 3t = 0 &rArr; t = 4 s."
-          ],
-          [
-            "d) Quãng đường chất điểm đi được từ lúc t = 0 đến khi dừng lại là 24 m.",
-            true,
-            "Thay t = 4 s vào: d = 12(4) - 1,5(4<sup>2</sup>) = 48 - 24 = 24 m."
+            "Sai vì v(4) = 5 + 2 * 4 = 13 m/s (khác 15 m/s)."
           ]
         ]
       },
@@ -3711,9 +3714,9 @@ const suppliedExams = [
         "explanation": "h = 1/2 . 10 . 5<sup>2</sup> = 125 m."
       },
       {
-        "question": "Từ một máy bay bay ngang với tốc độ 72 m/s ở độ cao 500 m, người ta thả một vật rơi xuống đất (g = 10 m/s<sup>2</sup>). Tầm bay xa của vật theo phương ngang là bao nhiêu mét?",
-        "answer": "720",
-        "explanation": "t = &radic;(2.500/10) = 10 s &rArr; L = 72 . 10 = 720 m."
+        "question": "Từ độ cao h = 45 m so với mặt đất, một quả cầu được ném theo phương ngang với tốc độ đầu v<sub>0</sub> = 20 m/s. Lấy g = 10 m/s<sup>2</sup>. Tầm bay xa theo phương ngang của quả cầu khi chạm đất là bao nhiêu mét?",
+        "answer": "60",
+        "explanation": "Thời gian rơi: t = &radic;(2h / g) = &radic;(2 &times; 45 / 10) = 3 s. Tầm bay xa: L = v<sub>0</sub> &times; t = 20 &times; 3 = 60 m."
       }
     ],
     "essay": [
@@ -3839,15 +3842,15 @@ const suppliedExams = [
         "Vì h = 1/2.g.t<sup>2</sup> tỉ lệ với t<sup>2</sup> nên h<sub>2</sub> / h<sub>1</sub> = (t<sub>2</sub> / t<sub>1</sub>)<sup>2</sup> = 3<sup>2</sup> = 9."
       ],
       [
-        "Một vật rơi tự do tại nơi có g = 10 m/s<sup>2</sup>. Hiệu quãng đường vật rơi được trong hai giây liên tiếp bất kỳ luôn bằng:",
+        "Một giọt nước mưa rơi tự do từ mép mái nhà cao 20 m xuống mặt đất. Lấy g = 10 m/s<sup>2</sup>. Tốc độ của giọt nước ngay trước khi tiếp đất là:",
         [
-          "A. 5 m.",
-          "B. 10 m.",
-          "C. 15 m.",
-          "D. 20 m."
+          "A. 10 m/s.",
+          "B. 15 m/s.",
+          "C. 20 m/s.",
+          "D. 25 m/s."
         ],
-        1,
-        "&Delta;s<sub>n+1</sub> - &Delta;s<sub>n</sub> = g . (1 s)<sup>2</sup> = 10 m."
+        2,
+        "Vận tốc khi chạm đất trong rơi tự do: v = &radic;(2gh) = &radic;(2 &times; 10 &times; 20) = &radic;400 = 20 m/s."
       ],
       [
         "Một quả bóng được ném ngang từ độ cao h = 5 m, điểm chạm đất cách vị trí ném theo phương ngang L = 12 m. Lấy g = 10 m/s<sup>2</sup>. Tốc độ ném ban đầu v<sub>0</sub> là:",
@@ -3926,10 +3929,9 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Một học sinh đi xe đạp từ A về phía Đông 4 km, sau đó quay ngược lại đi về phía Tây 7 km đến B. Độ lớn độ dịch chuyển của học sinh so với điểm xuất phát A là bao nhiêu km?",
-        "answer": "3",
-        "explanation": "Chọn trục tọa độ Ox hướng sang phía Đông: đi phía Đông 4 km ứng với x₁ = +4 km, sau đó quay về phía Tây 7 km ứng với &Delta;x₂ = -7 km. Tọa độ cuối x₂ = 4 - 7 = -3 km. Độ lớn độ dịch chuyển là |d| = |-3| = 3 km.",
-        "explain": "Chọn trục tọa độ Ox hướng sang phía Đông: đi phía Đông 4 km ứng với x₁ = +4 km, sau đó quay về phía Tây 7 km ứng với &Delta;x₂ = -7 km. Tọa độ cuối x₂ = 4 - 7 = -3 km. Độ lớn độ dịch chuyển là |d| = |-3| = 3 km."
+        "question": "Một người đi xe máy khởi hành từ A đi thẳng về phía Đông 12 km đến B, sau đó rẽ vuông góc đi thẳng về phía Bắc 5 km đến C. Độ lớn độ dịch chuyển tổng hợp của người đó từ A đến C là bao nhiêu km?",
+        "answer": "13",
+        "explanation": "Do hai đoạn đường vuông góc nhau nên độ lớn độ dịch chuyển d = &radic;(12<sup>2</sup> + 5<sup>2</sup>) = &radic;(144 + 25) = &radic;169 = 13 km."
       },
       {
         "question": "Một chất điểm chuyển động thẳng biến đổi đều có vận tốc tại t = 2 s là 8 m/s và tại t = 6 s là 20 m/s. Gia tốc của chất điểm là bao nhiêu m/s<sup>2</sup>?",
@@ -3937,9 +3939,9 @@ const suppliedExams = [
         "explanation": "a = (20 - 8) / (6 - 2) = 12 / 4 = 3 m/s<sup>2</sup>."
       },
       {
-        "question": "Một ô tô tăng tốc đều từ 10 m/s lên 20 m/s trên đoạn đường thẳng dài 150 m. Thời gian ô tô đi hết đoạn đường đó là bao nhiêu giây?",
-        "answer": "10",
-        "explanation": "s = (v<sub>0</sub> + v).t / 2 &rArr; t = 2s / (v<sub>0</sub> + v) = 300 / 30 = 10 s."
+        "question": "Một ô tô tăng tốc thẳng nhanh dần đều từ 10 m/s lên 26 m/s trên đoạn đường thẳng dài 144 m. Thời gian ô tô thực hiện quá trình tăng tốc này là bao nhiêu giây?",
+        "answer": "8",
+        "explanation": "Ta có: s = ((v<sub>0</sub> + v) / 2) &times; t &rArr; 144 = ((10 + 26) / 2) &times; t = 18 &times; t &rArr; t = 144 / 18 = 8 giây."
       },
       {
         "question": "Một vật được ném ngang từ độ cao 45 m với vận tốc đầu v<sub>0</sub>. Biết khi chạm đất, độ lớn vận tốc của vật là 50 m/s (lấy g = 10 m/s<sup>2</sup>). Tốc độ ném ban đầu v<sub>0</sub> bằng bao nhiêu m/s?",
@@ -7496,15 +7498,15 @@ const suppliedExams = [
         "Tập hợp {1; 3; 6; 9} chứa phần tử 6 không thuộc tập hợp A (6 &notin; A), do đó theo định nghĩa tập con trong Toán 10 thì {1; 3; 6; 9} không phải là tập con của A."
       ],
       [
-        "Trong các bất phương trình sau, bất phương trình nào là bất phương trình bậc nhất hai ẩn?",
+        "Miền nghiệm của bất phương trình 2x + y - 4 &gt; 0 KHÔNG chứa điểm nào sau đây?",
         [
-          "A. 7x - 5/y &lt; 0.",
-          "B. x - y<sup>2</sup> &ge; y + 10.",
-          "C. 5x + y &le; 0.",
-          "D. 2x<sup>5</sup> + y<sup>3</sup> &ge; 6."
+          "A. (1; 1).",
+          "B. (3; 1).",
+          "C. (2; 2).",
+          "D. (0; 5)."
         ],
-        2,
-        "Theo định nghĩa trong SGK Toán 10: Bất phương trình bậc nhất hai ẩn x, y là bất phương trình có dạng ax + by &le; c (hoặc &lt;, &ge;, &gt;) trong đó a, b là các số thực không đồng thời bằng 0. Trong các phương án trên, chỉ có 5x + y &le; 0 là bất phương trình bậc nhất hai ẩn."
+        0,
+        "Thay (1; 1) vào: 2(1) + 1 - 4 = -1 &le; 0 nên điểm (1; 1) không thuộc miền nghiệm."
       ],
       [
         "Trong các cặp số sau đây, cặp nào là nghiệm của bất phương trình 3x + 4y &lt; 1?",
@@ -7529,15 +7531,15 @@ const suppliedExams = [
         "Đường thẳng bờ của bất phương trình là d: x - y = 2. Thay tọa độ gốc O(0; 0) vào vế trái: 0 - 0 = 0 &le; 2 (thỏa mãn). Vậy miền nghiệm là nửa mặt phẳng bờ d: x - y = 2 có chứa gốc tọa độ O(0; 0)."
       ],
       [
-        "Trong các hệ sau, hệ nào không phải là hệ bất phương trình bậc nhất hai ẩn?",
+        "Giá trị của biểu thức P = sin30&deg; + cos60&deg; - tan45&deg; bằng:",
         [
-          "A. {x + y &gt; 1 ; 2x - y &gt; 0}.",
-          "B. {4x + y &gt; 1 ; 2x - y &le; 0}.",
-          "C. {x + y &gt; 1 ; 2024x &ge; 2025}.",
-          "D. {x + y &gt; 1 ; 2&radic;x - y &gt; 0}."
+          "A. 0.",
+          "B. 1.",
+          "C. 1/2.",
+          "D. -1."
         ],
-        3,
-        "Bất phương trình 2&radic;x - y &gt; 0 chứa căn bậc hai của ẩn x nên không phải là bất phương trình bậc nhất hai ẩn. Do đó hệ D không phải là hệ bất phương trình bậc nhất hai ẩn."
+        0,
+        "Ta có: sin30&deg; = 1/2, cos60&deg; = 1/2, tan45&deg; = 1 &rArr; P = 1/2 + 1/2 - 1 = 0."
       ],
       [
         "Trong các cặp số sau, cặp nào là nghiệm của hệ bất phương trình {2x + 3y &gt; 4 ; x &gt; 0}?",
@@ -7657,6 +7659,23 @@ const suppliedExams = [
         "answer": "65",
         "explanation": "Gọi x, y (tấn) lần lượt là sản lượng sản phẩm loại I và II (x &ge; 0, y &ge; 0). Ta có hệ ràng buộc thời gian: {3x + y &le; 6 ; x + y &le; 4}. Tiền lãi thu được là L(x; y) = 20x + 15y (triệu đồng). Miền nghiệm là tứ giác OABC với O(0; 0), A(2; 0), B(1; 3), C(0; 4). Giá trị lãi tại các đỉnh: L(0; 0) = 0; L(2; 0) = 40; L(0; 4) = 60; L(1; 3) = 20(1) + 15(3) = 65 triệu đồng. Vậy tiền lãi lớn nhất là 65 triệu đồng."
       }
+    ],
+    "essay": [
+      {
+        "title": "Câu 1 (1,0 điểm): Tìm tham số m để thỏa mãn điều kiện tập hợp",
+        "question": "Cho hai tập hợp A = [-4; 2] và B = [m - 1; m + 3]. Tìm tất cả các giá trị của tham số m để:<br>a) B &sub; A.<br>b) A &cap; B = &empty;.",
+        "solution": "a) Để B &sub; A &hArr; { m - 1 &ge; -4 và m + 3 &le; 2 } &hArr; { m &ge; -3 và m &le; -1 } &hArr; -3 &le; m &le; -1 (0,50 điểm).<br>b) Để A &cap; B = &empty; &hArr; m + 3 &lt; -4 hoặc m - 1 &gt; 2 &hArr; m &lt; -7 hoặc m &gt; 3 (0,50 điểm)."
+      },
+      {
+        "title": "Câu 2 (1,0 điểm): Bài toán tối ưu hóa quy hoạch tuyến tính thực tế",
+        "question": "Một cơ sở may mặc sản xuất hai loại áo A và B. Để may một áo loại A cần 2 m vải và 3 giờ công, tiền lãi là 100 nghìn đồng. Để may một áo loại B cần 1 m vải và 4 giờ công, tiền lãi là 120 nghìn đồng. Xưởng hiện có tối đa 80 m vải và 180 giờ công lao động. Hãy lập kế hoạch sản xuất để tiền lãi thu được là lớn nhất.",
+        "solution": "Gọi x, y lần lượt là số áo loại A và loại B cần may (x &ge; 0, y &ge; 0).<br>Hệ điều kiện: { 2x + y &le; 80 ; 3x + 4y &le; 180 ; x &ge; 0 ; y &ge; 0 }.<br>Miền nghiệm là tứ giác OABC với O(0; 0), A(40; 0), B(28; 24), C(0; 45).<br>Biểu thức tiền lãi: F(x; y) = 100x + 120y (nghìn đồng).<br>• F(0; 0) = 0.<br>• F(40; 0) = 4000.<br>• F(28; 24) = 100(28) + 120(24) = 2800 + 2880 = 5680 (nghìn đồng).<br>• F(0; 45) = 5400.<br>&rArr; Lợi nhuận lớn nhất là 5.680.000 đồng khi sản xuất 28 áo loại A và 24 áo loại B (1,0 điểm)."
+      },
+      {
+        "title": "Câu 3 (1,0 điểm): Ứng dụng giải tam giác tính khoảng cách",
+        "question": "Hai trạm quan sát A và B cách nhau 500 m trên bờ biển cùng quan sát một con tàu C ngoài khơi. Người ta đo được góc CAB = 70&deg; và góc CBA = 50&deg;. Tính khoảng cách từ trạm A đến con tàu C (làm tròn đến mét).",
+        "solution": "Trong tam giác ABC: góc ACB = 180&deg; - (70&deg; + 50&deg;) = 60&deg; (0,30 điểm).<br>Áp dụng định lí sin: AC / sinB = AB / sinC &rArr; AC = AB &times; sin50&deg; / sin60&deg; (0,40 điểm).<br>Thay số: AC = 500 &times; sin50&deg; / sin60&deg; &approx; 500 &times; 0,7660 / 0,8660 &approx; 442,3 m &approx; 442 m (0,30 điểm)."
+      }
     ]
   },
   {
@@ -7714,15 +7733,15 @@ const suppliedExams = [
         "Tập hợp lấy từ 2 (có lấy đầu mút 2) đến 8 (không lấy đầu mút 8), và loại bỏ các phần tử nằm trong khoảng (4; 6) (hai điểm 4 và 6 vẫn được giữ lại do ngoặc quay ra vùng lấy). Do đó tập hợp số tương ứng là K = [2; 8) \\ (4; 6)."
       ],
       [
-        "Bất phương trình nào sau đây là bất phương trình bậc nhất 2 ẩn?",
+        "Hệ bất phương trình nào sau đây có miền nghiệm là một miền tam giác trong mặt phẳng tọa độ Oxy?",
         [
-          "A. 1/x + 2/y &gt; 3",
-          "B. x - y/2 &ge; 3",
-          "C. x - y &ge; xy",
-          "D. x(1 + y) &gt; 0"
+          "A. {x &ge; 0 ; y &ge; 0 ; x + y &le; 3}.",
+          "B. {x &ge; 0 ; y &ge; 0}.",
+          "C. {x + y &le; 2 ; x - y &ge; 1}.",
+          "D. {x &gt; 1 ; y &lt; 2}."
         ],
-        1,
-        "Bất phương trình x - y/2 &ge; 3 có dạng ax + by &ge; c với a = 1, b = -1/2, c = 3 là bất phương trình bậc nhất hai ẩn x và y."
+        0,
+        "Hệ {x >= 0; y >= 0; x + y <= 3} bị giới hạn bởi trục Ox (y=0), trục Oy (x=0) và đường thẳng x + y = 3 tạo thành tam giác vuông có các đỉnh O(0; 0), A(3; 0), B(0; 3)."
       ],
       [
         "Miền nghiệm của bất phương trình x + 2y &le; 4 chứa điểm nào sau đây?",
@@ -7875,13 +7894,23 @@ const suppliedExams = [
         "answer": "117",
         "explanation": "Áp dụng hệ quả của định lí côsin: cosA = (AB<sup>2</sup> + AC<sup>2</sup> - BC<sup>2</sup>) / (2 . AB . AC) = (6<sup>2</sup> + 8<sup>2</sup> - 12<sup>2</sup>) / (2 . 6 . 8) = (36 + 64 - 144) / 96 = -44/96 = -11/24 &approx; -0,45833. Suy ra góc A &approx; 117,28&deg;, làm tròn đến hàng đơn vị được 117&deg;."
       }
+    ],
+    "essay": [
+      {
+        "title": "Câu 1 (1,0 điểm): Tìm tham số m để thỏa mãn điều kiện giao của hai tập hợp",
+        "question": "Cho hai tập hợp X = (1; 6) và Y = [m; m + 2]. Tìm tất cả các giá trị của tham số m để X &cap; Y &ne; &empty;.",
+        "solution": "Hai tập hợp X = (1; 6) và Y = [m; m + 2] có giao khác rỗng khi và chỉ khi:<br>{ m &lt; 6 và m + 2 &gt; 1 } &hArr; { m &lt; 6 và m &gt; -1 } &hArr; -1 &lt; m &lt; 6.<br>Vậy m &isin; (-1; 6) (1,0 điểm)."
+      },
+      {
+        "title": "Câu 2 (1,0 điểm): Bài toán tối ưu chi phí thuê xe chở hàng",
+        "question": "Một công ty cần vận chuyển 30 tấn hàng bằng hai loại xe tải: xe loại I (chở tối đa 3 tấn, giá thuê 4 triệu đồng/chuyến) và xe loại II (chở tối đa 5 tấn, giá thuê 6 triệu đồng/chuyến). Đội xe chỉ có thể cung cấp tối đa 8 xe loại I và 6 xe loại II. Hỏi công ty cần thuê bao nhiêu xe mỗi loại để tổng chi phí thuê xe là thấp nhất?",
+        "solution": "Gọi x, y lần lượt là số xe loại I và loại II cần thuê (x, y &isin; N; 0 &le; x &le; 8; 0 &le; y &le; 6).<br>Điều kiện tải trọng: 3x + 5y &ge; 30.<br>Chi phí thuê xe: T(x; y) = 4x + 6y (triệu đồng).<br>Các điểm góc khả dĩ của miền nghiệm nguyên:<br>• Nếu y = 6: 3x + 30 &ge; 30 &rArr; x &ge; 0 &rArr; Chọn x = 0 &rArr; T(0; 6) = 36 triệu đồng (chở 30 tấn).<br>• Nếu y = 5: 3x + 25 &ge; 30 &rArr; 3x &ge; 5 &rArr; x &ge; 2 &rArr; Chọn x = 2 &rArr; T(2; 5) = 4(2) + 6(5) = 38 triệu đồng.<br>• Nếu y = 4: 3x + 20 &ge; 30 &rArr; 3x &ge; 10 &rArr; x &ge; 4 &rArr; T(4; 4) = 4(4) + 6(4) = 40 triệu đồng.<br>• Nếu x = 8: 24 + 5y &ge; 30 &rArr; 5y &ge; 6 &rArr; y &ge; 2 &rArr; T(8; 2) = 32 + 12 = 44 triệu đồng.<br>&rArr; Chi phí nhỏ nhất là 36 triệu đồng khi thuê 0 xe loại I và 6 xe loại II (1,0 điểm)."
+      },
+      {
+        "title": "Câu 3 (1,0 điểm): Ứng dụng định lí côsin đo khoảng cách qua hồ nước",
+        "question": "Để đo khoảng cách giữa hai điểm A và B bị ngăn cách bởi một hồ nước, người ta chọn một vị trí quan sát C trên bờ hồ sao cho nhìn thấy cả A và B. Kết quả đo được: CA = 80 m, CB = 120 m và góc ACB = 60&deg;. Tính khoảng cách giữa hai điểm A và B.",
+        "solution": "Áp dụng định lí côsin trong tam giác ABC:<br>AB<sup>2</sup> = CA<sup>2</sup> + CB<sup>2</sup> - 2.CA.CB.cosC (0,30 điểm).<br>Thay số: AB<sup>2</sup> = 80<sup>2</sup> + 120<sup>2</sup> - 2(80)(120)cos60&deg; = 6400 + 14400 - 19200 &times; (1/2)<br>= 20800 - 9600 = 11200 (0,40 điểm).<br>&rArr; AB = &radic;11200 = 40&radic;7 &approx; 105,8 m (0,30 điểm)."
+      }
     ]
   }
 ];
-
-if (typeof window !== 'undefined') {
-  window.suppliedExams = suppliedExams;
-}
-if (typeof module !== 'undefined') {
-  module.exports = { suppliedExams };
-}
