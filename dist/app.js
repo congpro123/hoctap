@@ -145,7 +145,10 @@ function setNav(view) {
   document.querySelectorAll('.subject-link').forEach(x => x.classList.toggle('active', view == 'subject-' + x.dataset.subjectto));
   const crumbEl = document.getElementById('crumb');
   if (crumbEl) {
-    crumbEl.textContent = ({ home: 'TỔNG QUAN', subjects: 'KHO ĐỀ THI', handbook: 'SỔ TAY KIẾN THỨC', history: 'LỊCH SỬ LÀM BÀI', exam: 'PHÒNG THI', result: 'KẾT QUẢ' })[view] || 'MÔN HỌC';
+    crumbEl.textContent = ({ home: 'TỔNG QUAN', subjects: 'KHO ĐỀ THI', handbook: 'SỔ TAY KIẾN THỨC', history: 'LỊCH SỬ LÀM BÀI', stats: 'THỐNG KÊ LỚP HỌC', exam: 'PHÒNG THI', result: 'KẾT QUẢ' })[view] || 'MÔN HỌC';
+  }
+  if (typeof window !== 'undefined' && window.auth && typeof window.auth.renderTopBarUser === 'function') {
+    window.auth.renderTopBarUser();
   }
 }
 
@@ -668,6 +671,10 @@ document.addEventListener('click', e => {
       catalog(); return;
     } else if (v === 'history') {
       history(); return;
+    } else if (v === 'stats') {
+      if (typeof window !== 'undefined' && window.auth && typeof window.auth.renderStatsView === 'function') {
+        window.auth.renderStatsView(); return;
+      }
     }
   }
 
@@ -697,6 +704,7 @@ if (typeof window !== 'undefined' && window.addEventListener) {
   window.addEventListener('hashchange', () => {
     const h = (typeof location !== 'undefined' && location.hash) ? location.hash : '';
     if (h === '#history') history();
+    else if (h === '#stats') { if (typeof window !== 'undefined' && window.auth && typeof window.auth.renderStatsView === 'function') window.auth.renderStatsView(); }
     else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
     else if (h === '#subjects') catalog();
     else if (h === '#handbook' || h.startsWith('#handbook-')) {

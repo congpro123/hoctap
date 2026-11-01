@@ -1,7 +1,23 @@
 // Mở rộng kho đề và cho phép xem lại các câu sai trong lịch sử.
 function card(e){
   const label=e.subject==='math'?'∑ &nbsp; TOÁN 10':e.subject==='chemistry'?'⚗ &nbsp; HÓA HỌC 10':'⚛ &nbsp; VẬT LÝ 10';
-  return `<article class="exam-card"><div class="card-top"><span class="subject-pill">${label}</span><span class="card-code">${e.id}</span></div><h3>${e.title}</h3><p>${e.description}</p><div class="meta"><span>◷ &nbsp; ${e.minutes} phút</span><span>☷ &nbsp; ${e.questions.length} nhiều lựa chọn</span><span>✓ &nbsp; ${e.tf.length} đúng/sai</span><span>✎ &nbsp; ${e.short.length} trả lời ngắn</span></div>${sourceLine(e)}<div class="card-bottom"><span>Giữa học kì I</span><button class="primary" data-start="${e.id}">Bắt đầu làm bài →</button></div></article>`;
+  let statusBadge = '';
+  let bottomAction = `<button class="primary" data-start="${e.id}">Bắt đầu làm bài →</button>`;
+  
+  if (typeof window !== 'undefined' && window.auth && typeof window.auth.getExamStatus === 'function') {
+    const st = window.auth.getExamStatus(e.id);
+    if (st && st.hasDone && st.bestResult) {
+      const best = st.bestResult;
+      const pts = (typeof pointText === 'function') ? pointText(best.points) : best.points;
+      const maxPts = (typeof pointText === 'function') ? pointText(best.maxPoints) : best.maxPoints;
+      statusBadge = `<div class="exam-status-badge completed"><span class="status-icon">✓</span><span class="status-text">ĐÃ LÀM · <b>${pts} / ${maxPts}</b> điểm</span>${st.attempts > 1 ? `<span class="attempts-count">(${st.attempts} lần)</span>` : ''}</div>`;
+      bottomAction = `<div class="card-action-group"><button class="secondary btn-card-review" data-review-exam="${e.id}">Xem lại</button><button class="primary" data-start="${e.id}">Làm lại →</button></div>`;
+    } else {
+      statusBadge = `<div class="exam-status-badge pending"><span class="status-icon">○</span><span class="status-text">Chưa làm</span></div>`;
+    }
+  }
+
+  return `<article class="exam-card ${statusBadge.includes('completed') ? 'card-completed' : ''}"><div class="card-top"><span class="subject-pill">${label}</span><span class="card-code">${e.id}</span></div>${statusBadge}<h3>${e.title}</h3><p>${e.description}</p><div class="meta"><span>◷ &nbsp; ${e.minutes} phút</span><span>☷ &nbsp; ${e.questions.length} nhiều lựa chọn</span><span>✓ &nbsp; ${e.tf.length} đúng/sai</span><span>✎ &nbsp; ${e.short.length} trả lời ngắn</span></div>${sourceLine(e)}<div class="card-bottom"><span>Giữa học kì I</span>${bottomAction}</div></article>`;
 }
 function tiles(){
   const counts={0:'math',1:'physics',5:'chemistry'};
@@ -19,9 +35,31 @@ function catalog(index){
   setNav(index===undefined?'subjects':'subject-'+index);
 }
 function history(){
-  const items=saved();
-  app.innerHTML=`<div class="content"><div class="page-heading"><h1>Lịch sử làm bài</h1><p>Kết quả và đáp án đã chọn được lưu trên trình duyệt của thiết bị này. Bấm “Xem câu sai” để ôn lại bài đã làm.</p></div>${items.length?`<div class="history-list">${items.map((x,i)=>`<div class="history-item"><div><strong>${esc(x.title)}</strong><small>${formatDate(x.date)} · ${x.reason==='time'?'Hết giờ':'Đã nộp bài'} · ${Math.max(0,x.total-x.correct)} ý sai hoặc bỏ trống</small></div><div class="history-actions"><span class="history-score">${x.correct}/${x.total}</span><button class="secondary" data-review="${i}">Xem câu sai →</button></div></div>`).join('')}</div>`:`<div class="notice"><b>Chưa có bài thi nào</b>Hãy thử một bộ đề để bắt đầu theo dõi kết quả.<br><br><button class="primary" data-viewto="subjects">Khám phá đề thi →</button></div>`}</div>`;
+  const allItems=saved();
+  const currentUser = (typeof window !== 'undefined' && window.auth && typeof window.auth.getCurrentUser === 'function') ? window.auth.getCurrentUser() : null;
+  const items = currentUser ? allItems.filter(x => x.userId === currentUser.id || (!x.userId && currentUser.id === 'u-an')) : allItems;
+
+  app.innerHTML=`<div class="content"><div class="page-heading">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+      <div>
+        <h1>Lịch sử làm bài</h1>
+        <p>Kết quả và đáp án đã chọn được lưu trên trình duyệt của thiết bị này. Bấm “Xem câu sai” để ôn lại bài đã làm.</p>
+      </div>
+      ${currentUser ? `
+        <div class="history-user-info-banner">
+          <span>Học sinh: <b>${esc(currentUser.name)}</b> (@${esc(currentUser.username)})</span>
+          <button class="secondary small" id="btn-hist-switch">Đổi tài khoản</button>
+          <a href="#stats" class="primary small" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📊 Thống kê cả lớp ➔</a>
+        </div>
+      ` : ''}
+    </div>
+  </div>${items.length?`<div class="history-list">${items.map((x,i)=>{
+    const realIdx = allItems.indexOf(x);
+    return `<div class="history-item"><div><strong>${esc(x.title)}</strong><small>${formatDate(x.date)} · ${x.reason==='time'?'Hết giờ':'Đã nộp bài'} · ${Math.max(0,x.total-x.correct)} ý sai hoặc bỏ trống · Thí sinh: ${esc(x.studentName || (currentUser ? currentUser.name : 'Học sinh'))}</small></div><div class="history-actions"><span class="history-score">${x.correct}/${x.total}</span><button class="secondary" data-review="${realIdx}">Xem câu sai →</button></div></div>`;
+  }).join('')}</div>`:`<div class="notice"><b>Chưa có bài thi nào cho tài khoản ${currentUser ? esc(currentUser.name) : ''}</b>Hãy thử một bộ đề để bắt đầu theo dõi kết quả.<br><br><button class="primary" data-viewto="subjects">Khám phá đề thi →</button></div>`}</div>`;
   setNav('history');
+  const swBtn = document.getElementById('btn-hist-switch');
+  if (swBtn && window.auth) swBtn.onclick = () => window.auth.openModal('switch');
 }
 function reviewPast(index){
   const r=saved()[index];if(!r)return history();
@@ -150,6 +188,17 @@ function reviewPast(index){
 document.addEventListener('click',event=>{
   const button=event.target.closest('[data-review]');
   if(button)reviewPast(Number(button.dataset.review));
+  const revExamBtn=event.target.closest('[data-review-exam]');
+  if(revExamBtn){
+    const examId = revExamBtn.dataset.reviewExam;
+    const all = saved();
+    const currentUser = (typeof window !== 'undefined' && window.auth && typeof window.auth.getCurrentUser === 'function') ? window.auth.getCurrentUser() : null;
+    let idx = all.findIndex(r => r.id === examId && (!currentUser || r.userId === currentUser.id || (!r.userId && currentUser.id === 'u-an')));
+    if (idx === -1) idx = all.findIndex(r => r.id === examId);
+    if (idx !== -1) reviewPast(idx);
+    else if (window.auth) window.auth.openModal('switch');
+    return;
+  }
   const filterBtn=event.target.closest('[data-review-filter]');
   if(filterBtn){
     const filter=filterBtn.dataset.reviewFilter;
@@ -167,6 +216,7 @@ document.addEventListener('click',event=>{
 if (typeof location !== 'undefined' && location.hash) {
   const h = location.hash;
   if (h === '#history') history();
+  else if (h === '#stats') { if (window.auth) window.auth.renderStatsView(); }
   else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
   else if (h === '#subjects') catalog();
   else if (h === '#handbook' || h.startsWith('#handbook-')) {

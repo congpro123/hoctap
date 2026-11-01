@@ -19,9 +19,25 @@ submitExam=function(reason){
   if(!activeExam)return;
   const e=activeExam;clearInterval(ticker);
   const score=scoreExam(e,answers);
-  const result={id:e.id,title:e.title,total:score.total,correct:score.correct,points:score.points,maxPoints:score.max,questionSetVersion:2,answers:{...answers},date:new Date().toISOString(),reason};
+  const currentUser = (typeof window !== 'undefined' && window.auth && typeof window.auth.getCurrentUser === 'function') ? window.auth.getCurrentUser() : null;
+  const result={
+    id:e.id,
+    title:e.title,
+    subject:e.subject,
+    userId: currentUser ? currentUser.id : 'u-an',
+    username: currentUser ? currentUser.username : 'nguyenvanan',
+    studentName: currentUser ? currentUser.name : 'Nguyễn Văn An',
+    total:score.total,
+    correct:score.correct,
+    points:score.points,
+    maxPoints:score.max,
+    questionSetVersion:2,
+    answers:{...answers},
+    date:new Date().toISOString(),
+    reason
+  };
   const all=saved();all.unshift(result);
-  localStorage.setItem('hoctap-results',JSON.stringify(all.slice(0,50)));
+  localStorage.setItem('hoctap-results',JSON.stringify(all.slice(0,100)));
   localStorage.removeItem('hoctap-draft');activeExam=null;renderResult(result);
 };
 const previousRenderExam=renderExam;
