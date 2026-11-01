@@ -82,7 +82,7 @@ function reviewPast(index){
       return `<div class="${cls}"><b>${'ABCD'[idx]}.</b> <span>${esc(cleanOptionText(opt))}</span> <span style="margin-left:auto;font-weight:700;">${icon}</span></div>`;
     }).join('')}</div>`:'';
     const statusHtml=`<div class="review-status-row">
-      ${ok?`<span class="badge-user-ans correct">✓ Bạn đã chọn đúng (${'ABCD'[chosen]})</span>`:chosen===undefined?`<span class="badge-user-ans unanswered">⚪ Chưa trả lời câu này</span>`:`<span class="badge-user-ans wrong">✗ Bạn đã chọn: ${'ABCD'[chosen]}. ${esc(cleanOptionText(q[1][chosen]))}</span>`}
+      ${ok?`<span class="badge-user-ans correct">✓ Bạn đã chọn đúng (${'ABCD'[chosen]})</span>`:chosen===undefined?`<span class="badge-user-ans unanswered">⚠️ Bạn chưa chọn câu này (Bỏ trống · 0 điểm)</span>`:`<span class="badge-user-ans wrong">✗ Bạn đã chọn: ${'ABCD'[chosen]}. ${esc(cleanOptionText(q[1][chosen]))}</span>`}
       <span class="badge-correct-ans">✓ Đáp án chuẩn: ${'ABCD'[q[2]]}. ${esc(cleanOptionText(q[1][q[2]]))}</span>
     </div>`;
     const explainText=q[3]||'Áp dụng định nghĩa và kiến thức chuẩn trong chương trình SGK Lớp 10 để giải ra đáp án đúng.';
@@ -113,7 +113,7 @@ function reviewPast(index){
         const ok=isMatch(chosen,item[1]);
         const expTrue=isTrue(item[1]);
         const statusHtml=`<div class="review-status-row">
-          ${ok?`<span class="badge-user-ans correct">✓ Bạn chọn: ${chosen?'ĐÚNG':'SAI'} (Chính xác)</span>`:chosen===undefined?`<span class="badge-user-ans unanswered">⚪ Bạn chưa chọn ý này</span>`:`<span class="badge-user-ans wrong">✗ Bạn chọn: ${chosen?'ĐÚNG':'SAI'}</span>`}
+          ${ok?`<span class="badge-user-ans correct">✓ Bạn chọn: ${chosen?'ĐÚNG':'SAI'} (Chính xác)</span>`:chosen===undefined?`<span class="badge-user-ans unanswered">⚠️ Chưa chọn ý này (Bỏ trống · 0 điểm)</span>`:`<span class="badge-user-ans wrong">✗ Bạn chọn: ${chosen?'ĐÚNG':'SAI'}</span>`}
           <span class="badge-correct-ans">✓ Khẳng định này là: <b>${expTrue?'ĐÚNG':'SAI'}</b></span>
         </div>`;
         const explainText=item[2]||(expTrue?'Khẳng định này là ĐÚNG theo kiến thức lý thuyết và định lý trong SGK Lớp 10.':'Khẳng định này là SAI theo kiến thức lý thuyết và định lý trong SGK Lớp 10.');
@@ -143,7 +143,7 @@ function reviewPast(index){
       const chosen=a['s'+i];
       const ok=shortCorrect(chosen,q.answer);
       const statusHtml=`<div class="review-status-row">
-        ${ok?`<span class="badge-user-ans correct">✓ Bạn điền: ${esc(chosen)} (Chính xác)</span>`:chosen===undefined||String(chosen).trim()===''?`<span class="badge-user-ans unanswered">⚪ Chưa điền kết quả</span>`:`<span class="badge-user-ans wrong">✗ Bạn đã điền: ${esc(chosen)}</span>`}
+        ${ok?`<span class="badge-user-ans correct">✓ Bạn điền: ${esc(chosen)} (Chính xác)</span>`:chosen===undefined||String(chosen).trim()===''?`<span class="badge-user-ans unanswered">⚠️ Chưa điền đáp án (Bỏ trống · 0 điểm)</span>`:`<span class="badge-user-ans wrong">✗ Bạn đã điền: ${esc(chosen)}</span>`}
         <span class="badge-correct-ans">✓ Đáp án chuẩn: <b>${esc(q.answer)}${q.unit?' '+esc(q.unit):''}</b></span>
       </div>`;
       const explainText=q.explain||q.explanation||'Áp dụng các định luật và công thức tính toán theo chuẩn kiến thức Lớp 10 để giải ra kết quả trên.';

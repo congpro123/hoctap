@@ -775,7 +775,7 @@
             </div>
             <div class="review-q-text"><b>Câu ${i + 1}.</b> ${q[0]}</div>
             <div class="review-status-row">
-              ${isOk ? `<span class="badge-user-ans correct">✓ Học sinh chọn: <b>${userLetter}</b> (Chính xác)</span>` : userChoice === undefined ? `<span class="badge-user-ans unanswered">⚪ Chưa trả lời</span>` : `<span class="badge-user-ans wrong">✗ Học sinh chọn: <b>${userLetter}</b></span>`}
+              ${isOk ? `<span class="badge-user-ans correct">✓ Học sinh chọn: <b>${userLetter}</b> (Chính xác)</span>` : userChoice === undefined ? `<span class="badge-user-ans unanswered">⚠️ Chưa chọn câu này (Bỏ trống · 0 điểm)</span>` : `<span class="badge-user-ans wrong">✗ Học sinh chọn: <b>${userLetter}</b></span>`}
               <span class="badge-correct-ans">✓ Đáp án đúng: <b>${correctLetter}</b></span>
             </div>
             <div class="solution-box theme-study">
@@ -842,7 +842,7 @@
             </div>
             <div class="review-q-text"><b>Câu ${i + 1}.</b> ${s.question || s.text}</div>
             <div class="review-status-row">
-              ${ok ? `<span class="badge-user-ans correct">✓ Học sinh điền: <b>${escapeHtml(chosen)}</b> (Chính xác)</span>` : chosen === undefined || String(chosen).trim() === '' ? `<span class="badge-user-ans unanswered">⚪ Chưa điền</span>` : `<span class="badge-user-ans wrong">✗ Học sinh điền: <b>${escapeHtml(chosen)}</b></span>`}
+              ${ok ? `<span class="badge-user-ans correct">✓ Học sinh điền: <b>${escapeHtml(chosen)}</b> (Chính xác)</span>` : chosen === undefined || String(chosen).trim() === '' ? `<span class="badge-user-ans unanswered">⚠️ Chưa điền đáp án (Bỏ trống · 0 điểm)</span>` : `<span class="badge-user-ans wrong">✗ Học sinh điền: <b>${escapeHtml(chosen)}</b></span>`}
               <span class="badge-correct-ans">✓ Đáp án chuẩn: <b>${escapeHtml(s.answer)}</b></span>
             </div>
             <div class="solution-box theme-study">

@@ -683,22 +683,47 @@ document.addEventListener('click', e => {
   if (b.dataset.start) startExam(b.dataset.start);
   else if (b.dataset.viewto) ({ home, subjects: () => catalog(), handbook: () => (typeof renderHandbook === 'function' ? renderHandbook('all') : null), history })[b.dataset.viewto]();
   else if (b.dataset.subjectto !== undefined) catalog(Number(b.dataset.subjectto));
-  else if (b.dataset.submit) submitExam('manual');
+  else if (b.dataset.submit) {
+    if (activeExam) {
+      const unans = [];
+      const qLen = activeExam.questions ? activeExam.questions.length : 0;
+      for (let i = 0; i < qLen; i++) {
+        if (answers['m' + i] === undefined) unans.push(`Câu ${i + 1} (Phần I)`);
+      }
+      (activeExam.tf || []).forEach((q, i) => {
+        (q.items || []).forEach((_, j) => {
+          if (answers['t' + i + '-' + j] === undefined) unans.push(`Câu ${i + 1}${['a','b','c','d'][j]} (Phần II)`);
+        });
+      });
+      (activeExam.short || []).forEach((q, i) => {
+        if (answers['s' + i] === undefined || String(answers['s' + i]).trim() === '') {
+          unans.push(`Câu ${i + 1} (Phần III)`);
+        }
+      });
+      if (unans.length > 0) {
+        const confirmMsg = `Bạn còn ${unans.length} câu/ý chưa hoàn thành:\n• ${unans.slice(0, 5).join('\n• ')}${unans.length > 5 ? `\n• ...và ${unans.length - 5} câu khác` : ''}\n\nBạn có chắc chắn muốn nộp bài ngay không?`;
+        if (typeof confirm === 'function' && !confirm(confirmMsg)) return;
+      }
+    }
+    submitExam('manual');
+  }
   else if (b.dataset.jump) {
     const el = document.getElementById('q-' + b.dataset.jump);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
 });
 
-document.addEventListener('input', e => {
+function handleExamInput(e) {
   const t = e.target;
-  if (!t.dataset.kind) return;
+  if (!t || !t.dataset || !t.dataset.kind) return;
   if (t.dataset.kind === 'm') answers['m' + t.dataset.index] = Number(t.value);
   else if (t.dataset.kind === 't') answers['t' + t.dataset.index] = t.value === 'true';
   else if (t.dataset.kind === 's') answers['s' + t.dataset.index] = t.value;
   persistDraft();
   updateProgress();
-});
+}
+document.addEventListener('input', handleExamInput);
+document.addEventListener('change', handleExamInput);
 
 if (typeof window !== 'undefined' && window.addEventListener) {
   window.addEventListener('hashchange', () => {

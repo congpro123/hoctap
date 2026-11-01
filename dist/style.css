@@ -102,9 +102,15 @@
   border: 1px solid #86efac;
 }
 .badge-user-ans.unanswered {
-  background: #f1f5f9;
-  color: #64748b;
-  border: 1px solid #cbd5e1;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fdba74;
+  font-weight: 600;
+}
+.badge-tf-ans.unanswered {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fdba74;
 }
 .badge-correct-ans {
   display: inline-flex;
