@@ -94,14 +94,14 @@ assert.ok(hb.physics, 'Có phần Vật lý 10');
 assert.ok(hb.chemistry, 'Có phần Hóa học 10');
 
 // Kiểm tra số lượng chương và công thức
-assert.ok(hb.math.sections.length >= 3, 'Toán 10 có ít nhất 3 chương trọng tâm');
-assert.ok(hb.physics.sections.length >= 3, 'Vật lý 10 có ít nhất 3 chương trọng tâm');
-assert.ok(hb.chemistry.sections.length >= 2, 'Hóa học 10 có ít nhất 2 chương trọng tâm');
+assert.ok(hb.math.sections.length >= 4, 'Toán 10 có ít nhất 4 chương');
+assert.ok(hb.physics.sections.length >= 5, 'Vật lý 10 có ít nhất 5 chương');
+assert.ok(hb.chemistry.sections.length >= 5, 'Hóa học 10 có ít nhất 5 chương');
 
 console.log('--- 3. Kiểm tra renderHandbook(all) ---');
 vm.runInContext("renderHandbook('all')", context);
 let appHtml = elements.get('app').innerHTML;
-assert.ok(appHtml.includes('Sổ tay Công thức & Lý thuyết Giữa kì I'), 'Có tiêu đề sổ tay');
+assert.ok(appHtml.includes('Sổ tay Công thức & Lý thuyết Trọng tâm (Lớp 10)'), 'Có tiêu đề sổ tay');
 assert.ok(appHtml.includes('Toán 10'), 'Hiển thị môn Toán 10');
 assert.ok(appHtml.includes('Vật lý 10'), 'Hiển thị môn Vật lý 10');
 assert.ok(appHtml.includes('Hóa học 10'), 'Hiển thị môn Hóa học 10');
@@ -114,6 +114,8 @@ appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Heron'), 'Toán 10 có công thức Heron');
 assert.ok(appHtml.includes('Định lí côsin'), 'Toán 10 có Định lí côsin');
 assert.ok(appHtml.includes('Mệnh đề'), 'Toán 10 có Mệnh đề');
+assert.ok(appHtml.includes('Vectơ trong mặt phẳng'), 'Toán 10 có Vectơ');
+assert.ok(appHtml.includes('Tích vô hướng'), 'Toán 10 có Tích vô hướng');
 
 console.log('--- 5. Kiểm tra renderHandbook(physics) ---');
 vm.runInContext("renderHandbook('physics')", context);
@@ -121,6 +123,8 @@ appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Độ dịch chuyển'), 'Vật lý 10 có Độ dịch chuyển');
 assert.ok(appHtml.includes('Newton'), 'Vật lý 10 có Định luật Newton');
 assert.ok(appHtml.includes('Rơi tự do'), 'Vật lý 10 có Rơi tự do');
+assert.ok(appHtml.includes('Chuyển động ném ngang'), 'Vật lý 10 có Ném ngang');
+assert.ok(appHtml.includes('Mômen lực'), 'Vật lý 10 có Mômen lực');
 
 console.log('--- 6. Kiểm tra renderHandbook(chemistry) ---');
 vm.runInContext("renderHandbook('chemistry')", context);
@@ -128,6 +132,8 @@ appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Cấu tạo nguyên tử'), 'Hóa học 10 có Cấu tạo nguyên tử');
 assert.ok(appHtml.includes('Bảng tuần hoàn'), 'Hóa học 10 có Bảng tuần hoàn');
 assert.ok(appHtml.includes('bán bão hòa'), 'Hóa học 10 có ngoại lệ bán bão hòa Cr, Cu');
+assert.ok(appHtml.includes('Liên kết hóa học'), 'Hóa học 10 có Liên kết hóa học');
+assert.ok(appHtml.includes('Oxi hóa - Khử'), 'Hóa học 10 có Phản ứng Oxi hóa - Khử');
 
 console.log('--- 7. Kiểm tra tính năng tìm kiếm nhanh trong sổ tay ---');
 vm.runInContext("renderHandbook('all', 'Heron')", context);
