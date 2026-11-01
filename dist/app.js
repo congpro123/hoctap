@@ -372,7 +372,7 @@ function renderExam() {
         </div>
         ${sourceLine(e)}
         
-        <h2 class="part-heading">Phần I · Nhiều lựa chọn (12 câu)</h2>
+        <h2 class="part-heading">Phần I · Nhiều lựa chọn (${(e.questions || []).length} câu)</h2>
         ${(e.questions || []).map((q, i) => `<div class="question" id="q-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
@@ -557,7 +557,7 @@ function renderResult(r) {
           <h2>Chi tiết lời giải & hướng dẫn chấm (Kiến thức Lớp 10)</h2>
         </div>
 
-        <h3>Phần I · Trắc nghiệm 4 lựa chọn (12 câu)</h3>
+        <h3>Phần I · Trắc nghiệm 4 lựa chọn (${(e.questions || []).length} câu)</h3>
         ${(e.questions || []).map((q, i) => {
           const user = r.answers['m' + i];
           const ok = user === q[2];
