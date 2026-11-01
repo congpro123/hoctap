@@ -95,7 +95,9 @@ assert.ok(hb.chemistry, 'Có phần Hóa học 10');
 
 // Kiểm tra số lượng chương và công thức
 assert.ok(hb.math.sections.length >= 4, 'Toán 10 có ít nhất 4 chương');
-assert.ok(hb.physics.sections.length >= 5, 'Vật lý 10 có ít nhất 5 chương');
+assert.ok(hb.physics.sections.length >= 2, 'Vật lý 10 có 2 chương chuẩn ma trận Giữa kì I');
+const totalPhysItems = hb.physics.sections.reduce((acc, s) => acc + s.items.length, 0);
+assert.ok(totalPhysItems >= 8, 'Vật lý 10 có đầy đủ ít nhất 8 chủ đề chi tiết');
 assert.ok(hb.chemistry.sections.length >= 5, 'Hóa học 10 có ít nhất 5 chương');
 
 console.log('--- 3. Kiểm tra renderHandbook(all) ---');
@@ -121,10 +123,12 @@ console.log('--- 5. Kiểm tra renderHandbook(physics) ---');
 vm.runInContext("renderHandbook('physics')", context);
 appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Độ dịch chuyển'), 'Vật lý 10 có Độ dịch chuyển');
-assert.ok(appHtml.includes('Newton'), 'Vật lý 10 có Định luật Newton');
+assert.ok(appHtml.includes('Sai số'), 'Vật lý 10 có Sai số thực nghiệm');
 assert.ok(appHtml.includes('Rơi tự do'), 'Vật lý 10 có Rơi tự do');
-assert.ok(appHtml.includes('Chuyển động ném ngang'), 'Vật lý 10 có Ném ngang');
-assert.ok(appHtml.includes('Mômen lực'), 'Vật lý 10 có Mômen lực');
+assert.ok(appHtml.includes('Đồ thị'), 'Vật lý 10 có Đồ thị chuyển động');
+assert.ok(appHtml.includes('Gia tốc'), 'Vật lý 10 có Gia tốc & Chuyển động biến đổi đều');
+assert.ok(!appHtml.includes('Chuyển động ném ngang'), 'Vật lý 10 không có Ném ngang (ngoài ma trận Giữa kì I)');
+assert.ok(!appHtml.includes('Mômen lực'), 'Vật lý 10 không có Mômen lực (ngoài ma trận Giữa kì I)');
 
 console.log('--- 6. Kiểm tra renderHandbook(chemistry) ---');
 vm.runInContext("renderHandbook('chemistry')", context);

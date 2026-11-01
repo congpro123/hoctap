@@ -120,98 +120,62 @@ const handbookData = {
     bg: '#e7f4ff',
     sections: [
       {
-        title: 'Chương I: Mở đầu & Sai số thực nghiệm',
-        badge: 'Phương pháp khoa học',
+        title: 'Chương I: Mở đầu & Sai số trong phép đo Vật lí',
+        badge: 'Trọng tâm Giữa kì I',
         items: [
           {
-            name: 'Sai số tuyệt đối, Sai số dụng cụ & Cách viết kết quả đo',
-            formula: '&Delta;A = &Delta;Ā + &Delta;A<sub>dc</sub><br>&delta;A = (&Delta;A / Ā) &times; 100%<br>Kết quả đo: A = Ā &plusmn; &Delta;A (hoặc A = Ā &plusmn; &delta;A%)',
-            desc: 'Sai số dụng cụ &Delta;A<sub>dc</sub> thường được lấy bằng nửa độ chia nhỏ nhất (hoặc một độ chia nhỏ nhất tùy đề bài). Ā là giá trị trung bình qua n lần đo.',
-            traps: 'Chữ số thập phân của sai số tuyệt đối &Delta;A và giá trị trung bình Ā phải tương ứng bằng nhau.'
+            name: 'Đối tượng nghiên cứu & Quy tắc an toàn phòng thực hành',
+            formula: '• Biển CẤM: Hình tròn viền đỏ, gạch chéo đỏ, nền trắng<br>• Biển CẢNH BÁO NGUY HIỂM: Hình tam giác viền đen, nền vàng<br>• Biển BẮT BUỘC THỰC HIỆN: Hình tròn nền xanh dương, hình trắng<br>• Biển CHỈ DẪN AN TOÀN: Hình vuông / chữ nhật nền xanh lá cây',
+            desc: '1. Đối tượng nghiên cứu của Vật lí: Các dạng vận động của vật chất và năng lượng trong tự nhiên.<br>2. Các cuộc cách mạng công nghiệp: CMCN 1.0 (Nhiệt động lực học, máy hơi nước James Watt) &rarr; CMCN 2.0 (Điện từ học, động cơ điện, đèn chiếu sáng) &rarr; CMCN 3.0 (Chất bán dẫn, bóng bán dẫn, vi mạch điện tử, máy tính) &rarr; CMCN 4.0 (Trí tuệ nhân tạo AI, IoT, điện toán lượng tử).<br>3. An toàn điện trong phòng thí nghiệm: Phân biệt điện xoay chiều AC (~) và điện một chiều DC (=, +, -). Khi gặp sự cố chập điện hoặc có người bị giật: NGẮT NGAY CẦU DAO / NGUỒN ĐIỆN trước tiên, dùng vật liệu cách điện (gậy gỗ khô, nhựa) gạt dây điện ra, tuyệt đối không chạm trực tiếp vào người nạn nhân.<br>4. Thí nghiệm quang học: Không nhìn trực tiếp vào chùm tia laser, không để tia laser phản xạ vào mắt.',
+            traps: 'Xử lí khi có cháy do chập điện: Phải ngắt cầu dao điện trước, dùng bình chữa cháy khí CO₂ hoặc bình bột chuyên dụng, TUYỆT ĐỐI KHÔNG dùng nước dập đám cháy điện vì nước dẫn điện gây nguy hiểm chết người.'
           },
           {
-            name: 'Quy tắc lan truyền sai số trong tính toán',
-            formula: '• Phép cộng / trừ: F = X &plusmn; Y &rArr; &Delta;F = &Delta;X + &Delta;Y<br>• Phép nhân / chia: F = X . Y hoặc X / Y &rArr; &delta;F = &delta;X + &delta;Y<br>• Phép lũy thừa: F = X<sup>n</sup> &rArr; &delta;F = n . &delta;X',
-            desc: 'Ví dụ: Diện tích hình chữ nhật S = a.b &rArr; &delta;S = &delta;a + &delta;b. Gia tốc rơi tự do g = 2h / t<sup>2</sup> &rArr; &delta;g = &delta;h + 2.&delta;t.',
-            traps: 'Phép nhân chia cộng sai số TỈ ĐỐI (&delta;%), không được cộng trực tiếp sai số tuyệt đối (&Delta;).'
+            name: 'Phép đo đại lượng vật lí & Xác định sai số thực nghiệm',
+            formula: '• Phép đo trực tiếp: Đọc trực tiếp trên dụng cụ đo (dùng thước đo chiều dài, đồng hồ đo thời gian, cân đo khối lượng, nhiệt kế đo nhiệt độ)<br>• Phép đo gián tiếp: Tính qua công thức từ các đại lượng đo trực tiếp (tính tốc độ v = s/t, tính khối lượng riêng &rho; = m/V, tính gia tốc rơi tự do g = 2h/t²)<br>• Giá trị trung bình: Ā = (A₁ + A₂ + ... + Aₙ) / n<br>• Sai số tuyệt đối của lần đo i: &Delta;Aᵢ = |Ā - Aᵢ|<br>• Sai số tuyệt đối trung bình: &Delta;Ā = (&Delta;A₁ + &Delta;A₂ + ... + &Delta;Aₙ) / n<br>• Sai số dụng cụ &Delta;A<sub>dc</sub>: Thường lấy bằng nửa độ chia nhỏ nhất (ĐCNN) hoặc 1 ĐCNN theo quy ước đề bài<br>• Sai số tuyệt đối toàn phần: &Delta;A = &Delta;Ā + &Delta;A<sub>dc</sub><br>• Sai số tỉ đối (&delta;): &delta;A = (&Delta;A / Ā) &times; 100%<br>• Kết quả đo: A = Ā &plusmn; &Delta;A (hoặc A = Ā &plusmn; &delta;A%)',
+            desc: 'Sai số hệ thống: Là sai số có tính quy luật ổn định do dụng cụ (lệch điểm 0, vạch chia sai...) &rarr; khắc phục bằng cách hiệu chỉnh lại dụng cụ.<br>Sai số ngẫu nhiên: Do thao tác không đều, phản xạ giác quan, nhiệt độ môi trường thay đổi thất thường &rarr; khắc phục bằng cách đo lặp lại nhiều lần và lấy giá trị trung bình.',
+            traps: 'Cách viết kết quả đo: Sai số tuyệt đối &Delta;A thường được viết đến 1 hoặc 2 chữ số có nghĩa. Giá trị trung bình Ā phải được làm tròn đến cùng hàng thập phân với sai số &Delta;A (Ví dụ: L = 120,0 &plusmn; 0,2 cm chứ không viết 120 &plusmn; 0,2 cm).'
+          },
+          {
+            name: 'Số chữ số có nghĩa (CSCN) & Quy tắc lan truyền sai số',
+            formula: '• Quy tắc CSCN: Các chữ số khác 0 đều có nghĩa; chữ số 0 nằm giữa các chữ số khác 0 hoặc ở tận cùng bên phải phần thập phân đều có nghĩa; chữ số 0 ở đầu bên trái số thập phân KHÔNG có nghĩa.<br>Ví dụ: 0,04050 m có 4 CSCN (4, 0, 5, 0); 120,00 có 5 CSCN; 0,003 có 1 CSCN.<br>• Phép cộng / trừ: F = X &plusmn; Y &rArr; &Delta;F = &Delta;X + &Delta;Y (Sai số tuyệt đối bằng tổng các sai số tuyệt đối)<br>• Phép nhân / chia: F = X &times; Y hoặc F = X / Y &rArr; &delta;F = &delta;X + &delta;Y (Sai số tỉ đối bằng tổng các sai số tỉ đối)<br>• Phép lũy thừa: F = Xⁿ &rArr; &delta;F = n &times; &delta;X<br>Ví dụ: Gia tốc rơi tự do g = 2h / t² &rArr; &delta;g = &delta;h + 2&delta;t &rArr; &Delta;g = ḡ &times; &delta;g',
+            desc: 'Khi nhân hoặc chia các số liệu thực nghiệm, kết quả làm tròn sao cho số chữ số có nghĩa không nhiều hơn số chữ số có nghĩa của dữ liệu có ít chữ số có nghĩa nhất.',
+            traps: 'Rất nhiều học sinh nhầm lẫn: Phép nhân/chia phải cộng sai số TỈ ĐỐI (&delta;%), TUYỆT ĐỐI KHÔNG cộng sai số tuyệt đối (&Delta;). Muốn tìm &Delta;F từ phép nhân chia, phải tính &delta;F trước, rồi suy ra &Delta;F = F̄ &times; &delta;F.'
           }
         ]
       },
       {
-        title: 'Chương II: Mô tả chuyển động & Đồ thị chuyển động',
-        badge: 'Động học chất điểm',
+        title: 'Chương II: Động học chất điểm (Mô tả chuyển động thẳng)',
+        badge: 'Trọng tâm Giữa kì I',
         items: [
           {
-            name: 'Phân biệt Quãng đường (s) và Độ dịch chuyển (d)',
-            formula: '• Quãng đường s &ge; 0: đại lượng vô hướng đo chiều dài quỹ đạo<br>• Độ dịch chuyển d⃗: vectơ nối vị trí đầu và vị trí cuối<br>• Tốc độ trung bình: v<sub>tb</sub> = s / t &nbsp;·&nbsp; Vận tốc trung bình: v⃗<sub>tb</sub> = d⃗ / t<br>• Đổi đơn vị: 1 m/s = 3,6 km/h &hArr; v(m/s) = v(km/h) / 3,6',
-            desc: 'Khi vật chuyển động rồi quay trở về đúng vị trí ban đầu: vị trí đầu trùng vị trí cuối nên d = 0, nhưng tổng quãng đường s > 0. Do đó vận tốc trung bình bằng 0, còn tốc độ trung bình khác 0.',
-            traps: 'Không đồng nhất độ lớn độ dịch chuyển d với quãng đường s khi vật có đổi hướng chuyển động.'
+            name: 'Quãng đường (s), Độ dịch chuyển (d) & Hệ quy chiếu',
+            formula: '• Hệ quy chiếu gồm: Vật mốc + Hệ tọa độ gắn với vật mốc + Mốc thời gian (t = 0) + Đồng hồ đo thời gian<br>• Quãng đường (s &ge; 0): Độ dài quỹ đạo mà vật đã đi qua, là đại lượng vô hướng luôn không âm<br>• Độ dịch chuyển (d⃗): Vectơ nối từ vị trí ban đầu đến vị trí cuối cùng<br>• Giá trị đại số d: d = x - x₀ (có thể d > 0, d < 0 hoặc d = 0)<br>• Độ lớn độ dịch chuyển |d|: Khoảng cách thẳng giữa điểm đầu và điểm cuối<br>• Khi vật chuyển động thẳng và KHÔNG đổi chiều: s = |d|',
+            desc: 'Nếu vật chuyển động rồi quay trở lại đúng điểm xuất phát (đi 1 vòng khép kín): Vị trí cuối trùng vị trí đầu &rArr; Độ dịch chuyển d = 0, nhưng quãng đường s > 0.<br>Đổi đơn vị tốc độ: 1 m/s = 3,6 km/h &hArr; v(m/s) = v(km/h) / 3,6.',
+            traps: 'Bẫy đề thi: Chạy 1 vòng sân vận động 400 m về đích xuất phát &rarr; Quãng đường s = 400 m, nhưng độ dịch chuyển d = 0 m!'
           },
           {
-            name: 'Chuyển động thẳng biến đổi đều (Gia tốc a = const)',
-            formula: '• Gia tốc: a = (v - v<sub>0</sub>) / t = &Delta;v / &Delta;t (m/s<sup>2</sup>)<br>• Vận tốc: v = v<sub>0</sub> + at<br>• Độ dịch chuyển: d = v<sub>0</sub>t + 1/2.at<sup>2</sup><br>• Hệ thức độc lập thời gian: v<sup>2</sup> - v<sub>0</sub><sup>2</sup> = 2ad<br>• Nhanh dần đều: a cùng dấu v<sub>0</sub> (a.v > 0)<br>• Chậm dần đều: a trái dấu v<sub>0</sub> (a.v < 0), khi dừng lại thì v = 0',
-            desc: 'Gia tốc đặc trưng cho sự biến thiên nhanh hay chậm của vận tốc theo thời gian. Trong hệ SI, đơn vị gia tốc là m/s<sup>2</sup>.',
-            traps: 'Xe hãm phanh chuyển động chậm dần đều: nếu chọn chiều dương là chiều chuyển động thì v<sub>0</sub> > 0 và gia tốc a < 0.'
+            name: 'Tốc độ, Vận tốc & Vận tốc tổng hợp (Tính tương đối)',
+            formula: '• Tốc độ trung bình: v<sub>tb</sub> = s / t &ge; 0 (Đặc trưng cho mức độ nhanh chậm của chuyển động trên quãng đường s)<br>• Vận tốc trung bình: v⃗<sub>tb</sub> = d⃗ / t &hArr; v<sub>tb</sub> = d / t (Đặc trưng cho độ nhanh chậm và hướng chuyển động)<br>• Tốc độ tức thời: v = &Delta;s / &Delta;t (hiển thị trên tốc kế của phương tiện giao thông)<br>• Công thức cộng vận tốc: v⃗₁₃ = v⃗₁₂ + v⃗₂₃ (Vật 1 đối với vật 3 = 1 đối với 2 + 2 đối với 3)<br>  + Cùng chiều (xuôi dòng nước): v₁₃ = v₁₂ + v₂₃ (v<sub>xuôi</sub> = v<sub>thuyền</sub> + v<sub>nước</sub>)<br>  + Ngược chiều (ngược dòng nước): v₁₃ = |v₁₂ - v₂₃| (v<sub>ngược</sub> = v<sub>thuyền</sub> - v<sub>nước</sub>)<br>  + Vuông góc (thuyền chèo vuông góc bờ sông): v₁₃ = &radic;(v₁₂² + v₂₃²)<br>  + Tổng quát góc &alpha;: v₁₃ = &radic;(v₁₂² + v₂₃² + 2v₁₂v₂₃cos&alpha;)',
+            desc: 'Tính tương đối của chuyển động: Vận tốc và quỹ đạo của cùng một vật phụ thuộc vào hệ quy chiếu được chọn.<br>Ví dụ: Hành khách ngồi yên trên toa tàu đang chạy: đứng yên so với toa tàu, nhưng đang chuyển động so với người đứng bên đường ray.',
+            traps: 'Khi vật chuyển động đổi chiều, vận tốc trung bình v̄ = d/t có thể âm hoặc bằng 0, nhưng tốc độ trung bình v<sub>tb</sub> = s/t luôn dương (> 0).'
           },
           {
-            name: 'Đồ thị độ dịch chuyển (d - t) và Đồ thị vận tốc (v - t)',
-            formula: '• Đồ thị d - t: Độ dốc (hệ số góc) chính là vận tốc: v = &Delta;d / &Delta;t<br>• Đồ thị v - t: Độ dốc chính là gia tốc: a = &Delta;v / &Delta;t<br>• Diện tích dưới đồ thị v - t bằng độ dịch chuyển d (quãng đường s)',
-            desc: 'Trên đồ thị d - t: đường nằm ngang nghĩa là vật đứng yên (v = 0); đường dốc lên là chuyển động thẳng đều theo chiều dương; đường dốc xuống là chuyển động theo chiều âm.',
-            traps: 'Tính quãng đường bằng cách tính diện tích hình thang hoặc tam giác giới hạn bởi đồ thị v-t với trục thời gian.'
+            name: 'Chuyển động thẳng biến đổi đều (Gia tốc & 3 phương trình vàng)',
+            formula: '• Gia tốc: a⃗ = &Delta;v⃗ / &Delta;t &hArr; a = (v - v₀) / (t - t₀) (Đơn vị SI: m/s²)<br>• Tính chất: a = const không đổi theo thời gian<br>• Chuyển động NHANH DẦN ĐỀU: a cùng dấu với v₀ (a &times; v > 0), vận tốc tăng đều theo thời gian<br>• Chuyển động CHẬM DẦN ĐỀU: a trái dấu với v₀ (a &times; v < 0), vận tốc giảm đều, khi xe dừng lại hẳn thì v = 0<br>★ 3 CÔNG THỨC VÀNG:<br>  1. Vận tốc theo thời gian: v = v₀ + at<br>  2. Độ dịch chuyển theo thời gian: d = v₀t + 1/2.at²<br>  3. Hệ thức độc lập thời gian (liên hệ v, a, d): v² - v₀² = 2ad<br>• Phương trình tọa độ: x = x₀ + v₀t + 1/2.at²',
+            desc: 'Gia tốc đặc trưng cho sự biến thiên nhanh hay chậm của vận tốc theo thời gian cả về độ lớn và hướng.<br>Bài toán xe hãm phanh: Chọn chiều dương là chiều chuyển động ban đầu của xe &rArr; v₀ > 0, vì xe chạy chậm dần nên a < 0. Khi xe dừng lại: v = 0 &rArr; Thời gian hãm phanh t = -v₀ / a &rArr; Quãng đường hãm phanh d = -v₀² / (2a).',
+            traps: 'Bẫy dấu gia tốc: "Xe hãm phanh với độ lớn gia tốc 2 m/s²" nghĩa là a = -2 m/s² (khi v₀ > 0). Nếu quên dấu trừ thì tính quãng đường ra âm hoặc kết quả sai hoàn toàn!'
           },
           {
-            name: 'Chuyển động rơi tự do (v<sub>0</sub> = 0, gia tốc g)',
-            formula: 'v = gt = &radic;(2gh)<br>h = 1/2.gt<sup>2</sup> &hArr; t = &radic;(2h / g)<br>Quãng đường rơi trong giây thứ n: &Delta;h<sub>n</sub> = 1/2 . g(2n - 1)',
-            desc: 'Rơi tự do là chuyển động thẳng nhanh dần đều theo phương thẳng đứng, chiều từ trên xuống dưới dưới tác dụng duy nhất của trọng lực (bỏ qua sức cản không khí). Tại cùng một nơi, mọi vật rơi tự do với cùng gia tốc g.',
-            traps: 'Rơi tự do có vận tốc đầu bằng 0 (v<sub>0</sub> = 0). Nếu ném vật xuống thì v<sub>0</sub> &ne; 0, không gọi là rơi tự do thuần túy.'
-          }
-        ]
-      },
-      {
-        title: 'Chương III: Chuyển động ném ngang & Hai chiều',
-        badge: 'Động học nâng cao',
-        items: [
-          {
-            name: 'Chuyển động ném ngang từ độ cao h với tốc độ v₀',
-            formula: '• Trục Ox (ngang): a<sub>x</sub> = 0, v<sub>x</sub> = v<sub>0</sub>, x = v<sub>0</sub>t (thẳng đều)<br>• Trục Oy (đứng): a<sub>y</sub> = g, v<sub>y</sub> = gt, y = 1/2.gt<sup>2</sup> (rơi tự do)<br>• Phương trình quỹ đạo: y = (g / (2v<sub>0</sub><sup>2</sup>)) . x<sup>2</sup> (nhánh parabol)<br>• Thời gian rơi: t = &radic;(2h / g) &nbsp;(không phụ thuộc vào v<sub>0</sub>!)<br>• Tầm xa: L = x<sub>max</sub> = v<sub>0</sub> . &radic;(2h / g)<br>• Tốc độ chạm đất: v = &radic;(v<sub>x</sub><sup>2</sup> + v<sub>y</sub><sup>2</sup>) = &radic;(v<sub>0</sub><sup>2</sup> + 2gh)',
-            desc: 'Chuyển động ném ngang là sự tổng hợp của hai chuyển động thành phần vuông góc nhau: chuyển động thẳng đều theo phương ngang và chuyển động rơi tự do theo phương thẳng đứng.',
-            traps: 'Thời gian rơi của vật ném ngang bằng thời gian rơi tự do của vật thả rơi từ cùng độ cao, hoàn toàn KHÔNG phụ thuộc vào vận tốc ném ban đầu v<sub>0</sub>.'
-          }
-        ]
-      },
-      {
-        title: 'Chương IV: Động lực học & Các định luật Newton',
-        badge: 'Động lực học chất điểm',
-        items: [
-          {
-            name: 'Ba định luật Newton kinh điển',
-            formula: '• Định luật I: F⃗<sub>hl</sub> = 0⃗ &rArr; vật đứng yên hoặc chuyển động thẳng đều mãi mãi<br>• Định luật II: F⃗ = m.a⃗ &hArr; a⃗ = F⃗ / m<br>• Định luật III: F⃗<sub>AB</sub> = -F⃗<sub>BA</sub> (Cùng phương, ngược chiều, cùng độ lớn, đặt vào 2 vật khác nhau)',
-            desc: 'Quán tính là tính chất của mọi vật có xu hướng bảo toàn vận tốc cả về hướng và độ lớn. Khối lượng m là đại lượng đặc trưng cho mức quán tính của vật.',
-            traps: 'Lực và phản lực trong Định luật III Newton KHÔNG cân bằng nhau vì chúng đặt vào hai vật tương tác khác nhau.'
+            name: 'Khai thác Đồ thị chuyển động (Đồ thị d - t và Đồ thị v - t)',
+            formula: '★ ĐỒ THỊ ĐỘ DỊCH CHUYỂN – THỜI GIAN (d - t):<br>• Độ dốc (hệ số góc): Độ dốc = &Delta;d / &Delta;t = v (chính là vận tốc)<br>  + Đường dốc lên: v > 0 (vật chuyển động thẳng đều theo chiều dương)<br>  + Đường dốc xuống: v < 0 (vật chuyển động theo chiều âm)<br>  + Đường nằm ngang song song trục Ot: v = 0 (vật đứng yên tại một vị trí)<br>  + Hai đường đồ thị d - t song song: Hai vật chuyển động cùng vận tốc<br>  + Giao điểm của 2 đồ thị d - t: Thời điểm và vị trí hai vật gặp nhau<br><br>★ ĐỒ THỊ VẬN TỐC – THỜI GIAN (v - t):<br>• Độ dốc (hệ số góc): Độ dốc = &Delta;v / &Delta;t = a (chính là gia tốc)<br>  + Đường dốc lên: a > 0<br>  + Đường dốc xuống: a < 0<br>  + Đường nằm ngang song song trục Ot: a = 0 (chuyển động thẳng đều)<br>• Diện tích dưới đồ thị v - t: Diện tích hình phẳng (tam giác, hình chữ nhật, hình thang) giới hạn bởi đồ thị v-t và trục Ot chính bằng độ lớn độ dịch chuyển d (quãng đường s)',
+            desc: 'Để tính quãng đường đi được từ đồ thị v - t: Ta chia hình giới hạn bởi đồ thị và trục Ot thành các hình học cơ bản (tam giác vuông, hình thang vuông, hình chữ nhật) rồi cộng diện tích lại. Diện tích = d = s.',
+            traps: 'Không nhầm lẫn đồ thị d - t với đồ thị v - t! Trên đồ thị d - t, đường nằm ngang là đứng yên. Nhưng trên đồ thị v - t, đường nằm ngang là chuyển động thẳng đều với vận tốc không đổi!'
           },
           {
-            name: 'Tổng hợp lực & Điều kiện cân bằng chất điểm',
-            formula: 'F⃗ = F⃗<sub>1</sub> + F⃗<sub>2</sub> &rArr; F = &radic;(F<sub>1</sub><sup>2</sup> + F<sub>2</sub><sup>2</sup> + 2F<sub>1</sub>F<sub>2</sub>.cos&alpha;)<br>• Cùng chiều (&alpha; = 0&deg;): F<sub>max</sub> = F<sub>1</sub> + F<sub>2</sub><br>• Ngược chiều (&alpha; = 180&deg;): F<sub>min</sub> = |F<sub>1</sub> - F<sub>2</sub>|<br>• Vuông góc (&alpha; = 90&deg;): F = &radic;(F<sub>1</sub><sup>2</sup> + F<sub>2</sub><sup>2</sup>)<br>• Bất đẳng thức hợp lực: |F<sub>1</sub> - F<sub>2</sub>| &le; F &le; F<sub>1</sub> + F<sub>2</sub>',
-            desc: 'Hợp lực của hai lực đồng quy tuân theo quy tắc hình bình hành. Điều kiện cân bằng của chất điểm là tổng hợp lực tác dụng lên chất điểm bằng vectơ-không: &sum;F⃗ = 0⃗.',
-            traps: 'Độ lớn hợp lực không bao giờ vượt quá F<sub>1</sub> + F<sub>2</sub> và không bao giờ nhỏ hơn |F<sub>1</sub> - F<sub>2</sub>|.'
-          },
-          {
-            name: 'Các lực cơ học thường gặp (Trọng lực, Ma sát, Đàn hồi)',
-            formula: '• Trọng lực: P = m.g (phương thẳng đứng, hướng xuống)<br>• Lực ma sát trượt: F<sub>mst</sub> = &mu; . N (ngược chiều chuyển động tương đối)<br>• Định luật Hooke (Lò xo): F<sub>đh</sub> = k . |&Delta;l| (&Delta;l là độ biến dạng)<br>• Lực cản chất lưu & Đẩy Archimedes: F<sub>A</sub> = &rho; . g . V',
-            desc: 'Hệ số ma sát trượt &mu; phụ thuộc vào vật liệu và tình trạng bề mặt tiếp xúc, KHÔNG phụ thuộc vào diện tích tiếp xúc hay tốc độ của vật. Trên mặt phẳng nằm ngang không kéo xiên: N = P = mg &rArr; F<sub>mst</sub> = &mu;mg.',
-            traps: 'Nếu vật bị kéo xiên một góc &alpha; so với phương ngang thì áp lực N = mg - F.sin&alpha;, không còn bằng mg nữa.'
-          }
-        ]
-      },
-      {
-        title: 'Chương V: Cân bằng của vật rắn & Mômen lực',
-        badge: 'Cơ học vật rắn',
-        items: [
-          {
-            name: 'Mômen lực & Quy tắc mômen lực (Cân bằng quay)',
-            formula: '• Mômen lực: M = F . d (N.m)<br>• Quy tắc mômen: &sum;M<sub>thuận</sub> = &sum;M<sub>ngược</sub><br>• Ngẫu lực: M = F . d (d là khoảng cách giữa 2 giá lực)',
-            desc: 'Mômen lực đặc trưng cho tác dụng làm quay của lực đối với một trục quay. Cánh tay đòn d là khoảng cách VUÔNG GÓC từ trục quay đến giá của lực.',
-            traps: 'Cánh tay đòn d không phải là khoảng cách từ trục quay đến điểm đặt của lực, mà là khoảng cách vuông góc từ trục quay đến đường thẳng chứa vectơ lực (giá của lực).'
+            name: 'Sự rơi tự do (Gia tốc g & Bài toán quãng đường giây thứ n)',
+            formula: '• Định nghĩa: Rơi tự do là sự rơi chỉ dưới tác dụng của trọng lực (trong chân không hoặc khi bỏ qua lực cản không khí)<br>• Đặc điểm: Chuyển động thẳng nhanh dần đều theo phương thẳng đứng, chiều từ trên xuống dưới, vận tốc ban đầu v₀ = 0, gia tốc rơi tự do a = g &asymp; 9,8 m/s² (hoặc 10 m/s²)<br>★ CÁC CÔNG THỨC RƠI TỰ DO (thay v₀ = 0, a = g vào 3 công thức vàng):<br>  1. Vận tốc tại thời điểm t: v = gt = &radic;(2gh)<br>  2. Độ cao / Quãng đường rơi sau t giây: h = 1/2.gt² &rArr; Thời gian rơi chạm đất: t = &radic;(2h / g)<br>  3. Vận tốc chạm đất: v<sub>chạm đất</sub> = &radic;(2gh)<br>  4. Quãng đường vật rơi được trong giây thứ n:<br>     &Delta;h<sub>n</sub> = h<sub>n</sub> - h<sub>n-1</sub> = 1/2.g.n² - 1/2.g.(n - 1)² = 1/2.g.(2n - 1)<br>     (Ví dụ g = 10 m/s²: giây 1 rơi 5m, giây 2 rơi 15m, giây 3 rơi 25m, tỉ lệ 1 : 3 : 5 : 7...)<br>  5. Quãng đường rơi trong &Delta;t giây cuối cùng trước khi chạm đất:<br>     h<sub>cuối</sub> = h<sub>tổng</sub> - h<sub>(t - &Delta;t)</sub> = 1/2.gt² - 1/2.g(t - &Delta;t)²',
+            desc: 'Tại cùng một vị trí địa lí xác định trên Trái Đất và ở gần mặt đất, mọi vật rơi tự do với cùng một gia tốc g như nhau, hoàn toàn không phụ thuộc vào khối lượng nặng hay nhẹ của vật (thí nghiệm kinh điển của Galileo Galilei ở tháp nghiêng Pisa và thí nghiệm ống Newton).',
+            traps: 'Bẫy đề thi: "Vật nặng 2 kg và vật nhẹ 100 g thả rơi tự do cùng lúc từ cùng độ cao h" &rarr; Hai vật rơi chạm đất CÙNG MỘT LÚC và cùng vận tốc! Khối lượng m không ảnh hưởng đến thời gian rơi tự do.'
           }
         ]
       }
