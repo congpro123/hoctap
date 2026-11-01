@@ -5,7 +5,9 @@ function scoreExam(e,a={},legacy=false){
   const mc=mcCorrect*.25;
   let tfCorrect=0,tf=0,shortCorrectCount=0,short=0;
   if(!legacy){
-    e.tf.forEach((q,i)=>{const count=q.items.reduce((n,item,j)=>n+(a['t'+i+'-'+j]===item[1]?1:0),0);tfCorrect+=count;tf+=[0,.1,.25,.5,1][count]});
+    const isTrue=v=>(v===true||v==='true'||v==='Đúng'||v==='đúng');
+    const isMatch=(u,exp)=>u!==undefined&&u!==null&&Boolean(u)===isTrue(exp);
+    e.tf.forEach((q,i)=>{const count=q.items.reduce((n,item,j)=>n+(isMatch(a['t'+i+'-'+j],item[1])?1:0),0);tfCorrect+=count;tf+=[0,.1,.25,.5,1][count]});
     e.short.forEach((q,i)=>{if(shortCorrect(a['s'+i],q.answer)){shortCorrectCount++;short+=.5}});
   }
   return {mc,tf,short,points:Math.round((mc+tf+short)*100)/100,max:e.questions.length*.25+(legacy?0:e.tf.length+e.short.length*.5),correct:mcCorrect+tfCorrect+shortCorrectCount,total:e.questions.length+(legacy?0:e.tf.reduce((n,q)=>n+q.items.length,0)+e.short.length)};

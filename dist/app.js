@@ -12,12 +12,16 @@ const subjects = [
 function cleanOptionText(text) {
   if (!text) return '';
   return String(text).replace(/^[A-Da-d][\)\.\:\-]\s*/, '').trim();
+
 }
 
 function cleanItemText(text) {
   if (!text) return '';
   return String(text).replace(/^[a-dA-D][\)\.\:\-]\s*/, '').trim();
 }
+
+const isTfTrue = v => (v === true || v === 'true' || v === 'Đúng' || v === 'đúng');
+const isTfMatch = (user, expected) => user !== undefined && user !== null && Boolean(user) === isTfTrue(expected);
 
 // Hàm chuẩn hóa dữ liệu đề thi tự động tương thích
 function normalizeExam(e) {
@@ -55,6 +59,9 @@ function normalizeExam(e) {
       if (Array.isArray(tfItem.items)) {
         tfItem.items.forEach(it => {
           if (it && it[0]) it[0] = cleanItemText(it[0]);
+          if (it && it[1] !== undefined) {
+            it[1] = isTfTrue(it[1]);
+          }
         });
       }
     });
@@ -81,7 +88,9 @@ const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedE
   ? suppliedExams
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
-    : [];
+    : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
+      ? [...mathExams, ...extraExams]
+      : [];
 
 if (rawData.length > 0) {
   exams = rawData.map(normalizeExam);
@@ -478,7 +487,7 @@ function submitExam(reason) {
   (e.tf || []).forEach((q, i) => {
     let subCorrect = 0;
     (q.items || []).forEach((item, j) => {
-      if (answers['t' + i + '-' + j] === item[1]) {
+      if (isTfMatch(answers['t' + i + '-' + j], item[1])) {
         correct++;
         subCorrect++;
       }
@@ -562,12 +571,13 @@ function renderResult(r) {
           <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q.stem}</b>
           ${(q.items || []).map((item, j) => {
             const user = r.answers['t' + i + '-' + j];
-            const ok = user === item[1];
+            const ok = isTfMatch(user, item[1]);
+            const expTrue = isTfTrue(item[1]);
             return `<div class="sub-review" style="margin: 10px 0; padding: 10px 14px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px;">
               <div style="font-size: 14px; color: #1e293b; line-height: 1.5;"><b>${'abcd'[j]})</b> ${cleanItemText(item[0])}</div>
               <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
                 ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa chọn</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn chọn: ${user ? 'Đúng' : 'Sai'}</span>`}
-                <span style="font-size: 13px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 14px;">${item[1] ? 'Đúng' : 'Sai'}</b></span>
+                <span style="font-size: 13px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 14px;">${expTrue ? 'Đúng' : 'Sai'}</b></span>
               </div>
               ${item[2] ? `<div style="font-size: 13px; color: #475569; font-style: italic; background: #f8fafc; padding: 6px 10px; border-radius: 4px; line-height: 1.5;">${item[2]}</div>` : ''}
             </div>`;
@@ -617,14 +627,19 @@ document.addEventListener('input', e => {
   updateProgress();
 });
 
-window.addEventListener('hashchange', () => {
-  const h = location.hash;
-  if (h === '#history') history();
-  else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
-  else if (h === '#subjects') catalog();
-  else home();
-});
+if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('hashchange', () => {
+    const h = (typeof location !== 'undefined' && location.hash) ? location.hash : '';
+    if (h === '#history') history();
+    else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
+    else if (h === '#subjects') catalog();
+    else home();
+  });
+}
 
 // Khởi chạy khi nạp trang
-if (location.hash) window.dispatchEvent(new Event('hashchange'));
-else home();
+if (typeof location !== 'undefined' && location.hash && typeof window !== 'undefined' && window.dispatchEvent) {
+  window.dispatchEvent(new Event('hashchange'));
+} else {
+  home();
+}

@@ -22,7 +22,7 @@ const suppliedExams = [
           "C. Bạn đã làm bài tập Toán chưa?",
           "D. Hãy cố gắng đạt điểm cao nhé!"
         ],
-        "B",
+        1,
         "Câu B là khẳng định có tính đúng (vì 17 chỉ chia hết cho 1 và 17); các câu A, C, D là câu cảm thán, nghi vấn, cầu khiến nên không phải mệnh đề."
       ],
       [
@@ -33,7 +33,7 @@ const suppliedExams = [
           "C. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &le; 0.",
           "D. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 = 0."
         ],
-        "C",
+        2,
         "Phủ định của lượng từ &forall; là &exist;, và phủ định của quan hệ \"&gt;\" là \"&le;\"."
       ],
       [
@@ -44,7 +44,7 @@ const suppliedExams = [
           "C. (-2; 5].",
           "D. [-2; 5)."
         ],
-        "D",
+        3,
         "Theo định nghĩa nửa khoảng: {x &isin; <b>R</b> | a &le; x &lt; b} = [a; b) = [-2; 5)."
       ],
       [
@@ -55,7 +55,7 @@ const suppliedExams = [
           "C. {-1; 0; 2; 3; 4; 5; 6}.",
           "D. {3; 5}."
         ],
-        "A",
+        0,
         "Giao của hai tập hợp A &cap; B gồm các phần tử thuộc cả A và B, đó là {0; 2}."
       ],
       [
@@ -66,7 +66,7 @@ const suppliedExams = [
           "C. x + y<sup>2</sup> &ge; 1.",
           "D. xy + 2x &lt; 3."
         ],
-        "B",
+        1,
         "BPT bậc nhất hai ẩn có dạng ax + by + c &le; 0 (với a, b không đồng thời bằng 0, bậc của x và y đều là bậc 1)."
       ],
       [
@@ -77,7 +77,7 @@ const suppliedExams = [
           "C. (2; 3).",
           "D. (-1; 0)."
         ],
-        "C",
+        2,
         "Thay (2; 3) vào vế trái: 2(2) - 3 + 1 = 2 &gt; 0 (thỏa mãn). Các cặp khác đều cho giá trị &le; 0."
       ],
       [
@@ -88,7 +88,7 @@ const suppliedExams = [
           "C. {x + 2y &gt; 0 ; x - y &lt; 5}.",
           "D. {3x + y &le; 0 ; x - 2y &ge; 1}."
         ],
-        "B",
+        1,
         "Thay x = 1, y = -1 vào hệ B: 1 - (-1) = 2 &ge; 1 (đúng) và 2(1) + (-1) = 1 &gt; 0 (đúng)."
       ],
       [
@@ -99,7 +99,7 @@ const suppliedExams = [
           "C. B(3; 1).",
           "D. C(1; 3)."
         ],
-        "A",
+        0,
         "Thay O(0; 0) vào BPT: 3(0) + 2(0) = 0 &le; 6 (đúng)."
       ],
       [
@@ -110,7 +110,7 @@ const suppliedExams = [
           "C. sin(180&deg; - &alpha;) = sin&alpha;.",
           "D. tan(180&deg; - &alpha;) = tan&alpha;."
         ],
-        "C",
+        2,
         "Hai góc bù nhau (&alpha; và 180&deg; - &alpha;) có sin bằng nhau: sin(180&deg; - &alpha;) = sin&alpha;, còn cos, tan, cot đối nhau."
       ],
       [
@@ -121,7 +121,7 @@ const suppliedExams = [
           "C. a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - bc.cosA.",
           "D. a<sup>2</sup> = b<sup>2</sup> - c<sup>2</sup> + 2bc.cosA."
         ],
-        "B",
+        1,
         "Theo định lí côsin trong tam giác ABC: a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA."
       ],
       [
@@ -132,7 +132,7 @@ const suppliedExams = [
           "C. 12&radic;3.",
           "D. 24."
         ],
-        "C",
+        2,
         "Áp dụng công thức S = 1/2 . b . c . sinA = 1/2 . 6 . 8 . sin60&deg; = 24 . (&radic;3 / 2) = 12&radic;3."
       ],
       [
@@ -143,7 +143,7 @@ const suppliedExams = [
           "C. 10&radic;3.",
           "D. 20."
         ],
-        "B",
+        1,
         "Theo định lí sin: a / sinA = 2R &rArr; R = a / (2sinA) = 10 / (2 . sin30&deg;) = 10 / (2 . 0,5) = 10."
       ]
     ],
@@ -153,22 +153,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Tập hợp A &cap; <b>Z</b> có tất cả 8 phần tử nguyên.",
-            "Đúng",
+            true,
             "Các số nguyên thuộc [-3; 4] là {-3; -2; -1; 0; 1; 2; 3; 4}, gồm đúng 8 phần tử."
           ],
           [
             "b) Tập hợp giao của hai tập hợp A và B là A &cap; B = [1; 4].",
-            "Sai",
+            false,
             "Vì 1 &notin; B nên A &cap; B = (1; 4]."
           ],
           [
             "c) Tập hợp hiệu A \\ B = [-3; 1].",
-            "Đúng",
+            true,
             "Các phần tử thuộc A nhưng không thuộc B là x &isin; [-3; 1] (do 1 &isin; A và 1 &notin; B)."
           ],
           [
             "d) Có đúng 2 giá trị nguyên của tham số m để C &sub; A.",
-            "Sai",
+            false,
             "Để C &sub; A &hArr; {m - 1 &ge; -3 ; m + 3 &le; 4} &hArr; -2 &le; m &le; 1. Có 4 giá trị nguyên của m là -2; -1; 0; 1."
           ]
         ]
@@ -178,22 +178,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Độ dài cạnh BC tính theo định lí côsin bằng 7.",
-            "Đúng",
+            true,
             "BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cos60&deg; = 25 + 64 - 2.5.8.0,5 = 49 &rArr; BC = 7."
           ],
           [
             "b) Diện tích của tam giác ABC bằng 20&radic;3.",
-            "Sai",
+            false,
             "S = 1/2 . AB . AC . sin60&deg; = 1/2 . 5 . 8 . (&radic;3/2) = 10&radic;3."
           ],
           [
             "c) Bán kính đường tròn ngoại tiếp tam giác ABC là R = 7&radic;3 / 3.",
-            "Đúng",
+            true,
             "R = BC / (2sinA) = 7 / (2 . &radic;3/2) = 7 / &radic;3 = 7&radic;3 / 3."
           ],
           [
             "d) Độ dài đường cao AH kẻ từ đỉnh A của tam giác ABC bằng 20&radic;3 / 7.",
-            "Đúng",
+            true,
             "Ta có S = 1/2 . BC . AH &rArr; AH = 2S / BC = 20&radic;3 / 7."
           ]
         ]
@@ -257,7 +257,7 @@ const suppliedExams = [
           "C. &forall;x &isin; <b>R</b>, x<sup>2</sup> &gt; 0.",
           "D. Số &pi; là một số hữu tỉ."
         ],
-        "B",
+        1,
         "Phương trình x<sup>2</sup> - 4 = 0 có nghiệm thực x = &plusmn;2 nên mệnh đề tồn tại ở câu B là mệnh đề đúng."
       ],
       [
@@ -268,7 +268,7 @@ const suppliedExams = [
           "C. Tứ giác ABCD là hình chữ nhật khi và chỉ khi có hai đường chéo bằng nhau.",
           "D. Nếu tứ giác ABCD là hình chữ nhật thì nó có hai đường chéo bằng nhau."
         ],
-        "B",
+        1,
         "Mệnh đề đảo của P &rArr; Q là Q &rArr; P."
       ],
       [
@@ -279,7 +279,7 @@ const suppliedExams = [
           "C. 8.",
           "D. 9."
         ],
-        "C",
+        2,
         "Tập hợp có n = 3 phần tử thì số tập hợp con là 2<sup>3</sup> = 8."
       ],
       [
@@ -290,7 +290,7 @@ const suppliedExams = [
           "C. (-&infin;; 1].",
           "D. (3; 5]."
         ],
-        "B",
+        1,
         "Hợp của (-&infin;; 3] và (1; 5] trên trục số là (-&infin;; 5]."
       ],
       [
@@ -301,7 +301,7 @@ const suppliedExams = [
           "C. (2; 2).",
           "D. (-1; 2)."
         ],
-        "C",
+        2,
         "Thay (2; 2) vào vế trái: 2 + 3(2) - 5 = 3 &gt; 0 (không thỏa mãn &le; 0)."
       ],
       [
@@ -312,7 +312,7 @@ const suppliedExams = [
           "C. (4; 2).",
           "D. (2; -1)."
         ],
-        "B",
+        1,
         "Thay O(0; 0) vào 2x - y &lt; 4: 0 &lt; 4 (đúng)."
       ],
       [
@@ -323,7 +323,7 @@ const suppliedExams = [
           "C. 16.",
           "D. 12."
         ],
-        "B",
+        1,
         "Miền nghiệm là tam giác vuông cân OAB với O(0; 0), A(4; 0), B(0; 4), có diện tích S = 1/2 . OA . OB = 1/2 . 4 . 4 = 8."
       ],
       [
@@ -334,7 +334,7 @@ const suppliedExams = [
           "C. &radic;3/2.",
           "D. 1."
         ],
-        "D",
+        3,
         "Ta có sin30&deg;.cos60&deg; + sin60&deg;.cos30&deg; = (1/2).(1/2) + (&radic;3/2).(&radic;3/2) = 1/4 + 3/4 = 1."
       ],
       [
@@ -345,7 +345,7 @@ const suppliedExams = [
           "C. 60&deg;.",
           "D. 120&deg;."
         ],
-        "C",
+        2,
         "cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (2bc) = (64 + 25 - 49) / (2.8.5) = 40 / 80 = 1/2 &rArr; A = 60&deg;."
       ],
       [
@@ -356,7 +356,7 @@ const suppliedExams = [
           "C. 5&radic;2.",
           "D. 10&radic;6."
         ],
-        "A",
+        0,
         "Theo định lí sin: c / sinC = b / sinB &rArr; c = 10 . sin60&deg; / sin45&deg; = 10 . (&radic;3/2) / (&radic;2/2) = 5&radic;6."
       ],
       [
@@ -367,7 +367,7 @@ const suppliedExams = [
           "C. 168.",
           "D. 72."
         ],
-        "B",
+        1,
         "Nửa chu vi p = (13 + 14 + 15)/2 = 21. Công thức Heron: S = &radic;(21.(21-13).(21-14).(21-15)) = &radic;(21.8.7.6) = 84."
       ],
       [
@@ -378,7 +378,7 @@ const suppliedExams = [
           "C. 4.",
           "D. 6."
         ],
-        "C",
+        2,
         "Ta có S = p.r &rArr; r = S / p = 84 / 21 = 4."
       ]
     ],
@@ -388,22 +388,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Điểm M(2; 3) thuộc miền nghiệm của hệ bất phương trình đã cho.",
-            "Đúng",
+            true,
             "Thay (2; 3): 2 + 3 = 5 &le; 6; 2(2) + 3 = 7 &le; 8; 2 &ge; 0; 3 &ge; 0 (đều thỏa mãn)."
           ],
           [
             "b) Miền nghiệm của hệ bất phương trình là một miền tam giác.",
-            "Sai",
+            false,
             "Miền nghiệm là tứ giác lồi OABC với 4 đỉnh O(0; 0), A(4; 0), B(2; 4), C(0; 6)."
           ],
           [
             "c) Tại đỉnh B(2; 4), giá trị của biểu thức F(x; y) bằng 14.",
-            "Đúng",
+            true,
             "F(2; 4) = 3(2) + 2(4) = 6 + 8 = 14."
           ],
           [
             "d) Giá trị lớn nhất của F(x; y) trên miền nghiệm của hệ là 16.",
-            "Sai",
+            false,
             "Tính tại 4 đỉnh: F(0; 0) = 0; F(4; 0) = 12; F(2; 4) = 14; F(0; 6) = 12. Vậy GTLN của F là 14."
           ]
         ]
@@ -413,22 +413,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Giá trị cos120&deg; = -1/2.",
-            "Đúng",
+            true,
             "cos120&deg; = -cos60&deg; = -1/2."
           ],
           [
             "b) Độ dài cạnh AB của tam giác ABC bằng 14.",
-            "Đúng",
+            true,
             "AB<sup>2</sup> = BC<sup>2</sup> + AC<sup>2</sup> - 2.BC.AC.cos120&deg; = 100 + 36 - 2.10.6.(-1/2) = 196 &rArr; AB = 14."
           ],
           [
             "c) Diện tích tam giác ABC bằng 30&radic;3.",
-            "Sai",
+            false,
             "S = 1/2 . BC . AC . sin120&deg; = 1/2 . 10 . 6 . (&radic;3/2) = 15&radic;3."
           ],
           [
             "d) Bán kính đường tròn nội tiếp r của tam giác ABC bằng &radic;3.",
-            "Đúng",
+            true,
             "Nửa chu vi p = (10 + 6 + 14)/2 = 15. Bán kính r = S / p = 15&radic;3 / 15 = &radic;3."
           ]
         ]
@@ -492,7 +492,7 @@ const suppliedExams = [
           "C. P(4).",
           "D. P(0)."
         ],
-        "B",
+        1,
         "Thay n = 3: 3<sup>2</sup> - 1 = 8 chia hết cho 4 nên P(3) đúng."
       ],
       [
@@ -503,7 +503,7 @@ const suppliedExams = [
           "C. P khi và chỉ khi Q.",
           "D. Nếu P thì Q."
         ],
-        "C",
+        2,
         "\"P khi và chỉ khi Q\" là mệnh đề tương đương P &hArr; Q, không phải mệnh đề kéo theo P &rArr; Q."
       ],
       [
@@ -514,7 +514,7 @@ const suppliedExams = [
           "C. A = {1; 2}.",
           "D. A = &empty;."
         ],
-        "A",
+        0,
         "Giải 2x<sup>2</sup> - 5x + 2 = 0 &hArr; x = 2 (&isin; <b>Z</b>) hoặc x = 1/2 (&notin; <b>Z</b>). Vậy A = {2}."
       ],
       [
@@ -525,7 +525,7 @@ const suppliedExams = [
           "C. (-&infin;; -3] &cup; [2; +&infin;).",
           "D. (-&infin;; -3) &cup; [2; +&infin;)."
         ],
-        "B",
+        1,
         "Vì -3 &notin; M nên -3 &isin; C<sub><b>R</b></sub>M; vì 2 &isin; M nên 2 &notin; C<sub><b>R</b></sub>M. Do đó C<sub><b>R</b></sub>M = (-&infin;; -3] &cup; (2; +&infin;)."
       ],
       [
@@ -536,7 +536,7 @@ const suppliedExams = [
           "C. (1; 1).",
           "D. (-2; 2)."
         ],
-        "C",
+        2,
         "Thay (1; 1) vào x - 2y + 4: 1 - 2 + 4 = 3 &ge; 0 (thỏa mãn)."
       ],
       [
@@ -547,7 +547,7 @@ const suppliedExams = [
           "C. {xy &gt; 1 ; x - y &lt; 2}.",
           "D. {x + y = 2 ; 2x - y = 1}."
         ],
-        "B",
+        1,
         "Cả hai bất phương trình trong hệ B đều có dạng bậc nhất hai ẩn."
       ],
       [
@@ -558,7 +558,7 @@ const suppliedExams = [
           "C. C(1; 5).",
           "D. O(0; 0)."
         ],
-        "C",
+        2,
         "Ta có F(1; 1) = 1; F(4; 1) = 7; F(1; 5) = 2(1) - 5 = -3. Vậy F nhỏ nhất tại C(1; 5)."
       ],
       [
@@ -569,7 +569,7 @@ const suppliedExams = [
           "C. tan135&deg; = -1.",
           "D. cot135&deg; = 1."
         ],
-        "C",
+        2,
         "Góc 135&deg; bù với 45&deg; nên tan135&deg; = -tan45&deg; = -1."
       ],
       [
@@ -580,7 +580,7 @@ const suppliedExams = [
           "C. b = 2R.sinB.",
           "D. c = R.sinC."
         ],
-        "D",
+        3,
         "Theo định lí sin: c = 2R.sinC nên D sai."
       ],
       [
@@ -591,7 +591,7 @@ const suppliedExams = [
           "C. 9/16.",
           "D. -1/8."
         ],
-        "A",
+        0,
         "cosC = (a<sup>2</sup> + b<sup>2</sup> - c<sup>2</sup>) / (2ab) = (16 + 25 - 36) / (2.4.5) = 5 / 40 = 1/8."
       ],
       [
@@ -602,7 +602,7 @@ const suppliedExams = [
           "C. 2a<sup>2</sup>&radic;3.",
           "D. a<sup>2</sup>&radic;3 / 2."
         ],
-        "A",
+        0,
         "Diện tích tam giác đều cạnh X là X<sup>2</sup>&radic;3 / 4 = (2a)<sup>2</sup>&radic;3 / 4 = a<sup>2</sup>&radic;3."
       ],
       [
@@ -613,7 +613,7 @@ const suppliedExams = [
           "C. 2.",
           "D. 2,5."
         ],
-        "A",
+        0,
         "Tam giác vuông có cạnh huyền BC = 5, nửa chu vi p = (3+4+5)/2 = 6, diện tích S = 6 &rArr; r = S/p = 1."
       ]
     ],
@@ -623,22 +623,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Tập hợp A được viết dưới dạng đoạn là A = [-1; 3].",
-            "Đúng",
+            true,
             "Theo định nghĩa đoạn [-1; 3]."
           ],
           [
             "b) Tập hợp A &cap; B = [1; 3].",
-            "Sai",
+            false,
             "Vì 1 &notin; B nên A &cap; B = (1; 3]."
           ],
           [
             "c) Tập hợp A \\ B = [-1; 1].",
-            "Đúng",
+            true,
             "Các phần tử thuộc A mà không lớn hơn 1 là [-1; 1]."
           ],
           [
             "d) Tập hợp C<sub><b>R</b></sub>(A &cup; B) = (-&infin;; -1).",
-            "Đúng",
+            true,
             "Ta có A &cup; B = [-1; +&infin;) nên phần bù trong <b>R</b> là (-&infin;; -1)."
           ]
         ]
@@ -648,22 +648,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Giá trị của sinA bằng 4/5.",
-            "Đúng",
+            true,
             "Vì 0&deg; &lt; A &lt; 180&deg; nên sinA &gt; 0 &rArr; sinA = &radic;(1 - cos<sup>2</sup>A) = 4/5."
           ],
           [
             "b) Diện tích của tam giác ABC bằng 14.",
-            "Đúng",
+            true,
             "S = 1/2 . b . c . sinA = 1/2 . 7 . 5 . (4/5) = 14."
           ],
           [
             "c) Độ dài cạnh a bằng 4&radic;2.",
-            "Đúng",
+            true,
             "a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA = 49 + 25 - 2.7.5.(3/5) = 32 &rArr; a = 4&radic;2."
           ],
           [
             "d) Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 5&radic;2 / 2.",
-            "Đúng",
+            true,
             "R = a / (2sinA) = 4&radic;2 / (2 . 4/5) = 5&radic;2 / 2."
           ]
         ]
@@ -727,7 +727,7 @@ const suppliedExams = [
           "C. P sai; <span style=\"text-decoration:overline;\">P</span>: \"&exist;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\".",
           "D. P đúng; <span style=\"text-decoration:overline;\">P</span>: \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 = 0\"."
         ],
-        "B",
+        1,
         "Vì x = &plusmn;&radic;(5/2) &notin; <b>Q</b> nên P sai, và phủ định là \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\"."
       ],
       [
@@ -738,7 +738,7 @@ const suppliedExams = [
           "C. 6.",
           "D. 12."
         ],
-        "C",
+        2,
         "Các ước tự nhiên của 12 là {1; 2; 3; 4; 6; 12}, gồm 6 phần tử."
       ],
       [
@@ -749,7 +749,7 @@ const suppliedExams = [
           "C. (1; 5).",
           "D. [-2; 1]."
         ],
-        "A",
+        0,
         "Những phần tử thuộc [-4; 1] nhưng không thuộc [-2; 5) là [-4; -2)."
       ],
       [
@@ -760,7 +760,7 @@ const suppliedExams = [
           "C. {x &isin; <b>Q</b> | x<sup>2</sup> - 4 = 0}.",
           "D. {x &isin; <b>N</b> | 2x - 4 = 0}."
         ],
-        "B",
+        1,
         "Phương trình x<sup>2</sup> + x + 1 = (x + 1/2)<sup>2</sup> + 3/4 = 0 vô nghiệm thực nên tập hợp ở câu B rỗng."
       ],
       [
@@ -771,7 +771,7 @@ const suppliedExams = [
           "C. (0; 0).",
           "D. (3; 0)."
         ],
-        "C",
+        2,
         "Thay (0; 0) vào BPT: 0 + 0 = 0 &le; 2 (đúng)."
       ],
       [
@@ -782,7 +782,7 @@ const suppliedExams = [
           "C. 8x + 5y &ge; 120.",
           "D. 50x + 80y &lt; 1200."
         ],
-        "B",
+        1,
         "Tổng lãi 50x + 80y &ge; 1200 &hArr; 5x + 8y &ge; 120."
       ],
       [
@@ -793,7 +793,7 @@ const suppliedExams = [
           "C. (1; 3).",
           "D. (-1; 2)."
         ],
-        "B",
+        1,
         "Thay (2; 1): 2(2) - 1 = 3 &ge; 1 (đúng) và 2 + 3(1) = 5 &le; 6 (đúng)."
       ],
       [
@@ -804,7 +804,7 @@ const suppliedExams = [
           "C. 1/2.",
           "D. -1/2."
         ],
-        "B",
+        1,
         "cos150&deg; = -cos30&deg; = -&radic;3/2."
       ],
       [
@@ -815,7 +815,7 @@ const suppliedExams = [
           "C. Góc tù.",
           "D. Góc bẹt."
         ],
-        "C",
+        2,
         "Vì cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>)/(2bc) &lt; 0 nên góc A &gt; 90&deg; (góc tù)."
       ],
       [
@@ -826,7 +826,7 @@ const suppliedExams = [
           "C. 45&deg; hoặc 135&deg;.",
           "D. 90&deg;."
         ],
-        "B",
+        1,
         "S = 1/2.a.b.sinC &rArr; sinC = 2S/(ab) = 40&radic;3 / 80 = &radic;3/2 &rArr; C = 60&deg; hoặc C = 120&deg;."
       ],
       [
@@ -837,7 +837,7 @@ const suppliedExams = [
           "C. 3&radic;6.",
           "D. 4&radic;3."
         ],
-        "A",
+        0,
         "Theo định lí sin: AC / sinB = BC / sinA &rArr; AC = 6&radic;3 . (&radic;2/2) / (&radic;3/2) = 6&radic;2."
       ],
       [
@@ -848,7 +848,7 @@ const suppliedExams = [
           "C. 3&radic;3.",
           "D. 6."
         ],
-        "B",
+        1,
         "R = a / (2sin60&deg;) = 6 / &radic;3 = 2&radic;3."
       ]
     ],
@@ -858,22 +858,22 @@ const suppliedExams = [
         "items": [
           [
             "a) A &cap; B = (-1; 2).",
-            "Đúng",
+            true,
             "Giao của [-5; 2) và (-1; 6] là khoảng (-1; 2)."
           ],
           [
             "b) A &cup; B = [-5; 6].",
-            "Đúng",
+            true,
             "Hợp của hai tập hợp trải từ -5 đến 6 kể cả hai đầu mút."
           ],
           [
             "c) B \\ A = (2; 6].",
-            "Sai",
+            false,
             "Vì 2 &notin; A và 2 &isin; B nên 2 &isin; B \\ A, tức là B \\ A = [2; 6]."
           ],
           [
             "d) Tập hợp (A \\ B) &cap; <b>Z</b> có 5 phần tử nguyên.",
-            "Đúng",
+            true,
             "Vì -1 &notin; B nên A \\ B = [-5; -1], các số nguyên trong đoạn này là -5; -4; -3; -2; -1 gồm đúng 5 phần tử."
           ]
         ]
@@ -883,22 +883,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Nửa chu vi của tam giác ABC là p = 13.",
-            "Đúng",
+            true,
             "p = (6 + 8 + 12)/2 = 13."
           ],
           [
             "b) Giá trị cosA = -11/24.",
-            "Đúng",
+            true,
             "cosA = (6<sup>2</sup> + 8<sup>2</sup> - 12<sup>2</sup>)/(2.6.8) = -44/96 = -11/24."
           ],
           [
             "c) Tam giác ABC là tam giác nhọn.",
-            "Sai",
+            false,
             "Vì cosA = -11/24 &lt; 0 nên góc A là góc tù, tam giác ABC là tam giác tù."
           ],
           [
             "d) Diện tích của tam giác ABC bằng &radic;455.",
-            "Đúng",
+            true,
             "Theo Heron: S = &radic;(13.(13-6).(13-8).(13-12)) = &radic;(13.7.5.1) = &radic;455."
           ]
         ]
@@ -962,7 +962,7 @@ const suppliedExams = [
           "C. Không phải mệnh đề.",
           "D. Tương đương với mệnh đề đảo."
         ],
-        "B",
+        1,
         "Với a = 2, b = 3 thì a + b = 5 chia hết cho 5 nhưng 2 và 3 đều không chia hết cho 5, nên P sai."
       ],
       [
@@ -973,7 +973,7 @@ const suppliedExams = [
           "C. 5 &isin; A.",
           "D. A &isin; 5."
         ],
-        "C",
+        2,
         "Quan hệ phần tử thuộc tập hợp dùng kí hiệu &isin;: 5 &isin; A."
       ],
       [
@@ -984,7 +984,7 @@ const suppliedExams = [
           "C. 7.",
           "D. 8."
         ],
-        "C",
+        2,
         "A = {0; 1; 2; 3; 4}, B = {1; 3; 5; 7} &rArr; A &cup; B = {0; 1; 2; 3; 4; 5; 7} gồm 7 phần tử."
       ],
       [
@@ -995,7 +995,7 @@ const suppliedExams = [
           "C. (1; 4].",
           "D. (-2; 1)."
         ],
-        "B",
+        1,
         "Giao của (-2; 4) và [1; 6] là nửa khoảng [1; 4)."
       ],
       [
@@ -1006,7 +1006,7 @@ const suppliedExams = [
           "C. (2; -1).",
           "D. (1; 0)."
         ],
-        "D",
+        3,
         "Thay (1; 0): 4(1) - 5(0) = 4 &lt; 10 (không thỏa mãn)."
       ],
       [
@@ -1017,7 +1017,7 @@ const suppliedExams = [
           "C. 6.",
           "D. 8."
         ],
-        "A",
+        0,
         "Tam giác vuông có các đỉnh (1; 2), (3; 2), (1; 4) với hai cạnh góc vuông bằng 2 và 2 &rArr; S = 1/2 . 2 . 2 = 2."
       ],
       [
@@ -1028,7 +1028,7 @@ const suppliedExams = [
           "C. 1.",
           "D. -1."
         ],
-        "B",
+        1,
         "tan45&deg; = 1, cot135&deg; = -1 &rArr; A = 1 + (-1) = 0."
       ],
       [
@@ -1039,7 +1039,7 @@ const suppliedExams = [
           "C. tan&alpha; &gt; 0, cot&alpha; &gt; 0.",
           "D. sin&alpha; &lt; 0, tan&alpha; &lt; 0."
         ],
-        "B",
+        1,
         "Với góc tù (90&deg; &lt; &alpha; &lt; 180&deg;), sin&alpha; &gt; 0 còn cos&alpha;, tan&alpha;, cot&alpha; đều âm."
       ],
       [
@@ -1050,7 +1050,7 @@ const suppliedExams = [
           "C. 60&deg;.",
           "D. 120&deg;."
         ],
-        "C",
+        2,
         "Áp dụng định lí côsin: cosB = (AB<sup>2</sup> + BC<sup>2</sup> - AC<sup>2</sup>)/(2.AB.BC) = (25 + 64 - 49)/(2.5.8) = 40/80 = 1/2 &rArr; B = 60&deg;."
       ],
       [
@@ -1061,7 +1061,7 @@ const suppliedExams = [
           "C. 6&radic;3.",
           "D. 12."
         ],
-        "A",
+        0,
         "Theo định lí sin: AB = c = 2R.sinC = 2.6.(&radic;2/2) = 6&radic;2."
       ],
       [
@@ -1072,7 +1072,7 @@ const suppliedExams = [
           "C. S = 4R / (abc).",
           "D. S = (a+b+c)R / 2."
         ],
-        "B",
+        1,
         "Công thức chuẩn là S = abc / (4R)."
       ],
       [
@@ -1083,7 +1083,7 @@ const suppliedExams = [
           "C. 30&radic;3.",
           "D. 15."
         ],
-        "A",
+        0,
         "S = 1/2 . b . c . sin150&deg; = 1/2 . 10 . 12 . (1/2) = 30."
       ]
     ],
@@ -1093,22 +1093,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Phương án sản xuất x = 30 thùng Đặc biệt và y = 20 thùng Tiêu chuẩn là hợp lệ.",
-            "Đúng",
+            true,
             "Thay (30; 20): 2(30)+20 = 80 &le; 100 và 30+2(20) = 70 &le; 80 (hợp lệ)."
           ],
           [
             "b) Số thùng Loại Tiêu chuẩn tối đa có thể sản xuất trong một ngày là 50 thùng.",
-            "Sai",
+            false,
             "Từ x + 2y &le; 80 và x &ge; 0 suy ra 2y &le; 80 &hArr; y &le; 40 thùng."
           ],
           [
             "c) Giao điểm của hai đường thẳng 2x + y = 100 và x + 2y = 80 là điểm B(40; 20).",
-            "Đúng",
+            true,
             "Giải hệ {2x + y = 100 ; x + 2y = 80} được x = 40, y = 20."
           ],
           [
             "d) Nếu mỗi thùng Đặc biệt lãi 300 nghìn đồng và mỗi thùng Tiêu chuẩn lãi 200 nghìn đồng thì lợi nhuận tối đa một ngày là 16 triệu đồng.",
-            "Đúng",
+            true,
             "Hàm lãi L = 0,3x + 0,2y (triệu đồng). Tại các đỉnh (0; 0), (50; 0), (40; 20), (0; 40), ta có L(40; 20) = 0,3(40) + 0,2(20) = 12 + 4 = 16 triệu đồng."
           ]
         ]
@@ -1118,22 +1118,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Số đo góc C của tam giác ABC bằng 75&deg;.",
-            "Đúng",
+            true,
             "Góc C = 180&deg; - (60&deg; + 45&deg;) = 75&deg;."
           ],
           [
             "b) Giá trị đúng của sin75&deg; bằng (&radic;6 + &radic;2) / 4.",
-            "Đúng",
+            true,
             "Ta có sin75&deg; = (&radic;6 + &radic;2) / 4."
           ],
           [
             "c) Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 10 / sin75&deg;.",
-            "Sai",
+            false,
             "Theo định lí sin: R = c / (2sinC) = 10 / (2sin75&deg;) = 5 / sin75&deg;."
           ],
           [
             "d) Độ dài cạnh BC = a xấp xỉ bằng 8,97 (làm tròn đến hàng phần trăm).",
-            "Đúng",
+            true,
             "a = c.sinA / sinC = 10.sin60&deg; / sin75&deg; &approx; 8,66025 / 0,96593 &approx; 8,97."
           ]
         ]
@@ -1197,7 +1197,7 @@ const suppliedExams = [
           "C. &radic;23 &lt; 5 &rArr; 2&radic;23 &lt; 10.",
           "D. &radic;23 &lt; 5 &rArr; -2&radic;23 &gt; -10."
         ],
-        "A",
+        0,
         "Vì -&pi; &lt; -2 là đúng nhưng &pi;<sup>2</sup> &approx; 9,87 &lt; 4 là sai nên mệnh đề tương đương ở câu A sai."
       ],
       [
@@ -1208,7 +1208,7 @@ const suppliedExams = [
           "C. {1; 3}.",
           "D. (1; 2)."
         ],
-        "A",
+        0,
         "Phương trình x<sup>2</sup> - 3x + 2 = 0 có hai nghiệm x = 1 và x = 2."
       ],
       [
@@ -1219,7 +1219,7 @@ const suppliedExams = [
           "C. [5; 8).",
           "D. [3; 5]."
         ],
-        "B",
+        1,
         "Các phần tử thuộc [3; 8) nhưng không thuộc (0; 5] là (5; 8)."
       ],
       [
@@ -1230,7 +1230,7 @@ const suppliedExams = [
           "C. 13.",
           "D. 21."
         ],
-        "B",
+        1,
         "n(A &cup; B) = n(A) + n(B) - n(A &cap; B) = 10 + 8 - 3 = 15."
       ],
       [
@@ -1241,7 +1241,7 @@ const suppliedExams = [
           "C. 3x + 2y + 1 &gt; 0.",
           "D. x + 2y - 3 &le; 0."
         ],
-        "C",
+        2,
         "Thay (-2; 3) vào 3x + 2y + 1: 3(-2) + 2(3) + 1 = 1 &gt; 0 (đúng)."
       ],
       [
@@ -1252,7 +1252,7 @@ const suppliedExams = [
           "C. (4; 1).",
           "D. (2; -1)."
         ],
-        "B",
+        1,
         "Thay (0; 0): 0 &ge; -4 (đúng)."
       ],
       [
@@ -1263,7 +1263,7 @@ const suppliedExams = [
           "C. 23.",
           "D. 20."
         ],
-        "C",
+        2,
         "Miền nghiệm là hình chữ nhật nên F đạt GTLN tại đỉnh (4; 3): F(4; 3) = 2(4) + 5(3) = 23."
       ],
       [
@@ -1274,7 +1274,7 @@ const suppliedExams = [
           "C. 0.",
           "D. 1."
         ],
-        "A",
+        0,
         "Ta có sin120&deg;.cos30&deg; + cos120&deg;.sin30&deg; = (&radic;3/2).(&radic;3/2) + (-1/2).(1/2) = 3/4 - 1/4 = 1/2."
       ],
       [
@@ -1285,7 +1285,7 @@ const suppliedExams = [
           "C. 120&deg;.",
           "D. 45&deg;."
         ],
-        "B",
+        1,
         "Vì 5<sup>2</sup> + 12<sup>2</sup> = 25 + 144 = 169 = 13<sup>2</sup> nên tam giác vuông tại C, tức góc C = 90&deg;."
       ],
       [
@@ -1296,7 +1296,7 @@ const suppliedExams = [
           "C. 10.",
           "D. 4&radic;5."
         ],
-        "A",
+        0,
         "a<sup>2</sup> = 4<sup>2</sup> + 6<sup>2</sup> - 2.4.6.cos120&deg; = 16 + 36 + 24 = 76 &rArr; a = 2&radic;19."
       ],
       [
@@ -1307,7 +1307,7 @@ const suppliedExams = [
           "C. 18.",
           "D. 6&radic;3."
         ],
-        "A",
+        0,
         "p = (5+6+7)/2 = 9. S = &radic;(9.4.3.2) = 6&radic;6."
       ],
       [
@@ -1318,7 +1318,7 @@ const suppliedExams = [
           "C. 3.",
           "D. 4."
         ],
-        "B",
+        1,
         "Nửa chu vi p = 24 / 2 = 12. Bán kính r = S / p = 24 / 12 = 2."
       ]
     ],
@@ -1328,22 +1328,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Khi m = 0 thì A &cap; B = (0; 4].",
-            "Đúng",
+            true,
             "Với m = 0 thì B = (0; 5), do đó [-2; 4] &cap; (0; 5) = (0; 4]."
           ],
           [
             "b) Khi m = 0 thì B \\ A = [4; 5).",
-            "Sai",
+            false,
             "Vì 4 &isin; A nên 4 &notin; B \\ A, vậy B \\ A = (4; 5)."
           ],
           [
             "c) Tập hợp A là tập con của B khi và chỉ khi -1 &lt; m &lt; -2.",
-            "Sai",
+            false,
             "Để [-2; 4] &sub; (m; m + 5) &hArr; {m &lt; -2 ; m + 5 &gt; 4} &hArr; {m &lt; -2 ; m &gt; -1} (vô nghiệm, vì độ dài đoạn A là 6 lớn hơn độ dài khoảng B là 5)."
           ],
           [
             "d) Có 10 giá trị nguyên của m để A &cap; B &ne; &empty;.",
-            "Đúng",
+            true,
             "A &cap; B = &empty; &hArr; m + 5 &le; -2 hoặc m &ge; 4 &hArr; m &le; -7 hoặc m &ge; 4. Do đó A &cap; B &ne; &empty; &hArr; -7 &lt; m &lt; 4, gồm các số nguyên từ -6 đến 3 là 10 giá trị."
           ]
         ]
@@ -1353,22 +1353,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Độ dài cạnh AC bằng 7.",
-            "Đúng",
+            true,
             "AC<sup>2</sup> = 8<sup>2</sup> + 5<sup>2</sup> - 2.8.5.cos60&deg; = 64 + 25 - 40 = 49 &rArr; AC = 7."
           ],
           [
             "b) Chu vi của tam giác ABC bằng 20.",
-            "Đúng",
+            true,
             "Chu vi 2p = 8 + 5 + 7 = 20."
           ],
           [
             "c) Diện tích tam giác ABC bằng 10&radic;3.",
-            "Đúng",
+            true,
             "S = 1/2 . 8 . 5 . sin60&deg; = 10&radic;3."
           ],
           [
             "d) Bán kính đường tròn nội tiếp tam giác ABC bằng 2&radic;3.",
-            "Sai",
+            false,
             "Nửa chu vi p = 10 &rArr; r = S / p = 10&radic;3 / 10 = &radic;3."
           ]
         ]
@@ -1432,7 +1432,7 @@ const suppliedExams = [
           "C. &exist;n &isin; <b>N</b>, n<sup>2</sup> + n + 1 là hợp số.",
           "D. &forall;n &notin; <b>N</b>, n<sup>2</sup> + n + 1 không là số nguyên tố."
         ],
-        "B",
+        1,
         "Phủ định của &exist; là &forall;, phủ định của \"là số nguyên tố\" là \"không phải là số nguyên tố\"."
       ],
       [
@@ -1443,7 +1443,7 @@ const suppliedExams = [
           "C. {2; 4}.",
           "D. {1; 2; 3; 4; 6; 8}."
         ],
-        "A",
+        0,
         "Các phần tử thuộc A mà không thuộc B là {1; 3}."
       ],
       [
@@ -1454,7 +1454,7 @@ const suppliedExams = [
           "C. (-&infin;; 5].",
           "D. (2; 5]."
         ],
-        "A",
+        0,
         "Giao của (-&infin;; 2) và [-1; 5] là nửa khoảng [-1; 2)."
       ],
       [
@@ -1465,7 +1465,7 @@ const suppliedExams = [
           "C. 6.",
           "D. 4."
         ],
-        "B",
+        1,
         "X = {-1; 0; 1; 2; 3}, tổng các phần tử là (-1) + 0 + 1 + 2 + 3 = 5."
       ],
       [
@@ -1476,7 +1476,7 @@ const suppliedExams = [
           "C. 3x + y - 4 &ge; 0.",
           "D. x - 2y + 1 &le; 0."
         ],
-        "C",
+        2,
         "Thay (2; -1) vào 3x + y - 4: 3(2) + (-1) - 4 = 1 &ge; 0 (đúng)."
       ],
       [
@@ -1487,7 +1487,7 @@ const suppliedExams = [
           "C. 6.",
           "D. 10."
         ],
-        "B",
+        1,
         "Tam giác vuông OAB có OA = 4, OB = 3 &rArr; cạnh huyền AB = 5. Chu vi = 3 + 4 + 5 = 12."
       ],
       [
@@ -1498,7 +1498,7 @@ const suppliedExams = [
           "C. sin<sup>2</sup>&alpha; - cos<sup>2</sup>&alpha; = 1.",
           "D. tan&alpha; + cot&alpha; = 1."
         ],
-        "B",
+        1,
         "Hệ thức cơ bản: 1 + tan<sup>2</sup>&alpha; = 1 / cos<sup>2</sup>&alpha;."
       ],
       [
@@ -1509,7 +1509,7 @@ const suppliedExams = [
           "C. 4/3.",
           "D. 5/3."
         ],
-        "B",
+        1,
         "P = (sin<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha;) + 2cos<sup>2</sup>&alpha; = 1 + 2(1/9) = 11/9."
       ],
       [
@@ -1520,7 +1520,7 @@ const suppliedExams = [
           "C. 90&deg;.",
           "D. 120&deg;."
         ],
-        "B",
+        1,
         "Ta có a<sup>2</sup> + b<sup>2</sup> = 36 + 108 = 144 = c<sup>2</sup> nên tam giác vuông tại C. Suy ra sinB = b/c = &radic;3/2 &rArr; B = 60&deg;."
       ],
       [
@@ -1531,7 +1531,7 @@ const suppliedExams = [
           "C. 10&radic;2.",
           "D. 20."
         ],
-        "B",
+        1,
         "R = a / (2sin45&deg;) = 10&radic;2 / &radic;2 = 10."
       ],
       [
@@ -1542,7 +1542,7 @@ const suppliedExams = [
           "C. 60&deg;.",
           "D. 75&deg;."
         ],
-        "C",
+        2,
         "sinC = 2S / (BC.AC) = 30&radic;3 / 60 = &radic;3/2. Vì C nhọn nên C = 60&deg;."
       ],
       [
@@ -1553,7 +1553,7 @@ const suppliedExams = [
           "C. 12.",
           "D. 11,5."
         ],
-        "A",
+        0,
         "Tam giác vuông cạnh 9, 12, 15 có R = 15/2 = 7,5 và r = (9 + 12 - 15)/2 = 3 &rArr; R + r = 10,5."
       ]
     ],
@@ -1563,22 +1563,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Tập hợp A &cap; B = [2; 5].",
-            "Đúng",
+            true,
             "Giao của (-3; 5] và [2; +&infin;) là đoạn [2; 5]."
           ],
           [
             "b) Tập hợp A \\ B = (-3; 2].",
-            "Sai",
+            false,
             "Vì 2 &isin; B nên 2 &notin; A \\ B, do đó A \\ B = (-3; 2)."
           ],
           [
             "c) Tập hợp C<sub><b>R</b></sub>B = (-&infin;; 2).",
-            "Đúng",
+            true,
             "Phần bù của [2; +&infin;) trong <b>R</b> là (-&infin;; 2)."
           ],
           [
             "d) Có tất cả 4 số nguyên thuộc tập hợp A &cap; B.",
-            "Đúng",
+            true,
             "Đoạn [2; 5] có 4 số nguyên là 2, 3, 4, 5."
           ]
         ]
@@ -1588,22 +1588,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Độ dài cạnh BC bằng 14.",
-            "Đúng",
+            true,
             "BC<sup>2</sup> = 10<sup>2</sup> + 16<sup>2</sup> - 2.10.16.cos60&deg; = 100 + 256 - 160 = 196 &rArr; BC = 14."
           ],
           [
             "b) Diện tích của tam giác ABC bằng 40&radic;3.",
-            "Đúng",
+            true,
             "S = 1/2 . 10 . 16 . sin60&deg; = 40&radic;3."
           ],
           [
             "c) Bán kính đường tròn nội tiếp r của tam giác ABC bằng 2&radic;3.",
-            "Đúng",
+            true,
             "Nửa chu vi p = (10 + 16 + 14)/2 = 20 &rArr; r = S / p = 40&radic;3 / 20 = 2&radic;3."
           ],
           [
             "d) Góc B của tam giác ABC là góc tù.",
-            "Sai",
+            false,
             "Vì AC = 16 là cạnh lớn nhất nên góc B đối diện có cosB = (10<sup>2</sup> + 14<sup>2</sup> - 16<sup>2</sup>)/(2.10.14) = 40/280 = 1/7 &gt; 0, nên góc B là góc nhọn."
           ]
         ]
@@ -1667,7 +1667,7 @@ const suppliedExams = [
           "C. P &rArr; Q sai, Q &rArr; P đúng.",
           "D. P và Q không tương đương."
         ],
-        "B",
+        1,
         "Tam giác đều khi và chỉ khi tam giác cân và có 1 góc 60&deg;, nên P &hArr; Q đúng."
       ],
       [
@@ -1678,7 +1678,7 @@ const suppliedExams = [
           "C. {1; 4}.",
           "D. {-2; 2}."
         ],
-        "B",
+        1,
         "Phương trình có nghiệm x = 1, x = 2, x = -2. Vì x &isin; <b>N</b> nên A = {1; 2}."
       ],
       [
@@ -1689,7 +1689,7 @@ const suppliedExams = [
           "C. (-5; 0].",
           "D. [3; 7)."
         ],
-        "B",
+        1,
         "Hợp của (-5; 3) và (0; 7) là khoảng (-5; 7)."
       ],
       [
@@ -1700,7 +1700,7 @@ const suppliedExams = [
           "C. (-2; 5).",
           "D. (-&infin;; -2) &cap; (5; +&infin;)."
         ],
-        "A",
+        0,
         "Phần bù của đoạn [-2; 5] trong <b>R</b> là (-&infin;; -2) &cup; (5; +&infin;)."
       ],
       [
@@ -1711,7 +1711,7 @@ const suppliedExams = [
           "C. (-2; 0) và (0; -6).",
           "D. (3; 0) và (0; 1)."
         ],
-        "A",
+        0,
         "Đường thẳng 3x + y = 6 cắt Ox tại (2; 0) và cắt Oy tại (0; 6)."
       ],
       [
@@ -1722,7 +1722,7 @@ const suppliedExams = [
           "C. (2; 3).",
           "D. (5; 1)."
         ],
-        "B",
+        1,
         "Thay (3; 1): 3 - 1 = 2 &ge; 0; 3 + 2(1) = 5 &le; 6; 1 &ge; 0 (thỏa mãn)."
       ],
       [
@@ -1733,7 +1733,7 @@ const suppliedExams = [
           "C. 0.",
           "D. -1."
         ],
-        "C",
+        2,
         "Vì cos0&deg; + cos180&deg; = 1 + (-1) = 0 và cos60&deg; + cos120&deg; = 1/2 + (-1/2) = 0 nên M = 0."
       ],
       [
@@ -1744,7 +1744,7 @@ const suppliedExams = [
           "C. 25.",
           "D. 20 + 10&radic;3."
         ],
-        "B",
+        1,
         "Tam giác cân có 1 góc 60&deg; là tam giác đều cạnh 10, nên chu vi bằng 30."
       ],
       [
@@ -1755,7 +1755,7 @@ const suppliedExams = [
           "C. 15.",
           "D. 4,5."
         ],
-        "A",
+        0,
         "Tam giác vuông tại A (9<sup>2</sup> + 12<sup>2</sup> = 15<sup>2</sup>) nên R = BC / 2 = 7,5."
       ],
       [
@@ -1766,7 +1766,7 @@ const suppliedExams = [
           "C. &radic;2/2.",
           "D. 1."
         ],
-        "A",
+        0,
         "sinC = 2S / (ab) = 60 / 120 = 1/2."
       ],
       [
@@ -1777,7 +1777,7 @@ const suppliedExams = [
           "C. 4.",
           "D. 5."
         ],
-        "B",
+        1,
         "Tam giác vuông (7<sup>2</sup> + 24<sup>2</sup> = 25<sup>2</sup>) có r = (7 + 24 - 25)/2 = 3."
       ],
       [
@@ -1788,7 +1788,7 @@ const suppliedExams = [
           "C. &radic;34.",
           "D. 8."
         ],
-        "A",
+        0,
         "AC<sup>2</sup> = 3<sup>2</sup> + 5<sup>2</sup> - 2.3.5.cos120&deg; = 9 + 25 + 15 = 49 &rArr; AC = 7."
       ]
     ],
@@ -1798,22 +1798,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Điều kiện về diện tích đất canh tác là x + y &le; 7 (với x &ge; 0, y &ge; 0).",
-            "Đúng",
+            true,
             "Tổng diện tích trồng sắn và ngô không vượt quá 7 ha."
           ],
           [
             "b) Bất phương trình biểu thị ràng buộc về số ngày công là 3x + 2y &le; 18.",
-            "Sai",
+            false,
             "Số ngày công: 20x + 30y &le; 180 &hArr; 2x + 3y &le; 18."
           ],
           [
             "c) Đỉnh giao điểm của hai đường thẳng x + y = 7 và 2x + 3y = 18 là B(3; 4).",
-            "Đúng",
+            true,
             "Giải hệ {x + y = 7 ; 2x + 3y = 18} được x = 3, y = 4."
           ],
           [
             "d) Lợi nhuận tối đa mà ông An có thể thu được là 250 triệu đồng.",
-            "Đúng",
+            true,
             "Hàm lãi L = 30x + 40y (triệu đồng). Tại các đỉnh (0; 0), (7; 0), (3; 4), (0; 6), ta có L(7; 0) = 210; L(0; 6) = 240; L(3; 4) = 30(3) + 40(4) = 250 triệu đồng."
           ]
         ]
@@ -1823,22 +1823,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Giá trị cosB bằng -1/7.",
-            "Sai",
+            false,
             "cosB = (a<sup>2</sup> + c<sup>2</sup> - b<sup>2</sup>)/(2ac) = (196 + 100 - 256)/(2.14.10) = 40/280 = 1/7."
           ],
           [
             "b) Số đo góc A của tam giác ABC bằng 60&deg;.",
-            "Đúng",
+            true,
             "cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>)/(2bc) = (256 + 100 - 196)/(2.16.10) = 160/320 = 1/2 &rArr; A = 60&deg;."
           ],
           [
             "c) Diện tích của tam giác ABC bằng 40&radic;3.",
-            "Đúng",
+            true,
             "S = 1/2 . b . c . sinA = 1/2 . 16 . 10 . sin60&deg; = 40&radic;3."
           ],
           [
             "d) Bán kính đường tròn ngoại tiếp tam giác ABC là R = 14&radic;3 / 3.",
-            "Đúng",
+            true,
             "R = a / (2sinA) = 14 / &radic;3 = 14&radic;3 / 3."
           ]
         ]
@@ -1902,7 +1902,7 @@ const suppliedExams = [
           "C. Có ít nhất một học sinh lớp 10 thích học môn Toán.",
           "D. Không có học sinh lớp 10 nào thích học môn Toán."
         ],
-        "B",
+        1,
         "Phủ định của \"Mọi... đều thích\" là \"Có ít nhất một... không thích\"."
       ],
       [
@@ -1913,7 +1913,7 @@ const suppliedExams = [
           "C. [3; +&infin;).",
           "D. (3; +&infin;)."
         ],
-        "B",
+        1,
         "{x &isin; <b>R</b> | x &le; 3} = (-&infin;; 3]."
       ],
       [
@@ -1924,7 +1924,7 @@ const suppliedExams = [
           "C. [2; 6].",
           "D. [0; 2]."
         ],
-        "B",
+        1,
         "Giao của [0; 6] và (2; 8) là nửa khoảng (2; 6]."
       ],
       [
@@ -1935,7 +1935,7 @@ const suppliedExams = [
           "C. 3.",
           "D. 9."
         ],
-        "B",
+        1,
         "B \\ A = {2; 4; 6} có 3 phần tử nên có 2<sup>3</sup> = 8 tập hợp X thỏa mãn."
       ],
       [
@@ -1946,7 +1946,7 @@ const suppliedExams = [
           "C. (0; 3).",
           "D. (-1; 2)."
         ],
-        "B",
+        1,
         "Thay (0; 1) vào vế trái: 5(0) - 2(1) + 3 = 1 &ge; 0 (thỏa mãn). Các điểm ở phương án A, C, D đều cho giá trị âm."
       ],
       [
@@ -1957,7 +1957,7 @@ const suppliedExams = [
           "C. 9.",
           "D. 10."
         ],
-        "C",
+        2,
         "Với x = 0: y &isin; {0,1,2,3,4} (5 điểm); với x = 1: y &isin; {0,1,2} (3 điểm); với x = 2: y = 0 (1 điểm). Tổng = 5 + 3 + 1 = 9 điểm."
       ],
       [
@@ -1968,7 +1968,7 @@ const suppliedExams = [
           "C. 9.",
           "D. 11."
         ],
-        "B",
+        1,
         "cos<sup>2</sup>&alpha; = 1 - sin<sup>2</sup>&alpha; = 8/9 &rArr; P = 9(8/9) + 2 = 10."
       ],
       [
@@ -1979,7 +1979,7 @@ const suppliedExams = [
           "C. cosA = (b<sup>2</sup> + c<sup>2</sup> + a<sup>2</sup>) / (2bc).",
           "D. cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (bc)."
         ],
-        "A",
+        0,
         "Từ định lí côsin a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA suy ra cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>)/(2bc)."
       ],
       [
@@ -1990,7 +1990,7 @@ const suppliedExams = [
           "C. 20&radic;3.",
           "D. 10."
         ],
-        "A",
+        0,
         "S = 1/2 . 8 . 10 . sin30&deg; = 20."
       ],
       [
@@ -2001,7 +2001,7 @@ const suppliedExams = [
           "C. 8&radic;3.",
           "D. 6&radic;3."
         ],
-        "B",
+        1,
         "BC = 2R.sinA = 2 . 4&radic;3 . (&radic;3/2) = 12."
       ],
       [
@@ -2012,7 +2012,7 @@ const suppliedExams = [
           "C. 4&radic;2.",
           "D. 8&radic;2."
         ],
-        "B",
+        1,
         "S = 1/2 . AB . AC = 1/2 . 4 . 4 = 8."
       ],
       [
@@ -2023,7 +2023,7 @@ const suppliedExams = [
           "C. 3.",
           "D. 4,8."
         ],
-        "A",
+        0,
         "Tam giác vuông tại C có h<sub>c</sub> = a.b / c = (3.4) / 5 = 2,4."
       ]
     ],
@@ -2033,22 +2033,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Tập hợp A &cap; B = (1; 3].",
-            "Đúng",
+            true,
             "Giao của [-4; 3] và (1; 6] là (1; 3]."
           ],
           [
             "b) Tập hợp A \\ B = [-4; 1].",
-            "Đúng",
+            true,
             "Vì 1 &notin; B nên 1 &isin; A \\ B, do đó A \\ B = [-4; 1]."
           ],
           [
             "c) Tập hợp B \\ A = [3; 6].",
-            "Sai",
+            false,
             "Vì 3 &isin; A nên 3 &notin; B \\ A, do đó B \\ A = (3; 6]."
           ],
           [
             "d) Tập hợp (A &cup; B) &cap; <b>N</b> có 7 phần tử.",
-            "Đúng",
+            true,
             "A &cup; B = [-4; 6], giao với <b>N</b> là {0; 1; 2; 3; 4; 5; 6} gồm 7 phần tử."
           ]
         ]
@@ -2058,22 +2058,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Độ dài cạnh BC bằng 13.",
-            "Đúng",
+            true,
             "BC<sup>2</sup> = 7<sup>2</sup> + 8<sup>2</sup> - 2.7.8.cos120&deg; = 49 + 64 + 56 = 169 &rArr; BC = 13."
           ],
           [
             "b) Diện tích của tam giác ABC bằng 14&radic;3.",
-            "Đúng",
+            true,
             "S = 1/2 . 7 . 8 . sin120&deg; = 14&radic;3."
           ],
           [
             "c) Chu vi của tam giác ABC bằng 28.",
-            "Đúng",
+            true,
             "Chu vi = 7 + 8 + 13 = 28."
           ],
           [
             "d) Bán kính đường tròn nội tiếp r của tam giác ABC bằng 2&radic;3.",
-            "Sai",
+            false,
             "Nửa chu vi p = 14 &rArr; r = S / p = 14&radic;3 / 14 = &radic;3."
           ]
         ]
@@ -2137,7 +2137,7 @@ const suppliedExams = [
           "C. P không có tính đúng sai.",
           "D. Phủ định của P là \"&forall;x &isin; <b>R</b>, x<sup>2</sup> - 2x + 2 &le; 0\"."
         ],
-        "B",
+        1,
         "Vì x<sup>2</sup> - 2x + 2 = (x - 1)<sup>2</sup> + 1 &ge; 1 &gt; 0 với mọi x &isin; <b>R</b> nên P là mệnh đề đúng."
       ],
       [
@@ -2148,7 +2148,7 @@ const suppliedExams = [
           "C. Nửa khoảng [-3; 2).",
           "D. Tập hợp {-3; 2}."
         ],
-        "B",
+        1,
         "{x &isin; <b>R</b> | -3 &le; x &le; 2} là đoạn [-3; 2]."
       ],
       [
@@ -2159,7 +2159,7 @@ const suppliedExams = [
           "C. {-2; 0; 2; 4; 8}.",
           "D. {8}."
         ],
-        "C",
+        2,
         "Hợp của A và B gồm tất cả các phần tử thuộc A hoặc thuộc B: {-2; 0; 2; 4; 8}."
       ],
       [
@@ -2170,7 +2170,7 @@ const suppliedExams = [
           "C. (-&infin;; +&infin;).",
           "D. &empty;."
         ],
-        "A",
+        0,
         "Giao của (-&infin;; 4) và [1; +&infin;) là nửa khoảng [1; 4)."
       ],
       [
@@ -2181,7 +2181,7 @@ const suppliedExams = [
           "C. (1; 2).",
           "D. (2; 1)."
         ],
-        "B",
+        1,
         "Thay (3; 0) vào phương trình bờ 2x + 3y - 6 = 0: 2(3) + 0 - 6 = 0 (đúng)."
       ],
       [
@@ -2192,7 +2192,7 @@ const suppliedExams = [
           "C. (4; 0).",
           "D. (1; 4)."
         ],
-        "B",
+        1,
         "Thay (2; 2): 2 - 2 = 0 &le; 2; 2 + 2(2) = 6 &ge; 4; 2 &le; 3 (thỏa mãn cả 3 BPT)."
       ],
       [
@@ -2203,7 +2203,7 @@ const suppliedExams = [
           "C. 2sin<sup>2</sup>40&deg; - cos<sup>2</sup>40&deg;.",
           "D. sin<sup>2</sup>40&deg;."
         ],
-        "C",
+        2,
         "Vì sin140&deg; = sin40&deg; nên T = 2sin<sup>2</sup>40&deg; - cos<sup>2</sup>40&deg;."
       ],
       [
@@ -2214,7 +2214,7 @@ const suppliedExams = [
           "C. 2&radic;37.",
           "D. 14."
         ],
-        "A",
+        0,
         "c<sup>2</sup> = 6<sup>2</sup> + 8<sup>2</sup> - 2.6.8.cos60&deg; = 36 + 64 - 48 = 52 &rArr; c = 2&radic;13."
       ],
       [
@@ -2225,7 +2225,7 @@ const suppliedExams = [
           "C. 10.",
           "D. 6."
         ],
-        "B",
+        1,
         "h<sub>a</sub> = 2S / a = 60 / 12 = 5."
       ],
       [
@@ -2236,7 +2236,7 @@ const suppliedExams = [
           "C. 8&radic;3.",
           "D. 16."
         ],
-        "A",
+        0,
         "Theo định lí sin: b = a.sinB / sinA = 8 . (&radic;2/2) / (1/2) = 8&radic;2."
       ],
       [
@@ -2247,7 +2247,7 @@ const suppliedExams = [
           "C. 96.",
           "D. 72."
         ],
-        "A",
+        0,
         "Nửa chu vi p = (10 + 17 + 21)/2 = 24. S = &radic;(24.(24-10).(24-17).(24-21)) = &radic;(24.14.7.3) = 84."
       ],
       [
@@ -2258,7 +2258,7 @@ const suppliedExams = [
           "C. 3.",
           "D. 4,5."
         ],
-        "A",
+        0,
         "r = S / p = 84 / 24 = 3,5."
       ]
     ],
@@ -2268,22 +2268,22 @@ const suppliedExams = [
         "items": [
           [
             "a) A &cap; B = (1; 6).",
-            "Đúng",
+            true,
             "Giao của [-2; 6) và (1; 8] là khoảng (1; 6)."
           ],
           [
             "b) A &cup; B = [-2; 8].",
-            "Đúng",
+            true,
             "Hợp của hai tập hợp là đoạn [-2; 8]."
           ],
           [
             "c) A \\ B = [-2; 1).",
-            "Sai",
+            false,
             "Vì 1 &notin; B và 1 &isin; A nên 1 &isin; A \\ B, do đó A \\ B = [-2; 1]."
           ],
           [
             "d) Có đúng 4 số nguyên thuộc tập hợp A &cap; B.",
-            "Đúng",
+            true,
             "Khoảng (1; 6) có 4 số nguyên là 2, 3, 4, 5."
           ]
         ]
@@ -2293,22 +2293,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Nửa chu vi của tam giác ABC bằng 21.",
-            "Đúng",
+            true,
             "p = (15 + 13 + 14)/2 = 21."
           ],
           [
             "b) Diện tích của tam giác ABC bằng 84.",
-            "Đúng",
+            true,
             "S = &radic;(21.6.8.7) = 84."
           ],
           [
             "c) Độ dài đường cao AH kẻ từ A xuống BC bằng 12.",
-            "Sai",
+            false,
             "AH = 2S / BC = 168 / 15 = 11,2."
           ],
           [
             "d) Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 65/8.",
-            "Đúng",
+            true,
             "R = abc / (4S) = (15.13.14) / (4.84) = 65/8 = 8,125."
           ]
         ]
@@ -2372,7 +2372,7 @@ const suppliedExams = [
           "C. Nghiên cứu về cảm ứng điện từ.",
           "D. Nghiên cứu về thuyết tương đối."
         ],
-        "B",
+        1,
         "Nghiên cứu về nhiệt động lực học dẫn đến sự ra đời của máy hơi nước (James Watt), mở đầu cuộc cách mạng công nghiệp lần thứ nhất."
       ],
       [
@@ -2383,7 +2383,7 @@ const suppliedExams = [
           "C. Đọc kĩ nội quy và thực hiện theo hướng dẫn an toàn.",
           "D. Mang đồ ăn và nước uống vào bàn thí nghiệm điện."
         ],
-        "C",
+        2,
         "Nguyên tắc bắt buộc là đọc kĩ nội quy và làm theo hướng dẫn của giáo viên."
       ],
       [
@@ -2394,7 +2394,7 @@ const suppliedExams = [
           "C. &delta;A = <span style=\"text-decoration:overline;\">A</span> &plusmn; &Delta;A.",
           "D. &delta;A = &Delta;A . <span style=\"text-decoration:overline;\">A</span>."
         ],
-        "A",
+        0,
         "Sai số tỉ đối là tỉ số phần trăm giữa sai số tuyệt đối và giá trị trung bình: &delta;A = (&Delta;A / <span style=\"text-decoration:overline;\">A</span>).100%."
       ],
       [
@@ -2405,7 +2405,7 @@ const suppliedExams = [
           "C. Độ dịch chuyển.",
           "D. Thời gian chuyển động."
         ],
-        "C",
+        2,
         "Độ dịch chuyển là đại lượng vectơ nối vị trí đầu và vị trí cuối của vật."
       ],
       [
@@ -2416,7 +2416,7 @@ const suppliedExams = [
           "C. Vật chuyển động thẳng và đổi chiều 1 lần.",
           "D. Vật dao động qua lại quanh một vị trí."
         ],
-        "B",
+        1,
         "Khi vật chuyển động thẳng và không đổi chiều thì s = |d|."
       ],
       [
@@ -2427,7 +2427,7 @@ const suppliedExams = [
           "C. Một đường thẳng xiên góc.",
           "D. Một đường hypebol."
         ],
-        "C",
+        2,
         "Phương trình d = d<sub>0</sub> + v.t có đồ thị là đường thẳng xiên góc trong hệ trục (d – t)."
       ],
       [
@@ -2438,7 +2438,7 @@ const suppliedExams = [
           "C. <strong>v<sub>13</sub></strong> = <strong>v<sub>12</sub></strong> - <strong>v<sub>23</sub></strong>.",
           "D. v<sub>13</sub> = v<sub>12</sub> . v<sub>23</sub>."
         ],
-        "A",
+        0,
         "Theo công thức cộng vận tốc: vectơ v<sub>13</sub> = vectơ v<sub>12</sub> + vectơ v<sub>23</sub>."
       ],
       [
@@ -2449,7 +2449,7 @@ const suppliedExams = [
           "C. Độ dịch chuyển.",
           "D. Gia tốc."
         ],
-        "D",
+        3,
         "Gia tốc a = &Delta;v / &Delta;t đặc trưng cho độ biến thiên nhanh hay chậm của vận tốc."
       ],
       [
@@ -2460,7 +2460,7 @@ const suppliedExams = [
           "C. m/s<sup>2</sup>.",
           "D. m.s<sup>2</sup>."
         ],
-        "C",
+        2,
         "Trong hệ SI, vận tốc đo bằng m/s, thời gian đo bằng s nên gia tốc có đơn vị m/s<sup>2</sup>."
       ],
       [
@@ -2471,7 +2471,7 @@ const suppliedExams = [
           "C. v - v<sub>0</sub> = 2ad.",
           "D. v<sub>0</sub><sup>2</sup> - v<sup>2</sup> = 2ad."
         ],
-        "A",
+        0,
         "Công thức liên hệ giữa vận tốc, gia tốc và độ dịch chuyển là v<sup>2</sup> - v<sub>0</sub><sup>2</sup> = 2ad."
       ],
       [
@@ -2482,7 +2482,7 @@ const suppliedExams = [
           "C. Một hạt bụi lơ lửng.",
           "D. Một chiếc lông chim đang bay."
         ],
-        "B",
+        1,
         "Viên bi sắt nhỏ chịu lực cản không khí rất nhỏ so với trọng lực nên coi là rơi tự do."
       ],
       [
@@ -2493,7 +2493,7 @@ const suppliedExams = [
           "C. 30 m.",
           "D. 45 m."
         ],
-        "C",
+        2,
         "L = v<sub>0</sub>.&radic;(2h/g) = 15 . &radic;(2.20/10) = 15 . 2 = 30 m."
       ]
     ],
@@ -2503,22 +2503,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Trong 50 s đầu tiên bơi từ A đến B, quãng đường và độ lớn độ dịch chuyển của người đó đều bằng 100 m.",
-            "Đúng",
+            true,
             "Bơi thẳng một chiều từ A đến B nên s<sub>1</sub> = d<sub>1</sub> = 100 m."
           ],
           [
             "b) Trong cả quá trình bơi đi và về (tổng thời gian 110 s), tổng quãng đường người đó bơi được là 0 m.",
-            "Sai",
+            false,
             "Tổng quãng đường bơi đi và về là s = 100 + 100 = 200 m."
           ],
           [
             "c) Độ dịch chuyển của vận động viên sau khi quay trở về đúng vị trí xuất phát A bằng 0 m.",
-            "Đúng",
+            true,
             "Điểm cuối trùng với điểm đầu A nên độ dịch chuyển d = 0 m."
           ],
           [
             "d) Tốc độ trung bình của vận động viên trong toàn bộ quá trình bơi đi và về xấp xỉ bằng 1,82 m/s.",
-            "Đúng",
+            true,
             "v<sub>tb</sub> = s / t = 200 / (50 + 60) = 200 / 110 &approx; 1,82 m/s."
           ]
         ]
@@ -2528,22 +2528,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Chuyển động rơi tự do của vật là chuyển động thẳng nhanh dần đều với gia tốc bằng 10 m/s<sup>2</sup>.",
-            "Đúng",
+            true,
             "Rơi tự do có phương thẳng đứng, chiều từ trên xuống, gia tốc g = 10 m/s<sup>2</sup> không đổi."
           ],
           [
             "b) Quãng đường vật rơi được sau 3 giây đầu tiên kể từ lúc thả là 30 m.",
-            "Sai",
+            false,
             "s = 1/2 . g . t<sup>2</sup> = 0,5 . 10 . 3<sup>2</sup> = 45 m."
           ],
           [
             "c) Thời gian từ lúc thả vật cho đến khi vật chạm đất là 6 giây.",
-            "Đúng",
+            true,
             "t = &radic;(2h / g) = &radic;(360 / 10) = 6 s."
           ],
           [
             "d) Tốc độ của vật ngay trước khi chạm đất bằng 60 m/s.",
-            "Đúng",
+            true,
             "v = g . t = 10 . 6 = 60 m/s."
           ]
         ]
@@ -2602,7 +2602,7 @@ const suppliedExams = [
           "C. Sự sinh trưởng và phát triển của sinh vật.",
           "D. Cấu trúc địa chất của vỏ Trái Đất."
         ],
-        "A",
+        0,
         "Vật lí nghiên cứu các dạng vận động của vật chất (chất, trường) và năng lượng."
       ],
       [
@@ -2613,7 +2613,7 @@ const suppliedExams = [
           "C. Phép đo không bao giờ có sai số.",
           "D. Phép đo chỉ dùng thước kẻ."
         ],
-        "A",
+        0,
         "Phép đo trực tiếp đọc kết quả trực tiếp trên dụng cụ đo (như dùng cân đo khối lượng, dùng đồng hồ đo thời gian)."
       ],
       [
@@ -2624,7 +2624,7 @@ const suppliedExams = [
           "C. 120,2 cm.",
           "D. 0,17%."
         ],
-        "B",
+        1,
         "Trong cách ghi A = <span style=\"text-decoration:overline;\">A</span> &plusmn; &Delta;A, giá trị &Delta;A = 0,2 cm là sai số tuyệt đối."
       ],
       [
@@ -2635,7 +2635,7 @@ const suppliedExams = [
           "C. Chỉ cần đồng hồ bấm giây.",
           "D. Quỹ đạo và vận tốc của vật."
         ],
-        "A",
+        0,
         "Hệ quy chiếu = Hệ tọa độ gắn với vật làm mốc + Mốc thời gian và đồng hồ đo thời gian."
       ],
       [
@@ -2646,7 +2646,7 @@ const suppliedExams = [
           "C. Kim báo nhiên liệu.",
           "D. La bàn trên xe."
         ],
-        "B",
+        1,
         "Tốc kế trên xe máy, ô tô chỉ tốc độ tức thời tại thời điểm quan sát."
       ],
       [
@@ -2657,7 +2657,7 @@ const suppliedExams = [
           "C. 15 km/h.",
           "D. 5 km/h."
         ],
-        "B",
+        1,
         "Chuyển động xuôi dòng (cùng chiều): v<sub>13</sub> = v<sub>12</sub> + v<sub>23</sub> = 15 + 3 = 18 km/h."
       ],
       [
@@ -2668,7 +2668,7 @@ const suppliedExams = [
           "C. a . v = 0.",
           "D. a = v."
         ],
-        "B",
+        1,
         "Chuyển động thẳng chậm dần đều có vectơ gia tốc ngược chiều vectơ vận tốc nên a.v &lt; 0."
       ],
       [
@@ -2679,7 +2679,7 @@ const suppliedExams = [
           "C. Đường tròn.",
           "D. Đường parabol."
         ],
-        "B",
+        1,
         "Vì v = v<sub>0</sub> + a.t là hàm bậc nhất theo t nên đồ thị (v – t) là đường thẳng xiên góc."
       ],
       [
@@ -2690,7 +2690,7 @@ const suppliedExams = [
           "C. d = 1/2 . at.",
           "D. d = v<sub>0</sub>t - at<sup>2</sup>."
         ],
-        "A",
+        0,
         "Phương trình độ dịch chuyển: d = v<sub>0</sub>t + 1/2 . a . t<sup>2</sup>."
       ],
       [
@@ -2701,7 +2701,7 @@ const suppliedExams = [
           "C. Đều rơi với cùng một gia tốc g.",
           "D. Rơi với vận tốc không đổi."
         ],
-        "C",
+        2,
         "Mọi vật rơi tự do tại cùng một nơi đều có cùng gia tốc rơi tự do g."
       ],
       [
@@ -2712,7 +2712,7 @@ const suppliedExams = [
           "C. v = &radic;(gh).",
           "D. v = gh / 2."
         ],
-        "A",
+        0,
         "Từ v<sup>2</sup> = 2gh suy ra v = &radic;(2gh)."
       ],
       [
@@ -2723,7 +2723,7 @@ const suppliedExams = [
           "C. Chuyển động thẳng nhanh dần đều.",
           "D. Chuyển động thẳng chậm dần đều."
         ],
-        "B",
+        1,
         "Theo phương ngang không có lực tác dụng nên a<sub>x</sub> = 0, vật chuyển động thẳng đều với v<sub>x</sub> = v<sub>0</sub>."
       ]
     ],
@@ -2733,22 +2733,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Vị trí ban đầu của chất điểm lúc t = 0 s cách gốc tọa độ O một đoạn 10 m.",
-            "Đúng",
+            true,
             "Thay t = 0 vào phương trình: x<sub>0</sub> = 10 m."
           ],
           [
             "b) Chất điểm chuyển động thẳng nhanh dần đều với gia tốc 4 m/s<sup>2</sup>.",
-            "Sai",
+            false,
             "Phương trình bậc nhất x = x<sub>0</sub> + v.t biểu thị chuyển động thẳng đều với vận tốc v = 4 m/s (gia tốc a = 0)."
           ],
           [
             "c) Độ dịch chuyển của chất điểm sau 5 giây chuyển động là 20 m.",
-            "Đúng",
+            true,
             "d = v.t = 4 . 5 = 20 m."
           ],
           [
             "d) Tọa độ của chất điểm tại thời điểm t = 5 s là x = 20 m.",
-            "Sai",
+            false,
             "x = 10 + 4.5 = 30 m."
           ]
         ]
@@ -2758,22 +2758,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Quỹ đạo chuyển động của gói hàng đối với mặt đất là một nhánh parabol.",
-            "Đúng",
+            true,
             "Gói hàng chuyển động ném ngang với vận tốc đầu v<sub>0</sub> = 50 m/s nên quỹ đạo là nhánh parabol."
           ],
           [
             "b) Thời gian từ lúc thả gói hàng đến khi chạm đất là 4 giây.",
-            "Đúng",
+            true,
             "t = &radic;(2h / g) = &radic;(2.80 / 10) = &radic;16 = 4 s."
           ],
           [
             "c) Khoảng cách theo phương ngang từ vị trí thả đến điểm chạm đất (tầm xa) là 200 m.",
-            "Đúng",
+            true,
             "L = v<sub>0</sub> . t = 50 . 4 = 200 m."
           ],
           [
             "d) Tốc độ của gói hàng ngay khi chạm đất bằng 90 m/s.",
-            "Sai",
+            false,
             "Khi chạm đất: v<sub>x</sub> = 50 m/s, v<sub>y</sub> = g.t = 40 m/s &rArr; v = &radic;(50<sup>2</sup> + 40<sup>2</sup>) = 10&radic;41 &approx; 64,03 m/s."
           ]
         ]
@@ -2832,7 +2832,7 @@ const suppliedExams = [
           "C. Nghiên cứu về thuyết tương đối.",
           "D. Nghiên cứu về cảm ứng điện từ."
         ],
-        "D",
+        3,
         "Hiện tượng cảm ứng điện từ (Faraday) là cơ sở chế tạo máy phát điện và động cơ điện, mở đầu cuộc cách mạng công nghiệp lần thứ hai."
       ],
       [
@@ -2843,7 +2843,7 @@ const suppliedExams = [
           "C. Biển báo bắt buộc thực hiện.",
           "D. Biển chỉ dẫn thoát hiểm."
         ],
-        "B",
+        1,
         "Biển hình tam giác nền vàng, viền đen là biển cảnh báo nguy hiểm (điện áp cao, chất dễ cháy, tia laser...)."
       ],
       [
@@ -2854,7 +2854,7 @@ const suppliedExams = [
           "C. Không thể khắc phục hay hiệu chỉnh được.",
           "D. Thay đổi ngẫu nhiên qua từng lần đo."
         ],
-        "B",
+        1,
         "Sai số hệ thống lặp lại như nhau ở mọi lần đo (do dụng cụ chưa hiệu chỉnh điểm 0 hoặc giới hạn ĐCNN)."
       ],
       [
@@ -2865,7 +2865,7 @@ const suppliedExams = [
           "C. s = 700 m, d = 700 m.",
           "D. s = 500 m, d = 200 m."
         ],
-        "A",
+        0,
         "Quãng đường s = 500 + 200 = 700 m; độ dịch chuyển cách nhà d = 500 - 200 = 300 m."
       ],
       [
@@ -2876,7 +2876,7 @@ const suppliedExams = [
           "C. Quãng đường đi được.",
           "D. Thời gian chuyển động."
         ],
-        "B",
+        1,
         "Hệ số góc k = &Delta;d / &Delta;t = v chính là vận tốc của vật."
       ],
       [
@@ -2887,7 +2887,7 @@ const suppliedExams = [
           "C. 0 km/h.",
           "D. 25 km/h."
         ],
-        "C",
+        2,
         "Hành khách ngồi yên đối với toa tàu nên vận tốc so với toa tàu bằng 0 km/h."
       ],
       [
@@ -2898,7 +2898,7 @@ const suppliedExams = [
           "C. 8 m/s.",
           "D. 11 m/s."
         ],
-        "B",
+        1,
         "v = v<sub>0</sub> + a.t = 2 + 0,5 . 6 = 5 m/s."
       ],
       [
@@ -2909,7 +2909,7 @@ const suppliedExams = [
           "C. Tốc độ tức thời.",
           "D. Lực tác dụng lên vật."
         ],
-        "B",
+        1,
         "Diện tích dưới đồ thị (v – t) bằng độ dịch chuyển của vật trong khoảng thời gian đó."
       ],
       [
@@ -2920,7 +2920,7 @@ const suppliedExams = [
           "C. Thể tích của vật rơi.",
           "D. Nhiệt độ của vật rơi."
         ],
-        "B",
+        1,
         "Gia tốc rơi tự do g phụ thuộc vào vĩ độ địa lí và độ cao nơi vật rơi."
       ],
       [
@@ -2931,7 +2931,7 @@ const suppliedExams = [
           "C. 40 m.",
           "D. 5 m."
         ],
-        "B",
+        1,
         "s = 1/2 . g . t<sup>2</sup> = 0,5 . 10 . 2<sup>2</sup> = 20 m."
       ],
       [
@@ -2942,7 +2942,7 @@ const suppliedExams = [
           "C. Không thay đổi.",
           "D. Tăng lên 4 lần."
         ],
-        "C",
+        2,
         "Thời gian rơi t = &radic;(2h/g) chỉ phụ thuộc vào độ cao h, không phụ thuộc vào vận tốc ném ngang v<sub>0</sub>."
       ],
       [
@@ -2953,7 +2953,7 @@ const suppliedExams = [
           "C. 60 m/s.",
           "D. 90 m/s."
         ],
-        "C",
+        2,
         "Thời gian rơi t = &radic;(2.45/10) = 3 s. Vận tốc đầu v<sub>0</sub> = L / t = 180 / 3 = 60 m/s."
       ]
     ],
@@ -2963,22 +2963,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Độ dịch chuyển của cả hai người từ A đến B là bằng nhau và có độ lớn bằng 6 km.",
-            "Đúng",
+            true,
             "Cả hai người có cùng vị trí đầu A và vị trí cuối B nên có cùng độ dịch chuyển d = AB = 6 km."
           ],
           [
             "b) Quãng đường đi được của người thứ hai là 13 km.",
-            "Đúng",
+            true,
             "Người thứ hai đi quãng đường s<sub>2</sub> = AC + CB = 5 + 8 = 13 km."
           ],
           [
             "c) Tốc độ trung bình của hai người là bằng nhau.",
-            "Sai",
+            false,
             "Cùng thời gian t nhưng s<sub>2</sub> = 13 km &gt; s<sub>1</sub> = 6 km nên tốc độ trung bình của người thứ hai lớn hơn."
           ],
           [
             "d) Vận tốc trung bình của hai người là bằng nhau.",
-            "Đúng",
+            true,
             "Vì cả hai có cùng độ dịch chuyển vectơ AB và cùng thời gian chuyển động t nên vận tốc trung bình v = d / t bằng nhau."
           ]
         ]
@@ -2988,22 +2988,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Gia tốc của ô tô là 2 m/s<sup>2</sup>.",
-            "Đúng",
+            true,
             "a = (20 - 0) / 10 = 2 m/s<sup>2</sup>."
           ],
           [
             "b) Tốc độ của ô tô tại thời điểm t = 4 s là 10 m/s.",
-            "Sai",
+            false,
             "Tại t = 4 s: v = a.t = 2 . 4 = 8 m/s."
           ],
           [
             "c) Quãng đường ô tô đi được trong 10 giây đó là 100 m.",
-            "Đúng",
+            true,
             "s = 1/2 . a . t<sup>2</sup> = 0,5 . 2 . 10<sup>2</sup> = 100 m."
           ],
           [
             "d) Quãng đường ô tô đi được trong giây thứ 10 là 19 m.",
-            "Đúng",
+            true,
             "&Delta;s<sub>10</sub> = s<sub>10</sub> - s<sub>9</sub> = 100 - 0,5.2.9<sup>2</sup> = 100 - 81 = 19 m."
           ]
         ]
@@ -3062,7 +3062,7 @@ const suppliedExams = [
           "C. Kiểm tra cách điện của dây dẫn trước khi thí nghiệm.",
           "D. Sử dụng nguồn điện áp thấp (6V - 12V) cho thí nghiệm học sinh."
         ],
-        "B",
+        1,
         "Dùng tay ướt chạm vào ổ điện 220V gây nguy cơ điện giật nguy hiểm đến tính mạng."
       ],
       [
@@ -3073,7 +3073,7 @@ const suppliedExams = [
           "C. 5.",
           "D. 6."
         ],
-        "B",
+        1,
         "Các chữ số 0 ở đầu không tính; tính từ chữ số khác 0 đầu tiên từ trái sang là 4, 0, 5, 0 (gồm 4 CSCN)."
       ],
       [
@@ -3084,7 +3084,7 @@ const suppliedExams = [
           "C. Hiệu quãng đường (AB - BC) chia cho thời gian.",
           "D. Tích quãng đường và thời gian."
         ],
-        "B",
+        1,
         "Tốc độ trung bình bằng tổng quãng đường đi được chia cho tổng thời gian."
       ],
       [
@@ -3095,7 +3095,7 @@ const suppliedExams = [
           "C. s = 10&pi; m, d = 10 m.",
           "D. s = 5&pi; m, d = 0 m."
         ],
-        "A",
+        0,
         "Sau 1 vòng tròn, vật về lại điểm xuất phát nên d = 0 m, còn quãng đường bằng chu vi đường tròn s = 2&pi;R = 10&pi; m."
       ],
       [
@@ -3106,7 +3106,7 @@ const suppliedExams = [
           "C. hải lý/giờ (knot).",
           "D. m/s<sup>2</sup>."
         ],
-        "D",
+        3,
         "m/s<sup>2</sup> là đơn vị của gia tốc."
       ],
       [
@@ -3117,7 +3117,7 @@ const suppliedExams = [
           "C. 45 km/h.",
           "D. 0 km/h."
         ],
-        "B",
+        1,
         "Khi hai xe chuyển động ngược chiều nhau, tốc độ tương đối bằng tổng hai tốc độ: 40 + 50 = 90 km/h."
       ],
       [
@@ -3128,7 +3128,7 @@ const suppliedExams = [
           "C. v = -12 + 2t (m/s).",
           "D. v = 2 - 12t (m/s)."
         ],
-        "B",
+        1,
         "Chuyển động chậm dần đều theo chiều dương có v<sub>0</sub> = 12 m/s và a = -2 m/s<sup>2</sup> &rArr; v = 12 - 2t."
       ],
       [
@@ -3139,7 +3139,7 @@ const suppliedExams = [
           "C. 4 m/s<sup>2</sup>.",
           "D. 0,5 m/s<sup>2</sup>."
         ],
-        "B",
+        1,
         "Từ s = 1/2.a.t<sup>2</sup> &rArr; a = 2s / t<sup>2</sup> = 32 / 16 = 2 m/s<sup>2</sup>."
       ],
       [
@@ -3150,7 +3150,7 @@ const suppliedExams = [
           "C. 1.",
           "D. &radic;2."
         ],
-        "C",
+        2,
         "Thời gian rơi tự do không phụ thuộc vào khối lượng nên t<sub>1</sub> = t<sub>2</sub> &rArr; t<sub>1</sub>/t<sub>2</sub> = 1."
       ],
       [
@@ -3161,7 +3161,7 @@ const suppliedExams = [
           "C. 98 m/s.",
           "D. 19,6 m/s."
         ],
-        "A",
+        0,
         "v = g.t = 9,8 . 5 = 49 m/s."
       ],
       [
@@ -3172,7 +3172,7 @@ const suppliedExams = [
           "C. Phụ thuộc vào cả v<sub>0</sub> và h.",
           "D. Phụ thuộc vào khối lượng m của vật."
         ],
-        "B",
+        1,
         "t = &radic;(2h/g) chỉ phụ thuộc vào độ cao ban đầu h."
       ],
       [
@@ -3183,7 +3183,7 @@ const suppliedExams = [
           "C. 30 m.",
           "D. 10 m."
         ],
-        "B",
+        1,
         "L = (v<sub>0</sub><sup>2</sup> . sin2&alpha;) / g = (20<sup>2</sup> . sin90&deg;) / 10 = 400 / 10 = 40 m."
       ]
     ],
@@ -3193,22 +3193,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Trong giai đoạn 1 (0 đến 4 s), ô tô chuyển động thẳng nhanh dần đều với gia tốc 3 m/s<sup>2</sup>.",
-            "Đúng",
+            true,
             "a<sub>1</sub> = (12 - 0) / 4 = 3 m/s<sup>2</sup>."
           ],
           [
             "b) Trong giai đoạn 2 (4 s đến 10 s), ô tô đứng yên.",
-            "Sai",
+            false,
             "Vận tốc giữ nguyên ở 12 m/s nghĩa là ô tô chuyển động thẳng đều với v = 12 m/s."
           ],
           [
             "c) Quãng đường ô tô đi được trong 4 giây đầu tiên là 24 m.",
-            "Đúng",
+            true,
             "s<sub>1</sub> = 1/2 . 4 . 12 = 24 m."
           ],
           [
             "d) Tổng quãng đường ô tô đi được trong cả 10 giây là 96 m.",
-            "Đúng",
+            true,
             "Quãng đường giai đoạn 2: s<sub>2</sub> = 12 . (10 - 4) = 72 m. Tổng quãng đường: s = 24 + 72 = 96 m."
           ]
         ]
@@ -3218,22 +3218,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Thời gian viên bi chuyển động trong không khí đến khi chạm sàn là 0,5 giây.",
-            "Đúng",
+            true,
             "t = &radic;(2h / g) = &radic;(2.1,25 / 10) = &radic;0,25 = 0,5 s."
           ],
           [
             "b) Tầm bay xa của viên bi trên sàn nhà tính từ chân bàn là 2 m.",
-            "Đúng",
+            true,
             "L = v<sub>0</sub> . t = 4 . 0,5 = 2 m."
           ],
           [
             "c) Thành phần vận tốc theo phương thẳng đứng ngay khi chạm sàn là v<sub>y</sub> = 4 m/s.",
-            "Sai",
+            false,
             "v<sub>y</sub> = g . t = 10 . 0,5 = 5 m/s."
           ],
           [
             "d) Độ lớn vận tốc của viên bi ngay trước khi chạm sàn là &radic;41 m/s.",
-            "Đúng",
+            true,
             "v = &radic;(v<sub>x</sub><sup>2</sup> + v<sub>y</sub><sup>2</sup>) = &radic;(4<sup>2</sup> + 5<sup>2</sup>) = &radic;41 m/s."
           ]
         ]
@@ -3292,7 +3292,7 @@ const suppliedExams = [
           "C. Chỉ dùng phương pháp quan sát tự nhiên không làm thí nghiệm.",
           "D. Phương pháp giải phẫu sinh học."
         ],
-        "A",
+        0,
         "Vật lí hiện đại kết hợp chặt chẽ phương pháp thực nghiệm và phương pháp mô hình."
       ],
       [
@@ -3303,7 +3303,7 @@ const suppliedExams = [
           "C. 0,1 mm.",
           "D. 2 mm."
         ],
-        "B",
+        1,
         "Sai số dụng cụ thường lấy bằng một nửa hoặc một độ chia nhỏ nhất (0,5 mm hoặc 1 mm)."
       ],
       [
@@ -3314,7 +3314,7 @@ const suppliedExams = [
           "C. Gia tốc trung bình.",
           "D. Độ dịch chuyển."
         ],
-        "B",
+        1,
         "60 km/h đặc trưng cho độ nhanh chậm trên cả quãng đường dài nên là tốc độ trung bình."
       ],
       [
@@ -3325,7 +3325,7 @@ const suppliedExams = [
           "C. v<sub>tb</sub> = &Delta;t / s.",
           "D. v<sub>tb</sub> = a . &Delta;t."
         ],
-        "A",
+        0,
         "Vận tốc trung bình bằng thương số giữa độ dịch chuyển và khoảng thời gian thực hiện độ dịch chuyển đó."
       ],
       [
@@ -3336,7 +3336,7 @@ const suppliedExams = [
           "C. 8 m/s và 0 m/s.",
           "D. 0 m/s và 0 m/s."
         ],
-        "B",
+        1,
         "Về đúng vạch xuất phát nên d = 0 &rArr; vận tốc trung bình = 0 m/s; tốc độ trung bình = 400 / 50 = 8 m/s."
       ],
       [
@@ -3347,7 +3347,7 @@ const suppliedExams = [
           "C. a = 0.",
           "D. Tăng đều theo thời gian."
         ],
-        "C",
+        2,
         "Chuyển động thẳng đều có vận tốc không đổi nên gia tốc a = 0."
       ],
       [
@@ -3358,7 +3358,7 @@ const suppliedExams = [
           "C. 18 m.",
           "D. 42 m."
         ],
-        "B",
+        1,
         "s = v<sub>0</sub>t + 1/2.a.t<sup>2</sup> = 10.6 + 0,5.1.6<sup>2</sup> = 60 + 18 = 78 m."
       ],
       [
@@ -3369,7 +3369,7 @@ const suppliedExams = [
           "C. Đường parabol đi qua gốc tọa độ.",
           "D. Đường thẳng cắt trục tung tại v<sub>0</sub> &gt; 0."
         ],
-        "A",
+        0,
         "Vì v = g.t nên đồ thị (v – t) là đường thẳng đi qua gốc tọa độ O(0; 0)."
       ],
       [
@@ -3380,7 +3380,7 @@ const suppliedExams = [
           "C. 4,5 s.",
           "D. 9 s."
         ],
-        "B",
+        1,
         "t = &radic;(2.45 / 10) = 3 s."
       ],
       [
@@ -3391,7 +3391,7 @@ const suppliedExams = [
           "C. Hai viên bi chạm đất cùng một lúc.",
           "D. Tầm xa của hai viên bi bằng nhau."
         ],
-        "C",
+        2,
         "Cùng độ cao h nên thời gian rơi t = &radic;(2h/g) của hai viên bi hoàn toàn bằng nhau."
       ],
       [
@@ -3402,7 +3402,7 @@ const suppliedExams = [
           "C. H = v<sub>0</sub><sup>2</sup> / (2g).",
           "D. H = (v<sub>0</sub> . sin&alpha;) / g."
         ],
-        "A",
+        0,
         "Tại đỉnh cao nhất v<sub>y</sub> = 0 &rArr; H = v<sub>0y</sub><sup>2</sup> / (2g) = (v<sub>0</sub><sup>2</sup> . sin<sup>2</sup>&alpha;) / (2g)."
       ],
       [
@@ -3413,7 +3413,7 @@ const suppliedExams = [
           "C. Thay đổi người đo liên tục không theo quy tắc.",
           "D. Bỏ qua sai số dụng cụ."
         ],
-        "B",
+        1,
         "Đo nhiều lần và tính giá trị trung bình giúp giảm sai số ngẫu nhiên."
       ]
     ],
@@ -3423,22 +3423,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Khi ca nô chạy xuôi dòng, tốc độ của ca nô so với bờ là 12 m/s.",
-            "Đúng",
+            true,
             "v<sub>xuôi</sub> = 10 + 2 = 12 m/s."
           ],
           [
             "b) Khi ca nô chạy ngược dòng, tốc độ của ca nô so với bờ là 8 m/s.",
-            "Đúng",
+            true,
             "v<sub>ngược</sub> = 10 - 2 = 8 m/s."
           ],
           [
             "c) Thời gian ca nô đi xuôi dòng quãng đường 240 m là 24 giây.",
-            "Sai",
+            false,
             "t<sub>xuôi</sub> = 240 / 12 = 20 s."
           ],
           [
             "d) Thời gian ca nô đi ngược dòng quãng đường 240 m là 30 giây.",
-            "Đúng",
+            true,
             "t<sub>ngược</sub> = 240 / 8 = 30 s."
           ]
         ]
@@ -3448,22 +3448,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Sau 4 giây kể từ lúc tắt máy, tốc độ của xe còn lại là 10 m/s.",
-            "Đúng",
+            true,
             "v = 18 - 2 . 4 = 10 m/s."
           ],
           [
             "b) Thời gian từ lúc tắt máy đến khi xe dừng hẳn là 9 giây.",
-            "Đúng",
+            true,
             "t = 18 / 2 = 9 s."
           ],
           [
             "c) Quãng đường xe đi được từ lúc tắt máy đến khi dừng hẳn là 81 m.",
-            "Đúng",
+            true,
             "s = 18<sup>2</sup> / (2 . 2) = 324 / 4 = 81 m."
           ],
           [
             "d) Quãng đường xe đi được trong 10 giây kể từ lúc tắt máy là 80 m.",
-            "Sai",
+            false,
             "Vì xe đã dừng hẳn ở t = 9 s nên sau 10 s quãng đường đi được vẫn là 81 m."
           ]
         ]
@@ -3522,7 +3522,7 @@ const suppliedExams = [
           "C. Ngắt ngay cầu dao (nguồn điện) và dùng vật cách điện tách nạn nhân ra.",
           "D. Bỏ chạy khỏi trường học."
         ],
-        "C",
+        2,
         "Phải ngắt ngay nguồn điện và dùng dụng cụ cách điện khô ráo để cứu nạn nhân."
       ],
       [
@@ -3533,7 +3533,7 @@ const suppliedExams = [
           "C. 2,25%.",
           "D. 0,75%."
         ],
-        "B",
+        1,
         "Vì S tỉ lệ với R<sup>2</sup> = R . R nên &delta;S = 2 . &delta;R = 2 . 1,5% = 3,0%."
       ],
       [
@@ -3544,7 +3544,7 @@ const suppliedExams = [
           "C. Thời gian vật dừng nghỉ trên đường.",
           "D. Tốc độ tức thời tại mỗi điểm."
         ],
-        "B",
+        1,
         "Độ dịch chuyển chỉ phụ thuộc vào vị trí đầu và vị trí cuối, không phụ thuộc hình dạng đường đi."
       ],
       [
@@ -3555,7 +3555,7 @@ const suppliedExams = [
           "C. 25 m/s.",
           "D. 30 m/s."
         ],
-        "B",
+        1,
         "72 km/h = 72 / 3,6 = 20 m/s."
       ],
       [
@@ -3566,7 +3566,7 @@ const suppliedExams = [
           "C. 5 m/s<sup>2</sup>.",
           "D. 6 m/s<sup>2</sup>."
         ],
-        "B",
+        1,
         "a = (16 - 4) / 3 = 12 / 3 = 4 m/s<sup>2</sup>."
       ],
       [
@@ -3577,7 +3577,7 @@ const suppliedExams = [
           "C. 10 m/s<sup>2</sup>.",
           "D. 2 m/s<sup>2</sup>."
         ],
-        "B",
+        1,
         "So sánh với x = x<sub>0</sub> + v<sub>0</sub>t + 1/2.a.t<sup>2</sup> &rArr; 1/2.a = -2 &rArr; a = -4 m/s<sup>2</sup>."
       ],
       [
@@ -3588,7 +3588,7 @@ const suppliedExams = [
           "C. Chỉ dưới tác dụng của trọng lực.",
           "D. Lực đàn hồi."
         ],
-        "C",
+        2,
         "Sự rơi tự do là sự rơi chỉ dưới tác dụng của trọng lực."
       ],
       [
@@ -3599,7 +3599,7 @@ const suppliedExams = [
           "C. 40 m/s.",
           "D. 100 m/s."
         ],
-        "B",
+        1,
         "v = &radic;(2gh) = &radic;(2.10.125) = &radic;2500 = 50 m/s."
       ],
       [
@@ -3610,7 +3610,7 @@ const suppliedExams = [
           "C. Phương tiếp tuyến với quỹ đạo.",
           "D. Độ lớn bằng 0."
         ],
-        "B",
+        1,
         "Bỏ qua sức cản không khí, vật ném ngang chỉ chịu trọng lực nên gia tốc luôn là vectơ g hướng thẳng đứng xuống dưới."
       ],
       [
@@ -3621,7 +3621,7 @@ const suppliedExams = [
           "C. 60&deg;.",
           "D. 75&deg;."
         ],
-        "B",
+        1,
         "L = v<sub>0</sub><sup>2</sup>.sin2&alpha; / g đạt cực đại khi sin2&alpha; = 1 &hArr; 2&alpha; = 90&deg; &hArr; &alpha; = 45&deg;."
       ],
       [
@@ -3632,7 +3632,7 @@ const suppliedExams = [
           "C. 1,5 m/s.",
           "D. 1,0 m/s."
         ],
-        "B",
+        1,
         "Cùng chiều: v = 1 + 1,5 = 2,5 m/s."
       ],
       [
@@ -3643,7 +3643,7 @@ const suppliedExams = [
           "C. Hướng về phía Đông.",
           "D. Hướng về phía Tây."
         ],
-        "B",
+        1,
         "Chuyển động chậm dần có vectơ gia tốc ngược chiều vectơ vận tốc, nên hướng về phía Nam."
       ]
     ],
@@ -3653,22 +3653,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Vận tốc ban đầu của chất điểm là v<sub>0</sub> = 12 m/s.",
-            "Đúng",
+            true,
             "Hệ số của t là v<sub>0</sub> = 12 m/s."
           ],
           [
             "b) Gia tốc của chất điểm là a = -1,5 m/s<sup>2</sup>.",
-            "Sai",
+            false,
             "Ta có 1/2 . a = -1,5 &rArr; a = -3 m/s<sup>2</sup>."
           ],
           [
             "c) Chất điểm dừng lại (v = 0) tại thời điểm t = 4 giây.",
-            "Đúng",
+            true,
             "v = v<sub>0</sub> + at = 12 - 3t = 0 &rArr; t = 4 s."
           ],
           [
             "d) Quãng đường chất điểm đi được từ lúc t = 0 đến khi dừng lại là 24 m.",
-            "Đúng",
+            true,
             "Thay t = 4 s vào: d = 12(4) - 1,5(4<sup>2</sup>) = 48 - 24 = 24 m."
           ]
         ]
@@ -3678,22 +3678,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Thời gian rơi chạm đất của vật A là 2 giây.",
-            "Đúng",
+            true,
             "t<sub>A</sub> = &radic;(2.20 / 10) = 2 s."
           ],
           [
             "b) Thời gian rơi chạm đất của vật B gấp 4 lần thời gian rơi của vật A.",
-            "Sai",
+            false,
             "t<sub>B</sub> = &radic;(2.80 / 10) = 4 s = 2.t<sub>A</sub> (gấp 2 lần, không phải 4 lần)."
           ],
           [
             "c) Tốc độ chạm đất của vật A là 20 m/s và của vật B là 40 m/s.",
-            "Đúng",
+            true,
             "v<sub>A</sub> = 10.2 = 20 m/s; v<sub>B</sub> = 10.4 = 40 m/s."
           ],
           [
             "d) Trong giây đầu tiên kể từ lúc thả, cả hai vật đều rơi được quãng đường bằng nhau là 5 m.",
-            "Đúng",
+            true,
             "Trong 1 s đầu: s<sub>1</sub> = 0,5.10.1<sup>2</sup> = 5 m cho cả hai vật."
           ]
         ]
@@ -3752,7 +3752,7 @@ const suppliedExams = [
           "C. Di truyền học phân tử.",
           "D. Phản ứng tổng hợp hữu cơ."
         ],
-        "A",
+        0,
         "Cơ học, Nhiệt học, Điện từ học, Quang học là các phân ngành trụ cột của Vật lí cổ điển."
       ],
       [
@@ -3763,7 +3763,7 @@ const suppliedExams = [
           "C. Quy định bắt buộc phải thực hiện (như đeo kính bảo hộ, găng tay).",
           "D. Nơi chứa chất phóng xạ."
         ],
-        "C",
+        2,
         "Biển tròn nền xanh hình trắng là biển báo quy định bắt buộc thực hiện để bảo đảm an toàn."
       ],
       [
@@ -3774,7 +3774,7 @@ const suppliedExams = [
           "C. &Delta;A . &Delta;B.",
           "D. &Delta;A / &Delta;B."
         ],
-        "A",
+        0,
         "Sai số tuyệt đối của một tổng hoặc hiệu bằng tổng các sai số tuyệt đối thành phần: &Delta;C = &Delta;A + &Delta;B."
       ],
       [
@@ -3785,7 +3785,7 @@ const suppliedExams = [
           "C. 2 m.",
           "D. -2 m."
         ],
-        "B",
+        1,
         "d = x<sub>N</sub> - x<sub>M</sub> = -4 - 2 = -6 m."
       ],
       [
@@ -3796,7 +3796,7 @@ const suppliedExams = [
           "C. Chuyển động thẳng đều ngược chiều dương.",
           "D. Chuyển động nhanh dần đều."
         ],
-        "C",
+        2,
         "Hệ số góc âm (v &lt; 0) nghĩa là vật chuyển động thẳng đều theo chiều âm."
       ],
       [
@@ -3807,7 +3807,7 @@ const suppliedExams = [
           "C. 2,5 m/s.",
           "D. 3,0 m/s."
         ],
-        "C",
+        2,
         "v = &radic;(2<sup>2</sup> + 1,5<sup>2</sup>) = &radic;(4 + 2,25) = &radic;6,25 = 2,5 m/s."
       ],
       [
@@ -3818,7 +3818,7 @@ const suppliedExams = [
           "C. Căn bậc hai của t.",
           "D. Nghịch đảo của t."
         ],
-        "B",
+        1,
         "Vì s = 1/2 . a . t<sup>2</sup> nên quãng đường tỉ lệ thuận với t<sup>2</sup>."
       ],
       [
@@ -3829,7 +3829,7 @@ const suppliedExams = [
           "C. 8 s.",
           "D. 10 s."
         ],
-        "B",
+        1,
         "t = v<sub>0</sub> / |a| = 20 / 4 = 5 s."
       ],
       [
@@ -3840,7 +3840,7 @@ const suppliedExams = [
           "C. 9.",
           "D. &radic;3."
         ],
-        "C",
+        2,
         "Vì h = 1/2.g.t<sup>2</sup> tỉ lệ với t<sup>2</sup> nên h<sub>2</sub> / h<sub>1</sub> = (t<sub>2</sub> / t<sub>1</sub>)<sup>2</sup> = 3<sup>2</sup> = 9."
       ],
       [
@@ -3851,7 +3851,7 @@ const suppliedExams = [
           "C. 15 m.",
           "D. 20 m."
         ],
-        "B",
+        1,
         "&Delta;s<sub>n+1</sub> - &Delta;s<sub>n</sub> = g . (1 s)<sup>2</sup> = 10 m."
       ],
       [
@@ -3862,7 +3862,7 @@ const suppliedExams = [
           "C. 12 m/s.",
           "D. 24 m/s."
         ],
-        "C",
+        2,
         "t = &radic;(2.5/10) = 1 s &rArr; v<sub>0</sub> = L / t = 12 / 1 = 12 m/s."
       ],
       [
@@ -3873,7 +3873,7 @@ const suppliedExams = [
           "C. Có phương thẳng đứng hướng xuống.",
           "D. Đạt giá trị cực đại."
         ],
-        "B",
+        1,
         "Tại đỉnh cao nhất, v<sub>y</sub> = 0 nhưng v<sub>x</sub> = v<sub>0</sub>.cos&alpha; &ne; 0 và nằm ngang."
       ]
     ],
@@ -3883,22 +3883,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Chuyển động của xe máy trên cả quãng đường là chuyển động thẳng đều.",
-            "Sai",
+            false,
             "Tốc độ thay đổi từ 30 km/h lên 50 km/h nên không phải chuyển động đều trên cả quãng đường."
           ],
           [
             "b) Tốc độ trung bình của xe máy trên cả quãng đường bằng 40 km/h.",
-            "Đúng",
+            true,
             "Chia theo hai nửa thời gian bằng nhau: v<sub>tb</sub> = (v<sub>1</sub> + v<sub>2</sub>)/2 = (30 + 50)/2 = 40 km/h."
           ],
           [
             "c) Nếu tổng thời gian đi là 30 phút (0,5 giờ) thì quãng đường người đó đã đi là 20 km.",
-            "Đúng",
+            true,
             "s = v<sub>tb</sub> . t = 40 . 0,5 = 20 km."
           ],
           [
             "d) Quãng đường đi được trong nửa thời gian đầu bằng quãng đường đi được trong nửa thời gian sau.",
-            "Sai",
+            false,
             "Trong cùng thời gian t/2, vì v<sub>2</sub> &gt; v<sub>1</sub> nên s<sub>2</sub> &gt; s<sub>1</sub>."
           ]
         ]
@@ -3908,22 +3908,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Thời gian rơi của viên bi đến khi chạm đất là 4 giây.",
-            "Đúng",
+            true,
             "t = &radic;(2.80 / 10) = 4 s."
           ],
           [
             "b) Vận tốc của viên bi ngay khi chạm đất là 40 m/s.",
-            "Đúng",
+            true,
             "v = g.t = 10 . 4 = 40 m/s."
           ],
           [
             "c) Quãng đường viên bi rơi được trong 2 giây đầu tiên bằng 40 m.",
-            "Sai",
+            false,
             "Trong 2 s đầu: s<sub>2</sub> = 0,5.10.2<sup>2</sup> = 20 m."
           ],
           [
             "d) Thời gian để viên bi rơi hết 45 m đầu tiên là 3 giây.",
-            "Đúng",
+            true,
             "t<sub>1</sub> = &radic;(2.45 / 10) = 3 s."
           ]
         ]
@@ -3982,7 +3982,7 @@ const suppliedExams = [
           "C. Cực dương của pin.",
           "D. Dây nối đất."
         ],
-        "B",
+        1,
         "AC (Alternating Current) hoặc dấu (~) là kí hiệu nguồn điện xoay chiều; DC hoặc dấu (-) là điện một chiều."
       ],
       [
@@ -3993,7 +3993,7 @@ const suppliedExams = [
           "C. 0,96%.",
           "D. 1,5%."
         ],
-        "B",
+        1,
         "Sai số tỉ đối của một thương bằng tổng các sai số tỉ đối: &delta;v = &delta;s + &delta;t = 1,2% + 0,8% = 2,0%."
       ],
       [
@@ -4004,7 +4004,7 @@ const suppliedExams = [
           "C. Quãng đường đi được bằng độ lớn độ dịch chuyển (s = |d|).",
           "D. Quãng đường đi được bằng 0."
         ],
-        "A",
+        0,
         "Khi vật đổi chiều chuyển động thì quãng đường s luôn lớn hơn độ lớn độ dịch chuyển |d|."
       ],
       [
@@ -4015,7 +4015,7 @@ const suppliedExams = [
           "C. 15 km/h.",
           "D. 8 km/h."
         ],
-        "B",
+        1,
         "Tổng quãng đường s = 8 km; tổng thời gian t = 40 phút = 2/3 giờ &rArr; v<sub>tb</sub> = 8 / (2/3) = 12 km/h."
       ],
       [
@@ -4026,7 +4026,7 @@ const suppliedExams = [
           "C. 5 m/s<sup>2</sup>.",
           "D. -5 m/s<sup>2</sup>."
         ],
-        "B",
+        1,
         "a = (0 - 10) / (5 - 0) = -2 m/s<sup>2</sup>."
       ],
       [
@@ -4037,7 +4037,7 @@ const suppliedExams = [
           "C. 1 : 4.",
           "D. 1 : 1."
         ],
-        "B",
+        1,
         "Trong giây 1: s<sub>1</sub> = 1 m; trong 2 s đầu: s<sub>2</sub> = 4 m &rArr; trong giây thứ 2 đi được 4 - 1 = 3 m. Tỉ số là 1 : 3."
       ],
       [
@@ -4048,7 +4048,7 @@ const suppliedExams = [
           "C. 19,6 m/s và 39,2 m.",
           "D. 19,6 m/s và 9,8 m."
         ],
-        "A",
+        0,
         "v = 9,8.2 = 19,6 m/s; s = 0,5.9,8.2<sup>2</sup> = 19,6 m."
       ],
       [
@@ -4059,7 +4059,7 @@ const suppliedExams = [
           "C. 80&radic;13 / 2 &approx; 144,2 m.",
           "D. 160 m."
         ],
-        "C",
+        2,
         "Thời gian rơi t = 4 s &rArr; L = 30.4 = 120 m. Độ dịch chuyển OM = &radic;(h<sup>2</sup> + L<sup>2</sup>) = &radic;(80<sup>2</sup> + 120<sup>2</sup>) = 40&radic;13 &approx; 144,2 m."
       ],
       [
@@ -4070,7 +4070,7 @@ const suppliedExams = [
           "C. 45 km/h.",
           "D. 0 km/h."
         ],
-        "B",
+        1,
         "Cùng chiều: v<sub>12</sub> = 54 - 36 = 18 km/h."
       ],
       [
@@ -4081,7 +4081,7 @@ const suppliedExams = [
           "C. a = 0.",
           "D. Chưa xác định được."
         ],
-        "B",
+        1,
         "Chuyển động nhanh dần có a và v cùng dấu, vì v &lt; 0 nên a &lt; 0."
       ],
       [
@@ -4092,7 +4092,7 @@ const suppliedExams = [
           "C. L = 2v<sub>0</sub><sup>2</sup> . cos&alpha; / g.",
           "D. L = v<sub>0</sub> . sin2&alpha; / g."
         ],
-        "A",
+        0,
         "Công thức tầm xa ném xiên: L = (v<sub>0</sub><sup>2</sup> . sin2&alpha;) / g."
       ],
       [
@@ -4103,7 +4103,7 @@ const suppliedExams = [
           "C. 2,0 s.",
           "D. 4,5 s."
         ],
-        "B",
+        1,
         "Thời gian đi lên t<sub>1</sub> = 15/10 = 1,5 s; thời gian rơi xuống bằng thời gian đi lên nên tổng thời gian là 3,0 s."
       ]
     ],
@@ -4113,22 +4113,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Vận tốc của xe A là 60 km/h.",
-            "Đúng",
+            true,
             "v<sub>A</sub> = (60 - 0) / 1 = 60 km/h."
           ],
           [
             "b) Vận tốc của xe B là 60 km/h.",
-            "Sai",
+            false,
             "v<sub>B</sub> = (60 - 20) / 1 = 40 km/h."
           ],
           [
             "c) Hai xe gặp nhau tại thời điểm t = 1 h ở vị trí cách gốc O là 60 km.",
-            "Đúng",
+            true,
             "Đồ thị hai xe cắt nhau tại điểm (1 h; 60 km)."
           ],
           [
             "d) Sau thời điểm t = 1 h, xe A vượt lên dẫn trước xe B.",
-            "Đúng",
+            true,
             "Vì v<sub>A</sub> &gt; v<sub>B</sub> nên sau khi gặp nhau ở t = 1 h, xe A vượt lên trước."
           ]
         ]
@@ -4138,22 +4138,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Thời gian chuyển động của vật đến khi chạm đất là 3 giây.",
-            "Đúng",
+            true,
             "t = &radic;(2.45 / 10) = 3 s."
           ],
           [
             "b) Tại thời điểm t = 2 s, thành phần vận tốc theo phương thẳng đứng của vật là v<sub>y</sub> = 20 m/s.",
-            "Đúng",
+            true,
             "v<sub>y</sub>(2) = g.t = 10 . 2 = 20 m/s."
           ],
           [
             "c) Tầm bay xa của vật trên mặt đất là 90 m.",
-            "Đúng",
+            true,
             "L = v<sub>0</sub> . t = 30 . 3 = 90 m."
           ],
           [
             "d) Khi chạm đất, vectơ vận tốc của vật hợp với phương ngang một góc 60&deg;.",
-            "Sai",
+            false,
             "Khi chạm đất v<sub>x</sub> = 30 m/s và v<sub>y</sub> = g.t = 30 m/s &rArr; tan&alpha; = v<sub>y</sub>/v<sub>x</sub> = 1 &rArr; góc &alpha; = 45&deg;."
           ]
         ]
@@ -4212,7 +4212,7 @@ const suppliedExams = [
           "C. &delta;A = <span style=\"text-decoration:overline;\">A</span> - &Delta;A.",
           "D. <span style=\"text-decoration:overline;\">&Delta;A</span> = (&Delta;A<sub>1</sub> + ... + &Delta;A<sub>n</sub>)/n."
         ],
-        "A",
+        0,
         "Công thức sai số tỉ đối: &delta;A = (&Delta;A / <span style=\"text-decoration:overline;\">A</span>) . 100%."
       ],
       [
@@ -4223,7 +4223,7 @@ const suppliedExams = [
           "C. Cảnh báo tia phóng xạ.",
           "D. Cảnh báo từ trường mạnh."
         ],
-        "B",
+        1,
         "Hình ngọn lửa trên biển tam giác nền vàng là cảnh báo chất hoặc nơi dễ cháy."
       ],
       [
@@ -4234,7 +4234,7 @@ const suppliedExams = [
           "C. <strong>AC</strong>.",
           "D. <strong>CA</strong>."
         ],
-        "C",
+        2,
         "Vectơ độ dịch chuyển tổng hợp nối điểm đầu A tới điểm cuối C là vectơ AC."
       ],
       [
@@ -4245,7 +4245,7 @@ const suppliedExams = [
           "C. 28 km/h.",
           "D. 3,6 km/h."
         ],
-        "B",
+        1,
         "v = 100 / 10 = 10 m/s = 10 . 3,6 = 36 km/h."
       ],
       [
@@ -4256,7 +4256,7 @@ const suppliedExams = [
           "C. 50 km/h.",
           "D. 0 km/h."
         ],
-        "B",
+        1,
         "Cùng chiều: v<sub>12</sub> = 60 - 40 = 20 km/h."
       ],
       [
@@ -4267,7 +4267,7 @@ const suppliedExams = [
           "C. 8 m.",
           "D. 20 m."
         ],
-        "B",
+        1,
         "Ta có v<sub>0</sub> = 4 m/s, a = 3 m/s<sup>2</sup> &rArr; s = 4.2 + 0,5.3.2<sup>2</sup> = 8 + 6 = 14 m."
       ],
       [
@@ -4278,7 +4278,7 @@ const suppliedExams = [
           "C. Chuyển động thẳng nhanh dần đều.",
           "D. Rơi tự do."
         ],
-        "B",
+        1,
         "Đường thẳng nằm ngang ứng với v = hằng số &gt; 0, tức chuyển động thẳng đều theo chiều dương."
       ],
       [
@@ -4289,7 +4289,7 @@ const suppliedExams = [
           "C. 8 s.",
           "D. 16 s."
         ],
-        "B",
+        1,
         "t = &radic;(2h / g) = &radic;(160 / 10) = 4 s."
       ],
       [
@@ -4300,7 +4300,7 @@ const suppliedExams = [
           "C. 45 m.",
           "D. 30 m."
         ],
-        "B",
+        1,
         "&Delta;s<sub>3</sub> = s<sub>3</sub> - s<sub>2</sub> = 5.(3<sup>2</sup> - 2<sup>2</sup>) = 25 m."
       ],
       [
@@ -4311,7 +4311,7 @@ const suppliedExams = [
           "C. 36 m.",
           "D. 48 m."
         ],
-        "B",
+        1,
         "t = &radic;(2.20/10) = 2 s &rArr; L = 12 . 2 = 24 m."
       ],
       [
@@ -4322,7 +4322,7 @@ const suppliedExams = [
           "C. 1 m/s<sup>2</sup>.",
           "D. 8 m/s<sup>2</sup>."
         ],
-        "B",
+        1,
         "Tính ngược từ lúc dừng: trong 1 s cuối s = 1/2.|a|.1<sup>2</sup> = 2 &rArr; |a| = 4 m/s<sup>2</sup>."
       ],
       [
@@ -4333,7 +4333,7 @@ const suppliedExams = [
           "C. Vôn kế và ampe kế.",
           "D. Lực kế lò xo."
         ],
-        "A",
+        0,
         "Thí nghiệm đo gia tốc rơi tự do dùng nam châm điện thả bi sắt qua cổng quang điện nối với đồng hồ đo thời gian hiện số."
       ]
     ],
@@ -4343,22 +4343,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Tốc độ trung bình của bạn An là 5 m/s.",
-            "Đúng",
+            true,
             "v = 200 / 40 = 5 m/s."
           ],
           [
             "b) Thời gian bạn An đi từ nhà (N) đến trường (T) là 400 giây.",
-            "Đúng",
+            true,
             "t = 2000 / 5 = 400 s."
           ],
           [
             "c) Nếu bạn An đi từ trạm xăng (X) quay trở về nhà (N) thì độ dịch chuyển của bạn là +400 m.",
-            "Sai",
+            false,
             "Đi từ X (x = 400 m) về N (x = 0 m) ngược chiều dương nên độ dịch chuyển d = 0 - 400 = -400 m."
           ],
           [
             "d) Thời gian bạn An đi từ nhà đến siêu thị (S) gấp 3 lần thời gian bạn đi từ nhà đến trạm xăng (X).",
-            "Đúng",
+            true,
             "Vì chuyển động đều và NS = 1200 m = 3 . NX (400 m) nên thời gian đi NS gấp 3 lần thời gian đi NX."
           ]
         ]
@@ -4368,22 +4368,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Thành phần vận tốc ban đầu theo phương ngang là v<sub>0x</sub> = 20&radic;3 m/s và theo phương thẳng đứng là v<sub>0y</sub> = 20 m/s.",
-            "Đúng",
+            true,
             "v<sub>0x</sub> = 40.cos30&deg; = 20&radic;3 m/s; v<sub>0y</sub> = 40.sin30&deg; = 20 m/s."
           ],
           [
             "b) Thời gian từ lúc bắn đến khi viên đạn đạt độ cao cực đại là 2 giây.",
-            "Đúng",
+            true,
             "t<sub>lên</sub> = v<sub>0y</sub> / g = 20 / 10 = 2 s."
           ],
           [
             "c) Độ cao cực đại mà viên đạn đạt được là 40 m.",
-            "Sai",
+            false,
             "H = v<sub>0y</sub><sup>2</sup> / (2g) = 400 / 20 = 20 m."
           ],
           [
             "d) Tầm bay xa của viên đạn trên mặt đất là 80&radic;3 m.",
-            "Đúng",
+            true,
             "Tổng thời gian bay t = 2.t<sub>lên</sub> = 4 s &rArr; L = v<sub>0x</sub> . t = 20&radic;3 . 4 = 80&radic;3 m."
           ]
         ]
@@ -4442,7 +4442,7 @@ const suppliedExams = [
           "C. Luôn lấy 5 chữ số thập phân.",
           "D. Luôn làm tròn thành số nguyên."
         ],
-        "B",
+        1,
         "Quy tắc làm tròn: kết quả phép nhân/chia lấy số CSCN bằng số CSCN của thừa số có ít CSCN nhất."
       ],
       [
@@ -4453,7 +4453,7 @@ const suppliedExams = [
           "C. Gia tốc a.",
           "D. Quãng đường đi được s."
         ],
-        "D",
+        3,
         "Quãng đường đi được s và tốc độ luôn không âm, còn d, v, a là các đại lượng đại số/vectơ có thể âm."
       ],
       [
@@ -4464,7 +4464,7 @@ const suppliedExams = [
           "C. Hai xe đều dừng lại.",
           "D. Hai xe có cùng gia tốc."
         ],
-        "B",
+        1,
         "Giao điểm của hai đồ thị (d – t) biểu thị hai vật có cùng vị trí tại cùng một thời điểm (gặp nhau)."
       ],
       [
@@ -4475,7 +4475,7 @@ const suppliedExams = [
           "C. Vận tốc của thuyền bằng 0.",
           "D. Độ dịch chuyển của thuyền hướng về phía Nam."
         ],
-        "B",
+        1,
         "Thuyền đi về phía Bắc nên vận tốc thuyền so với bờ hướng Bắc, ngược hướng gió (hướng Nam)."
       ],
       [
@@ -4486,7 +4486,7 @@ const suppliedExams = [
           "C. 32 m.",
           "D. 48 m."
         ],
-        "B",
+        1,
         "s = (v<sub>0</sub> + v).t / 2 = (2 + 10).4 / 2 = 24 m."
       ],
       [
@@ -4497,7 +4497,7 @@ const suppliedExams = [
           "C. v = g / t.",
           "D. v = &radic;(gt)."
         ],
-        "A",
+        0,
         "Công thức vận tốc rơi tự do: v = g.t."
       ],
       [
@@ -4508,7 +4508,7 @@ const suppliedExams = [
           "C. &radic;3 s.",
           "D. 0,5 s."
         ],
-        "A",
+        0,
         "Quãng đường rơi xuống mái hiên là &Delta;h = 20 - 15 = 5 m &rArr; t = &radic;(2.5 / 10) = 1 s."
       ],
       [
@@ -4519,7 +4519,7 @@ const suppliedExams = [
           "C. y = v<sub>0</sub>.x + 1/2.g.x<sup>2</sup>.",
           "D. y = (g / v<sub>0</sub>) . x."
         ],
-        "A",
+        0,
         "Từ x = v<sub>0</sub>t &rArr; t = x/v<sub>0</sub>, thay vào y = 1/2.g.t<sup>2</sup> được y = (g / (2v<sub>0</sub><sup>2</sup>)).x<sup>2</sup>."
       ],
       [
@@ -4530,7 +4530,7 @@ const suppliedExams = [
           "C. 80 m.",
           "D. 100 m."
         ],
-        "B",
+        1,
         "s = v<sub>0</sub><sup>2</sup> / (2|a|) = 400 / 10 = 40 m."
       ],
       [
@@ -4541,7 +4541,7 @@ const suppliedExams = [
           "C. Tăng 8 lần.",
           "D. Không đổi."
         ],
-        "B",
+        1,
         "L = v<sub>0</sub>.&radic;(2h/g). Khi h tăng 4 lần thì &radic;h tăng 2 lần; v<sub>0</sub> tăng 2 lần &rArr; L tăng 2 . 2 = 4 lần."
       ],
       [
@@ -4552,7 +4552,7 @@ const suppliedExams = [
           "C. m, kg, s.",
           "D. m, g, phút."
         ],
-        "C",
+        2,
         "Ba đơn vị cơ bản hệ SI của cơ học là mét (m), kilôgam (kg) và giây (s)."
       ],
       [
@@ -4563,7 +4563,7 @@ const suppliedExams = [
           "C. 15&deg;.",
           "D. 75&deg;."
         ],
-        "A",
+        0,
         "Hai góc phụ nhau (&alpha;<sub>1</sub> + &alpha;<sub>2</sub> = 90&deg;) có sin2&alpha;<sub>1</sub> = sin2&alpha;<sub>2</sub> nên cho cùng tầm bay xa: 90&deg; - 60&deg; = 30&deg;."
       ]
     ],
@@ -4573,22 +4573,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Gia tốc của viên bi trên mặt phẳng nghiêng là 2 m/s<sup>2</sup>.",
-            "Đúng",
+            true,
             "Từ s = 1/2.a.t<sup>2</sup> &rArr; a = 2s / t<sup>2</sup> = 18 / 9 = 2 m/s<sup>2</sup>."
           ],
           [
             "b) Tốc độ của viên bi khi đến chân dốc B là 6 m/s.",
-            "Đúng",
+            true,
             "v<sub>B</sub> = a.t = 2 . 3 = 6 m/s."
           ],
           [
             "c) Tốc độ trung bình của viên bi trên cả dốc AB là 3 m/s.",
-            "Đúng",
+            true,
             "v<sub>tb</sub> = s / t = 9 / 3 = 3 m/s (hoặc (0 + 6)/2 = 3 m/s)."
           ],
           [
             "d) Thời gian để viên bi đi hết 4 m đầu tiên kể từ đỉnh dốc A là 1,5 giây.",
-            "Sai",
+            false,
             "t<sub>1</sub> = &radic;(2s<sub>1</sub> / a) = &radic;(8 / 2) = 2 s."
           ]
         ]
@@ -4598,22 +4598,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Thời gian để thuyền sang đến bờ bên kia là 30 giây.",
-            "Đúng",
+            true,
             "t = d<sub>rộng</sub> / v<sub>thuyền/nước</sub> = 120 / 4 = 30 s."
           ],
           [
             "b) Độ lớn vận tốc của thuyền so với bờ sông là 7 m/s.",
-            "Sai",
+            false,
             "Hai vận tốc vuông góc: v<sub>thuyền/bờ</sub> = &radic;(4<sup>2</sup> + 3<sup>2</sup>) = 5 m/s."
           ],
           [
             "c) Khi sang tới bờ bên kia, thuyền bị trôi xuôi dòng một đoạn 90 m so với điểm đối diện trực tiếp.",
-            "Đúng",
+            true,
             "L = v<sub>nước</sub> . t = 3 . 30 = 90 m."
           ],
           [
             "d) Quãng đường thực tế mà thuyền đã đi được so với bờ sông là 150 m.",
-            "Đúng",
+            true,
             "s = v<sub>thuyền/bờ</sub> . t = 5 . 30 = 150 m (hoặc &radic;(120<sup>2</sup> + 90<sup>2</sup>) = 150 m)."
           ]
         ]
@@ -4672,7 +4672,7 @@ const suppliedExams = [
           "C. neutron và electron.",
           "D. electron, proton và neutron."
         ],
-        "B",
+        1,
         "Hạt nhân nguyên tử được tạo nên bởi các hạt proton (mang điện dương) và neutron (không mang điện), trừ <sup>1</sup><sub>1</sub>H chỉ có 1 proton."
       ],
       [
@@ -4683,7 +4683,7 @@ const suppliedExams = [
           "C. 11 và 22.",
           "D. 11 và 23."
         ],
-        "A",
+        0,
         "Nguyên tử trung hòa về điện nên số proton = số electron = số đơn vị điện tích hạt nhân Z = 11."
       ],
       [
@@ -4694,7 +4694,7 @@ const suppliedExams = [
           "C. Số hạt proton.",
           "D. Khối lượng nguyên tử."
         ],
-        "C",
+        2,
         "Nguyên tố hóa học là tập hợp các nguyên tử có cùng điện tích hạt nhân (tức cùng số hạt proton)."
       ],
       [
@@ -4705,7 +4705,7 @@ const suppliedExams = [
           "C. <sup>14</sup><sub>13</sub>Al.",
           "D. <sup>27</sup><sub>14</sub>Al."
         ],
-        "B",
+        1,
         "Số hiệu nguyên tử Z = 13 viết ở dưới bên trái; số khối A = Z + N = 13 + 14 = 27 viết ở trên bên trái: <sup>27</sup><sub>13</sub>Al."
       ],
       [
@@ -4716,7 +4716,7 @@ const suppliedExams = [
           "C. Hình cầu, tối đa 6 electron.",
           "D. Hình số tám nổi, tối đa 10 electron."
         ],
-        "B",
+        1,
         "AO s có hình cầu (tối đa 2e); phân lớp p gồm 3 AO p<sub>x</sub>, p<sub>y</sub>, p<sub>z</sub> hình số tám nổi, chứa tối đa 6 electron."
       ],
       [
@@ -4727,7 +4727,7 @@ const suppliedExams = [
           "C. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>3</sup>.",
           "D. 1s<sup>2</sup>2s<sup>3</sup>2p<sup>2</sup>."
         ],
-        "C",
+        2,
         "Với Z = 7, các electron phân bố vào các phân lớp theo thứ tự mức năng lượng: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>3</sup>."
       ],
       [
@@ -4738,7 +4738,7 @@ const suppliedExams = [
           "C. Khí hiếm.",
           "D. Nguyên tố d."
         ],
-        "B",
+        1,
         "Lớp ngoài cùng (n = 3) có 2 + 5 = 7 electron nên X là nguyên tố phi kim (Chlorine, Z = 17)."
       ],
       [
@@ -4749,7 +4749,7 @@ const suppliedExams = [
           "C. Theo chiều tăng dần bán kính nguyên tử.",
           "D. Theo chiều tăng dần số hạt neutron."
         ],
-        "B",
+        1,
         "Nguyên tắc đầu tiên: sắp xếp theo chiều tăng dần của điện tích hạt nhân nguyên tử."
       ],
       [
@@ -4760,7 +4760,7 @@ const suppliedExams = [
           "C. Ô 20, chu kì 4, nhóm IIB.",
           "D. Ô 20, chu kì 2, nhóm IVA."
         ],
-        "A",
+        0,
         "Cấu hình Ca (Z = 20): 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>4s<sup>2</sup> &rArr; Ô 20, 4 lớp e (chu kì 4), 2e hóa trị nguyên tố s (nhóm IIA)."
       ],
       [
@@ -4771,7 +4771,7 @@ const suppliedExams = [
           "C. Tính kim loại giảm dần, tính phi kim tăng dần.",
           "D. Số lớp electron tăng dần."
         ],
-        "C",
+        2,
         "Trong một chu kì từ trái sang phải: bán kính giảm, độ âm điện tăng, tính kim loại giảm và tính phi kim tăng."
       ],
       [
@@ -4782,7 +4782,7 @@ const suppliedExams = [
           "C. Al.",
           "D. P."
         ],
-        "A",
+        0,
         "Cùng chu kì 3, khi Z tăng từ 11 đến 15 thì bán kính nguyên tử giảm dần, nên <sub>11</sub>Na có bán kính lớn nhất."
       ],
       [
@@ -4793,7 +4793,7 @@ const suppliedExams = [
           "C. H<sub>2</sub>R.",
           "D. HR."
         ],
-        "C",
+        2,
         "Nhóm VIA có hóa trị cao nhất với O là 6, hóa trị với H là 8 - 6 = 2 &rArr; công thức hợp chất khí với H là H<sub>2</sub>R."
       ]
     ],
@@ -4803,22 +4803,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Nguyên tử được cấu tạo bởi hai phần gồm hạt nhân mang điện tích dương và lớp vỏ chứa các hạt electron mang điện tích âm.",
-            "Đúng",
+            true,
             "Cấu tạo nguyên tử gồm hạt nhân (mang điện dương) ở tâm và vỏ electron (mang điện âm) chuyển động xung quanh."
           ],
           [
             "b) Nguyên tử có cấu tạo rỗng, khối lượng của nguyên tử tập trung hầu hết ở hạt nhân.",
-            "Đúng",
+            true,
             "Vì khối lượng electron rất nhỏ (m<sub>e</sub> &approx; 0,00055 amu) so với proton và neutron (~ 1 amu)."
           ],
           [
             "c) Vì nguyên tử trung hòa về điện nên trong mọi nguyên tử, số hạt proton luôn bằng số hạt neutron.",
-            "Sai",
+            false,
             "Nguyên tử trung hòa về điện nên số hạt proton bằng số hạt electron (P = E), không phải bằng số neutron."
           ],
           [
             "d) Lớp electron thứ 3 (lớp M, ứng với n = 3) có 3 phân lớp và chứa tối đa 18 electron.",
-            "Đúng",
+            true,
             "Lớp M (n = 3) có 3 phân lớp 3s, 3p, 3d chứa tối đa 2 + 6 + 10 = 18 electron."
           ]
         ]
@@ -4828,22 +4828,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Cấu hình electron của nguyên tử X là 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>4</sup>, X có 6 electron hóa trị.",
-            "Đúng",
+            true,
             "Lớp ngoài cùng của X là 3s<sup>2</sup>3p<sup>4</sup> có 6 electron hóa trị."
           ],
           [
             "b) Nguyên tố Y thuộc chu kì 4, nhóm IA và là một kim loại kiềm điển hình.",
-            "Đúng",
+            true,
             "Cấu hình Y (Z = 19): [Ar]4s<sup>1</sup> &rArr; chu kì 4, nhóm IA (kim loại kiềm)."
           ],
           [
             "c) Độ âm điện của nguyên tử Y lớn hơn độ âm điện của nguyên tử X.",
-            "Sai",
+            false,
             "X là phi kim mạnh ở cuối chu kì 3, còn Y là kim loại kiềm mạnh ở đầu chu kì 4 nên độ âm điện của Y nhỏ hơn X rất nhiều."
           ],
           [
             "d) Hydroxide ứng với hóa trị cao nhất của X là H<sub>2</sub>SO<sub>4</sub> có tính acid mạnh.",
-            "Đúng",
+            true,
             "X (S) ở nhóm VIA có hydroxide cao nhất là H<sub>2</sub>SO<sub>4</sub>, là một acid mạnh."
           ]
         ]
@@ -4902,7 +4902,7 @@ const suppliedExams = [
           "C. Electron.",
           "D. Hạt nhân."
         ],
-        "C",
+        2,
         "Electron mang điện tích âm (-1,602.10<sup>-19</sup> C hay 1-), proton mang điện dương (1+), neutron không mang điện."
       ],
       [
@@ -4913,7 +4913,7 @@ const suppliedExams = [
           "C. 39.",
           "D. 58."
         ],
-        "B",
+        1,
         "Số hạt neutron N = A - Z = 39 - 19 = 20."
       ],
       [
@@ -4924,7 +4924,7 @@ const suppliedExams = [
           "C. Cùng số khối A nhưng khác số hiệu nguyên tử Z.",
           "D. Cùng tổng số hạt trong nguyên tử."
         ],
-        "A",
+        0,
         "Đồng vị là các nguyên tử có cùng số proton (Z) nhưng khác số neutron (N), do đó số khối A khác nhau."
       ],
       [
@@ -4935,7 +4935,7 @@ const suppliedExams = [
           "C. d<sup>10</sup>.",
           "D. f<sup>10</sup>."
         ],
-        "C",
+        2,
         "Số e tối đa trên các phân lớp s, p, d, f lần lượt là 2, 6, 10, 14. Do đó d<sup>10</sup> đã bão hòa."
       ],
       [
@@ -4946,7 +4946,7 @@ const suppliedExams = [
           "C. [Ar]3d<sup>8</sup>.",
           "D. [Ar]3d<sup>5</sup>4s<sup>3</sup>."
         ],
-        "B",
+        1,
         "Thứ tự điền mức năng lượng là 4s<sup>2</sup> rồi đến 3d<sup>6</sup>, khi viết cấu hình theo thứ tự lớp từ trong ra ngoài là [Ar]3d<sup>6</sup>4s<sup>2</sup>."
       ],
       [
@@ -4957,7 +4957,7 @@ const suppliedExams = [
           "C. <sub>11</sub>Na.",
           "D. <sub>17</sub>Cl."
         ],
-        "B",
+        1,
         "<sub>10</sub>Ne có cấu hình 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup> (8e lớp ngoài cùng bền vững), là khí hiếm."
       ],
       [
@@ -4968,7 +4968,7 @@ const suppliedExams = [
           "C. 8 và 18.",
           "D. 18 và 18."
         ],
-        "B",
+        1,
         "Chu kì 2 và chu kì 3 là hai chu kì nhỏ, mỗi chu kì đều có 8 nguyên tố."
       ],
       [
@@ -4979,7 +4979,7 @@ const suppliedExams = [
           "C. 2s<sup>2</sup>2p<sup>3</sup>.",
           "D. 3d<sup>3</sup>4s<sup>2</sup>."
         ],
-        "A",
+        0,
         "Chu kì 3 có 3 lớp e, nhóm VA có 5e lớp ngoài cùng (nguyên tố p) &rArr; 3s<sup>2</sup>3p<sup>3</sup>."
       ],
       [
@@ -4990,7 +4990,7 @@ const suppliedExams = [
           "C. Độ âm điện tăng dần.",
           "D. Bán kính nguyên tử giảm dần."
         ],
-        "A",
+        0,
         "Trong một nhóm A từ trên xuống dưới: bán kính tăng, độ âm điện giảm, tính kim loại tăng và tính phi kim giảm."
       ],
       [
@@ -5001,7 +5001,7 @@ const suppliedExams = [
           "C. Oxygen (O).",
           "D. Chlorine (Cl)."
         ],
-        "B",
+        1,
         "Fluorine (F, Z = 9) ở đầu nhóm VIIA có độ âm điện lớn nhất (&chi; = 3,98 theo thang Pauling)."
       ],
       [
@@ -5012,7 +5012,7 @@ const suppliedExams = [
           "C. Si<sub>2</sub>O<sub>3</sub> và H<sub>2</sub>SiO<sub>3</sub>.",
           "D. SiO<sub>3</sub> và H<sub>2</sub>SiO<sub>4</sub>."
         ],
-        "A",
+        0,
         "Nhóm IVA có hóa trị cao nhất với O là 4 &rArr; oxide cao nhất là SiO<sub>2</sub> và hydroxide tương ứng là H<sub>2</sub>SiO<sub>3</sub>."
       ],
       [
@@ -5023,7 +5023,7 @@ const suppliedExams = [
           "C. Mg(OH)<sub>2</sub> &gt; NaOH &gt; Al(OH)<sub>3</sub>.",
           "D. NaOH &gt; Al(OH)<sub>3</sub> &gt; Mg(OH)<sub>2</sub>."
         ],
-        "B",
+        1,
         "Trong chu kì 3 từ Na đến Al, tính kim loại giảm dần nên tính base giảm dần: NaOH &gt; Mg(OH)<sub>2</sub> &gt; Al(OH)<sub>3</sub>."
       ]
     ],
@@ -5033,22 +5033,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Tất cả mọi nguyên tử trong tự nhiên đều được cấu tạo bởi đủ 3 loại hạt cơ bản là proton, neutron và electron.",
-            "Sai",
+            false,
             "Đồng vị protium <sup>1</sup><sub>1</sub>H chỉ có 1 proton và 1 electron, không có hạt neutron nào."
           ],
           [
             "b) Hai nguyên tử <sup>12</sup><sub>6</sub>C và <sup>13</sup><sub>6</sub>C là hai đồng vị của cùng nguyên tố carbon.",
-            "Đúng",
+            true,
             "Cả hai đều có Z = 6 proton nhưng số neutron lần lượt là 6 và 7."
           ],
           [
             "c) Các electron trên cùng một phân lớp có mức năng lượng bằng nhau.",
-            "Đúng",
+            true,
             "Các electron thuộc cùng một phân lớp có mức năng lượng bằng nhau (trên cùng một lớp thì gần bằng nhau)."
           ],
           [
             "d) Nguyên tử <sub>24</sub>Cr ở trạng thái cơ bản có cấu hình electron là [Ar]3d<sup>4</sup>4s<sup>2</sup>.",
-            "Sai",
+            false,
             "Do hiệu ứng bán bão hòa phân lớp d, cấu hình bền của Cr (Z = 24) là [Ar]3d<sup>5</sup>4s<sup>1</sup>."
           ]
         ]
@@ -5058,22 +5058,22 @@ const suppliedExams = [
         "items": [
           [
             "a) X và T thuộc cùng một nhóm VIIA trong bảng tuần hoàn.",
-            "Đúng",
+            true,
             "X (1s<sup>2</sup>2s<sup>2</sup>2p<sup>5</sup>) và T ([Ne]3s<sup>2</sup>3p<sup>5</sup>) đều có 7e lớp ngoài cùng, thuộc nhóm VIIA."
           ],
           [
             "b) Y và T thuộc cùng chu kì 3 trong bảng tuần hoàn.",
-            "Đúng",
+            true,
             "Y ([Ne]3s<sup>1</sup>) và T ([Ne]3s<sup>2</sup>3p<sup>5</sup>) đều có 3 lớp electron nên cùng thuộc chu kì 3."
           ],
           [
             "c) Bán kính nguyên tử tăng dần theo thứ tự: R<sub>X</sub> &lt; R<sub>T</sub> &lt; R<sub>Y</sub>.",
-            "Đúng",
+            true,
             "Trong nhóm VIIA: R<sub>F</sub> &lt; R<sub>Cl</sub>; trong chu kì 3: R<sub>Cl</sub> &lt; R<sub>Na</sub> &rArr; R<sub>X</sub> &lt; R<sub>T</sub> &lt; R<sub>Y</sub>."
           ],
           [
             "d) Tính phi kim của nguyên tố T mạnh hơn tính phi kim của nguyên tố X.",
-            "Sai",
+            false,
             "Trong nhóm VIIA từ F (X) xuống Cl (T), tính phi kim giảm dần nên X mạnh hơn T."
           ]
         ]
@@ -5132,7 +5132,7 @@ const suppliedExams = [
           "C. Electron.",
           "D. Hạt alpha."
         ],
-        "C",
+        2,
         "Năm 1897, J. J. Thomson phát hiện ra tia âm cực chính là chùm hạt electron mang điện tích âm."
       ],
       [
@@ -5143,7 +5143,7 @@ const suppliedExams = [
           "C. Nguyên tử khối trung bình.",
           "D. Số khối A của nguyên tử."
         ],
-        "B",
+        1,
         "Số hiệu nguyên tử Z = số đơn vị điện tích hạt nhân = số proton = số electron."
       ],
       [
@@ -5154,7 +5154,7 @@ const suppliedExams = [
           "C. 18.",
           "D. 6."
         ],
-        "C",
+        2,
         "Có 6 cách chọn cặp 2 nguyên tử H (gồm 3 cặp giống nhau và 3 cặp khác nhau), nhân với 3 cách chọn nguyên tử O: 6 . 3 = 18 phân tử H<sub>2</sub>O."
       ],
       [
@@ -5165,7 +5165,7 @@ const suppliedExams = [
           "C. 1, 2, 3, 4.",
           "D. 2, 4, 6, 8."
         ],
-        "A",
+        0,
         "Số AO trong các phân lớp s, p, d, f là các số lẻ liên tiếp: 1, 3, 5, 7 (mỗi AO chứa tối đa 2e)."
       ],
       [
@@ -5176,7 +5176,7 @@ const suppliedExams = [
           "C. Bằng nhau trước.",
           "D. Bất kì không theo thứ tự."
         ],
-        "B",
+        1,
         "Nguyên lí vững bền: electron chiếm các AO có mức năng lượng từ thấp đến cao."
       ],
       [
@@ -5187,7 +5187,7 @@ const suppliedExams = [
           "C. Nguyên tố d.",
           "D. Nguyên tố f."
         ],
-        "C",
+        2,
         "Electron cuối cùng điền vào phân lớp 3d nên X là nguyên tố d (kim loại chuyển tiếp, Z = 23)."
       ],
       [
@@ -5198,7 +5198,7 @@ const suppliedExams = [
           "C. 8 cột.",
           "D. 20 cột."
         ],
-        "B",
+        1,
         "Bảng tuần hoàn có 18 cột (nhóm VIIIB chiếm 3 cột)."
       ],
       [
@@ -5209,7 +5209,7 @@ const suppliedExams = [
           "C. Chu kì 2, nhóm VIA.",
           "D. Chu kì 4, nhóm VIA."
         ],
-        "A",
+        0,
         "Cấu hình S (Z = 16): 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>4</sup> &rArr; chu kì 3, nhóm VIA."
       ],
       [
@@ -5220,7 +5220,7 @@ const suppliedExams = [
           "C. Halogen.",
           "D. Khí hiếm."
         ],
-        "B",
+        1,
         "Nhóm IA (Li, Na, K, Rb, Cs, Fr) là nhóm kim loại kiềm."
       ],
       [
@@ -5231,7 +5231,7 @@ const suppliedExams = [
           "C. Cl.",
           "D. F."
         ],
-        "D",
+        3,
         "Trong nhóm VIIA từ trên xuống dưới tính phi kim giảm dần, nên <sub>9</sub>F có tính phi kim mạnh nhất."
       ],
       [
@@ -5242,7 +5242,7 @@ const suppliedExams = [
           "C. H<sub>2</sub>SO<sub>4</sub>.",
           "D. HClO<sub>4</sub>."
         ],
-        "D",
+        3,
         "Từ Si đến Cl trong chu kì 3, tính phi kim tăng dần nên tính acid của hydroxide cao nhất tăng dần: HClO<sub>4</sub> mạnh nhất."
       ],
       [
@@ -5253,7 +5253,7 @@ const suppliedExams = [
           "C. Số hạt neutron.",
           "D. Bán kính nguyên tử."
         ],
-        "B",
+        1,
         "Biến đổi tuần hoàn theo chiều tăng của điện tích hạt nhân nguyên tử."
       ]
     ],
@@ -5263,22 +5263,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Hạt nhân nguyên tử Al có 13 proton và 14 neutron.",
-            "Đúng",
+            true,
             "Z = 13 proton; N = 27 - 13 = 14 neutron."
           ],
           [
             "b) Cấu hình electron của nguyên tử Al là 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>1</sup>.",
-            "Đúng",
+            true,
             "13 electron phân bố vào các phân lớp: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>1</sup>."
           ],
           [
             "c) Nguyên tố Al là nguyên tố s vì có electron ở phân lớp 3s<sup>2</sup>.",
-            "Sai",
+            false,
             "Electron cuối cùng điền vào phân lớp 3p<sup>1</sup> nên Al là nguyên tố p."
           ],
           [
             "d) Oxide cao nhất của Al là Al<sub>2</sub>O<sub>3</sub> vừa tác dụng được với dung dịch acid mạnh vừa tác dụng được với dung dịch kiềm mạnh (chất lưỡng tính).",
-            "Đúng",
+            true,
             "Al<sub>2</sub>O<sub>3</sub> và Al(OH)<sub>3</sub> là các hợp chất lưỡng tính điển hình."
           ]
         ]
@@ -5288,22 +5288,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Tất cả các nguyên tử của các nguyên tố trong chu kì 3 đều có 3 lớp electron.",
-            "Đúng",
+            true,
             "Số thứ tự chu kì bằng số lớp electron (n = 3)."
           ],
           [
             "b) Hóa trị cao nhất của các nguyên tố với oxygen tăng lần lượt từ 1 đến 7.",
-            "Đúng",
+            true,
             "Từ nhóm IA (Na<sub>2</sub>O, hóa trị 1) đến nhóm VIIA (Cl<sub>2</sub>O<sub>7</sub>, hóa trị 7)."
           ],
           [
             "c) Bán kính nguyên tử của Chlorine (<sub>17</sub>Cl) lớn hơn bán kính nguyên tử của Sodium (<sub>11</sub>Na).",
-            "Sai",
+            false,
             "Đi từ trái sang phải trong chu kì 3, bán kính nguyên tử giảm dần nên R<sub>Cl</sub> &lt; R<sub>Na</sub>."
           ],
           [
             "d) Độ âm điện của nguyên tử tăng dần từ Na đến Cl.",
-            "Đúng",
+            true,
             "Theo chiều tăng điện tích hạt nhân trong một chu kì, độ âm điện tăng dần."
           ]
         ]
@@ -5362,7 +5362,7 @@ const suppliedExams = [
           "C. 2 amu.",
           "D. 12 amu."
         ],
-        "B",
+        1,
         "Khối lượng của 1 proton và 1 neutron đều xấp xỉ bằng 1 amu (1 u)."
       ],
       [
@@ -5373,7 +5373,7 @@ const suppliedExams = [
           "C. 16, 15, 15.",
           "D. 15, 31, 15."
         ],
-        "A",
+        0,
         "Z = P = E = 15; N = A - Z = 31 - 15 = 16."
       ],
       [
@@ -5384,7 +5384,7 @@ const suppliedExams = [
           "C. Tối đa 6 electron.",
           "D. Tối đa 1 electron."
         ],
-        "B",
+        1,
         "Mỗi AO chứa tối đa 2 electron với chiều tự quay (spin) ngược nhau (1 ô lượng tử tối đa 2 mũi tên ngược chiều)."
       ],
       [
@@ -5395,7 +5395,7 @@ const suppliedExams = [
           "C. 18.",
           "D. 32."
         ],
-        "B",
+        1,
         "Số e tối đa trong lớp thứ n là 2n<sup>2</sup> = 2 . 2<sup>2</sup> = 8 electron."
       ],
       [
@@ -5406,7 +5406,7 @@ const suppliedExams = [
           "C. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>4</sup>.",
           "D. 1s<sup>2</sup>2s<sup>1</sup>2p<sup>6</sup>."
         ],
-        "A",
+        0,
         "Với Z = 9, cấu hình electron là 1s<sup>2</sup>2s<sup>2</sup>2p<sup>5</sup>."
       ],
       [
@@ -5417,7 +5417,7 @@ const suppliedExams = [
           "C. 3.",
           "D. 4."
         ],
-        "B",
+        1,
         "Nhóm IIA (kim loại kiềm thổ) có cấu hình lớp ngoài cùng dạng ns<sup>2</sup> (2 electron)."
       ],
       [
@@ -5428,7 +5428,7 @@ const suppliedExams = [
           "C. 2 chu kì nhỏ và 5 chu kì lớn.",
           "D. 3 chu kì nhỏ và 3 chu kì lớn."
         ],
-        "A",
+        0,
         "Chu kì 1, 2, 3 là 3 chu kì nhỏ; chu kì 4, 5, 6, 7 là 4 chu kì lớn."
       ],
       [
@@ -5439,7 +5439,7 @@ const suppliedExams = [
           "C. XH<sub>4</sub>.",
           "D. H<sub>2</sub>X."
         ],
-        "B",
+        1,
         "X (Z = 15, P) thuộc nhóm VA &rArr; hóa trị với H là 8 - 5 = 3 &rArr; công thức là XH<sub>3</sub> (PH<sub>3</sub>)."
       ],
       [
@@ -5450,7 +5450,7 @@ const suppliedExams = [
           "C. K.",
           "D. Rb."
         ],
-        "D",
+        3,
         "Trong nhóm IA từ trên xuống dưới, tính kim loại tăng dần nên <sub>37</sub>Rb mạnh nhất."
       ],
       [
@@ -5461,7 +5461,7 @@ const suppliedExams = [
           "C. Nhóm VIA.",
           "D. Nhóm VIIA."
         ],
-        "B",
+        1,
         "Trong XO<sub>2</sub>, X có hóa trị cao nhất với O bằng 4 nên X thuộc nhóm IVA."
       ],
       [
@@ -5472,7 +5472,7 @@ const suppliedExams = [
           "C. Kích thước của hạt nhân nguyên tử.",
           "D. Khối lượng của nguyên tử."
         ],
-        "B",
+        1,
         "Độ âm điện đặc trưng cho khả năng hút electron của nguyên tử khi hình thành liên kết hóa học."
       ],
       [
@@ -5483,7 +5483,7 @@ const suppliedExams = [
           "C. <sub>18</sub>Ar.",
           "D. <sub>36</sub>Kr."
         ],
-        "B",
+        1,
         "Na (Z = 11) nhường 1e tạo Na<sup>+</sup> có 10e (1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>), giống cấu hình của <sub>10</sub>Ne."
       ]
     ],
@@ -5493,22 +5493,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Cấu hình electron của nguyên tử X là 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>3</sup>.",
-            "Đúng",
+            true,
             "15 electron điền vào các phân lớp đến 3p<sup>3</sup>."
           ],
           [
             "b) Nguyên tố X thuộc chu kì 3, nhóm VA trong bảng tuần hoàn.",
-            "Đúng",
+            true,
             "Có 3 lớp e (chu kì 3) và 5e lớp ngoài cùng (nhóm VA)."
           ],
           [
             "c) Ở trạng thái cơ bản, nguyên tử X có 1 electron độc thân.",
-            "Sai",
+            false,
             "Phân lớp 3p<sup>3</sup> có 3 orbital, mỗi orbital có 1e độc thân theo quy tắc Hund &rArr; có 3e độc thân."
           ],
           [
             "d) Oxide cao nhất của X là P<sub>2</sub>O<sub>5</sub> và hydroxide cao nhất là H<sub>3</sub>PO<sub>4</sub>.",
-            "Đúng",
+            true,
             "Ở nhóm VA, P có oxide cao nhất là P<sub>2</sub>O<sub>5</sub> và hydroxide cao nhất là H<sub>3</sub>PO<sub>4</sub>."
           ]
         ]
@@ -5518,22 +5518,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Hai nguyên tố O và F thuộc chu kì 2; hai nguyên tố Na và Mg thuộc chu kì 3.",
-            "Đúng",
+            true,
             "O (2s<sup>2</sup>2p<sup>4</sup>) và F (2s<sup>2</sup>2p<sup>5</sup>) ở chu kì 2; Na (3s<sup>1</sup>) và Mg (3s<sup>2</sup>) ở chu kì 3."
           ],
           [
             "b) Trong bốn nguyên tố trên, nguyên tố có độ âm điện lớn nhất là F.",
-            "Đúng",
+            true,
             "Fluorine có độ âm điện lớn nhất trong toàn bảng tuần hoàn."
           ],
           [
             "c) Bán kính nguyên tử của Mg lớn hơn bán kính nguyên tử của Na.",
-            "Sai",
+            false,
             "Cùng chu kì 3, Na (Z = 11) đứng trước Mg (Z = 12) nên R<sub>Na</sub> &gt; R<sub>Mg</sub>."
           ],
           [
             "d) Tính base của NaOH mạnh hơn tính base của Mg(OH)<sub>2</sub>.",
-            "Đúng",
+            true,
             "Vì tính kim loại của Na mạnh hơn Mg nên tính base của NaOH &gt; Mg(OH)<sub>2</sub>."
           ]
         ]
@@ -5592,7 +5592,7 @@ const suppliedExams = [
           "C. Khoảng 10 000 đến 100 000 lần (10<sup>4</sup> – 10<sup>5</sup> lần).",
           "D. Bằng nhau."
         ],
-        "C",
+        2,
         "Đường kính nguyên tử (~10<sup>-10</sup> m) lớn gấp khoảng 10<sup>4</sup> đến 10<sup>5</sup> lần đường kính hạt nhân (~10<sup>-14</sup> đến 10<sup>-15</sup> m)."
       ],
       [
@@ -5603,7 +5603,7 @@ const suppliedExams = [
           "C. AO p<sub>y</sub>.",
           "D. AO d."
         ],
-        "A",
+        0,
         "Các orbital s (1s, 2s, 3s...) luôn có dạng hình cầu."
       ],
       [
@@ -5614,7 +5614,7 @@ const suppliedExams = [
           "C. 4.",
           "D. 5."
         ],
-        "C",
+        2,
         "Cấu hình Z = 19: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>4s<sup>1</sup>, có 4 lớp electron."
       ],
       [
@@ -5625,7 +5625,7 @@ const suppliedExams = [
           "C. Chỉ điền vào 1 orbital duy nhất.",
           "D. Các electron có chiều tự quay ngược nhau."
         ],
-        "B",
+        1,
         "Quy tắc Hund: electron phân bố sao cho số electron độc thân là tối đa và có spin cùng chiều."
       ],
       [
@@ -5636,7 +5636,7 @@ const suppliedExams = [
           "C. 13.",
           "D. 14."
         ],
-        "C",
+        2,
         "Chu kì 3, nhóm IIIA có cấu hình 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>1</sup> &rArr; Z = 13 (Al)."
       ],
       [
@@ -5647,7 +5647,7 @@ const suppliedExams = [
           "C. Nguyên tố kim loại (các nguyên tố d và f).",
           "D. Nguyên tố s và p."
         ],
-        "C",
+        2,
         "Tất cả các nguyên tố nhóm B (nguyên tố d và f) đều là kim loại chuyển tiếp."
       ],
       [
@@ -5658,7 +5658,7 @@ const suppliedExams = [
           "C. C &lt; O &lt; N &lt; F.",
           "D. N &lt; C &lt; O &lt; F."
         ],
-        "A",
+        0,
         "Cùng chu kì 2 từ trái sang phải (Z = 6 đến Z = 9), độ âm điện tăng dần: C &lt; N &lt; O &lt; F."
       ],
       [
@@ -5669,7 +5669,7 @@ const suppliedExams = [
           "C. RO<sub>2</sub>.",
           "D. R<sub>2</sub>O<sub>3</sub>."
         ],
-        "C",
+        2,
         "R có 4e lớp ngoài cùng (nhóm IVA), hóa trị cao nhất với O là 4 &rArr; công thức oxide cao nhất là RO<sub>2</sub>."
       ],
       [
@@ -5680,7 +5680,7 @@ const suppliedExams = [
           "C. Al(OH)<sub>3</sub>.",
           "D. H<sub>2</sub>SO<sub>4</sub>."
         ],
-        "C",
+        2,
         "Al(OH)<sub>3</sub> là hydroxide lưỡng tính."
       ],
       [
@@ -5691,7 +5691,7 @@ const suppliedExams = [
           "C. <sub>17</sub>Cl.",
           "D. <sub>8</sub>O."
         ],
-        "A",
+        0,
         "<sub>11</sub>Na ([Ne]3s<sup>1</sup>) có 1e lớp ngoài cùng nên dễ nhường 1e tạo ion Na<sup>+</sup>."
       ],
       [
@@ -5702,7 +5702,7 @@ const suppliedExams = [
           "C. Không thay đổi.",
           "D. Tăng rồi giảm."
         ],
-        "A",
+        0,
         "Đi từ trên xuống dưới trong một nhóm A, số lớp electron tăng lên nên bán kính nguyên tử tăng dần."
       ],
       [
@@ -5713,7 +5713,7 @@ const suppliedExams = [
           "C. <sup>40</sup><sub>18</sub>Ar và <sup>40</sup><sub>20</sub>Ca.",
           "D. <sup>23</sup><sub>11</sub>Na và <sup>24</sup><sub>12</sub>Mg."
         ],
-        "B",
+        1,
         "<sup>16</sup><sub>8</sub>O và <sup>18</sup><sub>8</sub>O có cùng Z = 8 nên thuộc cùng nguyên tố oxygen."
       ]
     ],
@@ -5723,22 +5723,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Ở trạng thái cơ bản, nguyên tử Mg có 2 electron lớp ngoài cùng và nguyên tử Cl có 7 electron lớp ngoài cùng.",
-            "Đúng",
+            true,
             "Mg ([Ne]3s<sup>2</sup>) có 2e lớp ngoài cùng; Cl ([Ne]3s<sup>2</sup>3p<sup>5</sup>) có 7e lớp ngoài cùng."
           ],
           [
             "b) Mg và Cl đều thuộc chu kì 3 trong bảng tuần hoàn.",
-            "Đúng",
+            true,
             "Cả hai nguyên tử đều có 3 lớp electron."
           ],
           [
             "c) Bán kính nguyên tử của Mg nhỏ hơn bán kính nguyên tử của Cl.",
-            "Sai",
+            false,
             "Trong cùng chu kì 3, Z<sub>Mg</sub> &lt; Z<sub>Cl</sub> nên R<sub>Mg</sub> &gt; R<sub>Cl</sub>."
           ],
           [
             "d) Oxide cao nhất của Mg là MgO (basic oxide) còn oxide cao nhất của Cl là Cl<sub>2</sub>O<sub>7</sub> (acidic oxide).",
-            "Đúng",
+            true,
             "MgO là oxide base, Cl<sub>2</sub>O<sub>7</sub> là oxide acid."
           ]
         ]
@@ -5748,22 +5748,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Số hạt neutron trong đồng vị <sup>79</sup><sub>35</sub>Br là 44 và trong đồng vị <sup>81</sup><sub>35</sub>Br là 46.",
-            "Đúng",
+            true,
             "N<sub>1</sub> = 79 - 35 = 44; N<sub>2</sub> = 81 - 35 = 46."
           ],
           [
             "b) Phần trăm số nguyên tử của đồng vị <sup>79</sup><sub>35</sub>Br là 54,5%.",
-            "Đúng",
+            true,
             "(79x + 81(100 - x))/100 = 79,91 &hArr; 2x = 109 &rArr; x = 54,5%."
           ],
           [
             "c) Phần trăm số nguyên tử của đồng vị <sup>81</sup><sub>35</sub>Br là 45,5%.",
-            "Đúng",
+            true,
             "100% - 54,5% = 45,5%."
           ],
           [
             "d) Trong 1000 nguyên tử Bromine tự nhiên thì có khoảng 455 nguyên tử <sup>79</sup><sub>35</sub>Br.",
-            "Sai",
+            false,
             "Trong 1000 nguyên tử có khoảng 545 nguyên tử <sup>79</sup><sub>35</sub>Br và 455 nguyên tử <sup>81</sup><sub>35</sub>Br."
           ]
         ]
@@ -5822,7 +5822,7 @@ const suppliedExams = [
           "C. 60.",
           "D. 0."
         ],
-        "A",
+        0,
         "Trong hạt nhân chỉ có proton mang điện, nên số hạt mang điện trong hạt nhân là Z = 20."
       ],
       [
@@ -5833,7 +5833,7 @@ const suppliedExams = [
           "C. Tổng số hạt proton, neutron và electron.",
           "D. Hiệu số giữa neutron và proton."
         ],
-        "B",
+        1,
         "Số khối A = Z + N."
       ],
       [
@@ -5844,7 +5844,7 @@ const suppliedExams = [
           "C. Lớp M (n = 3).",
           "D. Lớp N (n = 4)."
         ],
-        "A",
+        0,
         "Lớp K (n = 1) ở gần hạt nhân nhất, có mức năng lượng thấp nhất nên liên kết chặt chẽ nhất với hạt nhân."
       ],
       [
@@ -5855,7 +5855,7 @@ const suppliedExams = [
           "C. 10.",
           "D. 14."
         ],
-        "C",
+        2,
         "Mọi phân lớp d đều có 5 AO và chứa tối đa 10 electron."
       ],
       [
@@ -5866,7 +5866,7 @@ const suppliedExams = [
           "C. <sub>13</sub>Al.",
           "D. <sub>14</sub>Si."
         ],
-        "C",
+        2,
         "Tổng số e = 2 + 2 + 6 + 2 + 1 = 13 &rArr; <sub>13</sub>Al."
       ],
       [
@@ -5877,7 +5877,7 @@ const suppliedExams = [
           "C. Số hạt neutron.",
           "D. Tổng số electron của nguyên tử."
         ],
-        "B",
+        1,
         "Đối với nguyên tố nhóm A, số thứ tự nhóm A bằng số electron lớp ngoài cùng."
       ],
       [
@@ -5888,7 +5888,7 @@ const suppliedExams = [
           "C. Số hạt proton.",
           "D. Tính chất hóa học hoàn toàn giống nhau."
         ],
-        "B",
+        1,
         "Các nguyên tố cùng chu kì có cùng số lớp electron."
       ],
       [
@@ -5899,7 +5899,7 @@ const suppliedExams = [
           "C. 5 và 5.",
           "D. 3 và 3."
         ],
-        "A",
+        0,
         "Nhóm VA có hóa trị cao nhất với O bằng 5, hóa trị với H bằng 8 - 5 = 3."
       ],
       [
@@ -5910,7 +5910,7 @@ const suppliedExams = [
           "C. Na &lt; Mg &lt; K.",
           "D. Mg &lt; K &lt; Na."
         ],
-        "A",
+        0,
         "Cùng chu kì 3: R<sub>Mg</sub> &lt; R<sub>Na</sub>; cùng nhóm IA: R<sub>Na</sub> &lt; R<sub>K</sub> &rArr; Mg &lt; Na &lt; K."
       ],
       [
@@ -5921,7 +5921,7 @@ const suppliedExams = [
           "C. CaO.",
           "D. SO<sub>3</sub>."
         ],
-        "D",
+        3,
         "SO<sub>3</sub> là oxide của phi kim ứng với hóa trị VI, là acidic oxide (tác dụng với nước tạo H<sub>2</sub>SO<sub>4</sub>)."
       ],
       [
@@ -5932,7 +5932,7 @@ const suppliedExams = [
           "C. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>7</sup>.",
           "D. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>5</sup>4s<sup>2</sup>."
         ],
-        "B",
+        1,
         "Vì mức năng lượng 4s thấp hơn 3d nên electron thứ 19 điền vào 4s<sup>1</sup>."
       ],
       [
@@ -5943,7 +5943,7 @@ const suppliedExams = [
           "C. F, Cl, Br, I.",
           "D. He, Ne, Ar."
         ],
-        "B",
+        1,
         "Be, Mg, Ca, Sr, Ba, Ra là các kim loại kiềm thổ thuộc nhóm IIA."
       ]
     ],
@@ -5953,22 +5953,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Số hiệu nguyên tử của X là Z = 17.",
-            "Đúng",
+            true,
             "Giải hệ {2Z + N = 52 ; N - Z = 1} &rArr; 3Z = 51 &rArr; Z = 17, N = 18."
           ],
           [
             "b) Kí hiệu nguyên tử của X là <sup>35</sup><sub>17</sub>Cl.",
-            "Đúng",
+            true,
             "A = 17 + 18 = 35 &rArr; <sup>35</sup><sub>17</sub>Cl."
           ],
           [
             "c) Ở trạng thái cơ bản, nguyên tử X có 3 electron độc thân.",
-            "Sai",
+            false,
             "Cấu hình Cl: [Ne]3s<sup>2</sup>3p<sup>5</sup>, chỉ có 1 electron độc thân ở phân lớp 3p."
           ],
           [
             "d) Hợp chất khí với hydrogen của X khi tan trong nước tạo thành dung dịch acid mạnh.",
-            "Đúng",
+            true,
             "Khí HCl tan trong nước tạo thành dung dịch hydrochloric acid (HCl) là một acid mạnh."
           ]
         ]
@@ -5978,22 +5978,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Nguyên tử của các nguyên tố nhóm IA đều có 1 electron ở lớp ngoài cùng (cấu hình ns<sup>1</sup>).",
-            "Đúng",
+            true,
             "Tất cả kim loại kiềm nhóm IA đều có cấu hình ngoài cùng ns<sup>1</sup>."
           ],
           [
             "b) Khi đi từ Li đến Cs, bán kính nguyên tử giảm dần.",
-            "Sai",
+            false,
             "Đi từ trên xuống dưới trong nhóm IA, số lớp e tăng nên bán kính nguyên tử tăng dần."
           ],
           [
             "c) Các kim loại nhóm IA đều tác dụng mạnh với nước ở điều kiện thường tạo dung dịch kiềm và giải phóng khí H<sub>2</sub>.",
-            "Đúng",
+            true,
             "2M + 2H<sub>2</sub>O &rarr; 2MOH + H<sub>2</sub>&uarr;."
           ],
           [
             "d) Độ âm điện giảm dần từ Li đến Cs.",
-            "Đúng",
+            true,
             "Trong một nhóm A từ trên xuống dưới, độ âm điện giảm dần."
           ]
         ]
@@ -6052,7 +6052,7 @@ const suppliedExams = [
           "C. Electron.",
           "D. Hạt nhân."
         ],
-        "C",
+        2,
         "m<sub>e</sub> &approx; 0,00055 amu, chỉ bằng khoảng 1/1836 khối lượng của proton hoặc neutron."
       ],
       [
@@ -6063,7 +6063,7 @@ const suppliedExams = [
           "C. Số lớp electron và chu kì.",
           "D. Nhiệt độ nóng chảy của đơn chất."
         ],
-        "A",
+        0,
         "Kí hiệu <sup>A</sup><sub>Z</sub>X cho biết số hiệu nguyên tử Z (số p = số e) và số khối A (A = Z + N)."
       ],
       [
@@ -6074,7 +6074,7 @@ const suppliedExams = [
           "C. Đều có hình cầu.",
           "D. Đều định hướng dọc theo trục Ox."
         ],
-        "A",
+        0,
         "Ba AO p có cùng mức năng lượng và định hướng theo 3 trục vuông góc Ox, Oy, Oz."
       ],
       [
@@ -6085,7 +6085,7 @@ const suppliedExams = [
           "C. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>3</sup>.",
           "D. 1s<sup>2</sup>2s<sup>1</sup>."
         ],
-        "B",
+        1,
         "Phân lớp 2s chỉ có 1 AO nên chứa tối đa 2 electron; viết 2s<sup>3</sup> vi phạm nguyên lí Pauli."
       ],
       [
@@ -6096,7 +6096,7 @@ const suppliedExams = [
           "C. 3s<sup>2</sup>3p<sup>6</sup>.",
           "D. 4s<sup>2</sup>."
         ],
-        "C",
+        2,
         "Cấu hình Ar (Z = 18): 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup> &rArr; lớp ngoài cùng là 3s<sup>2</sup>3p<sup>6</sup>."
       ],
       [
@@ -6107,7 +6107,7 @@ const suppliedExams = [
           "C. 32.",
           "D. 2."
         ],
-        "B",
+        1,
         "Chu kì 4 và chu kì 5 là hai chu kì lớn, mỗi chu kì có 18 nguyên tố (gồm 8 nguyên tố nhóm A và 10 nguyên tố nhóm B)."
       ],
       [
@@ -6118,7 +6118,7 @@ const suppliedExams = [
           "C. Ô 25, chu kì 4, nhóm VIIA.",
           "D. Ô 25, chu kì 3, nhóm VB."
         ],
-        "A",
+        0,
         "Z = 25 (Manganese, Mn), có 4 lớp e (chu kì 4), electron cuối điền vào 3d với tổng e hóa trị 5 + 2 = 7 &rArr; nhóm VIIB."
       ],
       [
@@ -6129,7 +6129,7 @@ const suppliedExams = [
           "C. Không đổi.",
           "D. Đều là các chất lưỡng tính."
         ],
-        "A",
+        0,
         "Trong một chu kì từ trái sang phải, tính base của hydroxide giảm dần và tính acid tăng dần."
       ],
       [
@@ -6140,7 +6140,7 @@ const suppliedExams = [
           "C. Cl.",
           "D. F."
         ],
-        "D",
+        3,
         "Trong chu kì 3: R<sub>P</sub> &gt; R<sub>S</sub> &gt; R<sub>Cl</sub>; trong nhóm VIIA: R<sub>Cl</sub> &gt; R<sub>F</sub> &rArr; F có bán kính nhỏ nhất."
       ],
       [
@@ -6151,7 +6151,7 @@ const suppliedExams = [
           "C. H<sub>2</sub>N.",
           "D. HN."
         ],
-        "A",
+        0,
         "Nitrogen thuộc nhóm VA, tạo hợp chất khí với hydrogen là ammonia (NH<sub>3</sub>)."
       ],
       [
@@ -6162,7 +6162,7 @@ const suppliedExams = [
           "C. 6.",
           "D. 8."
         ],
-        "C",
+        2,
         "Sulfur thuộc nhóm VIA nên có hóa trị cao nhất với oxygen bằng 6 (trong SO<sub>3</sub>)."
       ],
       [
@@ -6173,7 +6173,7 @@ const suppliedExams = [
           "C. 12.",
           "D. 6."
         ],
-        "A",
+        0,
         "Nguyên tử X nhận thêm 2e để tạo X<sup>2-</sup> (10e), nên nguyên tử X ban đầu có Z = 10 - 2 = 8 (Oxygen)."
       ]
     ],
@@ -6183,22 +6183,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Cả hai nguyên tố A và B đều là nguyên tố kim loại thuộc chu kì 3.",
-            "Đúng",
+            true,
             "A là Na ([Ne]3s<sup>1</sup>) và B là Al ([Ne]3s<sup>2</sup>3p<sup>1</sup>), đều là kim loại ở chu kì 3."
           ],
           [
             "b) Nguyên tố A là nguyên tố s, còn nguyên tố B là nguyên tố p.",
-            "Đúng",
+            true,
             "Electron cuối của Na điền vào 3s<sup>1</sup> (nguyên tố s); của Al điền vào 3p<sup>1</sup> (nguyên tố p)."
           ],
           [
             "c) Tính kim loại của B mạnh hơn tính kim loại của A.",
-            "Sai",
+            false,
             "Trong chu kì 3 từ trái sang phải, tính kim loại giảm nên Na (A) mạnh hơn Al (B)."
           ],
           [
             "d) Dung dịch NaOH có thể hòa tan được kết tủa Al(OH)<sub>3</sub>.",
-            "Đúng",
+            true,
             "Vì Al(OH)<sub>3</sub> lưỡng tính nên tan trong dung dịch kiềm mạnh NaOH: Al(OH)<sub>3</sub> + NaOH &rarr; Na[Al(OH)<sub>4</sub>]."
           ]
         ]
@@ -6208,22 +6208,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Hạt nhân <sup>12</sup><sub>6</sub>C có 6 neutron và hạt nhân <sup>13</sup><sub>6</sub>C có 7 neutron.",
-            "Đúng",
+            true,
             "N<sub>1</sub> = 12 - 6 = 6; N<sub>2</sub> = 13 - 6 = 7."
           ],
           [
             "b) Số electron ở lớp ngoài cùng của cả hai đồng vị đều bằng 4.",
-            "Đúng",
+            true,
             "Cả hai đều có Z = 6 (1s<sup>2</sup>2s<sup>2</sup>2p<sup>2</sup>) nên đều có 4 electron lớp ngoài cùng."
           ],
           [
             "c) Nguyên tử khối trung bình của Carbon xấp xỉ bằng 12,011.",
-            "Đúng",
+            true,
             "<span style=\"text-decoration:overline;\">A</span> = (12 . 98,89 + 13 . 1,11)/100 = 12,0111 &approx; 12,011."
           ],
           [
             "d) Hai đồng vị này nằm ở hai ô khác nhau trong bảng tuần hoàn.",
-            "Sai",
+            false,
             "Các đồng vị của cùng một nguyên tố có cùng Z = 6 nên nằm chung ở ô số 6 trong bảng tuần hoàn."
           ]
         ]
@@ -6282,7 +6282,7 @@ const suppliedExams = [
           "C. Khối lượng của 1 electron.",
           "D. 1/16 khối lượng của 1 nguyên tử oxygen-16."
         ],
-        "B",
+        1,
         "1 amu bằng 1/12 khối lượng của một nguyên tử đồng vị <sup>12</sup><sub>6</sub>C (xấp xỉ 1,6605.10<sup>-24</sup> g)."
       ],
       [
@@ -6293,7 +6293,7 @@ const suppliedExams = [
           "C. 65.",
           "D. 95."
         ],
-        "B",
+        1,
         "Số hạt không mang điện (neutron) N = A - Z = 65 - 30 = 35."
       ],
       [
@@ -6304,7 +6304,7 @@ const suppliedExams = [
           "C. 4.",
           "D. 5."
         ],
-        "C",
+        2,
         "Lớp thứ n (với n &le; 4) có n phân lớp; lớp N (n = 4) có 4 phân lớp là 4s, 4p, 4d, 4f."
       ],
       [
@@ -6315,7 +6315,7 @@ const suppliedExams = [
           "C. 2.",
           "D. 4."
         ],
-        "C",
+        2,
         "Cấu hình O (Z = 8): 1s<sup>2</sup>2s<sup>2</sup>2p<sup>4</sup>. Phân lớp 2p<sup>4</sup> có 3 AO, phân bố 4e nên có 1 AO ghép đôi và 2 AO chứa electron độc thân."
       ],
       [
@@ -6326,7 +6326,7 @@ const suppliedExams = [
           "C. Nguyên tố khí hiếm.",
           "D. Chất bán dẫn."
         ],
-        "A",
+        0,
         "Nguyên tử có 1, 2, 3e lớp ngoài cùng (trừ H, He, B) là các nguyên tố kim loại."
       ],
       [
@@ -6337,7 +6337,7 @@ const suppliedExams = [
           "C. Halogen.",
           "D. Chalcogen."
         ],
-        "C",
+        2,
         "Nhóm VIIA được gọi là nhóm Halogen."
       ],
       [
@@ -6348,7 +6348,7 @@ const suppliedExams = [
           "C. 14.",
           "D. 16."
         ],
-        "C",
+        2,
         "Cấu hình 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>2</sup> &rArr; Z = 14 (Silicon, Si)."
       ],
       [
@@ -6359,7 +6359,7 @@ const suppliedExams = [
           "C. Ca.",
           "D. Sr."
         ],
-        "D",
+        3,
         "Cùng nhóm IIA, từ trên xuống dưới số lớp e tăng nên <sub>38</sub>Sr (chu kì 5) có bán kính lớn nhất."
       ],
       [
@@ -6370,7 +6370,7 @@ const suppliedExams = [
           "C. RO<sub>3</sub>.",
           "D. R<sub>2</sub>O<sub>5</sub>."
         ],
-        "C",
+        2,
         "Hợp chất khí với H là H<sub>2</sub>R &rArr; R thuộc nhóm VIA &rArr; oxide cao nhất là RO<sub>3</sub>."
       ],
       [
@@ -6381,7 +6381,7 @@ const suppliedExams = [
           "C. Al<sub>2</sub>O<sub>3</sub>.",
           "D. P<sub>2</sub>O<sub>5</sub>."
         ],
-        "A",
+        0,
         "Na là kim loại kiềm mạnh nhất trong chu kì 3 nên Na<sub>2</sub>O có tính base mạnh nhất."
       ],
       [
@@ -6392,7 +6392,7 @@ const suppliedExams = [
           "C. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>4</sup>.",
           "D. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>."
         ],
-        "B",
+        1,
         "Ca (Z = 20) nhường 2e ở lớp 4s<sup>2</sup> tạo Ca<sup>2+</sup> có 18e: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>."
       ],
       [
@@ -6403,7 +6403,7 @@ const suppliedExams = [
           "C. Oxygen (O).",
           "D. Iron (Fe)."
         ],
-        "C",
+        2,
         "Oxygen là nguyên tố phổ biến nhất trong vỏ Trái Đất, tiếp theo là Silicon và Aluminium."
       ]
     ],
@@ -6413,22 +6413,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Nguyên tố X có số hiệu nguyên tử Z = 20 (Calcium) và là nguyên tố s.",
-            "Đúng",
+            true,
             "Tổng số e = 20, electron cuối cùng điền vào phân lớp 4s<sup>2</sup> nên là nguyên tố s."
           ],
           [
             "b) Trong bảng tuần hoàn, X nằm ở ô 20, chu kì 4, nhóm IIA.",
-            "Đúng",
+            true,
             "Z = 20 (ô 20), 4 lớp e (chu kì 4), 2e lớp ngoài cùng (nhóm IIA)."
           ],
           [
             "c) Ở trạng thái cơ bản, nguyên tử X có 2 electron độc thân.",
-            "Sai",
+            false,
             "Phân lớp 4s<sup>2</sup> đã bão hòa nên nguyên tử Ca không có electron độc thân nào (0e độc thân)."
           ],
           [
             "d) Hydroxide của X là Ca(OH)<sub>2</sub> tan một phần trong nước tạo dung dịch nước vôi trong có tính kiềm mạnh.",
-            "Đúng",
+            true,
             "Ca(OH)<sub>2</sub> là một base mạnh."
           ]
         ]
@@ -6438,22 +6438,22 @@ const suppliedExams = [
         "items": [
           [
             "a) N và O cùng thuộc chu kì 2; N và P cùng thuộc nhóm VA.",
-            "Đúng",
+            true,
             "N (2s<sup>2</sup>2p<sup>3</sup>), O (2s<sup>2</sup>2p<sup>4</sup>) ở chu kì 2; P (3s<sup>2</sup>3p<sup>3</sup>) cùng nhóm VA với N."
           ],
           [
             "b) Tính phi kim tăng dần theo thứ tự: P &lt; N &lt; O.",
-            "Đúng",
+            true,
             "Cùng nhóm VA: P &lt; N; cùng chu kì 2: N &lt; O &rArr; P &lt; N &lt; O."
           ],
           [
             "c) Bán kính nguyên tử giảm dần theo thứ tự: R<sub>P</sub> &gt; R<sub>N</sub> &gt; R<sub>O</sub>.",
-            "Đúng",
+            true,
             "R<sub>P</sub> &gt; R<sub>N</sub> (do P có 3 lớp e, N có 2 lớp e) và R<sub>N</sub> &gt; R<sub>O</sub> (cùng chu kì 2)."
           ],
           [
             "d) Tính acid của H<sub>3</sub>PO<sub>4</sub> mạnh hơn tính acid của HNO<sub>3</sub>.",
-            "Sai",
+            false,
             "Vì tính phi kim của N mạnh hơn P nên HNO<sub>3</sub> là acid mạnh hơn H<sub>3</sub>PO<sub>4</sub>."
           ]
         ]
@@ -6512,7 +6512,7 @@ const suppliedExams = [
           "C. Hạt neutron.",
           "D. Các đồng vị."
         ],
-        "B",
+        1,
         "Thí nghiệm bắn lá vàng bằng hạt alpha của Rutherford đã khám phá ra hạt nhân nguyên tử."
       ],
       [
@@ -6523,7 +6523,7 @@ const suppliedExams = [
           "C. Số khối A = 2 lần số proton.",
           "D. Số electron = Số neutron."
         ],
-        "B",
+        1,
         "Trong mọi nguyên tử trung hòa về điện: P = E = Z."
       ],
       [
@@ -6534,7 +6534,7 @@ const suppliedExams = [
           "C. 3s, 3p, 3d, 3f.",
           "D. Chỉ có 3s."
         ],
-        "B",
+        1,
         "Lớp M (n = 3) có 3 phân lớp: 3s, 3p, 3d."
       ],
       [
@@ -6545,7 +6545,7 @@ const suppliedExams = [
           "C. 2.",
           "D. 3."
         ],
-        "B",
+        1,
         "Cấu hình Na (Z = 11): 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>1</sup>, có 1 electron độc thân ở 3s<sup>1</sup>."
       ],
       [
@@ -6556,7 +6556,7 @@ const suppliedExams = [
           "C. <sub>26</sub>Fe.",
           "D. <sub>17</sub>Cl."
         ],
-        "C",
+        2,
         "<sub>26</sub>Fe ([Ar]3d<sup>6</sup>4s<sup>2</sup>) có electron cuối cùng điền vào phân lớp 3d nên là nguyên tố d."
       ],
       [
@@ -6567,7 +6567,7 @@ const suppliedExams = [
           "C. 8.",
           "D. 18."
         ],
-        "B",
+        1,
         "Chu kì 1 chỉ gồm 2 nguyên tố là Hydrogen (Z = 1) và Helium (Z = 2)."
       ],
       [
@@ -6578,7 +6578,7 @@ const suppliedExams = [
           "C. X<sub>2</sub>O<sub>5</sub>.",
           "D. XO<sub>3</sub>."
         ],
-        "C",
+        2,
         "X có 5e lớp ngoài cùng (nhóm VA) nên oxide cao nhất có dạng X<sub>2</sub>O<sub>5</sub>."
       ],
       [
@@ -6589,7 +6589,7 @@ const suppliedExams = [
           "C. <sub>13</sub>Al.",
           "D. <sub>14</sub>Si."
         ],
-        "A",
+        0,
         "Đầu chu kì 3 là kim loại kiềm <sub>11</sub>Na có tính kim loại mạnh nhất chu kì."
       ],
       [
@@ -6600,7 +6600,7 @@ const suppliedExams = [
           "C. H<sub>2</sub>CO<sub>3</sub> &gt; H<sub>3</sub>PO<sub>4</sub> &gt; HNO<sub>3</sub>.",
           "D. HNO<sub>3</sub> &gt; H<sub>2</sub>CO<sub>3</sub> &gt; H<sub>3</sub>PO<sub>4</sub>."
         ],
-        "A",
+        0,
         "Tính phi kim N &gt; P &gt; C nên tính acid giảm dần: HNO<sub>3</sub> &gt; H<sub>3</sub>PO<sub>4</sub> &gt; H<sub>2</sub>CO<sub>3</sub>."
       ],
       [
@@ -6611,7 +6611,7 @@ const suppliedExams = [
           "C. Số khối.",
           "D. Điện tích hạt nhân."
         ],
-        "B",
+        1,
         "Số hạt neutron của <sup>23</sup><sub>11</sub>Na là 23 - 11 = 12; của <sup>24</sup><sub>12</sub>Mg là 24 - 12 = 12. Vậy hai hạt nhân có cùng số hạt neutron."
       ],
       [
@@ -6622,7 +6622,7 @@ const suppliedExams = [
           "C. R(OH)<sub>3</sub>.",
           "D. H<sub>2</sub>RO<sub>3</sub>."
         ],
-        "B",
+        1,
         "Nhóm IIA có hóa trị II nên công thức hydroxide là R(OH)<sub>2</sub>."
       ],
       [
@@ -6633,7 +6633,7 @@ const suppliedExams = [
           "C. 2n.",
           "D. 2n + 2."
         ],
-        "B",
+        1,
         "Lớp thứ n (n &le; 4) có n<sup>2</sup> orbital và chứa tối đa 2n<sup>2</sup> electron."
       ]
     ],
@@ -6643,22 +6643,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Cả hai nguyên tố X và Y đều thuộc chu kì 3 và đều là nguyên tố p.",
-            "Đúng",
+            true,
             "X ([Ne]3s<sup>2</sup>3p<sup>2</sup>) và Y ([Ne]3s<sup>2</sup>3p<sup>4</sup>) đều ở chu kì 3 và là nguyên tố p."
           ],
           [
             "b) Ở trạng thái cơ bản, cả nguyên tử X và nguyên tử Y đều có 2 electron độc thân.",
-            "Đúng",
+            true,
             "Phân lớp 3p<sup>2</sup> của X có 2e độc thân; phân lớp 3p<sup>4</sup> của Y cũng có 2e độc thân."
           ],
           [
             "c) Tổng hệ số nguyên tối giản của các chất trong phương trình phản ứng giữa SO<sub>3</sub> và H<sub>2</sub>O là 3.",
-            "Đúng",
+            true,
             "SO<sub>3</sub> + H<sub>2</sub>O &rarr; H<sub>2</sub>SO<sub>4</sub> (tổng hệ số 1 + 1 + 1 = 3)."
           ],
           [
             "d) Tính acid của H<sub>2</sub>SiO<sub>3</sub> mạnh hơn tính acid của H<sub>2</sub>SO<sub>4</sub>.",
-            "Sai",
+            false,
             "Trong chu kì 3, S là phi kim mạnh hơn Si rất nhiều nên H<sub>2</sub>SO<sub>4</sub> là acid mạnh còn H<sub>2</sub>SiO<sub>3</sub> là acid rất yếu."
           ]
         ]
@@ -6668,22 +6668,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Cấu hình electron của nguyên tử R là 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>4</sup>.",
-            "Đúng",
+            true,
             "Tổng e trên s = 6 (gồm 1s<sup>2</sup>, 2s<sup>2</sup>, 3s<sup>2</sup>) và lớp ngoài cùng (n = 3) có 6e &rArr; 3s<sup>2</sup>3p<sup>4</sup>."
           ],
           [
             "b) Nguyên tố R có số hiệu nguyên tử Z = 16.",
-            "Đúng",
+            true,
             "Z = 2 + 2 + 6 + 2 + 4 = 16."
           ],
           [
             "c) Trong hợp chất khí với hydrogen (H<sub>2</sub>R), nguyên tố R chiếm 94,12% về khối lượng (biết M<sub>R</sub> = 32).",
-            "Đúng",
+            true,
             "Trong H<sub>2</sub>S: %S = (32 / 34) . 100% &approx; 94,12%."
           ],
           [
             "d) Bán kính nguyên tử của R lớn hơn bán kính nguyên tử của Phosphorus (Z = 15).",
-            "Sai",
+            false,
             "Cùng chu kì 3, Z<sub>S</sub> (16) &gt; Z<sub>P</sub> (15) nên R<sub>S</sub> &lt; R<sub>P</sub>."
           ]
         ]
@@ -6742,7 +6742,7 @@ const suppliedExams = [
           "C. +1 và 0.",
           "D. 0 và -1."
         ],
-        "A",
+        0,
         "Điện tích tương đối của proton là +1 (hay 1+) và của electron là -1 (hay 1-)."
       ],
       [
@@ -6753,7 +6753,7 @@ const suppliedExams = [
           "C. 19.",
           "D. 28."
         ],
-        "A",
+        0,
         "Số electron E = Z = 9."
       ],
       [
@@ -6764,7 +6764,7 @@ const suppliedExams = [
           "C. 3p.",
           "D. 3d."
         ],
-        "D",
+        3,
         "Theo trật tự mức năng lượng: 1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d, nên 3d có mức năng lượng cao hơn 4s."
       ],
       [
@@ -6775,7 +6775,7 @@ const suppliedExams = [
           "C. [Ar]3d<sup>2</sup>.",
           "D. [Kr]4s<sup>2</sup>."
         ],
-        "B",
+        1,
         "Khí hiếm đứng ngay trước Ca (Z = 20) là Argon (Ar, Z = 18), nên cấu hình viết gọn là [Ar]4s<sup>2</sup>."
       ],
       [
@@ -6786,7 +6786,7 @@ const suppliedExams = [
           "C. 7.",
           "D. 8."
         ],
-        "C",
+        2,
         "Thuộc nhóm VIIA nên nguyên tử X có 7 electron ở lớp ngoài cùng."
       ],
       [
@@ -6797,7 +6797,7 @@ const suppliedExams = [
           "C. Nhóm VIIA.",
           "D. Nhóm VIIIA."
         ],
-        "D",
+        3,
         "Khí hiếm (He, Ne, Ar, Kr, Xe, Rn, Og) thuộc nhóm VIIIA."
       ],
       [
@@ -6808,7 +6808,7 @@ const suppliedExams = [
           "C. C.",
           "D. N."
         ],
-        "A",
+        0,
         "Trong chu kì 2 từ trái sang phải bán kính giảm dần, nên <sub>3</sub>Li đứng đầu chu kì có bán kính lớn nhất."
       ],
       [
@@ -6819,7 +6819,7 @@ const suppliedExams = [
           "C. Cl<sub>2</sub>O<sub>5</sub>.",
           "D. Cl<sub>2</sub>O<sub>7</sub>."
         ],
-        "D",
+        3,
         "Chlorine thuộc nhóm VIIA có hóa trị cao nhất với O bằng 7 &rArr; Cl<sub>2</sub>O<sub>7</sub>."
       ],
       [
@@ -6830,7 +6830,7 @@ const suppliedExams = [
           "C. Không đổi.",
           "D. Vừa tăng vừa giảm."
         ],
-        "A",
+        0,
         "Trong một nhóm A từ trên xuống dưới, tính kim loại tăng dần nên tính base của các hydroxide tăng dần."
       ],
       [
@@ -6841,7 +6841,7 @@ const suppliedExams = [
           "C. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>.",
           "D. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>4s<sup>1</sup>."
         ],
-        "C",
+        2,
         "Nguyên tử Cl (17e) nhận thêm 1e tạo ion Cl<sup>-</sup> (18e): 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>."
       ],
       [
@@ -6852,7 +6852,7 @@ const suppliedExams = [
           "C. Nhóm VA.",
           "D. Nhóm VIA."
         ],
-        "C",
+        2,
         "Hợp chất khí với H là RH<sub>3</sub> (hóa trị 3 với H) &rArr; thuộc nhóm (8 - 3) = VA."
       ],
       [
@@ -6863,7 +6863,7 @@ const suppliedExams = [
           "C. Mỗi AO chứa tối đa 6 electron.",
           "D. Mọi AO đều có dạng hình số tám nổi."
         ],
-        "B",
+        1,
         "Theo mô hình hiện đại, AO là vùng không gian quanh hạt nhân có xác suất có mặt electron lớn nhất (khoảng 90%)."
       ]
     ],
@@ -6873,22 +6873,22 @@ const suppliedExams = [
         "items": [
           [
             "a) X và Y thuộc cùng nhóm IIA và ở hai chu kì liên tiếp (chu kì 3 và chu kì 4).",
-            "Đúng",
+            true,
             "Mg ([Ne]3s<sup>2</sup>) ở chu kì 3, nhóm IIA; Ca ([Ar]4s<sup>2</sup>) ở chu kì 4, nhóm IIA."
           ],
           [
             "b) Bán kính nguyên tử của X lớn hơn bán kính nguyên tử của Y.",
-            "Sai",
+            false,
             "Cùng nhóm IIA, Ca có 4 lớp e còn Mg có 3 lớp e nên R<sub>Ca</sub> &gt; R<sub>Mg</sub>."
           ],
           [
             "c) Tính kim loại của Y mạnh hơn tính kim loại của X.",
-            "Đúng",
+            true,
             "Trong nhóm IIA từ trên xuống dưới, tính kim loại tăng nên Ca mạnh hơn Mg."
           ],
           [
             "d) Tính base của Ca(OH)<sub>2</sub> mạnh hơn tính base của Mg(OH)<sub>2</sub>.",
-            "Đúng",
+            true,
             "Vì tính kim loại của Ca &gt; Mg nên tính base của Ca(OH)<sub>2</sub> &gt; Mg(OH)<sub>2</sub>."
           ]
         ]
@@ -6898,22 +6898,22 @@ const suppliedExams = [
         "items": [
           [
             "a) Hạt nhân nguyên tử <sup>56</sup><sub>26</sub>Fe có 26 proton và 30 neutron.",
-            "Đúng",
+            true,
             "Z = 26; N = 56 - 26 = 30."
           ],
           [
             "b) Cấu hình electron của nguyên tử Fe ở trạng thái cơ bản là [Ar]3d<sup>6</sup>4s<sup>2</sup>.",
-            "Đúng",
+            true,
             "18e của [Ar] + 6e trên 3d + 2e trên 4s = 26e."
           ],
           [
             "c) Khi tạo thành ion Fe<sup>2+</sup>, nguyên tử Fe nhường đi 2 electron ở phân lớp 3d.",
-            "Sai",
+            false,
             "Khi tạo thành ion Fe<sup>2+</sup>, nguyên tử Fe nhường 2e ở lớp ngoài cùng 4s<sup>2</sup> trước, còn lại cấu hình [Ar]3d<sup>6</sup>."
           ],
           [
             "d) Nguyên tố Fe nằm ở ô 26, chu kì 4, nhóm VIIIB trong bảng tuần hoàn.",
-            "Đúng",
+            true,
             "Tổng số e hóa trị trên 3d<sup>6</sup>4s<sup>2</sup> là 8 nên Fe thuộc nhóm VIIIB, chu kì 4."
           ]
         ]
