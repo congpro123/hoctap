@@ -145,7 +145,7 @@ function setNav(view) {
   document.querySelectorAll('.subject-link').forEach(x => x.classList.toggle('active', view == 'subject-' + x.dataset.subjectto));
   const crumbEl = document.getElementById('crumb');
   if (crumbEl) {
-    crumbEl.textContent = ({ home: 'TỔNG QUAN', subjects: 'KHO ĐỀ THI', history: 'LỊCH SỬ LÀM BÀI', exam: 'PHÒNG THI', result: 'KẾT QUẢ' })[view] || 'MÔN HỌC';
+    crumbEl.textContent = ({ home: 'TỔNG QUAN', subjects: 'KHO ĐỀ THI', handbook: 'SỔ TAY KIẾN THỨC', history: 'LỊCH SỬ LÀM BÀI', exam: 'PHÒNG THI', result: 'KẾT QUẢ' })[view] || 'MÔN HỌC';
   }
 }
 
@@ -647,7 +647,7 @@ document.addEventListener('click', e => {
   const b = e.target.closest('[data-start],[data-viewto],[data-subjectto],[data-submit],[data-jump]');
   if (!b) return;
   if (b.dataset.start) startExam(b.dataset.start);
-  else if (b.dataset.viewto) ({ home, subjects: () => catalog(), history })[b.dataset.viewto]();
+  else if (b.dataset.viewto) ({ home, subjects: () => catalog(), handbook: () => (typeof renderHandbook === 'function' ? renderHandbook() : null), history })[b.dataset.viewto]();
   else if (b.dataset.subjectto !== undefined) catalog(Number(b.dataset.subjectto));
   else if (b.dataset.submit) submitExam('manual');
   else if (b.dataset.jump) {
@@ -672,6 +672,10 @@ if (typeof window !== 'undefined' && window.addEventListener) {
     if (h === '#history') history();
     else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
     else if (h === '#subjects') catalog();
+    else if (h === '#handbook' || h.startsWith('#handbook-')) {
+      const part = h.replace('#handbook', '').replace(/^-/, '');
+      if (typeof renderHandbook === 'function') renderHandbook(part || 'all');
+    }
     else home();
   });
 }
