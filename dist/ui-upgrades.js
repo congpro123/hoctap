@@ -164,4 +164,16 @@ document.addEventListener('click',event=>{
     }
   }
 });
-home();
+if (typeof location !== 'undefined' && location.hash) {
+  const h = location.hash;
+  if (h === '#history') history();
+  else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
+  else if (h === '#subjects') catalog();
+  else if (h === '#handbook' || h.startsWith('#handbook-')) {
+    const part = h.replace('#handbook', '').replace(/^-/, '');
+    if (typeof renderHandbook === 'function') renderHandbook(part || 'all');
+  }
+  else home();
+} else {
+  home();
+}

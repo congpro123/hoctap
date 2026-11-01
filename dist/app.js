@@ -644,10 +644,37 @@ function renderResult(r) {
 
 // Lắng nghe sự kiện toàn cục
 document.addEventListener('click', e => {
+  // Bắt tất cả các liên kết / nút mở Sổ tay kiến thức
+  const hbLink = e.target.closest('a[href="#handbook"], a[href^="#handbook-"], [data-view="handbook"], [data-viewto="handbook"]');
+  if (hbLink) {
+    const href = hbLink.getAttribute('href') || '#handbook';
+    const part = href.replace('#handbook', '').replace(/^-/, '');
+    try { if (typeof window !== 'undefined' && window.location) window.location.hash = href; } catch (_) {}
+    if (typeof renderHandbook === 'function') {
+      renderHandbook(part || 'all');
+      return;
+    }
+  }
+
+  // Bắt các nút điều hướng sidebar .nav-link
+  const navLink = e.target.closest('.nav-link[data-view]');
+  if (navLink) {
+    const v = navLink.dataset.view;
+    if (v === 'handbook') {
+      if (typeof renderHandbook === 'function') { renderHandbook('all'); return; }
+    } else if (v === 'home') {
+      home(); return;
+    } else if (v === 'subjects') {
+      catalog(); return;
+    } else if (v === 'history') {
+      history(); return;
+    }
+  }
+
   const b = e.target.closest('[data-start],[data-viewto],[data-subjectto],[data-submit],[data-jump]');
   if (!b) return;
   if (b.dataset.start) startExam(b.dataset.start);
-  else if (b.dataset.viewto) ({ home, subjects: () => catalog(), handbook: () => (typeof renderHandbook === 'function' ? renderHandbook() : null), history })[b.dataset.viewto]();
+  else if (b.dataset.viewto) ({ home, subjects: () => catalog(), handbook: () => (typeof renderHandbook === 'function' ? renderHandbook('all') : null), history })[b.dataset.viewto]();
   else if (b.dataset.subjectto !== undefined) catalog(Number(b.dataset.subjectto));
   else if (b.dataset.submit) submitExam('manual');
   else if (b.dataset.jump) {

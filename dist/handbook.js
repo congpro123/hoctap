@@ -223,6 +223,8 @@ const handbookData = {
 };
 
 function renderHandbook(selectedSubject, filterQuery) {
+  if (typeof setNav === 'function') setNav('handbook');
+  if (typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0);
   const activeSubject = (selectedSubject && handbookData[selectedSubject]) ? selectedSubject : 'all';
   const query = (filterQuery || '').trim().toLowerCase();
 
@@ -309,6 +311,7 @@ function renderHandbook(selectedSubject, filterQuery) {
   if (!app) return;
 
   app.innerHTML = `
+    <div class="content">
     <div class="handbook-container">
       <div class="handbook-hero">
         <div>
@@ -376,6 +379,7 @@ function renderHandbook(selectedSubject, filterQuery) {
         </a>
       </div>
     </div>
+    </div>
   `;
 
   // Giữ focus cho ô input nếu người dùng đang gõ tìm kiếm
@@ -392,3 +396,5 @@ function renderHandbook(selectedSubject, filterQuery) {
     crumb.textContent = 'SỔ TAY CÔNG THỨC & LÝ THUYẾT';
   }
 }
+
+if (typeof window !== "undefined") { window.renderHandbook = renderHandbook; window.handbookData = handbookData; }
