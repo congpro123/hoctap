@@ -1,4 +1,8 @@
 module.exports = [
+  // =========================================================================
+  // ĐỀ 06: THPT HỒ NGHINH – QUẢNG NAM
+  // Trọng tâm: Cl (Z=17, 35/37), S (Z=16), O (Z=8), Fe2+ (26, 30)
+  // =========================================================================
   {
     id: "hoahoc-10-de-06",
     title: "Hóa học 10 - Đề 06 - Trường THPT Hồ Nghinh – Quảng Nam (Đề chính thức Giữa kì I)",
@@ -9,247 +13,247 @@ module.exports = [
     year: "2024–2025",
     sourceUrl: "https://tailieu.vn/doc/de-thi-giua-ki-1-hoa-hoc-lop-10-to-huu-2866641.html",
     questions: [
-      // 1. Mở đầu hóa học (Biết)
+      // 1. Nhập môn Hóa học (Biết)
       [
-        "Quy tắc an toàn nào sau đây là BẮT BUỘC khi tiến hành thí nghiệm trong phòng thực hành Hóa học?",
+        "Khi đun nóng dung dịch trong ống nghiệm trên ngọn lửa đèn cồn, thao tác nào sau đây là ĐÚNG để đảm bảo an toàn?",
         [
-          "A. Nếm thử hóa chất để xác định vị chua hoặc mặn của chất.",
-          "B. Tự ý trộn lẫn các hóa chất với nhau khi chưa có hướng dẫn của giáo viên.",
-          "C. Đeo kính bảo hộ, găng tay và áo blouse; tuyệt đối không ngửi trực tiếp hoặc nếm hóa chất.",
-          "D. Đổ trực tiếp hóa chất thừa sau thí nghiệm vào bồn rửa sinh hoạt."
+          "A. Hướng miệng ống nghiệm về phía mặt mình để quan sát phản ứng xảy ra.",
+          "B. Hướng miệng ống nghiệm về phía không có người.",
+          "C. Để đáy ống nghiệm chạm trực tiếp vào bấc đèn cồn.",
+          "D. Đậy kín nút ống nghiệm khi đun sôi chất lỏng."
         ],
-        2,
-        "Quy tắc an toàn phòng thí nghiệm: Phải trang bị đầy đủ kính, găng tay, áo blouse; tuyệt đối không ngửi trực tiếp (chỉ dùng tay phẩy nhẹ hơi hóa chất), không nếm và xử lí chất thải theo quy định."
+        1,
+        "Quy tắc an toàn: Khi đun nóng chất lỏng trong ống nghiệm, phải nghiêng ống nghiệm khoảng 45–60 độ và hướng miệng ống nghiệm về phía không có người để tránh hóa chất sôi bắn vào người."
       ],
       // 2. Thành phần nguyên tử (Biết)
       [
-        "Nguyên tử trung hòa về điện tích vì:",
+        "Hạt nào sau đây mang điện tích âm trong cấu tạo nguyên tử?",
         [
-          "A. Không chứa các hạt mang điện.",
-          "B. Số hạt proton mang điện dương bằng số hạt electron mang điện âm.",
-          "C. Số hạt proton bằng số hạt neutron.",
-          "D. Khối lượng của proton bằng khối lượng của electron."
+          "A. Proton.",
+          "B. Neutron.",
+          "C. Electron.",
+          "D. Hạt nhân."
         ],
-        1,
-        "Nguyên tử trung hòa điện vì điện tích của mỗi proton là +1, điện tích mỗi electron là -1 và số proton luôn bằng số electron trong nguyên tử trung hòa."
+        2,
+        "Electron mang điện tích âm (-1,602 &times; 10<sup>-19</sup> C, quy ước bằng -1). Proton mang điện dương (+1), neutron không mang điện."
       ],
-      // 3. Thành phần nguyên tử (Biết)
+      // 3. Kích thước, khối lượng nguyên tử (Biết)
       [
-        "Kích thước của nguyên tử thường được đo bằng đơn vị angstrom (&Aring;). Một angstrom bằng:",
+        "Đơn vị khối lượng nguyên tử (amu) được định nghĩa bằng bao nhiêu khối lượng của một nguyên tử đồng vị carbon-12 (<sup>12</sup>C)?",
         [
-          "A. 10<sup>-10</sup> m hay 10<sup>-8</sup> cm.",
-          "B. 10<sup>-9</sup> m hay 10<sup>-7</sup> cm.",
-          "C. 10<sup>-12</sup> m.",
-          "D. 10<sup>-6</sup> m."
+          "A. 1/16.",
+          "B. 1/14.",
+          "C. 1/12.",
+          "D. 1/10."
         ],
-        0,
-        "Đơn vị đo kích thước nguyên tử: 1 &Aring; = 10<sup>-10</sup> m = 10<sup>-8</sup> cm = 0,1 nm."
+        2,
+        "1 amu quy ước bằng đúng 1/12 khối lượng của một nguyên tử đồng vị <sup>12</sup>C, xấp xỉ 1,6605 &times; 10<sup>-27</sup> kg."
       ],
-      // 4. Thành phần nguyên tử (Hiểu)
+      // 4. Mối liên hệ các loại hạt (Hiểu)
       [
-        "Khối lượng của một nguyên tử chủ yếu tập trung ở đâu?",
+        "Khối lượng của nguyên tử tập trung hầu như hoàn toàn ở hạt nhân là vì:",
         [
-          "A. Phân bố đều khắp thể tích nguyên tử.",
-          "B. Tập trung hầu như hoàn toàn ở hạt nhân nguyên tử.",
-          "C. Tập trung ở lớp vỏ electron.",
-          "D. Nằm ở khoảng không gian giữa hạt nhân và lớp vỏ."
+          "A. Số hạt proton luôn nhiều hơn số hạt electron.",
+          "B. Thể tích hạt nhân chiếm hầu hết thể tích của nguyên tử.",
+          "C. Khối lượng của electron rất bé (khoảng 0,00055 amu), không đáng kể so với proton và neutron (khoảng 1 amu).",
+          "D. Các hạt neutron có khối lượng rất lớn so với toàn bộ nguyên tử."
         ],
-        1,
-        "Do khối lượng electron rất bé (m<sub>e</sub> &approx; 0,00055 amu) so với proton (1 amu) và neutron (1 amu), nên khối lượng nguyên tử tập trung hơn 99,9% ở hạt nhân."
+        2,
+        "Khối lượng proton &approx; 1 amu, neutron &approx; 1 amu, trong khi electron chỉ &approx; 0,00055 amu (nhỏ hơn khoảng 1836 lần). Do đó hơn 99,9% khối lượng nguyên tử tập trung ở hạt nhân."
       ],
       // 5. Nguyên tố hóa học (Biết)
       [
-        "Hai nguyên tử <sup>12</sup><sub>6</sub>C và <sup>14</sup><sub>6</sub>C là hai đồng vị của nhau vì:",
+        "Hai nguyên tử <sup>16</sup><sub>8</sub>O và <sup>18</sup><sub>8</sub>O là:",
         [
-          "A. Có cùng số khối A = 12.",
-          "B. Có cùng số proton (Z = 6) nhưng khác nhau về số neutron.",
-          "C. Có cùng số neutron trong hạt nhân.",
-          "D. Có tính chất hóa học hoàn toàn khác nhau."
+          "A. Hai nguyên tố hóa học khác nhau.",
+          "B. Hai đồng vị của cùng một nguyên tố hóa học oxygen.",
+          "C. Hai đồng phân của nhau.",
+          "D. Hai phân tử khác nhau."
         ],
         1,
-        "Hai nguyên tử cùng số proton Z = 6 (cùng là Carbon) nhưng khác nhau số neutron (6 neutron và 8 neutron) nên là đồng vị của nhau."
+        "Cả hai nguyên tử đều có cùng số proton Z = 8 (cùng nguyên tố oxygen) nhưng khác số neutron (8 neutron và 10 neutron) nên là hai đồng vị của nhau."
       ],
-      // 6. Nguyên tố hóa học (Biết)
+      // 6. Kí hiệu nguyên tử (Hiểu)
       [
-        "Kí hiệu nguyên tử <sup>35</sup><sub>17</sub>Cl cho biết thông tin nào sau đây?",
+        "Kí hiệu nguyên tử <sup>35</sup><sub>17</sub>Cl cho biết nguyên tử chlorine có thành phần hạt gồm:",
         [
-          "A. Số hiệu nguyên tử bằng 35, số khối bằng 17.",
-          "B. Hạt nhân có 17 neutron và 18 proton.",
-          "C. Số hiệu nguyên tử bằng 17, số khối bằng 35, hạt nhân có 18 neutron.",
-          "D. Nguyên tử có 35 electron ở lớp vỏ."
+          "A. 17 proton, 18 neutron, 17 electron.",
+          "B. 17 proton, 35 neutron, 17 electron.",
+          "C. 18 proton, 17 neutron, 18 electron.",
+          "D. 35 proton, 17 neutron, 35 electron."
         ],
-        2,
-        "Với <sup>35</sup><sub>17</sub>Cl: Z = 17 (17 proton, 17 electron), số khối A = 35 &rArr; số neutron N = 35 - 17 = 18."
+        0,
+        "Z = 17 &rArr; số p = số e = 17. Số neutron N = A - Z = 35 - 17 = 18 hạt."
       ],
-      // 7. Cấu trúc lớp vỏ electron (Biết)
+      // 7. Mô hình nguyên tử (Biết)
       [
-        "Nguyên lí vững bền quy định trật tự điền electron vào các phân lớp trong nguyên tử ở trạng thái cơ bản là:",
+        "Theo mô hình hiện đại về cấu tạo nguyên tử, electron chuyển động xung quanh hạt nhân:",
         [
-          "A. Điền từ các phân lớp có mức năng lượng cao xuống thấp.",
-          "B. Điền lần lượt vào các phân lớp có mức năng lượng từ thấp đến cao.",
-          "C. Điền ngẫu nhiên vào bất kì phân lớp nào còn trống.",
-          "D. Điền đầy các phân lớp d trước khi điền phân lớp s."
+          "A. Theo các quỹ đạo tròn hoặc elip cố định xác định như hành tinh quay quanh Mặt Trời.",
+          "B. Rất nhanh, không theo quỹ đạo xác định nào, tạo thành đám mây electron.",
+          "C. Luôn chuyển động thẳng đều từ tâm ra ngoài biên.",
+          "D. Đứng yên tại các vị trí orbital cố định."
         ],
         1,
-        "Nguyên lí vững bền: Ở trạng thái cơ bản, các electron trong nguyên tử lần lượt chiếm các orbital có mức năng lượng từ thấp đến cao: 1s 2s 2p 3s 3p 4s 3d 4p..."
+        "Mô hình hiện đại chỉ ra electron chuyển động cực nhanh trong không gian xung quanh hạt nhân, không theo quỹ đạo xác định nào, tạo thành đám mây xác suất tìm thấy electron."
       ],
-      // 8. Cấu trúc lớp vỏ electron (Biết)
+      // 8. Orbital nguyên tử (Biết)
       [
-        "Trật tự mức năng lượng nào sau đây là ĐÚNG theo quy tắc Klechkowski?",
+        "Phân lớp electron p gồm có bao nhiêu orbital nguyên tử (AO)?",
+        [
+          "A. 1 AO.",
+          "B. 3 AO.",
+          "C. 5 AO.",
+          "D. 7 AO."
+        ],
+        1,
+        "Phân lớp s có 1 AO, phân lớp p có 3 AO (p<sub>x</sub>, p<sub>y</sub>, p<sub>z</sub>), phân lớp d có 5 AO, phân lớp f có 7 AO."
+      ],
+      // 9. Lớp và phân lớp (Biết)
+      [
+        "Trật tự các mức năng lượng của các phân lớp electron tăng dần theo quy tắc Klechkowski là:",
         [
           "A. 1s < 2s < 2p < 3s < 3p < 3d < 4s.",
-          "B. 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p.",
+          "B. 1s < 2s < 2p < 3s < 3p < 4s < 3d.",
           "C. 1s < 2s < 3s < 2p < 3p < 4s < 3d.",
           "D. 1s < 2s < 2p < 3s < 4s < 3p < 3d."
         ],
         1,
-        "Thứ tự mức năng lượng tăng dần: 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p < 5s... (chú ý 4s có mức năng lượng thấp hơn 3d)."
+        "Theo quy tắc Klechkowski: Phân lớp 4s có mức năng lượng thấp hơn phân lớp 3d, do đó trật tự là: 1s < 2s < 2p < 3s < 3p < 4s < 3d."
       ],
-      // 9. Cấu trúc lớp vỏ electron (Biết)
+      // 10. Cấu hình electron (Hiểu)
       [
-        "Phân lớp electron nào sau đây là phân lớp bão hòa (chứa tối đa số electron)?",
+        "Cấu hình electron ở trạng thái cơ bản của nguyên tử sulfur (S, Z = 16) là:",
         [
-          "A. 2p<sup>4</sup>.",
-          "B. 3s<sup>1</sup>.",
-          "C. 3p<sup>6</sup>.",
-          "D. 3d<sup>8</sup>."
-        ],
-        2,
-        "Phân lớp bão hòa chứa tối đa electron: s<sup>2</sup>, p<sup>6</sup>, d<sup>10</sup>, f<sup>14</sup>. Do đó 3p<sup>6</sup> là phân lớp bão hòa."
-      ],
-      // 10. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Cấu hình electron ở trạng thái cơ bản của nguyên tử potassium (K, Z = 19) là:",
-        [
-          "A. [Ne] 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>1</sup>.",
-          "B. [Ar] 4s<sup>1</sup>.",
-          "C. [Ar] 3d<sup>1</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup> 4s<sup>2</sup>."
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup> 3p<sup>5</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup>."
         ],
         1,
-        "Potassium (Z = 19): điền 18e vào [Ar], electron thứ 19 điền vào 4s &rArr; Cấu hình là [Ar] 4s<sup>1</sup>."
+        "Z = 16: Điền 16 electron theo trật tự mức năng lượng: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>4</sup>."
       ],
-      // 11. Cấu trúc lớp vỏ electron (Hiểu)
+      // 11. Mối liên hệ cấu hình và tính chất (Hiểu)
       [
-        "Anion O<sup>2-</sup> được tạo thành khi nguyên tử oxygen (Z = 8) nhận thêm 2 electron. Cấu hình electron của anion O<sup>2-</sup> là:",
+        "Nguyên tử của một nguyên tố có 7 electron ở lớp ngoài cùng thường thuộc loại:",
+        [
+          "A. Kim loại mạnh.",
+          "B. Phi kim điển hình (nhóm halogen).",
+          "C. Khí hiếm.",
+          "D. Kim loại chuyển tiếp."
+        ],
+        1,
+        "Nguyên tử có 7e ở lớp ngoài cùng (cấu hình ns<sup>2</sup> np<sup>5</sup>) có xu hướng nhận thêm 1e để đạt bát cấu 8e bền vững, là các phi kim điển hình (Halogen, nhóm VIIA)."
+      ],
+      // 12. Cấu hình e của ion (Vận dụng)
+      [
+        "Anion O<sup>2-</sup> được hình thành khi nguyên tử oxygen (Z = 8) nhận thêm 2 electron. Cấu hình electron của anion O<sup>2-</sup> là:",
         [
           "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> (hay [Ne]).",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>.",
-          "D. [Ar]."
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>."
         ],
         1,
-        "Oxygen (Z = 8): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup> + 2e &rarr; O<sup>2-</sup>: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> có cấu hình bão hòa giống khí hiếm Neon [Ne]."
+        "Oxygen (Z = 8) có cấu hình 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>. Khi nhận 2e tạo O<sup>2-</sup> có 8 + 2 = 10 electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> (giống khí hiếm Ne)."
       ],
-      // 12. Cấu trúc lớp vỏ electron (Hiểu)
+      // 13. Nguyên tắc sắp xếp BTH (Biết)
       [
-        "Cho cấu hình electron của 3 nguyên tố: X (1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>), Y (1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>), Z (1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>). Phân loại bản chất của X, Y, Z lần lượt là:",
+        "Trong Bảng tuần hoàn hiện đại, các nguyên tố hóa học được sắp xếp theo chiều tăng dần của:",
         [
-          "A. Kim loại, phi kim, khí hiếm.",
-          "B. Phi kim, kim loại, khí hiếm.",
-          "C. Kim loại, khí hiếm, phi kim.",
-          "D. Khí hiếm, phi kim, kim loại."
-        ],
-        0,
-        "X có 1e ngoài cùng &rArr; Kim loại (Na); Y có 6e ngoài cùng &rArr; Phi kim (S); Z có 8e ngoài cùng bão hòa &rArr; Khí hiếm (Ne)."
-      ],
-      // 13. Cấu tạo BTH (Biết)
-      [
-        "Các chu kì lớn trong Bảng tuần hoàn bao gồm các chu kì nào?",
-        [
-          "A. Chu kì 1, 2, 3.",
-          "B. Chu kì 3, 4, 5.",
-          "C. Chu kì 4, 5, 6, 7.",
-          "D. Chỉ có chu kì 6 và 7."
+          "A. Khối lượng nguyên tử.",
+          "B. Bán kính nguyên tử.",
+          "C. Điện tích hạt nhân nguyên tử (số hiệu nguyên tử Z).",
+          "D. Số neutron trong hạt nhân."
         ],
         2,
-        "Chu kì nhỏ gồm 1, 2, 3. Chu kì lớn gồm chu kì 4, 5 (mỗi chu kì có 18 nguyên tố) và chu kì 6, 7 (mỗi chu kì có 32 nguyên tố)."
+        "Nguyên tắc 1 của BTH hiện đại: Các nguyên tố được sắp xếp theo chiều tăng dần của điện tích hạt nhân nguyên tử."
       ],
-      // 14. Cấu tạo BTH (Biết)
+      // 14. Chu kì trong BTH (Hiểu)
       [
-        "Số thứ tự của nhóm A trong Bảng tuần hoàn bằng đại lượng nào sau đây của nguyên tử?",
+        "Các chu kì lớn trong Bảng tuần hoàn các nguyên tố hóa học gồm các chu kì nào?",
         [
-          "A. Số lớp electron.",
-          "B. Số electron ở lớp ngoài cùng.",
-          "C. Số hiệu nguyên tử Z.",
-          "D. Số hạt neutron."
+          "A. Chu kì 1, 2, 3.",
+          "B. Chu kì 4, 5, 6, 7.",
+          "C. Chu kì 3, 4, 5.",
+          "D. Chu kì 5, 6, 7."
         ],
         1,
-        "Đối với các nguyên tố nhóm A (nguyên tố s và p), số thứ tự nhóm A = số electron hóa trị = số electron ở lớp ngoài cùng."
+        "Chu kì nhỏ gồm chu kì 1 (2 NT), 2 (8 NT), 3 (8 NT). Chu kì lớn gồm chu kì 4 (18 NT), 5 (18 NT), 6 (32 NT), 7 (chu kì chưa hoàn thiện / 32 NT)."
       ],
-      // 15. Cấu tạo BTH (Biết)
+      // 15. Nhóm nguyên tố trong BTH (Hiểu)
+      [
+        "Đối với các nguyên tố nhóm A, số thứ tự của nhóm luôn bằng:",
+        [
+          "A. Số lớp electron của nguyên tử.",
+          "B. Số electron ở phân lớp ngoài cùng.",
+          "C. Số electron ở lớp ngoài cùng (số electron hóa trị).",
+          "D. Tổng số hạt proton trong hạt nhân."
+        ],
+        2,
+        "Với các nguyên tố nhóm A, số electron hóa trị bằng số electron lớp ngoài cùng và bằng chính số thứ tự nhóm A."
+      ],
+      // 16. Xác định vị trí nguyên tố (Vận dụng)
       [
         "Nguyên tố chlorine (Cl) có Z = 17. Vị trí của chlorine trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 17, chu kì 3, nhóm VIIA.",
-          "B. Ô số 17, chu kì 3, nhóm VA.",
-          "C. Ô số 17, chu kì 4, nhóm VIIA.",
-          "D. Ô số 17, chu kì 3, nhóm VIIB."
+          "A. Ô số 17, chu kì 3, nhóm VA.",
+          "B. Ô số 17, chu kì 3, nhóm VIIA.",
+          "C. Ô số 17, chu kì 2, nhóm VIIA.",
+          "D. Ô số 17, chu kì 4, nhóm VIIB."
         ],
-        0,
-        "Cl (Z = 17): [Ne] 3s<sup>2</sup> 3p<sup>5</sup> &rArr; Ô số 17, chu kì 3 (có 3 lớp e), nhóm VIIA (nguyên tố p, 7e ngoài cùng)."
-      ],
-      // 16. Cấu tạo BTH (Hiểu)
-      [
-        "Nguyên tố argon (Ar) có Z = 18. Vị trí của argon trong Bảng tuần hoàn là:",
-        [
-          "A. Ô số 18, chu kì 3, nhóm VIIIA.",
-          "B. Ô số 18, chu kì 4, nhóm VIIIA.",
-          "C. Ô số 18, chu kì 3, nhóm VIIA.",
-          "D. Ô số 18, chu kì 2, nhóm VIIIA."
-        ],
-        0,
-        "Ar (Z = 18): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> &rArr; Ô 18, chu kì 3, nhóm VIIIA (khí hiếm)."
+        1,
+        "Cl (Z = 17): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup> &rArr; Z = 17 (ô 17); 3 lớp e (chu kì 3); 7e lớp ngoài cùng, e cuối vào p (nhóm VIIA)."
       ]
     ],
     tf: [
       {
-        stem: "Xét tính Đúng/Sai của các nhận định khi nghiên cứu cấu tạo nguyên tử Chlorine (Z = 17):",
+        stem: "Xét tính Đúng/Sai của các nhận định khi nghiên cứu cấu tạo nguyên tử Chlorine (Cl, Z = 17, số khối A = 35):",
         items: [
           [
-            "a) Lớp vỏ nguyên tử Chlorine có tất cả 3 lớp electron.",
+            "Hạt nhân nguyên tử Chlorine chứa 17 proton và 18 neutron.",
             true,
-            "Phát biểu ĐÚNG. Cấu hình Cl: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup> gồm 3 lớp K, L, M."
+            "Đúng vì Z = 17 &rArr; p = 17 hạt; N = A - Z = 35 - 17 = 18 hạt."
           ],
           [
-            "b) Phân lớp electron ngoài cùng của Chlorine chứa 5 electron.",
-            true,
-            "Phát biểu ĐÚNG. Phân lớp ngoài cùng là 3p chứa 5 electron (3p<sup>5</sup>)."
-          ],
-          [
-            "c) Chlorine có 7 electron ở lớp ngoài cùng nên là một nguyên tố phi kim điển hình.",
-            true,
-            "Phát biểu ĐÚNG. Lớp ngoài cùng n = 3 có 2 + 5 = 7e nên có tính phi kim mạnh."
-          ],
-          [
-            "d) Ở trạng thái cơ bản, nguyên tử Chlorine có 3 electron độc thân.",
+            "Lớp vỏ nguyên tử Chlorine có 3 lớp electron và có 5 electron độc thân ở trạng thái cơ bản.",
             false,
-            "Phát biểu SAI. 5 electron ở phân lớp 3p phân bố vào 3 ô orbital tạo thành 2 ô ghép đôi [↑↓][↑↓] và chỉ có 1 ô độc thân [↑], do đó Cl chỉ có 1 electron độc thân."
+            "Sai. Cấu hình Cl là [Ne] 3s<sup>2</sup> 3p<sup>5</sup>. Phân lớp 3p có 5 electron phân bố vào 3 AO: 2 AO chứa cặp e ghép đôi, 1 AO chứa 1e &rArr; chỉ có 1 electron độc thân."
+          ],
+          [
+            "Tổng số orbital nguyên tử (AO) chứa electron ở trạng thái cơ bản của nguyên tử Chlorine là 9 AO.",
+            true,
+            "Đúng. 1 AO 1s + 1 AO 2s + 3 AO 2p + 1 AO 3s + 3 AO 3p = 1 + 1 + 3 + 1 + 3 = 9 AO đều chứa electron."
+          ],
+          [
+            "Khi nhận thêm 1 electron để tạo anion Cl<sup>-</sup>, ion này có cấu hình electron giống khí hiếm Krypton (Kr).",
+            false,
+            "Sai. Cl<sup>-</sup> có 18 electron, cấu hình là [Ne] 3s<sup>2</sup> 3p<sup>6</sup> hay [Ar], giống khí hiếm Argon (Ar) chứ không phải Krypton (Kr có Z=36)."
           ]
         ]
       },
       {
-        stem: "Xét các đặc điểm về nhóm nguyên tố trong Bảng tuần hoàn các nguyên tố hóa học:",
+        stem: "Cho hai nguyên tố hóa học Oxygen (Z = 8) và Sulfur (Z = 16):",
         items: [
           [
-            "a) Bảng tuần hoàn gồm 18 cột dọc được chia thành 8 nhóm A và 8 nhóm B.",
+            "Cả hai nguyên tố Oxygen và Sulfur đều thuộc nhóm VIA trong Bảng tuần hoàn.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng. O: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup> (6e ngoài cùng &rArr; nhóm VIA). S: [Ne] 3s<sup>2</sup> 3p<sup>4</sup> (6e ngoài cùng &rArr; nhóm VIA)."
           ],
           [
-            "b) Các nguyên tố thuộc cùng một nhóm A có tính chất hóa học gần giống nhau vì có cấu hình electron lớp ngoài cùng tương tự nhau.",
+            "Nguyên tử Oxygen có 2 lớp electron, nguyên tử Sulfur có 3 lớp electron.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng. O thuộc chu kì 2 (2 lớp e), S thuộc chu kì 3 (3 lớp e)."
           ],
           [
-            "c) Nhóm IA gồm các kim loại kiềm hoạt động mạnh (trừ Hydrogen là phi kim).",
-            true,
-            "Phát biểu ĐÚNG."
-          ],
-          [
-            "d) Nhóm B chỉ gồm các nguyên tố phi kim có số electron hóa trị từ 3 đến 8.",
+            "Cả hai nguyên tố đều là kim loại điển hình.",
             false,
-            "Phát biểu SAI. Tất cả các nguyên tố nhóm B đều là KIM LOẠI (kim loại chuyển tiếp), không có phi kim."
+            "Sai. Cả Oxygen và Sulfur đều có 6 electron ở lớp ngoài cùng, là các phi kim điển hình."
+          ],
+          [
+            "Công thức oxide cao nhất của Sulfur là SO<sub>3</sub>, là một acidic oxide (oxide acid).",
+            true,
+            "Đúng. Sulfur thuộc nhóm VIA nên hóa trị cao nhất với oxygen là VI &rArr; oxide cao nhất là SO<sub>3</sub>, tan trong nước tạo H<sub>2</sub>SO<sub>4</sub> (acidic oxide)."
           ]
         ]
       }
@@ -258,504 +262,214 @@ module.exports = [
       {
         question: "Cation Fe<sup>2+</sup> có 26 proton và 30 neutron. Tổng số hạt mang điện có trong ion Fe<sup>2+</sup> là bao nhiêu?",
         answer: "50",
-        explanation: "Fe (Z = 26) mất 2e tạo ion Fe<sup>2+</sup> &rArr; số electron trong Fe<sup>2+</sup> = 26 - 2 = 24. Tổng số hạt mang điện trong ion = số proton + số electron = 26 + 24 = 50 hạt."
+        explanation: "Fe<sup>2+</sup> có 26 proton (mang điện dương) và số electron = 26 - 2 = 24 electron (mang điện âm). Tổng số hạt mang điện = 26 + 24 = 50 hạt."
       },
       {
         question: "Chlorine có hai đồng vị bền là <sup>35</sup>Cl và <sup>37</sup>Cl. Biết nguyên tử khối trung bình của Chlorine là 35,48. Thành phần phần trăm số nguyên tử của đồng vị <sup>37</sup>Cl là bao nhiêu %?",
         answer: "24",
-        explanation: "(35(100 - y) + 37y) / 100 = 35,48 &rArr; 3500 + 2y = 3548 &rArr; 2y = 48 &rArr; y = 24%."
+        explanation: "Gọi x là % <sup>37</sup>Cl &rArr; (35(100 - x) + 37x) / 100 = 35,48 &rArr; 3500 + 2x = 3548 &rArr; 2x = 48 &rArr; x = 24%."
       },
       {
-        question: "Ở trạng thái cơ bản, nguyên tử Phosphorus (P, Z = 15) có bao nhiêu electron độc thân?",
-        answer: "3",
-        explanation: "Cấu hình P: [Ne] 3s<sup>2</sup> 3p<sup>3</sup>. Theo quy tắc Hund, 3 electron ở phân lớp 3p phân bố vào 3 ô orbital riêng biệt, mỗi ô chứa 1 electron có spin cùng chiều &rArr; có 3 electron độc thân."
+        question: "Ở trạng thái cơ bản, nguyên tử Sulfur (S, Z = 16) có cấu hình electron là [Ne] 3s<sup>2</sup> 3p<sup>4</sup>. Số electron độc thân của nguyên tử Sulfur là bao nhiêu?",
+        answer: "2",
+        explanation: "Phân lớp 3p có 3 orbital chứa 4 electron: 1 AO chứa 2 electron ghép đôi, 2 AO còn lại mỗi AO chứa 1 electron độc thân &rArr; có 2 electron độc thân."
       },
       {
-        question: "Anion X<sup>-</sup> có tổng số electron là 18. Số thứ tự ô của nguyên tố X trong Bảng tuần hoàn là bao nhiêu?",
+        question: "Anion X<sup>-</sup> có tổng số electron trong toàn bộ ion là 18. Số thứ tự ô của nguyên tố X trong Bảng tuần hoàn là bao nhiêu?",
         answer: "17",
-        explanation: "Anion X<sup>-</sup> do nguyên tử X nhận 1 electron &rArr; Số electron của nguyên tử X = 18 - 1 = 17 &rArr; Z = 17 &rArr; Ô số 17 trong Bảng tuần hoàn (Chlorine)."
+        explanation: "Nguyên tử X nhận 1 electron tạo X<sup>-</sup> &rArr; số electron của X = 18 - 1 = 17 &rArr; Z = 17 &rArr; Ô số 17 (Chlorine)."
       }
     ],
     essay: [
       {
-        title: "Câu 1 (1,0 điểm).",
-        question: "Cho nguyên tố Chlorine (Cl, Z = 17).<br>a) Viết cấu hình electron ở trạng thái cơ bản của nguyên tử Cl.<br>b) Biểu diễn cấu hình theo ô orbital cho các electron ở lớp ngoài cùng của Cl và chỉ ra số electron độc thân.",
-        solution: "a) Cấu hình electron của Cl (Z = 17):<br>1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>5</sup> (0,5 điểm).<br>b) Lớp ngoài cùng (n = 3) gồm phân lớp 3s và 3p:<br>• Phân lớp 3s có 1 ô orbital chứa cặp electron ghép đôi [↑↓].<br>• Phân lớp 3p có 3 ô orbital chứa 5 electron: 2 ô chứa cặp electron ghép đôi [↑↓][↑↓] và 1 ô chứa electron độc thân [↑].<br>Vậy nguyên tử Chlorine ở trạng thái cơ bản có đúng 1 electron độc thân (0,5 điểm)."
+        title: "Câu 1 (1,0 điểm): Cấu hình electron và biểu diễn orbital của Chlorine",
+        question: "Cho nguyên tố Chlorine (Cl, Z = 17).<br>a) Viết cấu hình electron đầy đủ và cấu hình electron thu gọn của nguyên tử Cl.<br>b) Biểu diễn sự phân bố các electron lớp ngoài cùng vào các ô orbital (AO) ở trạng thái cơ bản và chỉ rõ số electron độc thân của Cl.<br>c) Viết cấu hình electron của ion Cl<sup>-</sup> được hình thành khi Cl nhận thêm 1 electron.",
+        solution: "a) Cấu hình electron của Cl (Z = 17):<br>• Đầy đủ: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup>.<br>• Thu gọn: [Ne] 3s<sup>2</sup> 3p<sup>5</sup> (0,35 điểm).<br>b) Biểu diễn orbital lớp ngoài cùng (lớp 3):<br>• Phân lớp 3s có 1 ô orbital chứa 2 electron ghép đôi (&uarr;&darr;).<br>• Phân lớp 3p có 3 ô orbital chứa 5 electron: 2 ô chứa cặp electron ghép đôi (&uarr;&darr; &uarr;&darr;) và 1 ô chứa 1 electron độc thân (&uarr;).<br>&rArr; Nguyên tử Cl có 1 electron độc thân (0,35 điểm).<br>c) Khi Cl nhận 1 electron tạo anion Cl<sup>-</sup>:<br>Cl + 1e &rarr; Cl<sup>-</sup>.<br>Cấu hình electron của Cl<sup>-</sup>: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> hay [Ar] (0,30 điểm)."
       },
       {
-        title: "Câu 2 (1,0 điểm).",
-        question: "Nguyên tử của nguyên tố X có tổng số hạt cơ bản (p, n, e) là 52 hạt. Trong đó, số hạt mang điện nhiều hơn số hạt không mang điện là 16 hạt.<br>a) Tìm số hạt proton, neutron, electron và số khối A của nguyên tử X.<br>b) Viết cấu hình electron của X và xác định vị trí của X trong Bảng tuần hoàn.",
-        solution: "a) Ta có hệ phương trình:<br>• Tổng số hạt: 2Z + N = 52 (1).<br>• Hạt mang điện nhiều hơn không mang điện: 2Z - N = 16 (2).<br>Cộng (1) và (2): 4Z = 68 &rArr; Z = 17 (Chlorine).<br>Thay vào (1): N = 52 - 34 = 18.<br>Số khối A = Z + N = 17 + 18 = 35. Vậy X có p = 17, e = 17, n = 18 (0,5 điểm).<br>b) Cấu hình electron (Z = 17): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup>.<br>Vị trí trong BTH: Ô số 17, chu kì 3 (có 3 lớp e), nhóm VIIA (nguyên tố p, 7e lớp ngoài cùng) (0,5 điểm)."
+        title: "Câu 2 (1,0 điểm): Xác định thành phần nguyên tử Chlorine qua bài toán hạt",
+        question: "Trong một nguyên tử phi kim X, tổng số ba loại hạt cơ bản (p, n, e) bằng 52 hạt. Trong đó, số hạt mang điện nhiều hơn số hạt không mang điện là 16 hạt.<br>a) Tính số lượng từng loại hạt cơ bản (p, n, e) và số khối A của nguyên tử X.<br>b) Viết kí hiệu nguyên tử của nguyên tố X.",
+        solution: "a) Trong nguyên tử trung hòa: số proton = số electron = Z. Số neutron = N.<br>• Tổng số hạt: 2Z + N = 52 (1).<br>• Số hạt mang điện nhiều hơn không mang điện: 2Z - N = 16 (2).<br>Cộng (1) và (2): 4Z = 68 &rArr; Z = 17 (p = e = 17 hạt).<br>Thay Z = 17 vào (1): N = 52 - 2(17) = 18 hạt neutron (0,50 điểm).<br>Số khối A = Z + N = 17 + 18 = 35 (0,25 điểm).<br>b) Z = 17 là nguyên tố Chlorine (Cl).<br>Kí hiệu nguyên tử: <sup>35</sup><sub>17</sub>Cl (0,25 điểm)."
       },
       {
-        title: "Câu 3 (1,0 điểm).",
-        question: "Hai nguyên tố X và Y đứng kế tiếp nhau trong cùng một chu kì của Bảng tuần hoàn có tổng số proton trong hai hạt nhân là 27 (Z<sub>X</sub> < Z<sub>Y</sub>).<br>a) Xác định số hiệu nguyên tử Z<sub>X</sub> và Z<sub>Y</sub>.<br>b) Viết cấu hình electron của X, Y và xác định tính kim loại hoặc phi kim của chúng.",
-        solution: "a) Hai nguyên tố kế tiếp nhau trong cùng một chu kì nên: Z<sub>Y</sub> - Z<sub>X</sub> = 1.<br>Theo đề bài: Z<sub>X</sub> + Z<sub>Y</sub> = 27.<br>Giải hệ: Z<sub>X</sub> = (27 - 1) / 2 = 13 (Aluminium) và Z<sub>Y</sub> = 14 (Silicon) (0,5 điểm).<br>b) Cấu hình và tính chất:<br>• X (Z = 13): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>1</sup> &rArr; có 3e lớp ngoài cùng nên là KIM LOẠI.<br>• Y (Z = 14): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup> &rArr; có 4e lớp ngoài cùng thuộc nhóm IVA chu kì 3 nên là PHI KIM (á kim) (0,5 điểm)."
+        title: "Câu 3 (1,0 điểm): Xác định hai nguyên tố cùng nhóm A ở hai chu kì liên tiếp",
+        question: "Ở cùng một phân nhóm chính (nhóm A), hai nguyên tố phi kim X và Y thuộc hai chu kì kế tiếp nhau có tổng số hạt proton trong hai hạt nhân là 24 (biết Z<sub>X</sub> < Z<sub>Y</sub>).<br>a) Xác định số hiệu nguyên tử và gọi tên hai nguyên tố X và Y.<br>b) Xác định vị trí (ô, chu kì, nhóm) của X và Y trong Bảng tuần hoàn.",
+        solution: "a) Vì X và Y thuộc cùng nhóm A ở hai chu kì liên tiếp (chu kì 2 và 3) nên số hiệu nguyên tử hơn kém nhau 8 đơn vị: Z<sub>Y</sub> - Z<sub>X</sub> = 8 (1).<br>Theo đề: Z<sub>X</sub> + Z<sub>Y</sub> = 24 (2).<br>Từ (1) và (2) giải hệ:<br>• Z<sub>X</sub> = (24 - 8) / 2 = 8 &rArr; X là Oxygen (O).<br>• Z<sub>Y</sub> = 8 + 8 = 16 &rArr; Y là Sulfur (S) (0,50 điểm).<br>b) Vị trí trong Bảng tuần hoàn:<br>• Oxygen (Z = 8: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>): Ô số 8, chu kì 2, nhóm VIA (0,25 điểm).<br>• Sulfur (Z = 16: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>): Ô số 16, chu kì 3, nhóm VIA (0,25 điểm)."
       }
     ]
   },
+
+  // =========================================================================
+  // ĐỀ 07: THPT NGUYỄN HUỆ – QUẢNG NAM
+  // Trọng tâm: C (Z=6), Si (Z=14), N (Z=7, S=21), S (16) & Cl (17) (Z_A + Z_B = 33)
+  // =========================================================================
   {
     id: "hoahoc-10-de-07",
-    title: "Hóa học 10 - Đề 07 - Trường THPT Nguyễn Huệ – Quảng Nam (Đề chính thức Kết nối tri thức)",
+    title: "Hóa học 10 - Đề 07 - Trường THPT Nguyễn Huệ – Quảng Nam (Đề chính thức Giữa kì I)",
     subject: "chemistry",
     duration: 45,
-    school: "Trường THPT Nguyễn Huệ – Quảng Nam (Đề chính thức Kết nối tri thức)",
+    school: "Trường THPT Nguyễn Huệ – Quảng Nam (Đề chính thức Giữa kì I)",
     province: "Quảng Nam",
     year: "2024–2025",
-    sourceUrl: "https://vndethi.com/de-giua-ki-1-hoa-hoc-10-nam-2024-2025-truong-thpt-nguyen-hue-quang-nam/",
+    sourceUrl: "https://tailieu.vn/doc/de-thi-giua-ki-1-hoa-hoc-lop-10-nguyen-hue-2866642.html",
     questions: [
-      // 1. Mở đầu hóa học (Biết)
+      // 1. Nhập môn Hóa học (Biết)
       [
-        "Phương pháp nghiên cứu thực nghiệm trong Hóa học bao gồm các bước cơ bản nào?",
+        "Mục tiêu cốt lõi của việc học tập và nghiên cứu môn Hóa học là:",
         [
-          "A. Đề xuất giả thuyết &rArr; Thiết kế và tiến hành thí nghiệm &rArr; Thu thập và xử lí số liệu &rArr; Rút ra kết luận.",
-          "B. Tự suy diễn chủ quan mà không cần tiến hành thí nghiệm.",
-          "C. Chỉ quan sát các hiện tượng tự nhiên mà không cần can thiệp thực nghiệm.",
-          "D. Đọc các tài liệu tham khảo và ghi chép lại kết luận của người khác."
+          "A. Ghi nhớ tên gọi và công thức của tất cả các chất hóa học trên thế giới.",
+          "B. Hiểu được mối quan hệ giữa cấu tạo, tính chất và sự biến đổi của chất để ứng dụng phục vụ đời sống con người và phát triển bền vững.",
+          "C. Chế tạo ra các loại vũ khí và chất nổ có sức công phá mạnh nhất.",
+          "D. Thay thế hoàn toàn các môn khoa học tự nhiên khác như Vật lí và Sinh học."
         ],
-        0,
-        "Phương pháp nghiên cứu thực nghiệm gồm: Đề xuất giả thuyết khoa học &rArr; Lập kế hoạch và tiến hành thí nghiệm kiểm chứng &rArr; Thu thập, xử lí kết quả &rArr; Kết luận hoặc hoàn thiện giả thuyết."
+        1,
+        "Mục tiêu của môn Hóa học là nghiên cứu cấu tạo, tính chất, sự biến đổi của chất và ứng dụng để phục vụ cuộc sống và bảo vệ môi trường bền vững."
       ],
       // 2. Thành phần nguyên tử (Biết)
       [
-        "Khối lượng của hạt proton (m<sub>p</sub>) và hạt neutron (m<sub>n</sub>) có giá trị xấp xỉ bằng:",
+        "Trong cấu tạo nguyên tử, những loại hạt cơ bản nào mang điện tích?",
         [
-          "A. 0,00055 amu.",
-          "B. 1 amu.",
-          "C. 2 amu.",
-          "D. 4 amu."
-        ],
-        1,
-        "m<sub>p</sub> &approx; 1,673 &times; 10<sup>-27</sup> kg &approx; 1 amu; m<sub>n</sub> &approx; 1,675 &times; 10<sup>-27</sup> kg &approx; 1 amu."
-      ],
-      // 3. Thành phần nguyên tử (Biết)
-      [
-        "Số khối A của nguyên tử được xác định bằng công thức nào sau đây?",
-        [
-          "A. A = Z + N (với Z là số proton, N là số neutron).",
-          "B. A = Z + E.",
-          "C. A = N - Z.",
-          "D. A = 2Z + N."
-        ],
-        0,
-        "Số khối A = Z + N."
-      ],
-      // 4. Thành phần nguyên tử (Hiểu)
-      [
-        "Nguyên tố Hydrogen có 3 đồng vị trong tự nhiên là <sup>1</sup>H (Protium), <sup>2</sup>H (Deuterium, D) và <sup>3</sup>H (Tritium, T). Số hạt neutron có trong hạt nhân của đồng vị Tritium là:",
-        [
-          "A. 0.",
-          "B. 1.",
-          "C. 2.",
-          "D. 3."
+          "A. Proton và neutron.",
+          "B. Neutron và electron.",
+          "C. Proton và electron.",
+          "D. Chỉ có hạt proton mang điện tích."
         ],
         2,
-        "Tritium là <sup>3</sup><sub>1</sub>H có Z = 1, số khối A = 3 &rArr; số neutron N = A - Z = 3 - 1 = 2 hạt."
+        "Proton mang điện dương (+1,602 &times; 10<sup>-19</sup> C), electron mang điện âm (-1,602 &times; 10<sup>-19</sup> C), còn neutron không mang điện."
       ],
-      // 5. Nguyên tố hóa học (Biết)
+      // 3. Kích thước nguyên tử (Biết)
       [
-        "Nguyên tử khối của một nguyên tử cho biết:",
+        "Kích thước đường kính của hạt nhân nguyên tử so với kích thước toàn bộ nguyên tử:",
         [
-          "A. Khối lượng tuyệt đối của nguyên tử đó tính bằng gam.",
-          "B. Khối lượng tương đối của nguyên tử đó, cho biết nó nặng gấp bao nhiêu lần 1 amu.",
-          "C. Khối lượng của lớp vỏ electron nguyên tử.",
-          "D. Thể tích hình cầu của nguyên tử."
-        ],
-        1,
-        "Nguyên tử khối là khối lượng tương đối của nguyên tử, cho biết nguyên tử nặng gấp bao nhiêu lần đơn vị khối lượng nguyên tử (1 amu)."
-      ],
-      // 6. Nguyên tố hóa học (Biết)
-      [
-        "Kí hiệu nguyên tử <sup>27</sup><sub>13</sub>Al cho biết hạt nhân nguyên tử nhôm có:",
-        [
-          "A. 13 proton và 14 neutron.",
-          "B. 13 proton và 27 neutron.",
-          "C. 14 proton và 13 neutron.",
-          "D. 27 proton và 13 electron."
-        ],
-        0,
-        "Z = 13 (13 proton), A = 27 &rArr; N = 27 - 13 = 14 neutron."
-      ],
-      // 7. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Phân lớp d chứa tối đa bao nhiêu orbital nguyên tử và tối đa bao nhiêu electron?",
-        [
-          "A. 3 orbital, 6 electron.",
-          "B. 5 orbital, 10 electron.",
-          "C. 7 orbital, 14 electron.",
-          "D. 1 orbital, 2 electron."
-        ],
-        1,
-        "Phân lớp d gồm 5 orbital nguyên tử, mỗi orbital chứa tối đa 2e &rArr; chứa tối đa 10 electron."
-      ],
-      // 8. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Số electron tối đa có thể có ở lớp thứ 3 (lớp M) là:",
-        [
-          "A. 8.",
-          "B. 18.",
-          "C. 32.",
-          "D. 2."
-        ],
-        1,
-        "Lớp M (n = 3) chứa tối đa 2n<sup>2</sup> = 2 &times; 3<sup>2</sup> = 18 electron."
-      ],
-      // 9. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Cấu hình electron ở trạng thái cơ bản của nguyên tử Calcium (Z = 20) là:",
-        [
-          "A. [Ar] 4s<sup>2</sup>.",
-          "B. [Ar] 3d<sup>2</sup>.",
-          "C. [Ar] 3d<sup>1</sup> 4s<sup>1</sup>.",
-          "D. [Ne] 3s<sup>2</sup> 3p<sup>6</sup>."
-        ],
-        0,
-        "Calcium (Z = 20) có 20e: [Ar] 4s<sup>2</sup> (1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup>)."
-      ],
-      // 10. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Khi nguyên tử Fe (Z = 26, [Ar]3d<sup>6</sup>4s<sup>2</sup>) nhường 2 electron để tạo ion Fe<sup>2+</sup>, electron bị mất đi từ phân lớp nào đầu tiên?",
-        [
-          "A. Phân lớp 3d.",
-          "B. Phân lớp 4s.",
-          "C. Phân lớp 3p.",
-          "D. Phân lớp 3s."
-        ],
-        1,
-        "Khi tạo cation, electron ở phân lớp ngoài cùng (4s) bị mất đi trước &rArr; Fe nhường 2e ở 4s tạo Fe<sup>2+</sup> có cấu hình [Ar] 3d<sup>6</sup>."
-      ],
-      // 11. Cấu trúc lớp vỏ electron (Hiểu)
-      [
-        "Nguyên tố d là các nguyên tố mà nguyên tử có electron cuối cùng điền vào phân lớp d. Các nguyên tố d đều là:",
-        [
-          "A. Phi kim.",
-          "B. Khí hiếm.",
-          "C. Kim loại chuyển tiếp.",
-          "D. Á kim."
+          "A. Lớn hơn nhiều lần đường kính nguyên tử.",
+          "B. Xấp xỉ bằng đường kính nguyên tử.",
+          "C. Rất nhỏ bé, chỉ bằng khoảng 1/10 000 đến 1/100 000 lần đường kính nguyên tử.",
+          "D. Bằng đúng một nửa đường kính nguyên tử."
         ],
         2,
-        "Tất cả các nguyên tố d đều thuộc các nhóm B trong BTH và đều là các kim loại chuyển tiếp."
+        "Đường kính nguyên tử &approx; 10<sup>-10</sup> m (1 &Aring;), trong khi đường kính hạt nhân chỉ &approx; 10<sup>-15</sup> đến 10<sup>-14</sup> m, nhỏ hơn từ 10 000 đến 100 000 lần."
       ],
-      // 12. Cấu trúc lớp vỏ electron (Hiểu)
+      // 4. Điện tích hạt nhân (Hiểu)
       [
-        "Nguyên tử của nguyên tố X có cấu hình electron [Ne] 3s<sup>2</sup> 3p<sup>3</sup>. Số electron hóa trị của X là:",
+        "Hạt nhân nguyên tử Carbon có số hiệu nguyên tử Z = 6. Điện tích của hạt nhân nguyên tử Carbon là:",
         [
-          "A. 3.",
-          "B. 5.",
-          "C. 2.",
-          "D. 15."
-        ],
-        1,
-        "X là nguyên tố p nhóm A &rArr; Số electron hóa trị = số electron lớp ngoài cùng = 2 + 3 = 5 electron."
-      ],
-      // 13. Cấu tạo BTH (Biết)
-      [
-        "Bảng tuần hoàn các nguyên tố hóa học được sắp xếp theo 3 nguyên tắc chính, nguyên tắc nào sau đây là ĐÚNG?",
-        [
-          "A. Sắp xếp theo chiều giảm dần của khối lượng nguyên tử.",
-          "B. Các nguyên tố có cùng số electron hóa trị xếp thành một hàng gọi là chu kì.",
-          "C. Các nguyên tố có cùng số lớp electron trong nguyên tử được xếp vào cùng một hàng gọi là chu kì.",
-          "D. Các nguyên tố có cùng số proton xếp vào cùng một ô."
+          "A. +6.",
+          "B. -6.",
+          "C. +6 &times; 1,602 &times; 10<sup>-19</sup> C (hay +6 đơn vị điện tích hạt nhân).",
+          "D. 0."
         ],
         2,
-        "Nguyên tắc 2: Các nguyên tố có cùng số lớp electron trong nguyên tử được xếp thành một hàng ngang gọi là chu kì."
+        "Z = 6 &rArr; hạt nhân có 6 proton &rArr; điện tích hạt nhân là +6 &times; 1,602 &times; 10<sup>-19</sup> C (hoặc số đơn vị điện tích hạt nhân bằng +6)."
       ],
-      // 14. Cấu tạo BTH (Biết)
+      // 5. Số khối (Biết)
       [
-        "Nhóm IA trong Bảng tuần hoàn được gọi là nhóm:",
+        "Số khối A của một nguyên tử được xác định bằng hệ thức nào sau đây?",
+        [
+          "A. A = Z + e.",
+          "B. A = Z + N.",
+          "C. A = 2Z + N.",
+          "D. A = N - Z."
+        ],
+        1,
+        "Số khối A là tổng số hạt proton (Z) và hạt neutron (N) có trong hạt nhân: A = Z + N."
+      ],
+      // 6. Đồng vị và NTK trung bình (Hiểu)
+      [
+        "Nguyên tố Bromine có hai đồng vị bền là <sup>79</sup>Br (54,5%) và <sup>81</sup>Br (45,5%). Nguyên tử khối trung bình của Bromine là:",
+        [
+          "A. 80,00 amu.",
+          "B. 79,91 amu.",
+          "C. 80,45 amu.",
+          "D. 79,55 amu."
+        ],
+        1,
+        "A̅ = (79 &times; 54,5 + 81 &times; 45,5) / 100 = (4305,5 + 3685,5) / 100 = 7991 / 100 = 79,91 amu."
+      ],
+      // 7. Khái niệm mô hình hiện đại (Biết)
+      [
+        "Điểm khác biệt căn bản giữa mô hình hiện đại về nguyên tử và mô hình Rutherford - Bohr là:",
+        [
+          "A. Mô hình hiện đại cho rằng hạt nhân mang điện tích âm.",
+          "B. Mô hình hiện đại xem chuyển động của electron trong nguyên tử không theo những quỹ đạo xác định mà theo vùng không gian xác suất tìm thấy electron.",
+          "C. Mô hình hiện đại phủ nhận sự tồn tại của hạt electron trong nguyên tử.",
+          "D. Mô hình hiện đại xem electron đứng yên trong hạt nhân."
+        ],
+        1,
+        "Khác biệt cốt lõi: Mô hình Rutherford - Bohr giả định electron chuyển động theo quỹ đạo xác định (hình tròn/elip), còn mô hình hiện đại coi electron chuyển động hỗn loạn cực nhanh, không theo quỹ đạo cố định nào mà tạo nên đám mây electron với xác suất tìm thấy (khoảng 90%)."
+      ],
+      // 8. Sức chứa AO (Biết)
+      [
+        "Theo nguyên lí Pauli, mỗi orbital nguyên tử chứa tối đa bao nhiêu electron?",
+        [
+          "A. 1 electron.",
+          "B. 2 electron có chiều tự quay (spin) ngược nhau.",
+          "C. 6 electron.",
+          "D. 8 electron."
+        ],
+        1,
+        "Nguyên lí Pauli: Trong một nguyên tử, mỗi AO chỉ chứa tối đa 2 electron và 2 electron này phải có spin ngược nhau (&uarr;&darr;)."
+      ],
+      // 9. Lớp electron (Biết)
+      [
+        "Lớp electron thứ 3 (lớp M, n = 3) gồm có các phân lớp nào?",
+        [
+          "A. 3s và 3p.",
+          "B. 3s, 3p và 3d.",
+          "C. 3s, 3p, 3d và 3f.",
+          "D. Chỉ có phân lớp 3s."
+        ],
+        1,
+        "Lớp n có n phân lớp: Lớp thứ 3 (n = 3) có đúng 3 phân lớp là 3s, 3p và 3d."
+      ],
+      // 10. Cấu hình electron (Hiểu)
+      [
+        "Cấu hình electron ở trạng thái cơ bản của nguyên tử Carbon (C, Z = 6) là:",
+        [
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>1</sup> 2p<sup>3</sup>.",
+          "C. 1s<sup>2</sup> 2p<sup>4</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>4</sup>."
+        ],
+        0,
+        "Carbon có Z = 6: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>."
+      ],
+      // 11. Tính chất từ cấu hình electron (Hiểu)
+      [
+        "Nguyên tử có cấu hình electron lớp ngoài cùng bền vững dạng ns<sup>2</sup> np<sup>6</sup> (với 8 electron) thuộc loại nguyên tố nào?",
         [
           "A. Kim loại kiềm.",
-          "B. Kim loại kiềm thổ.",
-          "C. Halogen.",
-          "D. Khí hiếm."
-        ],
-        0,
-        "Nhóm IA gồm các kim loại kiềm (Li, Na, K, Rb, Cs, Fr) trừ Hydrogen."
-      ],
-      // 15. Cấu tạo BTH (Biết)
-      [
-        "Nguyên tố silicon (Si) có Z = 14. Vị trí của Si trong Bảng tuần hoàn là:",
-        [
-          "A. Ô số 14, chu kì 3, nhóm IVA.",
-          "B. Ô số 14, chu kì 3, nhóm IIA.",
-          "C. Ô số 14, chu kì 2, nhóm IVA.",
-          "D. Ô số 14, chu kì 4, nhóm IVA."
-        ],
-        0,
-        "Si (Z = 14): [Ne] 3s<sup>2</sup> 3p<sup>2</sup> &rArr; Ô 14, chu kì 3 (3 lớp e), nhóm IVA (nguyên tố p, 4e ngoài cùng)."
-      ],
-      // 16. Cấu tạo BTH (Hiểu)
-      [
-        "Nguyên tố đồng (Cu, Z = 29) có cấu hình electron [Ar] 3d<sup>10</sup> 4s<sup>1</sup>. Vị trí của Cu trong Bảng tuần hoàn là:",
-        [
-          "A. Ô số 29, chu kì 4, nhóm IA.",
-          "B. Ô số 29, chu kì 4, nhóm IB.",
-          "C. Ô số 29, chu kì 3, nhóm IB.",
-          "D. Ô số 29, chu kì 4, nhóm VIIIB."
-        ],
-        1,
-        "Cu có 4 lớp e &rArr; Chu kì 4; cấu hình (n-1)d<sup>10</sup> ns<sup>1</sup> có tổng e phân lớp d và s là 10 + 1 = 11 &rArr; Thuộc nhóm IB (kim loại chuyển tiếp)."
-      ]
-    ],
-    tf: [
-      {
-        stem: "Xét các phát biểu về mối liên hệ hạt cơ bản và tính bền của hạt nhân nguyên tử:",
-        items: [
-          [
-            "a) Trong nguyên tử, tổng số hạt mang điện là 2Z (gồm proton và electron) và số hạt không mang điện là N (neutron).",
-            true,
-            "Phát biểu ĐÚNG."
-          ],
-          [
-            "b) Đối với các nguyên tố bền có 2 &le; Z &le; 82, tỉ số N/Z luôn nằm trong khoảng từ 1 đến 1,52.",
-            true,
-            "Phát biểu ĐÚNG, đây là hệ thức thực nghiệm xác định điều kiện bền của hạt nhân."
-          ],
-          [
-            "c) Khối lượng của nguyên tử hầu như tập trung ở lớp vỏ electron.",
-            false,
-            "Phát biểu SAI. Khối lượng tập trung hầu như hoàn toàn ở hạt nhân nguyên tử."
-          ],
-          [
-            "d) Một nguyên tử có 13 proton và 14 neutron thì khối lượng xấp xỉ bằng 27 amu và số đơn vị điện tích hạt nhân bằng 13.",
-            true,
-            "Phát biểu ĐÚNG (Aluminium, <sup>27</sup><sub>13</sub>Al)."
-          ]
-        ]
-      },
-      {
-        stem: "Cho hai nguyên tố hóa học X (Z = 12, Mg) và Y (Z = 20, Ca):",
-        items: [
-          [
-            "a) X và Y đều có 2 electron ở lớp electron ngoài cùng.",
-            true,
-            "Phát biểu ĐÚNG. Mg có cấu hình [Ne]3s<sup>2</sup>; Ca có cấu hình [Ar]4s<sup>2</sup>."
-          ],
-          [
-            "b) Cả X và Y đều thuộc nhóm IIA (nhóm kim loại kiềm thổ) trong Bảng tuần hoàn.",
-            true,
-            "Phát biểu ĐÚNG."
-          ],
-          [
-            "c) X thuộc chu kì 3, còn Y thuộc chu kì 4 trong Bảng tuần hoàn.",
-            true,
-            "Phát biểu ĐÚNG. Mg có 3 lớp electron, Ca có 4 lớp electron."
-          ],
-          [
-            "d) X và Y đều là các nguyên tố d có tính khử mạnh.",
-            false,
-            "Phát biểu SAI. X và Y là các nguyên tố s (electron cuối cùng điền vào phân lớp s), không phải nguyên tố d."
-          ]
-        ]
-      }
-    ],
-    short: [
-      {
-        question: "Hạt nhân của nguyên tử <sup>27</sup><sub>13</sub>Al có bao nhiêu hạt neutron?",
-        answer: "14",
-        explanation: "Số neutron N = số khối A - số proton Z = 27 - 13 = 14 hạt."
-      },
-      {
-        question: "Chlorine trong tự nhiên gồm 2 đồng vị <sup>35</sup>Cl (75%) và <sup>37</sup>Cl (25%). Nguyên tử khối trung bình của Chlorine bằng bao nhiêu?",
-        answer: "35.5",
-        explanation: "A̅ = (35 &times; 75 + 37 &times; 25) / 100 = 35,5 amu."
-      },
-      {
-        question: "Nguyên tử Calcium (Ca, Z = 20) có bao nhiêu electron ở lớp electron ngoài cùng?",
-        answer: "2",
-        explanation: "Cấu hình e của Ca: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup>. Lớp ngoài cùng là lớp thứ 4 có 2 electron."
-      },
-      {
-        question: "Hai nguyên tố X và Y đứng kế tiếp nhau trong cùng một chu kì của BTH có tổng số proton trong hai hạt nhân là 27 (Z<sub>X</sub> < Z<sub>Y</sub>). Số hiệu nguyên tử Z<sub>Y</sub> bằng bao nhiêu?",
-        answer: "14",
-        explanation: "Z<sub>Y</sub> - Z<sub>X</sub> = 1 và Z<sub>X</sub> + Z<sub>Y</sub> = 27 &rArr; Z<sub>Y</sub> = (27 + 1) / 2 = 14 (Silicon)."
-      }
-    ],
-    essay: [
-      {
-        title: "Câu 1 (1,0 điểm).",
-        question: "Cho các nguyên tố Na (Z = 11), Mg (Z = 12) và Al (Z = 13).<br>a) Viết cấu hình electron của từng nguyên tử.<br>b) Sắp xếp các nguyên tố theo chiều tăng dần số electron lớp ngoài cùng và nêu tính chất hóa học chung của chúng.",
-        solution: "a) Cấu hình electron:<br>• Na (Z = 11): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup> hay [Ne] 3s<sup>1</sup>.<br>• Mg (Z = 12): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> hay [Ne] 3s<sup>2</sup>.<br>• Al (Z = 13): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>1</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>1</sup> (0,5 điểm).<br>b) Chiều tăng dần số electron lớp ngoài cùng: Na (1e) < Mg (2e) < Al (3e).<br>Tính chất hóa học chung: Cả 3 nguyên tố đều có 1, 2, 3 electron ở lớp ngoài cùng nên đều là các KIM LOẠI, có tính khử (dễ nhường electron để đạt cấu hình khí hiếm bền vững) (0,5 điểm)."
-      },
-      {
-        title: "Câu 2 (1,0 điểm).",
-        question: "Một hợp chất ion có công thức MX<sub>2</sub> với tổng số hạt proton, neutron, electron là 140 hạt. Trong phân tử MX<sub>2</sub>, số hạt mang điện nhiều hơn số hạt không mang điện là 44 hạt. Số hiệu nguyên tử của nguyên tố X lớn hơn số hiệu nguyên tử của nguyên tố M là 5 đơn vị.<br>a) Xác định tên và kí hiệu hóa học của hai nguyên tố M và X.<br>b) Viết cấu hình electron của ion M<sup>2+</sup> và ion X<sup>-</sup>.",
-        solution: "a) Trong phân tử MX<sub>2</sub>:<br>• Tổng số hạt mang điện: 2Z<sub>M</sub> + 4Z<sub>X</sub>.<br>• Tổng số hạt không mang điện: N<sub>M</sub> + 2N<sub>X</sub>.<br>Ta có: (2Z<sub>M</sub> + 4Z<sub>X</sub>) + (N<sub>M</sub> + 2N<sub>X</sub>) = 140 và (2Z<sub>M</sub> + 4Z<sub>X</sub>) - (N<sub>M</sub> + 2N<sub>X</sub>) = 44.<br>&rArr; 2Z<sub>M</sub> + 4Z<sub>X</sub> = (140 + 44) / 2 = 92 &rArr; Z<sub>M</sub> + 2Z<sub>X</sub> = 46 (1).<br>Mặt khác: Z<sub>X</sub> - Z<sub>M</sub> = 5 &rArr; Z<sub>X</sub> = Z<sub>M</sub> + 5 (2).<br>Thay (2) vào (1): Z<sub>M</sub> + 2(Z<sub>M</sub> + 5) = 46 &rArr; 3Z<sub>M</sub> = 36 &rArr; Z<sub>M</sub> = 12 (Magnesium, Mg) và Z<sub>X</sub> = 17 (Chlorine, Cl) (0,5 điểm).<br>b) Cấu hình electron của các ion:<br>• M<sup>2+</sup> (Mg<sup>2+</sup>, có 12 - 2 = 10e): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> hay [Ne].<br>• X<sup>-</sup> (Cl<sup>-</sup>, có 17 + 1 = 18e): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> hay [Ar] (0,5 điểm)."
-      },
-      {
-        title: "Câu 3 (1,0 điểm).",
-        question: "Hai nguyên tố A và B đứng kế tiếp nhau trong cùng một chu kì của Bảng tuần hoàn có tổng số hạt proton trong hai hạt nhân là 25 (Z<sub>A</sub> < Z<sub>B</sub>).<br>a) Tìm số hiệu nguyên tử Z<sub>A</sub> và Z<sub>B</sub>.<br>b) Xác định vị trí (ô số, chu kì, nhóm) của A và B trong Bảng tuần hoàn.",
-        solution: "a) Do A và B kế tiếp nhau trong cùng một chu kì: Z<sub>B</sub> - Z<sub>A</sub> = 1.<br>Tổng số proton: Z<sub>A</sub> + Z<sub>B</sub> = 25.<br>Giải hệ: Z<sub>A</sub> = (25 - 1) / 2 = 12 (Magnesium) và Z<sub>B</sub> = 13 (Aluminium) (0,5 điểm).<br>b) Vị trí trong Bảng tuần hoàn:<br>• A (Z = 12): [Ne] 3s<sup>2</sup> &rArr; Ô số 12, chu kì 3 (có 3 lớp e), nhóm IIA (nguyên tố s, 2e ngoài cùng).<br>• B (Z = 13): [Ne] 3s<sup>2</sup> 3p<sup>1</sup> &rArr; Ô số 13, chu kì 3 (có 3 lớp e), nhóm IIIA (nguyên tố p, 3e ngoài cùng) (0,5 điểm)."
-      }
-    ]
-  },
-  {
-    id: "hoahoc-10-de-08",
-    title: "Hóa học 10 - Đề 08 - Trường THPT số 1 Ngô Gia Tự – Đắk Lắk (Đề chính thức Giữa kì I 2025–2026)",
-    subject: "chemistry",
-    duration: 45,
-    school: "Trường THPT số 1 Ngô Gia Tự – Đắk Lắk (Đề chính thức Giữa kì I 2025–2026)",
-    province: "Đắk Lắk",
-    year: "2025–2026",
-    sourceUrl: "https://khoahoc.vietjack.com/chi-tiet-de-thi/11387/de-thi-giua-ki-1-hoa-hoc-10-nam-2025-2026-truong-thpt-huong-hoa-quang",
-    questions: [
-      // 1. Mở đầu hóa học (Biết)
-      [
-        "Hóa học có mối quan hệ mật thiết và hỗ trợ đắc lực nhất cho ngành khoa học nào sau đây?",
-        [
-          "A. Sinh học, Y dược và Địa chất học.",
-          "B. Ngôn ngữ học và Xã hội học.",
-          "C. Mỹ thuật và Điêu khắc cổ điển.",
-          "D. Luật học và Hành chính công."
-        ],
-        0,
-        "Hóa học là ngành khoa học tự nhiên trung tâm, có mối quan hệ mật thiết với Sinh học (Hóa sinh), Y dược (dược phẩm, cơ chế trị liệu) và Địa chất học (khoáng vật, đất đá)."
-      ],
-      // 2. Thành phần nguyên tử (Biết)
-      [
-        "Kích thước đường kính nguyên tử có độ lớn vào khoảng:",
-        [
-          "A. 10<sup>-10</sup> m (0,1 nm).",
-          "B. 10<sup>-14</sup> m.",
-          "C. 10<sup>-6</sup> m.",
-          "D. 10<sup>-3</sup> m."
-        ],
-        0,
-        "Đường kính nguyên tử vào khoảng 10<sup>-10</sup> m (tương đương 0,1 nm hay 1 &Aring;)."
-      ],
-      // 3. Thành phần nguyên tử (Biết)
-      [
-        "Số hiệu nguyên tử Z của một nguyên tử cho biết:",
-        [
-          "A. Số hạt proton trong hạt nhân và số hạt electron ở lớp vỏ nguyên tử trung hòa.",
-          "B. Số hạt neutron trong hạt nhân.",
-          "C. Khối lượng nguyên tử tính bằng gam.",
-          "D. Thể tích của nguyên tử."
-        ],
-        0,
-        "Số hiệu nguyên tử Z = số proton = số electron = số đơn vị điện tích hạt nhân."
-      ],
-      // 4. Thành phần nguyên tử (Hiểu)
-      [
-        "Hai nguyên tử <sup>35</sup><sub>17</sub>Cl và <sup>37</sup><sub>17</sub>Cl khác nhau về đặc điểm nào sau đây?",
-        [
-          "A. Số hạt proton trong hạt nhân.",
-          "B. Số hạt electron ở lớp vỏ nguyên tử trung hòa.",
-          "C. Số hạt neutron trong hạt nhân và số khối A.",
-          "D. Cấu hình electron ở trạng thái cơ bản."
+          "B. Halogen.",
+          "C. Khí hiếm (khí trơ).",
+          "D. Kim loại chuyển tiếp."
         ],
         2,
-        "Hai đồng vị có cùng Z = 17 (cùng số p và cùng số e) nhưng khác số neutron (18 neutron so với 20 neutron) dẫn đến số khối A khác nhau (35 và 37)."
+        "Cấu hình 8 electron lớp ngoài cùng (ns<sup>2</sup> np<sup>6</sup>) là cấu hình bát cấu bền vững đặc trưng cho các nguyên tố khí hiếm."
       ],
-      // 5. Nguyên tố hóa học (Biết)
+      // 12. Cấu hình e của ion (Vận dụng)
       [
-        "Nguyên tố hóa học là:",
-        [
-          "A. Tập hợp các nguyên tử có cùng điện tích hạt nhân.",
-          "B. Tập hợp các nguyên tử có cùng số khối A.",
-          "C. Tập hợp các nguyên tử có cùng số neutron.",
-          "D. Chất tinh khiết không thể bị phân chia bằng phương pháp hóa học."
-        ],
-        0,
-        "Định nghĩa chuẩn SGK: Nguyên tố hóa học là tập hợp các nguyên tử có cùng điện tích hạt nhân (cùng số proton Z)."
-      ],
-      // 6. Nguyên tố hóa học (Biết)
-      [
-        "Kí hiệu nguyên tử của nguyên tố sodium có 11 proton và 12 neutron được viết đúng là:",
-        [
-          "A. <sup>23</sup><sub>11</sub>Na.",
-          "B. <sup>12</sup><sub>11</sub>Na.",
-          "C. <sup>11</sup><sub>23</sub>Na.",
-          "D. <sup>23</sup><sub>12</sub>Na."
-        ],
-        0,
-        "Z = 11, A = Z + N = 11 + 12 = 23 &rArr; Kí hiệu: <sup>23</sup><sub>11</sub>Na."
-      ],
-      // 7. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Mỗi lớp electron n (với n &le; 4) được chia thành n phân lớp, các phân lớp này được kí hiệu lần lượt bằng các chữ cái thường là:",
-        [
-          "A. s, p, d, f.",
-          "B. K, L, M, N.",
-          "C. a, b, c, d.",
-          "D. 1, 2, 3, 4."
-        ],
-        0,
-        "4 phân lớp electron kí hiệu là s, p, d, f."
-      ],
-      // 8. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Nguyên lí Pauli phát biểu rằng:",
-        [
-          "A. Trên mỗi orbital chỉ chứa tối đa 2 electron và hai electron này có chiều tự quay ngược nhau.",
-          "B. Trên mỗi orbital có thể chứa tối đa 6 electron.",
-          "C. Các electron luôn ưu tiên điền vào phân lớp d trước phân lớp s.",
-          "D. Trong cùng một lớp, các phân lớp có mức năng lượng hoàn toàn bằng nhau."
-        ],
-        0,
-        "Nguyên lí Pauli: Trên một orbital nguyên tử chỉ chứa tối đa 2 electron và có chiều spin ngược nhau."
-      ],
-      // 9. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Thứ tự mức năng lượng tăng dần của các phân lớp theo quy tắc Klechkowski ở đoạn đầu là:",
-        [
-          "A. 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p.",
-          "B. 1s < 2s < 2p < 3s < 3d < 3p < 4s.",
-          "C. 1s < 2s < 3s < 2p < 3p < 3d < 4s.",
-          "D. 1s < 2s < 2p < 3p < 3s < 4s < 3d."
-        ],
-        0,
-        "Trật tự mức năng lượng: 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p..."
-      ],
-      // 10. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Cấu hình electron của nguyên tử sodium (Na, Z = 11) là:",
+        "Cation Na<sup>+</sup> được hình thành khi nguyên tử sodium (Na, Z = 11) nhường đi 1 electron. Cấu hình electron của cation Na<sup>+</sup> là:",
         [
           "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3p<sup>1</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup> 3s<sup>2</sup>.",
-          "D. [Ne] 3s<sup>2</sup>."
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>."
+        ],
+        1,
+        "Na (Z = 11): [Ne] 3s<sup>1</sup> nhường 1e ở phân lớp 3s để tạo Na<sup>+</sup> có 10 electron với cấu hình [Ne] hay 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
+      ],
+      // 13. Lịch sử BTH (Biết)
+      [
+        "Nhà hóa học người Nga D. I. Mendeleev đã công bố Bảng tuần hoàn các nguyên tố hóa học đầu tiên vào năm nào và sắp xếp dựa trên đại lượng nào?",
+        [
+          "A. Năm 1869, sắp xếp theo chiều tăng dần của khối lượng nguyên tử.",
+          "B. Năm 1913, sắp xếp theo chiều tăng dần của điện tích hạt nhân.",
+          "C. Năm 1945, sắp xếp theo cấu hình electron.",
+          "D. Năm 1803, sắp xếp theo số khối."
         ],
         0,
-        "Na (Z = 11): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup> hay [Ne] 3s<sup>1</sup>."
+        "Năm 1869, Mendeleev công bố Bảng tuần hoàn đầu tiên sắp xếp các nguyên tố theo chiều tăng dần khối lượng nguyên tử."
       ],
-      // 11. Cấu trúc lớp vỏ electron (Hiểu)
-      [
-        "Nguyên tử của nguyên tố X có 7 electron ở lớp ngoài cùng. X thuộc loại nguyên tố nào?",
-        [
-          "A. Kim loại.",
-          "B. Phi kim.",
-          "C. Khí hiếm.",
-          "D. Kim loại kiềm thổ."
-        ],
-        1,
-        "Nguyên tử có 5, 6 hoặc 7 electron ở lớp ngoài cùng là phi kim."
-      ],
-      // 12. Cấu trúc lớp vỏ electron (Hiểu)
-      [
-        "Anion Cl<sup>-</sup> có cấu hình electron giống với cấu hình electron của nguyên tử khí hiếm nào sau đây?",
-        [
-          "A. Helium (He, Z = 2).",
-          "B. Neon (Ne, Z = 10).",
-          "C. Argon (Ar, Z = 18).",
-          "D. Krypton (Kr, Z = 36)."
-        ],
-        2,
-        "Cl (Z = 17) nhận 1e tạo Cl<sup>-</sup> có 18 electron, cấu hình là 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> trùng với cấu hình của Argon [Ar]."
-      ],
-      // 13. Cấu tạo BTH (Biết)
-      [
-        "Trong Bảng tuần hoàn, các nguyên tố có cùng số lớp electron trong nguyên tử được xếp thành:",
-        [
-          "A. Một cột gọi là nhóm.",
-          "B. Một hàng ngang gọi là chu kì.",
-          "C. Một ô gọi là ô nguyên tố.",
-          "D. Một phân nhóm chính."
-        ],
-        1,
-        "Các nguyên tố có cùng số lớp electron xếp vào cùng 1 hàng gọi là chu kì."
-      ],
-      // 14. Cấu tạo BTH (Biết)
+      // 14. Chu kì trong BTH (Hiểu)
       [
         "Chu kì 2 trong Bảng tuần hoàn các nguyên tố hóa học chứa bao nhiêu nguyên tố?",
         [
@@ -765,316 +479,621 @@ module.exports = [
           "D. 32 nguyên tố."
         ],
         1,
-        "Chu kì 2 bắt đầu từ Lithium (<sub>3</sub>Li) đến Neon (<sub>10</sub>Ne), gồm 8 nguyên tố."
+        "Chu kì 2 bắt đầu từ Lithium (<sub>3</sub>Li) đến Neon (<sub>10</sub>Ne), gồm đúng 8 nguyên tố."
       ],
-      // 15. Cấu tạo BTH (Biết)
+      // 15. Nhóm IA trong BTH (Hiểu)
       [
-        "Nhóm VIIA trong Bảng tuần hoàn gồm các nguyên tố thuộc họ nào sau đây?",
+        "Nhóm IA trong Bảng tuần hoàn (trừ nguyên tố Hydrogen) được gọi là nhóm:",
         [
-          "A. Kim loại kiềm.",
-          "B. Kim loại kiềm thổ.",
+          "A. Kim loại kiềm thổ.",
+          "B. Kim loại kiềm.",
           "C. Halogen.",
           "D. Khí hiếm."
         ],
-        2,
-        "Nhóm VIIA là nhóm Halogen (F, Cl, Br, I, At)."
+        1,
+        "Nhóm IA (trừ H) gồm Li, Na, K, Rb, Cs, Fr được gọi là nhóm kim loại kiềm. Nhóm IIA là kim loại kiềm thổ."
       ],
-      // 16. Cấu tạo BTH (Hiểu)
+      // 16. Vị trí nguyên tố Silicon (Vận dụng)
       [
-        "Nguyên tố iron (Fe, Z = 26) có cấu hình [Ar] 3d<sup>6</sup> 4s<sup>2</sup>. Vị trí của Fe trong Bảng tuần hoàn là:",
+        "Nguyên tố silicon (Si) có số hiệu nguyên tử Z = 14. Vị trí của silicon trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 26, chu kì 4, nhóm VIIIB.",
-          "B. Ô số 26, chu kì 4, nhóm IIA.",
-          "C. Ô số 26, chu kì 3, nhóm VIIIB.",
-          "D. Ô số 26, chu kì 4, nhóm VIB."
+          "A. Ô số 14, chu kì 3, nhóm IVA.",
+          "B. Ô số 14, chu kì 2, nhóm IVA.",
+          "C. Ô số 14, chu kì 3, nhóm IIIA.",
+          "D. Ô số 14, chu kì 4, nhóm IVB."
         ],
         0,
-        "Fe có Z = 26 &rArr; Ô 26; 4 lớp e &rArr; Chu kì 4; cấu hình dạng 3d<sup>6</sup>4s<sup>2</sup> có tổng e phân lớp d và s là 6 + 2 = 8 &rArr; Nhóm VIIIB."
+        "Si (Z = 14): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup> &rArr; Ô số 14; 3 lớp electron &rArr; chu kì 3; 4e ngoài cùng, e cuối vào phân lớp p &rArr; nhóm IVA."
       ]
     ],
     tf: [
       {
-        stem: "Xét các phát biểu sau về cấu tạo nguyên tử và các loại hạt cơ bản:",
+        stem: "Cho các đồng vị của Carbon (<sup>12</sup>C, <sup>13</sup>C) và Oxygen (<sup>16</sup>O, <sup>18</sup>O):",
         items: [
           [
-            "a) Hạt nhân nguyên tử luôn mang điện tích dương và có kích thước vô cùng nhỏ bé so với kích thước toàn nguyên tử.",
+            "Số khối của đồng vị carbon-13 (<sup>13</sup>C) bằng 13.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng. Kí hiệu <sup>13</sup>C có số khối A = 13."
           ],
           [
-            "b) Trong hạt nhân, các hạt proton mang điện tích dương và các hạt neutron không mang điện được liên kết với nhau bởi lực hạt nhân rất mạnh.",
+            "Hạt nhân của đồng vị <sup>13</sup>C có chứa 6 proton và 7 neutron.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng vì Carbon có Z = 6 (6 proton), số neutron N = 13 - 6 = 7 neutron."
           ],
           [
-            "c) Vì nguyên tử trung hòa về điện nên số khối A luôn bằng hai lần số proton (A = 2Z).",
-            false,
-            "Phát biểu SAI. A = Z + N, chỉ một số ít nguyên tử nhẹ có N = Z, còn đa số các nguyên tử có N > Z nên A > 2Z."
+            "Số loại phân tử carbon monoxide (CO) tối đa tạo thành từ 2 đồng vị Carbon và 2 đồng vị Oxygen trên là 4 loại.",
+            true,
+            "Đúng. Mỗi phân tử CO gồm 1 nguyên tử C và 1 nguyên tử O &rArr; số loại phân tử = 2 &times; 2 = 4 loại (<sup>12</sup>C<sup>16</sup>O, <sup>12</sup>C<sup>18</sup>O, <sup>13</sup>C<sup>16</sup>O, <sup>13</sup>C<sup>18</sup>O)."
           ],
           [
-            "d) Lớp electron thứ 2 (lớp L) có 4 orbital nguyên tử và chứa tối đa 8 electron.",
+            "Đồng vị <sup>12</sup>C được quy ước quốc tế dùng làm đơn vị chuẩn để định nghĩa đơn vị khối lượng nguyên tử (amu).",
             true,
-            "Phát biểu ĐÚNG. Lớp L có 1 AO 2s và 3 AO 2p, tổng cộng 4 AO, chứa tối đa 2 &times; 2<sup>2</sup> = 8 electron."
+            "Đúng. 1 amu quy ước bằng 1/12 khối lượng của một nguyên tử đồng vị <sup>12</sup>C."
           ]
         ]
       },
       {
-        stem: "Xét cấu trúc và quy luật trong Bảng tuần hoàn các nguyên tố hóa học:",
+        stem: "Cho nguyên tố Silicon (Si, Z = 14):",
         items: [
           [
-            "a) Số thứ tự của chu kì luôn bằng số lớp electron trong nguyên tử của nguyên tố thuộc chu kì đó.",
+            "Silicon thuộc chu kì 3, nhóm IVA trong Bảng tuần hoàn.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng vì Si có cấu hình [Ne] 3s<sup>2</sup> 3p<sup>2</sup>: 3 lớp e (chu kì 3), 4e ngoài cùng (nhóm IVA)."
           ],
           [
-            "b) Bảng tuần hoàn hiện đại có 8 nhóm A và 8 nhóm B, phân bố trên 18 cột dọc.",
+            "Cấu hình electron thu gọn của nguyên tử Silicon là [Ne] 3s<sup>2</sup> 3p<sup>2</sup>.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng. Khí hiếm đứng trước là Ne (Z=10) &rArr; [Ne] 3s<sup>2</sup> 3p<sup>2</sup>."
           ],
           [
-            "c) Trong cùng một nhóm A, đi từ trên xuống dưới theo chiều tăng của điện tích hạt nhân, số lớp electron của nguyên tử tăng dần.",
-            true,
-            "Phát biểu ĐÚNG."
-          ],
-          [
-            "d) Tất cả các nguyên tố trong cùng một chu kì đều có tính chất hóa học hoàn toàn giống nhau.",
+            "Silicon là một kim loại mạnh, dễ nhường 4 electron khi tham gia phản ứng hóa học.",
             false,
-            "Phát biểu SAI. Các nguyên tố cùng chu kì có số electron hóa trị khác nhau nên tính chất hóa học biến đổi tuần hoàn (từ kim loại mạnh sang phi kim mạnh rồi đến khí hiếm)."
+            "Sai. Silicon là một phi kim (á kim/chất bán dẫn), có 4e lớp ngoài cùng, không phải kim loại mạnh."
+          ],
+          [
+            "Oxide cao nhất của Silicon là SiO<sub>2</sub>, thuộc loại acidic oxide (oxide acid).",
+            true,
+            "Đúng. Hóa trị cao nhất với oxygen bằng số thứ tự nhóm IV &rArr; SiO<sub>2</sub> là oxide acid."
           ]
         ]
       }
     ],
     short: [
       {
-        question: "Anion X<sup>2-</sup> có 16 proton. Tổng số electron có trong anion X<sup>2-</sup> là bao nhiêu?",
-        answer: "18",
-        explanation: "X có 16 proton &rArr; nguyên tử trung hòa có 16 electron. Khi nhận 2 electron tạo anion X<sup>2-</sup>, số electron = 16 + 2 = 18 electron."
+        question: "Hạt nhân của nguyên tử <sup>31</sup><sub>15</sub>P có bao nhiêu hạt không mang điện (neutron)?",
+        answer: "16",
+        explanation: "Số neutron N = số khối A - số proton Z = 31 - 15 = 16 hạt."
       },
       {
-        question: "Boron (B) có nguyên tử khối trung bình là 10,81 từ hai đồng vị <sup>10</sup>B và <sup>11</sup>B. Thành phần phần trăm số nguyên tử của đồng vị <sup>11</sup>B là bao nhiêu %?",
-        answer: "81",
-        explanation: "(10(100 - x) + 11x) / 100 = 10,81 &rArr; 1000 + x = 1081 &rArr; x = 81%."
+        question: "Silicon (Si) trong tự nhiên gồm 3 đồng vị: <sup>28</sup>Si (92,23%), <sup>29</sup>Si (4,67%), <sup>30</sup>Si (3,10%). Nguyên tử khối trung bình của Silicon bằng bao nhiêu (làm tròn đến hàng phần trăm)?",
+        answer: "28.11",
+        explanation: "A̅ = (28 &times; 92,23 + 29 &times; 4,67 + 30 &times; 3,10) / 100 = (2582,44 + 135,43 + 93,00) / 100 = 2810,87 / 100 = 28,1087 &approx; 28,11 amu."
       },
       {
-        question: "Ở trạng thái cơ bản, nguyên tử Nitrogen (N, Z = 7) có bao nhiêu orbital nguyên tử chứa electron?",
-        answer: "5",
-        explanation: "Cấu hình 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup>: 1 AO ở 1s, 1 AO ở 2s, 3 AO ở 2p (mỗi AO chứa 1e) &rArr; tổng số AO chứa electron là 1 + 1 + 3 = 5 AO."
+        question: "Nguyên tử nguyên tố Carbon (Z = 6) có bao nhiêu electron ở lớp electron ngoài cùng?",
+        answer: "4",
+        explanation: "C (Z = 6): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>. Lớp ngoài cùng là lớp thứ 2 (n = 2) có 2 + 2 = 4 electron."
       },
       {
-        question: "Nguyên tố M thuộc nhóm IIA trong BTH và có số khối A = 24. Trong hạt nhân nguyên tử M, số hạt neutron bằng số hạt proton. Số thứ tự ô của M trong Bảng tuần hoàn là bao nhiêu?",
-        answer: "12",
-        explanation: "Ta có A = Z + N = 24. Vì N = Z &rArr; 2Z = 24 &rArr; Z = 12 (Magnesium) &rArr; Ô số 12 trong Bảng tuần hoàn."
+        question: "Hai nguyên tố X và Y thuộc cùng một nhóm A ở hai chu kì liên tiếp có tổng số proton là 30 (Z<sub>X</sub> < Z<sub>Y</sub>). Số hiệu nguyên tử của nguyên tố Y là bao nhiêu?",
+        answer: "19",
+        explanation: "X ở chu kì 3 và Y ở chu kì 4 (cách nhau 8 đơn vị): Z<sub>Y</sub> - Z<sub>X</sub> = 8. Có Z<sub>X</sub> + Z<sub>Y</sub> = 30 &rArr; Z<sub>Y</sub> = (30 + 8) / 2 = 19 (Potassium, K)."
       }
     ],
     essay: [
       {
-        title: "Câu 1 (1,0 điểm).",
-        question: "Viết cấu hình electron thu gọn của các nguyên tử sau: Calcium (Ca, Z = 20), Chromium (Cr, Z = 24), Iron (Fe, Z = 26). Chỉ ra số electron hóa trị của mỗi nguyên tố.",
-        solution: "• Calcium (Ca, Z = 20): [Ar] 4s<sup>2</sup>. Số electron hóa trị là 2 (nguyên tố s) (0,35 điểm).<br>• Chromium (Cr, Z = 24): [Ar] 3d<sup>5</sup> 4s<sup>1</sup> (cấu hình bán bão hòa 3d<sup>5</sup>). Số electron hóa trị = 5 + 1 = 6 (nguyên tố d) (0,35 điểm).<br>• Iron (Fe, Z = 26): [Ar] 3d<sup>6</sup> 4s<sup>2</sup>. Số electron hóa trị = 6 + 2 = 8 (nguyên tố d) (0,3 điểm)."
+        title: "Câu 1 (1,0 điểm): Cấu hình electron và electron độc thân của Carbon và Silicon",
+        question: "Cho hai nguyên tố Carbon (C, Z = 6) và Silicon (Si, Z = 14).<br>a) Viết cấu hình electron ở trạng thái cơ bản của nguyên tử C và Si.<br>b) Biểu diễn sự phân bố electron vào các orbital ở lớp ngoài cùng của nguyên tử Carbon. Xác định số electron độc thân của Carbon.<br>c) Dựa vào cấu hình electron, giải thích vì sao Carbon và Silicon đều được xếp vào nhóm IVA trong Bảng tuần hoàn.",
+        solution: "a) Cấu hình electron:<br>• C (Z = 6): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>.<br>• Si (Z = 14): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>2</sup> (0,35 điểm).<br>b) Biểu diễn orbital lớp ngoài cùng của C (lớp 2):<br>• Phân lớp 2s: 1 ô orbital chứa 2 electron ghép đôi (&uarr;&darr;).<br>• Phân lớp 2p: 3 ô orbital, có 2 ô mỗi ô chứa 1 electron độc thân (&uarr; &uarr; _) và 1 ô trống.<br>&rArr; Số electron độc thân của C ở trạng thái cơ bản là 2 electron (0,35 điểm).<br>c) Giải thích:<br>Cả C và Si đều là nguyên tố p (electron cuối cùng điền vào phân lớp p) và lớp ngoài cùng đều có 4 electron (ns<sup>2</sup> np<sup>2</sup>) nên đều thuộc nhóm IVA (0,30 điểm)."
       },
       {
-        title: "Câu 2 (1,0 điểm).",
-        question: "Tổng số hạt proton, neutron, electron trong nguyên tử của nguyên tố X là 46 hạt. Trong hạt nhân nguyên tử X, số hạt không mang điện nhiều hơn số hạt mang điện là 1 hạt.<br>a) Tìm số hạt p, n, e và số khối A của nguyên tử X.<br>b) Viết cấu hình electron của X và xác định vị trí của X trong Bảng tuần hoàn.",
-        solution: "a) Ta có hệ phương trình: 2Z + N = 46 và N - Z = 1 &rArr; N = Z + 1.<br>Thay vào: 2Z + (Z + 1) = 46 &rArr; 3Z = 45 &rArr; Z = 15 (Phosphorus), N = 16.<br>Số khối A = Z + N = 15 + 16 = 31. Vậy p = 15, e = 15, n = 16 (0,5 điểm).<br>b) Cấu hình electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>3</sup>.<br>Vị trí trong BTH: Ô số 15, chu kì 3 (có 3 lớp e), nhóm VA (nguyên tố p, 5e ngoài cùng) (0,5 điểm)."
+        title: "Câu 2 (1,0 điểm): Biện luận số hạt tìm nguyên tố Nitrogen",
+        question: "Tổng số hạt cơ bản (proton, neutron, electron) trong nguyên tử của nguyên tố X là 21 hạt. Trong hạt nhân nguyên tử, số hạt không mang điện không vượt quá số hạt mang điện.<br>a) Xác định số hạt proton, neutron, electron và số khối A của nguyên tố X.<br>b) Viết kí hiệu nguyên tử và cấu hình electron của X.",
+        solution: "a) Trong nguyên tử: p = e = Z &rArr; Tổng số hạt: 2Z + N = 21 &rArr; N = 21 - 2Z.<br>Với các nguyên tố có Z &le; 82, ta có bất đẳng thức bền của hạt nhân:<br>1 &le; N / Z &le; 1,5 &hArr; Z &le; N &le; 1,5Z.<br>Thay N = 21 - 2Z vào:<br>• Z &le; 21 - 2Z &rArr; 3Z &le; 21 &rArr; Z &le; 7.<br>• 21 - 2Z &le; 1,5Z &rArr; 3,5Z &ge; 21 &rArr; Z &ge; 6.<br>&rArr; 6 &le; Z &le; 7.<br>Mặt khác, theo đề bài số hạt không mang điện không vượt quá số hạt mang điện trong hạt nhân: N &le; Z.<br>• Nếu Z = 6: N = 21 - 2(6) = 9 &gt; Z (loại).<br>• Nếu Z = 7: N = 21 - 2(7) = 7 &le; Z (thỏa mãn: N = Z = 7).<br>&rArr; Z = 7 (p = e = 7 hạt), N = 7 hạt, số khối A = Z + N = 14 (0,60 điểm).<br>b) Z = 7 là nguyên tố Nitrogen (N).<br>• Kí hiệu nguyên tử: <sup>14</sup><sub>7</sub>N (0,20 điểm).<br>• Cấu hình electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup> (0,20 điểm)."
       },
       {
-        title: "Câu 3 (1,0 điểm).",
-        question: "Hai nguyên tố A và B thuộc cùng một nhóm A và ở hai chu kì liên tiếp trong Bảng tuần hoàn có tổng số proton trong hai hạt nhân là 32 (Z<sub>A</sub> < Z<sub>B</sub>).<br>a) Tìm số hiệu nguyên tử Z<sub>A</sub> và Z<sub>B</sub>.<br>b) Xác định vị trí của A, B trong Bảng tuần hoàn và so sánh tính chất kim loại giữa chúng.",
-        solution: "a) Hai nguyên tố thuộc cùng một nhóm A ở hai chu kì liên tiếp (chu kì 3 và 4) có hiệu số hiệu nguyên tử là 8: Z<sub>B</sub> - Z<sub>A</sub> = 8.<br>Tổng số proton: Z<sub>A</sub> + Z<sub>B</sub> = 32.<br>Giải hệ: Z<sub>A</sub> = (32 - 8) / 2 = 12 (Magnesium) và Z<sub>B</sub> = 12 + 8 = 20 (Calcium) (0,5 điểm).<br>b) Vị trí và tính chất:<br>• A (Z = 12): Ô số 12, chu kì 3, nhóm IIA.<br>• B (Z = 20): Ô số 20, chu kì 4, nhóm IIA.<br>So sánh: Trong cùng nhóm IIA, đi từ trên xuống dưới bán kính nguyên tử tăng, lực hút hạt nhân với electron hóa trị giảm nên tính kim loại tăng dần &rArr; Tính kim loại của Calcium (B) mạnh hơn Magnesium (A) (0,5 điểm)."
+        title: "Câu 3 (1,0 điểm): Xác định hai nguyên tố kế tiếp nhau trong cùng một chu kì",
+        question: "Biết A và B là hai nguyên tố thuộc cùng một chu kì và đứng liền kề nhau trong Bảng tuần hoàn. Tổng số proton trong hai hạt nhân là 33 (biết Z<sub>A</sub> < Z<sub>B</sub>).<br>a) Xác định số hiệu nguyên tử và tên của hai nguyên tố A và B.<br>b) Viết cấu hình electron và xác định vị trí (ô, chu kì, nhóm) của A và B trong Bảng tuần hoàn.",
+        solution: "a) Vì A và B đứng kế tiếp nhau trong cùng một chu kì nên: Z<sub>B</sub> - Z<sub>A</sub> = 1 (1).<br>Theo đề bài: Z<sub>A</sub> + Z<sub>B</sub> = 33 (2).<br>Giải hệ phương trình:<br>• Z<sub>A</sub> = (33 - 1) / 2 = 16 &rArr; A là Sulfur (S).<br>• Z<sub>B</sub> = 16 + 1 = 17 &rArr; B là Chlorine (Cl) (0,50 điểm).<br>b) Cấu hình electron và vị trí trong BTH:<br>• Sulfur (S, Z = 16): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>.<br>Vị trí: Ô số 16, chu kì 3, nhóm VIA (0,25 điểm).<br>• Chlorine (Cl, Z = 17): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup>.<br>Vị trí: Ô số 17, chu kì 3, nhóm VIIA (0,25 điểm)."
       }
     ]
   },
+
+  // =========================================================================
+  // ĐỀ 08: THPT SỐ 1 NGÔ GIA TỰ – ĐẮK LẮK
+  // Trọng tâm: Be (Z=4), F (Z=9, 28 hạt), Mg (12, 24/25/26), Sc (Z=21), Mn (Z=25)
+  // =========================================================================
   {
-    id: "hoahoc-10-de-09",
-    title: "Hóa học 10 - Đề 09 - Trường THPT số 1 Lê Hồng Phong – Đắk Lắk (Đề chính thức Giữa kì I 2025–2026)",
+    id: "hoahoc-10-de-08",
+    title: "Hóa học 10 - Đề 08 - Trường THPT số 1 Ngô Gia Tự – Đắk Lắk (Đề chính thức Giữa kì I)",
     subject: "chemistry",
     duration: 45,
-    school: "Trường THPT số 1 Lê Hồng Phong – Đắk Lắk (Đề chính thức Giữa kì I 2025–2026)",
+    school: "Trường THPT số 1 Ngô Gia Tự – Đắk Lắk (Đề chính thức Giữa kì I)",
     province: "Đắk Lắk",
-    year: "2025–2026",
-    sourceUrl: "https://khoahoc.vietjack.com/chi-tiet-de-thi/11325/de-thi-giua-ki-1-hoa-hoc-10-nam-2024-2025-truong-thpt-nguyen-hue-quang",
+    year: "2024–2025",
+    sourceUrl: "https://tailieu.vn/doc/de-thi-giua-ki-1-hoa-hoc-lop-10-ngo-gia-tu-2866643.html",
     questions: [
-      // 1. Mở đầu hóa học (Biết)
+      // 1. Nhập môn Hóa học (Biết)
       [
-        "Ngành công nghiệp nào sau đây ứng dụng trực tiếp các thành tựu của Hóa học để sản xuất phân đạm, phân lân và phân kali?",
+        "Khi thực hiện các thí nghiệm có sinh ra khí độc hại như Cl<sub>2</sub>, SO<sub>2</sub>, NO<sub>2</sub>, ta BẮT BUỘC phải thực hiện thí nghiệm ở đâu?",
         [
-          "A. Công nghiệp năng lượng nguyên tử.",
-          "B. Công nghiệp sản xuất phân bón hóa học trong Nông nghiệp.",
-          "C. Công nghiệp hàng không vũ trụ.",
-          "D. Công nghiệp viễn thông."
+          "A. Trong phòng kín có đóng chặt tất cả các cửa sổ.",
+          "B. Trong tủ hút khí độc hoặc ở nơi cực kì thoáng khí.",
+          "C. Dưới ánh nắng Mặt Trời trực tiếp.",
+          "D. Trong chậu nước lạnh."
         ],
         1,
-        "Sản xuất phân bón hóa học (phân đạm urê, phân lân supephotphat, phân kali) là một trong những ứng dụng trọng yếu của Hóa học phục vụ nền nông nghiệp."
+        "Để bảo vệ sức khỏe và an toàn phòng thí nghiệm, mọi thí nghiệm sinh ra khí độc đều phải tiến hành trong tủ hút chuyên dụng hoặc nơi thoáng khí."
       ],
       // 2. Thành phần nguyên tử (Biết)
       [
-        "Các hạt mang điện trong cấu tạo nguyên tử gồm:",
+        "Hạt cơ bản nào sau đây nằm trong hạt nhân nguyên tử nhưng KHÔNG mang điện tích?",
         [
-          "A. Proton và neutron.",
-          "B. Proton và electron.",
-          "C. Neutron và electron.",
-          "D. Chỉ có hạt proton."
+          "A. Proton.",
+          "B. Neutron.",
+          "C. Electron.",
+          "D. Positron."
         ],
         1,
-        "Proton mang điện tích dương và electron mang điện tích âm là hai loại hạt mang điện trong nguyên tử."
+        "Hạt neutron nằm trong hạt nhân nguyên tử và là hạt trung hòa về điện (điện tích bằng 0)."
       ],
-      // 3. Thành phần nguyên tử (Biết)
+      // 3. Khối lượng electron (Biết)
       [
-        "Định nghĩa số khối A của nguyên tử là:",
+        "Khối lượng của hạt electron so với khối lượng của hạt proton có độ lớn như thế nào?",
         [
-          "A. Tổng số proton và số neutron trong hạt nhân.",
-          "B. Tổng số proton và số electron.",
-          "C. Khối lượng của nguyên tử tính theo đơn vị gam.",
-          "D. Số hạt neutron trong hạt nhân."
+          "A. Bằng nhau.",
+          "B. Lớn hơn khoảng 1836 lần.",
+          "C. Rất bé, chỉ bằng khoảng 1/1836 khối lượng của proton.",
+          "D. Lớn gấp 2 lần."
         ],
-        0,
-        "A = Z + N."
+        2,
+        "m<sub>p</sub> &approx; 1 amu, m<sub>e</sub> &approx; 0,00055 amu &approx; m<sub>p</sub> / 1836."
       ],
-      // 4. Thành phần nguyên tử (Hiểu)
+      // 4. Mối liên hệ các loại hạt (Hiểu)
       [
-        "Nguyên tố copper có 2 đồng vị bền là <sup>63</sup>Cu và <sup>65</sup>Cu. Nếu nguyên tử khối trung bình là 63,54 thì tỉ lệ số nguyên tử của <sup>63</sup>Cu : <sup>65</sup>Cu xấp xỉ bằng:",
+        "Tổng số hạt mang điện (proton và electron) trong một nguyên tử Fluorine (Z = 9) là:",
         [
-          "A. 1 : 1.",
-          "B. 73 : 27.",
-          "C. 3 : 1.",
-          "D. 27 : 73."
-        ],
-        1,
-        "Phần trăm <sup>63</sup>Cu là 73% và <sup>65</sup>Cu là 27% &rArr; tỉ lệ số nguyên tử là 73 : 27."
-      ],
-      // 5. Nguyên tố hóa học (Biết)
-      [
-        "Kí hiệu <sup>A</sup><sub>Z</sub>X cho biết thông tin gì về nguyên tử?",
-        [
-          "A. Kí hiệu hóa học X, số khối A và số hiệu nguyên tử Z.",
-          "B. Kí hiệu hóa học X, số neutron A và số proton Z.",
-          "C. Số electron A và số neutron Z.",
-          "D. Khối lượng nguyên tử A và thể tích Z."
-        ],
-        0,
-        "Kí hiệu chuẩn: X là kí hiệu hóa học, A là số khối (ở trên), Z là số hiệu nguyên tử (ở dưới)."
-      ],
-      // 6. Nguyên tố hóa học (Biết)
-      [
-        "Đồng vị là những nguyên tử có:",
-        [
-          "A. Cùng số proton, khác số neutron.",
-          "B. Cùng số neutron, khác số proton.",
-          "C. Cùng số khối, khác số proton.",
-          "D. Cùng số electron, khác số proton."
-        ],
-        0,
-        "Đồng vị cùng Z (cùng số proton), khác số neutron N."
-      ],
-      // 7. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Orbital nguyên tử (AO) là vùng không gian xung quanh hạt nhân mà xác suất tìm thấy electron tại đó là:",
-        [
-          "A. 100%.",
-          "B. Khoảng 90%.",
-          "C. 50%.",
-          "D. 10%."
+          "A. 9 hạt.",
+          "B. 18 hạt.",
+          "C. 19 hạt.",
+          "D. 28 hạt."
         ],
         1,
-        "Khu vực không gian có xác suất tìm thấy electron khoảng 90% được gọi là orbital nguyên tử."
+        "Fluorine có Z = 9 &rArr; có 9 proton và 9 electron. Tổng số hạt mang điện = 9 + 9 = 18 hạt."
       ],
-      // 8. Cấu trúc lớp vỏ electron (Biết)
+      // 5. Khái niệm nguyên tố hóa học (Biết)
       [
-        "Các lớp electron được kí hiệu bằng các chữ cái K, L, M, N tương ứng với số lượng tử chính n lần lượt là:",
+        "Nguyên tố hóa học là tập hợp của các nguyên tử có cùng:",
         [
-          "A. 1, 2, 3, 4.",
-          "B. 2, 4, 6, 8.",
-          "C. 1, 3, 5, 7.",
-          "D. 4, 3, 2, 1."
+          "A. Số neutron trong hạt nhân.",
+          "B. Số khối A.",
+          "C. Số đơn vị điện tích hạt nhân (số proton Z).",
+          "D. Tổng số proton và neutron."
+        ],
+        2,
+        "Định nghĩa: Nguyên tố hóa học là tập hợp những nguyên tử có cùng điện tích hạt nhân (cùng số proton Z)."
+      ],
+      // 6. Kí hiệu nguyên tử (Hiểu)
+      [
+        "Kí hiệu nguyên tử <sup>19</sup><sub>9</sub>F cho biết trong hạt nhân nguyên tử Fluorine có:",
+        [
+          "A. 9 proton và 19 neutron.",
+          "B. 9 proton và 10 neutron.",
+          "C. 10 proton và 9 neutron.",
+          "D. 19 proton và 9 electron."
+        ],
+        1,
+        "Z = 9 &rArr; có 9 proton. Số neutron N = A - Z = 19 - 9 = 10 neutron."
+      ],
+      // 7. Nguyên lí Pauli (Biết)
+      [
+        "Nguyên lí Pauli phát biểu rằng:",
+        [
+          "A. Trong một nguyên tử không thể có hai electron có cùng 4 số lượng tử, nghĩa là mỗi orbital nguyên tử chỉ chứa tối đa 2 electron có chiều tự quay ngược nhau.",
+          "B. Electron luôn điền vào orbital có mức năng lượng cao nhất trước.",
+          "C. Các electron trong cùng một phân lớp luôn ghép đôi với nhau.",
+          "D. Số electron tối đa trong một phân lớp luôn bằng số orbital."
         ],
         0,
-        "Lớp K: n=1; Lớp L: n=2; Lớp M: n=3; Lớp N: n=4."
+        "Nguyên lí Pauli quy định mỗi AO chỉ chứa tối đa 2 electron có spin ngược chiều nhau (&uarr;&darr;)."
       ],
-      // 9. Cấu trúc lớp vỏ electron (Biết)
+      // 8. Hình dạng orbital (Biết)
       [
-        "Số electron tối đa có thể chứa trong phân lớp p là:",
+        "Orbital nguyên tử loại s có dạng hình học nào trong không gian?",
+        [
+          "A. Hình số 8 nổi.",
+          "B. Hình cầu đối xứng.",
+          "C. Hình elip dẹt.",
+          "D. Hình xoắn ốc."
+        ],
+        1,
+        "Orbital s có dạng hình cầu đối xứng trong không gian tâm tại hạt nhân; orbital p có dạng hình số 8 nổi định hướng theo các trục x, y, z."
+      ],
+      // 9. Số AO trong lớp (Biết)
+      [
+        "Số orbital nguyên tử (AO) tối đa có trong lớp electron thứ 3 (lớp M, n = 3) là:",
+        [
+          "A. 3 AO.",
+          "B. 6 AO.",
+          "C. 9 AO.",
+          "D. 18 AO."
+        ],
+        2,
+        "Số AO tối đa của lớp thứ n là n<sup>2</sup> &rArr; n = 3 có 3<sup>2</sup> = 9 AO (gồm 1 AO 3s, 3 AO 3p và 5 AO 3d)."
+      ],
+      // 10. Cấu hình e nguyên tử (Hiểu)
+      [
+        "Cấu hình electron của nguyên tử Beryllium (Be, Z = 4) ở trạng thái cơ bản là:",
+        [
+          "A. 1s<sup>2</sup> 2s<sup>2</sup>.",
+          "B. 1s<sup>4</sup>.",
+          "C. 1s<sup>2</sup> 2p<sup>2</sup>.",
+          "D. 2s<sup>4</sup>."
+        ],
+        0,
+        "Be (Z = 4) có 4 electron: 1s<sup>2</sup> 2s<sup>2</sup>."
+      ],
+      // 11. Tính chất từ cấu hình electron (Hiểu)
+      [
+        "Nguyên tử của nguyên tố X có cấu hình electron 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup>. Nguyên tố X thuộc loại:",
+        [
+          "A. Kim loại.",
+          "B. Phi kim.",
+          "C. Khí hiếm.",
+          "D. Kim loại kiềm."
+        ],
+        1,
+        "X có 2 + 3 = 5 electron ở lớp ngoài cùng (lớp 3) &rArr; X là một phi kim (Phosphorus)."
+      ],
+      // 12. Cấu hình electron Chromium (Vận dụng)
+      [
+        "Cấu hình electron ở trạng thái cơ bản của nguyên tử Chromium (Cr, Z = 24) là:",
+        [
+          "A. [Ar] 4s<sup>2</sup> 3d<sup>4</sup>.",
+          "B. [Ar] 3d<sup>5</sup> 4s<sup>1</sup>.",
+          "C. [Ar] 3d<sup>6</sup>.",
+          "D. [Ar] 4s<sup>1</sup> 3d<sup>5</sup>."
+        ],
+        1,
+        "Hiện tượng bán bão hòa phân lớp 3d: 1 electron từ 4s nhảy sang 3d để đạt trạng thái bền vững hơn &rArr; cấu hình đúng là [Ar] 3d<sup>5</sup> 4s<sup>1</sup>."
+      ],
+      // 13. Nguyên tắc xếp cột trong BTH (Biết)
+      [
+        "Trong Bảng tuần hoàn, các nguyên tố có cùng số electron hóa trị trong nguyên tử được xếp vào cùng một:",
+        [
+          "A. Chu kì.",
+          "B. Nhóm (cột).",
+          "C. Ô nguyên tố.",
+          "D. Lớp electron."
+        ],
+        1,
+        "Nguyên tắc 3 của BTH: Các nguyên tố có cùng số electron hóa trị có tính chất hóa học tương tự nhau và được xếp vào cùng một cột (nhóm)."
+      ],
+      // 14. Định nghĩa chu kì (Hiểu)
+      [
+        "Chu kì trong Bảng tuần hoàn gồm tập hợp các nguyên tố mà nguyên tử của chúng có cùng:",
+        [
+          "A. Số hạt neutron.",
+          "B. Số electron lớp ngoài cùng.",
+          "C. Số lớp electron.",
+          "D. Khối lượng nguyên tử."
+        ],
+        2,
+        "Chu kì là dãy các nguyên tố có cùng số lớp electron trong nguyên tử, được sắp xếp theo chiều tăng dần của điện tích hạt nhân."
+      ],
+      // 15. Phân loại họ nguyên tố d, f (Hiểu)
+      [
+        "Các nguyên tố thuộc họ d và họ f trong Bảng tuần hoàn được xếp vào các nhóm nào?",
+        [
+          "A. Nhóm A.",
+          "B. Nhóm B (kim loại chuyển tiếp).",
+          "C. Nhóm halogen.",
+          "D. Nhóm khí hiếm."
+        ],
+        1,
+        "Nhóm A gồm các nguyên tố họ s và họ p. Nhóm B gồm các nguyên tố họ d và họ f (gọi là các kim loại chuyển tiếp)."
+      ],
+      // 16. Vị trí nguyên tố Scandium (Vận dụng)
+      [
+        "Nguyên tố scandium (Sc, Z = 21) có cấu hình electron [Ar] 3d<sup>1</sup> 4s<sup>2</sup>. Vị trí của scandium trong Bảng tuần hoàn là:",
+        [
+          "A. Ô số 21, chu kì 4, nhóm IIIB.",
+          "B. Ô số 21, chu kì 4, nhóm IIIA.",
+          "C. Ô số 21, chu kì 3, nhóm IIIB.",
+          "D. Ô số 21, chu kì 4, nhóm IB."
+        ],
+        0,
+        "Sc (Z = 21): Có 4 lớp electron &rArr; chu kì 4; cấu hình e hóa trị là 3d<sup>1</sup> 4s<sup>2</sup> có 1 + 2 = 3 electron hóa trị, electron cuối điền vào 3d &rArr; nhóm IIIB."
+      ]
+    ],
+    tf: [
+      {
+        stem: "Cho các nguyên tử và ion sau: F (Z = 9), anion F<sup>-</sup> và cation Na<sup>+</sup> (Z = 11):",
+        items: [
+          [
+            "Cấu hình electron của nguyên tử Fluorine ở trạng thái cơ bản là 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>.",
+            true,
+            "Đúng. Z = 9 &rArr; 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>."
+          ],
+          [
+            "Anion F<sup>-</sup> và cation Na<sup>+</sup> đều có cùng số lượng electron là 10 electron.",
+            true,
+            "Đúng. F nhận 1e thành F<sup>-</sup> (9 + 1 = 10e); Na nhường 1e thành Na<sup>+</sup> (11 - 1 = 10e)."
+          ],
+          [
+            "Bán kính của cation Na<sup>+</sup> lớn hơn bán kính của anion F<sup>-</sup>.",
+            false,
+            "Sai. Cả hai ion đều có cùng số e (10e) và 2 lớp e, nhưng hạt nhân Na<sup>+</sup> có Z = 11 proton lớn hơn F<sup>-</sup> (Z = 9 proton) nên hút mây electron mạnh hơn &rArr; bán kính Na<sup>+</sup> nhỏ hơn bán kính F<sup>-</sup>."
+          ],
+          [
+            "Fluorine là nguyên tố phi kim có độ âm điện lớn nhất và hoạt động hóa học mạnh nhất trong Bảng tuần hoàn.",
+            true,
+            "Đúng. F có độ âm điện lớn nhất (3,98 theo Pauling) và là phi kim hoạt động hóa học mạnh nhất."
+          ]
+        ]
+      },
+      {
+        stem: "Xét các nguyên tố nhóm IIA (nhóm kim loại kiềm thổ: Be, Mg, Ca, Sr, Ba):",
+        items: [
+          [
+            "Tất cả các nguyên tử nguyên tố nhóm IIA đều có 2 electron ở lớp ngoài cùng với cấu hình dạng ns<sup>2</sup>.",
+            true,
+            "Đúng. Đặc trưng của nhóm IIA là cấu hình electron lớp ngoài cùng dạng ns<sup>2</sup>."
+          ],
+          [
+            "Các nguyên tố nhóm IIA đều là các kim loại.",
+            true,
+            "Đúng. Tất cả các nguyên tố nhóm IIA đều là kim loại (kim loại kiềm thổ)."
+          ],
+          [
+            "Từ Be đến Ba, theo chiều tăng của số hiệu nguyên tử, bán kính nguyên tử giảm dần.",
+            false,
+            "Sai. Trong cùng một nhóm A, đi từ trên xuống dưới số lớp electron tăng dần nên bán kính nguyên tử tăng dần."
+          ],
+          [
+            "Công thức oxide cao nhất của các nguyên tố nhóm IIA có dạng chung là RO.",
+            true,
+            "Đúng vì các nguyên tố nhóm IIA có hóa trị cao nhất với oxygen là II &rArr; oxide dạng RO (BeO, MgO, CaO...)."
+          ]
+        ]
+      }
+    ],
+    short: [
+      {
+        question: "Cation Al<sup>3+</sup> được hình thành khi nguyên tử Aluminium (Z = 13) nhường 3 electron. Số electron có trong ion Al<sup>3+</sup> là bao nhiêu?",
+        answer: "10",
+        explanation: "Al (Z = 13) có 13 electron. Khi nhường 3 electron tạo ion Al<sup>3+</sup> thì số electron còn lại là 13 - 3 = 10 electron."
+      },
+      {
+        question: "Magnesium (Mg) trong tự nhiên gồm 3 đồng vị bền: <sup>24</sup>Mg (79%), <sup>25</sup>Mg (10%), <sup>26</sup>Mg (11%). Nguyên tử khối trung bình của Magnesium là bao nhiêu (làm tròn đến hàng phần trăm)?",
+        answer: "24.32",
+        explanation: "A̅ = (24 &times; 79 + 25 &times; 10 + 26 &times; 11) / 100 = (1896 + 250 + 286) / 100 = 2432 / 100 = 24,32 amu."
+      },
+      {
+        question: "Ở trạng thái cơ bản, nguyên tử Manganese (Mn, Z = 25) có cấu hình [Ar] 3d<sup>5</sup> 4s<sup>2</sup>. Số electron độc thân của nguyên tử Manganese là bao nhiêu?",
+        answer: "5",
+        explanation: "Phân lớp 3d<sup>5</sup> có 5 orbital, theo quy tắc Hund mỗi AO chứa đúng 1 electron độc thân. Phân lớp 4s<sup>2</sup> có 2 electron ghép đôi &rArr; tổng cộng có 5 electron độc thân."
+      },
+      {
+        question: "Nguyên tố Beryllium (Be) có số hiệu nguyên tử Z = 4. Số electron ở lớp electron ngoài cùng của Beryllium là bao nhiêu?",
+        answer: "2",
+        explanation: "Be (Z = 4): 1s<sup>2</sup> 2s<sup>2</sup> &rArr; lớp ngoài cùng là lớp thứ 2 có 2 electron."
+      }
+    ],
+    essay: [
+      {
+        title: "Câu 1 (1,0 điểm): Cấu hình electron và phân loại nguyên tố d của Sc và Mn",
+        question: "Cho hai nguyên tố: Scandium (Sc, Z = 21) và Manganese (Mn, Z = 25).<br>a) Viết cấu hình electron đầy đủ và dạng thu gọn của Scandium và Manganese.<br>b) Xác định số electron hóa trị của từng nguyên tố và cho biết chúng thuộc loại nguyên tố s, p, d hay f?",
+        solution: "a) Cấu hình electron:<br>• Scandium (Sc, Z = 21):<br>Đầy đủ: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>1</sup> 4s<sup>2</sup>. Thu gọn: [Ar] 3d<sup>1</sup> 4s<sup>2</sup> (0,35 điểm).<br>• Manganese (Mn, Z = 25):<br>Đầy đủ: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>5</sup> 4s<sup>2</sup>. Thu gọn: [Ar] 3d<sup>5</sup> 4s<sup>2</sup> (0,35 điểm).<br>b) Electron hóa trị và phân loại:<br>• Sc có 1 + 2 = 3 electron hóa trị (ở phân lớp 3d và 4s).<br>• Mn có 5 + 2 = 7 electron hóa trị (ở phân lớp 3d và 4s).<br>Cả Sc và Mn đều có electron cuối cùng điền vào phân lớp d (3d) nên đều thuộc loại NGUYÊN TỐ d (nhóm B) (0,30 điểm)."
+      },
+      {
+        title: "Câu 2 (1,0 điểm): Xác định nguyên tố Fluorine qua bài toán hạt",
+        question: "Nguyên tử của nguyên tố R có tổng số hạt cơ bản (proton, neutron, electron) là 28 hạt. Trong đó, số hạt mang điện nhiều hơn số hạt không mang điện là 8 hạt.<br>a) Tìm số hạt proton, neutron, electron và số khối A của nguyên tử R.<br>b) Viết cấu hình electron của nguyên tử R và cho biết R là kim loại, phi kim hay khí hiếm.",
+        solution: "a) Ta có hệ phương trình:<br>• Tổng hạt: 2Z + N = 28 (1).<br>• Hạt mang điện nhiều hơn không mang điện: 2Z - N = 8 (2).<br>Cộng (1) và (2): 4Z = 36 &rArr; Z = 9 (proton = electron = 9 hạt).<br>Thay vào (1): N = 28 - 2(9) = 10 hạt neutron (0,50 điểm).<br>Số khối A = Z + N = 9 + 10 = 19 (0,25 điểm).<br>b) Z = 9 (Fluorine):<br>Cấu hình electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>.<br>Vì có 7 electron ở lớp ngoài cùng (lớp 2) nên R là một PHI KIM điển hình (0,25 điểm)."
+      },
+      {
+        title: "Câu 3 (1,0 điểm): Xác định hai nguyên tố cùng nhóm IIA ở hai chu kì liên tiếp",
+        question: "Hai kim loại A và B đều thuộc nhóm IIA (nhóm kim loại kiềm thổ) ở hai chu kì liên tiếp của Bảng tuần hoàn, có tổng số hạt proton trong hai hạt nhân bằng 16 (biết Z<sub>A</sub> < Z<sub>B</sub>).<br>a) Xác định số hiệu nguyên tử và gọi tên hai nguyên tố A và B.<br>b) Viết cấu hình electron và nêu vị trí (ô, chu kì, nhóm) của A và B trong Bảng tuần hoàn.",
+        solution: "a) Vì A và B cùng nhóm IIA ở hai chu kì liên tiếp (chu kì 2 và 3) nên: Z<sub>B</sub> - Z<sub>A</sub> = 8 (1).<br>Theo đề bài: Z<sub>A</sub> + Z<sub>B</sub> = 16 (2).<br>Giải hệ phương trình:<br>• Z<sub>A</sub> = (16 - 8) / 2 = 4 &rArr; A là Beryllium (Be).<br>• Z<sub>B</sub> = 4 + 8 = 12 &rArr; B là Magnesium (Mg) (0,50 điểm).<br>b) Cấu hình electron và vị trí trong BTH:<br>• Beryllium (Be, Z = 4): 1s<sup>2</sup> 2s<sup>2</sup>.<br>Vị trí: Ô số 4, chu kì 2, nhóm IIA (0,25 điểm).<br>• Magnesium (Mg, Z = 12): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> hay [Ne] 3s<sup>2</sup>.<br>Vị trí: Ô số 12, chu kì 3, nhóm IIA (0,25 điểm)."
+      }
+    ]
+  },
+
+  // =========================================================================
+  // ĐỀ 09: THPT SỐ 1 LÊ HỒNG PHONG – ĐẮK LẮK
+  // Trọng tâm: K (Z=19), O (Z=8), Al (13), Si (14), Fe (26), Hợp chất M2X (140 hạt, K2O)
+  // =========================================================================
+  {
+    id: "hoahoc-10-de-09",
+    title: "Hóa học 10 - Đề 09 - Trường THPT số 1 Lê Hồng Phong – Đắk Lắk (Đề chính thức Giữa kì I)",
+    subject: "chemistry",
+    duration: 45,
+    school: "Trường THPT số 1 Lê Hồng Phong – Đắk Lắk (Đề chính thức Giữa kì I)",
+    province: "Đắk Lắk",
+    year: "2024–2025",
+    sourceUrl: "https://tailieu.vn/doc/de-thi-giua-ki-1-hoa-hoc-lop-10-le-hong-phong-2866644.html",
+    questions: [
+      // 1. Nhập môn Hóa học (Biết)
+      [
+        "Lĩnh vực nào sau đây KHÔNG PHẢI là đối tượng ứng dụng trực tiếp của ngành Hóa học?",
+        [
+          "A. Sản xuất phân bón hóa học và thuốc bảo vệ thực vật cho nông nghiệp.",
+          "B. Tổng hợp các loại dược phẩm chữa bệnh và vaccine y tế.",
+          "C. Nghiên cứu chu kì quay của các hành tinh và thiên thạch trong vũ trụ.",
+          "D. Tinh chế nhiên liệu và chế tạo vật liệu pin lưu trữ năng lượng mới."
+        ],
+        2,
+        "Nghiên cứu chu kì quay của các hành tinh và thiên thạch thuộc lĩnh vực Thiên văn học và Vật lí thiên văn."
+      ],
+      // 2. Thành phần nguyên tử (Biết)
+      [
+        "Số đơn vị điện tích hạt nhân (Z) của nguyên tử luôn có giá trị bằng:",
+        [
+          "A. Số hạt neutron trong hạt nhân.",
+          "B. Số proton và bằng số electron trong nguyên tử trung hòa.",
+          "C. Tổng số hạt trong hạt nhân nguyên tử.",
+          "D. Số khối A của nguyên tử."
+        ],
+        1,
+        "Số đơn vị điện tích hạt nhân Z = số proton = số electron (trong nguyên tử trung hòa)."
+      ],
+      // 3. Kích thước hạt nhân (Biết)
+      [
+        "Đường kính của hạt nhân nguyên tử có độ lớn vào khoảng:",
+        [
+          "A. 10<sup>-10</sup> m.",
+          "B. 10<sup>-14</sup> m đến 10<sup>-15</sup> m.",
+          "C. 10<sup>-6</sup> m.",
+          "D. 10<sup>-3</sup> m."
+        ],
+        1,
+        "Đường kính nguyên tử &approx; 10<sup>-10</sup> m (0,1 nm), trong khi đường kính hạt nhân nhỏ hơn rất nhiều, vào khoảng 10<sup>-15</sup> đến 10<sup>-14</sup> m."
+      ],
+      // 4. Mối liên hệ các loại hạt (Hiểu)
+      [
+        "Trong nguyên tử Aluminium (<sup>27</sup><sub>13</sub>Al), số hạt mang điện nhiều hơn số hạt không mang điện là bao nhiêu hạt?",
+        [
+          "A. 1 hạt.",
+          "B. 12 hạt.",
+          "C. 13 hạt.",
+          "D. 14 hạt."
+        ],
+        1,
+        "Z = 13 &rArr; số hạt mang điện là 2Z = 2 &times; 13 = 26 hạt. Số neutron N = 27 - 13 = 14 hạt. Chênh lệch: 26 - 14 = 12 hạt."
+      ],
+      // 5. Đặc trưng nguyên tố (Biết)
+      [
+        "Đại lượng đặc trưng cơ bản nhất quyết định vị trí và toàn bộ tính chất hóa học của một nguyên tố là:",
+        [
+          "A. Số khối A.",
+          "B. Số neutron trong hạt nhân.",
+          "C. Điện tích hạt nhân (số hiệu nguyên tử Z).",
+          "D. Bán kính nguyên tử."
+        ],
+        2,
+        "Số hiệu nguyên tử Z xác định số proton, số electron và cấu hình electron của nguyên tử, do đó quyết định toàn bộ tính chất hóa học của nguyên tố."
+      ],
+      // 6. NTK trung bình của Chlorine (Hiểu)
+      [
+        "Khí chlorine trong tự nhiên là hỗn hợp của 2 đồng vị bền: <sup>35</sup>Cl (chiếm 75,77%) và <sup>37</sup>Cl (chiếm 24,23%). Nguyên tử khối trung bình của Chlorine là:",
+        [
+          "A. 35,50 amu.",
+          "B. 35,48 amu.",
+          "C. 36,00 amu.",
+          "D. 35,24 amu."
+        ],
+        1,
+        "A̅ = (35 &times; 75,77 + 37 &times; 24,23) / 100 = (2651,95 + 896,51) / 100 = 3548,46 / 100 &approx; 35,48 amu."
+      ],
+      // 7. Quy tắc Hund (Biết)
+      [
+        "Theo quy tắc Hund, trong cùng một phân lớp chưa bão hòa, các electron có xu hướng phân bố vào các AO sao cho:",
+        [
+          "A. Số electron ghép đôi là tối đa.",
+          "B. Số electron độc thân là tối đa và các electron này phải có spin cùng chiều (song song).",
+          "C. Tập trung toàn bộ vào một orbital duy nhất.",
+          "D. Luôn có spin ngược chiều nhau."
+        ],
+        1,
+        "Quy tắc Hund: Trong một phân lớp, các electron có xu hướng phân bố đều vào các orbital sao cho số electron độc thân là cực đại và có chiều tự quay song song nhau."
+      ],
+      // 8. Số electron tối đa phân lớp d (Biết)
+      [
+        "Phân lớp electron d chứa tối đa bao nhiêu electron?",
         [
           "A. 2 electron.",
           "B. 6 electron.",
           "C. 10 electron.",
           "D. 14 electron."
         ],
-        1,
-        "Phân lớp p gồm 3 AO, mỗi AO chứa tối đa 2e &rArr; tối đa 6 electron."
+        2,
+        "Phân lớp d có 5 AO, mỗi AO chứa tối đa 2e &rArr; phân lớp d chứa tối đa 5 &times; 2 = 10 electron."
       ],
-      // 10. Cấu trúc lớp vỏ electron (Biết)
+      // 9. Lớp electron thứ 2 (Biết)
       [
-        "Cấu hình electron ở trạng thái cơ bản của nguyên tử oxygen (Z = 8) là:",
+        "Số electron tối đa có thể chứa ở lớp electron thứ 2 (lớp L, n = 2) là:",
         [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>4</sup> 2p<sup>2</sup>."
+          "A. 2 electron.",
+          "B. 8 electron.",
+          "C. 18 electron.",
+          "D. 32 electron."
+        ],
+        1,
+        "Lớp thứ n chứa tối đa 2n<sup>2</sup> electron &rArr; n = 2 chứa tối đa 2 &times; 2<sup>2</sup> = 8 electron (gồm 2s<sup>2</sup> và 2p<sup>6</sup>)."
+      ],
+      // 10. Cấu hình e Neon (Hiểu)
+      [
+        "Cấu hình electron ở trạng thái cơ bản của nguyên tử khí hiếm neon (Ne, Z = 10) là:",
+        [
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>4</sup> 2p<sup>4</sup>.",
+          "D. 1s<sup>2</sup> 2p<sup>8</sup>."
         ],
         0,
-        "Oxygen (Z = 8): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>."
+        "Z = 10 có 10 electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
       ],
-      // 11. Cấu trúc lớp vỏ electron (Hiểu)
+      // 11. Phân loại nguyên tố Fe (Hiểu)
       [
-        "Ion Fe<sup>3+</sup> được hình thành khi nguyên tử Fe (Z = 26, [Ar]3d<sup>6</sup>4s<sup>2</sup>) nhường đi 3 electron. Cấu hình electron của ion Fe<sup>3+</sup> là:",
+        "Nguyên tử iron (Fe, Z = 26) có cấu hình electron [Ar] 3d<sup>6</sup> 4s<sup>2</sup>. Iron là nguyên tố thuộc loại:",
         [
-          "A. [Ar] 3d<sup>5</sup>.",
-          "B. [Ar] 3d<sup>6</sup> 4s<sup>1</sup>.",
-          "C. [Ar] 3d<sup>3</sup> 4s<sup>2</sup>.",
+          "A. Nguyên tố s, kim loại kiềm.",
+          "B. Nguyên tố p, phi kim.",
+          "C. Nguyên tố d, kim loại chuyển tiếp.",
+          "D. Nguyên tố f, khí hiếm."
+        ],
+        2,
+        "Fe có electron cuối cùng điền vào phân lớp 3d nên là nguyên tố d, thuộc nhóm VIIIB, là một kim loại chuyển tiếp."
+      ],
+      // 12. Cấu hình ion Fe3+ (Vận dụng)
+      [
+        "Khi nguyên tử Iron (Fe, Z = 26, [Ar] 3d<sup>6</sup> 4s<sup>2</sup>) nhường 3 electron để tạo cation Fe<sup>3+</sup>, cấu hình electron của ion Fe<sup>3+</sup> là:",
+        [
+          "A. [Ar] 3d<sup>3</sup> 4s<sup>2</sup>.",
+          "B. [Ar] 3d<sup>5</sup>.",
+          "C. [Ar] 3d<sup>6</sup>.",
           "D. [Ar] 3d<sup>4</sup> 4s<sup>1</sup>."
         ],
+        1,
+        "Nguyên tử Fe nhường 2e ở phân lớp 4s ngoài cùng trước, sau đó nhường tiếp 1e ở phân lớp 3d &rArr; cấu hình của Fe<sup>3+</sup> là [Ar] 3d<sup>5</sup> (trạng thái bán bão hòa bền vững)."
+      ],
+      // 13. Số chu kì trong BTH (Biết)
+      [
+        "Bảng tuần hoàn các nguyên tố hóa học hiện đại có tất cả bao nhiêu chu kì?",
+        [
+          "A. 5 chu kì.",
+          "B. 6 chu kì.",
+          "C. 7 chu kì.",
+          "D. 8 chu kì."
+        ],
+        2,
+        "Bảng tuần hoàn hiện nay gồm 7 chu kì được đánh số từ 1 đến 7."
+      ],
+      // 14. Nhóm Halogen (Biết)
+      [
+        "Nhóm VIIA trong Bảng tuần hoàn gồm các nguyên tố được gọi chung là nhóm:",
+        [
+          "A. Khí hiếm.",
+          "B. Kim loại kiềm thổ.",
+          "C. Halogen.",
+          "D. Chalcogen."
+        ],
+        2,
+        "Nhóm VIIA (F, Cl, Br, I, At) được gọi là nhóm Halogen (chất sinh ra muối)."
+      ],
+      // 15. Khái niệm nguyên tố p (Hiểu)
+      [
+        "Nguyên tố p là các nguyên tố mà nguyên tử của chúng có đặc điểm nào sau đây?",
+        [
+          "A. Có electron cuối cùng được điền vào phân lớp p.",
+          "B. Có 6 electron ở lớp ngoài cùng.",
+          "C. Có đúng 3 lớp electron.",
+          "D. Đều là các phi kim hoạt động mạnh."
+        ],
         0,
-        "Fe &rarr; Fe<sup>3+</sup> + 3e: mất 2e ở phân lớp 4s và 1e ở phân lớp 3d &rArr; cấu hình của Fe<sup>3+</sup> là [Ar] 3d<sup>5</sup> (bán bão hòa 3d<sup>5</sup> rất bền)."
+        "Định nghĩa: Nguyên tố s, p, d, f là nguyên tố mà nguyên tử có electron cuối cùng được điền vào phân lớp tương ứng s, p, d, f."
       ],
-      // 12. Cấu trúc lớp vỏ electron (Hiểu)
-      [
-        "Số electron hóa trị của nguyên tử chlorine (Z = 17, [Ne]3s<sup>2</sup>3p<sup>5</sup>) là:",
-        [
-          "A. 5.",
-          "B. 7.",
-          "C. 8.",
-          "D. 17."
-        ],
-        1,
-        "Chlorine là nguyên tố p nhóm VIIA &rArr; số e hóa trị = số e ngoài cùng = 2 + 5 = 7 electron."
-      ],
-      // 13. Cấu tạo BTH (Biết)
-      [
-        "Nguyên tắc nào sau đây KHÔNG PHẢI là nguyên tắc sắp xếp các nguyên tố trong Bảng tuần hoàn hiện đại?",
-        [
-          "A. Sắp xếp theo chiều tăng dần của khối lượng nguyên tử.",
-          "B. Sắp xếp theo chiều tăng dần của điện tích hạt nhân nguyên tử.",
-          "C. Các nguyên tố có cùng số lớp electron xếp vào cùng một chu kì.",
-          "D. Các nguyên tố có cùng số electron hóa trị xếp vào cùng một nhóm."
-        ],
-        0,
-        "Bảng tuần hoàn hiện đại sắp xếp theo chiều tăng dần của ĐIỆN TÍCH HẠT NHÂN (Z), không sắp xếp theo khối lượng nguyên tử."
-      ],
-      // 14. Cấu tạo BTH (Biết)
-      [
-        "Chu kì 4 trong Bảng tuần hoàn các nguyên tố hóa học chứa bao nhiêu nguyên tố?",
-        [
-          "A. 8 nguyên tố.",
-          "B. 18 nguyên tố.",
-          "C. 32 nguyên tố.",
-          "D. 10 nguyên tố."
-        ],
-        1,
-        "Chu kì 4 là chu kì lớn đầu tiên, chứa 18 nguyên tố (từ <sub>19</sub>K đến <sub>36</sub>Kr)."
-      ],
-      // 15. Cấu tạo BTH (Biết)
-      [
-        "Nhóm B trong Bảng tuần hoàn gồm tất cả bao nhiêu cột dọc?",
-        [
-          "A. 8 cột.",
-          "B. 10 cột.",
-          "C. 12 cột.",
-          "D. 18 cột."
-        ],
-        1,
-        "Nhóm B gồm 8 nhóm (từ IB đến VIIIB) nhưng chiếm 10 cột dọc (nhóm VIIIB chiếm 3 cột)."
-      ],
-      // 16. Cấu tạo BTH (Hiểu)
+      // 16. Vị trí nguyên tố Potassium (Vận dụng)
       [
         "Nguyên tố potassium (K, Z = 19) có cấu hình [Ar] 4s<sup>1</sup>. Vị trí của potassium trong Bảng tuần hoàn là:",
         [
@@ -1084,393 +1103,398 @@ module.exports = [
           "D. Ô số 19, chu kì 1, nhóm IVA."
         ],
         0,
-        "K (Z = 19): Ô 19, chu kì 4 (4 lớp e), nhóm IA (nguyên tố s, 1e ngoài cùng)."
+        "K (Z = 19): Ô số 19; 4 lớp electron &rArr; chu kì 4; 1 electron lớp ngoài cùng, e cuối vào phân lớp 4s &rArr; nhóm IA."
       ]
     ],
     tf: [
       {
-        stem: "Xét các đặc điểm về thành phần và kích thước nguyên tử:",
+        stem: "Cho các nguyên tố Aluminium (Al, Z = 13) và Phosphorus (P, Z = 15):",
         items: [
           [
-            "a) Hạt nhân nguyên tử có đường kính khoảng 10<sup>-14</sup> m đến 10<sup>-15</sup> m, nhỏ hơn đường kính nguyên tử khoảng 10 000 lần.",
+            "Cả hai nguyên tử Al và P đều có 3 lớp electron ở trạng thái cơ bản.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng vì Al: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>1</sup> và P: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup> đều có 3 lớp electron (thuộc chu kì 3)."
           ],
           [
-            "b) Hạt electron có khối lượng rất nhỏ (xấp xỉ 9,109 &times; 10<sup>-31</sup> kg hay 0,00055 amu) và mang điện tích âm.",
+            "Cấu hình electron thu gọn của nguyên tử Aluminium là [Ne] 3s<sup>2</sup> 3p<sup>1</sup> và Al là nguyên tố kim loại.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng. Al có 3e ở lớp ngoài cùng nên là một kim loại."
           ],
           [
-            "c) Nguyên tử trung hòa về điện nên số neutron luôn luôn bằng số proton trong mọi nguyên tử.",
+            "Nguyên tử Phosphorus có 5 electron lớp ngoài cùng và là nguyên tố phi kim.",
+            true,
+            "Đúng. Lớp ngoài cùng (lớp 3) có 2 + 3 = 5 electron &rArr; P là một phi kim."
+          ],
+          [
+            "Oxide cao nhất của Aluminium (Al<sub>2</sub>O<sub>3</sub>) là một basic oxide mạnh, làm quỳ tím hóa xanh khi tan trong nước.",
             false,
-            "Phát biểu SAI. Nguyên tử trung hòa điện vì số proton bằng số electron (p = e), không phải bằng số neutron."
-          ],
-          [
-            "d) Lớp electron thứ 3 (lớp M) có 3 phân lớp 3s, 3p, 3d và chứa tối đa 18 electron.",
-            true,
-            "Phát biểu ĐÚNG."
+            "Sai. Al<sub>2</sub>O<sub>3</sub> không tan trong nước và là một amphoteric oxide (oxide lưỡng tính), vừa phản ứng được với acid vừa phản ứng được với base."
           ]
         ]
       },
       {
-        stem: "Cho các ion sau: Na<sup>+</sup> (Z = 11); Mg<sup>2+</sup> (Z = 12); F<sup>-</sup> (Z = 9); O<sup>2-</sup> (Z = 8):",
+        stem: "Xét cấu trúc và nguyên tắc của Bảng tuần hoàn các nguyên tố hóa học:",
         items: [
           [
-            "a) Cả 4 ion trên đều có cùng số lượng electron bằng 10.",
+            "Bảng tuần hoàn hiện nay gồm 7 chu kì, trong đó chu kì 1, 2, 3 là chu kì nhỏ; chu kì 4, 5, 6, 7 là chu kì lớn.",
             true,
-            "Phát biểu ĐÚNG. Na<sup>+</sup>: 11 - 1 = 10; Mg<sup>2+</sup>: 12 - 2 = 10; F<sup>-</sup>: 9 + 1 = 10; O<sup>2-</sup>: 8 + 2 = 10."
+            "Đúng theo phân loại SGK Hóa học 10."
           ],
           [
-            "b) Cả 4 ion trên đều có cấu hình electron giống với cấu hình electron của khí hiếm Neon ([Ne]: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>).",
+            "Chu kì 1 là chu kì ngắn nhất, chỉ gồm đúng 2 nguyên tố là Hydrogen (H) và Helium (He).",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng. Chu kì 1 chỉ điền vào phân lớp 1s nên chỉ có 2 nguyên tố."
           ],
           [
-            "c) Trong Bảng tuần hoàn, Sodium và Magnesium cùng thuộc chu kì 3, còn Fluorine và Oxygen cùng thuộc chu kì 2.",
-            true,
-            "Phát biểu ĐÚNG."
-          ],
-          [
-            "d) Nguyên tố Sodium và Magnesium là phi kim, còn Fluorine và Oxygen là kim loại.",
+            "Các nguyên tố trong cùng một nhóm A luôn có cùng số lớp electron trong nguyên tử.",
             false,
-            "Phát biểu SAI. Na, Mg là kim loại, còn F, O là phi kim."
+            "Sai. Các nguyên tố trong cùng một nhóm A có cùng số electron hóa trị (số e lớp ngoài cùng), còn số lớp electron tăng dần theo từng chu kì từ trên xuống."
+          ],
+          [
+            "Bảng tuần hoàn có tất cả 18 cột, gồm 8 cột nhóm A và 10 cột nhóm B (trong đó nhóm VIIIB gồm 3 cột).",
+            true,
+            "Đúng. BTH có 18 cột: 8 cột nhóm A (IA đến VIIIA) và 10 cột nhóm B (IB đến VIIB và 3 cột của nhóm VIIIB)."
           ]
         ]
       }
     ],
     short: [
       {
-        question: "Nguyên tử Aluminium (Al, Z = 13) có bao nhiêu hạt mang điện trong toàn bộ nguyên tử?",
-        answer: "26",
-        explanation: "Hạt mang điện gồm proton và electron: 13 proton + 13 electron = 26 hạt mang điện."
+        question: "Hạt nhân nguyên tử Potassium (<sup>39</sup><sub>19</sub>K) có bao nhiêu hạt proton?",
+        answer: "19",
+        explanation: "Số hiệu Z = 19 &rArr; Hạt nhân nguyên tử K có đúng 19 hạt proton."
       },
       {
-        question: "Khí Argon trong tự nhiên có chứa 0,34% đồng vị <sup>36</sup>Ar. Trong một mẫu khí chứa 5000 nguyên tử Argon, có bao nhiêu nguyên tử <sup>36</sup>Ar?",
-        answer: "17",
-        explanation: "Số nguyên tử <sup>36</sup>Ar = 5000 &times; (0,34 / 100) = 17 nguyên tử."
+        question: "Trong tự nhiên, Bromine có hai đồng vị bền là <sup>79</sup>Br (chiếm 50,69%) và <sup>81</sup>Br (chiếm 49,31%). Nguyên tử khối trung bình của Bromine là bao nhiêu (làm tròn đến hàng phần trăm)?",
+        answer: "79.99",
+        explanation: "A̅ = (79 &times; 50,69 + 81 &times; 49,31) / 100 = (4004,51 + 3994,11) / 100 = 7998,62 / 100 &approx; 79,99 amu."
       },
       {
-        question: "Ion Mg<sup>2+</sup> được tạo thành từ nguyên tử Magnesium (Z = 12). Số electron có trong ion Mg<sup>2+</sup> là bao nhiêu?",
-        answer: "10",
-        explanation: "Nguyên tử Mg có 12 electron, khi nhường 2 electron tạo cation Mg<sup>2+</sup> thì số electron còn lại = 12 - 2 = 10 electron."
+        question: "Ion Fe<sup>3+</sup> được hình thành khi nguyên tử Iron (Z = 26) nhường đi 3 electron. Số electron có trong ion Fe<sup>3+</sup> là bao nhiêu?",
+        answer: "23",
+        explanation: "Nguyên tử Fe có 26 electron. Khi nhường 3 electron tạo cation Fe<sup>3+</sup> thì số electron còn lại là 26 - 3 = 23 electron."
       },
       {
-        question: "Nguyên tử Chlorine (Cl, Z = 17) có cấu hình [Ne] 3s<sup>2</sup> 3p<sup>5</sup>. Số electron hóa trị của nguyên tử Chlorine là bao nhiêu?",
-        answer: "7",
-        explanation: "Chlorine là nguyên tố p nhóm VIIA, số electron hóa trị bằng số electron lớp ngoài cùng = 2 + 5 = 7 electron."
+        question: "Nguyên tử Silicon (Z = 14) có cấu hình electron [Ne] 3s<sup>2</sup> 3p<sup>2</sup>. Số electron độc thân của nguyên tử Silicon ở trạng thái cơ bản là bao nhiêu?",
+        answer: "2",
+        explanation: "Phân lớp 3p có 2 electron phân bố vào 2 AO riêng biệt theo quy tắc Hund &rArr; có 2 electron độc thân."
       }
     ],
     essay: [
       {
-        title: "Câu 1 (1,0 điểm).",
-        question: "Cho hai nguyên tử Nitrogen (N, Z = 7) và Oxygen (O, Z = 8).<br>a) Viết cấu hình electron ở trạng thái cơ bản của N và O.<br>b) Biểu diễn cấu hình electron theo ô orbital cho lớp ngoài cùng của N và O. Xác định số electron độc thân của mỗi nguyên tử.",
-        solution: "a) Cấu hình electron:<br>• N (Z = 7): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup>.<br>• O (Z = 8): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup> (0,5 điểm).<br>b) Biểu diễn ô orbital lớp ngoài cùng (n = 2):<br>• N (2s<sup>2</sup> 2p<sup>3</sup>): 2s chứa 1 cặp e ghép đôi [↑↓]; 2p có 3 ô orbital, mỗi ô chứa 1e độc thân [↑][↑][↑] &rArr; N có 3 electron độc thân.<br>• O (2s<sup>2</sup> 2p<sup>4</sup>): 2s chứa 1 cặp e ghép đôi [↑↓]; 2p có 3 ô orbital, gồm 1 ô ghép đôi [↑↓] và 2 ô chứa e độc thân [↑][↑] &rArr; O có 2 electron độc thân (0,5 điểm)."
+        title: "Câu 1 (1,0 điểm): Cấu hình electron của Iron và các ion Fe2+, Fe3+",
+        question: "Cho nguyên tố Iron (Fe, Z = 26).<br>a) Viết cấu hình electron đầy đủ và dạng thu gọn của nguyên tử Fe ở trạng thái cơ bản.<br>b) Viết cấu hình electron của các cation Fe<sup>2+</sup> và Fe<sup>3+</sup>.<br>c) Biểu diễn sự phân bố electron vào các orbital ở phân lớp 3d của ion Fe<sup>3+</sup> và cho biết số electron độc thân của ion Fe<sup>3+</sup>.",
+        solution: "a) Cấu hình electron của Fe (Z = 26):<br>• Đầy đủ: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>6</sup> 4s<sup>2</sup>.<br>• Thu gọn: [Ar] 3d<sup>6</sup> 4s<sup>2</sup> (0,35 điểm).<br>b) Cấu hình electron của các ion:<br>• Fe &rarr; Fe<sup>2+</sup> + 2e: Nhường 2e ở phân lớp 4s ngoài cùng &rArr; Fe<sup>2+</sup>: [Ar] 3d<sup>6</sup>.<br>• Fe &rarr; Fe<sup>3+</sup> + 3e: Nhường tiếp 1e ở 3d &rArr; Fe<sup>3+</sup>: [Ar] 3d<sup>5</sup> (0,35 điểm).<br>c) Biểu diễn orbital phân lớp 3d của Fe<sup>3+</sup>:<br>Phân lớp 3d có 5 orbital. Theo quy tắc Hund, 5 electron phân bố đều vào 5 AO, mỗi AO chứa đúng 1 electron độc thân (&uarr; &uarr; &uarr; &uarr; &uarr;).<br>&rArr; Ion Fe<sup>3+</sup> có đúng 5 electron độc thân (cấu hình bán bão hòa bền vững) (0,30 điểm)."
       },
       {
-        title: "Câu 2 (1,0 điểm).",
-        question: "Hợp chất MX<sub>2</sub> có tổng số hạt cơ bản (p, n, e) bằng 140, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là 44. Số hiệu nguyên tử của X nhiều hơn số hiệu nguyên tử của M là 5 đơn vị.<br>a) Tìm số hiệu nguyên tử Z<sub>M</sub> và Z<sub>X</sub>.<br>b) Viết công thức hóa học của hợp chất MX<sub>2</sub>.",
-        solution: "a) Trong hợp chất MX<sub>2</sub>:<br>• Tổng số hạt mang điện: 2Z<sub>M</sub> + 4Z<sub>X</sub>.<br>• Tổng số hạt không mang điện: N<sub>M</sub> + 2N<sub>X</sub>.<br>Ta có: (2Z<sub>M</sub> + 4Z<sub>X</sub>) + (N<sub>M</sub> + 2N<sub>X</sub>) = 140 và (2Z<sub>M</sub> + 4Z<sub>X</sub>) - (N<sub>M</sub> + 2N<sub>X</sub>) = 44.<br>&rArr; 2Z<sub>M</sub> + 4Z<sub>X</sub> = 92 &rArr; Z<sub>M</sub> + 2Z<sub>X</sub> = 46 (1).<br>Mặt khác: Z<sub>X</sub> - Z<sub>M</sub> = 5 &rArr; Z<sub>X</sub> = Z<sub>M</sub> + 5 (2).<br>Thay (2) vào (1): Z<sub>M</sub> + 2(Z<sub>M</sub> + 5) = 46 &rArr; 3Z<sub>M</sub> = 36 &rArr; Z<sub>M</sub> = 12 (Magnesium) và Z<sub>X</sub> = 17 (Chlorine) (0,75 điểm).<br>b) Công thức hóa học của hợp chất MX<sub>2</sub> là MgCl<sub>2</sub> (0,25 điểm)."
+        title: "Câu 2 (1,0 điểm): Bài toán hạt trong phân tử hợp chất ion M2X (K2O)",
+        question: "Hợp chất có công thức phân tử M<sub>2</sub>X tạo bởi cation M<sup>+</sup> và anion X<sup>2-</sup>. Tổng số hạt cơ bản (proton, neutron, electron) trong một phân tử M<sub>2</sub>X là 140 hạt, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là 44 hạt. Số khối của nguyên tử M lớn hơn số khối của nguyên tử X là 23. Trong hạt nhân của M, số hạt neutron nhiều hơn số proton là 1 hạt; trong hạt nhân của X, số neutron bằng số proton.<br>a) Xác định số hiệu nguyên tử của hai nguyên tố M và X.<br>b) Viết công thức hóa học của hợp chất M<sub>2</sub>X.",
+        solution: "a) Trong phân tử M<sub>2</sub>X gồm 2 nguyên tử M và 1 nguyên tử X:<br>• Tổng số hạt: 2(2Z<sub>M</sub> + N<sub>M</sub>) + (2Z<sub>X</sub> + N<sub>X</sub>) = 140 &hArr; (4Z<sub>M</sub> + 2Z<sub>X</sub>) + (2N<sub>M</sub> + N<sub>X</sub>) = 140 (1).<br>• Số hạt mang điện nhiều hơn không mang điện: (4Z<sub>M</sub> + 2Z<sub>X</sub>) - (2N<sub>M</sub> + N<sub>X</sub>) = 44 (2).<br>Cộng (1) và (2): 2(4Z<sub>M</sub> + 2Z<sub>X</sub>) = 184 &rArr; 4Z<sub>M</sub> + 2Z<sub>X</sub> = 92 &rArr; 2Z<sub>M</sub> + Z<sub>X</sub> = 46 (*).<br>Mặt khác: N<sub>M</sub> = Z<sub>M</sub> + 1 và N<sub>X</sub> = Z<sub>X</sub>.<br>Hiệu số khối: A<sub>M</sub> - A<sub>X</sub> = 23 &hArr; (Z<sub>M</sub> + N<sub>M</sub>) - (Z<sub>X</sub> + N<sub>X</sub>) = 23<br>&hArr; (2Z<sub>M</sub> + 1) - 2Z<sub>X</sub> = 23 &rArr; 2Z<sub>M</sub> - 2Z<sub>X</sub> = 22 &rArr; Z<sub>M</sub> - Z<sub>X</sub> = 11 (**).<br>Từ (*) và (**), giải hệ phương trình:<br>• (2Z<sub>M</sub> + Z<sub>X</sub>) + (Z<sub>M</sub> - Z<sub>X</sub>) = 46 + 11 &rArr; 3Z<sub>M</sub> = 57 &rArr; Z<sub>M</sub> = 19 (Potassium, K).<br>• Z<sub>X</sub> = 19 - 11 = 8 (Oxygen, O) (0,75 điểm).<br>b) Công thức hóa học của hợp chất:<br>M là K, X là O &rArr; M<sub>2</sub>X là K<sub>2</sub>O (Potassium oxide) (0,25 điểm)."
       },
       {
-        title: "Câu 3 (1,0 điểm).",
-        question: "Hai nguyên tố R và T thuộc cùng một nhóm A và ở hai chu kì liên tiếp trong Bảng tuần hoàn. Tổng số điện tích hạt nhân của R và T là 22 (Z<sub>R</sub> < Z<sub>T</sub>).<br>a) Xác định số hiệu nguyên tử Z<sub>R</sub> và Z<sub>T</sub>.<br>b) Viết cấu hình electron và xác định vị trí (ô, chu kì, nhóm) của R và T trong Bảng tuần hoàn.",
-        solution: "a) Hai nguyên tố thuộc cùng một nhóm A ở hai chu kì liên tiếp (chu kì 2 và 3) có: Z<sub>T</sub> - Z<sub>R</sub> = 8.<br>Theo đề bài: Z<sub>R</sub> + Z<sub>T</sub> = 22.<br>Giải hệ: Z<sub>R</sub> = (22 - 8) / 2 = 7 (Nitrogen) và Z<sub>T</sub> = 7 + 8 = 15 (Phosphorus) (0,5 điểm).<br>b) Vị trí trong BTH:<br>• R (Z = 7): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup> &rArr; Ô số 7, chu kì 2 (2 lớp e), nhóm VA (nguyên tố p, 5e ngoài cùng).<br>• T (Z = 15): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup> &rArr; Ô số 15, chu kì 3 (3 lớp e), nhóm VA (nguyên tố p, 5e ngoài cùng) (0,5 điểm)."
+        title: "Câu 3 (1,0 điểm): Xác định hai nguyên tố kế tiếp nhau trong cùng một chu kì",
+        question: "Xét hai nguyên tố A và B nằm ở hai ô liên tiếp trong cùng một chu kì của Bảng tuần hoàn. Tổng số đơn vị điện tích hạt nhân của hai nguyên tử là 27 (biết Z<sub>A</sub> < Z<sub>B</sub>).<br>a) Xác định số hiệu nguyên tử và gọi tên hai nguyên tố A và B.<br>b) Viết cấu hình electron và xác định vị trí (ô, chu kì, nhóm) của A và B trong Bảng tuần hoàn.",
+        solution: "a) Vì A và B kế tiếp nhau trong cùng một chu kì nên: Z<sub>B</sub> - Z<sub>A</sub> = 1 (1).<br>Theo đề bài: Z<sub>A</sub> + Z<sub>B</sub> = 27 (2).<br>Giải hệ phương trình:<br>• Z<sub>A</sub> = (27 - 1) / 2 = 13 &rArr; A là Aluminium (Al).<br>• Z<sub>B</sub> = 13 + 1 = 14 &rArr; B là Silicon (Si) (0,50 điểm).<br>b) Cấu hình electron và vị trí trong BTH:<br>• Aluminium (Al, Z = 13): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>1</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>1</sup>.<br>Vị trí: Ô số 13, chu kì 3, nhóm IIIA (0,25 điểm).<br>• Silicon (Si, Z = 14): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>2</sup>.<br>Vị trí: Ô số 14, chu kì 3, nhóm IVA (0,25 điểm)."
       }
     ]
   },
+
+  // =========================================================================
+  // ĐỀ 10: THPT LÊ HỒNG PHONG – ĐẮK LẮK
+  // Trọng tâm: H (1, 2, 3), D2O, K (Z=19, 58 hạt), Mg (12) & Ca (20), Dãy đẳng electron: O2-, F-, Na+, Mg2+
+  // =========================================================================
   {
     id: "hoahoc-10-de-10",
-    title: "Hóa học 10 - Đề 10 - Trường THPT Lê Hồng Phong – Đắk Lắk (Đề chính thức Kết nối tri thức)",
+    title: "Hóa học 10 - Đề 10 - Trường THPT Lê Hồng Phong – Đắk Lắk (Đề chính thức Giữa kì I)",
     subject: "chemistry",
     duration: 45,
-    school: "Trường THPT Lê Hồng Phong – Đắk Lắk (Đề chính thức Kết nối tri thức)",
+    school: "Trường THPT Lê Hồng Phong – Đắk Lắk (Đề chính thức Giữa kì I)",
     province: "Đắk Lắk",
     year: "2024–2025",
-    sourceUrl: "https://khoahoc.vietjack.com/chi-tiet-de-thi/11387/de-thi-giua-ki-1-hoa-hoc-10-nam-2025-2026-truong-thpt-huong-hoa-quang",
+    sourceUrl: "https://tailieu.vn/doc/de-thi-giua-ki-1-hoa-hoc-lop-10-le-hong-phong-dak-lak-2866645.html",
     questions: [
-      // 1. Mở đầu hóa học (Biết)
+      // 1. Nhập môn Hóa học (Biết)
       [
-        "Hóa học là ngành khoa học đóng vai trò trung tâm, kết nối các ngành khoa học tự nhiên vì:",
+        "Khi bị một lượng nhỏ dung dịch acid đặc (như H<sub>2</sub>SO<sub>4</sub> hoặc HCl đặc) bắn dính vào da tay, thao tác sơ cứu đầu tiên ĐÚNG NHẤT là:",
         [
-          "A. Mọi đối tượng trong thế giới tự nhiên đều được cấu tạo từ các chất và sự biến đổi của chất.",
-          "B. Hóa học nghiên cứu được tất cả các quy luật tâm lí của con người.",
-          "C. Hóa học có thể thay thế hoàn toàn Toán học và Vật lí học.",
-          "D. Hóa học xuất hiện sớm nhất trong lịch sử loài người."
-        ],
-        0,
-        "Hóa học là khoa học trung tâm vì mọi sự vật trong tự nhiên (sinh vật, khoáng sản, vật chất vũ trụ) đều cấu tạo từ các nguyên tố và chất hóa học."
-      ],
-      // 2. Thành phần nguyên tử (Biết)
-      [
-        "Khối lượng nguyên tử tập trung hầu như hoàn toàn ở hạt nhân là do:",
-        [
-          "A. Hạt nhân có kích thước rất lớn so với nguyên tử.",
-          "B. Khối lượng của hạt electron vô cùng nhỏ (m<sub>e</sub> &approx; 0,00055 amu) so với proton và neutron (~ 1 amu).",
-          "C. Lớp vỏ không có hạt nào chuyển động.",
-          "D. Hạt nhân mang điện tích dương rất lớn."
+          "A. Đổ ngay dung dịch kiềm đặc (NaOH) vào chỗ dính acid để trung hòa.",
+          "B. Xả ngay dưới vòi nước chảy liên tục trong nhiều phút, sau đó rửa nhẹ bằng dung dịch NaHCO<sub>3</sub> loãng.",
+          "C. Dùng khăn khô chà xát thật mạnh lên vết thương.",
+          "D. Băng kín vết thương lại ngay lập tức."
         ],
         1,
-        "Khối lượng của electron xấp xỉ 1/1836 khối lượng proton nên hơn 99,9% khối lượng nguyên tử tập trung ở hạt nhân."
+        "Quy tắc an toàn: Khi bị acid bắn vào da, phải xả liên tục dưới vòi nước chảy trong ít nhất 10–15 phút để làm loãng và rửa trôi acid, sau đó rửa lại bằng dung dịch NaHCO<sub>3</sub> loãng (khoảng 2%). Tuyệt đối không dùng base đặc vì gây bỏng thêm."
       ],
-      // 3. Thành phần nguyên tử (Biết)
+      // 2. Phát hiện hạt electron (Biết)
       [
-        "Kí hiệu nguyên tử của nguyên tố aluminium có 13 proton và 14 neutron là:",
+        "Nhà vật lí người Anh J. J. Thomson đã phát hiện ra hạt electron vào năm 1897 nhờ thí nghiệm nào sau đây?",
         [
-          "A. <sup>27</sup><sub>13</sub>Al.",
-          "B. <sup>13</sup><sub>27</sub>Al.",
-          "C. <sup>14</sup><sub>13</sub>Al.",
-          "D. <sup>27</sup><sub>14</sub>Al."
-        ],
-        0,
-        "Z = 13 viết ở dưới, A = 13 + 14 = 27 viết ở trên &rArr; <sup>27</sup><sub>13</sub>Al."
-      ],
-      // 4. Thành phần nguyên tử (Hiểu)
-      [
-        "Cho biết một nguyên tử có 20 proton, 20 neutron và 20 electron. Số hạt mang điện trong nguyên tử đó là:",
-        [
-          "A. 20.",
-          "B. 40.",
-          "C. 60.",
-          "D. 80."
+          "A. Thí nghiệm bắn phá lá vàng mỏng bằng hạt alpha (&alpha;).",
+          "B. Thí nghiệm phóng điện qua chất khí trong ống tia âm cực.",
+          "C. Thí nghiệm đo khối lượng bằng máy quang phổ khối.",
+          "D. Thí nghiệm tán xạ tia X."
         ],
         1,
-        "Hạt mang điện gồm proton (+20) và electron (-20) &rArr; Tổng số hạt mang điện = 20 + 20 = 40 hạt."
+        "Năm 1897, J. J. Thomson phát hiện ra hạt electron khi nghiên cứu sự phóng điện trong ống tia âm cực."
       ],
-      // 5. Nguyên tố hóa học (Biết)
+      // 3. Khối lượng nguyên tử (Biết)
       [
-        "Các đồng vị của cùng một nguyên tố hóa học có tính chất hóa học tương tự nhau vì chúng có:",
+        "Khối lượng nguyên tử tập trung hầu như hoàn toàn ở hạt nhân là vì:",
+        [
+          "A. Thể tích hạt nhân chiếm hầu hết thể tích nguyên tử.",
+          "B. Khối lượng của hạt electron vô cùng nhỏ (khoảng 0,00055 amu), không đáng kể so với proton và neutron.",
+          "C. Hạt nhân chứa toàn bộ các electron mang điện âm.",
+          "D. Hạt neutron có khối lượng lớn hơn proton hàng nghìn lần."
+        ],
+        1,
+        "Khối lượng electron (m<sub>e</sub> &approx; 0,00055 amu) quá bé so với proton và neutron (&approx; 1 amu), nên hơn 99,9% khối lượng nguyên tử tập trung ở hạt nhân."
+      ],
+      // 4. Kí hiệu nguyên tử (Hiểu)
+      [
+        "Một nguyên tử có 19 proton, 20 neutron và 19 electron. Kí hiệu nguyên tử của nguyên tố này là:",
+        [
+          "A. <sup>20</sup><sub>19</sub>K.",
+          "B. <sup>39</sup><sub>19</sub>K.",
+          "C. <sup>39</sup><sub>20</sub>Ca.",
+          "D. <sup>19</sup><sub>39</sub>K."
+        ],
+        1,
+        "Z = 19 (Potassium, K); số khối A = Z + N = 19 + 20 = 39 &rArr; Kí hiệu đúng là <sup>39</sup><sub>19</sub>K."
+      ],
+      // 5. Khái niệm đồng vị (Biết)
+      [
+        "Các đồng vị của cùng một nguyên tố hóa học có tính chất hóa học tương tự nhau là vì chúng có:",
         [
           "A. Cùng số neutron trong hạt nhân.",
           "B. Cùng số khối A.",
-          "C. Cùng cấu hình electron ở lớp vỏ nguyên tử.",
-          "D. Cùng khối lượng nguyên tử tuyệt đối."
+          "C. Cùng số proton và cấu hình electron tương tự nhau.",
+          "D. Cùng khối lượng nguyên tử."
         ],
         2,
-        "Tính chất hóa học của nguyên tố do lớp vỏ electron (đặc biệt là electron hóa trị) quyết định. Các đồng vị có cùng Z nên có cùng cấu hình electron &rArr; tính chất hóa học tương tự nhau."
+        "Tính chất hóa học của nguyên tố do lớp vỏ electron (đặc biệt là electron hóa trị) quyết định. Các đồng vị có cùng số proton nên cùng số electron và cấu hình electron, do đó có tính chất hóa học tương tự nhau."
       ],
-      // 6. Nguyên tố hóa học (Biết)
+      // 6. Số neutron trong các đồng vị Hydrogen (Hiểu)
       [
-        "Kí hiệu nguyên tử <sup>39</sup><sub>19</sub>K cho biết nguyên tử potassium có:",
+        "Nguyên tố hydrogen có 3 đồng vị bền và phóng xạ nhẹ là <sup>1</sup>H (Protium), <sup>2</sup>H (Deuterium) và <sup>3</sup>H (Tritium). Số hạt neutron có trong từng đồng vị lần lượt là:",
         [
-          "A. 19 proton, 20 neutron, 19 electron.",
-          "B. 19 proton, 39 neutron, 19 electron.",
-          "C. 20 proton, 19 neutron, 20 electron.",
-          "D. 19 proton, 19 neutron, 20 electron."
+          "A. 1, 2, 3.",
+          "B. 0, 1, 2.",
+          "C. 1, 1, 1.",
+          "D. 0, 2, 3."
+        ],
+        1,
+        "Số neutron N = A - Z. Với <sup>1</sup><sub>1</sub>H: N = 1 - 1 = 0; <sup>2</sup><sub>1</sub>H: N = 2 - 1 = 1; <sup>3</sup><sub>1</sub>H: N = 3 - 1 = 2."
+      ],
+      // 7. Vùng không gian AO (Biết)
+      [
+        "Khu vực không gian xung quanh hạt nhân nguyên tử mà tại đó xác suất tìm thấy electron khoảng 90% được gọi là:",
+        [
+          "A. Quỹ đạo tròn Bohr.",
+          "B. Orbital nguyên tử (AO).",
+          "C. Phân lớp electron.",
+          "D. Đám mây proton."
+        ],
+        1,
+        "Orbital nguyên tử (AO) là vùng không gian xung quanh hạt nhân có xác suất bắt gặp electron lớn nhất (khoảng 90%)."
+      ],
+      // 8. Số AO và electron tối đa phân lớp f (Biết)
+      [
+        "Phân lớp electron f gồm bao nhiêu orbital nguyên tử và chứa tối đa bao nhiêu electron?",
+        [
+          "A. 5 AO và tối đa 10 electron.",
+          "B. 7 AO và tối đa 14 electron.",
+          "C. 3 AO và tối đa 6 electron.",
+          "D. 9 AO và tối đa 18 electron."
+        ],
+        1,
+        "Phân lớp f gồm đúng 7 AO và chứa tối đa 7 &times; 2 = 14 electron."
+      ],
+      // 9. So sánh mức năng lượng 4s và 3d (Hiểu)
+      [
+        "Theo quy tắc Klechkowski, phân lớp 4s có mức năng lượng so với phân lớp 3d như thế nào?",
+        [
+          "A. Thấp hơn phân lớp 3d.",
+          "B. Cao hơn phân lớp 3d.",
+          "C. Bằng phân lớp 3d.",
+          "D. Bằng phân lớp 4p."
         ],
         0,
-        "Z = 19 (19 proton, 19 electron); A = 39 &rArr; N = 39 - 19 = 20 neutron."
+        "Theo trật tự Klechkowski: 1s 2s 2p 3s 3p 4s 3d 4p... nên phân lớp 4s có mức năng lượng thấp hơn phân lớp 3d (được điền electron trước 3d)."
       ],
-      // 7. Cấu trúc lớp vỏ electron (Biết)
+      // 10. Cấu hình electron Copper (Hiểu)
       [
-        "Hình dạng của orbital s và orbital p lần lượt là:",
+        "Cấu hình electron ở trạng thái cơ bản của nguyên tử copper (Cu, Z = 29) là:",
         [
-          "A. Hình cầu và hình số tám nổi.",
-          "B. Hình số tám nổi và hình cầu.",
-          "C. Đều là hình cầu.",
-          "D. Đều là hình số tám nổi."
+          "A. [Ar] 4s<sup>2</sup> 3d<sup>9</sup>.",
+          "B. [Ar] 3d<sup>10</sup> 4s<sup>1</sup>.",
+          "C. [Ar] 3d<sup>9</sup> 4s<sup>2</sup>.",
+          "D. [Ar] 4s<sup>1</sup> 3d<sup>10</sup>."
         ],
-        0,
-        "Orbital s có dạng hình cầu; Orbital p có dạng hình số tám nổi."
+        1,
+        "Do hiện tượng bão hòa phân lớp 3d bền vững hơn, 1 electron phân lớp 4s nhảy sang 3d &rArr; cấu hình đúng của Cu là [Ar] 3d<sup>10</sup> 4s<sup>1</sup>."
       ],
-      // 8. Cấu trúc lớp vỏ electron (Biết)
+      // 11. Cấu hình e ngoài cùng của phi kim điển hình (Hiểu)
       [
-        "Số electron tối đa trong lớp thứ n (với n &le; 4) được tính theo công thức:",
+        "Nguyên tử của một nguyên tố có cấu hình electron lớp ngoài cùng dạng ns<sup>2</sup> np<sup>5</sup> thuộc loại nguyên tố nào?",
         [
-          "A. 2n.",
-          "B. n<sup>2</sup>.",
-          "C. 2n<sup>2</sup>.",
-          "D. 2n + 1."
+          "A. Kim loại kiềm mạnh.",
+          "B. Phi kim điển hình (nhóm halogen).",
+          "C. Khí hiếm.",
+          "D. Kim loại chuyển tiếp họ d."
+        ],
+        1,
+        "Có 7 electron lớp ngoài cùng (ns<sup>2</sup> np<sup>5</sup>) là cấu hình đặc trưng của các phi kim điển hình nhóm VIIA (Halogen)."
+      ],
+      // 12. Cấu hình cation Mg2+ (Vận dụng)
+      [
+        "Cation Mg<sup>2+</sup> được hình thành khi nguyên tử magnesium (Mg, Z = 12) nhường đi 2 electron. Cấu hình electron của cation Mg<sup>2+</sup> là:",
+        [
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>."
+        ],
+        1,
+        "Mg (Z = 12): [Ne] 3s<sup>2</sup> nhường 2e ở lớp thứ 3 tạo Mg<sup>2+</sup> có 10 electron với cấu hình [Ne] hay 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
+      ],
+      // 13. Cơ sở định luật tuần hoàn hiện đại (Biết)
+      [
+        "Định luật tuần hoàn hiện đại phát biểu rằng: Tính chất của các nguyên tố và đơn chất cũng như hợp chất của chúng biến đổi tuần hoàn theo chiều tăng của:",
+        [
+          "A. Khối lượng nguyên tử.",
+          "B. Số neutron trong hạt nhân.",
+          "C. Điện tích hạt nhân của nguyên tử.",
+          "D. Bán kính nguyên tử."
         ],
         2,
-        "Công thức số e tối đa của lớp n: 2n<sup>2</sup>."
+        "Định luật tuần hoàn hiện đại: Tính chất của các nguyên tố và hợp chất biến đổi tuần hoàn theo chiều tăng của điện tích hạt nhân nguyên tử."
       ],
-      // 9. Cấu trúc lớp vỏ electron (Biết)
+      // 14. Đầu và cuối chu kì 3 (Hiểu)
       [
-        "Trường hợp ngoại lệ bán bão hòa phân lớp 3d xảy ra ở nguyên tử nào sau đây?",
+        "Chu kì 3 trong Bảng tuần hoàn bắt đầu bằng nguyên tố nào và kết thúc bằng nguyên tố nào?",
         [
-          "A. Chromium (Cr, Z = 24: [Ar] 3d<sup>5</sup> 4s<sup>1</sup>).",
-          "B. Iron (Fe, Z = 26).",
-          "C. Zinc (Zn, Z = 30).",
-          "D. Nickel (Ni, Z = 28)."
-        ],
-        0,
-        "Chromium có cấu hình bán bão hòa 3d<sup>5</sup> bền vững: [Ar] 3d<sup>5</sup> 4s<sup>1</sup>."
-      ],
-      // 10. Cấu trúc lớp vỏ electron (Biết)
-      [
-        "Trường hợp ngoại lệ bão hòa phân lớp 3d xảy ra ở nguyên tử nào sau đây?",
-        [
-          "A. Copper (Cu, Z = 29: [Ar] 3d<sup>10</sup> 4s<sup>1</sup>).",
-          "B. Calcium (Ca, Z = 20).",
-          "C. Potassium (K, Z = 19).",
-          "D. Scandium (Sc, Z = 21)."
-        ],
-        0,
-        "Copper có cấu hình bão hòa 3d<sup>10</sup> bền vững: [Ar] 3d<sup>10</sup> 4s<sup>1</sup>."
-      ],
-      // 11. Cấu trúc lớp vỏ electron (Hiểu)
-      [
-        "Cation Ca<sup>2+</sup> có cấu hình electron là:",
-        [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> (hay [Ar]).",
-          "B. [Ar] 4s<sup>2</sup>.",
-          "C. [Ar] 3d<sup>2</sup>.",
-          "D. [Ne] 3s<sup>2</sup> 3p<sup>4</sup>."
-        ],
-        0,
-        "Ca (Z = 20): [Ar]4s<sup>2</sup> nhường 2e ở phân lớp 4s tạo Ca<sup>2+</sup> có cấu hình khí hiếm [Ar]."
-      ],
-      // 12. Cấu trúc lớp vỏ electron (Hiểu)
-      [
-        "Nguyên tử của nguyên tố X có 3 lớp electron và lớp ngoài cùng có 5 electron. Số hiệu nguyên tử của X là:",
-        [
-          "A. 13.",
-          "B. 15.",
-          "C. 17.",
-          "D. 7."
+          "A. Bắt đầu bằng Lithium (Li) và kết thúc bằng Neon (Ne).",
+          "B. Bắt đầu bằng Sodium (Na) và kết thúc bằng Argon (Ar).",
+          "C. Bắt đầu bằng Potassium (K) và kết thúc bằng Krypton (Kr).",
+          "D. Bắt đầu bằng Hydrogen (H) và kết thúc bằng Helium (He)."
         ],
         1,
-        "Cấu hình: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup> &rArr; Tổng số e = 2 + 8 + 5 = 15 &rArr; Z = 15 (Phosphorus)."
+        "Chu kì 3 bắt đầu bằng kim loại kiềm Sodium (<sub>11</sub>Na) và kết thúc bằng khí hiếm Argon (<sub>18</sub>Ar)."
       ],
-      // 13. Cấu tạo BTH (Biết)
+      // 15. Nhóm VIIIA (Biết)
       [
-        "Bảng tuần hoàn các nguyên tố hóa học hiện nay có tất cả bao nhiêu chu kì?",
+        "Nhóm VIIIA trong Bảng tuần hoàn gồm tập hợp các nguyên tố thuộc loại:",
         [
-          "A. 6 chu kì.",
-          "B. 7 chu kì.",
-          "C. 8 chu kì.",
-          "D. 18 chu kì."
-        ],
-        1,
-        "Bảng tuần hoàn có đúng 7 chu kì (3 chu kì nhỏ 1, 2, 3 và 4 chu kì lớn 4, 5, 6, 7)."
-      ],
-      // 14. Cấu tạo BTH (Biết)
-      [
-        "Nhóm IIA trong Bảng tuần hoàn gồm các nguyên tố thuộc loại:",
-        [
-          "A. Kim loại kiềm.",
-          "B. Kim loại kiềm thổ.",
+          "A. Kim loại kiềm thổ.",
+          "B. Khí hiếm (khí trơ).",
           "C. Halogen.",
-          "D. Khí hiếm."
+          "D. Kim loại chuyển tiếp."
         ],
         1,
-        "Nhóm IIA gồm các kim loại kiềm thổ: Be, Mg, Ca, Sr, Ba, Ra."
+        "Nhóm VIIIA gồm He, Ne, Ar, Kr, Xe, Rn là các nguyên tố khí hiếm (khí trơ)."
       ],
-      // 15. Cấu tạo BTH (Biết)
+      // 16. Vị trí Manganese trong BTH (Vận dụng)
       [
-        "Nguyên tố magnesium (Mg) có Z = 12. Vị trí của magnesium trong Bảng tuần hoàn là:",
+        "Nguyên tố manganese (Mn, Z = 25) có cấu hình electron [Ar] 3d<sup>5</sup> 4s<sup>2</sup>. Vị trí của manganese trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 12, chu kì 3, nhóm IIA.",
-          "B. Ô số 12, chu kì 2, nhóm IIA.",
-          "C. Ô số 12, chu kì 3, nhóm IIB.",
-          "D. Ô số 12, chu kì 4, nhóm IIA."
+          "A. Ô số 25, chu kì 4, nhóm VIIB.",
+          "B. Ô số 25, chu kì 4, nhóm VIIA.",
+          "C. Ô số 25, chu kì 3, nhóm VIIB.",
+          "D. Ô số 25, chu kì 4, nhóm IIB."
         ],
         0,
-        "Mg (Z = 12): [Ne] 3s<sup>2</sup> &rArr; Ô 12, chu kì 3 (3 lớp e), nhóm IIA (nguyên tố s, 2e ngoài cùng)."
-      ],
-      // 16. Cấu tạo BTH (Hiểu)
-      [
-        "Nguyên tố copper (Cu, Z = 29) có cấu hình [Ar] 3d<sup>10</sup> 4s<sup>1</sup>. Nhận định nào sau đây là ĐÚNG về Cu?",
-        [
-          "A. Cu thuộc chu kì 4, nhóm IB và là kim loại chuyển tiếp.",
-          "B. Cu thuộc chu kì 4, nhóm IA và là kim loại kiềm.",
-          "C. Cu thuộc chu kì 3, nhóm IB và là phi kim.",
-          "D. Cu thuộc chu kì 4, nhóm VIIIB và là khí hiếm."
-        ],
-        0,
-        "Cu có 4 lớp e &rArr; Chu kì 4; phân lớp 3d bão hòa 10e, phân lớp 4s có 1e &rArr; Nhóm IB (kim loại chuyển tiếp)."
+        "Mn (Z = 25): Ô số 25; 4 lớp electron &rArr; chu kì 4; cấu hình e hóa trị là 3d<sup>5</sup> 4s<sup>2</sup> có 5 + 2 = 7 electron, e cuối vào phân lớp d &rArr; nhóm VIIB."
       ]
     ],
     tf: [
       {
-        stem: "Một nguyên tử R có tổng số hạt cơ bản (proton, neutron, electron) bằng 40 hạt. Trong đó, số hạt mang điện nhiều hơn số hạt không mang điện là 12 hạt:",
+        stem: "Cho nguyên tử Potassium (K, Z = 19, số khối A = 39):",
         items: [
           [
-            "a) Nguyên tử R có số proton bằng 13.",
+            "Số đơn vị điện tích hạt nhân của nguyên tử Potassium là 19.",
             true,
-            "Phát biểu ĐÚNG. Hệ: 2Z + N = 40 và 2Z - N = 12 &rArr; 4Z = 52 &rArr; Z = 13 (Aluminium)."
+            "Đúng vì Z = 19."
           ],
           [
-            "b) Số khối A của nguyên tử R bằng 27.",
+            "Hạt nhân nguyên tử Potassium chứa 19 proton và 20 neutron.",
             true,
-            "Phát biểu ĐÚNG. N = 40 - 26 = 14 &rArr; A = Z + N = 13 + 14 = 27."
+            "Đúng vì p = Z = 19 và N = A - Z = 39 - 19 = 20 hạt."
           ],
           [
-            "c) Nguyên tử R có 3 electron ở lớp electron ngoài cùng.",
+            "Nguyên tử Potassium có 4 lớp electron và thuộc khối nguyên tố s.",
             true,
-            "Phát biểu ĐÚNG. Cấu hình e của Al: [Ne] 3s<sup>2</sup> 3p<sup>1</sup> có 3e lớp ngoài cùng."
+            "Đúng. K có cấu hình [Ar] 4s<sup>1</sup>: 4 lớp electron, electron cuối cùng điền vào phân lớp 4s nên thuộc khối nguyên tố s."
           ],
           [
-            "d) R là một nguyên tố phi kim điển hình.",
+            "Khi tham gia phản ứng hóa học, nguyên tử Potassium dễ nhận thêm 1 electron để đạt cấu hình electron bền vững của khí hiếm.",
             false,
-            "Phát biểu SAI. Al có 3e lớp ngoài cùng nên là KIM LOẠI, không phải phi kim."
+            "Sai. Potassium là kim loại kiềm mạnh, có 1 electron lớp ngoài cùng nên rất dễ NHƯỜNG ĐI 1 electron để tạo cation K<sup>+</sup> có cấu hình bền của Argon."
           ]
         ]
       },
       {
-        stem: "Xét các đặc điểm về chu kì và nhóm trong Bảng tuần hoàn:",
+        stem: "Xét các nguyên tố trong cùng chu kì 3 (từ <sub>11</sub>Na đến <sub>18</sub>Ar):",
         items: [
           [
-            "a) Bảng tuần hoàn có 7 chu kì, trong đó chu kì 1 chỉ có 2 nguyên tố là chu kì ngắn nhất.",
+            "Tất cả các nguyên tố trong chu kì 3 đều có 3 lớp electron trong nguyên tử.",
             true,
-            "Phát biểu ĐÚNG."
+            "Đúng. Các nguyên tố trong cùng chu kì có cùng số lớp electron trong nguyên tử."
           ],
           [
-            "b) Số thứ tự của chu kì bằng số lớp electron trong nguyên tử của nguyên tố đó.",
-            true,
-            "Phát biểu ĐÚNG."
-          ],
-          [
-            "c) Bảng tuần hoàn có 8 nhóm A (từ IA đến VIIIA) gồm các nguyên tố s và nguyên tố p.",
-            true,
-            "Phát biểu ĐÚNG."
-          ],
-          [
-            "d) Các nguyên tố trong cùng một chu kì luôn có tính chất hóa học hoàn toàn giống nhau.",
+            "Theo chiều tăng dần của điện tích hạt nhân từ Na đến Cl, bán kính nguyên tử có xu hướng tăng dần.",
             false,
-            "Phát biểu SAI. Các nguyên tố trong cùng chu kì có số electron hóa trị khác nhau nên tính chất hóa học biến đổi tuần hoàn, không giống nhau."
+            "Sai. Trong cùng một chu kì, từ trái sang phải điện tích hạt nhân tăng dần, lực hút giữa hạt nhân và electron ngoài cùng tăng làm bán kính nguyên tử giảm dần."
+          ],
+          [
+            "Sodium (Na) là kim loại mạnh nhất, Chlorine (Cl) là phi kim mạnh nhất trong chu kì 3.",
+            true,
+            "Đúng. Trong chu kì 3, kim loại kiềm Na có tính kim loại mạnh nhất, halogen Cl có tính phi kim mạnh nhất (không xét khí hiếm Ar)."
+          ],
+          [
+            "Khí hiếm Argon (Ar) có cấu hình electron lớp ngoài cùng bền vững dạng 3s<sup>2</sup> 3p<sup>6</sup> với 8 electron.",
+            true,
+            "Đúng. Ar (Z = 18): [Ne] 3s<sup>2</sup> 3p<sup>6</sup> có 8 electron lớp ngoài cùng rất bền vững."
           ]
         ]
       }
     ],
     short: [
       {
-        question: "Hạt nhân của nguyên tử <sup>39</sup><sub>19</sub>K có bao nhiêu hạt không mang điện (neutron)?",
-        answer: "20",
-        explanation: "Số neutron N = số khối A - số proton Z = 39 - 19 = 20 hạt."
+        question: "Trong phân tử nước nặng D<sub>2</sub>O tạo bởi đồng vị Deuterium (<sup>2</sup><sub>1</sub>D) và đồng vị <sup>16</sup><sub>8</sub>O, tổng số hạt neutron trong một phân tử D<sub>2</sub>O là bao nhiêu?",
+        answer: "10",
+        explanation: "Mỗi nguyên tử <sup>2</sup><sub>1</sub>D có 2 - 1 = 1 neutron &rArr; 2 nguyên tử D có 2 neutron. Nguyên tử <sup>16</sup><sub>8</sub>O có 16 - 8 = 8 neutron &rArr; Tổng số neutron = 2 + 8 = 10 neutron."
       },
       {
-        question: "Bromine có hai đồng vị bền trong tự nhiên là <sup>79</sup>Br và <sup>81</sup>Br với nguyên tử khối trung bình là 79,91. Thành phần phần trăm số nguyên tử của đồng vị <sup>79</sup>Br là bao nhiêu %?",
-        answer: "54.5",
-        explanation: "(79x + 81(100 - x)) / 100 = 79,91 &rArr; 8100 - 2x = 7991 &rArr; 2x = 109 &rArr; x = 54,5%."
+        question: "Cho biết Hydrogen có 3 đồng vị (<sup>1</sup>H, <sup>2</sup>H, <sup>3</sup>H) và Oxygen có 3 đồng vị (<sup>16</sup>O, <sup>17</sup>O, <sup>18</sup>O). Có bao nhiêu loại phân tử nước (H<sub>2</sub>O) khác nhau có thể được tạo thành từ các đồng vị trên?",
+        answer: "18",
+        explanation: "Số tổ hợp cặp 2 nguyên tử H từ 3 đồng vị là 3 + (3 &times; 2 / 2) = 6 cặp (gồm: 1-1, 2-2, 3-3, 1-2, 1-3, 2-3). Mỗi cặp kết hợp với 1 trong 3 đồng vị của O &rArr; Số loại phân tử nước = 6 &times; 3 = 18 loại phân tử."
       },
       {
-        question: "Trong số 7 nguyên tố có số hiệu nguyên tử lần lượt là 7, 9, 10, 12, 16, 18, 19, có tất cả bao nhiêu nguyên tố là phi kim?",
-        answer: "3",
-        explanation: "Các nguyên tố: Z=7 (N, phi kim), Z=9 (F, phi kim), Z=10 (Ne, khí hiếm), Z=12 (Mg, kim loại), Z=16 (S, phi kim), Z=18 (Ar, khí hiếm), Z=19 (K, kim loại). Vậy có đúng 3 nguyên tố phi kim (N, F, S)."
+        question: "Dãy gồm các ion sau: O<sup>2-</sup>, F<sup>-</sup>, Na<sup>+</sup>, Mg<sup>2+</sup>, Al<sup>3+</sup>. Có bao nhiêu ion trong dãy có cấu hình electron ở lớp ngoài cùng là 2s<sup>2</sup> 2p<sup>6</sup>?",
+        answer: "5",
+        explanation: "Cả 5 ion trên đều có 10 electron và cấu hình electron là 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> &rArr; Tất cả 5 ion đều có lớp ngoài cùng là 2s<sup>2</sup> 2p<sup>6</sup>."
       },
       {
-        question: "Nguyên tử Calcium (Ca, Z = 20) có bao nhiêu electron ở lớp electron ngoài cùng?",
-        answer: "2",
-        explanation: "Ca (Z = 20): [Ar] 4s<sup>2</sup>. Lớp ngoài cùng là lớp thứ 4 có 2 electron."
+        question: "Nguyên tử của nguyên tố Potassium (K, Z = 19) có bao nhiêu electron ở lớp electron ngoài cùng?",
+        answer: "1",
+        explanation: "Cấu hình e của K: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>1</sup> &rArr; Lớp ngoài cùng là lớp thứ 4 có đúng 1 electron."
       }
     ],
     essay: [
       {
-        title: "Câu 1 (1,0 điểm).",
-        question: "Cho nguyên tố Iron (Fe, Z = 26).<br>a) Viết cấu hình electron ở trạng thái cơ bản của nguyên tử Fe.<br>b) Viết cấu hình electron của hai ion Fe<sup>2+</sup> và Fe<sup>3+</sup>. Giải thích vì sao ion Fe<sup>3+</sup> có độ bền nhiệt động học cao hơn Fe<sup>2+</sup>.",
-        solution: "a) Cấu hình electron của Fe (Z = 26):<br>1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>6</sup> 4s<sup>2</sup> hay [Ar] 3d<sup>6</sup> 4s<sup>2</sup> (0,35 điểm).<br>b) Cấu hình của các ion:<br>• Fe<sup>2+</sup> (mất 2e ở phân lớp 4s): [Ar] 3d<sup>6</sup> (0,3 điểm).<br>• Fe<sup>3+</sup> (mất thêm 1e ở phân lớp 3d): [Ar] 3d<sup>5</sup> (0,2 điểm).<br>Giải thích: Phân lớp 3d<sup>5</sup> của Fe<sup>3+</sup> có cấu trúc bán bão hòa (5 orbital d đều chứa 1 electron độc thân có spin cùng chiều), đây là cấu trúc đối xứng và bền vững theo quy tắc Hund, do đó ion Fe<sup>3+</sup> bền hơn Fe<sup>2+</sup> (0,15 điểm)."
+        title: "Câu 1 (1,0 điểm): Dãy ion đẳng electron và so sánh bán kính ion",
+        question: "Cho 4 ion sau: O<sup>2-</sup> (Z = 8), F<sup>-</sup> (Z = 9), Na<sup>+</sup> (Z = 11) và Mg<sup>2+</sup> (Z = 12).<br>a) Viết cấu hình electron của từng ion trên. Nêu nhận xét về cấu hình electron của 4 ion này.<br>b) Sắp xếp bán kính của 4 ion trên theo thứ tự giảm dần và giải thích ngắn gọn dựa vào điện tích hạt nhân.",
+        solution: "a) Cấu hình electron của các ion:<br>• O<sup>2-</sup> (8 + 2 = 10e): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> hay [Ne].<br>• F<sup>-</sup> (9 + 1 = 10e): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> hay [Ne].<br>• Na<sup>+</sup> (11 - 1 = 10e): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> hay [Ne].<br>• Mg<sup>2+</sup> (12 - 2 = 10e): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> hay [Ne].<br>Nhận xét: Cả 4 ion đều có cùng số electron (10 electron) và có cấu hình electron giống hệt nhau (dãy ion đẳng electron) (0,50 điểm).<br>b) So sánh bán kính ion:<br>Do có cùng số electron (10e) và cùng 2 lớp electron, lực hút của hạt nhân lên lớp vỏ electron phụ thuộc vào điện tích hạt nhân (Z). Hạt nhân có Z càng lớn thì lực hút mây electron càng mạnh &rArr; bán kính ion càng nhỏ.<br>Điện tích hạt nhân tăng dần: Z<sub>O</sub> (8) &lt; Z<sub>F</sub> (9) &lt; Z<sub>Na</sub> (11) &lt; Z<sub>Mg</sub> (12).<br>&rArr; Thứ tự bán kính giảm dần: r(O<sup>2-</sup>) &gt; r(F<sup>-</sup>) &gt; r(Na<sup>+</sup>) &gt; r(Mg<sup>2+</sup>) (0,50 điểm)."
       },
       {
-        title: "Câu 2 (1,0 điểm).",
-        question: "Bromine (Br) có hai đồng vị bền trong tự nhiên là <sup>79</sup>Br và <sup>81</sup>Br. Biết nguyên tử khối trung bình của Bromine là 79,91.<br>a) Tính phần trăm số nguyên tử của từng đồng vị Bromine.<br>b) Tính phần trăm khối lượng của đồng vị <sup>79</sup>Br trong hợp chất Sodium bromide (NaBr). Cho biết nguyên tử khối của Na = 23.",
-        solution: "a) Gọi x là % số nguyên tử của <sup>79</sup>Br &rArr; % của <sup>81</sup>Br là (100 - x).<br>Ta có: (79x + 81(100 - x)) / 100 = 79,91 &rArr; 8100 - 2x = 7991 &rArr; 2x = 109 &rArr; x = 54,5%.<br>Vậy đồng vị <sup>79</sup>Br chiếm 54,5% và <sup>81</sup>Br chiếm 45,5% (0,5 điểm).<br>b) Khối lượng mol phân tử của NaBr = 23 + 79,91 = 102,91 g/mol.<br>Trong 1 mol NaBr có 1 mol nguyên tử Br, trong đó đồng vị <sup>79</sup>Br chiếm 0,545 mol.<br>Khối lượng của đồng vị <sup>79</sup>Br là: 0,545 &times; 79 = 43,055 g.<br>Phần trăm khối lượng của <sup>79</sup>Br trong NaBr là:<br>%m(<sup>79</sup>Br) = (43,055 / 102,91) &times; 100% &approx; 41,84% (0,5 điểm)."
+        title: "Câu 2 (1,0 điểm): Xác định nguyên tố Potassium qua bài toán hạt",
+        question: "Nguyên tử của nguyên tố Q có tổng số hạt cơ bản (proton, neutron, electron) là 58 hạt. Trong đó, số hạt mang điện nhiều hơn số hạt không mang điện là 18 hạt.<br>a) Tính số hạt proton, neutron, electron và số khối A của nguyên tử Q.<br>b) Viết cấu hình electron của nguyên tử Q và xác định vị trí của Q (ô, chu kì, nhóm) trong Bảng tuần hoàn.",
+        solution: "a) Trong nguyên tử: p = e = Z. Ta có hệ phương trình:<br>• Tổng số hạt: 2Z + N = 58 (1).<br>• Hạt mang điện nhiều hơn không mang điện: 2Z - N = 18 (2).<br>Cộng (1) và (2): 4Z = 76 &rArr; Z = 19 (proton = electron = 19 hạt).<br>Thay vào (1): N = 58 - 2(19) = 20 hạt neutron (0,50 điểm).<br>Số khối A = Z + N = 19 + 20 = 39 (0,25 điểm).<br>b) Z = 19 là Potassium (K):<br>Cấu hình electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>1</sup> hay [Ar] 4s<sup>1</sup>.<br>Vị trí trong BTH: Ô số 19; chu kì 4 (có 4 lớp e); nhóm IA (có 1e ngoài cùng, e cuối vào 4s) (0,25 điểm)."
       },
       {
-        title: "Câu 3 (1,0 điểm).",
-        question: "Hai nguyên tố A và B đứng kế tiếp nhau trong cùng một chu kì của Bảng tuần hoàn có tổng số proton trong hai hạt nhân là 31 (Z<sub>A</sub> < Z<sub>B</sub>).<br>a) Tìm số hiệu nguyên tử Z<sub>A</sub> và Z<sub>B</sub>.<br>b) Xác định vị trí (ô số, chu kì, nhóm) của A và B trong Bảng tuần hoàn.",
-        solution: "a) Do A và B kế tiếp nhau trong cùng một chu kì: Z<sub>B</sub> - Z<sub>A</sub> = 1.<br>Tổng số proton: Z<sub>A</sub> + Z<sub>B</sub> = 31.<br>Giải hệ: Z<sub>A</sub> = (31 - 1) / 2 = 15 (Phosphorus) và Z<sub>B</sub> = 16 (Sulfur) (0,5 điểm).<br>b) Vị trí trong BTH:<br>• A (Z = 15): [Ne] 3s<sup>2</sup> 3p<sup>3</sup> &rArr; Ô số 15, chu kì 3 (có 3 lớp e), nhóm VA (nguyên tố p, 5e ngoài cùng).<br>• B (Z = 16): [Ne] 3s<sup>2</sup> 3p<sup>4</sup> &rArr; Ô số 16, chu kì 3 (có 3 lớp e), nhóm VIA (nguyên tố p, 6e ngoài cùng) (0,5 điểm)."
+        title: "Câu 3 (1,0 điểm): Xác định hai nguyên tố cùng nhóm IIA và so sánh tính kim loại",
+        question: "Hai nguyên tố kim loại X và Y cùng thuộc nhóm IIA của Bảng tuần hoàn và nằm ở hai chu kì liên tiếp, có tổng số proton trong hai hạt nhân là 32 (biết Z<sub>X</sub> < Z<sub>Y</sub>).<br>a) Xác định số hiệu nguyên tử và gọi tên hai nguyên tố X và Y.<br>b) So sánh tính kim loại giữa X và Y, giải thích dựa theo quy luật biến đổi tuần hoàn trong Bảng tuần hoàn.",
+        solution: "a) Vì X và Y thuộc cùng nhóm A ở hai chu kì liên tiếp (chu kì 3 và 4) nên số hiệu nguyên tử hơn kém nhau 8 đơn vị: Z<sub>Y</sub> - Z<sub>X</sub> = 8 (1).<br>Theo đề bài: Z<sub>X</sub> + Z<sub>Y</sub> = 32 (2).<br>Giải hệ phương trình:<br>• Z<sub>X</sub> = (32 - 8) / 2 = 12 &rArr; X là Magnesium (Mg).<br>• Z<sub>Y</sub> = 12 + 8 = 20 &rArr; Y là Calcium (Ca) (0,50 điểm).<br>b) So sánh tính kim loại:<br>X (Mg, Z = 12) và Y (Ca, Z = 20) đều thuộc nhóm IIA trong Bảng tuần hoàn.<br>Theo quy luật biến đổi tuần hoàn: Trong cùng một nhóm A, theo chiều tăng của điện tích hạt nhân (từ trên xuống dưới), bán kính nguyên tử tăng dần, lực hút giữa hạt nhân và electron ngoài cùng giảm dần nên khả năng nhường electron tăng &rArr; tính kim loại tăng dần.<br>Do Ca ở chu kì 4 (dưới Mg ở chu kì 3) nên: Tính kim loại của Calcium mạnh hơn Magnesium (Ca &gt; Mg) (0,50 điểm)."
       }
     ]
   }
