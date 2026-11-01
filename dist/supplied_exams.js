@@ -1,8 +1,3 @@
-/**
- * supplied-exams.js
- * Trọn bộ 30 đề thi & đáp án giải chi tiết 3 môn Toán, Vật lí, Hóa học 10
- * Chuẩn ma trận cấu trúc mới Bộ GD&ĐT
- */
 const suppliedExams = [
   {
     "id": "toan-10-de-01",
@@ -6955,6 +6950,442 @@ const suppliedExams = [
         "title": "Câu 2 (1,5 điểm).",
         "question": "Hòa tan hoàn toàn 10,4 gam một hỗn hợp gồm hai kim loại kiềm thổ A và B thuộc hai chu kì liên tiếp (nhóm IIA) vào dung dịch HCl dư, sau phản ứng thu được 7,437 lít khí H<sub>2</sub> (ở đkc: 24,79 lít/mol) và dung dịch muối X.<br>a) Xác định tên hai kim loại A và B.<br>b) Tính tổng khối lượng muối chloride khan thu được khi cô cạn dung dịch X.",
         "solution": "a) Số mol H<sub>2</sub> = 7,437 / 24,79 = 0,3 mol &rArr; n<sub>hh</sub> = n<sub>H2</sub> = 0,3 mol. Nguyên tử khối trung bình: <span style=\"text-decoration:overline;\">M</span> = 10,4 / 0,3 &approx; 34,67 (g/mol). Hai kim loại nhóm IIA ở hai chu kì liên tiếp là Magnesium (Mg = 24) và Calcium (Ca = 40) (1,0 điểm).<br>b) Theo định luật bảo toàn khối lượng (với n<sub>Cl-</sub> = 2.n<sub>H2</sub> = 0,6 mol): m<sub>muối</sub> = m<sub>kim loại</sub> + m<sub>Cl-</sub> = 10,4 + 0,6 . 35,5 = 10,4 + 21,3 = 31,7 gam (0,5 điểm)."
+      }
+    ]
+  },
+  {
+    "id": "toan-10-de-11",
+    "title": "Toán 10 - Đề 11 - Đề ôn tập kiểm tra giữa học kì I",
+    "subject": "math",
+    "duration": 90,
+    "school": "Đề ôn thi chuẩn cấu trúc Bộ GD&ĐT",
+    "province": "Đề chuẩn",
+    "year": "2026–2027",
+    "sourceUrl": "#",
+    "questions": [
+      [
+        "Cho mệnh đề P: \"&radic;2 là số hữu tỉ\". Hãy phát biểu mệnh đề phủ định của mệnh đề P.",
+        [
+          "A. P: \"&radic;2 là số vô tỉ\".",
+          "B. P: \"&radic;2 là số tự nhiên\".",
+          "C. P: \"&radic;2 là số nguyên\".",
+          "D. P: \"&radic;2 không phải là số hữu tỉ\"."
+        ],
+        3,
+        "Theo định nghĩa mệnh đề phủ định trong SGK Toán 10: Mệnh đề phủ định của mệnh đề P là mệnh đề \"Không phải P\", kí hiệu là P̄. Phủ định trực tiếp của khẳng định \"&radic;2 là số hữu tỉ\" là \"&radic;2 không phải là số hữu tỉ\" (thêm từ \"không phải\")."
+      ],
+      [
+        "Phát biểu nào sau đây không phải là mệnh đề P &rArr; Q?",
+        [
+          "A. Nếu P thì Q.",
+          "B. P là điều kiện đủ để có Q.",
+          "C. Q là điều kiện cần để có P.",
+          "D. P là điều kiện cần để có Q."
+        ],
+        3,
+        "Trong mệnh đề kéo theo P &rArr; Q, P là giả thiết (điều kiện đủ để có Q) và Q là kết luận (điều kiện cần để có P). Khẳng định \"P là điều kiện cần để có Q\" là cách diễn đạt của mệnh đề đảo Q &rArr; P, do đó không phải là mệnh đề P &rArr; Q."
+      ],
+      [
+        "Mệnh đề \"&exist;x &isin; <b>R</b>, x<sup>2</sup> = 18\" được phát biểu là:",
+        [
+          "A. Chỉ có một số thực mà bình phương của nó bằng 18.",
+          "B. Có ít nhất một số thực mà bình phương của nó bằng 18.",
+          "C. Nếu x là một số thực thì x<sup>2</sup> = 18.",
+          "D. Bình phương của mỗi số thực bằng 18."
+        ],
+        1,
+        "Kí hiệu &exist; đọc là \"tồn tại\" hoặc \"có ít nhất một\". Do đó mệnh đề \"&exist;x &isin; <b>R</b>, x<sup>2</sup> = 18\" được phát biểu chuẩn là: \"Có ít nhất một số thực mà bình phương của nó bằng 18\"."
+      ],
+      [
+        "Cho tập hợp A = {1; 3; 5; 7; 9}. Tập hợp nào sau đây không phải là tập con của tập A?",
+        [
+          "A. {1; 3; 5}.",
+          "B. &empty;.",
+          "C. {1; 3}.",
+          "D. {1; 3; 6; 9}."
+        ],
+        3,
+        "Tập hợp {1; 3; 6; 9} chứa phần tử 6 không thuộc tập hợp A (6 &notin; A), do đó theo định nghĩa tập con trong Toán 10 thì {1; 3; 6; 9} không phải là tập con của A."
+      ],
+      [
+        "Trong các bất phương trình sau, bất phương trình nào là bất phương trình bậc nhất hai ẩn?",
+        [
+          "A. 7x - 5/y &lt; 0.",
+          "B. x - y<sup>2</sup> &ge; y + 10.",
+          "C. 5x + y &le; 0.",
+          "D. 2x<sup>5</sup> + y<sup>3</sup> &ge; 6."
+        ],
+        2,
+        "Theo định nghĩa trong SGK Toán 10: Bất phương trình bậc nhất hai ẩn x, y là bất phương trình có dạng ax + by &le; c (hoặc &lt;, &ge;, &gt;) trong đó a, b là các số thực không đồng thời bằng 0. Trong các phương án trên, chỉ có 5x + y &le; 0 là bất phương trình bậc nhất hai ẩn."
+      ],
+      [
+        "Trong các cặp số sau đây, cặp nào là nghiệm của bất phương trình 3x + 4y &lt; 1?",
+        [
+          "A. (-2; 1).",
+          "B. (3; 7).",
+          "C. (0; 1).",
+          "D. (1; 1)."
+        ],
+        0,
+        "Thay tọa độ điểm (-2; 1) vào vế trái bất phương trình: 3(-2) + 4(1) = -6 + 4 = -2 &lt; 1 (thỏa mãn). Vậy cặp (-2; 1) là nghiệm."
+      ],
+      [
+        "Cho bất phương trình x - y &le; 2. Khẳng định nào sau đây là đúng?",
+        [
+          "A. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 chứa gốc tọa độ.",
+          "B. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 không chứa gốc tọa độ.",
+          "C. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = -2 chứa gốc tọa độ.",
+          "D. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x + y = 2 chứa gốc tọa độ."
+        ],
+        0,
+        "Đường thẳng bờ của bất phương trình là d: x - y = 2. Thay tọa độ gốc O(0; 0) vào vế trái: 0 - 0 = 0 &le; 2 (thỏa mãn). Vậy miền nghiệm là nửa mặt phẳng bờ d: x - y = 2 có chứa gốc tọa độ O(0; 0)."
+      ],
+      [
+        "Trong các hệ sau, hệ nào không phải là hệ bất phương trình bậc nhất hai ẩn?",
+        [
+          "A. {x + y &gt; 1 ; 2x - y &gt; 0}.",
+          "B. {4x + y &gt; 1 ; 2x - y &le; 0}.",
+          "C. {x + y &gt; 1 ; 2024x &ge; 2025}.",
+          "D. {x + y &gt; 1 ; 2&radic;x - y &gt; 0}."
+        ],
+        3,
+        "Bất phương trình 2&radic;x - y &gt; 0 chứa căn bậc hai của ẩn x nên không phải là bất phương trình bậc nhất hai ẩn. Do đó hệ D không phải là hệ bất phương trình bậc nhất hai ẩn."
+      ],
+      [
+        "Trong các cặp số sau, cặp nào là nghiệm của hệ bất phương trình {2x + 3y &gt; 4 ; x &gt; 0}?",
+        [
+          "A. (-2; 1).",
+          "B. (0; 1).",
+          "C. (2; 1).",
+          "D. (1; -2)."
+        ],
+        2,
+        "Thay cặp (2; 1): có x = 2 &gt; 0 và 2(2) + 3(1) = 7 &gt; 4. Cả hai bất phương trình đều thỏa mãn, do đó (2; 1) là nghiệm của hệ."
+      ],
+      [
+        "Trên mặt phẳng Oxy lấy điểm M thuộc nửa đường tròn đơn vị sao cho góc xOM = 120&deg;. Tung độ của điểm M bằng:",
+        [
+          "A. &radic;3 / 2.",
+          "B. -&radic;3 / 2.",
+          "C. -1/2.",
+          "D. 1."
+        ],
+        0,
+        "Theo định nghĩa giá trị lượng giác trên nửa đường tròn đơn vị (Toán 10): tung độ của điểm M chính là sin(xOM) = sin120&deg;. Ta có sin120&deg; = sin(180&deg; - 60&deg;) = sin60&deg; = &radic;3 / 2."
+      ],
+      [
+        "Trong mặt phẳng Oxy, phần nửa mặt phẳng không tô đậm (không kể bờ) trong hình vẽ là biểu diễn hình học tập nghiệm của bất phương trình nào dưới đây? (Hình vẽ đường thẳng cắt trục hoành tại (3/2; 0) và cắt trục tung tại (0; -3), phần không tô đậm chứa gốc O).",
+        [
+          "A. 2x - y &gt; 3.",
+          "B. 2x - y &lt; 3.",
+          "C. x - 2y &gt; 3.",
+          "D. x - 2y &lt; 3."
+        ],
+        1,
+        "Phương trình đường thẳng bờ đi qua (3/2; 0) và (0; -3) là x / (3/2) + y / (-3) = 1 &hArr; 2x/3 - y/3 = 1 &hArr; 2x - y = 3. Miền nghiệm không tô đậm chứa gốc tọa độ O(0; 0) và không kể bờ. Thay (0; 0): 2(0) - 0 = 0 &lt; 3 (thỏa mãn). Vậy bất phương trình tương ứng là 2x - y &lt; 3."
+      ],
+      [
+        "Tam giác ABC có góc B = 10&deg; và góc C = 20&deg;. Giá trị của tanA bằng:",
+        [
+          "A. -&radic;3.",
+          "B. &radic;3.",
+          "C. -1 / &radic;3.",
+          "D. 1 / &radic;3."
+        ],
+        2,
+        "Tổng ba góc trong tam giác ABC: A = 180&deg; - (B + C) = 180&deg; - (10&deg; + 20&deg;) = 150&deg;. Áp dụng tính chất giá trị lượng giác của hai góc bù nhau: tanA = tan150&deg; = tan(180&deg; - 30&deg;) = -tan30&deg; = -1 / &radic;3."
+      ]
+    ],
+    "tf": [
+      {
+        "stem": "Cho tập hợp X = {x &isin; <b>R</b> | -3 &le; x &le; 1}.",
+        "items": [
+          [
+            "a) X = {-3; -2; -1; 0; 1}.",
+            false,
+            "Vì x là số thực (x &isin; <b>R</b>) nên tập X là đoạn [-3; 1], chứa vô số số thực chứ không chỉ gồm 5 số nguyên. Khẳng định này là SAI."
+          ],
+          [
+            "b) Số phần tử của tập hợp X là 5.",
+            false,
+            "Đoạn số thực [-3; 1] chứa vô số phần tử liên tục trên trục số thực, không phải là tập hữu hạn có 5 phần tử. Khẳng định này là SAI."
+          ],
+          [
+            "c) \"0 là một phần tử của tập hợp X\" là một mệnh đề đúng.",
+            true,
+            "Vì 0 là số thực thỏa mãn -3 &le; 0 &le; 1 nên 0 &isin; X. Mệnh đề 0 &isin; X là mệnh đề đúng. Khẳng định này là ĐÚNG."
+          ],
+          [
+            "d) Mệnh đề phủ định của mệnh đề \"&forall;x &isin; X, x &lt; 1\" là một mệnh đề đúng.",
+            true,
+            "Mệnh đề phủ định của mệnh đề ban đầu là \"&exist;x &isin; X, x &ge; 1\". Do 1 &isin; X = [-3; 1] thỏa mãn 1 &ge; 1 nên tồn tại ít nhất một phần tử x = 1, suy ra mệnh đề phủ định này là ĐÚNG."
+          ]
+        ]
+      },
+      {
+        "stem": "Cho tam giác ABC có AB = 4, AC = 6 và góc A = 120&deg;.",
+        "items": [
+          [
+            "a) sinA = &radic;3 / 2.",
+            true,
+            "Áp dụng giá trị lượng giác của hai góc bù nhau trong Toán 10: sin120&deg; = sin(180&deg; - 60&deg;) = sin60&deg; = &radic;3 / 2. Khẳng định này là ĐÚNG."
+          ],
+          [
+            "b) cosA = 1/2.",
+            false,
+            "Vì góc A = 120&deg; &gt; 90&deg; là góc tù nên cosA &lt; 0. Cụ thể cos120&deg; = -cos60&deg; = -1/2 &ne; 1/2. Khẳng định này là SAI."
+          ],
+          [
+            "c) BC = 2&radic;7.",
+            false,
+            "Áp dụng định lí côsin trong tam giác ABC: BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cosA = 4<sup>2</sup> + 6<sup>2</sup> - 2.4.6.(-1/2) = 16 + 36 + 24 = 76 &rArr; BC = &radic;76 = 2&radic;19 &ne; 2&radic;7. Khẳng định này là SAI."
+          ],
+          [
+            "d) Diện tích tam giác ABC là S = 6&radic;3.",
+            true,
+            "Áp dụng công thức tính diện tích tam giác: S = 1/2 . AB . AC . sinA = 1/2 . 4 . 6 . sin120&deg; = 12 . (&radic;3 / 2) = 6&radic;3. Khẳng định này là ĐÚNG."
+          ]
+        ]
+      }
+    ],
+    "short": [
+      {
+        "question": "Cho tập hợp A = {x | x là số nguyên tố nhỏ hơn 20} và B = {n &isin; <b>N</b> | 2 &le; n &le; 10}. Tìm số phần tử của tập hợp A &cup; B.",
+        "answer": "13",
+        "explanation": "Tập các số nguyên tố nhỏ hơn 20 là A = {2; 3; 5; 7; 11; 13; 17; 19} gồm 8 phần tử. Tập B = {2; 3; 4; 5; 6; 7; 8; 9; 10} gồm 9 phần tử. Giao của hai tập hợp là các số nguyên tố từ 2 đến 10: A &cap; B = {2; 3; 5; 7} gồm 4 phần tử. Số phần tử của hợp là n(A &cup; B) = n(A) + n(B) - n(A &cap; B) = 8 + 9 - 4 = 13 phần tử."
+      },
+      {
+        "question": "Miền nghiệm của hệ bất phương trình {x + y &gt; 1 ; 3x - 2y &le; 6} chứa bao nhiêu điểm có toạ độ là cặp số nguyên và có tung độ nhỏ hơn 2?",
+        "answer": "3",
+        "explanation": "Từ hệ ta có 1 - y &lt; x &le; (6 + 2y)/3. Điều kiện để tồn tại x là 1 - y &le; (6 + 2y)/3 &hArr; 3 - 3y &le; 6 + 2y &hArr; 5y &ge; -3 &hArr; y &ge; -0,6. Với y là số nguyên nhỏ hơn 2, ta chỉ có y = 0 và y = 1: Với y = 1 thì 0 &lt; x &le; 8/3 &rArr; x &isin; {1; 2} (cho 2 điểm (1; 1), (2; 1)). Với y = 0 thì 1 &lt; x &le; 2 &rArr; x = 2 (cho 1 điểm (2; 0)). Với y &le; -1 thì khoảng nghiệm rỗng. Vậy có đúng 3 điểm nguyên thỏa mãn là (1; 1), (2; 1) và (2; 0)."
+      },
+      {
+        "question": "Lớp 10A2 có 45 học sinh, trong đó số học sinh tham gia đội bóng đá là 18, số học sinh tham gia đội bóng chuyền là 15. Biết rằng có 20 học sinh không tham gia bất cứ môn nào. Hỏi có bao nhiêu học sinh tham gia đồng thời cả hai môn bóng đá và bóng chuyền?",
+        "answer": "8",
+        "explanation": "Số học sinh tham gia ít nhất một môn thể thao là n(A &cup; B) = 45 - 20 = 25 học sinh. Áp dụng công thức số phần tử của hợp hai tập hợp: n(A &cup; B) = n(A) + n(B) - n(A &cap; B) &rArr; n(A &cap; B) = 18 + 15 - 25 = 8 học sinh."
+      },
+      {
+        "question": "Một phân xưởng có hai máy M₁, M₂ sản xuất hai loại sản phẩm I và II. Sản xuất 1 tấn loại I lãi 20 triệu đồng, cần dùng M₁ trong 3 giờ và M₂ trong 1 giờ. Sản xuất 1 tấn loại II lãi 15 triệu đồng, cần dùng M₁ trong 1 giờ và M₂ trong 1 giờ. Mỗi ngày máy M₁ làm việc không quá 6 giờ, máy M₂ không quá 4 giờ. Số tiền lãi lớn nhất mà phân xưởng có thể thu được trong một ngày là bao nhiêu triệu đồng?",
+        "answer": "65",
+        "explanation": "Gọi x, y (tấn) lần lượt là sản lượng sản phẩm loại I và II (x &ge; 0, y &ge; 0). Ta có hệ ràng buộc thời gian: {3x + y &le; 6 ; x + y &le; 4}. Tiền lãi thu được là L(x; y) = 20x + 15y (triệu đồng). Miền nghiệm là tứ giác OABC với O(0; 0), A(2; 0), B(1; 3), C(0; 4). Giá trị lãi tại các đỉnh: L(0; 0) = 0; L(2; 0) = 40; L(0; 4) = 60; L(1; 3) = 20(1) + 15(3) = 65 triệu đồng. Vậy tiền lãi lớn nhất là 65 triệu đồng."
+      }
+    ]
+  },
+  {
+    "id": "toan-10-de-12",
+    "title": "Toán 10 - Đề 12 - Đề minh họa kiểm tra giữa kì I (Năm học 2026–2027)",
+    "subject": "math",
+    "duration": 90,
+    "school": "Đề minh họa kiểm tra giữa kì I – Đề 1",
+    "province": "Bộ GD&ĐT",
+    "year": "2026–2027",
+    "sourceUrl": "#",
+    "questions": [
+      [
+        "Phát biểu nào sau đây không phải là một mệnh đề?",
+        [
+          "A. \"Nếu x &lt; 3 thì x<sup>2</sup> &lt; 9\"",
+          "B. \"&forall;x &gt; 0 ta đều có: &radic;x &gt; x\"",
+          "C. \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\"",
+          "D. \"Tồn tại x &isin; <b>R</b> sao cho x<sup>2</sup> + 3x - 4 = 0\""
+        ],
+        2,
+        "Theo định nghĩa mệnh đề trong SGK Toán 10: Mệnh đề là một câu khẳng định có tính đúng hoặc sai. Câu nghi vấn (câu hỏi) \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\" không phải là câu khẳng định nên không phải là một mệnh đề."
+      ],
+      [
+        "Tìm mệnh đề phủ định của mệnh đề M = \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường đều đạt giải\".",
+        [
+          "A. \"Có rất nhiều học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "B. \"Có ít nhất một học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "C. \"Không có học sinh nào trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "D. \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\""
+        ],
+        1,
+        "Mệnh đề ban đầu có dạng \"&forall;x &isin; X, P(x)\" (tất cả... đều đạt giải). Phủ định của mệnh đề chứa lượng từ \"&forall;\" (tất cả) là mệnh đề chứa lượng từ \"&exist;\" (tồn tại / có ít nhất một) kèm phủ định của tính chất: \"Có ít nhất một học sinh trong đội chính thức... không đạt giải\"."
+      ],
+      [
+        "Cho hai tập hợp A = [3; 9] và B = (3; 11). Xác định tập hợp A &cap; B.",
+        [
+          "A. [3; 8)",
+          "B. {3; 4; 5; 6; 7; 8; 9}",
+          "C. (3; 9]",
+          "D. [3; 11)"
+        ],
+        2,
+        "Phần tử chung của A = [3; 9] và B = (3; 11) là các số thực x thỏa mãn 3 &le; x &le; 9 và 3 &lt; x &lt; 11 &hArr; 3 &lt; x &le; 9. Do đó A &cap; B = (3; 9]."
+      ],
+      [
+        "Hình vẽ biểu diễn trục số thực (gạch bỏ đoạn ngoài từ -&infin; đến 2 ngoặc vuông [, gạch bỏ khoảng giữa 4 ngoặc ] và 6 ngoặc [, gạch bỏ phần lớn hơn 8 ngoặc tròn )) là hình biểu diễn cho tập hợp số nào sau đây:",
+        [
+          "A. K = [2; 8) \\ (4; 6)",
+          "B. K = {2; 3; 4; 6; 7; 8}",
+          "C. K = {2; 3; 4; 6; 7}",
+          "D. K = [2; 8) \\ [4; 6]"
+        ],
+        0,
+        "Tập hợp lấy từ 2 (có lấy đầu mút 2) đến 8 (không lấy đầu mút 8), và loại bỏ các phần tử nằm trong khoảng (4; 6) (hai điểm 4 và 6 vẫn được giữ lại do ngoặc quay ra vùng lấy). Do đó tập hợp số tương ứng là K = [2; 8) \\ (4; 6)."
+      ],
+      [
+        "Bất phương trình nào sau đây là bất phương trình bậc nhất 2 ẩn?",
+        [
+          "A. 1/x + 2/y &gt; 3",
+          "B. x - y/2 &ge; 3",
+          "C. x - y &ge; xy",
+          "D. x(1 + y) &gt; 0"
+        ],
+        1,
+        "Bất phương trình x - y/2 &ge; 3 có dạng ax + by &ge; c với a = 1, b = -1/2, c = 3 là bất phương trình bậc nhất hai ẩn x và y."
+      ],
+      [
+        "Miền nghiệm của bất phương trình x + 2y &le; 4 chứa điểm nào sau đây?",
+        [
+          "A. A(1; 2)",
+          "B. B(2; 1)",
+          "C. C(4; 3)",
+          "D. D(-1; 3)"
+        ],
+        1,
+        "Thay tọa độ điểm B(2; 1) vào bất phương trình: 2 + 2(1) = 4 &le; 4 (thỏa mãn dấu \"&le;\"). Các điểm còn lại đều cho giá trị lớn hơn 4 (1 + 4 = 5 &gt; 4; 4 + 6 = 10 &gt; 4; -1 + 6 = 5 &gt; 4)."
+      ],
+      [
+        "Hình vẽ minh họa đường thẳng đi qua (2; 0) và (0; -2), phần nửa mặt phẳng phía trên-trái chứa gốc O bị gạch bỏ, phần nửa mặt phẳng phía dưới-phải không bị gạch bỏ. Đây là miền nghiệm của bất phương trình nào?",
+        [
+          "A. x - y &ge; -2",
+          "B. x - y &ge; 2",
+          "C. x - y + 2 &gt; 0",
+          "D. x + y &ge; -2"
+        ],
+        1,
+        "Đường thẳng bờ đi qua (2; 0) và (0; -2) có phương trình là x - y = 2. Gốc tọa độ O(0; 0) nằm trong miền bị gạch bỏ vì 0 - 0 = 0 &lt; 2. Miền nghiệm không bị gạch chứa các điểm thỏa mãn x - y &ge; 2 (ví dụ điểm (3; 0) có 3 - 0 = 3 &ge; 2)."
+      ],
+      [
+        "Cho hệ bất phương trình: {x &lt; 3 ; y &gt; 0 ; x - y + 4 &gt; 0} có miền nghiệm là (S). Kết luận nào sau đây đúng?",
+        [
+          "A. Điểm A(-1; 1) không thuộc S",
+          "B. Miền nghiệm của hệ là miền trong của một tam giác.",
+          "C. Tất cả các điểm trên đoạn thẳng AB với A(0; 1) và B(2; 2) đều nằm ngoài miền nghiệm (S)",
+          "D. Điểm E(1; 5) thuộc S"
+        ],
+        1,
+        "Ba đường thẳng x = 3, y = 0, x - y + 4 = 0 cắt nhau đôi một tại 3 đỉnh phân biệt (-4; 0), (3; 0) và (3; 7). Miền nghiệm gồm các điểm nằm đồng thời về phía bên trái đường x = 3, phía trên trục hoành y = 0 và phía dưới đường x - y + 4 = 0, tạo thành miền trong của một tam giác."
+      ],
+      [
+        "Miền tam giác (phần nền trắng) giới hạn bởi đường nằm ngang y = -1 và hai đường chéo đi qua (0; 2) là miền nghiệm của hệ bất phương trình nào dưới đây?",
+        [
+          "A. {x - y + 2 &ge; 0 ; y + 1 &ge; 0 ; 2x + y - 2 &le; 0}",
+          "B. {x &ge; -1 ; 2x + y - 2 &ge; 0 ; x - y &le; 2}",
+          "C. {y &le; 1 ; 2x + y - 2 &ge; 0 ; x + 4y - 10 &ge; 0}",
+          "D. {x - y &le; 2 ; 2x + y - 2 &ge; 0 ; y + 1 &le; 0}"
+        ],
+        0,
+        "Cạnh đáy của tam giác nằm trên đường y = -1, miền tam giác nằm phía trên nên y &ge; -1 &hArr; y + 1 &ge; 0. Hai cạnh bên là các đường thẳng x - y + 2 = 0 và 2x + y - 2 = 0. Gốc O(0; 0) nằm trong tam giác và thỏa mãn 0 - 0 + 2 &ge; 0, 0 + 1 &ge; 0, 2(0) + 0 - 2 &le; 0. Vậy hệ bất phương trình đúng là hệ A."
+      ],
+      [
+        "Cho góc &alpha; có 90&deg; &lt; &alpha; &le; 180&deg;. Kết luận nào sau đây đúng?",
+        [
+          "A. sin&alpha; &gt; 0; cos&alpha; &gt; 0",
+          "B. sin&alpha; &gt; 0; cot&alpha; &lt; 0",
+          "C. tan&alpha; . cot&alpha; &lt; 0",
+          "D. sin&alpha; &lt; 0; tan&alpha; &gt; 0"
+        ],
+        1,
+        "Với góc tù &alpha; (90&deg; &lt; &alpha; &le; 180&deg;), điểm biểu diễn trên nửa đường tròn đơn vị có tung độ dương (sin&alpha; &gt; 0) và hoành độ âm (cos&alpha; &lt; 0). Do đó cot&alpha; = cos&alpha; / sin&alpha; &lt; 0. Kết luận đúng là sin&alpha; &gt; 0 và cot&alpha; &lt; 0."
+      ],
+      [
+        "Cho sin&alpha; = 0,3 với &alpha; &gt; 90&deg;. Tính: cos&alpha;.",
+        [
+          "A. &plusmn;&radic;91 / 10",
+          "B. &plusmn;9 / 10",
+          "C. -&radic;91 / 10",
+          "D. &plusmn;&radic;0,7"
+        ],
+        2,
+        "Áp dụng công thức lượng giác cơ bản trong Toán 10: sin<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; = 1 &rArr; cos<sup>2</sup>&alpha; = 1 - 0,3<sup>2</sup> = 0,91 = 91/100. Vì &alpha; &gt; 90&deg; (góc tù) nên cos&alpha; &lt; 0, do đó cos&alpha; = -&radic;91 / 10."
+      ],
+      [
+        "Cho tam giác ABC có BC = 6a, góc ABC = 60&deg;, cosBAC = 2/3. Tính AC theo a.",
+        [
+          "A. 9a&radic;15 / 5",
+          "B. 9a / 5",
+          "C. 6a / &radic;5",
+          "D. 3a"
+        ],
+        0,
+        "Vì góc A là góc trong tam giác nên sinA &gt; 0 &rArr; sinA = &radic;(1 - cos<sup>2</sup>A) = &radic;(1 - 4/9) = &radic;5 / 3. Áp dụng định lí sin: AC / sinB = BC / sinA &rArr; AC = BC . (sinB / sinA) = 6a . (sin60&deg; / (&radic;5/3)) = 6a . (&radic;3/2) . (3/&radic;5) = 9a&radic;3 / &radic;5 = 9a&radic;15 / 5."
+      ]
+    ],
+    "tf": [
+      {
+        "stem": "Xét tính đúng sai của các khẳng định sau về mệnh đề và mệnh đề kéo theo:",
+        "items": [
+          [
+            "a) Mệnh đề là một khẳng định đúng.",
+            false,
+            "Theo định nghĩa trong SGK Toán 10: Mệnh đề là một khẳng định có tính đúng hoặc sai. Một khẳng định sai vẫn là một mệnh đề (mệnh đề sai). Do đó khẳng định này là SAI."
+          ],
+          [
+            "b) Cho A, B là hai mệnh đề. Mệnh đề A &rArr; B chỉ đúng khi A, B đều đúng.",
+            false,
+            "Mệnh đề kéo theo A &rArr; B chỉ sai khi A đúng và B sai. Trong trường hợp giả thiết A sai thì mệnh đề A &rArr; B luôn đúng kể cả khi B sai. Khẳng định này là SAI."
+          ],
+          [
+            "c) Mệnh đề \"&exist;a &isin; <b>N</b> | (a + 1)/(2a + 1) &isin; <b>N</b>\" là một mệnh đề chứa biến.",
+            false,
+            "Câu có chứa biến khi đã được lượng từ hóa bằng kí hiệu &exist; (tồn tại) sẽ trở thành một mệnh đề toán học hoàn chỉnh có chân trị xác định (cụ thể với a = 0 &isin; <b>N</b> thì (0+1)/(0+1) = 1 &isin; <b>N</b> là mệnh đề đúng), không còn là mệnh đề chứa biến nữa. Khẳng định này là SAI."
+          ],
+          [
+            "d) Trong định lý: \"Nếu một tứ giác có hai đường chéo vuông góc với nhau thì diện tích của tứ giác đó bằng một nửa tích hai đường chéo\". Điều kiện đủ của định lý là: tứ giác có hai đường chéo vuông góc với nhau.",
+            true,
+            "Định lý có dạng P &rArr; Q, trong đó giả thiết P là \"tứ giác có hai đường chéo vuông góc với nhau\". Theo SGK Toán 10, giả thiết P là điều kiện đủ để có kết luận Q. Khẳng định này là ĐÚNG."
+          ]
+        ]
+      },
+      {
+        "stem": "Cho tam giác ABC có AB = 4, AC = 3 và góc BAC = 120&deg;. Khi đó:",
+        "items": [
+          [
+            "a) cosABC &gt; 0.",
+            true,
+            "Trong tam giác ABC có góc A = 120&deg; là góc tù. Vì một tam giác chỉ có tối đa một góc tù nên góc B bắt buộc là góc nhọn (0&deg; &lt; B &lt; 90&deg;). Do đó cosB &gt; 0. Khẳng định này là ĐÚNG."
+          ],
+          [
+            "b) Độ dài trung tuyến kẻ từ đỉnh B bằng: &radic;19.",
+            false,
+            "Theo định lí côsin: BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cos120&deg; = 4<sup>2</sup> + 3<sup>2</sup> - 2.4.3.(-1/2) = 16 + 9 + 12 = 37. Áp dụng công thức đường trung tuyến: m<sub>b</sub><sup>2</sup> = (2(BC<sup>2</sup> + AB<sup>2</sup>) - AC<sup>2</sup>) / 4 = (2(37 + 16) - 9) / 4 = (106 - 9)/4 = 97/4 &rArr; m<sub>b</sub> = &radic;97 / 2 &ne; &radic;19. Khẳng định này là SAI."
+          ],
+          [
+            "c) Bán kính đường tròn ngoại tiếp tam giác ABC bằng: &radic;(37/3).",
+            true,
+            "Áp dụng định lí sin trong tam giác ABC: 2R = BC / sinA &rArr; R = BC / (2.sin120&deg;) = &radic;37 / (2 . (&radic;3/2)) = &radic;37 / &radic;3 = &radic;(37/3). Khẳng định này là ĐÚNG."
+          ],
+          [
+            "d) cosACB = 20 / (3&radic;37).",
+            false,
+            "Áp dụng định lí côsin: cosACB = (AC<sup>2</sup> + BC<sup>2</sup> - AB<sup>2</sup>) / (2.AC.BC) = (9 + 37 - 16) / (2 . 3 . &radic;37) = 30 / (6&radic;37) = 5 / &radic;37 = 15 / (3&radic;37) &ne; 20 / (3&radic;37). Khẳng định này là SAI."
+          ]
+        ]
+      }
+    ],
+    "short": [
+      {
+        "question": "Mỗi học sinh lớp 10A đều đăng ký học tự chọn ít nhất một trong hai môn là Toán hoặc Văn. Có 85% chọn môn Toán, 75% chọn môn Văn và 16 học sinh chỉ học đúng một môn. Hỏi có bao nhiêu học sinh đăng ký học cả hai môn?",
+        "answer": "24",
+        "explanation": "Tỉ lệ học sinh đăng ký cả hai môn Toán và Văn là: 85% + 75% - 100% = 60%. Tỉ lệ học sinh chỉ học đúng một môn là: (85% - 60%) + (75% - 60%) = 25% + 15% = 40% (hoặc 100% - 60% = 40%). Tổng số học sinh của lớp 10A là: 16 / 40% = 40 học sinh. Số học sinh học cả hai môn là: 40 . 60% = 24 học sinh."
+      },
+      {
+        "question": "Cho hai tập hợp A = (-1; 8) và B = [m - 1; m + 2). Có bao nhiêu số nguyên m để B &sub; A?",
+        "answer": "6",
+        "explanation": "Để B là tập con của A, hai đầu mút của nửa khoảng B phải thuộc khoảng A: {m - 1 &gt; -1 ; m + 2 &le; 8} &hArr; {m &gt; 0 ; m &le; 6} &hArr; 0 &lt; m &le; 6. Vì m là số nguyên nên m &isin; {1; 2; 3; 4; 5; 6}. Vậy có đúng 6 giá trị nguyên của m thỏa mãn."
+      },
+      {
+        "question": "Cho biết: tan&alpha; = 10. Tính giá trị biểu thức M = (9sin&alpha; - cos&alpha;) / (sin&alpha; - 9cos&alpha;).",
+        "answer": "89",
+        "explanation": "Vì tan&alpha; xác định nên cos&alpha; &ne; 0. Chia cả tử và mẫu của M cho cos&alpha;, ta được: M = (9tan&alpha; - 1) / (tan&alpha; - 9). Thay tan&alpha; = 10: M = (9 . 10 - 1) / (10 - 9) = (90 - 1) / 1 = 89."
+      },
+      {
+        "question": "Cho tam giác ABC có độ dài các cạnh: AB = 6; AC = 8; BC = 12. Tính gần đúng góc A theo đơn vị độ (làm tròn đến hàng đơn vị)?",
+        "answer": "117",
+        "explanation": "Áp dụng hệ quả của định lí côsin: cosA = (AB<sup>2</sup> + AC<sup>2</sup> - BC<sup>2</sup>) / (2 . AB . AC) = (6<sup>2</sup> + 8<sup>2</sup> - 12<sup>2</sup>) / (2 . 6 . 8) = (36 + 64 - 144) / 96 = -44/96 = -11/24 &approx; -0,45833. Suy ra góc A &approx; 117,28&deg;, làm tròn đến hàng đơn vị được 117&deg;."
       }
     ]
   }
