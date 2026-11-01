@@ -466,6 +466,11 @@ function shortCorrect(input, answer) {
   if (/^-?\d+(\.\d+)?$/.test(normInput) && /^-?\d+(\.\d+)?$/.test(normAns)) {
     return Math.abs(Number(normInput) - Number(normAns)) < 0.001;
   }
+  const strippedInput = normInput.replace(/\s*[^\d.-]+$/, '').trim();
+  const strippedAns = normAns.replace(/\s*[^\d.-]+$/, '').trim();
+  if (/^-?\d+(\.\d+)?$/.test(strippedInput) && /^-?\d+(\.\d+)?$/.test(strippedAns)) {
+    return Math.abs(Number(strippedInput) - Number(strippedAns)) < 0.001;
+  }
   return normInput.toLowerCase() === normAns.toLowerCase();
 }
 
