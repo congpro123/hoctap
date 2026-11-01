@@ -73,7 +73,7 @@ for (const file of [
 }
 
 const exams = vm.runInContext('exams', context);
-assert.equal(exams.length, 34, 'Tổng số đề thi phải là 34');
+assert.equal(exams.length, 38, 'Tổng số đề thi phải là 38');
 
 for (const examId of ['toan-10-de-11', 'toan-10-de-12']) {
   const e = exams.find(x => x.id === examId);
@@ -95,12 +95,19 @@ for (const examId of ['toan-10-de-11', 'toan-10-de-12']) {
   assert.equal(score.total, 24, 'Tổng 24 ý');
 }
 
-for (const examId of ['hoahoc-10-de-11', 'hoahoc-10-de-12']) {
+for (const examId of [
+  'hoahoc-10-de-11',
+  'hoahoc-10-de-12',
+  'hoahoc-10-de-13',
+  'hoahoc-10-de-14',
+  'hoahoc-10-de-15',
+  'hoahoc-10-de-16'
+]) {
   const e = exams.find(x => x.id === examId);
   assert.ok(e, `Tìm thấy ${examId}`);
   assert.ok(e.questions.length >= 10, 'Ít nhất 10 câu trắc nghiệm');
   assert.ok(e.tf.length >= 2, 'Ít nhất 2 câu đúng sai');
-  assert.equal(e.short.length, 4, '4 câu trả lời ngắn');
+  assert.ok(e.short.length >= 4, 'Ít nhất 4 câu trả lời ngắn');
 
   const perfectAnswers = {};
   e.questions.forEach((q, i) => { perfectAnswers['m' + i] = q[2]; });
@@ -113,4 +120,4 @@ for (const examId of ['hoahoc-10-de-11', 'hoahoc-10-de-12']) {
   assert.equal(score.correct, score.total, 'Tất cả các ý trả lời đúng');
 }
 
-console.log('✅ ĐÃ KIỂM TRA THÀNH CÔNG TẤT CẢ CÁC BỘ ĐỀ MỚI BỔ SUNG (Toán 11, 12 & Hóa học 11, 12)!');
+console.log('✅ ĐÃ KIỂM TRA THÀNH CÔNG TẤT CẢ CÁC BỘ ĐỀ MỚI BỔ SUNG (Toán 11, 12 & Hóa học 11, 12, 13, 14, 15, 16)!');

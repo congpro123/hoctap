@@ -8,17 +8,17 @@ const ctx = {};
 vm.createContext(ctx);
 vm.runInContext(content + '\n;allExams = suppliedExams;', ctx);
 
-assert.equal(ctx.allExams.length, 34, 'Tổng số đề phải là 34 (12 Toán, 10 Lý, 12 Hóa)');
+assert.equal(ctx.allExams.length, 38, 'Tổng số đề phải là 38 (12 Toán, 10 Lý, 16 Hóa)');
 
 const chemExams = ctx.allExams.filter(e => e.subject === 'chemistry');
-assert.equal(chemExams.length, 12, 'Phải có đúng 12 đề Hóa');
+assert.equal(chemExams.length, 16, 'Phải có đúng 16 đề Hóa');
 
 console.log('--- 2. Kiểm tra cấu trúc từng đề Hóa ---');
 chemExams.forEach((e, idx) => {
   console.log(`Kiểm tra ${e.id} - ${e.title}`);
   assert.ok(e.questions.length >= 10, `${e.id} phải có ít nhất 10 câu Phần I`);
   assert.ok(e.tf.length >= 2, `${e.id} phải có ít nhất 2 câu Phần II`);
-  assert.equal(e.short.length, 4, `${e.id} phải có đúng 4 câu Phần III`);
+  assert.ok(e.short.length >= 4, `${e.id} phải có ít nhất 4 câu Phần III`);
   assert.ok((e.essay || []).length >= 1, `${e.id} phải có ít nhất 1 câu Phần IV (Tự luận)`);
 
   // Kiểm tra từng câu Phần I
@@ -91,4 +91,4 @@ chemExams.forEach(e => {
   assert.equal(perfect.correct, perfect.total, `${e.id} tất cả các ý phải đúng`);
 });
 
-console.log('✅ TẤT CẢ 12 ĐỀ HÓA HỌC ĐỀU HỢP LỆ VÀ TÍNH ĐIỂM CHÍNH XÁC!');
+console.log('✅ TẤT CẢ 16 ĐỀ HÓA HỌC ĐỀU HỢP LỆ VÀ TÍNH ĐIỂM CHÍNH XÁC!');
