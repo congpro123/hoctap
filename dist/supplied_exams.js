@@ -414,7 +414,7 @@ const suppliedExams = [
           [
             "a) Giá trị cos120&deg; = -1/2.",
             true,
-            "cos120&deg; = -cos60&deg; = -1/2."
+            "Áp dụng tính chất giá trị lượng giác của hai góc bù nhau trong Toán 10: cos(180&deg; - &alpha;) = -cos&alpha;. Với &alpha; = 60&deg;, ta có cos120&deg; = cos(180&deg; - 60&deg;) = -cos60&deg; = -1/2. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Độ dài cạnh AB của tam giác ABC bằng 14.",
@@ -624,7 +624,7 @@ const suppliedExams = [
           [
             "a) Tập hợp A được viết dưới dạng đoạn là A = [-1; 3].",
             true,
-            "Theo định nghĩa đoạn [-1; 3]."
+            "Theo định nghĩa tập hợp con của <b>R</b> trong Toán 10: Tập hợp các số thực x thỏa mãn a &le; x &le; b là đoạn [a; b]. Do đó {x &isin; <b>R</b> | -1 &le; x &le; 3} = [-1; 3]. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Tập hợp A &cap; B = [1; 3].",
@@ -884,7 +884,7 @@ const suppliedExams = [
           [
             "a) Nửa chu vi của tam giác ABC là p = 13.",
             true,
-            "p = (6 + 8 + 12)/2 = 13."
+            "Nửa chu vi p của tam giác ABC có độ dài ba cạnh a, b, c là: p = (a + b + c) / 2 = (6 + 8 + 12) / 2 = 26 / 2 = 13. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Giá trị cosA = -11/24.",
@@ -1073,7 +1073,7 @@ const suppliedExams = [
           "D. S = (a+b+c)R / 2."
         ],
         1,
-        "Công thức chuẩn là S = abc / (4R)."
+        "Theo các công thức tính diện tích tam giác trong hệ thức lượng Toán 10: S = abc / (4R) &hArr; R = abc / (4S). Vì vậy hệ thức S = abc / (2R) là SAI."
       ],
       [
         "Cho tam giác ABC có b = 10, c = 12, góc A = 150&deg;. Diện tích tam giác ABC bằng:",
@@ -1253,7 +1253,7 @@ const suppliedExams = [
           "D. (2; -1)."
         ],
         1,
-        "Thay (0; 0): 0 &ge; -4 (đúng)."
+        "Để kiểm tra điểm M(x₀; y₀) có thuộc miền nghiệm của bất phương trình bậc nhất hai ẩn y &ge; 2x - 4 hay không, ta thay tọa độ (0; 0) vào BPT: 0 &ge; 2(0) - 4 &hArr; 0 &ge; -4 (luôn đúng). Vậy gốc O(0; 0) thuộc miền nghiệm."
       ],
       [
         "Trên miền nghiệm của hệ {0 &le; x &le; 4 ; 0 &le; y &le; 3}, giá trị lớn nhất của F(x; y) = 2x + 5y bằng:",
@@ -1359,7 +1359,7 @@ const suppliedExams = [
           [
             "b) Chu vi của tam giác ABC bằng 20.",
             true,
-            "Chu vi 2p = 8 + 5 + 7 = 20."
+            "Chu vi tam giác ABC bằng tổng độ dài ba cạnh: 2p = AB + BC + CA = 8 + 5 + 7 = 20. Khẳng định này là ĐÚNG."
           ],
           [
             "c) Diện tích tam giác ABC bằng 10&radic;3.",
@@ -1767,7 +1767,7 @@ const suppliedExams = [
           "D. 1."
         ],
         0,
-        "sinC = 2S / (ab) = 60 / 120 = 1/2."
+        "Theo công thức diện tích tam giác trong hệ thức lượng Toán 10: S = 1/2 . a . b . sinC &rArr; sinC = 2S / (ab) = (2 . 30) / (10 . 12) = 60 / 120 = 1/2."
       ],
       [
         "Tam giác ABC có ba cạnh a = 7, b = 24, c = 25. Bán kính đường tròn nội tiếp r bằng:",
@@ -1991,7 +1991,7 @@ const suppliedExams = [
           "D. 10."
         ],
         0,
-        "S = 1/2 . 8 . 10 . sin30&deg; = 20."
+        "Theo công thức tính diện tích tam giác theo hai cạnh và góc xen giữa: S = 1/2 . b . c . sinA = 1/2 . 8 . 10 . sin30&deg; = 40 . 0,5 = 20."
       ],
       [
         "Cho tam giác ABC có góc A = 60&deg;, bán kính đường tròn ngoại tiếp R = 4&radic;3. Độ dài cạnh BC bằng:",
@@ -2013,7 +2013,7 @@ const suppliedExams = [
           "D. 8&radic;2."
         ],
         1,
-        "S = 1/2 . AB . AC = 1/2 . 4 . 4 = 8."
+        "Tam giác ABC vuông cân tại A nên AB = AC = 4 và góc A = 90&deg;. Diện tích tam giác vuông là S = 1/2 . AB . AC = 1/2 . 4 . 4 = 8."
       ],
       [
         "Cho tam giác ABC có ba cạnh a = 3, b = 4, c = 5. Độ dài đường cao h<sub>c</sub> kẻ từ đỉnh C xuống cạnh AB bằng:",
@@ -2069,7 +2069,7 @@ const suppliedExams = [
           [
             "c) Chu vi của tam giác ABC bằng 28.",
             true,
-            "Chu vi = 7 + 8 + 13 = 28."
+            "Chu vi tam giác ABC bằng tổng độ dài ba cạnh: 2p = a + b + c = 7 + 8 + 13 = 28. Khẳng định này là ĐÚNG."
           ],
           [
             "d) Bán kính đường tròn nội tiếp r của tam giác ABC bằng 2&radic;3.",
@@ -2226,7 +2226,7 @@ const suppliedExams = [
           "D. 6."
         ],
         1,
-        "h<sub>a</sub> = 2S / a = 60 / 12 = 5."
+        "Áp dụng công thức tính diện tích tam giác theo đường cao ứng với cạnh đáy a trong Toán 10: S = 1/2 . a . h<sub>a</sub> &rArr; h<sub>a</sub> = 2S / a = (2 . 30) / 12 = 60 / 12 = 5."
       ],
       [
         "Cho tam giác ABC có góc A = 30&deg;, góc B = 45&deg;, cạnh a = 8. Độ dài cạnh b bằng:",
@@ -2259,7 +2259,7 @@ const suppliedExams = [
           "D. 4,5."
         ],
         0,
-        "r = S / p = 84 / 24 = 3,5."
+        "Áp dụng công thức diện tích tam giác liên hệ với bán kính đường tròn nội tiếp r: S = p . r &rArr; r = S / p = 84 / 24 = 3,5."
       ]
     ],
     "tf": [
@@ -2294,17 +2294,17 @@ const suppliedExams = [
           [
             "a) Nửa chu vi của tam giác ABC bằng 21.",
             true,
-            "p = (15 + 13 + 14)/2 = 21."
+            "Nửa chu vi tam giác ABC là: p = (a + b + c) / 2 = (15 + 13 + 14) / 2 = 42 / 2 = 21. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Diện tích của tam giác ABC bằng 84.",
             true,
-            "S = &radic;(21.6.8.7) = 84."
+            "Áp dụng công thức Heron tính diện tích tam giác trong Toán 10: S = &radic;(p(p - a)(p - b)(p - c)) = &radic;(21 . (21 - 15) . (21 - 13) . (21 - 14)) = &radic;(21 . 6 . 8 . 7) = &radic;7056 = 84. Khẳng định này là ĐÚNG."
           ],
           [
             "c) Độ dài đường cao AH kẻ từ A xuống BC bằng 12.",
             false,
-            "AH = 2S / BC = 168 / 15 = 11,2."
+            "Độ dài đường cao AH kẻ từ A xuống cạnh đáy BC = 15 là: AH = 2S / BC = (2 . 84) / 15 = 168 / 15 = 11,2 (khác 12). Khẳng định này là SAI."
           ],
           [
             "d) Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 65/8.",
@@ -2544,7 +2544,7 @@ const suppliedExams = [
           [
             "d) Tốc độ của vật ngay trước khi chạm đất bằng 60 m/s.",
             true,
-            "v = g . t = 10 . 6 = 60 m/s."
+            "Áp dụng công thức vận tốc trong chuyển động rơi tự do (Vật lí 10): v = g . t. Với g = 10 m/s<sup>2</sup> và thời gian rơi chạm đất t = 6 s, tốc độ của vật ngay trước khi chạm đất là v = 10 . 6 = 60 m/s. Khẳng định này là ĐÚNG."
           ]
         ]
       }
@@ -2744,12 +2744,12 @@ const suppliedExams = [
           [
             "c) Độ dịch chuyển của chất điểm sau 5 giây chuyển động là 20 m.",
             true,
-            "d = v.t = 4 . 5 = 20 m."
+            "Theo định nghĩa độ dịch chuyển của chuyển động thẳng đều trong Vật lí 10: d = v . t. Với v = 4 m/s và t = 5 s, ta có d = 4 . 5 = 20 m. Khẳng định này là ĐÚNG."
           ],
           [
             "d) Tọa độ của chất điểm tại thời điểm t = 5 s là x = 20 m.",
             false,
-            "x = 10 + 4.5 = 30 m."
+            "Phương trình tọa độ chuyển động thẳng đều là x = x₀ + vt = 10 + 4t. Tại thời điểm t = 5 s: x = 10 + 4 . 5 = 30 m (chứ không phải 20 m; 20 m là độ dịch chuyển d). Khẳng định này là SAI."
           ]
         ]
       },
@@ -3107,7 +3107,7 @@ const suppliedExams = [
           "D. m/s<sup>2</sup>."
         ],
         3,
-        "m/s<sup>2</sup> là đơn vị của gia tốc."
+        "Theo định nghĩa các đại lượng trong Vật lí 10: m/s, km/h, cm/s là đơn vị của tốc độ và vận tốc; còn m/s<sup>2</sup> là đơn vị của gia tốc (a = &Delta;v / &Delta;t). Do đó m/s<sup>2</sup> không phải đơn vị đo tốc độ."
       ],
       [
         "Hai ô tô chạy ngược chiều nhau trên cùng một đoạn đường thẳng với tốc độ lần lượt là 40 km/h và 50 km/h so với mặt đường. Tốc độ của xe thứ nhất so với xe thứ hai là:",
@@ -3162,7 +3162,7 @@ const suppliedExams = [
           "D. 19,6 m/s."
         ],
         0,
-        "v = g.t = 9,8 . 5 = 49 m/s."
+        "Vật rơi tự do không vận tốc đầu thì vận tốc tức thời tại thời điểm t tính theo công thức: v = g . t = 9,8 . 5 = 49 m/s."
       ],
       [
         "Trong chuyển động ném ngang từ độ cao h với vận tốc v<sub>0</sub>, thời gian bay của vật phụ thuộc vào:",
@@ -3381,7 +3381,7 @@ const suppliedExams = [
           "D. 9 s."
         ],
         1,
-        "t = &radic;(2.45 / 10) = 3 s."
+        "Áp dụng công thức liên hệ giữa quãng đường rơi tự do và thời gian trong Vật lí 10: h = 1/2 . g . t<sup>2</sup> &rArr; t = &radic;(2h / g) = &radic;(2 . 45 / 10) = &radic;9 = 3 s."
       ],
       [
         "Hai viên bi sắt được ném ngang cùng lúc từ cùng một độ cao h với vận tốc đầu v<sub>01</sub> = 10 m/s và v<sub>02</sub> = 20 m/s. Kết luận nào sau đây đúng?",
@@ -3449,12 +3449,12 @@ const suppliedExams = [
           [
             "a) Sau 4 giây kể từ lúc tắt máy, tốc độ của xe còn lại là 10 m/s.",
             true,
-            "v = 18 - 2 . 4 = 10 m/s."
+            "Áp dụng công thức vận tốc chuyển động thẳng biến đổi đều trong Vật lí 10: v = v₀ + at. Khi tắt máy xe chuyển động chậm dần đều với gia tốc a = -2 m/s<sup>2</sup> và v₀ = 18 m/s. Sau t = 4 s, tốc độ của xe là: v = 18 - 2 . 4 = 10 m/s. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Thời gian từ lúc tắt máy đến khi xe dừng hẳn là 9 giây.",
             true,
-            "t = 18 / 2 = 9 s."
+            "Khi xe dừng hẳn thì vận tốc tức thời v = 0 m/s. Từ công thức v = v₀ + at &rArr; thời gian từ lúc tắt máy đến khi dừng hẳn là t = (0 - v₀) / a = -18 / (-2) = 9 s. Khẳng định này là ĐÚNG."
           ],
           [
             "c) Quãng đường xe đi được từ lúc tắt máy đến khi dừng hẳn là 81 m.",
@@ -3556,7 +3556,7 @@ const suppliedExams = [
           "D. 30 m/s."
         ],
         1,
-        "72 km/h = 72 / 3,6 = 20 m/s."
+        "Áp dụng quy tắc đổi đơn vị trong Vật lí 10: 1 km/h = 1000 m / 3600 s = 1/3,6 m/s. Khi đổi từ km/h sang m/s ta chia cho 3,6: 72 km/h = 72 / 3,6 = 20 m/s."
       ],
       [
         "Một chất điểm chuyển động thẳng biến đổi đều có vận tốc thay đổi từ 4 m/s đến 16 m/s trong 3 giây. Gia tốc của chất điểm là:",
@@ -3633,7 +3633,7 @@ const suppliedExams = [
           "D. 1,0 m/s."
         ],
         1,
-        "Cùng chiều: v = 1 + 1,5 = 2,5 m/s."
+        "Theo công thức cộng vận tốc trong Vật lí 10: Khi người đi cùng chiều với thang cuốn thì vận tốc của người so với sàn đất là v = v<sub>người/thang</sub> + v<sub>thang/sàn</sub> = 1 + 1,5 = 2,5 m/s."
       ],
       [
         "Khi một ô tô đang chạy thẳng về phía Bắc và hãm phanh giảm tốc độ thì vectơ gia tốc của ô tô có hướng:",
@@ -3830,7 +3830,7 @@ const suppliedExams = [
           "D. 10 s."
         ],
         1,
-        "t = v<sub>0</sub> / |a| = 20 / 4 = 5 s."
+        "Ô tô chuyển động chậm dần đều hãm phanh với v₀ = 20 m/s, gia tốc a = -4 m/s<sup>2</sup>. Thời gian từ lúc hãm đến khi dừng hẳn (v = 0) là: t = (v - v₀) / a = (0 - 20) / (-4) = 5 s."
       ],
       [
         "Ở cùng một nơi trên Trái Đất, hai vật rơi tự do có thời gian rơi lần lượt là t<sub>1</sub> và t<sub>2</sub> = 3t<sub>1</sub>. Tỉ số độ cao thả hai vật h<sub>2</sub> / h<sub>1</sub> bằng:",
@@ -3909,12 +3909,12 @@ const suppliedExams = [
           [
             "a) Thời gian rơi của viên bi đến khi chạm đất là 4 giây.",
             true,
-            "t = &radic;(2.80 / 10) = 4 s."
+            "Áp dụng công thức thời gian rơi tự do trong Vật lí 10: t = &radic;(2h / g) = &radic;(2 . 80 / 10) = &radic;16 = 4 s. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Vận tốc của viên bi ngay khi chạm đất là 40 m/s.",
             true,
-            "v = g.t = 10 . 4 = 40 m/s."
+            "Vận tốc của vật rơi tự do ngay khi chạm đất là: v = g . t = 10 . 4 = 40 m/s (hoặc v = &radic;(2gh) = &radic;(2 . 10 . 80) = 40 m/s). Khẳng định này là ĐÚNG."
           ],
           [
             "c) Quãng đường viên bi rơi được trong 2 giây đầu tiên bằng 40 m.",
@@ -3933,7 +3933,8 @@ const suppliedExams = [
       {
         "question": "Một học sinh đi xe đạp từ A về phía Đông 4 km, sau đó quay ngược lại đi về phía Tây 7 km đến B. Độ lớn độ dịch chuyển của học sinh so với điểm xuất phát A là bao nhiêu km?",
         "answer": "3",
-        "explanation": "|d| = |4 - 7| = 3 km."
+        "explanation": "Chọn trục tọa độ Ox hướng sang phía Đông: đi phía Đông 4 km ứng với x₁ = +4 km, sau đó quay về phía Tây 7 km ứng với &Delta;x₂ = -7 km. Tọa độ cuối x₂ = 4 - 7 = -3 km. Độ lớn độ dịch chuyển là |d| = |-3| = 3 km.",
+        "explain": "Chọn trục tọa độ Ox hướng sang phía Đông: đi phía Đông 4 km ứng với x₁ = +4 km, sau đó quay về phía Tây 7 km ứng với &Delta;x₂ = -7 km. Tọa độ cuối x₂ = 4 - 7 = -3 km. Độ lớn độ dịch chuyển là |d| = |-3| = 3 km."
       },
       {
         "question": "Một chất điểm chuyển động thẳng biến đổi đều có vận tốc tại t = 2 s là 8 m/s và tại t = 6 s là 20 m/s. Gia tốc của chất điểm là bao nhiêu m/s<sup>2</sup>?",
@@ -4139,7 +4140,7 @@ const suppliedExams = [
           [
             "a) Thời gian chuyển động của vật đến khi chạm đất là 3 giây.",
             true,
-            "t = &radic;(2.45 / 10) = 3 s."
+            "Trong chuyển động ném ngang, chuyển động theo phương thẳng đứng là chuyển động rơi tự do không vận tốc đầu với gia tốc g. Thời gian rơi đến khi chạm đất là t = &radic;(2h / g) = &radic;(2 . 45 / 10) = 3 s. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Tại thời điểm t = 2 s, thành phần vận tốc theo phương thẳng đứng của vật là v<sub>y</sub> = 20 m/s.",
@@ -4344,12 +4345,12 @@ const suppliedExams = [
           [
             "a) Tốc độ trung bình của bạn An là 5 m/s.",
             true,
-            "v = 200 / 40 = 5 m/s."
+            "Theo định nghĩa tốc độ trung bình trong Vật lí 10: v<sub>tb</sub> = s / t. Bạn An đi quãng đường s = 200 m trong thời gian t = 40 s, vậy v<sub>tb</sub> = 200 / 40 = 5 m/s. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Thời gian bạn An đi từ nhà (N) đến trường (T) là 400 giây.",
             true,
-            "t = 2000 / 5 = 400 s."
+            "Do An chuyển động thẳng đều với tốc độ không đổi v = 5 m/s, thời gian đi hết quãng đường từ nhà đến trường dài s = 2000 m là: t = s / v = 2000 / 5 = 400 s. Khẳng định này là ĐÚNG."
           ],
           [
             "c) Nếu bạn An đi từ trạm xăng (X) quay trở về nhà (N) thì độ dịch chuyển của bạn là +400 m.",
@@ -4403,7 +4404,8 @@ const suppliedExams = [
       {
         "question": "Một vật rơi tự do từ độ cao 45 m xuống đất (g = 10 m/s<sup>2</sup>). Tốc độ của vật ngay khi chạm đất là bao nhiêu m/s?",
         "answer": "30",
-        "explanation": "v = &radic;(2.10.45) = 30 m/s."
+        "explanation": "Áp dụng công thức liên hệ rơi tự do trong Vật lí 10: v = &radic;(2gh) = &radic;(2 . 10 . 45) = &radic;900 = 30 m/s.",
+        "explain": "Áp dụng công thức liên hệ rơi tự do trong Vật lí 10: v = &radic;(2gh) = &radic;(2 . 10 . 45) = &radic;900 = 30 m/s."
       },
       {
         "question": "Một thuyền máy chạy ngược dòng sông từ B về A cách nhau 18 km mất 2 giờ. Biết nước sông chảy với vận tốc 3 km/h. Vận tốc của thuyền so với nước là bao nhiêu km/h?",
@@ -4498,7 +4500,7 @@ const suppliedExams = [
           "D. v = &radic;(gt)."
         ],
         0,
-        "Công thức vận tốc rơi tự do: v = g.t."
+        "Chuyển động rơi tự do là chuyển động thẳng nhanh dần đều với gia tốc g và không có vận tốc đầu (v₀ = 0). Do đó công thức vận tốc tức thời tại thời điểm t là: v = g . t."
       ],
       [
         "Tại nơi có g = 10 m/s<sup>2</sup>, một giọt mưa rơi tự do từ độ cao 20 m xuống mái hiên cao 15 m so với mặt đất. Thời gian giọt mưa rơi đến mái hiên là:",
@@ -4853,7 +4855,8 @@ const suppliedExams = [
       {
         "question": "Nguyên tử của nguyên tố X có 15 proton và 16 neutron. Số khối A của hạt nhân nguyên tử X bằng bao nhiêu?",
         "answer": "31",
-        "explanation": "A = Z + N = 15 + 16 = 31."
+        "explanation": "Theo kiến thức Hóa học 10 (Chương 1): Số khối A của hạt nhân nguyên tử bằng tổng số hạt proton (Z) và neutron (N): A = Z + N = 15 + 16 = 31 (nguyên tố Phosphorus, ³¹₁₅P).",
+        "explain": "Theo kiến thức Hóa học 10 (Chương 1): Số khối A của hạt nhân nguyên tử bằng tổng số hạt proton (Z) và neutron (N): A = Z + N = 15 + 16 = 31 (nguyên tố Phosphorus, ³¹₁₅P)."
       },
       {
         "question": "Ở trạng thái cơ bản, nguyên tử phosphorus (Z = 15) có bao nhiêu electron độc thân?",
@@ -5759,7 +5762,7 @@ const suppliedExams = [
           [
             "c) Phần trăm số nguyên tử của đồng vị <sup>81</sup><sub>35</sub>Br là 45,5%.",
             true,
-            "100% - 54,5% = 45,5%."
+            "Tổng phần trăm của tất cả các đồng vị trong tự nhiên bằng 100%. Vì Bromine chỉ có hai đồng vị bền là ⁷⁹Br (chiếm 54,5%) và ⁸¹Br nên phần trăm của ⁸¹Br là: 100% - 54,5% = 45,5%. Khẳng định này là ĐÚNG."
           ],
           [
             "d) Trong 1000 nguyên tử Bromine tự nhiên thì có khoảng 455 nguyên tử <sup>79</sup><sub>35</sub>Br.",
@@ -5834,7 +5837,7 @@ const suppliedExams = [
           "D. Hiệu số giữa neutron và proton."
         ],
         1,
-        "Số khối A = Z + N."
+        "Theo định nghĩa số khối trong SGK Hóa học 10: Hạt nhân nguyên tử được tạo thành từ proton và neutron. Số khối kí hiệu là A, bằng tổng số hạt proton (Z) và số hạt neutron (N): A = Z + N. Do đó chọn đáp án B."
       ],
       [
         "Các electron thuộc lớp nào sau đây liên kết chặt chẽ nhất với hạt nhân nguyên tử?",
@@ -6008,7 +6011,8 @@ const suppliedExams = [
       {
         "question": "Nguyên tử của nguyên tố X có cấu hình electron [Ar]3d<sup>10</sup>4s<sup>2</sup>. Số hiệu nguyên tử Z của X bằng bao nhiêu?",
         "answer": "30",
-        "explanation": "Z = 18 + 10 + 2 = 30 (Zinc, Zn)."
+        "explanation": "Cấu hình electron đầy đủ của X là 1s²2s²2p⁶3s²3p⁶3d¹⁰4s². Tổng số electron là Z = 18 + 10 + 2 = 30. Đây là nguyên tố Zinc (Kẽm, Zn ở ô 30, chu kì 4, nhóm IIB).",
+        "explain": "Cấu hình electron đầy đủ của X là 1s²2s²2p⁶3s²3p⁶3d¹⁰4s². Tổng số electron là Z = 18 + 10 + 2 = 30. Đây là nguyên tố Zinc (Kẽm, Zn ở ô 30, chu kì 4, nhóm IIB)."
       },
       {
         "question": "Trong tự nhiên, nguyên tố Neon (Ne) có 3 đồng vị: <sup>20</sup>Ne (90,9%), <sup>21</sup>Ne (0,3%) và <sup>22</sup>Ne (8,8%). Nguyên tử khối trung bình của Neon bằng bao nhiêu (làm tròn đến hàng phần trăm)?",
@@ -6338,7 +6342,7 @@ const suppliedExams = [
           "D. Chalcogen."
         ],
         2,
-        "Nhóm VIIA được gọi là nhóm Halogen."
+        "Trong bảng hệ thống tuần hoàn các nguyên tố hóa học, các nguyên tố nhóm VIIA (gồm Fluorine F, Chlorine Cl, Bromine Br, Iodine I...) được gọi là nhóm Halogen (nghĩa là sinh ra muối)."
       ],
       [
         "Nguyên tố X thuộc chu kì 3, nhóm IVA. Số hiệu nguyên tử Z của X là:",
@@ -6674,7 +6678,7 @@ const suppliedExams = [
           [
             "b) Nguyên tố R có số hiệu nguyên tử Z = 16.",
             true,
-            "Z = 2 + 2 + 6 + 2 + 4 = 16."
+            "Tổng số electron trên toàn bộ các phân lớp của nguyên tử trung hòa bằng số hiệu nguyên tử Z: Z = 2 (1s) + 2 (2s) + 6 (2p) + 2 (3s) + 4 (3p) = 16. Đây là nguyên tố Sulfur (Lưu huỳnh, S). Khẳng định này là ĐÚNG."
           ],
           [
             "c) Trong hợp chất khí với hydrogen (H<sub>2</sub>R), nguyên tố R chiếm 94,12% về khối lượng (biết M<sub>R</sub> = 32).",
@@ -6754,7 +6758,7 @@ const suppliedExams = [
           "D. 28."
         ],
         0,
-        "Số electron E = Z = 9."
+        "Trong kí hiệu nguyên tử ¹⁹₉F, chỉ số dưới bên trái là số hiệu nguyên tử Z = 9. Đối với nguyên tử trung hòa về điện, số electron E = số proton Z = 9."
       ],
       [
         "Phân lớp nào sau đây có mức năng lượng cao hơn phân lớp 4s?",
@@ -6899,7 +6903,7 @@ const suppliedExams = [
           [
             "a) Hạt nhân nguyên tử <sup>56</sup><sub>26</sub>Fe có 26 proton và 30 neutron.",
             true,
-            "Z = 26; N = 56 - 26 = 30."
+            "Kí hiệu nguyên tử ⁵⁶₂₆Fe cho biết: số hiệu nguyên tử Z = 26 (tức có 26 proton trong hạt nhân) và số khối A = 56. Số neutron trong hạt nhân là N = A - Z = 56 - 26 = 30 hạt. Khẳng định này là ĐÚNG."
           ],
           [
             "b) Cấu hình electron của nguyên tử Fe ở trạng thái cơ bản là [Ar]3d<sup>6</sup>4s<sup>2</sup>.",

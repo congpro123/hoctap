@@ -26,12 +26,142 @@ function history(){
 function reviewPast(index){
   const r=saved()[index];if(!r)return history();
   const e=typeof historicalExamForResult==='function'?historicalExamForResult(r):exams.find(x=>x.id===r.id);
-  if(!e){app.innerHTML=`<div class="content"><div class="notice"><b>Không tìm thấy bộ đề gốc</b>Điểm của bài vẫn được lưu: ${r.correct}/${r.total}.<br><br><button class="primary" data-viewto="history">Về lịch sử</button></div></div>`;return setNav('history')}
-  const a=r.answers||{},legacy=r.total===e.questions.length,wrong=[];
-  e.questions.forEach((q,i)=>{const chosen=a['m'+i]??a[i];if(chosen===undefined||chosen!==q[2])wrong.push(`<div class="review-item"><b>Phần I · Câu ${i+1}. ${q[0]}</b><span class="incorrect">Bạn chọn: ${chosen===undefined?'Chưa trả lời':`${'ABCD'[chosen]}. ${cleanOptionText(q[1][chosen])}`}</span><br><span class="correct">Đáp án đúng: ${'ABCD'[q[2]]}. ${cleanOptionText(q[1][q[2]])}</span><br><span class="review-explain">${q[3]||''}</span></div>`)});
-  if(!legacy){const isTrue=v=>(v===true||v==='true'||v==='Đúng'||v==='đúng');const isMatch=(u,exp)=>u!==undefined&&u!==null&&Boolean(u)===isTrue(exp);e.tf.forEach((q,i)=>q.items.forEach((item,j)=>{const chosen=a['t'+i+'-'+j];const ok=isMatch(chosen,item[1]);const expTrue=isTrue(item[1]);if(!ok)wrong.push(`<div class="review-item"><b>Phần II · Câu ${i+1}${'abcd'[j]}. ${cleanItemText(item[0])}</b><span class="incorrect">Bạn chọn: ${chosen===undefined?'Chưa trả lời':chosen?'Đúng':'Sai'}</span><br><span class="correct">Đáp án đúng: ${expTrue?'Đúng':'Sai'}</span>${item[2]?`<br><span class="review-explain">${item[2]}</span>`:''}</div>`)}));e.short.forEach((q,i)=>{const chosen=a['s'+i];if(!shortCorrect(chosen,q.answer))wrong.push(`<div class="review-item"><b>Phần III · Câu ${i+1}. ${q.text||q.question}</b><span class="incorrect">Bạn nhập: ${esc(chosen??'Chưa trả lời')}</span><br><span class="correct">Đáp án đúng: ${esc(q.answer)}${q.unit?' '+esc(q.unit):''}</span><br><span class="review-explain">${q.explain||q.explanation||''}</span></div>`)})}
-  app.innerHTML=`<div class="content"><div class="result-panel"><div class="result-icon">📘</div><h1>Xem lại bài đã làm</h1><p>${esc(r.title)} · ${formatDate(r.date)}</p><div class="score">${r.correct}/${r.total}</div><p>${wrong.length} ý sai hoặc bỏ trống${legacy?' · Bài cũ chỉ có phần nhiều lựa chọn':''}</p>${sourceLine(e)}<div class="review-actions"><button class="secondary" data-viewto="history">← Lịch sử làm bài</button><button class="primary" data-start="${e.id}">Làm lại đề này</button></div><div class="review"><div class="section-head"><h2>Các câu cần ôn lại</h2></div>${wrong.length?wrong.join(''):'<div class="notice"><b>Không có câu sai</b>Bạn đã trả lời đúng toàn bộ bài này.</div>'}</div></div></div>`;
+  if(!e){
+    app.innerHTML=`<div class="content"><div class="notice"><b>Không tìm thấy bộ đề gốc</b>Điểm của bài vẫn được lưu: ${r.correct}/${r.total}.<br><br><button class="primary" data-viewto="history">Về lịch sử</button></div></div>`;
+    return setNav('history');
+  }
+  const a=r.answers||{},legacy=r.total===e.questions.length;
+  const wrong=[], all=[];
+
+  (e.questions||[]).forEach((q,i)=>{
+    const chosen=a['m'+i]??a[i];
+    const ok=chosen!==undefined&&chosen===q[2];
+    const optionsHtml=Array.isArray(q[1])&&q[1].length?`<div class="review-options-list">${q[1].map((opt,idx)=>{
+      const isKey=idx===q[2];
+      const isChosen=idx===chosen;
+      const cls=isKey?'review-option-row key-correct':(isChosen&&!ok?'review-option-row user-wrong':'review-option-row');
+      const icon=isKey?'✓':(isChosen&&!ok?'✗':'○');
+      return `<div class="${cls}"><b>${'ABCD'[idx]}.</b> <span>${esc(cleanOptionText(opt))}</span> <span style="margin-left:auto;font-weight:700;">${icon}</span></div>`;
+    }).join('')}</div>`:'';
+    const statusHtml=`<div class="review-status-row">
+      ${ok?`<span class="badge-user-ans correct">✓ Bạn đã chọn đúng (${'ABCD'[chosen]})</span>`:chosen===undefined?`<span class="badge-user-ans unanswered">⚪ Chưa trả lời câu này</span>`:`<span class="badge-user-ans wrong">✗ Bạn đã chọn: ${'ABCD'[chosen]}. ${esc(cleanOptionText(q[1][chosen]))}</span>`}
+      <span class="badge-correct-ans">✓ Đáp án chuẩn: ${'ABCD'[q[2]]}. ${esc(cleanOptionText(q[1][q[2]]))}</span>
+    </div>`;
+    const explainText=q[3]||'Áp dụng định nghĩa và kiến thức chuẩn trong chương trình SGK Lớp 10 để giải ra đáp án đúng.';
+    const solutionHtml=`<div class="solution-box theme-study">
+      <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT (KIẾN THỨC LỚP 10):</div>
+      <div class="solution-body">${explainText}</div>
+    </div>`;
+    const cardHtml=`<div class="review-item">
+      <div class="review-item-header">
+        <span class="review-part-tag">Phần I · Trắc nghiệm</span>
+        <span class="review-item-number">Câu ${i+1}</span>
+      </div>
+      <div class="review-q-text"><b>Câu ${i+1}.</b> ${q[0]}</div>
+      ${optionsHtml}
+      ${statusHtml}
+      ${solutionHtml}
+    </div>`;
+    all.push(cardHtml);
+    if(!ok)wrong.push(cardHtml);
+  });
+
+  if(!legacy){
+    const isTrue=v=>(v===true||v==='true'||v==='Đúng'||v==='đúng');
+    const isMatch=(u,exp)=>u!==undefined&&u!==null&&Boolean(u)===isTrue(exp);
+    (e.tf||[]).forEach((q,i)=>{
+      (q.items||[]).forEach((item,j)=>{
+        const chosen=a['t'+i+'-'+j];
+        const ok=isMatch(chosen,item[1]);
+        const expTrue=isTrue(item[1]);
+        const statusHtml=`<div class="review-status-row">
+          ${ok?`<span class="badge-user-ans correct">✓ Bạn chọn: ${chosen?'ĐÚNG':'SAI'} (Chính xác)</span>`:chosen===undefined?`<span class="badge-user-ans unanswered">⚪ Bạn chưa chọn ý này</span>`:`<span class="badge-user-ans wrong">✗ Bạn chọn: ${chosen?'ĐÚNG':'SAI'}</span>`}
+          <span class="badge-correct-ans">✓ Khẳng định này là: <b>${expTrue?'ĐÚNG':'SAI'}</b></span>
+        </div>`;
+        const explainText=item[2]||(expTrue?'Khẳng định này là ĐÚNG theo kiến thức lý thuyết và định lý trong SGK Lớp 10.':'Khẳng định này là SAI theo kiến thức lý thuyết và định lý trong SGK Lớp 10.');
+        const solutionHtml=`<div class="solution-box theme-study">
+          <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT (KIẾN THỨC LỚP 10):</div>
+          <div class="solution-body">${explainText}</div>
+        </div>`;
+        const cardHtml=`<div class="review-item">
+          <div class="review-item-header">
+            <span class="review-part-tag">Phần II · Đúng / Sai</span>
+            <span class="review-item-number">Câu ${i+1} – Ý ${'abcd'[j]})</span>
+          </div>
+          <div class="review-stem-box">
+            <div class="review-stem-title">📖 Đề bài chung (Câu ${i+1}):</div>
+            <div class="review-stem-content">${q.stem}</div>
+          </div>
+          <div class="review-q-text"><b>Ý ${'abcd'[j]}):</b> ${cleanItemText(item[0])}</div>
+          ${statusHtml}
+          ${solutionHtml}
+        </div>`;
+        all.push(cardHtml);
+        if(!ok)wrong.push(cardHtml);
+      });
+    });
+
+    (e.short||[]).forEach((q,i)=>{
+      const chosen=a['s'+i];
+      const ok=shortCorrect(chosen,q.answer);
+      const statusHtml=`<div class="review-status-row">
+        ${ok?`<span class="badge-user-ans correct">✓ Bạn điền: ${esc(chosen)} (Chính xác)</span>`:chosen===undefined||String(chosen).trim()===''?`<span class="badge-user-ans unanswered">⚪ Chưa điền kết quả</span>`:`<span class="badge-user-ans wrong">✗ Bạn đã điền: ${esc(chosen)}</span>`}
+        <span class="badge-correct-ans">✓ Đáp án chuẩn: <b>${esc(q.answer)}${q.unit?' '+esc(q.unit):''}</b></span>
+      </div>`;
+      const explainText=q.explain||q.explanation||'Áp dụng các định luật và công thức tính toán theo chuẩn kiến thức Lớp 10 để giải ra kết quả trên.';
+      const solutionHtml=`<div class="solution-box theme-study">
+        <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT (KIẾN THỨC LỚP 10):</div>
+        <div class="solution-body">${explainText}</div>
+      </div>`;
+      const cardHtml=`<div class="review-item">
+        <div class="review-item-header">
+          <span class="review-part-tag">Phần III · Trả lời ngắn</span>
+          <span class="review-item-number">Câu ${i+1}</span>
+        </div>
+        <div class="review-q-text"><b>Câu ${i+1}.</b> ${q.text||q.question}</div>
+        ${statusHtml}
+        ${solutionHtml}
+      </div>`;
+      all.push(cardHtml);
+      if(!ok)wrong.push(cardHtml);
+    });
+  }
+
+  const filterBarHtml=wrong.length>0?`<div class="review-toggle-bar">
+    <button type="button" class="tab-btn active" data-review-filter="wrong">Chỉ câu sai & cần ôn lại (${wrong.length})</button>
+    <button type="button" class="tab-btn" data-review-filter="all">Xem tất cả câu & lời giải (${all.length})</button>
+  </div>`:'';
+
+  const listContainerHtml=wrong.length>0?`
+    <div id="review-list-wrong">${wrong.join('')}</div>
+    <div id="review-list-all" style="display:none;">${all.join('')}</div>
+  `:`
+    <div class="notice" style="background:#f0fdf4;border:1px solid #86efac;color:#166534;margin:20px 0;padding:18px;border-radius:10px;">
+      <b style="font-size:16px;">🎉 Chúc mừng! Bạn không có câu sai nào!</b>
+      <p style="margin:6px 0 0;font-size:13px;">Bạn đã trả lời đúng toàn bộ các câu hỏi trong đề này.</p>
+    </div>
+    <div class="section-head" style="margin-top:24px;"><h2>Toàn bộ lời giải chi tiết (Lớp 10)</h2></div>
+    <div id="review-list-all">${all.join('')}</div>
+  `;
+
+  app.innerHTML=`<div class="content"><div class="result-panel"><div class="result-icon">📘</div><h1>Xem lại bài đã làm</h1><p>${esc(r.title)} · ${formatDate(r.date)}</p><div class="score">${r.correct}/${r.total}</div><p>${wrong.length} ý sai hoặc bỏ trống${legacy?' · Bài cũ chỉ có phần nhiều lựa chọn':''}</p>${sourceLine(e)}<div class="review-actions"><button class="secondary" data-viewto="history">← Lịch sử làm bài</button><button class="primary" data-start="${e.id}">Làm lại đề này ↻</button></div>${filterBarHtml}<div class="review">${listContainerHtml}</div></div></div>`;
   setNav('result');window.scrollTo(0,0);
 }
-document.addEventListener('click',event=>{const button=event.target.closest('[data-review]');if(button)reviewPast(Number(button.dataset.review))});
+document.addEventListener('click',event=>{
+  const button=event.target.closest('[data-review]');
+  if(button)reviewPast(Number(button.dataset.review));
+  const filterBtn=event.target.closest('[data-review-filter]');
+  if(filterBtn){
+    const filter=filterBtn.dataset.reviewFilter;
+    document.querySelectorAll('[data-review-filter]').forEach(b=>{
+      b.classList.toggle('active',b===filterBtn);
+    });
+    const wList=document.getElementById('review-list-wrong');
+    const aList=document.getElementById('review-list-all');
+    if(wList&&aList){
+      if(filter==='all'){wList.style.display='none';aList.style.display='block';}
+      else{wList.style.display='block';aList.style.display='none';}
+    }
+  }
+});
 home();

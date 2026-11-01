@@ -554,37 +554,64 @@ function renderResult(r) {
 
       <div class="review">
         <div class="section-head">
-          <h2>Chi tiết lời giải & hướng dẫn chấm</h2>
+          <h2>Chi tiết lời giải & hướng dẫn chấm (Kiến thức Lớp 10)</h2>
         </div>
 
         <h3>Phần I · Trắc nghiệm 4 lựa chọn (12 câu)</h3>
         ${(e.questions || []).map((q, i) => {
           const user = r.answers['m' + i];
           const ok = user === q[2];
-          return `<div class="review-item" style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
-            <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q[0]}</b>
-            <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-              ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa trả lời</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn chọn (${'ABCD'[user]})</span>`}
-              <span style="font-size: 14px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 15px;">${'ABCD'[q[2]]}. ${cleanOptionText(q[1][q[2]])}</b></span>
+          return `<div class="review-item">
+            <div class="review-item-header">
+              <span class="review-part-tag">Phần I · Trắc nghiệm</span>
+              <span class="review-item-number">Câu ${i + 1}</span>
             </div>
-            <div class="explain" style="margin-top: 6px; padding: 10px 14px; background: #f8fafc; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 14px; color: #334155;">${q[3] || 'Không có giải thích bổ sung.'}</div>
+            <div class="review-q-text"><b>Câu ${i + 1}.</b> ${q[0]}</div>
+            ${Array.isArray(q[1]) && q[1].length ? `
+            <div class="review-options-list">
+              ${q[1].map((opt, optIdx) => {
+                const isKey = optIdx === q[2];
+                const isChosen = optIdx === user;
+                const cls = isKey ? 'review-option-row key-correct' : (isChosen && !ok ? 'review-option-row user-wrong' : 'review-option-row');
+                const icon = isKey ? '✓' : (isChosen && !ok ? '✗' : '○');
+                return `<div class="${cls}"><b>${'ABCD'[optIdx]}.</b> <span>${esc(cleanOptionText(opt))}</span> <span style="margin-left:auto;font-weight:700;">${icon}</span></div>`;
+              }).join('')}
+            </div>` : ''}
+            <div class="review-status-row">
+              ${ok ? `<span class="badge-user-ans correct">✓ Bạn đã chọn: ${'ABCD'[user]} (Đúng)</span>` : user === undefined ? `<span class="badge-user-ans unanswered">⚪ Chưa trả lời câu này</span>` : `<span class="badge-user-ans wrong">✗ Bạn chọn: ${'ABCD'[user]}. ${esc(cleanOptionText(q[1][user]))}</span>`}
+              <span class="badge-correct-ans">✓ Đáp án chuẩn: ${'ABCD'[q[2]]}. ${esc(cleanOptionText(q[1][q[2]]))}</span>
+            </div>
+            <div class="solution-box theme-study">
+              <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT (KIẾN THỨC LỚP 10):</div>
+              <div class="solution-body">${q[3] || 'Áp dụng định nghĩa và kiến thức SGK Lớp 10 để chọn đáp án đúng.'}</div>
+            </div>
           </div>`;
         }).join('')}
 
         <h3>Phần II · Trắc nghiệm Đúng / Sai (2 câu)</h3>
-        ${(e.tf || []).map((q, i) => `<div class="review-item" style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
-          <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q.stem}</b>
+        ${(e.tf || []).map((q, i) => `<div class="review-item">
+          <div class="review-item-header">
+            <span class="review-part-tag">Phần II · Đúng / Sai</span>
+            <span class="review-item-number">Câu ${i + 1}</span>
+          </div>
+          <div class="review-stem-box">
+            <div class="review-stem-title">📖 Đề bài chung (Câu ${i + 1}):</div>
+            <div class="review-stem-content">${q.stem}</div>
+          </div>
           ${(q.items || []).map((item, j) => {
             const user = r.answers['t' + i + '-' + j];
             const ok = isTfMatch(user, item[1]);
             const expTrue = isTfTrue(item[1]);
-            return `<div class="sub-review" style="margin: 10px 0; padding: 10px 14px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px;">
-              <div style="font-size: 14px; color: #1e293b; line-height: 1.5;"><b>${'abcd'[j]})</b> ${cleanItemText(item[0])}</div>
-              <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa chọn</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn chọn: ${user ? 'Đúng' : 'Sai'}</span>`}
-                <span style="font-size: 13px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 14px;">${expTrue ? 'Đúng' : 'Sai'}</b></span>
+            return `<div class="sub-review">
+              <div style="font-size: 14.5px; color: #1e293b; line-height: 1.5; font-weight:600;"><b>Ý ${'abcd'[j]}):</b> ${cleanItemText(item[0])}</div>
+              <div class="review-status-row">
+                ${ok ? `<span class="badge-user-ans correct">✓ Bạn chọn: ${user ? 'ĐÚNG' : 'SAI'} (Chính xác)</span>` : user === undefined ? `<span class="badge-user-ans unanswered">⚪ Chưa chọn ý này</span>` : `<span class="badge-user-ans wrong">✗ Bạn chọn: ${user ? 'ĐÚNG' : 'SAI'}</span>`}
+                <span class="badge-correct-ans">✓ Khẳng định này là: <b>${expTrue ? 'ĐÚNG' : 'SAI'}</b></span>
               </div>
-              ${item[2] ? `<div style="font-size: 13px; color: #475569; font-style: italic; background: #f8fafc; padding: 6px 10px; border-radius: 4px; line-height: 1.5;">${item[2]}</div>` : ''}
+              <div class="solution-box theme-study" style="margin-top:8px;">
+                <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT (KIẾN THỨC LỚP 10):</div>
+                <div class="solution-body">${item[2] || (expTrue ? 'Khẳng định này là ĐÚNG theo kiến thức Lớp 10.' : 'Khẳng định này là SAI theo kiến thức Lớp 10.')}</div>
+              </div>
             </div>`;
           }).join('')}
         </div>`).join('')}
@@ -593,13 +620,20 @@ function renderResult(r) {
         ${(e.short || []).map((q, i) => {
           const user = r.answers['s' + i];
           const ok = shortCorrect(user, q.answer);
-          return `<div class="review-item" style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
-            <b style="font-size: 15px; color: #0f172a;">Câu ${i + 1}. ${q.text || q.question}</b>
-            <div style="margin: 8px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-              ${ok ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#dcfce7;color:#15803d;border:1px solid #86efac;">✓ Đúng</span>` : user === undefined || String(user).trim() === '' ? `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;">Chưa điền</span>` : `<span style="display:inline-block;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600;background:#fee2e2;color:#b91c1c;border:1px solid #fca5a5;">✗ Bạn điền: ${esc(user)}</span>`}
-              <span style="font-size: 14px; color: #334155;">Đáp án chuẩn: <b style="color: #16a34a; font-size: 15px;">${esc(q.answer)} ${esc(q.unit || '')}</b></span>
+          return `<div class="review-item">
+            <div class="review-item-header">
+              <span class="review-part-tag">Phần III · Trả lời ngắn</span>
+              <span class="review-item-number">Câu ${i + 1}</span>
             </div>
-            <div class="explain" style="margin-top: 6px; padding: 10px 14px; background: #f8fafc; border-left: 3px solid #3b82f6; border-radius: 4px; font-size: 14px; color: #334155; line-height: 1.6;">${q.explain || q.explanation || 'Không có giải thích bổ sung.'}</div>
+            <div class="review-q-text"><b>Câu ${i + 1}.</b> ${q.text || q.question}</div>
+            <div class="review-status-row">
+              ${ok ? `<span class="badge-user-ans correct">✓ Bạn điền: ${esc(user)} (Chính xác)</span>` : user === undefined || String(user).trim() === '' ? `<span class="badge-user-ans unanswered">⚪ Chưa điền kết quả</span>` : `<span class="badge-user-ans wrong">✗ Bạn đã điền: ${esc(user)}</span>`}
+              <span class="badge-correct-ans">✓ Đáp án chuẩn: <b>${esc(q.answer)}${q.unit ? ' ' + esc(q.unit) : ''}</b></span>
+            </div>
+            <div class="solution-box theme-study">
+              <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT (KIẾN THỨC LỚP 10):</div>
+              <div class="solution-body">${q.explain || q.explanation || 'Áp dụng các định luật và công thức tính toán theo chuẩn kiến thức Lớp 10.'}</div>
+            </div>
           </div>`;
         }).join('')}
       </div>
