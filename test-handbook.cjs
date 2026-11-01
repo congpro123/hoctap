@@ -94,11 +94,11 @@ assert.ok(hb.physics, 'Có phần Vật lý 10');
 assert.ok(hb.chemistry, 'Có phần Hóa học 10');
 
 // Kiểm tra số lượng chương và công thức
-assert.ok(hb.math.sections.length >= 4, 'Toán 10 có ít nhất 4 chương');
-assert.ok(hb.physics.sections.length >= 2, 'Vật lý 10 có 2 chương chuẩn ma trận Giữa kì I');
+assert.ok(hb.math.sections.length === 3, 'Toán 10 có đúng 3 chương chuẩn tiến độ (Mệnh đề, BPT, Hệ thức lượng)');
+assert.ok(hb.physics.sections.length === 2, 'Vật lý 10 có đúng 2 chương chuẩn ma trận Giữa kì I (Mở đầu, Động học)');
 const totalPhysItems = hb.physics.sections.reduce((acc, s) => acc + s.items.length, 0);
 assert.ok(totalPhysItems >= 8, 'Vật lý 10 có đầy đủ ít nhất 8 chủ đề chi tiết');
-assert.ok(hb.chemistry.sections.length >= 5, 'Hóa học 10 có ít nhất 5 chương');
+assert.ok(hb.chemistry.sections.length === 3, 'Hóa học 10 có đúng 3 chương chuẩn tiến độ (Nguyên tử, Cấu hình, Bảng tuần hoàn)');
 
 console.log('--- 3. Kiểm tra renderHandbook(all) ---');
 vm.runInContext("renderHandbook('all')", context);
@@ -114,10 +114,10 @@ console.log('--- 4. Kiểm tra renderHandbook(math) ---');
 vm.runInContext("renderHandbook('math')", context);
 appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Heron'), 'Toán 10 có công thức Heron');
-assert.ok(appHtml.includes('Định lí côsin'), 'Toán 10 có Định lí côsin');
+assert.ok(appHtml.includes('Định lí Cosin') || appHtml.includes('Định lí côsin'), 'Toán 10 có Định lí Cosin');
 assert.ok(appHtml.includes('Mệnh đề'), 'Toán 10 có Mệnh đề');
-assert.ok(appHtml.includes('Vectơ trong mặt phẳng'), 'Toán 10 có Vectơ');
-assert.ok(appHtml.includes('Tích vô hướng'), 'Toán 10 có Tích vô hướng');
+assert.ok(appHtml.includes('Bất phương trình'), 'Toán 10 có Bất phương trình bậc nhất hai ẩn');
+assert.ok(!appHtml.includes('Vectơ trong mặt phẳng'), 'Toán 10 không có Vectơ (chưa học)');
 
 console.log('--- 5. Kiểm tra renderHandbook(physics) ---');
 vm.runInContext("renderHandbook('physics')", context);
@@ -135,9 +135,9 @@ vm.runInContext("renderHandbook('chemistry')", context);
 appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Cấu tạo nguyên tử'), 'Hóa học 10 có Cấu tạo nguyên tử');
 assert.ok(appHtml.includes('Bảng tuần hoàn'), 'Hóa học 10 có Bảng tuần hoàn');
-assert.ok(appHtml.includes('bán bão hòa'), 'Hóa học 10 có ngoại lệ bán bão hòa Cr, Cu');
-assert.ok(appHtml.includes('Liên kết hóa học'), 'Hóa học 10 có Liên kết hóa học');
-assert.ok(appHtml.includes('Oxi hóa - Khử'), 'Hóa học 10 có Phản ứng Oxi hóa - Khử');
+assert.ok(appHtml.includes('Bán bão hòa') || appHtml.includes('bán bão hòa'), 'Hóa học 10 có ngoại lệ bán bão hòa Cr, Cu');
+assert.ok(!appHtml.includes('Liên kết hóa học'), 'Hóa học 10 không có Liên kết hóa học (chưa học)');
+assert.ok(!appHtml.includes('Oxi hóa - Khử'), 'Hóa học 10 không có Phản ứng Oxi hóa - Khử (chưa học)');
 
 console.log('--- 7. Kiểm tra tính năng tìm kiếm nhanh trong sổ tay ---');
 vm.runInContext("renderHandbook('all', 'Heron')", context);

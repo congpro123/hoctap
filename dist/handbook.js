@@ -1,40 +1,40 @@
-// Sổ tay kiến thức, công thức và lý thuyết trọng tâm toàn diện môn Toán 10, Vật lý 10, Hóa học 10 (Chuẩn GDPT 2018)
+/**
+ * Sổ tay Công thức & Lý thuyết Trọng tâm Giữa kì I (Lớp 10)
+ * Bám sát chuẩn tiến độ học tập:
+ * - Toán 10: Học tới Chương Hệ thức lượng trong tam giác (Chương I, II, III - Không có Vectơ)
+ * - Vật lý 10: Học đến Chương II Động học chất điểm (Chương I & II - Không có Ném ngang, Newton, Mômen lực)
+ * - Hóa học 10: Học đến Chương Bảng tuần hoàn (Chương 1, 2, 3 - Không có Liên kết hóa học, Oxi hóa - Khử)
+ */
 
 const handbookData = {
   math: {
     id: 'math',
     name: 'Toán 10',
-    icon: '∑',
-    color: '#6155e8',
-    bg: '#e9e7ff',
+    icon: '📐',
+    color: '#5548df',
+    bg: '#eeeaff',
     sections: [
       {
         title: 'Chương I: Mệnh đề & Tập hợp',
-        badge: 'Đại số & Logic',
+        badge: 'Trọng tâm Đại số',
         items: [
           {
-            name: 'Mệnh đề và Mệnh đề phủ định',
-            formula: 'P̄: "Không phải P"<br>&forall;x &isin; X, P(x) &hArr; &exist;x &isin; X, P̄(x)<br>&exist;x &isin; X, P(x) &hArr; &forall;x &isin; X, P̄(x)',
-            desc: 'Mệnh đề là một câu khẳng định có tính đúng hoặc sai (không thể vừa đúng vừa sai). Phủ định của lượng từ "với mọi (&forall;)" là "tồn tại (&exist;)" và ngược lại.',
-            traps: 'Phủ định của dấu ">" là "&le;" (bắt buộc có dấu bằng); phủ định của "Tất cả... đều đạt" là "Có ít nhất một... không đạt".'
+            name: 'Mệnh đề toán học, Phủ định & Mệnh đề kéo theo',
+            formula: '• Mệnh đề: Khẳng định đúng hoặc sai, không thể vừa đúng vừa sai<br>• Phủ định P̄: "Không phải P". P̄ đúng khi P sai và ngược lại<br>• Phủ định chứa ∀ và ∃: (∀x ∈ X, P(x)) &hArr; ∃x ∈ X, P̄(x) &nbsp;|&nbsp; (∃x ∈ X, P(x)) &hArr; ∀x ∈ X, P̄(x)<br>• Mệnh đề kéo theo P &rArr; Q: "Nếu P thì Q" (P: điều kiện đủ; Q: điều kiện cần). P &rArr; Q chỉ SAI khi P ĐÚNG mà Q SAI<br>• Mệnh đề đảo Q &rArr; P &nbsp;·&nbsp; Mệnh đề tương đương P &hArr; Q (P là điều kiện cần và đủ để có Q)',
+            desc: 'Mệnh đề toán học là nền tảng của tư duy logic. Chú ý mệnh đề chứa biến P(n) không phải là mệnh đề, chỉ trở thành mệnh đề khi gán một giá trị cụ thể cho biến n.',
+            traps: 'Phủ định của "bằng" (=) là "khác" (&ne;); Phủ định của "lớn hơn" (>) là "nhỏ hơn hoặc bằng" (&le;); Phủ định của "với mọi" (∀) là "tồn tại" (∃).'
           },
           {
-            name: 'Mệnh đề kéo theo & Mệnh đề tương đương',
-            formula: 'P &rArr; Q &nbsp;(Chỉ sai khi P đúng và Q sai)<br>P &hArr; Q &nbsp;(Đúng khi P, Q cùng đúng hoặc cùng sai)',
-            desc: 'Trong mệnh đề P &rArr; Q: P là giả thiết (điều kiện đủ để có Q), Q là kết luận (điều kiện cần để có P). Định lí đảo: Q &rArr; P.',
-            traps: '"P là điều kiện cần để có Q" là mệnh đề đảo Q &rArr; P, không phải P &rArr; Q.'
+            name: 'Tập hợp & Các phép toán trên tập hợp',
+            formula: '• Tập con: A &sub; B &hArr; (∀x &isin; A &rArr; x &isin; B). Số tập con của tập n phần tử là 2ⁿ (tập rỗng &empty; là con của mọi tập)<br>• Phép giao (A &cap; B): Gồm các phần tử VỪA thuộc A VỪA thuộc B: x &isin; A và x &isin; B<br>• Phép hợp (A &cup; B): Gồm các phần tử thuộc A HOẶC thuộc B: x &isin; A hoặc x &isin; B<br>  &rArr; Công thức số phần tử: n(A &cup; B) = n(A) + n(B) - n(A &cap; B)<br>• Hiệu (A \\ B): Gồm các phần tử thuộc A nhưng KHÔNG thuộc B<br>• Phần bù C<sub>E</sub>A: Hiệu E \\ A khi A &sub; E',
+            desc: 'Hai tập hợp bằng nhau A = B khi và chỉ khi A &sub; B và B &sub; A. Chú ý tập hợp các ước, tập nghiệm của phương trình, và dạng liệt kê phần tử.',
+            traps: 'Tránh nhầm lẫn giữa phần tử thuộc tập hợp (a &isin; A) với tập con ({a} &sub; A). Tập rỗng &empty; không có ngoặc nhọn xung quanh.'
           },
           {
-            name: 'Tập hợp & Các phép toán tập hợp',
-            formula: 'A &cap; B = {x | x &isin; A & x &isin; B}<br>A &cup; B = {x | x &isin; A hoặc x &isin; B}<br>A \ B = {x | x &isin; A & x &notin; B}<br>C<sub>E</sub>A = E \ A (khi A &sub; E)',
-            desc: 'Tập có n phần tử có 2<sup>n</sup> tập con. Công thức số phần tử: n(A &cup; B) = n(A) + n(B) - n(A &cap; B).',
-            traps: 'Khi lấy hiệu A \ B trên trục số: Nếu phần tử mút b &notin; B và b &isin; A thì b &isin; A \ B (ngoặc tròn đổi thành ngoặc vuông).'
-          },
-          {
-            name: 'Các tập hợp số thực & Khoảng, Đoạn, Nửa khoảng',
-            formula: '<b>N</b> &sub; <b>Z</b> &sub; <b>Q</b> &sub; <b>R</b><br>Đoạn: [a; b] = {x &isin; <b>R</b> | a &le; x &le; b}<br>Khoảng: (a; b) = {x &isin; <b>R</b> | a &lt; x &lt; b}<br>Nửa khoảng: [a; b), (a; b], (-&infin;; b], [a; +&infin;)',
-            desc: 'Tập hợp các số thực giữa hai đầu mút a và b. Ngoặc vuông [ ] lấy cả đầu mút, ngoặc tròn ( ) không lấy đầu mút.',
-            traps: 'Đoạn [-3; 1] có vô số số thực, không phải chỉ có 5 số nguyên.'
+            name: 'Các tập con của số thực ℝ & Kĩ năng trục số',
+            formula: '• Khoảng (a; b) = {x &isin; ℝ | a < x < b} &nbsp;|&nbsp; (-&infin;; a), (b; +&infin;)<br>• Đoạn [a; b] = {x &isin; ℝ | a &le; x &le; b} (lấy cả hai đầu mút a và b)<br>• Nửa khoảng: [a; b) = {x &isin; ℝ | a &le; x < b} &nbsp;|&nbsp; (a; b] = {x &isin; ℝ | a < x &le; b}<br>  [a; +&infin;) = {x &isin; ℝ | x &ge; a} &nbsp;|&nbsp; (-&infin;; a] = {x &isin; ℝ | x &le; a}',
+            desc: 'Kĩ năng giải toán tập con của ℝ: Luôn vẽ trục số biểu diễn các mút số, gạch bỏ các phần không thuộc tập hợp, từ đó suy ra chính xác kết quả Giao, Hợp, Hiệu.',
+            traps: 'Bẫy đầu mút ngoặc tròn vs ngoặc vuông: Nếu A = [1; 5) và B = (3; 7] thì A &cap; B = (3; 5) (vì 5 không thuộc A nên không thể thuộc giao).'
           }
         ]
       },
@@ -43,70 +43,40 @@ const handbookData = {
         badge: 'Đại số & Tọa độ',
         items: [
           {
-            name: 'Bất phương trình bậc nhất hai ẩn',
-            formula: 'ax + by &le; c &nbsp;(hoặc &lt;, &ge;, &gt; c với a<sup>2</sup> + b<sup>2</sup> &ne; 0)',
-            desc: 'Miền nghiệm là nửa mặt phẳng bờ d: ax + by = c. Cách xét: Chọn gốc O(0; 0) (nếu c &ne; 0) thay vào BPT, nếu thỏa mãn thì miền nghiệm chứa O, nếu không thì gạch bỏ phần chứa O.',
-            traps: 'Nếu dấu bất phương trình là ngặt (< hoặc >) thì đường thẳng bờ d là nét đứt và không thuộc miền nghiệm.'
+            name: 'Bất phương trình bậc nhất hai ẩn & Nửa mặt phẳng nghiệm',
+            formula: '• Dạng tổng quát: ax + by + c &le; 0 (hoặc <, &ge;, > 0) với a² + b² &ne; 0<br>• Đường thẳng bờ (d): ax + by + c = 0 chia mặt phẳng tọa độ Oxy thành 2 nửa mặt phẳng<br>• Cách xác định miền nghiệm: Chọn điểm thử M(x₀, y₀) &notin; (d) (thường chọn gốc O(0; 0) nếu c &ne; 0):<br>  + Nếu ax₀ + by₀ + c &le; 0 đúng: Nửa mặt phẳng chứa M là miền nghiệm<br>  + Nếu ax₀ + by₀ + c &le; 0 sai: Nửa mặt phẳng không chứa M là miền nghiệm',
+            desc: 'Nếu BPT có dấu &le; hoặc &ge;: Miền nghiệm kể cả bờ (d) (vẽ nét liền). Nếu BPT có dấu < hoặc >: Miền nghiệm KHÔNG kể bờ (d) (vẽ nét đứt).',
+            traps: 'Nếu c = 0, đường thẳng đi qua gốc tọa độ O(0,0), không được chọn O làm điểm thử mà phải chọn một điểm khác như (1; 0) hoặc (0; 1).'
           },
           {
-            name: 'Hệ BPT & Bài toán Quy hoạch tuyến tính (Tìm Max/Min)',
-            formula: 'Max/Min của F(x; y) = ax + by trên miền đa giác đạt tại một trong các đỉnh',
-            desc: 'Quy trình giải:<br>1) Biểu diễn miền nghiệm của hệ BPT (thường là miền đa giác lồi OABC).<br>2) Tìm tọa độ tất cả các đỉnh giao điểm của miền đa giác.<br>3) Tính giá trị F(x; y) tại từng đỉnh, so sánh tìm GTLN và GTNN.',
-            traps: 'Phải tính giá trị F(x; y) tại TẤT CẢ các đỉnh của đa giác trước khi đưa ra kết luận lớn nhất hay nhỏ nhất.'
+            name: 'Hệ BPT bậc nhất hai ẩn & Bài toán tối ưu quy hoạch tuyến tính',
+            formula: '• Hệ BPT bậc nhất hai ẩn gồm 2 hay nhiều BPT bậc nhất hai ẩn. Miền nghiệm là phần giao của các miền nghiệm thành phần (thường là miền đa giác lồi: tam giác, tứ giác...)<br>• Định lí tối ưu: Biểu thức mục tiêu F(x, y) = ax + by trên miền đa giác lồi A₁A₂...Aₙ đạt Giá trị lớn nhất (GTLN) và Giá trị nhỏ nhất (GTNN) tại một trong các đỉnh của miền đa giác đó',
+            desc: 'Quy trình 4 bước giải bài toán thực tế (tối ưu lợi nhuận/chi phí):<br>Bước 1: Đặt ẩn số x &ge; 0, y &ge; 0.<br>Bước 2: Lập hệ BPT từ các điều kiện giới hạn nguồn lực.<br>Bước 3: Vẽ miền nghiệm và xác định tọa độ các đỉnh của miền đa giác.<br>Bước 4: Tính F(x, y) tại tất cả các đỉnh và kết luận Max/Min.',
+            traps: 'Luôn kiểm tra điều kiện x &ge; 0, y &ge; 0 (hoặc x, y nguyên dương nếu là số sản phẩm/người).'
           }
         ]
       },
       {
         title: 'Chương III: Hệ thức lượng trong tam giác',
-        badge: 'Lượng giác & Hình học',
+        badge: 'Hình học lượng giác',
         items: [
           {
-            name: 'Giá trị lượng giác của hai góc bù nhau (0° &le; &alpha; &le; 180°)',
-            formula: 'sin(180&deg; - &alpha;) = sin&alpha;<br>cos(180&deg; - &alpha;) = -cos&alpha;<br>tan(180&deg; - &alpha;) = -tan&alpha; &nbsp;(&alpha; &ne; 90&deg;)<br>cot(180&deg; - &alpha;) = -cot&alpha; &nbsp;(0&deg; &lt; &alpha; &lt; 180&deg;)',
-            desc: 'Dấu lượng giác: Góc nhọn (0° < &alpha; < 90°) có sin, cos, tan, cot > 0. Góc tù (90° < &alpha; < 180°) có sin > 0, cos < 0, tan < 0, cot < 0.<br>Hệ thức cơ bản: sin<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; = 1; 1 + tan<sup>2</sup>&alpha; = 1/cos<sup>2</sup>&alpha;.',
-            traps: 'Góc tù có cos < 0: ví dụ cos120° = -cos60° = -1/2, cos150° = -cos30° = -&radic;3/2.'
+            name: 'Giá trị lượng giác của một góc từ 0° đến 180°',
+            formula: '• Trên nửa đường tròn đơn vị: Điểm M(x₀; y₀) ứng với góc &alpha;:<br>  sin&alpha; = y₀ &nbsp;|&nbsp; cos&alpha; = x₀ &nbsp;|&nbsp; tan&alpha; = y₀ / x₀ (&alpha; &ne; 90°) &nbsp;|&nbsp; cot&alpha; = x₀ / y₀ (&alpha; &ne; 0°, 180°)<br>• Dấu của các GTLG:<br>  + Góc nhọn (0° < &alpha; < 90°): sin&alpha; > 0, cos&alpha; > 0, tan&alpha; > 0, cot&alpha; > 0<br>  + Góc tù (90° < &alpha; < 180°): sin&alpha; > 0, cos&alpha; < 0, tan&alpha; < 0, cot&alpha; < 0 (sin LUÔN DƯƠNG!)<br>• Hai góc bù nhau (&alpha; và 180° - &alpha;):<br>  sin(180° - &alpha;) = sin&alpha; &nbsp;|&nbsp; cos(180° - &alpha;) = -cos&alpha; &nbsp;|&nbsp; tan(180° - &alpha;) = -tan&alpha; &nbsp;|&nbsp; cot(180° - &alpha;) = -cot&alpha;<br>• Các hệ thức cơ bản: sin²&alpha; + cos²&alpha; = 1 &nbsp;|&nbsp; 1 + tan²&alpha; = 1/cos²&alpha; &nbsp;|&nbsp; 1 + cot²&alpha; = 1/sin²&alpha; &nbsp;|&nbsp; tan&alpha; . cot&alpha; = 1',
+            desc: 'Trong một tam giác, số đo các góc luôn nằm từ 0° đến 180°. Sin của các góc trong tam giác luôn dương. Góc A tù khi và chỉ khi cosA < 0.',
+            traps: 'Góc tù có cos âm: cos 120° = -1/2, cos 150° = -&radic;3/2. Nhầm dấu cos là sai hoàn toàn định lí Cosin!'
           },
           {
-            name: 'Bảng giá trị lượng giác các góc đặc biệt',
-            formula: '• 0&deg;: sin=0, cos=1, tan=0<br>• 30&deg;: sin=1/2, cos=&radic;3/2, tan=1/&radic;3<br>• 45&deg;: sin=&radic;2/2, cos=&radic;2/2, tan=1<br>• 60&deg;: sin=&radic;3/2, cos=1/2, tan=&radic;3<br>• 90&deg;: sin=1, cos=0, tan ko xđ<br>• 120&deg;: sin=&radic;3/2, cos=-1/2, tan=-&radic;3<br>• 135&deg;: sin=&radic;2/2, cos=-&radic;2/2, tan=-1<br>• 150&deg;: sin=1/2, cos=-&radic;3/2, tan=-1/&radic;3<br>• 180&deg;: sin=0, cos=-1, tan=0',
-            desc: 'Học sinh nên ghi nhớ bảng giá trị này để tính toán cực nhanh trong các bài toán định lí sin, côsin và diện tích.',
-            traps: 'tan90° và cot0°, cot180° không xác định.'
+            name: 'Định lí Cosin, Định lí Sin & Công thức đường trung tuyến',
+            formula: '★ ĐỊNH LÍ COSIN: a² = b² + c² - 2bc.cosA &rArr; cosA = (b² + c² - a²) / (2bc)<br>  + a² = b² + c² &hArr; &Delta; vuông tại A &nbsp;|&nbsp; a² < b² + c² &hArr; góc A nhọn &nbsp;|&nbsp; a² > b² + c² &hArr; góc A tù<br>★ ĐỊNH LÍ SIN: a / sinA = b / sinB = c / sinC = 2R &rArr; a = 2R.sinA &nbsp;|&nbsp; R = a / (2.sinA)<br>★ CÔNG THỨC ĐƯỜNG TRUNG TUYẾN m<sub>a</sub>:<br>  m<sub>a</sub>² = [2(b² + c²) - a²] / 4 &nbsp;|&nbsp; m<sub>b</sub>² = [2(a² + c²) - b²] / 4 &nbsp;|&nbsp; m<sub>c</sub>² = [2(a² + b²) - c²] / 4',
+            desc: 'Dùng định lí Cosin khi biết 2 cạnh và góc xen giữa, hoặc biết cả 3 cạnh (để tính góc). Dùng định lí Sin khi biết 1 cạnh và 2 góc, hoặc biết 2 cạnh và 1 góc đối diện.',
+            traps: 'Bán kính đường tròn ngoại tiếp: R = a / (2sinA), rất nhiều bạn quên số 2 ở mẫu dẫn đến tính sai R gấp đôi.'
           },
           {
-            name: 'Định lí côsin, Định lí sin & Đường trung tuyến',
-            formula: '• Định lí côsin: a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA &hArr; cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (2bc)<br>• Định lí sin: a / sinA = b / sinB = c / sinC = 2R<br>• Trung tuyến: m<sub>a</sub><sup>2</sup> = (2(b<sup>2</sup> + c<sup>2</sup>) - a<sup>2</sup>) / 4',
-            desc: 'Dùng định lí côsin khi biết 2 cạnh và góc xen giữa hoặc biết 3 cạnh. Dùng định lí sin khi biết 1 cạnh và 2 góc, hoặc liên quan đến bán kính đường tròn ngoại tiếp R.',
-            traps: 'Nếu góc A tù (A > 90°) thì cosA mang dấu âm (-), khi đó -2bc.cosA đổi thành cộng (+).'
-          },
-          {
-            name: 'Trọn bộ 5 công thức tính diện tích tam giác',
-            formula: '1) S = 1/2 . a . h<sub>a</sub><br>2) S = 1/2 . ab . sinC = 1/2 . bc . sinA = 1/2 . ca . sinB<br>3) S = abc / (4R) &hArr; R = abc / (4S)<br>4) S = p . r &hArr; r = S / p &nbsp;(với nửa chu vi p = (a+b+c)/2)<br>5) Công thức Heron: S = &radic;[p(p - a)(p - b)(p - c)]',
-            desc: 'Tùy vào dữ kiện bài toán (chiều cao, góc xen giữa, bán kính ngoại tiếp R, bán kính nội tiếp r hay 3 cạnh a, b, c) để chọn công thức tối ưu nhất.',
-            traps: 'Công thức S = abc / (4R) có số 4 dưới mẫu, không nhầm thành số 2.'
-          }
-        ]
-      },
-      {
-        title: 'Chương IV: Vectơ trong mặt phẳng & Tích vô hướng',
-        badge: 'Hình học tọa độ',
-        items: [
-          {
-            name: 'Khái niệm vectơ & Các quy tắc cộng, trừ',
-            formula: '• Quy tắc 3 điểm (tam giác): AB⃗ + BC⃗ = AC⃗<br>• Quy tắc hiệu: OB⃗ - OA⃗ = AB⃗<br>• Quy tắc hình bình hành: AB⃗ + AD⃗ = AC⃗ (với ABCD là HBH)<br>• Trung điểm: M là TĐ của AB &hArr; MA⃗ + MB⃗ = 0⃗ &hArr; OA⃗ + OB⃗ = 2OM⃗<br>• Trọng tâm: G là trọng tâm &Delta;ABC &hArr; GA⃗ + GB⃗ + GC⃗ = 0⃗ &hArr; OA⃗ + OB⃗ + OC⃗ = 3OG⃗',
-            desc: 'Vectơ là đoạn thẳng có hướng. Vectơ-không 0⃗ có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0, cùng phương cùng hướng với mọi vectơ.',
-            traps: 'Phép trừ hai vectơ cùng gốc: OB⃗ - OA⃗ = AB⃗ (ngọn trừ gốc, chữ sau lên trước).'
-          },
-          {
-            name: 'Tọa độ vectơ và Tọa độ điểm trong hệ Oxy',
-            formula: '• u⃗ = x.i⃗ + y.j⃗ &hArr; u⃗ = (x; y)<br>• Cho A(x<sub>A</sub>; y<sub>A</sub>), B(x<sub>B</sub>; y<sub>B</sub>) &rArr; AB⃗ = (x<sub>B</sub> - x<sub>A</sub>; y<sub>B</sub> - y<sub>A</sub>)<br>• Độ dài: |u⃗| = &radic;(x<sup>2</sup> + y<sup>2</sup>) &nbsp;·&nbsp; AB = &radic;[(x<sub>B</sub> - x<sub>A</sub>)<sup>2</sup> + (y<sub>B</sub> - y<sub>A</sub>)<sup>2</sup>]<br>• Trung điểm M: x<sub>M</sub> = (x<sub>A</sub> + x<sub>B</sub>)/2, y<sub>M</sub> = (y<sub>A</sub> + y<sub>B</sub>)/2<br>• Trọng tâm G: x<sub>G</sub> = (x<sub>A</sub> + x<sub>B</sub> + x<sub>C</sub>)/3, y<sub>G</sub> = (y<sub>A</sub> + y<sub>B</sub> + y<sub>C</sub>)/3<br>• Cùng phương: u⃗ cùng phương v⃗ &hArr; x<sub>1</sub>y<sub>2</sub> - x<sub>2</sub>y<sub>1</sub> = 0',
-            desc: 'Tọa độ vectơ được xác định thông qua hai vectơ đơn vị i⃗ = (1; 0) và j⃗ = (0; 1) trên hai trục tọa độ Ox, Oy.',
-            traps: 'Tính tọa độ vectơ AB⃗ phải lấy tọa độ ngọn B trừ tọa độ gốc A: (x<sub>B</sub> - x<sub>A</sub>; y<sub>B</sub> - y<sub>A</sub>).'
-          },
-          {
-            name: 'Tích vô hướng của hai vectơ & Ứng dụng',
-            formula: '• Định nghĩa: a⃗ . b⃗ = |a⃗| . |b⃗| . cos(a⃗, b⃗)<br>• Biểu thức tọa độ: a⃗ . b⃗ = x<sub>1</sub>x<sub>2</sub> + y<sub>1</sub>y<sub>2</sub><br>• Bình phương vô hướng: a⃗<sup>2</sup> = |a⃗|<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup><br>• Hai vectơ vuông góc: a⃗ &perp; b⃗ &hArr; a⃗ . b⃗ = 0 &hArr; x<sub>1</sub>x<sub>2</sub> + y<sub>1</sub>y<sub>2</sub> = 0<br>• Góc giữa hai vectơ: cos(a⃗, b⃗) = (x<sub>1</sub>x<sub>2</sub> + y<sub>1</sub>y<sub>2</sub>) / [&radic;(x<sub>1</sub><sup>2</sup> + y<sub>1</sub><sup>2</sup>) . &radic;(x<sub>2</sub><sup>2</sup> + y<sub>2</sub><sup>2</sup>)]',
-            desc: 'Tích vô hướng của hai vectơ là một SỐ THỰC, không phải là vectơ. Nếu góc giữa hai vectơ là nhọn thì tích vô hướng dương; góc tù thì tích vô hướng âm; góc vuông thì bằng 0.',
-            traps: 'Nhầm lẫn giữa tích vô hướng (kết quả là số) với phép nhân vectơ với một số (kết quả là vectơ).'
+            name: '5 Công thức tính diện tích tam giác & Giải tam giác thực tế',
+            formula: '1. S = 1/2 . a . h<sub>a</sub> = 1/2 . b . h<sub>b</sub> = 1/2 . c . h<sub>c</sub> (Cạnh đáy &times; Chiều cao tương ứng)<br>2. S = 1/2 . ab . sinC = 1/2 . bc . sinA = 1/2 . ca . sinB (Tích 2 cạnh &times; Sin góc xen giữa)<br>3. S = (abc) / (4R) &rArr; R = (abc) / (4S) (Bán kính đường tròn ngoại tiếp R)<br>4. S = p . r &rArr; r = S / p với nửa chu vi p = (a + b + c) / 2 (Bán kính đường tròn nội tiếp r)<br>5. Công thức Heron: S = &radic;[p(p - a)(p - b)(p - c)]',
+            desc: 'Ứng dụng giải tam giác thực tế: Đo chiều cao của tháp, đỉnh núi mà không thể đến chân tháp (bằng cách đo góc ngắm từ 2 điểm A, B cách nhau khoảng d trên mặt đất, dùng định lí Sin để tìm khoảng cách rồi dùng tam giác vuông tính chiều cao).',
+            traps: 'Trong công thức Heron và S = p.r: p là NỬA CHU VI (a + b + c)/2, không phải chu vi cả tam giác!'
           }
         ]
       }
@@ -193,16 +163,16 @@ const handbookData = {
         badge: 'Hạt nhân & Vỏ electron',
         items: [
           {
-            name: 'Thành phần cấu tạo nguyên tử & Hệ thức hạt cơ bản',
-            formula: 'Z = p = e (số proton = số electron)<br>Số khối: A = Z + N &nbsp;·&nbsp; Kí hiệu: <sup>A</sup><sub>Z</sub>X<br>Tổng số hạt cơ bản = 2Z + N<br>Số hạt mang điện = 2Z &nbsp;·&nbsp; Số hạt không mang điện = N<br>Hiệu số hạt mang điện và không mang điện = 2Z - N',
-            desc: 'Hạt nhân mang điện tích dương +Ze gồm proton (+1, ~1 amu) và neutron (0, ~1 amu). Vỏ nguyên tử mang điện tích âm gồm electron (-1, ~0.00055 amu). Khối lượng nguyên tử tập trung hầu như hoàn toàn ở hạt nhân.',
-            traps: 'Đồng vị protium <sup>1</sup><sub>1</sub>H chỉ có 1 proton và 1 electron, không có neutron (N = 0).'
+            name: 'Thành phần cấu tạo nguyên tử & Bài toán hạt cơ bản',
+            formula: '• Hạt nhân: Proton (p, điện tích +1, khối lượng &asymp; 1 amu) + Neutron (n, điện tích 0, khối lượng &asymp; 1 amu)<br>• Vỏ nguyên tử: Electron (e, điện tích -1, khối lượng rất nhỏ &asymp; 0,00055 amu)<br>• Khối lượng nguyên tử tập trung hầu như hoàn toàn ở hạt nhân (m<sub>nguyên tử</sub> &asymp; m<sub>hạt nhân</sub>)<br>• Số hiệu nguyên tử: Z = p = e (số đơn vị điện tích hạt nhân)<br>• Số khối: A = Z + N &nbsp;·&nbsp; Kí hiệu nguyên tử: <sup>A</sup><sub>Z</sub>X<br>★ HỆ THỐNG BÀI TOÁN HẠT CƠ BẢN:<br>  + Tổng số hạt cơ bản = 2Z + N<br>  + Số hạt mang điện = 2Z (gồm proton và electron)<br>  + Số hạt không mang điện = N (chính là số neutron)<br>  + Hiệu số hạt mang điện và không mang điện = 2Z - N<br>  + Điều kiện bền hạt nhân (với Z &le; 82): 1 &le; N / Z &le; 1,52 &rArr; (Tổng hạt) / 3,52 &le; Z &le; (Tổng hạt) / 3',
+            desc: 'Nguyên tử trung hòa về điện nên số proton luôn bằng số electron (p = e). Các nguyên tử thuộc cùng một nguyên tố hóa học thì luôn có cùng số hiệu nguyên tử Z (cùng số proton).',
+            traps: 'Đồng vị Protium <sup>1</sup><sub>1</sub>H là trường hợp duy nhất hạt nhân chỉ có 1 proton, hoàn toàn KHÔNG có neutron (N = 0).'
           },
           {
             name: 'Đồng vị & Nguyên tử khối trung bình (Ā)',
-            formula: 'Ā = (A<sub>1</sub>.x<sub>1</sub> + A<sub>2</sub>.x<sub>2</sub> + ... + A<sub>k</sub>.x<sub>k</sub>) / 100<br>Với x<sub>1</sub> + x<sub>2</sub> + ... + x<sub>k</sub> = 100%',
-            desc: 'Đồng vị là các nguyên tử của cùng một nguyên tố hóa học, có cùng số proton (Z) nhưng khác số neutron (N), dẫn tới số khối (A) khác nhau.',
-            traps: 'Với nguyên tố có 2 đồng vị thì x<sub>2</sub> = 100% - x<sub>1</sub>. Tính thành phần phần trăm khối lượng của đồng vị trong hợp chất: %m = (A<sub>1</sub> . x<sub>1</sub>% . số nguyên tử X) / M<sub>hợp chất</sub> &times; 100%.'
+            formula: '• Khái niệm: Các đồng vị là những nguyên tử của CÙNG một nguyên tố hóa học, có cùng số proton (Z) nhưng khác số neutron (N), dẫn tới số khối (A) khác nhau<br>★ CÔNG THỨC NGUYÊN TỬ KHỐI TRUNG BÌNH:<br>  Ā = (A₁ . x₁ + A₂ . x₂ + ... + A<sub>k</sub> . x<sub>k</sub>) / 100<br>  (với x₁, x₂... là phần trăm số nguyên tử tương ứng của các đồng vị; x₁ + x₂ + ... = 100%)<br>★ TÍNH % KHỐI LƯỢNG ĐỒNG VỊ TRONG HỢP CHẤT:<br>  %m(<sup>A₁</sup>X) = [A₁ &times; (x₁ / 100) &times; (số nguyên tử X trong phân tử)] / M<sub>hợp chất</sub> &times; 100%',
+            desc: 'Ví dụ: Nguyên tố Chlorine có 2 đồng vị <sup>35</sup>Cl (chiếm 75%) và <sup>37</sup>Cl (chiếm 25%) &rArr; Ā = (35&times;75 + 37&times;25)/100 = 35,5 amu.',
+            traps: 'Đừng nhầm lẫn giữa "nguyên tử khối trung bình" với "số khối A" của một đồng vị cụ thể. Khi tính toán khối lượng mol hợp chất, luôn dùng nguyên tử khối trung bình Ā.'
           }
         ]
       },
@@ -212,15 +182,15 @@ const handbookData = {
         items: [
           {
             name: 'Orbital nguyên tử (AO) & Lớp, phân lớp electron',
-            formula: '• Lớp n: K(1), L(2), M(3), N(4)... Số AO trong lớp n là n<sup>2</sup>, số e tối đa là 2n<sup>2</sup><br>• Phân lớp s (1 AO, tối đa 2e), p (3 AO, tối đa 6e), d (5 AO, tối đa 10e), f (7 AO, tối đa 14e)<br>• Mỗi AO chứa tối đa 2 electron có spin ngược chiều: &uarr;&darr;',
-            desc: 'Orbital nguyên tử (AO) là khu vực không gian xung quanh hạt nhân mà tại đó xác suất tìm thấy electron là lớn nhất (khoảng 90%). AO s có dạng hình cầu; AO p có dạng hình số 8 nổi định hướng theo 3 trục Ox, Oy, Oz (p<sub>x</sub>, p<sub>y</sub>, p<sub>z</sub>).',
-            traps: 'Các electron trên cùng một phân lớp có mức năng lượng BẰNG NHAU; các electron trên cùng một lớp có mức năng lượng GẦN BẰNG NHAU.'
+            formula: '• Orbital nguyên tử (AO): Vùng không gian xung quanh hạt nhân mà tại đó xác suất tìm thấy electron là lớn nhất (khoảng 90%)<br>• Hình dạng AO: AO s có dạng hình cầu; AO p có dạng hình số 8 nổi định hướng theo 3 trục Ox, Oy, Oz (p<sub>x</sub>, p<sub>y</sub>, p<sub>z</sub>)<br>• Lớp n (K: 1, L: 2, M: 3, N: 4...): Lớp thứ n có n phân lớp, n² orbital và chứa tối đa 2n² electron<br>• Phân lớp electron: s (1 AO, tối đa 2e), p (3 AO, tối đa 6e), d (5 AO, tối đa 10e), f (7 AO, tối đa 14e)<br>• Phân lớp bão hòa: Đã chứa đủ số electron tối đa (s², p⁶, d¹⁰, f¹⁴)',
+            desc: 'Các electron thuộc cùng một phân lớp có mức năng lượng BẰNG NHAU. Các electron thuộc cùng một lớp có mức năng lượng GẦN BẰNG NHAU.',
+            traps: 'Lớp M (n = 3) có tối đa 2&times;3² = 18 electron và có 3² = 9 AO (gồm 1 AO s, 3 AO p, 5 AO d).'
           },
           {
-            name: 'Quy tắc viết cấu hình electron & 2 ngoại lệ kinh điển',
-            formula: '• Thứ tự mức năng lượng: 1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s...<br>• Viết cấu hình: sắp xếp lại theo thứ tự lớp (3d trước 4s)<br>• Ngoại lệ bán bão hòa: <sub>24</sub>Cr: [Ar]3d<sup>5</sup>4s<sup>1</sup> (không viết 3d<sup>4</sup>4s<sup>2</sup>)<br>• Ngoại lệ bão hòa: <sub>29</sub>Cu: [Ar]3d<sup>10</sup>4s<sup>1</sup> (không viết 3d<sup>9</sup>4s<sup>2</sup>)<br>• Viết cấu hình ion: Cation bớt e từ ngoài vào (Fe &rarr; Fe<sup>2+</sup> bớt 4s<sup>2</sup> thành [Ar]3d<sup>6</sup>)',
-            desc: 'Phân loại nguyên tố: Dựa vào số electron lớp ngoài cùng:<br>• 1, 2, 3 e: Kim loại (trừ H, He, B)<br>• 4 e: Có thể là kim loại (Sn, Pb) hoặc phi kim (C, Si)<br>• 5, 6, 7 e: Phi kim<br>• 8 e: Khí hiếm (He có 2 e).',
-            traps: 'Khi tạo cation kim loại Fe &rarr; Fe<sup>2+</sup> + 2e: bớt 2 electron ở phân lớp 4s ngoài cùng trước, cấu hình Fe<sup>2+</sup> là [Ar]3d<sup>6</sup> chứ không phải [Ar]3d<sup>4</sup>4s<sup>2</sup>.'
+            name: '3 Nguyên lí, Quy tắc viết cấu hình e & Ngoại lệ kinh điển',
+            formula: '• Nguyên lí vững bền: Điền electron theo thứ tự mức năng lượng tăng dần:<br>  1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p < 5s < 4d... (4s có mức năng lượng thấp hơn 3d!)<br>• Nguyên lí Pauli: Trên mỗi AO chỉ chứa tối đa 2 electron có spin đối song (ngược chiều: &uarr;&darr;)<br>• Quy tắc Hund: Trong cùng 1 phân lớp chưa bão hòa, electron phân bố sao cho số e độc thân là lớn nhất<br>★ 2 NGOẠI LỆ KINH ĐIỂN CẦN THUỘC LÒNG:<br>  + Bán bão hòa phân lớp d: <sub>24</sub>Cr: [Ar] 3d⁵ 4s¹ (không viết 3d⁴ 4s²)<br>  + Bão hòa phân lớp d: <sub>29</sub>Cu: [Ar] 3d¹⁰ 4s¹ (không viết 3d⁹ 4s²)<br>★ CẤU HÌNH ELECTRON CỦA ION:<br>  + Cation kim loại: Nhường e từ lớp ngoài cùng trước: Fe &rarr; Fe²⁺ + 2e (Fe: [Ar]3d⁶4s² &rArr; Fe²⁺: [Ar]3d⁶, bớt 4s² trước!)<br>  + Anion phi kim: Nhận thêm e vào phân lớp ngoài cùng: Cl + 1e &rarr; Cl⁻ ([Ne]3s²3p⁶)',
+            desc: 'Xác định loại nguyên tố dựa vào số electron lớp ngoài cùng:<br>• 1, 2, 3 e: Kim loại (trừ H, He, B)<br>• 4 e: Kim loại (Sn, Pb) hoặc phi kim (C, Si)<br>• 5, 6, 7 e: Phi kim<br>• 8 e: Khí hiếm (He có 2 e).',
+            traps: 'Bẫy viết cấu hình cation Fe²⁺: Cực kì nhiều bạn bớt 2e ở phân lớp 3d thành [Ar]3d⁴4s² là SAI! Phải bớt 2e ở phân lớp 4s ngoài cùng trước, cấu hình đúng là [Ar]3d⁶.'
           }
         ]
       },
@@ -229,64 +199,22 @@ const handbookData = {
         badge: 'Hệ thống tuần hoàn',
         items: [
           {
-            name: 'Nguyên tắc cấu tạo Bảng tuần hoàn',
-            formula: '• Số thứ tự Ô nguyên tố = Số hiệu nguyên tử Z = Số proton = Số electron<br>• Số thứ tự Chu kì = Số lớp electron (7 chu kì: 1, 2, 3 chu kì nhỏ; 4, 5, 6, 7 chu kì lớn)<br>• Số thứ tự Nhóm A = Số electron hóa trị = Số electron lớp ngoài cùng (nguyên tố s và p)<br>• Nhóm B: Gồm các nguyên tố d và f (kim loại chuyển tiếp)',
-            desc: 'Các nguyên tố được sắp xếp theo chiều tăng dần của điện tích hạt nhân nguyên tử. Các nguyên tố có cùng số lớp electron xếp thành 1 chu kì (hàng ngang). Các nguyên tố có tính chất tương tự nhau xếp thành 1 nhóm (cột dọc).',
-            traps: 'Nguyên tố nhóm B có số e hóa trị = (e lớp ngoài cùng) + (e phân lớp d chưa bão hòa).'
+            name: 'Nguyên tắc cấu tạo & Cấu trúc Bảng tuần hoàn',
+            formula: '★ 3 NGUYÊN TẮC SẮP XẾP:<br>  1. Sắp xếp theo chiều tăng dần của điện tích hạt nhân (Z)<br>  2. Các nguyên tố có cùng số lớp electron xếp vào cùng 1 chu kì (hàng ngang)<br>  3. Các nguyên tố có cùng số electron hóa trị xếp vào cùng 1 nhóm (cột dọc)<br>★ CẤU TRÚC BẢNG TUẦN HOÀN:<br>  • Số thứ tự Ô nguyên tố = Số hiệu nguyên tử Z = Số proton = Số electron<br>  • Số thứ tự Chu kì = Số lớp electron (7 chu kì: 1, 2, 3 là chu kì nhỏ; 4, 5, 6, 7 là chu kì lớn)<br>  • Số thứ tự Nhóm A = Số electron hóa trị = Số electron lớp ngoài cùng (nguyên tố s và p)<br>  • Nhóm B: Gồm các nguyên tố d và f (kim loại chuyển tiếp). Số e hóa trị = (e ngoài cùng) + (e phân lớp d chưa bão hòa)',
+            desc: 'Khối nguyên tố: Nguyên tố s (nhóm IA, IIA); nguyên tố p (nhóm IIIA đến VIIIA); nguyên tố d (nhóm B); nguyên tố f (họ Lanthanide và Actinide).',
+            traps: 'Nguyên tố nhóm B có cấu hình kết thúc ở dạng (n-1)dᵃ nsᵇ: Nếu a + b = 8, 9, 10 thì thuộc nhóm VIIIB; nếu a + b = 11 thì thuộc nhóm IB; nếu a + b = 12 thì thuộc nhóm IIB.'
           },
           {
-            name: 'Bảng biến đổi tuần hoàn các tính chất',
-            formula: '• Bán kính nguyên tử (R): Trong chu kì GIẢM &nbsp;|&nbsp; Trong nhóm A TĂNG<br>• Độ âm điện (&chi;): Trong chu kì TĂNG &nbsp;|&nbsp; Trong nhóm A GIẢM (F có &chi; max = 3,98)<br>• Năng lượng ion hóa (I<sub>1</sub>): Trong chu kì TĂNG &nbsp;|&nbsp; Trong nhóm A GIẢM<br>• Tính kim loại: Trong chu kì GIẢM &nbsp;|&nbsp; Trong nhóm A TĂNG<br>• Tính phi kim: Trong chu kì TĂNG &nbsp;|&nbsp; Trong nhóm A GIẢM<br>• Tính base của oxide/hydroxide: Trong chu kì GIẢM &nbsp;|&nbsp; Trong nhóm A TĂNG<br>• Tính acid của oxide/hydroxide: Trong chu kì TĂNG &nbsp;|&nbsp; Trong nhóm A GIẢM',
-            desc: 'Độ âm điện đặc trưng cho khả năng hút electron của nguyên tử khi hình thành liên kết hóa học. Kim loại mạnh nhất là Cesium (Cs) hoặc Francium (Fr); phi kim mạnh nhất là Fluorine (F).',
-            traps: 'Tính acid của oxide và hydroxide biến đổi CÙNG CHIỀU với tính phi kim; tính base biến đổi CÙNG CHIỀU với tính kim loại.'
+            name: 'Bảng biến đổi tuần hoàn các tính chất hóa học',
+            formula: '★ TRONG 1 CHU KÌ (Từ trái &rarr; phải, Z tăng):<br>  • Bán kính nguyên tử (R): GIẢM (lực hút tĩnh điện hạt nhân tăng)<br>  • Độ âm điện (&chi;): TĂNG (Fluorine lớn nhất: &chi; = 3,98)<br>  • Năng lượng ion hóa thứ nhất (I₁): TĂNG<br>  • Tính kim loại: GIẢM &nbsp;|&nbsp; Tính phi kim: TĂNG<br>  • Tính base của oxide và hydroxide: GIẢM<br>  • Tính acid của oxide và hydroxide: TĂNG<br><br>★ TRONG 1 NHÓM A (Từ trên &darr; dưới, Z tăng):<br>  • Bán kính nguyên tử (R): TĂNG (số lớp electron tăng)<br>  • Độ âm điện (&chi;): GIẢM &nbsp;|&nbsp; Năng lượng ion hóa (I₁): GIẢM<br>  • Tính kim loại: TĂNG (Cs, Fr kim loại mạnh nhất) &nbsp;|&nbsp; Tính phi kim: GIẢM (F phi kim mạnh nhất)<br>  • Tính base của oxide và hydroxide: TĂNG &nbsp;|&nbsp; Tính acid: GIẢM',
+            desc: 'Định luật tuần hoàn: Tính chất của các nguyên tố và đơn chất, cũng như thành phần và tính chất của các hợp chất tạo nên từ các nguyên tố đó biến đổi tuần hoàn theo chiều tăng của điện tích hạt nhân nguyên tử.',
+            traps: 'Tính acid biến đổi CÙNG CHIỀU với tính phi kim; tính base biến đổi CÙNG CHIỀU với tính kim loại. Nhớ chuỗi hydroxide chu kì 3: NaOH (base mạnh) &rarr; Mg(OH)₂ (base yếu) &rarr; Al(OH)₃ (lưỡng tính) &rarr; H₂SiO₃ (acid rất yếu) &rarr; H₃PO₄ (acid trung bình) &rarr; H₂SO₄ (acid mạnh) &rarr; HClO₄ (acid rất mạnh).'
           },
           {
-            name: 'Hóa trị cao nhất với Oxygen và Hydrogen',
-            formula: '• Hóa trị cao nhất với O = Số thứ tự nhóm A (hợp chất R<sub>2</sub>O<sub>n</sub>, n từ 1 &rarr; 7)<br>• Hóa trị trong hợp chất khí với H = 8 - n (với phi kim nhóm IVA &rarr; VIIA, RH<sub>8-n</sub>)<br>• Tổng hóa trị với O và với H của phi kim luôn bằng 8: n + (8 - n) = 8',
-            desc: 'Ví dụ: Nguyên tố nhóm VIA (như Sulfur S) có oxide cao nhất là SO<sub>3</sub> (hóa trị VI) và hợp chất khí với hydrogen là H<sub>2</sub>S (hóa trị II = 8 - 6).',
-            traps: 'Kim loại nhóm IA, IIA, IIIA không tạo hợp chất khí với hydrogen.'
-          }
-        ]
-      },
-      {
-        title: 'Chương 4: Liên kết hóa học & Tương tác phân tử',
-        badge: 'Cấu trúc phân tử',
-        items: [
-          {
-            name: 'Quy tắc bát tử (Octet Rule)',
-            formula: 'Nguyên tử có xu hướng đạt 8 electron lớp ngoài cùng bền vững (như khí hiếm, trừ He có 2e)',
-            desc: 'Để đạt cấu hình octet, nguyên tử kim loại có xu hướng nhường e (tạo cation), nguyên tử phi kim có xu hướng nhận e (tạo anion) hoặc các nguyên tử phi kim góp chung e.',
-            traps: 'Một số ngoại lệ của quy tắc octet: BF<sub>3</sub> (B chỉ có 6e xung quanh), PCl<sub>5</sub> (P có 10e), SF<sub>6</sub> (S có 12e).'
-          },
-          {
-            name: 'Phân loại liên kết: Ion vs Cộng hóa trị theo Hiệu độ âm điện (&Delta;&chi;)',
-            formula: '&Delta;&chi; = |&chi;<sub>A</sub> - &chi;<sub>B</sub>|<br>• 0 &le; &Delta;&chi; &lt; 0,4: Liên kết cộng hóa trị KHÔNG phân cực (H<sub>2</sub>, O<sub>2</sub>, N<sub>2</sub>, CH<sub>4</sub>)<br>• 0,4 &le; &Delta;&chi; &lt; 1,7: Liên kết cộng hóa trị CÓ phân cực (HCl, H<sub>2</sub>O, NH<sub>3</sub>)<br>• &Delta;&chi; &ge; 1,7: Liên kết ION (NaCl, KBr, CaO, BaCl<sub>2</sub>)',
-            desc: 'Liên kết ion được hình thành do lực hút tĩnh điện giữa các ion mang điện tích trái dấu. Liên kết cộng hóa trị được hình thành do các cặp electron dùng chung.<br>Liên kết đơn: gồm 1 liên kết &sigma;. Liên kết đôi: gồm 1 liên kết &sigma; và 1 liên kết &pi;. Liên kết ba: gồm 1 liên kết &sigma; và 2 liên kết &pi;.',
-            traps: 'Ngoại lệ: AlCl<sub>3</sub> có &Delta;&chi; = 1,55 &lt; 1,7 nhưng là liên kết cộng hóa trị có cực; HF có &Delta;&chi; = 1,78 &ge; 1,7 nhưng là liên kết cộng hóa trị phân cực mạnh.'
-          },
-          {
-            name: 'Liên kết Hydrogen & Tương tác van der Waals',
-            formula: 'Liên kết Hydrogen: ...X - H ... Y... &nbsp;(với X, Y là F, O, N có độ âm điện lớn)',
-            desc: 'Liên kết hydrogen là liên kết tĩnh điện yếu giữa nguyên tử H linh động (gắn với F, O, N) với nguyên tử F, O, N khác có cặp electron tự do.<br>Hệ quả quan trọng: Làm tăng đáng kể nhiệt độ sôi, nhiệt độ nóng chảy và tính tan trong nước của các chất (ví dụ H<sub>2</sub>O sôi ở 100°C trong khi H<sub>2</sub>S sôi ở -60°C; ethanol C<sub>2</sub>H<sub>5</sub>OH tan vô hạn trong nước).',
-            traps: 'Chỉ các nguyên tử F, O, N có độ âm điện rất lớn mới tạo được liên kết hydrogen liên phân tử rõ rệt.'
-          }
-        ]
-      },
-      {
-        title: 'Chương 5: Phản ứng Oxi hóa - Khử & Cân bằng electron',
-        badge: 'Phản ứng hóa học',
-        items: [
-          {
-            name: 'Số oxi hóa & Khẩu quyết Oxi hóa - Khử',
-            formula: 'Khẩu quyết: "KHỬ CHO - O NHẬN" &nbsp;·&nbsp; "KHỬ TĂNG - O GIẢM"<br>• Chất khử (chất bị oxi hóa): nhường electron, số oxi hóa TĂNG sau phản ứng<br>• Chất oxi hóa (chất bị khử): nhận electron, số oxi hóa GIẢM sau phản ứng',
-            desc: 'Quy tắc xác định số oxi hóa:<br>1) Đơn chất bằng 0 (Cu, O<sub>2</sub>, Fe...).<br>2) Trong hợp chất: H thường là +1 (trừ hiđrua kim loại NaH là -1); O thường là -2 (trừ peoxit H<sub>2</sub>O<sub>2</sub> là -1, OF<sub>2</sub> là +2); Kim loại kiềm luôn là +1, kiềm thổ +2, Al +3.<br>3) Tổng số oxi hóa trong phân tử bằng 0; trong ion đa nguyên tử bằng điện tích của ion.',
-            traps: 'Nhầm lẫn giữa "chất khử" với "quá trình khử": Quá trình khử là quá trình NHẬN electron của chất oxi hóa.'
-          },
-          {
-            name: 'Phương pháp thăng bằng electron (4 bước chuẩn)',
-            formula: 'Tổng số electron nhường = Tổng số electron nhận: &sum;e<sub>nhường</sub> = &sum;e<sub>nhận</sub>',
-            desc: 'Bước 1: Xác định số oxi hóa của các nguyên tố có sự thay đổi.<br>Bước 2: Viết quá trình oxi hóa (nhường e) và quá trình khử (nhận e).<br>Bước 3: Tìm hệ số nhân sao cho tổng số e nhường bằng tổng số e nhận.<br>Bước 4: Đặt hệ số vào phương trình và kiểm tra theo thứ tự: Kim loại &rarr; Phi kim &rarr; Hydrogen &rarr; Oxygen.',
-            traps: 'Sau khi cân bằng xong, luôn đếm lại số nguyên tử Oxygen ở hai vế để kiểm tra tính chính xác của phương trình.'
+            name: 'Hóa trị cao nhất với Oxygen & Hợp chất khí với Hydrogen',
+            formula: '• Hóa trị cao nhất với Oxygen = Số thứ tự nhóm A (tạo oxide cao nhất R₂Oₙ, n từ 1 &rarr; 7)<br>• Hóa trị trong hợp chất khí với Hydrogen = 8 - n (đối với phi kim nhóm IVA &rarr; VIIA, tạo RH₈₋ₙ)<br>★ CÔNG THỨC VÀNG: Tổng hóa trị với O và với H của phi kim luôn bằng 8:<br>  Hóa trị với O + Hóa trị với H = n + (8 - n) = 8',
+            desc: 'Ví dụ: Nguyên tố phi kim nhóm VIA (như Sulfur S) có hóa trị cao nhất với O là VI (tạo oxide cao nhất SO₃), và hóa trị trong hợp chất khí với H là 8 - 6 = II (tạo hợp chất khí H₂S). Khi biết tỉ lệ % khối lượng của R trong oxide cao nhất hoặc hợp chất khí, ta lập phương trình giải ra nguyên tử khối của R.',
+            traps: 'Kim loại nhóm IA, IIA, IIIA KHÔNG tạo hợp chất khí với hydrogen. Công thức 8 - n chỉ áp dụng cho phi kim từ nhóm IVA đến VIIA.'
           }
         ]
       }
@@ -302,142 +230,165 @@ function renderHandbook(selectedSubject, filterQuery) {
     ? ['math', 'physics', 'chemistry']
     : [activeSubject];
 
-  let matchesCount = 0;
+  let totalItemsCount = 0;
+  let matchingItemsCount = 0;
 
   const contentHtml = subjectsToRender.map(subjKey => {
     const subj = handbookData[subjKey];
-    const filteredSections = subj.sections.map(sec => {
+    if (!subj) return '';
+
+    const matchingSections = subj.sections.map(sec => {
       const filteredItems = sec.items.filter(item => {
-        if (!query) return true;
-        return item.name.toLowerCase().includes(query) ||
-          item.formula.toLowerCase().includes(query) ||
-          item.desc.toLowerCase().includes(query) ||
-          (item.traps && item.traps.toLowerCase().includes(query));
+        totalItemsCount++;
+        if (!query) {
+          matchingItemsCount++;
+          return true;
+        }
+        const match = item.name.toLowerCase().includes(query) ||
+                      item.formula.toLowerCase().includes(query) ||
+                      item.desc.toLowerCase().includes(query) ||
+                      (item.traps && item.traps.toLowerCase().includes(query)) ||
+                      sec.title.toLowerCase().includes(query);
+        if (match) matchingItemsCount++;
+        return match;
       });
-      return { ...sec, items: filteredItems };
-    }).filter(sec => sec.items.length > 0);
 
-    if (filteredSections.length === 0) return '';
+      if (filteredItems.length === 0) return '';
 
-    matchesCount += filteredSections.reduce((acc, s) => acc + s.items.length, 0);
+      const itemsHtml = filteredItems.map(item => `
+        <div class="handbook-item-card">
+          <div class="handbook-item-title">${item.name}</div>
+          <div class="formula-box">${item.formula}</div>
+          <div class="handbook-item-desc">${item.desc}</div>
+          ${item.traps ? `
+            <div class="trap-box">
+              <span class="trap-title">⚠️ BẪY ĐỀ THI & MẸO NHỚ NHANH</span>
+              <p>${item.traps}</p>
+            </div>
+          ` : ''}
+        </div>
+      `).join('');
+
+      return `
+        <div class="handbook-chapter-card">
+          <div class="handbook-chapter-head">
+            <h3>${sec.title}</h3>
+            <span class="badge" style="background:${subj.bg};color:${subj.color}">${sec.badge}</span>
+          </div>
+          <div class="handbook-grid">
+            ${itemsHtml}
+          </div>
+        </div>
+      `;
+    }).filter(Boolean).join('');
+
+    if (!matchingSections) return '';
 
     return `
-      <section class="handbook-subject-block" id="sec-${subj.id}">
-        <div class="handbook-subject-header" style="border-left: 5px solid ${subj.color};">
-          <div style="display:flex;align-items:center;gap:12px;">
-            <span class="subject-icon" style="background:${subj.bg};color:${subj.color};width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:20px;">${subj.icon}</span>
+      <div class="handbook-subject-block" id="hb-${subj.id}">
+        <div class="handbook-subject-header" style="border-left: 5px solid ${subj.color}">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:26px">${subj.icon}</span>
             <div>
-              <h2 style="margin:0;font-size:20px;color:#0f172a;">${subj.name}</h2>
-              <p style="margin:2px 0 0;font-size:12px;color:#64748b;">Tổng hợp toàn bộ công thức & lý thuyết trọng tâm Giữa kì I & Học kì I</p>
+              <h2 style="margin:0;font-size:20px;color:#0f172a">${subj.name}</h2>
+              <span style="font-size:12.5px;color:#64748b">Trọng tâm kiến thức chuẩn tiến độ thi</span>
             </div>
           </div>
-          <button class="secondary handbook-jump-btn" data-subjectto="${subj.id === 'math' ? 0 : subj.id === 'physics' ? 1 : 5}" style="font-size:12px;padding:7px 15px;white-space:nowrap;">Luyện đề môn này →</button>
+          <div class="handbook-actions">
+            <button class="btn btn-outline btn-sm handbook-jump-btn" onclick="document.getElementById('hb-${subj.id}').scrollIntoView({behavior:'smooth'})">
+              Lên đầu mục
+            </button>
+          </div>
         </div>
-
-        ${filteredSections.map((sec, secIdx) => `
-          <div class="handbook-chapter-card">
-            <div class="handbook-chapter-head">
-              <h3>${sec.title}</h3>
-              <span class="review-part-tag">${sec.badge}</span>
-            </div>
-
-            <div class="handbook-grid">
-              ${sec.items.map(item => `
-                <div class="handbook-item-card">
-                  <div class="handbook-item-title">${item.name}</div>
-                  <div class="formula-box">
-                    <code>${item.formula}</code>
-                  </div>
-                  <div class="handbook-item-desc">${item.desc}</div>
-                  ${item.traps ? `
-                    <div class="trap-box">
-                      <span class="trap-title">⚠️ BẪY ĐỀ THI & LỖI SAI CẦN TRÁNH:</span>
-                      <p>${item.traps}</p>
-                    </div>
-                  ` : ''}
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        `).join('')}
-      </section>
+        ${matchingSections}
+      </div>
     `;
-  }).join('');
+  }).filter(Boolean).join('');
+
+  const app = document.getElementById('app');
+  if (!app) return;
 
   app.innerHTML = `
-    <div class="content handbook-container">
+    <div class="handbook-container">
       <div class="handbook-hero">
-        <div class="handbook-hero-text">
-          <span class="eyebrow">📖 TÀI LIỆU ÔN TẬP TOÀN DIỆN</span>
-          <h1>Sổ tay Công thức & Lý thuyết Trọng tâm (Lớp 10)</h1>
-          <p>Hệ thống hóa toàn bộ kiến thức cốt lõi, công thức định lượng, đồ thị và các bẫy đề thi hay gặp trong môn Toán 10, Vật lí 10 và Hóa học 10 (Chuẩn GDPT 2018 Kết nối tri thức · Cánh Diều · Chân trời sáng tạo).</p>
+        <div>
+          <span class="eyebrow" style="background:rgba(255,255,255,0.15);color:#fff">HỌC TẬP SPACE · SỔ TAY THI GIỮA KÌ</span>
+          <h1 style="font-size:clamp(22px, 2.5vw, 32px)">Sổ tay Công thức & Lý thuyết Trọng tâm (Lớp 10)</h1>
+          <p>Hệ thống toàn bộ định nghĩa, công thức cốt lõi, quy tắc giải nhanh và các bẫy đề thi hay gặp bám sát chuẩn kiến thức hiện tại.</p>
         </div>
-        <div class="handbook-actions">
-          <button class="primary" id="btn-print-handbook" style="display:flex;align-items:center;gap:8px;">
-            <span>🖨️</span> In / Tải PDF
+        <div style="text-align:right">
+          <button class="btn btn-secondary" onclick="window.print()" style="white-space:nowrap;background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.3)">
+            🖨️ In / Tải PDF
           </button>
         </div>
       </div>
 
       <div class="handbook-toolbar">
         <div class="handbook-tabs">
-          <button class="filter ${activeSubject === 'all' ? 'active' : ''}" data-handbook-tab="all">Tất cả các môn</button>
-          <button class="filter ${activeSubject === 'math' ? 'active' : ''}" data-handbook-tab="math">∑ Toán 10</button>
-          <button class="filter ${activeSubject === 'physics' ? 'active' : ''}" data-handbook-tab="physics">⚛️ Vật lý 10</button>
-          <button class="filter ${activeSubject === 'chemistry' ? 'active' : ''}" data-handbook-tab="chemistry">🧪 Hóa học 10</button>
+          <button class="btn ${activeSubject === 'all' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('all', '${query}')">
+            Tất cả môn
+          </button>
+          <button class="btn ${activeSubject === 'math' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('math', '${query}')">
+            📐 Toán 10
+          </button>
+          <button class="btn ${activeSubject === 'physics' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('physics', '${query}')">
+            ⚛️ Vật lý 10
+          </button>
+          <button class="btn ${activeSubject === 'chemistry' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('chemistry', '${query}')">
+            🧪 Hóa học 10
+          </button>
         </div>
+
         <div class="handbook-search-wrap">
-          <input type="text" id="handbook-search-input" class="handbook-search-input" placeholder="🔍 Tra nhanh công thức (ví dụ: Heron, Vectơ, Ném ngang, Newton, Octet, Oxi hóa)..." value="${esc(query)}">
+          <input
+            type="text"
+            class="handbook-search-input"
+            id="handbookSearchInput"
+            placeholder="🔍 Tìm nhanh công thức (Heron, cos, sai số, rơi tự do, orbital, chu kì...)"
+            value="${query}"
+            oninput="renderHandbook('${activeSubject}', this.value)"
+          />
         </div>
       </div>
 
-      <div class="handbook-body">
-        ${contentHtml ? contentHtml : `
-          <div class="notice" style="margin-top:30px;">
-            <b>Không tìm thấy công thức phù hợp</b>
-            <p>Không có kết quả nào khớp với từ khóa "<b>${esc(query)}</b>". Hãy thử tìm bằng từ khóa khác hoặc bấm nút xóa ô tìm kiếm.</p>
+      <div class="handbook-content-area">
+        ${contentHtml || `
+          <div style="text-align:center;padding:60px 20px;background:#fff;border-radius:14px;border:1px solid var(--line)">
+            <span style="font-size:42px">🔍</span>
+            <h3 style="margin:16px 0 8px;font-size:18px">Không tìm thấy công thức phù hợp</h3>
+            <p style="color:var(--muted);font-size:13px;max-width:400px;margin:auto">
+              Không có kết quả nào khớp với từ khóa "<strong>${query}</strong>". Bạn hãy thử tìm bằng từ khóa khác hoặc xóa ô tìm kiếm.
+            </p>
+            <button class="btn btn-outline btn-sm" style="margin-top:16px" onclick="renderHandbook('${activeSubject}', '')">
+              Xóa tìm kiếm
+            </button>
           </div>
         `}
       </div>
 
       <div class="handbook-footer-cta">
-        <div style="max-width:600px;">
-          <h3 style="margin:0 0 6px;color:#0f172a;font-size:18px;">Bạn đã nắm vững lý thuyết và công thức?</h3>
-          <p style="margin:0;font-size:13px;color:#64748b;">Hãy thử sức ngay với 32 bộ đề thi chuẩn có đồng hồ đếm giờ, chấm điểm tự động và lời giải chi tiết từng bước.</p>
+        <div>
+          <strong style="display:block;font-size:16px;color:#166534">Đã nắm vững lý thuyết và công thức?</strong>
+          <span style="font-size:13px;color:#15803d">Hãy thực hành ngay các bộ đề kiểm tra để làm quen với dạng đề và kiểm tra năng lực!</span>
         </div>
-        <button class="primary" data-viewto="subjects" style="padding:12px 24px;">Bắt đầu luyện đề ngay →</button>
+        <a href="#subjects" class="btn btn-primary" style="white-space:nowrap;background:#16a34a;border-color:#16a34a">
+          Vào phòng thi thử ngay &rarr;
+        </a>
       </div>
     </div>
   `;
 
-  setNav('handbook');
-  window.scrollTo(0, 0);
-
-  // Gắn sự kiện ô tìm kiếm
-  const searchInput = document.getElementById('handbook-search-input');
-  if (searchInput) {
-    searchInput.focus();
-    searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
-    searchInput.addEventListener('input', e => {
-      renderHandbook(activeSubject, e.target.value);
-    });
+  // Giữ focus cho ô input nếu người dùng đang gõ tìm kiếm
+  if (query) {
+    const input = document.getElementById('handbookSearchInput');
+    if (input) {
+      input.focus();
+      input.setSelectionRange(input.value.length, input.value.length);
+    }
   }
 
-  // Gắn sự kiện in sổ tay
-  const printBtn = document.getElementById('btn-print-handbook');
-  if (printBtn) {
-    printBtn.addEventListener('click', () => {
-      window.print();
-    });
+  const crumb = document.getElementById('crumb');
+  if (crumb) {
+    crumb.textContent = 'SỔ TAY CÔNG THỨC & LÝ THUYẾT';
   }
 }
-
-// Lắng nghe sự kiện chuyển tab trong sổ tay
-document.addEventListener('click', event => {
-  const tabBtn = event.target.closest('[data-handbook-tab]');
-  if (tabBtn) {
-    const tabKey = tabBtn.dataset.handbookTab;
-    location.hash = tabKey === 'all' ? '#handbook' : `#handbook-${tabKey}`;
-    renderHandbook(tabKey);
-  }
-});
