@@ -1,5 +1,5 @@
 // Danh sách 39 bộ đề thi chính thức chuẩn cấu trúc ma trận mới 2026–2027
-// 13 đề Toán học (bao gồm Đề 13 chính thức THPT Đông Hà có đủ Tự luận), 10 đề Vật lí, 16 đề Hóa học
+// 13 đề Toán học, 10 đề Vật lí, 16 đề Hóa học
 // Bám sát chương trình GDPT 2018, mức độ phổ thông, có đầy đủ hướng dẫn giải chi tiết
 const suppliedExams = [
   {
@@ -2899,15 +2899,15 @@ const suppliedExams = [
         "Đường thẳng d cắt trục hoành tại điểm (2; 0) và cắt trục tung tại điểm (0; -1).<br>Phương trình đoạn chắn của đường thẳng d: x/2 + y/(-1) = 1 &hArr; x - 2y = 2.<br>Gốc tọa độ O(0; 0) nằm trong miền không bị gạch chéo. Thay O(0; 0) vào biểu thức: 0 - 2(0) = 0 &le; 2 (thỏa mãn).<br>Do miền nghiệm kể cả bờ d nên bất phương trình tương ứng là x - 2y &le; 2."
       ],
       [
-        "Mệnh đề phủ định của mệnh đề \"&exist; x &isin; <b>R</b>, 2x - 1 < 0\" là:",
+        "Mệnh đề phủ định của mệnh đề \"&exist; x &isin; ℝ, 2x - 1 < 0\" là:",
         [
-          "A. \"&forall; x &isin; <b>R</b>, 2x - 1 &ge; 0\"",
-          "B. \"&forall; x &isin; <b>R</b>, 2x - 1 < 0\"",
-          "C. \"&forall; x &isin; <b>R</b>, 2x - 1 &le; 0\"",
-          "D. \"&exist; x &isin; <b>R</b>, 2x - 1 &ge; 0\""
+          "A. \"&forall; x &isin; ℝ, 2x - 1 &ge; 0\"",
+          "B. \"&forall; x &isin; ℝ, 2x - 1 < 0\"",
+          "C. \"&forall; x &isin; ℝ, 2x - 1 &le; 0\"",
+          "D. \"&exist; x &isin; ℝ, 2x - 1 &ge; 0\""
         ],
         0,
-        "Phủ định của lượng từ &exist; là &forall;, phủ định của quan hệ nhỏ hơn (<) là lớn hơn hoặc bằng (&ge;).<br>Do đó mệnh đề phủ định là \"&forall; x &isin; <b>R</b>, 2x - 1 &ge; 0\"."
+        "Phủ định của lượng từ &exist; là &forall;, phủ định của quan hệ nhỏ hơn (<) là lớn hơn hoặc bằng (&ge;).<br>Do đó mệnh đề phủ định là \"&forall; x &isin; ℝ, 2x - 1 &ge; 0\"."
       ],
       [
         "Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
@@ -2954,7 +2954,7 @@ const suppliedExams = [
         "Mệnh đề là một câu khẳng định có tính đúng hoặc sai rõ ràng:<br>• (1) là câu khẳng định đúng &rArr; là mệnh đề.<br>• (2) là câu hỏi &rArr; không phải mệnh đề.<br>• (3) là câu cầu khiến/ra lệnh &rArr; không phải mệnh đề.<br>• (4) là khẳng định toán học đúng &rArr; là mệnh đề.<br>Vậy có tất cả 2 câu là mệnh đề (gồm (1) và (4))."
       ],
       [
-        "Cho tập hợp A = {x &isin; <b>R</b> | -3 < x &le; 10}. Khẳng định nào sau đây là đúng?",
+        "Cho tập hợp A = {x &isin; ℝ | -3 < x &le; 10}. Khẳng định nào sau đây là đúng?",
         [
           "A. A = [-3; 10)",
           "B. A = (-3; 10)",
@@ -2967,17 +2967,17 @@ const suppliedExams = [
     ],
     "tf": [
       {
-        "stem": "Cho các tập hợp A = (-5; 4], B = {x &isin; <b>R</b> | x + 2 > 3}, C = {x &isin; <b>N</b> | x<sup>2</sup> + 6x = 0}.",
+        "stem": "Cho các tập hợp A = (-5; 4], B = {x &isin; ℝ | x + 2 > 3}, C = {x &isin; ℕ | x<sup>2</sup> + 6x = 0}.",
         "items": [
           [
             "a) Phương trình x<sup>2</sup> + 6x = 0 có hai nghiệm thực phân biệt.",
             true,
-            "Phương trình x<sup>2</sup> + 6x = 0 &hArr; x(x + 6) = 0 &hArr; x = 0 hoặc x = -6. Cả hai nghiệm đều thuộc <b>R</b> và phân biệt. Khẳng định ĐÚNG."
+            "Phương trình x<sup>2</sup> + 6x = 0 &hArr; x(x + 6) = 0 &hArr; x = 0 hoặc x = -6. Cả hai nghiệm đều thuộc ℝ và phân biệt. Khẳng định ĐÚNG."
           ],
           [
             "b) C = {0; -6}.",
             false,
-            "Vì x &isin; <b>N</b> (tập số tự nhiên) nên giá trị -6 bị loại, do đó C chỉ chứa phần tử 0, tức là C = {0}. Khẳng định C = {0; -6} là SAI."
+            "Vì x &isin; ℕ (tập số tự nhiên) nên giá trị -6 bị loại, do đó C chỉ chứa phần tử 0, tức là C = {0}. Khẳng định C = {0; -6} là SAI."
           ],
           [
             "c) B = (1; +&infin;).",
@@ -3047,7 +3047,7 @@ const suppliedExams = [
       {
         "title": "Câu 1 (0,5 điểm).",
         "question": "Xét tính đúng sai của mệnh đề sau và lập mệnh đề phủ định của nó:<br>P: \"Có ít nhất một số thực x thỏa mãn x<sup>2</sup> - 3x + 2 = 0\".",
-        "solution": "• Mệnh đề P viết dưới dạng kí hiệu là: \"&exist; x &isin; <b>R</b> : x<sup>2</sup> - 3x + 2 = 0\".<br>• Giải phương trình: x<sup>2</sup> - 3x + 2 = 0 &hArr; (x - 1)(x - 2) = 0 &hArr; x = 1 hoặc x = 2.<br>Vì 1 &isin; <b>R</b> và 2 &isin; <b>R</b> nên tồn tại số thực thỏa mãn phương trình. Vậy P là <b>MỆNH ĐỀ ĐÚNG</b> (0,25 điểm).<br>• Mệnh đề phủ định của P là P̄: \"Mọi số thực x đều không thỏa mãn x<sup>2</sup> - 3x + 2 = 0\" hay kí hiệu là: \"&forall; x &isin; <b>R</b>, x<sup>2</sup> - 3x + 2 &ne; 0\" (0,25 điểm)."
+        "solution": "• Mệnh đề P viết dưới dạng kí hiệu là: \"&exist; x &isin; ℝ : x<sup>2</sup> - 3x + 2 = 0\".<br>• Giải phương trình: x<sup>2</sup> - 3x + 2 = 0 &hArr; (x - 1)(x - 2) = 0 &hArr; x = 1 hoặc x = 2.<br>Vì 1 &isin; ℝ và 2 &isin; ℝ nên tồn tại số thực thỏa mãn phương trình. Vậy P là <b>MỆNH ĐỀ ĐÚNG</b> (0,25 điểm).<br>• Mệnh đề phủ định của P là P̄: \"Mọi số thực x đều không thỏa mãn x<sup>2</sup> - 3x + 2 = 0\" hay kí hiệu là: \"&forall; x &isin; ℝ, x<sup>2</sup> - 3x + 2 &ne; 0\" (0,25 điểm)."
       },
       {
         "title": "Câu 2 (0,5 điểm).",
@@ -3067,7 +3067,7 @@ const suppliedExams = [
       {
         "title": "Câu 5 (0,5 điểm).",
         "question": "Một nhà hàng cần tuyển nhân viên phục vụ làm việc theo hai ca: ca I làm việc 8 tiếng/ngày với mức lương 20 nghìn đồng/giờ; ca II làm việc 8 tiếng/ngày với mức lương 22 nghìn đồng/giờ. Do yêu cầu công việc, mỗi ngày cần tuyển ít nhất 3 nhân viên ca I, không quá 10 nhân viên ca II, số nhân viên ca II phải ít nhất gấp 2 lần số nhân viên ca I, và tổng số nhân viên cả hai ca không ít hơn 12 người. Hãy xác định số nhân viên cần tuyển ở mỗi ca để chi phí trả lương hàng ngày là nhỏ nhất?",
-        "solution": "• Gọi x và y (x, y &isin; <b>N</b>) lần lượt là số nhân viên cần tuyển cho ca I và ca II trong một ngày.<br>• Tiền lương 1 ngày của nhân viên ca I: 8 &times; 20 = 160 (nghìn đồng).<br>• Tiền lương 1 ngày của nhân viên ca II: 8 &times; 22 = 176 (nghìn đồng).<br>• Tổng chi phí trả lương hàng ngày là: T(x, y) = 160x + 176y (nghìn đồng).<br>• Hệ điều kiện ràng buộc:<br>{ x &ge; 3 ; y &le; 10 ; y &ge; 2x ; x + y &ge; 12 } (0,15 điểm).<br>• Miền nghiệm của hệ là miền tứ giác ABCD với 4 đỉnh:<br>- A là giao của x = 3 và x + y = 12 &rArr; A(3; 9).<br>- B là giao của x = 3 và y = 10 &rArr; B(3; 10).<br>- C là giao của y = 10 và y = 2x &rArr; C(5; 10).<br>- D là giao của y = 2x và x + y = 12 &rArr; 3x = 12 &rArr; x = 4, y = 8 &rArr; D(4; 8) (0,15 điểm).<br>• Tính giá trị chi phí trả lương T(x, y) tại 4 đỉnh:<br>- T(A) = 160(3) + 176(9) = 480 + 1584 = 2064 (nghìn đồng).<br>- T(B) = 160(3) + 176(10) = 480 + 1760 = 2240 (nghìn đồng).<br>- T(C) = 160(5) + 176(10) = 800 + 1760 = 2560 (nghìn đồng).<br>- T(D) = 160(4) + 176(8) = 640 + 1408 = 2048 (nghìn đồng) (0,1 điểm).<br>• Chi phí thấp nhất là 2048 nghìn đồng (tức 2.048.000 đồng) khi x = 4 và y = 8.<br>Kết luận: Nhà hàng cần tuyển <b>4 nhân viên ca I</b> và <b>8 nhân viên ca II</b> để chi phí trả lương hàng ngày là nhỏ nhất (0,1 điểm)."
+        "solution": "• Gọi x và y (x, y &isin; ℕ) lần lượt là số nhân viên cần tuyển cho ca I và ca II trong một ngày.<br>• Tiền lương 1 ngày của nhân viên ca I: 8 &times; 20 = 160 (nghìn đồng).<br>• Tiền lương 1 ngày của nhân viên ca II: 8 &times; 22 = 176 (nghìn đồng).<br>• Tổng chi phí trả lương hàng ngày là: T(x, y) = 160x + 176y (nghìn đồng).<br>• Hệ điều kiện ràng buộc:<br>{ x &ge; 3 ; y &le; 10 ; y &ge; 2x ; x + y &ge; 12 } (0,15 điểm).<br>• Miền nghiệm của hệ là miền tứ giác ABCD với 4 đỉnh:<br>- A là giao của x = 3 và x + y = 12 &rArr; A(3; 9).<br>- B là giao của x = 3 và y = 10 &rArr; B(3; 10).<br>- C là giao của y = 10 và y = 2x &rArr; C(5; 10).<br>- D là giao của y = 2x và x + y = 12 &rArr; 3x = 12 &rArr; x = 4, y = 8 &rArr; D(4; 8) (0,15 điểm).<br>• Tính giá trị chi phí trả lương T(x, y) tại 4 đỉnh:<br>- T(A) = 160(3) + 176(9) = 480 + 1584 = 2064 (nghìn đồng).<br>- T(B) = 160(3) + 176(10) = 480 + 1760 = 2240 (nghìn đồng).<br>- T(C) = 160(5) + 176(10) = 800 + 1760 = 2560 (nghìn đồng).<br>- T(D) = 160(4) + 176(8) = 640 + 1408 = 2048 (nghìn đồng) (0,1 điểm).<br>• Chi phí thấp nhất là 2048 nghìn đồng (tức 2.048.000 đồng) khi x = 4 và y = 8.<br>Kết luận: Nhà hàng cần tuyển <b>4 nhân viên ca I</b> và <b>8 nhân viên ca II</b> để chi phí trả lương hàng ngày là nhỏ nhất (0,1 điểm)."
       },
       {
         "title": "Câu 6 (0,5 điểm).",

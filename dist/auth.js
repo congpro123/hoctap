@@ -1562,7 +1562,7 @@
               <div class="review-q-text"><b>${escapeHtml(essay.title || `Câu ${i + 1}.`)}</b> ${essay.question}</div>
               <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
                 <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của học sinh:</div>
-                <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? escapeHtml(userWork) : '<span style="color:#94a3b8;font-style:italic;">(Học sinh chưa điền phần bài làm/ghi chú)</span>'}</div>
+                <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? escapeHtml(userWork) : '<span style="color:#64748b;font-style:italic;">(Học sinh làm bài ra giấy nháp / bỏ qua ô nhập trên máy)</span>'}</div>
               </div>
               <div class="solution-box theme-study">
                 <div class="solution-header">💡 HƯỚNG DẪN CHẤM & LỜI GIẢI CHI TIẾT:</div>

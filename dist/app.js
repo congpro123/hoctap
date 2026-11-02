@@ -439,15 +439,20 @@ function renderExam() {
         </div>`).join('')}
 
         ${(e.essay && e.essay.length > 0) ? `
-        <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu)</h2>
-        <p class="short-hint">Học sinh trình bày tóm tắt các bước giải hoặc ghi chú bài làm vào khung bên dưới. Đối chiếu lời giải chi tiết và barem điểm sau khi nộp bài.</p>
+        <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu · 3,0 điểm)</h2>
+        <div class="essay-guide-banner" style="background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0 16px;font-size:13.5px;color:#1e3a8a;line-height:1.55;">
+          📝 <b>Lưu ý phần tự luận:</b> Bạn có thể làm bài ra giấy nháp. Nếu <b>không muốn gõ lại bài làm lên máy, bạn có thể bỏ qua các ô bên dưới</b> và bấm <b>"Nộp bài thi"</b> bất cứ lúc nào. Khi nộp bài, hệ thống sẽ mở đầy đủ <b>Lời giải chi tiết và Barem điểm chấm từng bước</b> để bạn tự chấm điểm và đối chiếu.
+        </div>
         ${e.essay.map((q, i) => `<div class="question" id="essay-${i}">
-          <div class="q-title">
-            <span class="q-number">${esc(q.title || `Câu ${i + 1}.`)}</span>
-            <span>${q.question}</span>
+          <div class="q-title" style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+            <div>
+              <span class="q-number">${esc(q.title || `Câu ${i + 1}.`)}</span>
+              <span>${q.question}</span>
+            </div>
+            <span style="font-size:11px;font-weight:600;color:#64748b;background:#f1f5f9;padding:3px 8px;border-radius:6px;align-self:flex-start;">Tùy chọn ghi chú</span>
           </div>
-          <div class="essay-field" style="margin-top:12px;">
-            <textarea class="essay-input" data-kind="tl" data-index="${i}" rows="4" placeholder="Nhập tóm tắt lời giải hoặc ghi chú bài làm của bạn..." style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid #cbd5e1;border-radius:8px;font-family:inherit;font-size:14.5px;line-height:1.5;resize:vertical;background:#fafafa;">${esc(answers['tl' + i] ?? '')}</textarea>
+          <div class="essay-field" style="margin-top:10px;">
+            <textarea class="essay-input" data-kind="tl" data-index="${i}" rows="3" placeholder="Tùy chọn: Nhập nhanh lời giải hoặc ghi chú (hoặc bỏ trống nếu bạn đã làm ra nháp)..." style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-family:inherit;font-size:14px;line-height:1.5;resize:vertical;background:#fafafa;">${esc(answers['tl' + i] ?? '')}</textarea>
           </div>
         </div>`).join('')}
         ` : ''}
@@ -480,11 +485,22 @@ function renderExam() {
 
 function updateProgress() {
   if (!activeExam) return;
-  const n = Object.keys(answers).filter(k => answers[k] !== '' && answers[k] !== undefined).length;
+  const mcCount = (activeExam.questions || []).filter((_, i) => answers['m' + i] !== undefined).length;
+  let tfCount = 0;
+  (activeExam.tf || []).forEach((q, i) => {
+    (q.items || []).forEach((_, j) => {
+      if (answers['t' + i + '-' + j] !== undefined) tfCount++;
+    });
+  });
+  const shortCount = (activeExam.short || []).filter((_, i) => answers['s' + i] !== undefined && String(answers['s' + i]).trim() !== '').length;
+  const essayCount = (activeExam.essay || []).filter((_, i) => answers['tl' + i] !== undefined && String(answers['tl' + i]).trim() !== '').length;
+  const n = mcCount + tfCount + shortCount;
   const total = totalItems(activeExam);
   const progText = document.getElementById('progress-text');
   const progFill = document.getElementById('progress-fill');
-  if (progText) progText.textContent = `${n}/${total} ý đã hoàn thành`;
+  if (progText) {
+    progText.textContent = `${n}/${total} ý trắc nghiệm/điền số${essayCount > 0 ? ` · ${essayCount} câu TL có ghi chú` : ''}`;
+  }
   if (progFill) progFill.style.width = `${total > 0 ? (100 * n / total) : 0}%`;
   document.querySelectorAll('.q-jump[data-jump]').forEach((x, i) => {
     x.classList.toggle('done', answers['m' + i] !== undefined);
@@ -710,7 +726,7 @@ function renderResult(r) {
             <div class="review-q-text"><b>${esc(q.title || `Câu ${i + 1}.`)}</b> ${q.question}</div>
             <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
               <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của bạn:</div>
-              <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? esc(userWork) : '<span style="color:#94a3b8;font-style:italic;">(Chưa điền phần bài làm/ghi chú)</span>'}</div>
+              <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">(Bỏ qua ô nhập / làm ra giấy nháp — đối chiếu lời giải chi tiết và barem điểm chấm bên dưới)</span>'}</div>
             </div>
             <div class="solution-box theme-study">
               <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM:</div>
