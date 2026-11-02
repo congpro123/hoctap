@@ -112,6 +112,22 @@ if (rawData.length > 0) {
 
 const app = document.getElementById('app');
 let currentView = 'home', activeExam = null, answers = {}, deadline = 0, ticker = null;
+function tryRenderKatex(root) {
+  try {
+    if (typeof renderMathInElement === 'function' && root) {
+      renderMathInElement(root, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ],
+        throwOnError: false
+      });
+    }
+  } catch (err) {
+    console.warn('KaTeX render warning:', err);
+  }
+}
+
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const saved = () => { try { return JSON.parse(localStorage.getItem('hoctap-results') || '[]'); } catch { return []; } };
 const formatDate = d => {
@@ -187,6 +203,7 @@ function card(e) {
       <span>📋&nbsp; ${qCount} trắc nghiệm</span>
       <span>☑&nbsp; ${tfCount} đúng/sai</span>
       <span>✍&nbsp; ${shortCount} trả lời ngắn</span>
+      ${(e.essay && e.essay.length > 0) ? `<span>📝&nbsp; ${e.essay.length} tự luận</span>` : ''}
     </div>
     ${sourceLine(e)}
     <div class="card-bottom">
@@ -373,7 +390,7 @@ function renderExam() {
           <div>
             <span class="subject-pill" style="background:${sm.bg};color:${sm.color}">${sm.icon}&nbsp; PHÒNG THI ${sm.name}</span>
             <h1>${esc(e.title)}</h1>
-            <p>Phần I: ${qLen} trắc nghiệm (0,25đ/câu) · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)</p>
+            <p>Phần I: ${qLen} trắc nghiệm (0,25đ/câu) · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)${(e.essay && e.essay.length > 0) ? ` · Phần IV: ${e.essay.length} câu tự luận` : ''}</p>
           </div>
           <div class="timer" id="timer">--:--</div>
         </div>
@@ -420,6 +437,20 @@ function renderExam() {
             <span>${esc(q.unit || '')}</span>
           </div>
         </div>`).join('')}
+
+        ${(e.essay && e.essay.length > 0) ? `
+        <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu)</h2>
+        <p class="short-hint">Học sinh trình bày tóm tắt các bước giải hoặc ghi chú bài làm vào khung bên dưới. Đối chiếu lời giải chi tiết và barem điểm sau khi nộp bài.</p>
+        ${e.essay.map((q, i) => `<div class="question" id="essay-${i}">
+          <div class="q-title">
+            <span class="q-number">${esc(q.title || `Câu ${i + 1}.`)}</span>
+            <span>${q.question}</span>
+          </div>
+          <div class="essay-field" style="margin-top:12px;">
+            <textarea class="essay-input" data-kind="tl" data-index="${i}" rows="4" placeholder="Nhập tóm tắt lời giải hoặc ghi chú bài làm của bạn..." style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid #cbd5e1;border-radius:8px;font-family:inherit;font-size:14.5px;line-height:1.5;resize:vertical;background:#fafafa;">${esc(answers['tl' + i] ?? '')}</textarea>
+          </div>
+        </div>`).join('')}
+        ` : ''}
       </div>
 
       <aside class="exam-aside">
@@ -430,6 +461,12 @@ function renderExam() {
         <div class="q-grid">
           ${(e.questions || []).map((_, i) => `<button class="q-jump" data-jump="${i}">${i + 1}</button>`).join('')}
         </div>
+        ${(e.essay && e.essay.length > 0) ? `
+        <div class="aside-label" style="margin-top:12px;font-size:11px;color:#64748b;">TỰ LUẬN</div>
+        <div class="q-grid">
+          ${e.essay.map((_, i) => `<button class="q-jump essay-jump" data-jump-essay="${i}">TL${i + 1}</button>`).join('')}
+        </div>
+        ` : ''}
         <div class="aside-note">Tiến độ bài làm được lưu tự động trên máy. Khi hết thời gian đếm ngược, bài thi sẽ tự động được thu và chấm điểm.</div>
         <button class="primary submit" data-submit="1">Nộp bài thi</button>
       </aside>
@@ -438,6 +475,7 @@ function renderExam() {
   
   setNav('exam');
   updateProgress();
+  tryRenderKatex(app);
 }
 
 function updateProgress() {
@@ -448,8 +486,11 @@ function updateProgress() {
   const progFill = document.getElementById('progress-fill');
   if (progText) progText.textContent = `${n}/${total} ý đã hoàn thành`;
   if (progFill) progFill.style.width = `${total > 0 ? (100 * n / total) : 0}%`;
-  document.querySelectorAll('.q-jump').forEach((x, i) => {
+  document.querySelectorAll('.q-jump[data-jump]').forEach((x, i) => {
     x.classList.toggle('done', answers['m' + i] !== undefined);
+  });
+  document.querySelectorAll('.essay-jump').forEach((x, i) => {
+    x.classList.toggle('done', answers['tl' + i] !== undefined && String(answers['tl' + i]).trim() !== '');
   });
 }
 
@@ -656,10 +697,33 @@ function renderResult(r) {
             </div>
           </div>`;
         }).join('')}
+
+        ${(e.essay && e.essay.length > 0) ? `
+        <h3>Phần IV · Tự luận (${e.essay.length} câu)</h3>
+        ${e.essay.map((q, i) => {
+          const userWork = r.answers['tl' + i];
+          return `<div class="review-item">
+            <div class="review-item-header">
+              <span class="review-part-tag" style="background:#fef3c7;color:#92400e;">Phần IV · Tự luận</span>
+              <span class="review-item-number">${esc(q.title || `Câu ${i + 1}`)}</span>
+            </div>
+            <div class="review-q-text"><b>${esc(q.title || `Câu ${i + 1}.`)}</b> ${q.question}</div>
+            <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+              <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của bạn:</div>
+              <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? esc(userWork) : '<span style="color:#94a3b8;font-style:italic;">(Chưa điền phần bài làm/ghi chú)</span>'}</div>
+            </div>
+            <div class="solution-box theme-study">
+              <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM:</div>
+              <div class="solution-body">${q.solution || 'Áp dụng định lý và kiến thức SGK để trình bày lời giải.'}</div>
+            </div>
+          </div>`;
+        }).join('')}
+        ` : ''}
       </div>
     </div>
   </div>`;
   setNav('result');
+  tryRenderKatex(app);
 }
 
 // Lắng nghe sự kiện toàn cục
@@ -728,6 +792,10 @@ document.addEventListener('click', e => {
     const el = document.getElementById('q-' + b.dataset.jump);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+  else if (b.dataset.jumpEssay !== undefined) {
+    const el = document.getElementById('essay-' + b.dataset.jumpEssay);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
 });
 
 function handleExamInput(e) {
@@ -736,6 +804,7 @@ function handleExamInput(e) {
   if (t.dataset.kind === 'm') answers['m' + t.dataset.index] = Number(t.value);
   else if (t.dataset.kind === 't') answers['t' + t.dataset.index] = t.value === 'true';
   else if (t.dataset.kind === 's') answers['s' + t.dataset.index] = t.value;
+  else if (t.dataset.kind === 'tl') answers['tl' + t.dataset.index] = t.value;
   persistDraft();
   updateProgress();
 }

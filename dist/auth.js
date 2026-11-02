@@ -1103,7 +1103,7 @@
             </div>
             <div class="stat">
               <span class="stat-icon blue">📋</span>
-              <div><b>38</b><small>Bộ đề thi chuẩn 3 môn</small></div>
+              <div><b>${(typeof exams !== "undefined" && exams.length) ? exams.length : 39}</b><small>Bộ đề thi chuẩn 3 môn</small></div>
             </div>
           </section>
 
@@ -1172,7 +1172,7 @@
                             </div>
                           </td>
                           <td><span class="role-badge ${isAdm ? 'admin' : 'student'}">${roleLabel}</span></td>
-                          <td><b>${uResults.length}</b> / 38 đề</td>
+                          <td><b>${uResults.length}</b> / ${(typeof exams !== "undefined" && exams.length) ? exams.length : 39} đề</td>
                           <td><strong class="score-text-val">${uAvg}${uResults.length > 0 ? ' đ' : ''}</strong></td>
                           <td>${uResults.length > 0 ? `<span class="best-score-badge">🏅 ${best.toLocaleString('vi-VN')} đ</span>` : '—'}</td>
                           <td><small>${lastDate}</small></td>
@@ -1548,6 +1548,30 @@
           </div>
         `);
       });
+
+      // Phần IV (Essay)
+      if (Array.isArray(e.essay) && e.essay.length > 0) {
+        e.essay.forEach((essay, i) => {
+          const userWork = a['tl' + i];
+          reviewCards.push(`
+            <div class="review-item">
+              <div class="review-item-header">
+                <span class="review-part-tag" style="background:#fef3c7;color:#92400e;">Phần IV · Tự luận</span>
+                <span class="review-item-number">${escapeHtml(essay.title || `Câu ${i + 1}`)}</span>
+              </div>
+              <div class="review-q-text"><b>${escapeHtml(essay.title || `Câu ${i + 1}.`)}</b> ${essay.question}</div>
+              <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của học sinh:</div>
+                <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? escapeHtml(userWork) : '<span style="color:#94a3b8;font-style:italic;">(Học sinh chưa điền phần bài làm/ghi chú)</span>'}</div>
+              </div>
+              <div class="solution-box theme-study">
+                <div class="solution-header">💡 HƯỚNG DẪN CHẤM & LỜI GIẢI CHI TIẾT:</div>
+                <div class="solution-body">${essay.solution || 'Áp dụng kiến thức chuẩn SGK.'}</div>
+              </div>
+            </div>
+          `);
+        });
+      }
 
       appEl.innerHTML = `
         <div class="content">

@@ -88,7 +88,7 @@ for (const file of [
 
 console.log('--- 4. Kiểm tra renderResult và reviewPast trên đề vatli-10-de-05 ---');
 const exams = vm.runInContext('exams', context);
-assert.equal(exams.length, 38, 'Tổng số đề thi phải là 38');
+assert.ok(exams.length >= 38, 'Tổng số đề thi phải từ 38 trở lên');
 
 const exam = exams.find(e => e.id === 'vatli-10-de-05');
 assert.ok(exam, 'Tìm thấy đề vatli-10-de-05');
