@@ -1587,3 +1587,189 @@
   display: inline !important;
   margin: 0 !important;
 }
+
+/* Exam Header & Aside Controls (Pause & Stop) */
+.exam-header-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.exam-quick-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-timer-ctrl {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn-timer-ctrl:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+.btn-timer-ctrl.stop {
+  color: #dc2626;
+  border-color: #fecaca;
+}
+.btn-timer-ctrl.stop:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+.exam-control-group {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.exam-aux-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.aux-btn {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.aux-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+.aux-btn.pause {
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+.aux-btn.pause:hover {
+  background: #eff6ff;
+  border-color: #60a5fa;
+}
+.aux-btn.stop {
+  color: #dc2626;
+  border-color: #fecaca;
+}
+.aux-btn.stop:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+/* Exam Modals (Pause & Stop) */
+.exam-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  padding: 16px;
+  animation: fadeIn 0.15s ease-out;
+}
+.exam-modal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  padding: 30px 24px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  border: 1px solid #e2e8f0;
+}
+.exam-modal-icon {
+  font-size: 46px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.exam-modal-card h2 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px;
+}
+.pause-time-badge {
+  display: inline-block;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 15px;
+  padding: 7px 18px;
+  border-radius: 20px;
+  border: 1px solid #bfdbfe;
+  margin: 8px 0 14px;
+}
+.pause-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+.stop-warning {
+  font-size: 14px;
+  color: #334155;
+  margin: 0 0 14px;
+}
+.stop-info-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+.stop-info-box p {
+  margin: 5px 0;
+}
+.exam-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.exam-modal-actions.vertical {
+  flex-direction: column;
+}
+.exam-modal-actions button {
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.danger-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: 1px solid #b91c1c;
+}
+.danger-btn:hover {
+  background: #b91c1c;
+}
+.exam-layout.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}

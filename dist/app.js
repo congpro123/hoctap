@@ -112,6 +112,7 @@ if (rawData.length > 0) {
 
 const app = document.getElementById('app');
 let currentView = 'home', activeExam = null, answers = {}, deadline = 0, ticker = null;
+let isExamPaused = false, remainingMs = 0;
 function tryRenderKatex(root) {
   try {
     if (typeof renderMathInElement === 'function' && root) {
@@ -339,17 +340,139 @@ function history() {
   setNav('history');
 }
 
+function formatTimeRemaining(ms) {
+  const left = Math.max(0, ms);
+  const m = Math.floor(left / 60000);
+  const s = Math.floor((left % 60000) / 1000);
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
+function pauseExam() {
+  if (!activeExam || isExamPaused) return;
+  isExamPaused = true;
+  remainingMs = Math.max(0, deadline - Date.now());
+  clearInterval(ticker);
+  persistDraft();
+  showPauseModal();
+}
+
+function resumeExam() {
+  if (!activeExam) return;
+  isExamPaused = false;
+  deadline = Date.now() + remainingMs;
+  persistDraft();
+  hidePauseModal();
+  clearInterval(ticker);
+  ticker = setInterval(tick, 1000);
+  tick();
+}
+
+function showPauseModal() {
+  let modal = document.getElementById('exam-pause-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'exam-pause-modal';
+    modal.className = 'exam-modal-overlay';
+    document.body.appendChild(modal);
+  }
+  const timeStr = formatTimeRemaining(remainingMs);
+  modal.innerHTML = `
+    <div class="exam-modal-card pause-card">
+      <div class="exam-modal-icon">⏸️</div>
+      <h2>Bài thi đang tạm dừng</h2>
+      <div class="pause-time-badge">⏱ Thời gian còn lại: <b>${timeStr}</b></div>
+      <p class="pause-desc">Đồng hồ đếm ngược đã dừng. Tất cả các câu bạn đã chọn và ghi chú đều được lưu an toàn. Bạn có thể nghỉ ngơi và bấm Tiếp tục làm bài bất cứ khi nào sẵn sàng.</p>
+      <div class="exam-modal-actions">
+        <button class="primary" data-exam-resume="1">▶ Tiếp tục làm bài</button>
+        <button class="aux-btn stop" data-exam-stop="1" style="padding:10px 16px;">⏹ Dừng thi</button>
+      </div>
+    </div>
+  `;
+  modal.style.display = 'flex';
+  const examLayout = document.querySelector('.exam-layout');
+  if (examLayout) examLayout.classList.add('blurred');
+}
+
+function hidePauseModal() {
+  const modal = document.getElementById('exam-pause-modal');
+  if (modal) modal.style.display = 'none';
+  const examLayout = document.querySelector('.exam-layout');
+  if (examLayout) examLayout.classList.remove('blurred');
+}
+
+function confirmStopExam() {
+  if (!activeExam) return;
+  if (!isExamPaused) {
+    remainingMs = Math.max(0, deadline - Date.now());
+    clearInterval(ticker);
+  }
+  let modal = document.getElementById('exam-stop-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'exam-stop-modal';
+    modal.className = 'exam-modal-overlay';
+    document.body.appendChild(modal);
+  }
+  modal.innerHTML = `
+    <div class="exam-modal-card stop-card">
+      <div class="exam-modal-icon stop-icon">⏹️</div>
+      <h2>Xác nhận dừng thi?</h2>
+      <p class="stop-warning">Bạn đang làm bài: <b>${esc(activeExam.title)}</b></p>
+      <div class="stop-info-box">
+        <p>• <b>Dừng thi & Thoát:</b> Hủy phiên làm bài này, xóa bản nháp và quay lại kho đề thi (không ghi nhận điểm).</p>
+        <p>• <b>Nộp bài ngay:</b> Chấm điểm và lưu kết quả các câu bạn đã hoàn thành.</p>
+      </div>
+      <div class="exam-modal-actions vertical">
+        <button class="danger-btn" data-exam-stop-confirm="1">⏹ Dừng thi (Hủy phiên làm bài)</button>
+        <button class="primary" data-exam-stop-submit="1">📥 Nộp bài & Chấm điểm ngay</button>
+        <button class="secondary" data-exam-stop-cancel="1">↩ Tiếp tục làm bài</button>
+      </div>
+    </div>
+  `;
+  modal.style.display = 'flex';
+}
+
+function hideStopModal() {
+  const modal = document.getElementById('exam-stop-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+function stopExamFinal() {
+  hideStopModal();
+  hidePauseModal();
+  clearInterval(ticker);
+  activeExam = null;
+  answers = {};
+  isExamPaused = false;
+  remainingMs = 0;
+  localStorage.removeItem('hoctap-draft');
+  catalog();
+}
+
 function startExam(id) {
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('exam')) return;
   const e = exams.find(x => x.id === id);
   if (!e) return;
+  hidePauseModal();
+  hideStopModal();
+  isExamPaused = false;
+  remainingMs = 0;
   const draft = localStorage.getItem('hoctap-draft');
   if (draft) {
     try {
       const d = JSON.parse(draft);
-      if (d.id === id && d.deadline > Date.now()) {
+      if (d.id === id) {
         answers = d.answers || {};
-        deadline = d.deadline;
+        if (d.isPaused && typeof d.remainingMs === 'number' && d.remainingMs > 0) {
+          isExamPaused = true;
+          remainingMs = d.remainingMs;
+          deadline = Date.now() + remainingMs;
+        } else if (d.deadline > Date.now()) {
+          deadline = d.deadline;
+        } else {
+          answers = {};
+          deadline = Date.now() + (e.minutes || e.duration || 45) * 60000;
+        }
       } else {
         answers = {};
         deadline = Date.now() + (e.minutes || e.duration || 45) * 60000;
@@ -365,14 +488,24 @@ function startExam(id) {
   activeExam = e;
   persistDraft();
   renderExam();
-  clearInterval(ticker);
-  ticker = setInterval(tick, 1000);
-  tick();
+  if (isExamPaused) {
+    showPauseModal();
+  } else {
+    clearInterval(ticker);
+    ticker = setInterval(tick, 1000);
+    tick();
+  }
 }
 
 function persistDraft() {
   if (activeExam) {
-    localStorage.setItem('hoctap-draft', JSON.stringify({ id: activeExam.id, answers, deadline }));
+    localStorage.setItem('hoctap-draft', JSON.stringify({
+      id: activeExam.id,
+      answers,
+      deadline,
+      isPaused: isExamPaused,
+      remainingMs: isExamPaused ? remainingMs : Math.max(0, deadline - Date.now())
+    }));
   }
 }
 
@@ -392,7 +525,13 @@ function renderExam() {
             <h1>${esc(e.title)}</h1>
             <p>Phần I: ${qLen} trắc nghiệm (0,25đ/câu) · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)${(e.essay && e.essay.length > 0) ? ` · Phần IV: ${e.essay.length} câu tự luận` : ''}</p>
           </div>
-          <div class="timer" id="timer">--:--</div>
+          <div class="exam-header-controls">
+            <div class="timer" id="timer">--:--</div>
+            <div class="exam-quick-actions">
+              <button class="btn-timer-ctrl pause" data-exam-pause="1" title="Tạm dừng làm bài">⏸ Tạm dừng</button>
+              <button class="btn-timer-ctrl stop" data-exam-stop="1" title="Dừng thi / Hủy bài">⏹ Dừng thi</button>
+            </div>
+          </div>
         </div>
         ${sourceLine(e)}
         
@@ -473,7 +612,13 @@ function renderExam() {
         </div>
         ` : ''}
         <div class="aside-note">Tiến độ bài làm được lưu tự động trên máy. Khi hết thời gian đếm ngược, bài thi sẽ tự động được thu và chấm điểm.</div>
-        <button class="primary submit" data-submit="1">Nộp bài thi</button>
+        <div class="exam-control-group">
+          <button class="primary submit" data-submit="1">📥 Nộp bài thi</button>
+          <div class="exam-aux-buttons">
+            <button class="aux-btn pause" data-exam-pause="1" title="Tạm dừng làm bài">⏸ Tạm dừng</button>
+            <button class="aux-btn stop" data-exam-stop="1" title="Dừng thi / Thoát">⏹ Dừng thi</button>
+          </div>
+        </div>
       </aside>
     </div>
   </div>`;
@@ -610,6 +755,8 @@ function submitExam(reason) {
 }
 
 function renderResult(r) {
+  hidePauseModal();
+  hideStopModal();
   const e = exams.find(x => x.id === r.id) || { title: r.title, questions: [], tf: [], short: [] };
   const scoreNum = r.score !== undefined ? r.score : (r.correct / r.total * 10);
   
@@ -811,6 +958,26 @@ document.addEventListener('click', e => {
   else if (b.dataset.jumpEssay !== undefined) {
     const el = document.getElementById('essay-' + b.dataset.jumpEssay);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+  else if (b.dataset.examPause) pauseExam();
+  else if (b.dataset.examResume) resumeExam();
+  else if (b.dataset.examStop) confirmStopExam();
+  else if (b.dataset.examStopConfirm) stopExamFinal();
+  else if (b.dataset.examStopSubmit) {
+    hideStopModal();
+    hidePauseModal();
+    submitExam('manual');
+  }
+  else if (b.dataset.examStopCancel) {
+    hideStopModal();
+    if (isExamPaused) {
+      showPauseModal();
+    } else {
+      deadline = Date.now() + remainingMs;
+      clearInterval(ticker);
+      ticker = setInterval(tick, 1000);
+      tick();
+    }
   }
 });
 
