@@ -11,13 +11,19 @@
   const STORAGE_RESULTS = 'hoctap-results';
   const ADMIN_SECRET_KEY = 'ADMIN2026'; // Mã xác thực khi đăng ký tài khoản Quản trị viên mới
 
-  // Cloud Database Endpoints (REST API lưu trữ đám mây cho web tĩnh GitHub Pages)
+  // Cấu hình Google Firebase Realtime Database (Đồng bộ thời gian thực đa trình duyệt, đa thiết bị)
+  const FIREBASE_CONFIG = {
+    // URL mặc định hoặc người dùng có thể tùy chỉnh trong giao diện Admin
+    databaseURL: 'https://hoctap-tohop-tin-default-rtdb.asia-southeast1.firebasedatabase.app'
+  };
+
+  // Cloud Database Endpoints (REST API dự phòng cho web tĩnh GitHub Pages)
   const CLOUD_CONFIG = {
     USERS_URL: 'https://api.restful-api.dev/objects/ff808181a09d98f701a19a5fa72d05a5',
     RESULTS_URL: 'https://api.restful-api.dev/objects/ff808181a09d98f701a19a5fa7c905a6'
   };
 
-  // Tài khoản cốt lõi khởi tạo mặc định (Admin và tài khoản học sinh Thái Thành Công)
+  // Tài khoản cốt lõi khởi tạo mặc định (Admin và học sinh congpro123 / thaithanhcong)
   const DEFAULT_ADMIN = {
     id: 'u-admin',
     username: 'admin',
@@ -25,6 +31,15 @@
     name: 'Quản trị viên (Admin)',
     role: 'admin',
     createdAt: '2026-09-01T00:00:00.000Z'
+  };
+
+  const DEFAULT_STUDENT_CONGPRO = {
+    id: 'u-congpro123',
+    username: 'congpro123',
+    password: '123',
+    name: 'Thái Thành Công',
+    role: 'student',
+    createdAt: '2026-11-02T00:00:00.000Z'
   };
 
   const DEFAULT_STUDENT_CONG = {
@@ -36,15 +51,55 @@
     createdAt: '2026-11-02T00:00:00.000Z'
   };
 
-  const DEFAULT_USERS = [DEFAULT_ADMIN, DEFAULT_STUDENT_CONG];
+  const DEFAULT_USERS = [DEFAULT_ADMIN, DEFAULT_STUDENT_CONGPRO, DEFAULT_STUDENT_CONG];
 
-  // 1. Adapter Đồng bộ Cơ sở Dữ liệu Đám mây (Cloud Database Adapter)
+  // 1. Adapter Đồng bộ Cơ sở Dữ liệu Đám mây (Google Firebase Realtime Database + REST Fallback)
   const CloudDB = {
     isSyncing: false,
     status: 'unknown', // 'online' | 'limited' | 'offline' | 'unknown'
     statusMessage: '',
+    engine: 'firebase', // 'firebase' | 'rest'
+
+    getFirebaseUrl() {
+      try {
+        const custom = localStorage.getItem('hoctap-firebase-url');
+        if (custom && custom.trim()) {
+          return custom.trim().replace(/\/+$/, '');
+        }
+      } catch (_) {}
+      return (FIREBASE_CONFIG.databaseURL || '').trim().replace(/\/+$/, '');
+    },
+
+    setFirebaseUrl(url) {
+      try {
+        if (url && url.trim()) {
+          localStorage.setItem('hoctap-firebase-url', url.trim().replace(/\/+$/, ''));
+        } else {
+          localStorage.removeItem('hoctap-firebase-url');
+        }
+      } catch (_) {}
+    },
 
     async fetchUsers() {
+      const fbUrl = this.getFirebaseUrl();
+      if (fbUrl) {
+        try {
+          const res = await fetch(`${fbUrl}/users.json`, { cache: 'no-store' });
+          if (res.ok) {
+            const data = await res.json();
+            if (data) {
+              this.status = 'online';
+              this.engine = 'firebase';
+              this.statusMessage = 'Đã kết nối và đồng bộ Google Firebase Realtime Database.';
+              if (Array.isArray(data)) return data;
+              if (typeof data === 'object') return Object.values(data);
+            }
+          }
+        } catch (err) {
+          console.warn('Firebase fetchUsers err:', err);
+        }
+      }
+
       try {
         const res = await fetch(CLOUD_CONFIG.USERS_URL, { cache: 'no-store' });
         if (res.status === 429) {
@@ -60,6 +115,7 @@
         const json = await res.json();
         if (json && json.data && Array.isArray(json.data.users)) {
           this.status = 'online';
+          this.engine = 'rest';
           this.statusMessage = 'Đã kết nối và đồng bộ Cloud Database.';
           return json.data.users;
         }
@@ -71,6 +127,28 @@
     },
 
     async pushUser(newUser) {
+      const fbUrl = this.getFirebaseUrl();
+      if (fbUrl) {
+        try {
+          const currentUsers = (await this.fetchUsers()) || auth.getLocalUsers();
+          if (!currentUsers.some(u => u.username.toLowerCase() === newUser.username.toLowerCase())) {
+            currentUsers.push(newUser);
+          }
+          const res = await fetch(`${fbUrl}/users.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(currentUsers)
+          });
+          if (res.ok) {
+            this.status = 'online';
+            this.engine = 'firebase';
+            return;
+          }
+        } catch (err) {
+          console.warn('Firebase pushUser err:', err);
+        }
+      }
+
       try {
         const currentUsers = (await this.fetchUsers()) || auth.getLocalUsers();
         if (!currentUsers.some(u => u.username.toLowerCase() === newUser.username.toLowerCase())) {
@@ -85,6 +163,7 @@
           });
           if (res.ok) {
             this.status = 'online';
+            this.engine = 'rest';
           } else if (res.status === 429) {
             this.status = 'limited';
           }
@@ -95,6 +174,24 @@
     },
 
     async fetchResults() {
+      const fbUrl = this.getFirebaseUrl();
+      if (fbUrl) {
+        try {
+          const res = await fetch(`${fbUrl}/results.json`, { cache: 'no-store' });
+          if (res.ok) {
+            const data = await res.json();
+            if (data) {
+              this.status = 'online';
+              this.engine = 'firebase';
+              if (Array.isArray(data)) return data;
+              if (typeof data === 'object') return Object.values(data);
+            }
+          }
+        } catch (err) {
+          console.warn('Firebase fetchResults err:', err);
+        }
+      }
+
       try {
         const res = await fetch(CLOUD_CONFIG.RESULTS_URL, { cache: 'no-store' });
         if (res.status === 429) {
@@ -108,6 +205,7 @@
         const json = await res.json();
         if (json && json.data && Array.isArray(json.data.results)) {
           this.status = 'online';
+          this.engine = 'rest';
           return json.data.results;
         }
       } catch (err) {
@@ -117,13 +215,35 @@
     },
 
     async pushResult(newResult) {
+      const fbUrl = this.getFirebaseUrl();
+      if (fbUrl) {
+        try {
+          const currentResults = (await this.fetchResults()) || auth.getLocalResults();
+          const exists = currentResults.some(r => r.id === newResult.id && r.userId === newResult.userId && r.date === newResult.date);
+          if (!exists) {
+            currentResults.unshift(newResult);
+          }
+          const trimmed = currentResults.slice(0, 500);
+          const res = await fetch(`${fbUrl}/results.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(trimmed)
+          });
+          if (res.ok) {
+            this.status = 'online';
+            this.engine = 'firebase';
+            return;
+          }
+        } catch (err) {
+          console.warn('Firebase pushResult err:', err);
+        }
+      }
+
       try {
         const currentResults = (await this.fetchResults()) || auth.getLocalResults();
-        // Kiểm tra tránh trùng lặp cùng bài cùng thời gian
         const exists = currentResults.some(r => r.id === newResult.id && r.userId === newResult.userId && r.date === newResult.date);
         if (!exists) {
           currentResults.unshift(newResult);
-          // Giới hạn 500 bài làm gần nhất trên Cloud
           const trimmed = currentResults.slice(0, 500);
           const res = await fetch(CLOUD_CONFIG.RESULTS_URL, {
             method: 'PUT',
@@ -135,6 +255,7 @@
           });
           if (res.ok) {
             this.status = 'online';
+            this.engine = 'rest';
           } else if (res.status === 429) {
             this.status = 'limited';
           }
@@ -231,13 +352,13 @@
       const users = this.getLocalUsers();
       let found = users.find(x => x.username.toLowerCase() === u && String(x.password) === p);
 
-      // Hỗ trợ tự động đồng bộ mật khẩu riêng cho tài khoản thaithanhcong đã tạo trước đó
-      if (!found && u === 'thaithanhcong') {
-        const ttc = users.find(x => x.username.toLowerCase() === 'thaithanhcong');
-        if (ttc) {
-          ttc.password = p;
+      // Hỗ trợ tự động đồng bộ mật khẩu riêng cho tài khoản congpro123 và thaithanhcong đã tạo trước đó
+      if (!found && (u === 'congpro123' || u === 'thaithanhcong')) {
+        const target = users.find(x => x.username.toLowerCase() === u);
+        if (target) {
+          target.password = p;
           this.saveLocalUsers(users);
-          found = ttc;
+          found = target;
         }
       }
 
@@ -856,7 +977,9 @@
 
       // Xác định badge trạng thái Cloud DB trung thực
       let cloudBadgeHtml = '';
-      if (CloudDB.status === 'online') {
+      if (CloudDB.engine === 'firebase' && CloudDB.status === 'online') {
+        cloudBadgeHtml = `<span class="cloud-sync-badge firebase" style="background:#fff7ed;color:#ea580c;border:1px solid #fed7aa;" title="Đã kết nối và đồng bộ thời gian thực với Google Firebase Realtime Database">🔥 Firebase: Trực tuyến</span>`;
+      } else if (CloudDB.status === 'online') {
         cloudBadgeHtml = `<span class="cloud-sync-badge" title="Đã kết nối và đồng bộ Cloud Database thành công">🟢 Cloud DB: Đã kết nối</span>`;
       } else if (CloudDB.status === 'limited') {
         cloudBadgeHtml = `<span class="cloud-sync-badge warning" title="API công cộng đạt hạn ngạch 50 lượt/ngày. Dữ liệu đang được lưu trữ an toàn trong trình duyệt.">⚠️ Cloud DB: Lưu trữ Cục bộ (Hết hạn mức API ngày)</span>`;
@@ -878,6 +1001,7 @@
               </div>
               <div class="stats-top-actions" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
                 <button class="secondary small" id="btn-stats-add-user" style="font-weight:700;">➕ Thêm học sinh</button>
+                <button class="secondary small" id="btn-stats-config-firebase" style="font-weight:700;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;">🔥 Cấu hình Firebase</button>
                 <button class="secondary small" id="btn-stats-refresh-cloud">🔄 Làm mới từ Cloud DB</button>
                 <button class="secondary small" id="btn-stats-export-json">📥 Xuất file JSON</button>
                 <button class="secondary small" id="btn-stats-import-json">📤 Nạp file JSON</button>
@@ -1069,6 +1193,25 @@
           } else {
             alert(`✅ Đã tạo thành công tài khoản học sinh: ${res.user.name} (@${res.user.username})`);
             this.renderStatsView(res.user.id);
+          }
+        };
+      }
+
+      // Nút cấu hình Google Firebase Realtime Database
+      const btnCfgFb = document.getElementById('btn-stats-config-firebase');
+      if (btnCfgFb) {
+        btnCfgFb.onclick = () => {
+          const curFb = CloudDB.getFirebaseUrl();
+          const inp = prompt(
+            '🔥 CẤU HÌNH GOOGLE FIREBASE REALTIME DATABASE\n\n' +
+            'Nhập URL Firebase Realtime Database của bạn để đồng bộ thời gian thực xuyên suốt mọi trình duyệt và thiết bị (không giới hạn lượt gọi):\n\n' +
+            'Ví dụ: https://du-an-cua-ban-default-rtdb.asia-southeast1.firebasedatabase.app',
+            curFb
+          );
+          if (inp !== null) {
+            CloudDB.setFirebaseUrl(inp.trim());
+            alert('✅ Đã lưu cấu hình Firebase! Đang tiến hành kết nối và đồng bộ...');
+            this.renderStatsView();
           }
         };
       }
