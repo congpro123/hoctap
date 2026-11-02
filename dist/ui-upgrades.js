@@ -24,17 +24,20 @@ function tiles(){
   return `<div class="subject-grid">${subjects.map((s,i)=>`<button class="subject-tile" data-subjectto="${i}"><span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span><b>${s[0]}</b><small>${counts[i]?exams.filter(e=>e.subject===counts[i]).length+' đề thi':'Sắp cập nhật đề thi'}</small></button>`).join('')}</div>`;
 }
 function home(){
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('home')) return;
   const groups=[['math',0,'Toán 10 · Giữa kì I','Mệnh đề, tập hợp, bất phương trình và hệ thức lượng'],['physics',1,'Vật lý 10 · Giữa kì I','Ưu tiên nguồn Quảng Trị và miền Trung'],['chemistry',5,'Hóa học 10 · Giữa kì I','Cấu tạo nguyên tử và bảng tuần hoàn']];
   app.innerHTML=`<div class="content"><section class="hero"><div class="hero-copy"><span class="eyebrow">✦ &nbsp; KHÔNG GIAN HỌC TẬP CỦA BẠN</span><h1>Học tập hôm nay,<br>tự tin ngày mai.</h1><p>Luyện đề Toán, Vật lý và Hóa học lớp 10 với đồng hồ thi, ba dạng câu hỏi và phần xem lại bài đã nộp.</p></div><div class="hero-art"><div class="orbit"></div><div class="planet one">📚</div><div class="planet two">∑</div><div class="planet three">✦</div></div></section><section class="stats"><div class="stat"><span class="stat-icon purple">▦</span><div><b>07</b><small>Môn học</small></div></div><div class="stat"><span class="stat-icon orange">☷</span><div><b>${String(exams.length).padStart(2,'0')}</b><small>Đề thi sẵn sàng</small></div></div><div class="stat"><span class="stat-icon green">◷</span><div><b>${String(saved().length).padStart(2,'0')}</b><small>Lượt thi đã hoàn thành</small></div></div></section><section class="handbook-feature-banner"><div class="hfb-left"><span class="eyebrow" style="background:#ffffff22;color:#ffffff;border-color:#ffffff33;">📖 TÀI LIỆU ÔN THI ĐẶC BIỆT</span><h2>Sổ tay Công thức & Lý thuyết Giữa kì I</h2><p>Tổng hợp cô đọng toàn bộ công thức, định lí quan trọng và bẫy đề thi cần thuộc cho môn Toán 10, Vật lí 10, Hóa học 10.</p><div class="hfb-tags"><span>∑ Toán 10</span><span>⚛️ Vật lý 10</span><span>🧪 Hóa học 10</span></div></div><div class="hfb-right"><a href="#handbook" class="hfb-btn">Mở sổ tay kiến thức →</a></div></section>${groups.map(([subject,index,title,desc])=>{const list=exams.filter(e=>e.subject===subject);return `<section class="lower-section"><div class="section-head"><div><h2>${title}</h2><p>${list.length} bài luyện · ${desc}</p></div><button class="text-link" data-subjectto="${index}">Xem tất cả →</button></div><div class="cards">${list.slice(0,4).map(card).join('')}</div></section>`}).join('')}<section class="lower-section"><div class="section-head"><div><h2>Khám phá môn học</h2><p>7 môn trong tổ hợp học tập của bạn</p></div></div>${tiles()}</section></div>`;
   setNav('home');
 }
 function catalog(index){
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('subjects')) return;
   const mapping={0:'math',1:'physics',5:'chemistry'},list=index===undefined?exams:exams.filter(e=>e.subject===mapping[index]);
   const name=index===undefined?'Kho đề thi':subjects[index][0];
   app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện giữa kì I lớp 10 · Nhiều lựa chọn, đúng/sai và trả lời ngắn · Không có tự luận.`:'Môn học này đang được cập nhật đề thi.'}</p><div style="margin:14px 0 10px;"><a href="#handbook${index!==undefined?'-'+mapping[index]:''}" class="secondary handbook-quick-btn" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:8px 16px;border-radius:8px;"><span>📖</span> Xem sổ tay công thức & lý thuyết ${index!==undefined?name:'các môn'} ➔</a></div></div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${[[0,'Toán'],[1,'Vật lý'],[5,'Hóa học']].map(([i,n])=>`<button class="filter" data-subjectto="${i}">${n} (${exams.filter(e=>e.subject===mapping[i]).length})</button>`).join('')}</div>`:''}${list.length?`<div class="cards">${list.map(card).join('')}</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;
   setNav(index===undefined?'subjects':'subject-'+index);
 }
 function history(){
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('history')) return;
   const allItems=saved();
   const currentUser = (typeof window !== 'undefined' && window.auth && typeof window.auth.getCurrentUser === 'function') ? window.auth.getCurrentUser() : null;
   const items = currentUser ? allItems.filter(x => x.userId === currentUser.id || (!x.userId && currentUser.id === 'u-an')) : allItems;
@@ -47,9 +50,9 @@ function history(){
       </div>
       ${currentUser ? `
         <div class="history-user-info-banner">
-          <span>Học sinh: <b>${esc(currentUser.name)}</b> (@${esc(currentUser.username)})</span>
+          <span>${(typeof window !== 'undefined' && window.auth && window.auth.isAdmin(currentUser)) ? 'Quản trị viên' : 'Học sinh'}: <b>${esc(currentUser.name)}</b> (@${esc(currentUser.username)})</span>
           <button class="secondary small" id="btn-hist-switch">Đổi tài khoản</button>
-          <a href="#stats" class="primary small" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📊 Thống kê cả lớp ➔</a>
+          ${(typeof window !== 'undefined' && window.auth && window.auth.isAdmin(currentUser)) ? `<a href="#stats" class="primary small" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📊 Thống kê cả lớp ➔</a>` : ''}
         </div>
       ` : ''}
     </div>
@@ -62,6 +65,7 @@ function history(){
   if (swBtn && window.auth) swBtn.onclick = () => window.auth.openModal('switch');
 }
 function reviewPast(index){
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('history')) return;
   const r=saved()[index];if(!r)return history();
   const e=typeof historicalExamForResult==='function'?historicalExamForResult(r):exams.find(x=>x.id===r.id);
   if(!e){

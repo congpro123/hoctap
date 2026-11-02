@@ -223,6 +223,7 @@ const handbookData = {
 };
 
 function renderHandbook(selectedSubject, filterQuery) {
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('handbook')) return;
   window.currentView = 'handbook';
   const sidebar = document.getElementById('sidebar');
   if (sidebar) {

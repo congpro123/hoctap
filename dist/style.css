@@ -1200,3 +1200,221 @@
   margin-top: 8px;
   text-align: center;
 }
+
+/* ==========================================================================
+   CỔNG XÁC THỰC BẮT BUỘC & PHÂN QUYỀN ADMIN THỐNG KÊ LỚP HỌC
+   ========================================================================== */
+
+/* 1. Màn hình Cổng Xác thực (Auth Gate) khi chưa đăng nhập */
+.auth-gate-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+  padding: 30px 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+.auth-gate-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 40px 32px;
+  max-width: 540px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
+}
+.auth-gate-badge {
+  display: inline-block;
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.auth-gate-logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+.auth-gate-card h2 {
+  font-size: 21px;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  line-height: 1.35;
+}
+.auth-gate-card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 26px 0;
+}
+.auth-gate-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.auth-gate-btn {
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.auth-gate-btn:hover {
+  transform: translateY(-1px);
+}
+.auth-gate-btn-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  text-decoration: underline;
+  padding: 6px;
+}
+.auth-gate-btn-link:hover {
+  color: #1d4ed8;
+}
+
+/* 2. Menu Dropdown Người dùng ở Topbar */
+.user-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+.user-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.2);
+  min-width: 230px;
+  z-index: 99999;
+  overflow: hidden;
+  animation: fadeIn 0.15s ease-out;
+}
+.user-menu-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.user-menu-header b {
+  font-size: 13px;
+  color: #0f172a;
+}
+.user-menu-header small {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+.user-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.user-menu-item:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+.user-menu-item.logout-item {
+  color: #dc2626;
+  border-top: 1px solid #f1f5f9;
+  font-weight: 600;
+}
+.user-menu-item.logout-item:hover {
+  background: #fef2f2;
+}
+
+/* 3. Thẻ Từ chối truy cập (Access Denied khi không phải Admin) */
+.access-denied-card {
+  text-align: center;
+  padding: 40px 24px;
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  max-width: 580px;
+  margin: 30px auto;
+  box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.12);
+}
+.access-denied-icon {
+  font-size: 48px;
+  margin-bottom: 14px;
+}
+.access-denied-card h2 {
+  font-size: 21px;
+  color: #991b1b;
+  margin: 0 0 10px 0;
+}
+.access-denied-card p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.access-current-account-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin: 14px 0 18px 0;
+}
+.access-denied-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+/* 4. Thẻ nhãn vai trò Admin và Khoá Sidebar */
+.role-badge.admin {
+  background: #fef3c7;
+  color: #b45309;
+}
+.admin-badge-tag {
+  font-size: 10px;
+  background: #fef3c7;
+  color: #b45309;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: auto;
+}
+.admin-lock-tag {
+  font-size: 10px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: auto;
+}

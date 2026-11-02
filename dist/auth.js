@@ -1,5 +1,5 @@
-// Hệ thống Đăng nhập, Đăng ký, Lịch sử làm bài theo tài khoản và Thống kê lớp học
-// Hỗ trợ lưu trữ bền vững trên localStorage, xem chi tiết bài làm của từng học sinh
+// Hệ thống Đăng nhập, Đăng ký, Lịch sử làm bài theo tài khoản và Phân quyền Quản trị (Admin)
+// Bắt buộc xác thực trước khi sử dụng toàn bộ trang web; Phân quyền xem thống kê lớp học chỉ dành cho Admin
 
 (function() {
   'use strict';
@@ -8,8 +8,9 @@
   const STORAGE_CURRENT_USER = 'hoctap-current-user';
   const STORAGE_RESULTS = 'hoctap-results';
 
-  // Dữ liệu mẫu khởi tạo ban đầu cho lớp học
+  // Dữ liệu tài khoản khởi tạo mẫu (có đầy đủ Quản trị viên, Giáo viên và Học sinh)
   const DEFAULT_USERS = [
+    { id: 'u-admin', username: 'admin', password: '123', name: 'Quản trị viên (Admin)', role: 'admin', createdAt: '2026-09-01T00:00:00.000Z' },
     { id: 'u-teacher', username: 'thaygiao', password: '123', name: 'Thầy Nguyễn Văn Nam', role: 'teacher', createdAt: '2026-09-01T08:00:00.000Z' },
     { id: 'u-an', username: 'nguyenvanan', password: '123', name: 'Nguyễn Văn An', role: 'student', createdAt: '2026-09-05T09:00:00.000Z' },
     { id: 'u-binh', username: 'tranthibinh', password: '123', name: 'Trần Thị Bình', role: 'student', createdAt: '2026-09-06T10:00:00.000Z' },
@@ -137,7 +138,14 @@
         const str = localStorage.getItem(STORAGE_USERS);
         if (str) {
           const arr = JSON.parse(str);
-          if (Array.isArray(arr) && arr.length > 0) return arr;
+          if (Array.isArray(arr) && arr.length > 0) {
+            // Đảm bảo tài khoản admin luôn tồn tại
+            if (!arr.some(u => u.username === 'admin')) {
+              arr.unshift(DEFAULT_USERS[0]);
+              this.saveUsers(arr);
+            }
+            return arr;
+          }
         }
       } catch (_) {}
       this.saveUsers(DEFAULT_USERS);
@@ -150,6 +158,7 @@
       } catch (_) {}
     },
 
+    // Kiểm tra tài khoản hiện tại (null nếu chưa đăng nhập)
     getCurrentUser() {
       try {
         const str = localStorage.getItem(STORAGE_CURRENT_USER);
@@ -158,10 +167,17 @@
           if (u && u.id) return u;
         }
       } catch (_) {}
-      // Mặc định đăng nhập tài khoản học sinh Nguyễn Văn An
-      const defaultUser = DEFAULT_USERS[1];
-      this.setCurrentUser(defaultUser);
-      return defaultUser;
+      return null;
+    },
+
+    isLoggedIn() {
+      return !!this.getCurrentUser();
+    },
+
+    isAdmin(user) {
+      const u = user || this.getCurrentUser();
+      if (!u) return false;
+      return u.role === 'admin' || u.role === 'teacher' || u.username === 'admin' || u.username === 'thaygiao';
     },
 
     setCurrentUser(user) {
@@ -172,7 +188,7 @@
           localStorage.removeItem(STORAGE_CURRENT_USER);
         }
       } catch (_) {}
-      this.renderTopBarUser();
+      this.updateUI();
     },
 
     login(username, password) {
@@ -184,6 +200,7 @@
         return { success: false, message: 'Tên đăng nhập hoặc mật khẩu không chính xác.' };
       }
       this.setCurrentUser(found);
+      this.closeModal();
       this.refreshCurrentView();
       return { success: true, user: found };
     },
@@ -202,29 +219,119 @@
       if (users.some(x => x.username.toLowerCase() === u)) {
         return { success: false, message: 'Tên đăng nhập này đã được sử dụng. Vui lòng chọn tên khác.' };
       }
+      const isRoleAdmin = role === 'admin' || role === 'teacher';
       const newUser = {
         id: 'u-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
         name: n,
         username: u,
         password: p,
-        role: role === 'teacher' ? 'teacher' : 'student',
+        role: isRoleAdmin ? 'admin' : 'student',
         createdAt: new Date().toISOString()
       };
       users.push(newUser);
       this.saveUsers(users);
       this.setCurrentUser(newUser);
+      this.closeModal();
       this.refreshCurrentView();
       return { success: true, user: newUser };
     },
 
     logout() {
-      // Đổi sang tài khoản khách hoặc tài khoản đầu tiên
-      const defaultUser = DEFAULT_USERS[1];
-      this.setCurrentUser(defaultUser);
-      this.refreshCurrentView();
+      this.setCurrentUser(null);
+      this.requireAuth('home');
     },
 
-    // 2. Lịch sử bài làm & Đề đã làm
+    // 2. Cổng xác thực (Auth Gate) - Bắt buộc đăng nhập
+    requireAuth(targetView = 'home') {
+      if (this.isLoggedIn()) return true;
+      this.renderAuthGate(targetView);
+      this.openModal('login', false);
+      return false;
+    },
+
+    renderAuthGate(targetView = 'home') {
+      const appEl = document.getElementById('app');
+      if (!appEl) return;
+      if (typeof setNav === 'function') setNav('home');
+
+      appEl.innerHTML = `
+        <div class="content auth-gate-screen">
+          <div class="auth-gate-card">
+            <span class="auth-gate-badge">🔒 YÊU CẦU ĐĂNG NHẬP</span>
+            <div class="auth-gate-logo">✦ HỌC<span style="color:#2563eb;">TẬP</span><small style="font-size:12px;color:#64748b;margin-left:4px;">SPACE</small></div>
+            <h2>Chào mừng bạn đến với Không gian Luyện thi</h2>
+            <p>Vui lòng đăng nhập hoặc tạo tài khoản mới để bắt đầu luyện tập 38 bộ đề thi chuẩn, tra cứu sổ tay kiến thức và theo dõi lịch sử bài làm của bạn.</p>
+            <div class="auth-gate-btn-group">
+              <button class="primary auth-gate-btn" id="btn-gate-open-login">🔑 Đăng nhập vào hệ thống ➔</button>
+              <button class="secondary auth-gate-btn" id="btn-gate-open-reg">✨ Tạo tài khoản mới</button>
+              <button class="auth-gate-btn-link" id="btn-gate-open-switch">⚡ Chọn nhanh tài khoản có sẵn (trải nghiệm thử)</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      const bLogin = document.getElementById('btn-gate-open-login');
+      if (bLogin) bLogin.onclick = () => this.openModal('login', false);
+      const bReg = document.getElementById('btn-gate-open-reg');
+      if (bReg) bReg.onclick = () => this.openModal('register', false);
+      const bSwitch = document.getElementById('btn-gate-open-switch');
+      if (bSwitch) bSwitch.onclick = () => this.openModal('switch', false);
+    },
+
+    // 3. Màn hình Từ chối truy cập (Access Denied) khi không phải Admin
+    renderAccessDenied() {
+      const appEl = document.getElementById('app');
+      if (!appEl) return;
+      const user = this.getCurrentUser();
+      const uName = user ? escapeHtml(user.name) : 'Người dùng';
+      const uUsername = user ? escapeHtml(user.username) : '';
+
+      appEl.innerHTML = `
+        <div class="content">
+          <div class="access-denied-card">
+            <div class="access-denied-icon">🔒</div>
+            <h2>Khu vực dành riêng cho Quản trị viên (Admin)</h2>
+            <p>Trang Thống kê lớp học và Theo dõi bài làm chỉ dành riêng cho tài khoản Quản trị viên hoặc Giáo viên phụ trách bộ môn.</p>
+            <div class="access-current-account-info">
+              <span>👤 Bạn đang đăng nhập: <b>${uName}</b> (@${uUsername})</span>
+              <span class="role-badge student">Học sinh</span>
+            </div>
+            <p style="font-size:13px;color:#64748b;margin:0 0 16px 0;">Nếu bạn là Quản trị viên hoặc Giáo viên, vui lòng đăng nhập bằng tài khoản Admin để truy cập trang này.</p>
+            <div class="access-denied-actions">
+              <button class="primary" id="btn-denied-login-admin">🔑 Đăng nhập tài khoản Admin ➔</button>
+              <button class="secondary" id="btn-denied-quick-teacher">⚡ Đổi sang tài khoản Giáo viên có sẵn</button>
+              <button class="secondary" id="btn-denied-home">⬅ Về trang chủ</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      if (typeof setNav === 'function') setNav('stats');
+
+      const bAdmin = document.getElementById('btn-denied-login-admin');
+      if (bAdmin) bAdmin.onclick = () => this.openModal('login', true);
+
+      const bTeach = document.getElementById('btn-denied-quick-teacher');
+      if (bTeach) {
+        bTeach.onclick = () => {
+          const teachUser = this.getUsers().find(u => u.username === 'thaygiao' || u.username === 'admin');
+          if (teachUser) {
+            this.setCurrentUser(teachUser);
+            this.renderStatsView();
+          }
+        };
+      }
+
+      const bHome = document.getElementById('btn-denied-home');
+      if (bHome) {
+        bHome.onclick = () => {
+          if (typeof window !== 'undefined' && window.location) window.location.hash = '#home';
+          if (typeof home === 'function') home();
+        };
+      }
+    },
+
+    // 4. Lịch sử bài làm & Đề đã làm
     getAllResults() {
       try {
         const str = localStorage.getItem(STORAGE_RESULTS);
@@ -235,14 +342,19 @@
     },
 
     getUserResults(userId) {
-      const targetId = userId || (this.getCurrentUser() ? this.getCurrentUser().id : null);
+      const cur = this.getCurrentUser();
+      const targetId = userId || (cur ? cur.id : null);
       if (!targetId) return [];
       const all = this.getAllResults();
       return all.filter(r => r.userId === targetId || (!r.userId && targetId === 'u-an'));
     },
 
     getExamStatus(examId, userId) {
-      const targetId = userId || (this.getCurrentUser() ? this.getCurrentUser().id : null);
+      const cur = this.getCurrentUser();
+      const targetId = userId || (cur ? cur.id : null);
+      if (!targetId) {
+        return { hasDone: false, attempts: 0, bestResult: null, lastResult: null };
+      }
       const userResults = this.getUserResults(targetId);
       const matches = userResults.filter(r => r.id === examId);
       if (matches.length === 0) {
@@ -260,49 +372,143 @@
       };
     },
 
-    // 3. Cập nhật giao diện khi đổi tài khoản
+    // 5. Cập nhật giao diện khi đổi tài khoản / đăng xuất
     refreshCurrentView() {
+      if (!this.isLoggedIn()) {
+        this.requireAuth('home');
+        return;
+      }
       if (typeof window !== 'undefined' && window.location) {
         const hash = window.location.hash || '';
         if (hash === '#history' && typeof history === 'function') history();
         else if (hash === '#stats') this.renderStatsView();
         else if (hash === '#subjects' && typeof catalog === 'function') catalog();
         else if (hash.startsWith('#subject-') && typeof catalog === 'function') catalog(Number(hash.split('-')[1]));
+        else if (hash === '#handbook' || hash.startsWith('#handbook-')) {
+          const part = hash.replace('#handbook', '').replace(/^-/, '');
+          if (typeof renderHandbook === 'function') renderHandbook(part || 'all');
+        }
         else if (typeof home === 'function') home();
       }
     },
 
-    // 4. Hiển thị thông tin tài khoản trên Topbar
+    updateUI() {
+      this.renderTopBarUser();
+      this.renderSidebar();
+    },
+
+    renderSidebar() {
+      const statsLink = document.querySelector('.nav-link[data-view="stats"], a[href="#stats"]');
+      if (!statsLink) return;
+      const cur = this.getCurrentUser();
+      const isAdm = this.isAdmin(cur);
+
+      if (cur && isAdm) {
+        statsLink.innerHTML = `<span>📊</span> Thống kê lớp học <span class="admin-badge-tag">Admin</span>`;
+      } else {
+        statsLink.innerHTML = `<span>🔒</span> Thống kê lớp học <span class="admin-lock-tag">Admin</span>`;
+      }
+    },
+
+    // 6. Hiển thị thông tin tài khoản trên Topbar với Menu Dropdown
     renderTopBarUser() {
       const user = this.getCurrentUser();
       const topRight = document.querySelector('.top-right');
       if (!topRight) return;
 
+      const todayStr = new Intl.DateTimeFormat('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
+
+      if (!user) {
+        topRight.innerHTML = `
+          <span class="today" id="today">${todayStr}</span>
+          <button class="primary auth-topbar-login-btn" id="btn-topbar-login" style="padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700;">🔑 Đăng nhập / Đăng ký</button>
+        `;
+        const b = document.getElementById('btn-topbar-login');
+        if (b) b.onclick = () => this.openModal('login', false);
+        return;
+      }
+
+      const isAdm = this.isAdmin(user);
       const isTeacher = user.role === 'teacher';
-      const roleText = isTeacher ? 'Giáo viên' : 'Học sinh';
-      const roleBadgeClass = isTeacher ? 'role-badge teacher' : 'role-badge student';
+      const roleText = user.role === 'admin' ? 'Quản trị viên' : isTeacher ? 'Giáo viên' : 'Học sinh';
+      const roleBadgeClass = isAdm ? 'role-badge admin' : 'role-badge student';
       const initial = (user.name || user.username || 'U').trim().charAt(0).toUpperCase();
 
       topRight.innerHTML = `
-        <span class="today" id="today">${new Intl.DateTimeFormat('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date())}</span>
-        <button class="user-profile-btn" id="btn-user-profile" title="Bấm để đổi tài khoản hoặc đăng nhập/đăng ký">
-          <span class="avatar-circle ${isTeacher ? 'avatar-teacher' : ''}">${initial}</span>
-          <div class="user-info-text">
-            <strong class="user-display-name">${user.name}</strong>
-            <span class="${roleBadgeClass}">${roleText}</span>
+        <span class="today" id="today">${todayStr}</span>
+        <div class="user-dropdown-container" id="user-dropdown-container">
+          <button class="user-profile-btn" id="btn-user-profile" title="Tài khoản: ${escapeHtml(user.name)}">
+            <span class="avatar-circle ${isAdm ? 'avatar-teacher' : ''}">${initial}</span>
+            <div class="user-info-text">
+              <strong class="user-display-name">${escapeHtml(user.name)}</strong>
+              <span class="${roleBadgeClass}">${roleText}</span>
+            </div>
+            <span class="user-dropdown-arrow">▾</span>
+          </button>
+          <div class="user-dropdown-menu" id="user-dropdown-menu" style="display:none;">
+            <div class="user-menu-header">
+              <b>${escapeHtml(user.name)}</b>
+              <small>@${escapeHtml(user.username)} · ${roleText}</small>
+            </div>
+            <button class="user-menu-item" id="menu-item-switch">🔄 Đổi tài khoản khác</button>
+            ${isAdm ? `<button class="user-menu-item" id="menu-item-stats">📊 Quản lý thống kê lớp</button>` : ''}
+            <button class="user-menu-item logout-item" id="menu-item-logout">🚪 Đăng xuất</button>
           </div>
-          <span class="user-dropdown-arrow">▾</span>
-        </button>
+        </div>
       `;
 
-      const btn = document.getElementById('btn-user-profile');
-      if (btn) {
-        btn.onclick = () => this.openModal('switch');
+      const btnProfile = document.getElementById('btn-user-profile');
+      const menu = document.getElementById('user-dropdown-menu');
+
+      if (btnProfile && menu) {
+        btnProfile.onclick = (e) => {
+          e.stopPropagation();
+          const isShown = menu.style.display === 'block';
+          menu.style.display = isShown ? 'none' : 'block';
+        };
+
+        const onDocClick = (e) => {
+          if (!e.target.closest('#user-dropdown-container')) {
+            if (menu) menu.style.display = 'none';
+          }
+        };
+        document.removeEventListener('click', onDocClick);
+        document.addEventListener('click', onDocClick);
+      }
+
+      const itemSwitch = document.getElementById('menu-item-switch');
+      if (itemSwitch) {
+        itemSwitch.onclick = () => {
+          if (menu) menu.style.display = 'none';
+          this.openModal('switch', true);
+        };
+      }
+
+      const itemStats = document.getElementById('menu-item-stats');
+      if (itemStats) {
+        itemStats.onclick = () => {
+          if (menu) menu.style.display = 'none';
+          if (typeof window !== 'undefined' && window.location) window.location.hash = '#stats';
+          this.renderStatsView();
+        };
+      }
+
+      const itemLogout = document.getElementById('menu-item-logout');
+      if (itemLogout) {
+        itemLogout.onclick = () => {
+          if (menu) menu.style.display = 'none';
+          this.logout();
+        };
       }
     },
 
-    // 5. Cửa sổ Modal Đăng nhập / Đăng ký / Chuyển tài khoản
-    openModal(initialTab = 'switch') {
+    // 7. Cửa sổ Modal Đăng nhập / Đăng ký / Chuyển tài khoản
+    openModal(initialTab = 'login', canClose = true) {
+      // Nếu chưa đăng nhập thì bắt buộc không được đóng modal
+      if (!this.isLoggedIn()) {
+        canClose = false;
+      }
+
       let modalRoot = document.getElementById('modal-root');
       if (!modalRoot) {
         modalRoot = document.createElement('div');
@@ -321,60 +527,43 @@
                 <span class="auth-brand-mark">✦</span>
                 <div>
                   <h3>TÀI KHOẢN HỌC TẬP</h3>
-                  <small>Đăng nhập, đăng ký hoặc chuyển đổi học sinh</small>
+                  <small>Đăng nhập, đăng ký hoặc chọn nhanh tài khoản</small>
                 </div>
               </div>
-              <button class="auth-close-btn" id="btn-close-auth">&times;</button>
+              ${canClose ? `<button class="auth-close-btn" id="btn-close-auth" title="Đóng">&times;</button>` : ''}
             </div>
 
             <div class="auth-tabs">
-              <button class="auth-tab ${initialTab === 'switch' ? 'active' : ''}" data-tab="switch">Chuyển tài khoản (${users.length})</button>
               <button class="auth-tab ${initialTab === 'login' ? 'active' : ''}" data-tab="login">Đăng nhập</button>
               <button class="auth-tab ${initialTab === 'register' ? 'active' : ''}" data-tab="register">Đăng ký mới</button>
-            </div>
-
-            <div class="auth-tab-content ${initialTab === 'switch' ? 'active' : ''}" id="tab-switch">
-              <p class="auth-subtitle">Chọn nhanh tài khoản học sinh hoặc giáo viên để lưu và theo dõi bài làm:</p>
-              <div class="user-select-list">
-                ${users.map(u => {
-                  const isCur = u.id === currentUser.id;
-                  const resCount = this.getUserResults(u.id).length;
-                  const uInit = (u.name || u.username).trim().charAt(0).toUpperCase();
-                  return `<div class="user-select-item ${isCur ? 'selected' : ''}" data-switch-id="${u.id}">
-                    <div class="user-item-left">
-                      <span class="avatar-circle small ${u.role === 'teacher' ? 'avatar-teacher' : ''}">${uInit}</span>
-                      <div>
-                        <strong>${u.name}</strong>
-                        <small>@${u.username} · ${u.role === 'teacher' ? '👨‍🏫 Giáo viên' : '👨‍🎓 Học sinh'} · <b>${resCount}</b> bài đã làm</small>
-                      </div>
-                    </div>
-                    <div class="user-item-right">
-                      ${isCur ? `<span class="badge-active-user">Đang dùng ✓</span>` : `<button class="secondary btn-switch-user" data-switch-id="${u.id}">Chọn ➔</button>`}
-                    </div>
-                  </div>`;
-                }).join('')}
-              </div>
+              <button class="auth-tab ${initialTab === 'switch' ? 'active' : ''}" data-tab="switch">Chọn nhanh tài khoản (${users.length})</button>
             </div>
 
             <div class="auth-tab-content ${initialTab === 'login' ? 'active' : ''}" id="tab-login">
               <form id="form-auth-login" class="auth-form">
                 <div class="form-group">
                   <label for="login-username">Tên đăng nhập</label>
-                  <input type="text" id="login-username" placeholder="Ví dụ: nguyenvanan, thaygiao..." required autocomplete="username">
+                  <input type="text" id="login-username" placeholder="Ví dụ: admin, thaygiao, nguyenvanan..." required autocomplete="username">
                 </div>
                 <div class="form-group">
                   <label for="login-password">Mật khẩu</label>
-                  <input type="password" id="login-password" placeholder="Nhập mật khẩu (mặc định 123)" required autocomplete="current-password">
+                  <input type="password" id="login-password" placeholder="Nhập mật khẩu (tài khoản mẫu: 123)" required autocomplete="current-password">
                 </div>
                 <div class="auth-error-msg" id="login-error-msg"></div>
                 <button type="submit" class="primary auth-submit-btn">Đăng nhập vào hệ thống ➔</button>
+                <div style="margin-top:12px;font-size:12px;color:#64748b;line-height:1.5;background:#f8fafc;padding:10px 14px;border-radius:8px;border:1px solid #e2e8f0;">
+                  💡 <b>Tài khoản mẫu có sẵn:</b><br>
+                  • <b>Admin:</b> <code>admin</code> (MK: <code>123</code>) · Toàn quyền xem thống kê lớp<br>
+                  • <b>Giáo viên:</b> <code>thaygiao</code> (MK: <code>123</code>)<br>
+                  • <b>Học sinh:</b> <code>nguyenvanan</code>, <code>tranthibinh</code>, <code>lequanghuy</code> (MK: <code>123</code>)
+                </div>
               </form>
             </div>
 
             <div class="auth-tab-content ${initialTab === 'register' ? 'active' : ''}" id="tab-register">
               <form id="form-auth-register" class="auth-form">
                 <div class="form-group">
-                  <label for="reg-name">Họ và tên học sinh / giáo viên</label>
+                  <label for="reg-name">Họ và tên</label>
                   <input type="text" id="reg-name" placeholder="Ví dụ: Hoàng Minh Đức" required>
                 </div>
                 <div class="form-group">
@@ -389,25 +578,53 @@
                   <label for="reg-role">Vai trò</label>
                   <select id="reg-role" class="auth-select">
                     <option value="student">👨‍🎓 Học sinh</option>
-                    <option value="teacher">👨‍🏫 Giáo viên / Quản trị viên</option>
+                    <option value="admin">👨‍💼 Quản trị viên (Admin) / Giáo viên</option>
                   </select>
                 </div>
                 <div class="auth-error-msg" id="reg-error-msg"></div>
                 <button type="submit" class="primary auth-submit-btn">Tạo tài khoản và bắt đầu học ➔</button>
               </form>
             </div>
+
+            <div class="auth-tab-content ${initialTab === 'switch' ? 'active' : ''}" id="tab-switch">
+              <p class="auth-subtitle">Bấm "Chọn" để trải nghiệm ngay với tài khoản mẫu:</p>
+              <div class="user-select-list">
+                ${users.map(u => {
+                  const isCur = currentUser && u.id === currentUser.id;
+                  const resCount = this.getUserResults(u.id).length;
+                  const uInit = (u.name || u.username).trim().charAt(0).toUpperCase();
+                  const isAdm = this.isAdmin(u);
+                  const roleBadge = isAdm ? (u.role === 'admin' ? 'Quản trị viên' : 'Giáo viên') : 'Học sinh';
+
+                  return `<div class="user-select-item ${isCur ? 'selected' : ''}" data-switch-id="${u.id}">
+                    <div class="user-item-left">
+                      <span class="avatar-circle small ${isAdm ? 'avatar-teacher' : ''}">${uInit}</span>
+                      <div>
+                        <strong>${escapeHtml(u.name)}</strong>
+                        <small>@${escapeHtml(u.username)} · <span class="role-badge ${isAdm ? 'admin' : 'student'}" style="display:inline-block;padding:1px 6px;font-size:10px;">${roleBadge}</span> · <b>${resCount}</b> bài đã làm</small>
+                      </div>
+                    </div>
+                    <div class="user-item-right">
+                      ${isCur ? `<span class="badge-active-user">Đang dùng ✓</span>` : `<button class="secondary btn-switch-user" data-switch-id="${u.id}">Chọn ➔</button>`}
+                    </div>
+                  </div>`;
+                }).join('')}
+              </div>
+            </div>
           </div>
         </div>
       `;
 
-      // Xử lý sự kiện đóng modal
-      const closeBtn = document.getElementById('btn-close-auth');
-      const overlay = document.getElementById('auth-modal-overlay');
-      if (closeBtn) closeBtn.onclick = () => this.closeModal();
-      if (overlay) {
-        overlay.onclick = (e) => {
-          if (e.target === overlay) this.closeModal();
-        };
+      // Xử lý sự kiện đóng modal (nếu được phép)
+      if (canClose) {
+        const closeBtn = document.getElementById('btn-close-auth');
+        const overlay = document.getElementById('auth-modal-overlay');
+        if (closeBtn) closeBtn.onclick = () => this.closeModal();
+        if (overlay) {
+          overlay.onclick = (e) => {
+            if (e.target === overlay) this.closeModal();
+          };
+        }
       }
 
       // Chuyển tab
@@ -424,7 +641,7 @@
 
       // Chuyển nhanh tài khoản
       modalRoot.querySelectorAll('[data-switch-id]').forEach(el => {
-        el.onclick = (e) => {
+        el.onclick = () => {
           const uid = el.dataset.switchId;
           const targetUser = users.find(x => x.id === uid);
           if (targetUser) {
@@ -443,9 +660,7 @@
           const u = document.getElementById('login-username').value;
           const p = document.getElementById('login-password').value;
           const res = this.login(u, p);
-          if (res.success) {
-            this.closeModal();
-          } else {
+          if (!res.success) {
             const err = document.getElementById('login-error-msg');
             if (err) err.textContent = res.message;
           }
@@ -462,9 +677,7 @@
           const p = document.getElementById('reg-password').value;
           const role = document.getElementById('reg-role').value;
           const res = this.register(name, u, p, role);
-          if (res.success) {
-            this.closeModal();
-          } else {
+          if (!res.success) {
             const err = document.getElementById('reg-error-msg');
             if (err) err.textContent = res.message;
           }
@@ -477,8 +690,14 @@
       if (modalRoot) modalRoot.innerHTML = '';
     },
 
-    // 6. Giao diện Thống kê Lớp học & Xem lịch sử bài làm của các tài khoản khác
+    // 8. Giao diện Thống kê Lớp học & Xem lịch sử bài làm của các tài khoản khác (DÀNH RIÊNG CHO ADMIN)
     renderStatsView(filterStudentId = null, filterSubject = null, searchQuery = '') {
+      if (!this.requireAuth('stats')) return;
+      if (!this.isAdmin()) {
+        this.renderAccessDenied();
+        return;
+      }
+
       const appEl = document.getElementById('app');
       if (!appEl) return;
 
@@ -487,7 +706,7 @@
       const currentUser = this.getCurrentUser();
 
       // Danh sách học sinh (hoặc tài khoản)
-      const students = users.filter(u => u.role !== 'teacher' || users.length === 1);
+      const students = users.filter(u => u.role !== 'teacher' && u.role !== 'admin');
       const displayAccounts = users; // hiển thị tất cả tài khoản để quản trị
 
       // Tính toán số liệu tổng quan
@@ -507,7 +726,6 @@
         selectedUser = users.find(u => u.id === filterStudentId);
       }
       if (!selectedUser && users.length > 0) {
-        // Mặc định chọn tài khoản hiện tại hoặc tài khoản đầu tiên
         selectedUser = currentUser || users[0];
       }
 
@@ -522,11 +740,12 @@
           <div class="page-heading">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
               <div>
+                <span class="eyebrow" style="background:#fef3c7;color:#b45309;border:none;">KHU VỰC QUẢN TRỊ VIÊN</span>
                 <h1>📊 Thống kê lớp học & Theo dõi làm bài</h1>
                 <p>Xem tổng quan tiến độ của cả lớp và tra cứu chi tiết lịch sử bài làm của từng học sinh.</p>
               </div>
               <div class="stats-top-actions">
-                <button class="secondary" id="btn-stats-switch-user">👤 Đổi tài khoản hiện tại (${currentUser.name})</button>
+                <button class="secondary" id="btn-stats-switch-user">👤 Đổi tài khoản (${escapeHtml(currentUser.name)})</button>
               </div>
             </div>
           </div>
@@ -587,6 +806,9 @@
                       const uResults = this.getUserResults(u.id);
                       const isSel = selectedUser && selectedUser.id === u.id;
                       const isCur = u.id === currentUser.id;
+                      const isAdm = this.isAdmin(u);
+                      const roleLabel = u.role === 'admin' ? 'Quản trị viên' : u.role === 'teacher' ? 'Giáo viên' : 'Học sinh';
+
                       let uPts = 0;
                       let uMax = 0;
                       let best = 0;
@@ -604,7 +826,7 @@
                         <tr class="${isSel ? 'row-selected' : ''}">
                           <td>
                             <div class="table-user-cell">
-                              <span class="avatar-circle small ${u.role === 'teacher' ? 'avatar-teacher' : ''}">${uInit}</span>
+                              <span class="avatar-circle small ${isAdm ? 'avatar-teacher' : ''}">${uInit}</span>
                               <div>
                                 <strong>${escapeHtml(u.name)}</strong>
                                 ${isCur ? `<span class="badge-cur-tag">Bạn</span>` : ''}
@@ -612,7 +834,7 @@
                               </div>
                             </div>
                           </td>
-                          <td><span class="role-badge ${u.role === 'teacher' ? 'teacher' : 'student'}">${u.role === 'teacher' ? 'Giáo viên' : 'Học sinh'}</span></td>
+                          <td><span class="role-badge ${isAdm ? 'admin' : 'student'}">${roleLabel}</span></td>
                           <td><b>${uResults.length}</b> / 38 đề</td>
                           <td><strong class="score-text-val">${uAvg}${uResults.length > 0 ? ' đ' : ''}</strong></td>
                           <td>${uResults.length > 0 ? `<span class="best-score-badge">🏅 ${best.toLocaleString('vi-VN')} đ</span>` : '—'}</td>
@@ -691,7 +913,7 @@
 
       // Gắn sự kiện cho các nút trong trang Thống kê
       const switchBtn = document.getElementById('btn-stats-switch-user');
-      if (switchBtn) switchBtn.onclick = () => this.openModal('switch');
+      if (switchBtn) switchBtn.onclick = () => this.openModal('switch', true);
 
       // Tìm kiếm học sinh
       const searchInput = document.getElementById('stats-search-input');
@@ -733,7 +955,7 @@
       });
     },
 
-    // 7. Xem lại bài làm của một học sinh cụ thể (giáo viên chấm và xem câu sai)
+    // 9. Xem lại bài làm của một học sinh cụ thể (giáo viên xem bài làm chi tiết)
     renderStudentReview(r, studentUser) {
       const e = (typeof exams !== 'undefined' && Array.isArray(exams)) ? exams.find(x => x.id === r.id) : null;
       const appEl = document.getElementById('app');
@@ -897,6 +1119,7 @@
       }
     }
   };
+
   function escapeHtml(str) {
     if (str === undefined || str === null) return '';
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -908,9 +1131,9 @@
 
   if (typeof document !== 'undefined') {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => auth.renderTopBarUser());
+      document.addEventListener('DOMContentLoaded', () => auth.updateUI());
     } else {
-      auth.renderTopBarUser();
+      auth.updateUI();
     }
   }
 

@@ -212,6 +212,7 @@ function tiles() {
 }
 
 function home() {
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('home')) return;
   const n = saved().length;
   app.innerHTML = `<div class="content">
     <section class="hero">
@@ -259,6 +260,7 @@ function home() {
 }
 
 function catalog(index) {
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('subjects')) return;
   let filtered = exams;
   let title = 'Kho đề thi';
   let subtitle = 'Chọn môn học và bộ đề để bắt đầu một lượt thi thử.';
@@ -299,6 +301,7 @@ function catalog(index) {
 }
 
 function history() {
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('history')) return;
   const items = saved();
   app.innerHTML = `<div class="content">
     <div class="page-heading">
@@ -320,6 +323,7 @@ function history() {
 }
 
 function startExam(id) {
+  if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('exam')) return;
   const e = exams.find(x => x.id === id);
   if (!e) return;
   const draft = localStorage.getItem('hoctap-draft');
