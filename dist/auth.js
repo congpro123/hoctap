@@ -13,8 +13,7 @@
 
   // Cấu hình Google Firebase Realtime Database (Đồng bộ thời gian thực đa trình duyệt, đa thiết bị)
   const FIREBASE_CONFIG = {
-    // URL mặc định hoặc người dùng có thể tùy chỉnh trong giao diện Admin
-    databaseURL: 'https://hoctap-tohop-tin-default-rtdb.asia-southeast1.firebasedatabase.app'
+    databaseURL: 'https://hoctap-b7d06-default-rtdb.asia-southeast1.firebasedatabase.app'
   };
 
   // Cloud Database Endpoints (REST API dự phòng cho web tĩnh GitHub Pages)
@@ -130,18 +129,26 @@
       const fbUrl = this.getFirebaseUrl();
       if (fbUrl) {
         try {
-          const currentUsers = (await this.fetchUsers()) || auth.getLocalUsers();
-          if (!currentUsers.some(u => u.username.toLowerCase() === newUser.username.toLowerCase())) {
-            currentUsers.push(newUser);
+          const remote = (await this.fetchUsers()) || [];
+          const local = auth.getLocalUsers();
+          const merged = [...local];
+          remote.forEach(ru => {
+            if (!merged.some(u => u.username.toLowerCase() === ru.username.toLowerCase())) {
+              merged.push(ru);
+            }
+          });
+          if (newUser && !merged.some(u => u.username.toLowerCase() === newUser.username.toLowerCase())) {
+            merged.push(newUser);
           }
           const res = await fetch(`${fbUrl}/users.json`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(currentUsers)
+            body: JSON.stringify(merged)
           });
           if (res.ok) {
             this.status = 'online';
             this.engine = 'firebase';
+            auth.saveLocalUsers(merged);
             return;
           }
         } catch (err) {
@@ -218,12 +225,18 @@
       const fbUrl = this.getFirebaseUrl();
       if (fbUrl) {
         try {
-          const currentResults = (await this.fetchResults()) || auth.getLocalResults();
-          const exists = currentResults.some(r => r.id === newResult.id && r.userId === newResult.userId && r.date === newResult.date);
-          if (!exists) {
-            currentResults.unshift(newResult);
+          const remote = (await this.fetchResults()) || [];
+          const local = auth.getLocalResults();
+          const merged = [...local];
+          remote.forEach(rr => {
+            if (!merged.some(lr => lr.id === rr.id && lr.userId === rr.userId && lr.date === rr.date)) {
+              merged.push(rr);
+            }
+          });
+          if (newResult && !merged.some(lr => lr.id === newResult.id && lr.userId === newResult.userId && lr.date === newResult.date)) {
+            merged.unshift(newResult);
           }
-          const trimmed = currentResults.slice(0, 500);
+          const trimmed = merged.slice(0, 500);
           const res = await fetch(`${fbUrl}/results.json`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -232,6 +245,7 @@
           if (res.ok) {
             this.status = 'online';
             this.engine = 'firebase';
+            auth.saveLocalResults(trimmed);
             return;
           }
         } catch (err) {
@@ -622,6 +636,38 @@
         }
         else if (typeof home === 'function') home();
       }
+    },
+
+    // Đồng bộ tự động trong nền từ Firebase / Cloud Database khi mở trang
+    async syncFromCloudSilently() {
+      try {
+        const [cloudUsers, cloudResults] = await Promise.all([
+          CloudDB.fetchUsers(),
+          CloudDB.fetchResults()
+        ]);
+        if (cloudUsers && Array.isArray(cloudUsers)) {
+          const local = this.getLocalUsers();
+          let changed = false;
+          cloudUsers.forEach(cu => {
+            if (!local.some(lu => lu.username.toLowerCase() === cu.username.toLowerCase())) {
+              local.push(cu);
+              changed = true;
+            }
+          });
+          if (changed) this.saveLocalUsers(local);
+        }
+        if (cloudResults && Array.isArray(cloudResults)) {
+          const localR = this.getLocalResults();
+          let changedR = false;
+          cloudResults.forEach(cr => {
+            if (!localR.some(lr => lr.id === cr.id && lr.userId === cr.userId && lr.date === cr.date)) {
+              localR.push(cr);
+              changedR = true;
+            }
+          });
+          if (changedR) this.saveLocalResults(localR);
+        }
+      } catch (_) {}
     },
 
     updateUI() {
@@ -1524,10 +1570,14 @@
 
   // Khởi tạo
   auth.getLocalUsers();
+  auth.syncFromCloudSilently();
 
   if (typeof document !== 'undefined') {
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => auth.updateUI());
+      document.addEventListener('DOMContentLoaded', () => {
+        auth.updateUI();
+        auth.syncFromCloudSilently();
+      });
     } else {
       auth.updateUI();
     }
