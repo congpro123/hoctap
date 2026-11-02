@@ -15,30 +15,30 @@ const suppliedExams = [
       [
         "Trong các câu dưới đây, câu nào là một mệnh đề toán học?",
         [
-          "A. Hôm nay trời tại Khe Sanh đẹp quá!",
-          "B. Số 17 là một số nguyên tố.",
+          "A. Số 17 là một số nguyên tố.",
+          "B. Hãy cố gắng đạt điểm cao nhé!",
           "C. Bạn đã làm bài tập Toán chưa?",
-          "D. Hãy cố gắng đạt điểm cao nhé!"
+          "D. Hôm nay trời tại Khe Sanh đẹp quá!"
         ],
-        1,
-        "Câu B là khẳng định có tính đúng (vì 17 chỉ chia hết cho 1 và 17); các câu A, C, D là câu cảm thán, nghi vấn, cầu khiến nên không phải mệnh đề."
+        0,
+        "\"Số 17 là một số nguyên tố\" là khẳng định có tính đúng (vì 17 chỉ chia hết cho 1 và 17); các câu A, C, D là câu cảm thán, nghi vấn, cầu khiến nên không phải mệnh đề."
       ],
       [
         "Cho mệnh đề P: \"&forall;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &gt; 0\". Mệnh đề phủ định của mệnh đề P là:",
         [
-          "A. &forall;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &le; 0.",
-          "B. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &lt; 0.",
-          "C. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &le; 0.",
-          "D. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 = 0."
+          "A. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &lt; 0.",
+          "B. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &le; 0.",
+          "C. &exist;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 = 0.",
+          "D. &forall;x &isin; <b>R</b>, x<sup>2</sup> + 2x + 3 &le; 0."
         ],
-        2,
+        1,
         "Phủ định của lượng từ &forall; là &exist;, và phủ định của quan hệ \"&gt;\" là \"&le;\"."
       ],
       [
         "Cho tập hợp A = {x &isin; <b>R</b> | -2 &le; x &lt; 5}. Tập hợp A viết dưới dạng nửa khoảng là:",
         [
-          "A. (-2; 5).",
-          "B. [-2; 5].",
+          "A. [-2; 5].",
+          "B. (-2; 5).",
           "C. (-2; 5].",
           "D. [-2; 5)."
         ],
@@ -48,30 +48,30 @@ const suppliedExams = [
       [
         "Cho hai tập hợp A = {-1; 0; 2; 4; 6} và B = {0; 2; 3; 5}. Tập hợp A &cap; B là:",
         [
-          "A. {0; 2}.",
-          "B. {-1; 4; 6}.",
-          "C. {-1; 0; 2; 3; 4; 5; 6}.",
-          "D. {3; 5}."
+          "A. {3; 5}.",
+          "B. {0; 2}.",
+          "C. {-1; 4; 6}.",
+          "D. {-1; 0; 2; 3; 4; 5; 6}."
         ],
-        0,
+        1,
         "Giao của hai tập hợp A &cap; B gồm các phần tử thuộc cả A và B, đó là {0; 2}."
       ],
       [
         "Bất phương trình nào dưới đây là bất phương trình bậc nhất hai ẩn x, y?",
         [
-          "A. 2x<sup>2</sup> - 3y &gt; 5.",
-          "B. 3x - 2y + 4 &le; 0.",
+          "A. 3x - 2y + 4 &le; 0.",
+          "B. xy + 2x &lt; 3.",
           "C. x + y<sup>2</sup> &ge; 1.",
-          "D. xy + 2x &lt; 3."
+          "D. 2x<sup>2</sup> - 3y &gt; 5."
         ],
-        1,
+        0,
         "BPT bậc nhất hai ẩn có dạng ax + by + c &le; 0 (với a, b không đồng thời bằng 0, bậc của x và y đều là bậc 1)."
       ],
       [
         "Cặp số (x; y) nào sau đây là một nghiệm của bất phương trình 2x - y + 1 &gt; 0?",
         [
-          "A. (0; 2).",
-          "B. (1; 4).",
+          "A. (1; 4).",
+          "B. (0; 2).",
           "C. (2; 3).",
           "D. (-1; 0)."
         ],
@@ -81,20 +81,20 @@ const suppliedExams = [
       [
         "Điểm M(1; -1) thuộc miền nghiệm của hệ bất phương trình nào dưới đây?",
         [
-          "A. {x + y &gt; 2 ; 2x - y &le; 3}.",
-          "B. {x - y &ge; 1 ; 2x + y &gt; 0}.",
-          "C. {x + 2y &gt; 0 ; x - y &lt; 5}.",
+          "A. {x + 2y &gt; 0 ; x - y &lt; 5}.",
+          "B. {x + y &gt; 2 ; 2x - y &le; 3}.",
+          "C. {x - y &ge; 1 ; 2x + y &gt; 0}.",
           "D. {3x + y &le; 0 ; x - 2y &ge; 1}."
         ],
-        1,
+        2,
         "Thay x = 1, y = -1 vào hệ B: 1 - (-1) = 2 &ge; 1 (đúng) và 2(1) + (-1) = 1 &gt; 0 (đúng)."
       ],
       [
         "Miền nghiệm của bất phương trình 3x + 2y &le; 6 chứa điểm nào sau đây?",
         [
           "A. O(0; 0).",
-          "B. A(2; 2).",
-          "C. B(3; 1).",
+          "B. B(3; 1).",
+          "C. A(2; 2).",
           "D. C(1; 3)."
         ],
         0,
@@ -103,45 +103,45 @@ const suppliedExams = [
       [
         "Với góc &alpha; thỏa mãn 0&deg; &le; &alpha; &le; 180&deg;, đẳng thức nào sau đây đúng?",
         [
-          "A. sin(180&deg; - &alpha;) = -sin&alpha;.",
-          "B. cos(180&deg; - &alpha;) = cos&alpha;.",
-          "C. sin(180&deg; - &alpha;) = sin&alpha;.",
+          "A. cos(180&deg; - &alpha;) = cos&alpha;.",
+          "B. sin(180&deg; - &alpha;) = sin&alpha;.",
+          "C. sin(180&deg; - &alpha;) = -sin&alpha;.",
           "D. tan(180&deg; - &alpha;) = tan&alpha;."
         ],
-        2,
+        1,
         "Hai góc bù nhau (&alpha; và 180&deg; - &alpha;) có sin bằng nhau: sin(180&deg; - &alpha;) = sin&alpha;, còn cos, tan, cot đối nhau."
       ],
       [
         "Cho tam giác ABC có BC = a, AC = b, AB = c. Định lí côsin trong tam giác ABC là:",
         [
-          "A. a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> + 2bc.cosA.",
-          "B. a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA.",
-          "C. a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - bc.cosA.",
-          "D. a<sup>2</sup> = b<sup>2</sup> - c<sup>2</sup> + 2bc.cosA."
+          "A. a<sup>2</sup> = b<sup>2</sup> - c<sup>2</sup> + 2bc.cosA.",
+          "B. a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - bc.cosA.",
+          "C. a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA.",
+          "D. a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> + 2bc.cosA."
         ],
-        1,
+        2,
         "Theo định lí côsin trong tam giác ABC: a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA."
       ],
       [
         "Cho tam giác ABC có b = 6, c = 8 và góc A = 60&deg;. Diện tích S của tam giác ABC bằng:",
         [
-          "A. 24&radic;3.",
-          "B. 12.",
-          "C. 12&radic;3.",
-          "D. 24."
+          "A. 24.",
+          "B. 24&radic;3.",
+          "C. 12.",
+          "D. 12&radic;3."
         ],
-        2,
+        3,
         "Áp dụng công thức S = 1/2 . b . c . sinA = 1/2 . 6 . 8 . sin60&deg; = 24 . (&radic;3 / 2) = 12&radic;3."
       ],
       [
         "Cho tam giác ABC có cạnh a = 10 và góc A = 30&deg;. Bán kính đường tròn ngoại tiếp R bằng:",
         [
-          "A. 5.",
-          "B. 10.",
-          "C. 10&radic;3.",
-          "D. 20."
+          "A. 20.",
+          "B. 10&radic;3.",
+          "C. 5.",
+          "D. 10."
         ],
-        1,
+        3,
         "Theo định lí sin: a / sinA = 2R &rArr; R = a / (2sinA) = 10 / (2 . sin30&deg;) = 10 / (2 . 0,5) = 10."
       ]
     ],
@@ -251,33 +251,33 @@ const suppliedExams = [
         "Mệnh đề nào sau đây là mệnh đề đúng?",
         [
           "A. &forall;n &isin; <b>N</b>, n<sup>2</sup> + 1 chia hết cho 3.",
-          "B. &exist;x &isin; <b>R</b>, x<sup>2</sup> - 4 = 0.",
-          "C. &forall;x &isin; <b>R</b>, x<sup>2</sup> &gt; 0.",
-          "D. Số &pi; là một số hữu tỉ."
+          "B. Số &pi; là một số hữu tỉ.",
+          "C. &exist;x &isin; <b>R</b>, x<sup>2</sup> - 4 = 0.",
+          "D. &forall;x &isin; <b>R</b>, x<sup>2</sup> &gt; 0."
         ],
-        1,
-        "Phương trình x<sup>2</sup> - 4 = 0 có nghiệm thực x = &plusmn;2 nên mệnh đề tồn tại ở câu B là mệnh đề đúng."
+        2,
+        "Phương trình x<sup>2</sup> - 4 = 0 có nghiệm thực x = &plusmn;2 nên mệnh đề \"∃x ∈ ℝ, x² - 4 = 0\" là mệnh đề đúng."
       ],
       [
         "Cho hai mệnh đề P: \"Tứ giác ABCD là hình chữ nhật\" và Q: \"Tứ giác ABCD có hai đường chéo bằng nhau\". Mệnh đề đảo của mệnh đề P &rArr; Q là:",
         [
-          "A. Nếu tứ giác ABCD không có hai đường chéo bằng nhau thì nó không là hình chữ nhật.",
-          "B. Nếu tứ giác ABCD có hai đường chéo bằng nhau thì tứ giác ABCD là hình chữ nhật.",
-          "C. Tứ giác ABCD là hình chữ nhật khi và chỉ khi có hai đường chéo bằng nhau.",
-          "D. Nếu tứ giác ABCD là hình chữ nhật thì nó có hai đường chéo bằng nhau."
+          "A. Tứ giác ABCD là hình chữ nhật khi và chỉ khi có hai đường chéo bằng nhau.",
+          "B. Nếu tứ giác ABCD không có hai đường chéo bằng nhau thì nó không là hình chữ nhật.",
+          "C. Nếu tứ giác ABCD là hình chữ nhật thì nó có hai đường chéo bằng nhau.",
+          "D. Nếu tứ giác ABCD có hai đường chéo bằng nhau thì tứ giác ABCD là hình chữ nhật."
         ],
-        1,
+        3,
         "Mệnh đề đảo của P &rArr; Q là Q &rArr; P."
       ],
       [
         "Số tập hợp con của tập hợp X = {a; b; c} là:",
         [
-          "A. 3.",
-          "B. 6.",
-          "C. 8.",
-          "D. 9."
+          "A. 8.",
+          "B. 9.",
+          "C. 3.",
+          "D. 6."
         ],
-        2,
+        0,
         "Tập hợp có n = 3 phần tử thì số tập hợp con là 2<sup>3</sup> = 8."
       ],
       [
@@ -285,8 +285,8 @@ const suppliedExams = [
         [
           "A. (1; 3].",
           "B. (-&infin;; 5].",
-          "C. (-&infin;; 1].",
-          "D. (3; 5]."
+          "C. (3; 5].",
+          "D. (-&infin;; 1]."
         ],
         1,
         "Hợp của (-&infin;; 3] và (1; 5] trên trục số là (-&infin;; 5]."
@@ -295,31 +295,31 @@ const suppliedExams = [
         "Cặp số nào sau đây KHÔNG thuộc miền nghiệm của bất phương trình x + 3y - 5 &le; 0?",
         [
           "A. (1; 1).",
-          "B. (0; 0).",
-          "C. (2; 2).",
-          "D. (-1; 2)."
+          "B. (-1; 2).",
+          "C. (0; 0).",
+          "D. (2; 2)."
         ],
-        2,
+        3,
         "Thay (2; 2) vào vế trái: 2 + 3(2) - 5 = 3 &gt; 0 (không thỏa mãn &le; 0)."
       ],
       [
         "Đường thẳng d: 2x - y = 4 chia mặt phẳng tọa độ thành hai nửa mặt phẳng. Miền nghiệm của bất phương trình 2x - y &lt; 4 (không kể bờ d) chứa điểm nào?",
         [
-          "A. (3; 1).",
-          "B. (0; 0).",
-          "C. (4; 2).",
-          "D. (2; -1)."
+          "A. (0; 0).",
+          "B. (4; 2).",
+          "C. (2; -1).",
+          "D. (3; 1)."
         ],
-        1,
+        0,
         "Thay O(0; 0) vào 2x - y &lt; 4: 0 &lt; 4 (đúng)."
       ],
       [
         "Cho hệ bất phương trình {x &ge; 0 ; y &ge; 0 ; x + y &le; 4}. Diện tích miền nghiệm của hệ bất phương trình trên mặt phẳng tọa độ Oxy bằng:",
         [
-          "A. 4.",
+          "A. 16.",
           "B. 8.",
-          "C. 16.",
-          "D. 12."
+          "C. 12.",
+          "D. 4."
         ],
         1,
         "Miền nghiệm là tam giác vuông cân OAB với O(0; 0), A(4; 0), B(0; 4), có diện tích S = 1/2 . OA . OB = 1/2 . 4 . 4 = 8."
@@ -327,56 +327,56 @@ const suppliedExams = [
       [
         "Giá trị của biểu thức M = sin30&deg;.cos60&deg; + sin60&deg;.cos30&deg; bằng:",
         [
-          "A. 0.",
-          "B. 1/2.",
-          "C. &radic;3/2.",
-          "D. 1."
+          "A. 1/2.",
+          "B. &radic;3/2.",
+          "C. 1.",
+          "D. 0."
         ],
-        3,
+        2,
         "Ta có sin30&deg;.cos60&deg; + sin60&deg;.cos30&deg; = (1/2).(1/2) + (&radic;3/2).(&radic;3/2) = 1/4 + 3/4 = 1."
       ],
       [
         "Cho tam giác ABC có a = 7, b = 8, c = 5. Số đo góc A của tam giác ABC bằng:",
         [
-          "A. 30&deg;.",
-          "B. 45&deg;.",
-          "C. 60&deg;.",
-          "D. 120&deg;."
+          "A. 120&deg;.",
+          "B. 60&deg;.",
+          "C. 45&deg;.",
+          "D. 30&deg;."
         ],
-        2,
+        1,
         "cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (2bc) = (64 + 25 - 49) / (2.8.5) = 40 / 80 = 1/2 &rArr; A = 60&deg;."
       ],
       [
         "Cho tam giác ABC có góc B = 45&deg;, góc C = 60&deg; và cạnh b = 10. Độ dài cạnh c bằng:",
         [
-          "A. 5&radic;6.",
+          "A. 5&radic;2.",
           "B. 10&radic;3.",
-          "C. 5&radic;2.",
-          "D. 10&radic;6."
+          "C. 10&radic;6.",
+          "D. 5&radic;6."
         ],
-        0,
+        3,
         "Theo định lí sin: c / sinC = b / sinB &rArr; c = 10 . sin60&deg; / sin45&deg; = 10 . (&radic;3/2) / (&radic;2/2) = 5&radic;6."
       ],
       [
         "Tam giác ABC có ba cạnh a = 13, b = 14, c = 15. Diện tích của tam giác ABC bằng:",
         [
-          "A. 42.",
-          "B. 84.",
-          "C. 168.",
+          "A. 168.",
+          "B. 42.",
+          "C. 84.",
           "D. 72."
         ],
-        1,
+        2,
         "Nửa chu vi p = (13 + 14 + 15)/2 = 21. Công thức Heron: S = &radic;(21.(21-13).(21-14).(21-15)) = &radic;(21.8.7.6) = 84."
       ],
       [
         "Cho tam giác ABC có diện tích S = 84 và nửa chu vi p = 21. Bán kính đường tròn nội tiếp r của tam giác ABC bằng:",
         [
-          "A. 2.",
+          "A. 4.",
           "B. 3.",
-          "C. 4.",
+          "C. 2.",
           "D. 6."
         ],
-        2,
+        0,
         "Ta có S = p.r &rArr; r = S / p = 84 / 21 = 4."
       ]
     ],
@@ -485,67 +485,67 @@ const suppliedExams = [
       [
         "Cho mệnh đề chứa biến P(n): \"n<sup>2</sup> - 1 chia hết cho 4\" với n là số nguyên. Mệnh đề nào dưới đây đúng?",
         [
-          "A. P(2).",
-          "B. P(3).",
-          "C. P(4).",
-          "D. P(0)."
+          "A. P(3).",
+          "B. P(0).",
+          "C. P(2).",
+          "D. P(4)."
         ],
-        1,
+        0,
         "Thay n = 3: 3<sup>2</sup> - 1 = 8 chia hết cho 4 nên P(3) đúng."
       ],
       [
         "Cách phát biểu nào sau đây KHÔNG dùng để phát biểu mệnh đề P &rArr; Q?",
         [
-          "A. P là điều kiện đủ để có Q.",
-          "B. Q là điều kiện cần để có P.",
-          "C. P khi và chỉ khi Q.",
-          "D. Nếu P thì Q."
+          "A. Nếu P thì Q.",
+          "B. P khi và chỉ khi Q.",
+          "C. P là điều kiện đủ để có Q.",
+          "D. Q là điều kiện cần để có P."
         ],
-        2,
+        1,
         "\"P khi và chỉ khi Q\" là mệnh đề tương đương P &hArr; Q, không phải mệnh đề kéo theo P &rArr; Q."
       ],
       [
         "Liệt kê các phần tử của tập hợp A = {x &isin; <b>Z</b> | 2x<sup>2</sup> - 5x + 2 = 0} ta được:",
         [
-          "A. A = {2}.",
+          "A. A = {1; 2}.",
           "B. A = {1/2; 2}.",
-          "C. A = {1; 2}.",
-          "D. A = &empty;."
+          "C. A = &empty;.",
+          "D. A = {2}."
         ],
-        0,
+        3,
         "Giải 2x<sup>2</sup> - 5x + 2 = 0 &hArr; x = 2 (&isin; <b>Z</b>) hoặc x = 1/2 (&notin; <b>Z</b>). Vậy A = {2}."
       ],
       [
         "Cho tập hợp M = (-3; 2]. Phần bù của M trong <b>R</b> là C<sub><b>R</b></sub>M bằng:",
         [
-          "A. (-&infin;; -3) &cup; (2; +&infin;).",
-          "B. (-&infin;; -3] &cup; (2; +&infin;).",
-          "C. (-&infin;; -3] &cup; [2; +&infin;).",
-          "D. (-&infin;; -3) &cup; [2; +&infin;)."
+          "A. (-&infin;; -3] &cup; [2; +&infin;).",
+          "B. (-&infin;; -3) &cup; [2; +&infin;).",
+          "C. (-&infin;; -3] &cup; (2; +&infin;).",
+          "D. (-&infin;; -3) &cup; (2; +&infin;)."
         ],
-        1,
+        2,
         "Vì -3 &notin; M nên -3 &isin; C<sub><b>R</b></sub>M; vì 2 &isin; M nên 2 &notin; C<sub><b>R</b></sub>M. Do đó C<sub><b>R</b></sub>M = (-&infin;; -3] &cup; (2; +&infin;)."
       ],
       [
         "Bất phương trình x - 2y + 4 &ge; 0 có miền nghiệm là nửa mặt phẳng bờ d: x - 2y + 4 = 0 chứa điểm nào?",
         [
-          "A. (-5; 0).",
+          "A. (-2; 2).",
           "B. (0; 3).",
-          "C. (1; 1).",
-          "D. (-2; 2)."
+          "C. (-5; 0).",
+          "D. (1; 1)."
         ],
-        2,
+        3,
         "Thay (1; 1) vào x - 2y + 4: 1 - 2 + 4 = 3 &ge; 0 (thỏa mãn)."
       ],
       [
         "Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?",
         [
-          "A. {x + y &ge; 1 ; x<sup>2</sup> - y &le; 2}.",
-          "B. {2x - 3y &lt; 5 ; x + 4y &ge; 0}.",
-          "C. {xy &gt; 1 ; x - y &lt; 2}.",
-          "D. {x + y = 2 ; 2x - y = 1}."
+          "A. {2x - 3y &lt; 5 ; x + 4y &ge; 0}.",
+          "B. {xy &gt; 1 ; x - y &lt; 2}.",
+          "C. {x + y = 2 ; 2x - y = 1}.",
+          "D. {x + y &ge; 1 ; x<sup>2</sup> - y &le; 2}."
         ],
-        1,
+        0,
         "Cả hai bất phương trình trong hệ B đều có dạng bậc nhất hai ẩn."
       ],
       [
@@ -562,10 +562,10 @@ const suppliedExams = [
       [
         "Cho góc &alpha; = 135&deg;. Khẳng định nào sau đây đúng?",
         [
-          "A. sin135&deg; = -&radic;2/2.",
+          "A. cot135&deg; = 1.",
           "B. cos135&deg; = &radic;2/2.",
           "C. tan135&deg; = -1.",
-          "D. cot135&deg; = 1."
+          "D. sin135&deg; = -&radic;2/2."
         ],
         2,
         "Góc 135&deg; bù với 45&deg; nên tan135&deg; = -tan45&deg; = -1."
@@ -573,45 +573,45 @@ const suppliedExams = [
       [
         "Trong tam giác ABC, hệ thức nào sau đây SAI?",
         [
-          "A. a / sinA = 2R.",
-          "B. sinA = a / (2R).",
-          "C. b = 2R.sinB.",
-          "D. c = R.sinC."
+          "A. c = R.sinC.",
+          "B. b = 2R.sinB.",
+          "C. a / sinA = 2R.",
+          "D. sinA = a / (2R)."
         ],
-        3,
+        0,
         "Theo định lí sin: c = 2R.sinC nên D sai."
       ],
       [
         "Cho tam giác ABC có a = 4, b = 5, c = 6. Giá trị của cosC bằng:",
         [
-          "A. 1/8.",
-          "B. 3/4.",
+          "A. 3/4.",
+          "B. -1/8.",
           "C. 9/16.",
-          "D. -1/8."
+          "D. 1/8."
         ],
-        0,
+        3,
         "cosC = (a<sup>2</sup> + b<sup>2</sup> - c<sup>2</sup>) / (2ab) = (16 + 25 - 36) / (2.4.5) = 5 / 40 = 1/8."
       ],
       [
         "Tam giác đều ABC có cạnh bằng 2a. Diện tích của tam giác ABC là:",
         [
-          "A. a<sup>2</sup>&radic;3.",
-          "B. a<sup>2</sup>&radic;3 / 4.",
+          "A. a<sup>2</sup>&radic;3 / 2.",
+          "B. a<sup>2</sup>&radic;3.",
           "C. 2a<sup>2</sup>&radic;3.",
-          "D. a<sup>2</sup>&radic;3 / 2."
+          "D. a<sup>2</sup>&radic;3 / 4."
         ],
-        0,
+        1,
         "Diện tích tam giác đều cạnh X là X<sup>2</sup>&radic;3 / 4 = (2a)<sup>2</sup>&radic;3 / 4 = a<sup>2</sup>&radic;3."
       ],
       [
         "Cho tam giác ABC có AB = 3, AC = 4, góc A = 90&deg;. Bán kính đường tròn nội tiếp r của tam giác ABC bằng:",
         [
-          "A. 1.",
-          "B. 1,5.",
+          "A. 1,5.",
+          "B. 1.",
           "C. 2.",
           "D. 2,5."
         ],
-        0,
+        1,
         "Tam giác vuông có cạnh huyền BC = 5, nửa chu vi p = (3+4+5)/2 = 6, diện tích S = 6 &rArr; r = S/p = 1."
       ]
     ],
@@ -660,9 +660,9 @@ const suppliedExams = [
             "a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA = 49 + 25 - 2.7.5.(3/5) = 32 &rArr; a = 4&radic;2."
           ],
           [
-            "d) Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 5&radic;2 / 2.",
-            true,
-            "R = a / (2sinA) = 4&radic;2 / (2 . 4/5) = 5&radic;2 / 2."
+            "d) Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng 10.",
+            false,
+            "R = a / (2sinA) = (4√2) / (2 · 4/5) = 5√2 / 2 ≈ 3,54 (không phải 10)."
           ]
         ]
       }
@@ -720,21 +720,21 @@ const suppliedExams = [
       [
         "Cho mệnh đề P: \"&exist;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 = 0\". Mệnh đề này đúng hay sai và phủ định của nó là gì?",
         [
-          "A. P đúng; <span style=\"text-decoration:overline;\">P</span>: \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\".",
-          "B. P sai; <span style=\"text-decoration:overline;\">P</span>: \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\".",
+          "A. P đúng; <span style=\"text-decoration:overline;\">P</span>: \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 = 0\".",
+          "B. P đúng; <span style=\"text-decoration:overline;\">P</span>: \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\".",
           "C. P sai; <span style=\"text-decoration:overline;\">P</span>: \"&exist;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\".",
-          "D. P đúng; <span style=\"text-decoration:overline;\">P</span>: \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 = 0\"."
+          "D. P sai; <span style=\"text-decoration:overline;\">P</span>: \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\"."
         ],
-        1,
+        3,
         "Vì x = &plusmn;&radic;(5/2) &notin; <b>Q</b> nên P sai, và phủ định là \"&forall;x &isin; <b>Q</b>, 2x<sup>2</sup> - 5 &ne; 0\"."
       ],
       [
         "Cho tập hợp A = {x &isin; <b>N</b> | x là ước của 12}. Số phần tử của tập hợp A là:",
         [
-          "A. 4.",
+          "A. 12.",
           "B. 5.",
           "C. 6.",
-          "D. 12."
+          "D. 4."
         ],
         2,
         "Các ước tự nhiên của 12 là {1; 2; 3; 4; 6; 12}, gồm 6 phần tử."
@@ -742,78 +742,78 @@ const suppliedExams = [
       [
         "Cho hai tập hợp A = [-4; 1] và B = [-2; 5). Tập hợp A \\ B là:",
         [
-          "A. [-4; -2).",
-          "B. [-4; -2].",
-          "C. (1; 5).",
-          "D. [-2; 1]."
+          "A. (1; 5).",
+          "B. [-2; 1].",
+          "C. [-4; -2].",
+          "D. [-4; -2)."
         ],
-        0,
+        3,
         "Những phần tử thuộc [-4; 1] nhưng không thuộc [-2; 5) là [-4; -2)."
       ],
       [
         "Trong các tập hợp sau, tập hợp nào là tập hợp rỗng?",
         [
           "A. {x &isin; <b>Z</b> | |x| &lt; 1}.",
-          "B. {x &isin; <b>R</b> | x<sup>2</sup> + x + 1 = 0}.",
-          "C. {x &isin; <b>Q</b> | x<sup>2</sup> - 4 = 0}.",
-          "D. {x &isin; <b>N</b> | 2x - 4 = 0}."
+          "B. {x &isin; <b>N</b> | 2x - 4 = 0}.",
+          "C. {x &isin; <b>R</b> | x<sup>2</sup> + x + 1 = 0}.",
+          "D. {x &isin; <b>Q</b> | x<sup>2</sup> - 4 = 0}."
         ],
-        1,
-        "Phương trình x<sup>2</sup> + x + 1 = (x + 1/2)<sup>2</sup> + 3/4 = 0 vô nghiệm thực nên tập hợp ở câu B rỗng."
+        2,
+        "Phương trình x<sup>2</sup> + x + 1 = (x + 1/2)<sup>2</sup> + 3/4 = 0 vô nghiệm thực nên tập hợp {x ∈ ℝ | x² + x + 1 = 0} là tập rỗng."
       ],
       [
         "Miền nghiệm của bất phương trình x + y &le; 2 là phần mặt phẳng chứa điểm nào?",
         [
-          "A. (2; 1).",
-          "B. (1; 2).",
-          "C. (0; 0).",
-          "D. (3; 0)."
+          "A. (3; 0).",
+          "B. (0; 0).",
+          "C. (1; 2).",
+          "D. (2; 1)."
         ],
-        2,
+        1,
         "Thay (0; 0) vào BPT: 0 + 0 = 0 &le; 2 (đúng)."
       ],
       [
         "Một cửa hàng bán áo sơ mi (giá lãi 50 nghìn đồng/chiếc) và quần âu (giá lãi 80 nghìn đồng/chiếc). Gọi x, y lần lượt là số áo và số quần bán được trong ngày. Bất phương trình biểu thị tổng tiền lãi trong ngày đạt ít nhất 1 200 nghìn đồng là:",
         [
-          "A. 5x + 8y &le; 120.",
-          "B. 5x + 8y &ge; 120.",
-          "C. 8x + 5y &ge; 120.",
+          "A. 5x + 8y &ge; 120.",
+          "B. 8x + 5y &ge; 120.",
+          "C. 5x + 8y &le; 120.",
           "D. 50x + 80y &lt; 1200."
         ],
-        1,
+        0,
         "Tổng lãi 50x + 80y &ge; 1200 &hArr; 5x + 8y &ge; 120."
       ],
       [
         "Điểm nào sau đây thuộc miền nghiệm của hệ {2x - y &ge; 1 ; x + 3y &le; 6}?",
         [
           "A. (0; 0).",
-          "B. (2; 1).",
-          "C. (1; 3).",
-          "D. (-1; 2)."
+          "B. (1; 3).",
+          "C. (-1; 2).",
+          "D. (2; 1)."
         ],
-        1,
+        3,
         "Thay (2; 1): 2(2) - 1 = 3 &ge; 1 (đúng) và 2 + 3(1) = 5 &le; 6 (đúng)."
       ],
       [
         "Giá trị của cos150&deg; bằng:",
         [
-          "A. &radic;3/2.",
-          "B. -&radic;3/2.",
-          "C. 1/2.",
-          "D. -1/2."
+          "A. -&radic;3/2.",
+          "B. -1/2.",
+          "C. &radic;3/2.",
+          "D. 1/2."
         ],
-        1,
+        0,
         "cos150&deg; = -cos30&deg; = -&radic;3/2."
       ],
       [
         "Trong tam giác ABC, nếu a<sup>2</sup> &gt; b<sup>2</sup> + c<sup>2</sup> thì góc A là:",
         [
-          "A. Góc nhọn.",
+          "A. Góc tù.",
           "B. Góc vuông.",
-          "C. Góc tù.",
-          "D. Góc bẹt."
+          "C. Góc bẹt.",
+          "D. Góc nhọn."
         ],
-        2,
+        0,
         "Vì cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>)/(2bc) &lt; 0 nên góc A &gt; 90&deg; (góc tù)."
       ],
       [
@@ -830,23 +830,23 @@ const suppliedExams = [
       [
         "Cho tam giác ABC có góc A = 60&deg;, góc B = 45&deg;, BC = 6&radic;3. Độ dài cạnh AC bằng:",
         [
-          "A. 6&radic;2.",
-          "B. 6.",
-          "C. 3&radic;6.",
-          "D. 4&radic;3."
+          "A. 4&radic;3.",
+          "B. 6&radic;2.",
+          "C. 6.",
+          "D. 3&radic;6."
         ],
-        0,
+        1,
         "Theo định lí sin: AC / sinB = BC / sinA &rArr; AC = 6&radic;3 . (&radic;2/2) / (&radic;3/2) = 6&radic;2."
       ],
       [
         "Bán kính đường tròn ngoại tiếp tam giác đều cạnh a = 6 bằng:",
         [
-          "A. &radic;3.",
-          "B. 2&radic;3.",
-          "C. 3&radic;3.",
-          "D. 6."
+          "A. 6.",
+          "B. 3&radic;3.",
+          "C. 2&radic;3.",
+          "D. &radic;3."
         ],
-        1,
+        2,
         "R = a / (2sin60&deg;) = 6 / &radic;3 = 2&radic;3."
       ]
     ],
@@ -957,8 +957,8 @@ const suppliedExams = [
         [
           "A. Đúng.",
           "B. Sai, phản ví dụ a = 2, b = 3.",
-          "C. Không phải mệnh đề.",
-          "D. Tương đương với mệnh đề đảo."
+          "C. Tương đương với mệnh đề đảo.",
+          "D. Không phải mệnh đề."
         ],
         1,
         "Với a = 2, b = 3 thì a + b = 5 chia hết cho 5 nhưng 2 và 3 đều không chia hết cho 5, nên P sai."
@@ -968,52 +968,52 @@ const suppliedExams = [
         [
           "A. 5 &sub; A.",
           "B. {5} &isin; A.",
-          "C. 5 &isin; A.",
-          "D. A &isin; 5."
+          "C. A &isin; 5.",
+          "D. 5 &isin; A."
         ],
-        2,
+        3,
         "Quan hệ phần tử thuộc tập hợp dùng kí hiệu &isin;: 5 &isin; A."
       ],
       [
         "Cho tập hợp A = {x &isin; <b>N</b> | x &lt; 5} và B = {1; 3; 5; 7}. Tập hợp A &cup; B có bao nhiêu phần tử?",
         [
-          "A. 5.",
-          "B. 6.",
-          "C. 7.",
+          "A. 6.",
+          "B. 7.",
+          "C. 5.",
           "D. 8."
         ],
-        2,
+        1,
         "A = {0; 1; 2; 3; 4}, B = {1; 3; 5; 7} &rArr; A &cup; B = {0; 1; 2; 3; 4; 5; 7} gồm 7 phần tử."
       ],
       [
         "Cho hai tập hợp X = (-2; 4) và Y = [1; 6]. Tập hợp X &cap; Y là:",
         [
           "A. (-2; 6].",
-          "B. [1; 4).",
-          "C. (1; 4].",
-          "D. (-2; 1)."
+          "B. (1; 4].",
+          "C. (-2; 1).",
+          "D. [1; 4)."
         ],
-        1,
+        3,
         "Giao của (-2; 4) và [1; 6] là nửa khoảng [1; 4)."
       ],
       [
         "Bất phương trình 4x - 5y &gt; 10 KHÔNG nhận cặp số nào sau đây làm nghiệm?",
         [
-          "A. (3; 0).",
-          "B. (5; 1).",
-          "C. (2; -1).",
-          "D. (1; 0)."
+          "A. (5; 1).",
+          "B. (2; -1).",
+          "C. (1; 0).",
+          "D. (3; 0)."
         ],
-        3,
+        2,
         "Thay (1; 0): 4(1) - 5(0) = 4 &lt; 10 (không thỏa mãn)."
       ],
       [
         "Miền nghiệm của hệ bất phương trình {x &ge; 1 ; y &ge; 2 ; x + y &le; 5} là một tam giác có diện tích bằng:",
         [
           "A. 2.",
-          "B. 4.",
-          "C. 6.",
-          "D. 8."
+          "B. 6.",
+          "C. 8.",
+          "D. 4."
         ],
         0,
         "Tam giác vuông có các đỉnh (1; 2), (3; 2), (1; 4) với hai cạnh góc vuông bằng 2 và 2 &rArr; S = 1/2 . 2 . 2 = 2."
@@ -1021,54 +1021,54 @@ const suppliedExams = [
       [
         "Giá trị của biểu thức A = tan45&deg; + cot135&deg; bằng:",
         [
-          "A. 2.",
-          "B. 0.",
+          "A. 0.",
+          "B. 2.",
           "C. 1.",
           "D. -1."
         ],
-        1,
+        0,
         "tan45&deg; = 1, cot135&deg; = -1 &rArr; A = 1 + (-1) = 0."
       ],
       [
         "Cho góc &alpha; tù (90&deg; &lt; &alpha; &lt; 180&deg;). Khẳng định nào sau đây đúng về dấu của các giá trị lượng giác?",
         [
-          "A. sin&alpha; &lt; 0, cos&alpha; &gt; 0.",
-          "B. sin&alpha; &gt; 0, cos&alpha; &lt; 0.",
-          "C. tan&alpha; &gt; 0, cot&alpha; &gt; 0.",
-          "D. sin&alpha; &lt; 0, tan&alpha; &lt; 0."
+          "A. sin&alpha; &lt; 0, tan&alpha; &lt; 0.",
+          "B. tan&alpha; &gt; 0, cot&alpha; &gt; 0.",
+          "C. sin&alpha; &gt; 0, cos&alpha; &lt; 0.",
+          "D. sin&alpha; &lt; 0, cos&alpha; &gt; 0."
         ],
-        1,
+        2,
         "Với góc tù (90&deg; &lt; &alpha; &lt; 180&deg;), sin&alpha; &gt; 0 còn cos&alpha;, tan&alpha;, cot&alpha; đều âm."
       ],
       [
         "Tam giác ABC có AB = 5, BC = 8, CA = 7. Số đo góc B bằng:",
         [
-          "A. 30&deg;.",
+          "A. 60&deg;.",
           "B. 45&deg;.",
-          "C. 60&deg;.",
-          "D. 120&deg;."
+          "C. 120&deg;.",
+          "D. 30&deg;."
         ],
-        2,
+        0,
         "Áp dụng định lí côsin: cosB = (AB<sup>2</sup> + BC<sup>2</sup> - AC<sup>2</sup>)/(2.AB.BC) = (25 + 64 - 49)/(2.5.8) = 40/80 = 1/2 &rArr; B = 60&deg;."
       ],
       [
         "Cho tam giác ABC có R = 6 và góc C = 45&deg;. Độ dài cạnh AB bằng:",
         [
-          "A. 6&radic;2.",
-          "B. 3&radic;2.",
-          "C. 6&radic;3.",
-          "D. 12."
+          "A. 12.",
+          "B. 6&radic;3.",
+          "C. 6&radic;2.",
+          "D. 3&radic;2."
         ],
-        0,
+        2,
         "Theo định lí sin: AB = c = 2R.sinC = 2.6.(&radic;2/2) = 6&radic;2."
       ],
       [
         "Công thức nào sau đây dùng để tính diện tích tam giác ABC theo ba cạnh a, b, c và bán kính đường tròn ngoại tiếp R?",
         [
-          "A. S = abc / (2R).",
+          "A. S = 4R / (abc).",
           "B. S = abc / (4R).",
-          "C. S = 4R / (abc).",
-          "D. S = (a+b+c)R / 2."
+          "C. S = (a+b+c)R / 2.",
+          "D. S = abc / (2R)."
         ],
         1,
         "Theo các công thức tính diện tích tam giác trong hệ thức lượng Toán 10: S = abc / (4R) &hArr; R = abc / (4S). Vì vậy hệ thức S = abc / (2R) là SAI."
@@ -1076,12 +1076,12 @@ const suppliedExams = [
       [
         "Cho tam giác ABC có b = 10, c = 12, góc A = 150&deg;. Diện tích tam giác ABC bằng:",
         [
-          "A. 30.",
-          "B. 60.",
+          "A. 60.",
+          "B. 15.",
           "C. 30&radic;3.",
-          "D. 15."
+          "D. 30."
         ],
-        0,
+        3,
         "S = 1/2 . b . c . sin150&deg; = 1/2 . 10 . 12 . (1/2) = 30."
       ]
     ],
@@ -1190,23 +1190,23 @@ const suppliedExams = [
       [
         "Trong các mệnh đề sau, mệnh đề nào SAI?",
         [
-          "A. -&pi; &lt; -2 &hArr; &pi;<sup>2</sup> &lt; 4.",
-          "B. &pi; &lt; 4 &hArr; &pi;<sup>2</sup> &lt; 16.",
-          "C. &radic;23 &lt; 5 &rArr; 2&radic;23 &lt; 10.",
-          "D. &radic;23 &lt; 5 &rArr; -2&radic;23 &gt; -10."
+          "A. &pi; &lt; 4 &hArr; &pi;<sup>2</sup> &lt; 16.",
+          "B. -&pi; &lt; -2 &hArr; &pi;<sup>2</sup> &lt; 4.",
+          "C. &radic;23 &lt; 5 &rArr; -2&radic;23 &gt; -10.",
+          "D. &radic;23 &lt; 5 &rArr; 2&radic;23 &lt; 10."
         ],
-        0,
-        "Vì -&pi; &lt; -2 là đúng nhưng &pi;<sup>2</sup> &approx; 9,87 &lt; 4 là sai nên mệnh đề tương đương ở câu A sai."
+        1,
+        "Vì -&pi; &lt; -2 là đúng nhưng &pi;<sup>2</sup> &approx; 9,87 &lt; 4 là sai nên mệnh đề tương đương \"-π < -2 ⇔ π² < 4\" là mệnh đề sai."
       ],
       [
         "Tập hợp A = {x &isin; <b>R</b> | x<sup>2</sup> - 3x + 2 = 0} bằng tập hợp nào sau đây?",
         [
-          "A. {1; 2}.",
-          "B. {-1; -2}.",
-          "C. {1; 3}.",
-          "D. (1; 2)."
+          "A. {1; 3}.",
+          "B. (1; 2).",
+          "C. {1; 2}.",
+          "D. {-1; -2}."
         ],
-        0,
+        2,
         "Phương trình x<sup>2</sup> - 3x + 2 = 0 có hai nghiệm x = 1 và x = 2."
       ],
       [
@@ -1223,10 +1223,10 @@ const suppliedExams = [
       [
         "Cho tập hợp A có 10 phần tử, tập hợp B có 8 phần tử và A &cap; B có 3 phần tử. Số phần tử của tập hợp A &cup; B là:",
         [
-          "A. 18.",
+          "A. 21.",
           "B. 15.",
-          "C. 13.",
-          "D. 21."
+          "C. 18.",
+          "D. 13."
         ],
         1,
         "n(A &cup; B) = n(A) + n(B) - n(A &cap; B) = 10 + 8 - 3 = 15."
@@ -1234,89 +1234,89 @@ const suppliedExams = [
       [
         "Cặp số (-2; 3) là nghiệm của bất phương trình nào dưới đây?",
         [
-          "A. 2x + y - 1 &gt; 0.",
-          "B. x - y + 4 &lt; 0.",
-          "C. 3x + 2y + 1 &gt; 0.",
-          "D. x + 2y - 3 &le; 0."
+          "A. 3x + 2y + 1 &gt; 0.",
+          "B. x + 2y - 3 &le; 0.",
+          "C. x - y + 4 &lt; 0.",
+          "D. 2x + y - 1 &gt; 0."
         ],
-        2,
+        0,
         "Thay (-2; 3) vào 3x + 2y + 1: 3(-2) + 2(3) + 1 = 1 &gt; 0 (đúng)."
       ],
       [
         "Miền nghiệm của bất phương trình y &ge; 2x - 4 chứa điểm nào?",
         [
-          "A. (3; 0).",
-          "B. (0; 0).",
-          "C. (4; 1).",
+          "A. (0; 0).",
+          "B. (4; 1).",
+          "C. (3; 0).",
           "D. (2; -1)."
         ],
-        1,
+        0,
         "Để kiểm tra điểm M(x₀; y₀) có thuộc miền nghiệm của bất phương trình bậc nhất hai ẩn y &ge; 2x - 4 hay không, ta thay tọa độ (0; 0) vào BPT: 0 &ge; 2(0) - 4 &hArr; 0 &ge; -4 (luôn đúng). Vậy gốc O(0; 0) thuộc miền nghiệm."
       ],
       [
         "Trên miền nghiệm của hệ {0 &le; x &le; 4 ; 0 &le; y &le; 3}, giá trị lớn nhất của F(x; y) = 2x + 5y bằng:",
         [
-          "A. 8.",
+          "A. 20.",
           "B. 15.",
-          "C. 23.",
-          "D. 20."
+          "C. 8.",
+          "D. 23."
         ],
-        2,
+        3,
         "Miền nghiệm là hình chữ nhật nên F đạt GTLN tại đỉnh (4; 3): F(4; 3) = 2(4) + 5(3) = 23."
       ],
       [
         "Giá trị của biểu thức P = sin120&deg; . cos30&deg; + cos120&deg; . sin30&deg; bằng:",
         [
-          "A. 1/2.",
+          "A. 0.",
           "B. &radic;3/2.",
-          "C. 0.",
+          "C. 1/2.",
           "D. 1."
         ],
-        0,
+        2,
         "Ta có sin120&deg;.cos30&deg; + cos120&deg;.sin30&deg; = (&radic;3/2).(&radic;3/2) + (-1/2).(1/2) = 3/4 - 1/4 = 1/2."
       ],
       [
         "Cho tam giác ABC có a = 5, b = 12, c = 13. Số đo góc C bằng:",
         [
-          "A. 60&deg;.",
-          "B. 90&deg;.",
-          "C. 120&deg;.",
+          "A. 120&deg;.",
+          "B. 60&deg;.",
+          "C. 90&deg;.",
           "D. 45&deg;."
         ],
-        1,
+        2,
         "Vì 5<sup>2</sup> + 12<sup>2</sup> = 25 + 144 = 169 = 13<sup>2</sup> nên tam giác vuông tại C, tức góc C = 90&deg;."
       ],
       [
         "Tam giác ABC có góc A = 120&deg;, b = 4, c = 6. Độ dài cạnh a bằng:",
         [
-          "A. 2&radic;19.",
-          "B. 2&radic;7.",
-          "C. 10.",
-          "D. 4&radic;5."
+          "A. 2&radic;7.",
+          "B. 10.",
+          "C. 4&radic;5.",
+          "D. 2&radic;19."
         ],
-        0,
+        3,
         "a<sup>2</sup> = 4<sup>2</sup> + 6<sup>2</sup> - 2.4.6.cos120&deg; = 16 + 36 + 24 = 76 &rArr; a = 2&radic;19."
       ],
       [
         "Cho tam giác ABC có ba cạnh a = 5, b = 6, c = 7. Diện tích tam giác ABC bằng:",
         [
-          "A. 6&radic;6.",
+          "A. 6&radic;3.",
           "B. 12&radic;6.",
           "C. 18.",
-          "D. 6&radic;3."
+          "D. 6&radic;6."
         ],
-        0,
+        3,
         "p = (5+6+7)/2 = 9. S = &radic;(9.4.3.2) = 6&radic;6."
       ],
       [
         "Cho tam giác ABC có diện tích S = 24 và chu vi bằng 24. Bán kính đường tròn nội tiếp r bằng:",
         [
-          "A. 1.",
-          "B. 2.",
+          "A. 2.",
+          "B. 1.",
           "C. 3.",
           "D. 4."
         ],
-        1,
+        0,
         "Nửa chu vi p = 24 / 2 = 12. Bán kính r = S / p = 24 / 12 = 2."
       ]
     ],
@@ -1426,11 +1426,11 @@ const suppliedExams = [
         "Phủ định của mệnh đề \"&exist;n &isin; <b>N</b>, n<sup>2</sup> + n + 1 là một số nguyên tố\" là:",
         [
           "A. &forall;n &isin; <b>N</b>, n<sup>2</sup> + n + 1 là số nguyên tố.",
-          "B. &forall;n &isin; <b>N</b>, n<sup>2</sup> + n + 1 không phải là số nguyên tố.",
-          "C. &exist;n &isin; <b>N</b>, n<sup>2</sup> + n + 1 là hợp số.",
-          "D. &forall;n &notin; <b>N</b>, n<sup>2</sup> + n + 1 không là số nguyên tố."
+          "B. &forall;n &notin; <b>N</b>, n<sup>2</sup> + n + 1 không là số nguyên tố.",
+          "C. &forall;n &isin; <b>N</b>, n<sup>2</sup> + n + 1 không phải là số nguyên tố.",
+          "D. &exist;n &isin; <b>N</b>, n<sup>2</sup> + n + 1 là hợp số."
         ],
-        1,
+        2,
         "Phủ định của &exist; là &forall;, phủ định của \"là số nguyên tố\" là \"không phải là số nguyên tố\"."
       ],
       [
@@ -1447,30 +1447,30 @@ const suppliedExams = [
       [
         "Biểu diễn trên trục số thực của tập hợp (-&infin;; 2) &cap; [-1; 5] là hình nào dưới đây?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 380 75\" width=\"380\" height=\"75\" xmlns=\"http://www.w3.org/2000/svg\">\n    <!-- Trục số -->\n    <line x1=\"20\" y1=\"40\" x2=\"360\" y2=\"40\" stroke=\"#334155\" stroke-width=\"2\"/>\n    <polygon points=\"360,40 350,35 350,45\" fill=\"#334155\"/>\n    <text x=\"352\" y=\"60\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">+∞</text>\n    <text x=\"15\" y=\"60\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">-∞</text>\n\n    <!-- Gạch bỏ phần ngoài bên trái [-1 -->\n    <line x1=\"30\" y1=\"30\" x2=\"45\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"50\" y1=\"30\" x2=\"65\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"70\" y1=\"30\" x2=\"85\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"90\" y1=\"30\" x2=\"105\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n\n    <!-- Điểm -1: ngoặc vuông [ -->\n    <text x=\"110\" y=\"47\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">[</text>\n    <text x=\"108\" y=\"66\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">-1</text>\n\n    <!-- Khoảng lấy [-1; 2): đoạn thẳng đậm màu xanh -->\n    <line x1=\"122\" y1=\"40\" x2=\"230\" y2=\"40\" stroke=\"#2563eb\" stroke-width=\"4.5\"/>\n\n    <!-- Điểm 2: ngoặc tròn ) -->\n    <text x=\"230\" y=\"47\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">)</text>\n    <text x=\"232\" y=\"66\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2</text>\n\n    <!-- Gạch bỏ phần ngoài bên phải 2) -->\n    <line x1=\"245\" y1=\"30\" x2=\"260\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"265\" y1=\"30\" x2=\"280\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"285\" y1=\"30\" x2=\"300\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"305\" y1=\"30\" x2=\"320\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"325\" y1=\"30\" x2=\"340\" y2=\"50\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n  </svg>\n  <div class=\"figure-caption\">Biểu diễn tập hợp [-1; 2) trên trục số thực</div>\n</div>",
         [
-          "A. [-1; 2).",
-          "B. (-1; 2].",
-          "C. (-&infin;; 5].",
+          "A. (-&infin;; 5].",
+          "B. [-1; 2).",
+          "C. (-1; 2].",
           "D. (2; 5]."
         ],
-        0,
+        1,
         "Giao của (-&infin;; 2) và [-1; 5] là nửa khoảng [-1; 2)."
       ],
       [
         "Cho tập hợp X = {x &isin; <b>Z</b> | -2 &lt; x &le; 3}. Tổng tất cả các phần tử của tập hợp X bằng:",
         [
-          "A. 3.",
-          "B. 5.",
-          "C. 6.",
-          "D. 4."
+          "A. 4.",
+          "B. 3.",
+          "C. 5.",
+          "D. 6."
         ],
-        1,
+        2,
         "X = {-1; 0; 1; 2; 3}, tổng các phần tử là (-1) + 0 + 1 + 2 + 3 = 5."
       ],
       [
         "Điểm A(2; -1) thuộc miền nghiệm của bất phương trình nào?",
         [
-          "A. x + 3y &gt; 0.",
-          "B. 2x - y &lt; 3.",
+          "A. 2x - y &lt; 3.",
+          "B. x + 3y &gt; 0.",
           "C. 3x + y - 4 &ge; 0.",
           "D. x - 2y + 1 &le; 0."
         ],
@@ -1480,42 +1480,42 @@ const suppliedExams = [
       [
         "Hệ bất phương trình {x &ge; 0 ; y &ge; 0 ; 3x + 4y &le; 12} tạo thành miền tam giác OAB trên mặt phẳng Oxy. Chu vi của tam giác OAB bằng:",
         [
-          "A. 7.",
-          "B. 12.",
-          "C. 6.",
-          "D. 10."
+          "A. 6.",
+          "B. 7.",
+          "C. 10.",
+          "D. 12."
         ],
-        1,
+        3,
         "Tam giác vuông OAB có OA = 4, OB = 3 &rArr; cạnh huyền AB = 5. Chu vi = 3 + 4 + 5 = 12."
       ],
       [
         "Trong các hệ thức lượng giác sau với 0&deg; &lt; &alpha; &lt; 180&deg;,(&alpha; &ne; 90&deg;), hệ thức nào đúng?",
         [
-          "A. 1 + tan<sup>2</sup>&alpha; = 1 / sin<sup>2</sup>&alpha;.",
-          "B. 1 + tan<sup>2</sup>&alpha; = 1 / cos<sup>2</sup>&alpha;.",
-          "C. sin<sup>2</sup>&alpha; - cos<sup>2</sup>&alpha; = 1.",
-          "D. tan&alpha; + cot&alpha; = 1."
+          "A. sin<sup>2</sup>&alpha; - cos<sup>2</sup>&alpha; = 1.",
+          "B. 1 + tan<sup>2</sup>&alpha; = 1 / sin<sup>2</sup>&alpha;.",
+          "C. tan&alpha; + cot&alpha; = 1.",
+          "D. 1 + tan<sup>2</sup>&alpha; = 1 / cos<sup>2</sup>&alpha;."
         ],
-        1,
+        3,
         "Hệ thức cơ bản: 1 + tan<sup>2</sup>&alpha; = 1 / cos<sup>2</sup>&alpha;."
       ],
       [
         "Biết cos&alpha; = 1/3. Giá trị của biểu thức P = sin<sup>2</sup>&alpha; + 3cos<sup>2</sup>&alpha; bằng:",
         [
-          "A. 10/9.",
-          "B. 11/9.",
-          "C. 4/3.",
-          "D. 5/3."
+          "A. 11/9.",
+          "B. 10/9.",
+          "C. 5/3.",
+          "D. 4/3."
         ],
-        1,
+        0,
         "P = (sin<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha;) + 2cos<sup>2</sup>&alpha; = 1 + 2(1/9) = 11/9."
       ],
       [
         "Cho tam giác ABC có a = 6, b = 6&radic;3, c = 12. Số đo góc B bằng:",
         [
-          "A. 30&deg;.",
+          "A. 90&deg;.",
           "B. 60&deg;.",
-          "C. 90&deg;.",
+          "C. 30&deg;.",
           "D. 120&deg;."
         ],
         1,
@@ -1524,10 +1524,10 @@ const suppliedExams = [
       [
         "Cho tam giác ABC có góc A = 45&deg;, cạnh a = 10&radic;2. Bán kính đường tròn ngoại tiếp R bằng:",
         [
-          "A. 5.",
+          "A. 10&radic;2.",
           "B. 10.",
-          "C. 10&radic;2.",
-          "D. 20."
+          "C. 20.",
+          "D. 5."
         ],
         1,
         "R = a / (2sin45&deg;) = 10&radic;2 / &radic;2 = 10."
@@ -1535,23 +1535,23 @@ const suppliedExams = [
       [
         "Tam giác ABC có diện tích S = 15&radic;3, cạnh BC = 10, AC = 6. Góc nhọn C có số đo bằng:",
         [
-          "A. 30&deg;.",
-          "B. 45&deg;.",
-          "C. 60&deg;.",
-          "D. 75&deg;."
+          "A. 60&deg;.",
+          "B. 75&deg;.",
+          "C. 30&deg;.",
+          "D. 45&deg;."
         ],
-        2,
+        0,
         "sinC = 2S / (BC.AC) = 30&radic;3 / 60 = &radic;3/2. Vì C nhọn nên C = 60&deg;."
       ],
       [
         "Cho tam giác ABC có ba cạnh 9, 12, 15. Tổng bán kính đường tròn ngoại tiếp R và bán kính đường tròn nội tiếp r (tức R + r) bằng:",
         [
-          "A. 10,5.",
-          "B. 9,5.",
-          "C. 12.",
-          "D. 11,5."
+          "A. 9,5.",
+          "B. 12.",
+          "C. 11,5.",
+          "D. 10,5."
         ],
-        0,
+        3,
         "Tam giác vuông cạnh 9, 12, 15 có R = 15/2 = 7,5 và r = (9 + 12 - 15)/2 = 3 &rArr; R + r = 10,5."
       ]
     ],
@@ -1660,43 +1660,43 @@ const suppliedExams = [
       [
         "Cho mệnh đề P: \"Tam giác ABC đều\" và Q: \"Tam giác ABC cân và có một góc bằng 60&deg;\". Khẳng định nào sau đây đúng?",
         [
-          "A. P &rArr; Q đúng, Q &rArr; P sai.",
-          "B. P &hArr; Q là mệnh đề đúng.",
+          "A. P và Q không tương đương.",
+          "B. P &rArr; Q đúng, Q &rArr; P sai.",
           "C. P &rArr; Q sai, Q &rArr; P đúng.",
-          "D. P và Q không tương đương."
+          "D. P &hArr; Q là mệnh đề đúng."
         ],
-        1,
+        3,
         "Tam giác đều khi và chỉ khi tam giác cân và có 1 góc 60&deg;, nên P &hArr; Q đúng."
       ],
       [
         "Cho tập hợp A = {x &isin; <b>N</b> | (x - 1)(x<sup>2</sup> - 4) = 0}. Tập hợp A là:",
         [
           "A. {-2; 1; 2}.",
-          "B. {1; 2}.",
-          "C. {1; 4}.",
+          "B. {1; 4}.",
+          "C. {1; 2}.",
           "D. {-2; 2}."
         ],
-        1,
+        2,
         "Phương trình có nghiệm x = 1, x = 2, x = -2. Vì x &isin; <b>N</b> nên A = {1; 2}."
       ],
       [
         "Cho hai tập hợp A = (-5; 3) và B = (0; 7). Tập hợp A &cup; B là:",
         [
           "A. (0; 3).",
-          "B. (-5; 7).",
-          "C. (-5; 0].",
-          "D. [3; 7)."
+          "B. (-5; 0].",
+          "C. [3; 7).",
+          "D. (-5; 7)."
         ],
-        1,
+        3,
         "Hợp của (-5; 3) và (0; 7) là khoảng (-5; 7)."
       ],
       [
         "Cho A = [-2; 5]. Tập hợp C<sub><b>R</b></sub>A bằng:",
         [
           "A. (-&infin;; -2) &cup; (5; +&infin;).",
-          "B. (-&infin;; -2] &cup; [5; +&infin;).",
-          "C. (-2; 5).",
-          "D. (-&infin;; -2) &cap; (5; +&infin;)."
+          "B. (-&infin;; -2) &cap; (5; +&infin;).",
+          "C. (-&infin;; -2] &cup; [5; +&infin;).",
+          "D. (-2; 5)."
         ],
         0,
         "Phần bù của đoạn [-2; 5] trong <b>R</b> là (-&infin;; -2) &cup; (5; +&infin;)."
@@ -1704,32 +1704,32 @@ const suppliedExams = [
       [
         "Bất phương trình 3x + y &lt; 6 có bờ là đường thẳng đi qua hai điểm nào trên hai trục tọa độ?",
         [
-          "A. (2; 0) và (0; 6).",
-          "B. (6; 0) và (0; 2).",
-          "C. (-2; 0) và (0; -6).",
-          "D. (3; 0) và (0; 1)."
+          "A. (3; 0) và (0; 1).",
+          "B. (2; 0) và (0; 6).",
+          "C. (6; 0) và (0; 2).",
+          "D. (-2; 0) và (0; -6)."
         ],
-        0,
+        1,
         "Đường thẳng 3x + y = 6 cắt Ox tại (2; 0) và cắt Oy tại (0; 6)."
       ],
       [
         "Cặp số nào sau đây là nghiệm của hệ bất phương trình {x - y &ge; 0 ; x + 2y &le; 6 ; y &ge; 0}?",
         [
-          "A. (1; 2).",
-          "B. (3; 1).",
-          "C. (2; 3).",
-          "D. (5; 1)."
+          "A. (2; 3).",
+          "B. (1; 2).",
+          "C. (5; 1).",
+          "D. (3; 1)."
         ],
-        1,
+        3,
         "Thay (3; 1): 3 - 1 = 2 &ge; 0; 3 + 2(1) = 5 &le; 6; 1 &ge; 0 (thỏa mãn)."
       ],
       [
         "Giá trị của biểu thức M = cos0&deg; + cos60&deg; + cos120&deg; + cos180&deg; bằng:",
         [
           "A. 2.",
-          "B. 1.",
+          "B. -1.",
           "C. 0.",
-          "D. -1."
+          "D. 1."
         ],
         2,
         "Vì cos0&deg; + cos180&deg; = 1 + (-1) = 0 và cos60&deg; + cos120&deg; = 1/2 + (-1/2) = 0 nên M = 0."
@@ -1737,10 +1737,10 @@ const suppliedExams = [
       [
         "Cho tam giác ABC có a = 10, b = 10, góc C = 60&deg;. Chu vi của tam giác ABC bằng:",
         [
-          "A. 20.",
+          "A. 20 + 10&radic;3.",
           "B. 30.",
           "C. 25.",
-          "D. 20 + 10&radic;3."
+          "D. 20."
         ],
         1,
         "Tam giác cân có 1 góc 60&deg; là tam giác đều cạnh 10, nên chu vi bằng 30."
@@ -1748,43 +1748,43 @@ const suppliedExams = [
       [
         "Trong tam giác ABC có AB = 8, AC = 15, BC = 17. Bán kính đường tròn ngoại tiếp R của tam giác ABC bằng:",
         [
-          "A. 8,5.",
-          "B. 17.",
-          "C. 10.",
-          "D. 7,5."
+          "A. 17.",
+          "B. 7,5.",
+          "C. 8,5.",
+          "D. 10."
         ],
-        0,
+        2,
         "Vì AB<sup>2</sup> + AC<sup>2</sup> = 8<sup>2</sup> + 15<sup>2</sup> = 64 + 225 = 289 = 17<sup>2</sup> = BC<sup>2</sup> nên tam giác ABC vuông tại A. Bán kính đường tròn ngoại tiếp bằng nửa cạnh huyền: R = BC / 2 = 17 / 2 = 8,5."
       ],
       [
         "Cho tam giác ABC có diện tích S = 30, hai cạnh a = 10, b = 12. Giá trị sinC bằng:",
         [
-          "A. 1/2.",
-          "B. &radic;3/2.",
+          "A. 1.",
+          "B. 1/2.",
           "C. &radic;2/2.",
-          "D. 1."
+          "D. &radic;3/2."
         ],
-        0,
+        1,
         "Theo công thức diện tích tam giác trong hệ thức lượng Toán 10: S = 1/2 . a . b . sinC &rArr; sinC = 2S / (ab) = (2 . 30) / (10 . 12) = 60 / 120 = 1/2."
       ],
       [
         "Tam giác ABC có ba cạnh a = 7, b = 24, c = 25. Bán kính đường tròn nội tiếp r bằng:",
         [
-          "A. 2.",
-          "B. 3.",
-          "C. 4.",
-          "D. 5."
+          "A. 3.",
+          "B. 4.",
+          "C. 5.",
+          "D. 2."
         ],
-        1,
+        0,
         "Tam giác vuông (7<sup>2</sup> + 24<sup>2</sup> = 25<sup>2</sup>) có r = (7 + 24 - 25)/2 = 3."
       ],
       [
         "Cho tam giác ABC có góc B = 120&deg;, AB = 3, BC = 5. Độ dài cạnh AC bằng:",
         [
           "A. 7.",
-          "B. &radic;19.",
-          "C. &radic;34.",
-          "D. 8."
+          "B. 8.",
+          "C. &radic;19.",
+          "D. &radic;34."
         ],
         0,
         "AC<sup>2</sup> = 3<sup>2</sup> + 5<sup>2</sup> - 2.3.5.cos120&deg; = 9 + 25 + 15 = 49 &rArr; AC = 7."
@@ -1895,131 +1895,131 @@ const suppliedExams = [
       [
         "Mệnh đề nào dưới đây là mệnh đề phủ định của mệnh đề: \"Mọi học sinh lớp 10 đều thích học môn Toán\"?",
         [
-          "A. Mọi học sinh lớp 10 đều không thích học môn Toán.",
-          "B. Có ít nhất một học sinh lớp 10 không thích học môn Toán.",
-          "C. Có ít nhất một học sinh lớp 10 thích học môn Toán.",
-          "D. Không có học sinh lớp 10 nào thích học môn Toán."
+          "A. Có ít nhất một học sinh lớp 10 không thích học môn Toán.",
+          "B. Mọi học sinh lớp 10 đều không thích học môn Toán.",
+          "C. Không có học sinh lớp 10 nào thích học môn Toán.",
+          "D. Có ít nhất một học sinh lớp 10 thích học môn Toán."
         ],
-        1,
+        0,
         "Phủ định của \"Mọi... đều thích\" là \"Có ít nhất một... không thích\"."
       ],
       [
         "Cho tập hợp A = {x &isin; <b>R</b> | x &le; 3}. Tập hợp A được viết dưới dạng nửa khoảng là:",
         [
           "A. (-&infin;; 3).",
-          "B. (-&infin;; 3].",
-          "C. [3; +&infin;).",
-          "D. (3; +&infin;)."
+          "B. (3; +&infin;).",
+          "C. (-&infin;; 3].",
+          "D. [3; +&infin;)."
         ],
-        1,
+        2,
         "{x &isin; <b>R</b> | x &le; 3} = (-&infin;; 3]."
       ],
       [
         "Cho hai tập hợp A = [0; 6] và B = (2; 8). Tập hợp A &cap; B là:",
         [
           "A. [0; 8).",
-          "B. (2; 6].",
-          "C. [2; 6].",
-          "D. [0; 2]."
+          "B. [2; 6].",
+          "C. [0; 2].",
+          "D. (2; 6]."
         ],
-        1,
+        3,
         "Giao của [0; 6] và (2; 8) là nửa khoảng (2; 6]."
       ],
       [
         "Cho tập hợp A = {1; 3; 5} và B = {1; 2; 3; 4; 5; 6}. Số tập hợp X thỏa mãn A &sub; X &sub; B là:",
         [
-          "A. 6.",
-          "B. 8.",
-          "C. 3.",
-          "D. 9."
+          "A. 9.",
+          "B. 6.",
+          "C. 8.",
+          "D. 3."
         ],
-        1,
+        2,
         "B \\ A = {2; 4; 6} có 3 phần tử nên có 2<sup>3</sup> = 8 tập hợp X thỏa mãn."
       ],
       [
         "Cặp số nào sau đây thuộc miền nghiệm của bất phương trình 5x - 2y + 3 &ge; 0?",
         [
-          "A. (-2; 1).",
+          "A. (-1; 2).",
           "B. (0; 1).",
           "C. (0; 3).",
-          "D. (-1; 2)."
+          "D. (-2; 1)."
         ],
         1,
-        "Thay (0; 1) vào vế trái: 5(0) - 2(1) + 3 = 1 &ge; 0 (thỏa mãn). Các điểm ở phương án A, C, D đều cho giá trị âm."
+        "Thay (0; 1) vào vế trái: 5(0) - 2(1) + 3 = 1 &ge; 0 (thỏa mãn). Các điểm còn lại đều cho giá trị âm."
       ],
       [
         "Miền nghiệm của hệ bất phương trình {x &ge; 0 ; y &ge; 0 ; 2x + y &le; 4} chứa bao nhiêu điểm có tọa độ nguyên?",
         [
           "A. 6.",
           "B. 8.",
-          "C. 9.",
-          "D. 10."
+          "C. 10.",
+          "D. 9."
         ],
-        2,
+        3,
         "Với x = 0: y &isin; {0,1,2,3,4} (5 điểm); với x = 1: y &isin; {0,1,2} (3 điểm); với x = 2: y = 0 (1 điểm). Tổng = 5 + 3 + 1 = 9 điểm."
       ],
       [
         "Cho góc &alpha; thỏa mãn sin&alpha; = 1/3. Giá trị của biểu thức P = 9.cos<sup>2</sup>&alpha; + 2 bằng:",
         [
           "A. 8.",
-          "B. 10.",
-          "C. 9.",
+          "B. 9.",
+          "C. 10.",
           "D. 11."
         ],
-        1,
+        2,
         "cos<sup>2</sup>&alpha; = 1 - sin<sup>2</sup>&alpha; = 8/9 &rArr; P = 9(8/9) + 2 = 10."
       ],
       [
         "Trong tam giác ABC có BC = a, AC = b, AB = c. Công thức tính cosA nào sau đây đúng?",
         [
-          "A. cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (2bc).",
-          "B. cosA = (a<sup>2</sup> + b<sup>2</sup> - c<sup>2</sup>) / (2ab).",
+          "A. cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (bc).",
+          "B. cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (2bc).",
           "C. cosA = (b<sup>2</sup> + c<sup>2</sup> + a<sup>2</sup>) / (2bc).",
-          "D. cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>) / (bc)."
+          "D. cosA = (a<sup>2</sup> + b<sup>2</sup> - c<sup>2</sup>) / (2ab)."
         ],
-        0,
+        1,
         "Từ định lí côsin a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2bc.cosA suy ra cosA = (b<sup>2</sup> + c<sup>2</sup> - a<sup>2</sup>)/(2bc)."
       ],
       [
         "Cho tam giác ABC có b = 8, c = 10, góc A = 30&deg;. Diện tích tam giác ABC bằng:",
         [
-          "A. 20.",
-          "B. 40.",
-          "C. 20&radic;3.",
-          "D. 10."
+          "A. 40.",
+          "B. 20.",
+          "C. 10.",
+          "D. 20&radic;3."
         ],
-        0,
+        1,
         "Theo công thức tính diện tích tam giác theo hai cạnh và góc xen giữa: S = 1/2 . b . c . sinA = 1/2 . 8 . 10 . sin30&deg; = 40 . 0,5 = 20."
       ],
       [
         "Cho tam giác ABC có góc A = 60&deg;, bán kính đường tròn ngoại tiếp R = 4&radic;3. Độ dài cạnh BC bằng:",
         [
-          "A. 6.",
-          "B. 12.",
-          "C. 8&radic;3.",
-          "D. 6&radic;3."
+          "A. 12.",
+          "B. 6&radic;3.",
+          "C. 6.",
+          "D. 8&radic;3."
         ],
-        1,
+        0,
         "BC = 2R.sinA = 2 . 4&radic;3 . (&radic;3/2) = 12."
       ],
       [
         "Tam giác ABC vuông cân tại A có cạnh góc vuông AB = AC = 4. Diện tích S của tam giác ABC là:",
         [
-          "A. 16.",
-          "B. 8.",
-          "C. 4&radic;2.",
-          "D. 8&radic;2."
+          "A. 4&radic;2.",
+          "B. 8&radic;2.",
+          "C. 16.",
+          "D. 8."
         ],
-        1,
+        3,
         "Tam giác ABC vuông cân tại A nên AB = AC = 4 và góc A = 90&deg;. Diện tích tam giác vuông là S = 1/2 . AB . AC = 1/2 . 4 . 4 = 8."
       ],
       [
         "Cho tam giác ABC vuông tại A có AB = 5, AC = 12, BC = 13. Độ dài đường cao h<sub>a</sub> kẻ từ đỉnh A bằng:",
         [
           "A. 60/13.",
-          "B. 65/12.",
-          "C. 13/5.",
-          "D. 6."
+          "B. 13/5.",
+          "C. 6.",
+          "D. 65/12."
         ],
         0,
         "Trong tam giác vuông ABC: h<sub>a</sub> = (AB &times; AC) / BC = (5 &times; 12) / 13 = 60/13."
@@ -2130,45 +2130,45 @@ const suppliedExams = [
       [
         "Cho mệnh đề P: \"&forall;x &isin; <b>R</b>, x<sup>2</sup> - 2x + 2 &gt; 0\". Khẳng định nào sau đây đúng?",
         [
-          "A. P là mệnh đề sai.",
-          "B. P là mệnh đề đúng.",
+          "A. Phủ định của P là \"&forall;x &isin; <b>R</b>, x<sup>2</sup> - 2x + 2 &le; 0\".",
+          "B. P là mệnh đề sai.",
           "C. P không có tính đúng sai.",
-          "D. Phủ định của P là \"&forall;x &isin; <b>R</b>, x<sup>2</sup> - 2x + 2 &le; 0\"."
+          "D. P là mệnh đề đúng."
         ],
-        1,
+        3,
         "Vì x<sup>2</sup> - 2x + 2 = (x - 1)<sup>2</sup> + 1 &ge; 1 &gt; 0 với mọi x &isin; <b>R</b> nên P là mệnh đề đúng."
       ],
       [
         "Cho tập hợp A = {x &isin; <b>R</b> | -3 &le; x &le; 2}. Tập hợp A là:",
         [
-          "A. Khoảng (-3; 2).",
-          "B. Đoạn [-3; 2].",
-          "C. Nửa khoảng [-3; 2).",
-          "D. Tập hợp {-3; 2}."
+          "A. Nửa khoảng [-3; 2).",
+          "B. Tập hợp {-3; 2}.",
+          "C. Khoảng (-3; 2).",
+          "D. Đoạn [-3; 2]."
         ],
-        1,
+        3,
         "{x &isin; <b>R</b> | -3 &le; x &le; 2} là đoạn [-3; 2]."
       ],
       [
         "Cho hai tập hợp A = {-2; 0; 2; 4} và B = {0; 4; 8}. Tập hợp A &cup; B là:",
         [
           "A. {0; 4}.",
-          "B. {-2; 2}.",
-          "C. {-2; 0; 2; 4; 8}.",
+          "B. {-2; 0; 2; 4; 8}.",
+          "C. {-2; 2}.",
           "D. {8}."
         ],
-        2,
+        1,
         "Hợp của A và B gồm tất cả các phần tử thuộc A hoặc thuộc B: {-2; 0; 2; 4; 8}."
       ],
       [
         "Cho A = (-&infin;; 4) và B = [1; +&infin;). Tập hợp A &cap; B bằng:",
         [
-          "A. [1; 4).",
-          "B. (1; 4].",
+          "A. &empty;.",
+          "B. [1; 4).",
           "C. (-&infin;; +&infin;).",
-          "D. &empty;."
+          "D. (1; 4]."
         ],
-        0,
+        1,
         "Giao của (-&infin;; 4) và [1; +&infin;) là nửa khoảng [1; 4)."
       ],
       [
@@ -2176,8 +2176,8 @@ const suppliedExams = [
         [
           "A. (0; 3).",
           "B. (3; 0).",
-          "C. (1; 2).",
-          "D. (2; 1)."
+          "C. (2; 1).",
+          "D. (1; 2)."
         ],
         1,
         "Thay (3; 0) vào phương trình bờ 2x + 3y - 6 = 0: 2(3) + 0 - 6 = 0 (đúng)."
@@ -2185,23 +2185,23 @@ const suppliedExams = [
       [
         "Cho hệ bất phương trình {x - y &le; 2 ; x + 2y &ge; 4 ; y &le; 3}. Điểm nào sau đây thuộc miền nghiệm của hệ?",
         [
-          "A. (0; 0).",
-          "B. (2; 2).",
-          "C. (4; 0).",
-          "D. (1; 4)."
+          "A. (4; 0).",
+          "B. (1; 4).",
+          "C. (2; 2).",
+          "D. (0; 0)."
         ],
-        1,
+        2,
         "Thay (2; 2): 2 - 2 = 0 &le; 2; 2 + 2(2) = 6 &ge; 4; 2 &le; 3 (thỏa mãn cả 3 BPT)."
       ],
       [
         "Giá trị của biểu thức T = sin<sup>2</sup>40&deg; + sin<sup>2</sup>140&deg; - cos<sup>2</sup>40&deg; bằng (biết sin140&deg; = sin40&deg;)?",
         [
-          "A. 1.",
+          "A. 2sin<sup>2</sup>40&deg; - cos<sup>2</sup>40&deg;.",
           "B. 0.",
-          "C. 2sin<sup>2</sup>40&deg; - cos<sup>2</sup>40&deg;.",
+          "C. 1.",
           "D. sin<sup>2</sup>40&deg;."
         ],
-        2,
+        0,
         "Vì sin140&deg; = sin40&deg; nên T = 2sin<sup>2</sup>40&deg; - cos<sup>2</sup>40&deg;."
       ],
       [
@@ -2218,32 +2218,32 @@ const suppliedExams = [
       [
         "Tam giác ABC có diện tích S = 30, cạnh a = 12. Độ dài đường cao h<sub>a</sub> ứng với cạnh a bằng:",
         [
-          "A. 2,5.",
-          "B. 5.",
-          "C. 10.",
-          "D. 6."
+          "A. 10.",
+          "B. 2,5.",
+          "C. 6.",
+          "D. 5."
         ],
-        1,
+        3,
         "Áp dụng công thức tính diện tích tam giác theo đường cao ứng với cạnh đáy a trong Toán 10: S = 1/2 . a . h<sub>a</sub> &rArr; h<sub>a</sub> = 2S / a = (2 . 30) / 12 = 60 / 12 = 5."
       ],
       [
         "Cho tam giác ABC có góc A = 30&deg;, góc B = 45&deg;, cạnh a = 8. Độ dài cạnh b bằng:",
         [
-          "A. 8&radic;2.",
-          "B. 4&radic;2.",
-          "C. 8&radic;3.",
-          "D. 16."
+          "A. 4&radic;2.",
+          "B. 16.",
+          "C. 8&radic;2.",
+          "D. 8&radic;3."
         ],
-        0,
+        2,
         "Theo định lí sin: b = a.sinB / sinA = 8 . (&radic;2/2) / (1/2) = 8&radic;2."
       ],
       [
         "Cho tam giác ABC có ba cạnh a = 10, b = 17, c = 21. Diện tích S của tam giác ABC bằng:",
         [
           "A. 84.",
-          "B. 42.",
-          "C. 96.",
-          "D. 72."
+          "B. 96.",
+          "C. 72.",
+          "D. 42."
         ],
         0,
         "Nửa chu vi p = (10 + 17 + 21)/2 = 24. S = &radic;(24.(24-10).(24-17).(24-21)) = &radic;(24.14.7.3) = 84."
@@ -2251,12 +2251,12 @@ const suppliedExams = [
       [
         "Trong tam giác ABC ở câu 11 (a = 10, b = 17, c = 21, S = 84), bán kính đường tròn nội tiếp r bằng:",
         [
-          "A. 3,5.",
-          "B. 4.",
-          "C. 3.",
+          "A. 4.",
+          "B. 3.",
+          "C. 3,5.",
           "D. 4,5."
         ],
-        0,
+        2,
         "Áp dụng công thức diện tích tam giác liên hệ với bán kính đường tròn nội tiếp r: S = p . r &rArr; r = S / p = 84 / 24 = 3,5."
       ]
     ],
@@ -2376,12 +2376,12 @@ const suppliedExams = [
       [
         "Phát biểu nào sau đây không phải là mệnh đề P &rArr; Q?",
         [
-          "A. Nếu P thì Q.",
-          "B. P là điều kiện đủ để có Q.",
-          "C. Q là điều kiện cần để có P.",
-          "D. P là điều kiện cần để có Q."
+          "A. P là điều kiện cần để có Q.",
+          "B. Q là điều kiện cần để có P.",
+          "C. P là điều kiện đủ để có Q.",
+          "D. Nếu P thì Q."
         ],
-        3,
+        0,
         "Trong mệnh đề kéo theo P &rArr; Q, P là giả thiết (điều kiện đủ để có Q) và Q là kết luận (điều kiện cần để có P). Khẳng định \"P là điều kiện cần để có Q\" là cách diễn đạt của mệnh đề đảo Q &rArr; P, do đó không phải là mệnh đề P &rArr; Q."
       ],
       [
@@ -2389,8 +2389,8 @@ const suppliedExams = [
         [
           "A. Chỉ có một số thực mà bình phương của nó bằng 18.",
           "B. Có ít nhất một số thực mà bình phương của nó bằng 18.",
-          "C. Nếu x là một số thực thì x<sup>2</sup> = 18.",
-          "D. Bình phương của mỗi số thực bằng 18."
+          "C. Bình phương của mỗi số thực bằng 18.",
+          "D. Nếu x là một số thực thì x<sup>2</sup> = 18."
         ],
         1,
         "Kí hiệu &exist; đọc là \"tồn tại\" hoặc \"có ít nhất một\". Do đó mệnh đề \"&exist;x &isin; <b>R</b>, x<sup>2</sup> = 18\" được phát biểu chuẩn là: \"Có ít nhất một số thực mà bình phương của nó bằng 18\"."
@@ -2399,20 +2399,20 @@ const suppliedExams = [
         "Cho tập hợp A = {1; 3; 5; 7; 9}. Tập hợp nào sau đây không phải là tập con của tập A?",
         [
           "A. {1; 3; 5}.",
-          "B. &empty;.",
-          "C. {1; 3}.",
-          "D. {1; 3; 6; 9}."
+          "B. {1; 3; 6; 9}.",
+          "C. &empty;.",
+          "D. {1; 3}."
         ],
-        3,
+        1,
         "Tập hợp {1; 3; 6; 9} chứa phần tử 6 không thuộc tập hợp A (6 &notin; A), do đó theo định nghĩa tập con trong Toán 10 thì {1; 3; 6; 9} không phải là tập con của A."
       ],
       [
         "Miền nghiệm của bất phương trình 2x + y - 4 &gt; 0 KHÔNG chứa điểm nào sau đây?",
         [
           "A. (1; 1).",
-          "B. (3; 1).",
+          "B. (0; 5).",
           "C. (2; 2).",
-          "D. (0; 5)."
+          "D. (3; 1)."
         ],
         0,
         "Thay (1; 1) vào: 2(1) + 1 - 4 = -1 &le; 0 nên điểm (1; 1) không thuộc miền nghiệm."
@@ -2420,43 +2420,43 @@ const suppliedExams = [
       [
         "Trong các cặp số sau đây, cặp nào là nghiệm của bất phương trình 3x + 4y &lt; 1?",
         [
-          "A. (-2; 1).",
-          "B. (3; 7).",
-          "C. (0; 1).",
-          "D. (1; 1)."
+          "A. (1; 1).",
+          "B. (0; 1).",
+          "C. (3; 7).",
+          "D. (-2; 1)."
         ],
-        0,
+        3,
         "Thay tọa độ điểm (-2; 1) vào vế trái bất phương trình: 3(-2) + 4(1) = -6 + 4 = -2 &lt; 1 (thỏa mãn). Vậy cặp (-2; 1) là nghiệm."
       ],
       [
         "Cho bất phương trình x - y &le; 2. Khẳng định nào sau đây là đúng?",
         [
-          "A. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 chứa gốc tọa độ.",
+          "A. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x + y = 2 chứa gốc tọa độ.",
           "B. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 không chứa gốc tọa độ.",
-          "C. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = -2 chứa gốc tọa độ.",
-          "D. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x + y = 2 chứa gốc tọa độ."
+          "C. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 chứa gốc tọa độ.",
+          "D. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = -2 chứa gốc tọa độ."
         ],
-        0,
+        2,
         "Đường thẳng bờ của bất phương trình là d: x - y = 2. Thay tọa độ gốc O(0; 0) vào vế trái: 0 - 0 = 0 &le; 2 (thỏa mãn). Vậy miền nghiệm là nửa mặt phẳng bờ d: x - y = 2 có chứa gốc tọa độ O(0; 0)."
       ],
       [
         "Giá trị của biểu thức P = sin30&deg; + cos60&deg; - tan45&deg; bằng:",
         [
-          "A. 0.",
+          "A. -1.",
           "B. 1.",
-          "C. 1/2.",
-          "D. -1."
+          "C. 0.",
+          "D. 1/2."
         ],
-        0,
+        2,
         "Ta có: sin30&deg; = 1/2, cos60&deg; = 1/2, tan45&deg; = 1 &rArr; P = 1/2 + 1/2 - 1 = 0."
       ],
       [
         "Trong các cặp số sau, cặp nào là nghiệm của hệ bất phương trình {2x + 3y &gt; 4 ; x &gt; 0}?",
         [
           "A. (-2; 1).",
-          "B. (0; 1).",
+          "B. (1; -2).",
           "C. (2; 1).",
-          "D. (1; -2)."
+          "D. (0; 1)."
         ],
         2,
         "Thay cặp (2; 1): có x = 2 &gt; 0 và 2(2) + 3(1) = 7 &gt; 4. Cả hai bất phương trình đều thỏa mãn, do đó (2; 1) là nghiệm của hệ."
@@ -2464,34 +2464,34 @@ const suppliedExams = [
       [
         "Trên mặt phẳng Oxy lấy điểm M thuộc nửa đường tròn đơn vị sao cho góc xOM = 120&deg;. Tung độ của điểm M bằng:",
         [
-          "A. &radic;3 / 2.",
-          "B. -&radic;3 / 2.",
-          "C. -1/2.",
-          "D. 1."
+          "A. 1.",
+          "B. -1/2.",
+          "C. -&radic;3 / 2.",
+          "D. &radic;3 / 2."
         ],
-        0,
+        3,
         "Theo định nghĩa giá trị lượng giác trên nửa đường tròn đơn vị (Toán 10): tung độ của điểm M chính là sin(xOM) = sin120&deg;. Ta có sin120&deg; = sin(180&deg; - 60&deg;) = sin60&deg; = &radic;3 / 2."
       ],
       [
         "Trong mặt phẳng toạ độ Oxy, phần nửa mặt phẳng không tô đậm (không kể bờ) trong hình vẽ dưới đây là biểu diễn hình học tập nghiệm của bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 300 230\" width=\"300\" height=\"230\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan11\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n      </pattern>\n    </defs>\n    <!-- Vùng tô đậm (gạch sọc) không chứa gốc O -->\n    <polygon points=\"190,30 280,30 280,215 95,215\" fill=\"url(#hatchToan11)\"/>\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"100\" x2=\"280\" y2=\"100\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"280,100 272,96 272,104\" fill=\"#334155\"/>\n    <text x=\"272\" y=\"118\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n    \n    <line x1=\"110\" y1=\"215\" x2=\"110\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"110,20 106,28 114,28\" fill=\"#334155\"/>\n    <text x=\"96\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"94\" y=\"116\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Điểm cắt (3/2; 0) và (0; -3) -->\n    <!-- 1 đơn vị = 26px: 3/2 = 1.5 -> X = 110 + 39 = 149; -3 -> Y = 100 + 78 = 178 -->\n    <line x1=\"149\" y1=\"97\" x2=\"149\" y2=\"103\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"141\" y=\"93\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">3/2</text>\n\n    <line x1=\"107\" y1=\"178\" x2=\"113\" y2=\"178\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"86\" y=\"182\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">-3</text>\n\n    <!-- Đường thẳng 2x - y = 3 (nét đứt vì không kể bờ) -->\n    <line x1=\"190\" y1=\"30\" x2=\"95\" y2=\"215\" stroke=\"#2563eb\" stroke-width=\"2.2\" stroke-dasharray=\"6,4\"/>\n    <text x=\"195\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2x - y = 3</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Miền không tô đậm (không kể bờ) trong mặt phẳng toạ độ Oxy</div>\n</div>",
         [
-          "A. 2x - y &gt; 3.",
-          "B. 2x - y &lt; 3.",
-          "C. x - 2y &gt; 3.",
-          "D. x - 2y &lt; 3."
+          "A. 2x - y &lt; 3.",
+          "B. x - 2y &lt; 3.",
+          "C. 2x - y &gt; 3.",
+          "D. x - 2y &gt; 3."
         ],
-        1,
+        0,
         "Phương trình đường thẳng bờ đi qua (3/2; 0) và (0; -3) là x / (3/2) + y / (-3) = 1 &hArr; 2x/3 - y/3 = 1 &hArr; 2x - y = 3. Miền nghiệm không tô đậm chứa gốc tọa độ O(0; 0) và không kể bờ. Thay (0; 0): 2(0) - 0 = 0 &lt; 3 (thỏa mãn). Vậy bất phương trình tương ứng là 2x - y &lt; 3."
       ],
       [
         "Tam giác ABC có góc B = 10&deg; và góc C = 20&deg;. Giá trị của tanA bằng:",
         [
           "A. -&radic;3.",
-          "B. &radic;3.",
-          "C. -1 / &radic;3.",
-          "D. 1 / &radic;3."
+          "B. -1 / &radic;3.",
+          "C. 1 / &radic;3.",
+          "D. &radic;3."
         ],
-        2,
+        1,
         "Tổng ba góc trong tam giác ABC: A = 180&deg; - (B + C) = 180&deg; - (10&deg; + 20&deg;) = 150&deg;. Áp dụng tính chất giá trị lượng giác của hai góc bù nhau: tanA = tan150&deg; = tan(180&deg; - 30&deg;) = -tan30&deg; = -1 / &radic;3."
       ]
     ],
@@ -2600,23 +2600,23 @@ const suppliedExams = [
       [
         "Phát biểu nào sau đây không phải là một mệnh đề?",
         [
-          "A. \"Nếu x &lt; 3 thì x<sup>2</sup> &lt; 9\"",
-          "B. \"&forall;x &gt; 0 ta đều có: &radic;x &gt; x\"",
-          "C. \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\"",
-          "D. \"Tồn tại x &isin; <b>R</b> sao cho x<sup>2</sup> + 3x - 4 = 0\""
+          "A. \"&forall;x &gt; 0 ta đều có: &radic;x &gt; x\"",
+          "B. \"Nếu x &lt; 3 thì x<sup>2</sup> &lt; 9\"",
+          "C. \"Tồn tại x &isin; <b>R</b> sao cho x<sup>2</sup> + 3x - 4 = 0\"",
+          "D. \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\""
         ],
-        2,
+        3,
         "Theo định nghĩa mệnh đề trong SGK Toán 10: Mệnh đề là một câu khẳng định có tính đúng hoặc sai. Câu nghi vấn (câu hỏi) \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\" không phải là câu khẳng định nên không phải là một mệnh đề."
       ],
       [
         "Tìm mệnh đề phủ định của mệnh đề M = \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường đều đạt giải\".",
         [
           "A. \"Có rất nhiều học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
-          "B. \"Có ít nhất một học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
-          "C. \"Không có học sinh nào trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
-          "D. \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\""
+          "B. \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "C. \"Có ít nhất một học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "D. \"Không có học sinh nào trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\""
         ],
-        1,
+        2,
         "Mệnh đề ban đầu có dạng \"&forall;x &isin; X, P(x)\" (tất cả... đều đạt giải). Phủ định của mệnh đề chứa lượng từ \"&forall;\" (tất cả) là mệnh đề chứa lượng từ \"&exist;\" (tồn tại / có ít nhất một) kèm phủ định của tính chất: \"Có ít nhất một học sinh trong đội chính thức... không đạt giải\"."
       ],
       [
@@ -2624,21 +2624,21 @@ const suppliedExams = [
         [
           "A. [3; 8)",
           "B. {3; 4; 5; 6; 7; 8; 9}",
-          "C. (3; 9]",
-          "D. [3; 11)"
+          "C. [3; 11)",
+          "D. (3; 9]"
         ],
-        2,
+        3,
         "Phần tử chung của A = [3; 9] và B = (3; 11) là các số thực x thỏa mãn 3 &le; x &le; 9 và 3 &lt; x &lt; 11 &hArr; 3 &lt; x &le; 9. Do đó A &cap; B = (3; 9]."
       ],
       [
         "Hình vẽ biểu diễn trên trục số thực dưới đây là hình biểu diễn cho tập hợp số nào sau đây:\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 440 85\" width=\"440\" height=\"85\" xmlns=\"http://www.w3.org/2000/svg\">\n    <!-- Trục số -->\n    <line x1=\"20\" y1=\"45\" x2=\"420\" y2=\"45\" stroke=\"#334155\" stroke-width=\"2\"/>\n    <polygon points=\"420,45 410,40 410,50\" fill=\"#334155\"/>\n    <text x=\"412\" y=\"65\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">+∞</text>\n    <text x=\"15\" y=\"65\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">-∞</text>\n\n    <!-- Gạch bỏ từ -vô cùng đến 2 -->\n    <line x1=\"30\" y1=\"35\" x2=\"45\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"45\" y1=\"35\" x2=\"60\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"60\" y1=\"35\" x2=\"75\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"75\" y1=\"35\" x2=\"90\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n\n    <!-- Điểm 2: ngoặc vuông [ quay sang phải -->\n    <text x=\"96\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">[</text>\n    <text x=\"98\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2</text>\n\n    <!-- Khoảng lấy [2; 4]: đoạn thẳng đậm -->\n    <line x1=\"108\" y1=\"45\" x2=\"180\" y2=\"45\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n\n    <!-- Điểm 4: ngoặc vuông ] quay sang trái -->\n    <text x=\"180\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">]</text>\n    <text x=\"182\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">4</text>\n\n    <!-- Gạch bỏ từ 4 đến 6 -->\n    <line x1=\"195\" y1=\"35\" x2=\"210\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"210\" y1=\"35\" x2=\"225\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"225\" y1=\"35\" x2=\"240\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"240\" y1=\"35\" x2=\"255\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n\n    <!-- Điểm 6: ngoặc vuông [ quay sang phải -->\n    <text x=\"262\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">[</text>\n    <text x=\"264\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">6</text>\n\n    <!-- Khoảng lấy [6; 8): đoạn thẳng đậm -->\n    <line x1=\"274\" y1=\"45\" x2=\"340\" y2=\"45\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n\n    <!-- Điểm 8: ngoặc tròn ) quay sang trái -->\n    <text x=\"340\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">)</text>\n    <text x=\"342\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">8</text>\n\n    <!-- Gạch bỏ từ 8 đến +vô cùng -->\n    <line x1=\"355\" y1=\"35\" x2=\"370\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"370\" y1=\"35\" x2=\"385\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"385\" y1=\"35\" x2=\"400\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n  </svg>\n  <div class=\"figure-caption\">Hình biểu diễn tập hợp số trên trục số thực</div>\n</div>",
         [
-          "A. K = [2; 8) \\ (4; 6)",
-          "B. K = {2; 3; 4; 6; 7; 8}",
-          "C. K = {2; 3; 4; 6; 7}",
-          "D. K = [2; 8) \\ [4; 6]"
+          "A. K = {2; 3; 4; 6; 7; 8}",
+          "B. K = [2; 8) \\ (4; 6)",
+          "C. K = [2; 8) \\ [4; 6]",
+          "D. K = {2; 3; 4; 6; 7}"
         ],
-        0,
+        1,
         "Tập hợp lấy từ 2 (có lấy đầu mút 2) đến 8 (không lấy đầu mút 8), và loại bỏ các phần tử nằm trong khoảng (4; 6) (hai điểm 4 và 6 vẫn được giữ lại do ngoặc quay ra vùng lấy). Do đó tập hợp số tương ứng là K = [2; 8) \\ (4; 6)."
       ],
       [
@@ -2646,8 +2646,8 @@ const suppliedExams = [
         [
           "A. {x &ge; 0 ; y &ge; 0 ; x + y &le; 3}.",
           "B. {x &ge; 0 ; y &ge; 0}.",
-          "C. {x + y &le; 2 ; x - y &ge; 1}.",
-          "D. {x &gt; 1 ; y &lt; 2}."
+          "C. {x &gt; 1 ; y &lt; 2}.",
+          "D. {x + y &le; 2 ; x - y &ge; 1}."
         ],
         0,
         "Hệ {x >= 0; y >= 0; x + y <= 3} bị giới hạn bởi trục Ox (y=0), trục Oy (x=0) và đường thẳng x + y = 3 tạo thành tam giác vuông có các đỉnh O(0; 0), A(3; 0), B(0; 3)."
@@ -2655,21 +2655,21 @@ const suppliedExams = [
       [
         "Miền nghiệm của bất phương trình x + 2y &le; 4 chứa điểm nào sau đây?",
         [
-          "A. A(1; 2)",
-          "B. B(2; 1)",
-          "C. C(4; 3)",
-          "D. D(-1; 3)"
+          "A. B(2; 1)",
+          "B. A(1; 2)",
+          "C. D(-1; 3)",
+          "D. C(4; 3)"
         ],
-        1,
+        0,
         "Thay tọa độ điểm B(2; 1) vào bất phương trình: 2 + 2(1) = 4 &le; 4 (thỏa mãn dấu \"&le;\"). Các điểm còn lại đều cho giá trị lớn hơn 4 (1 + 4 = 5 &gt; 4; 4 + 6 = 10 &gt; 4; -1 + 6 = 5 &gt; 4)."
       ],
       [
         "Trong mặt phẳng toạ độ Oxy, phần nửa mặt phẳng không bị gạch (kể cả bờ) trong hình vẽ dưới đây là miền nghiệm của bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 290 230\" width=\"290\" height=\"230\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan12\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n      </pattern>\n    </defs>\n    <!-- Nửa mặt phẳng chứa O(0; 0) bị gạch sọc -->\n    <polygon points=\"65,225 210,35 20,35 20,225\" fill=\"url(#hatchToan12)\"/>\n\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"110\" x2=\"270\" y2=\"110\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"270,110 262,106 262,114\" fill=\"#334155\"/>\n    <text x=\"262\" y=\"128\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n\n    <line x1=\"120\" y1=\"225\" x2=\"120\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"120,20 116,28 124,28\" fill=\"#334155\"/>\n    <text x=\"106\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"104\" y=\"104\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Điểm (2; 0) và (0; -2) -->\n    <!-- 1 đơn vị = 26px: (2; 0) -> X = 120 + 52 = 172; (0; -2) -> Y = 110 + 52 = 162 -->\n    <line x1=\"172\" y1=\"107\" x2=\"172\" y2=\"113\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"168\" y=\"128\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">2</text>\n\n    <line x1=\"117\" y1=\"162\" x2=\"123\" y2=\"162\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"100\" y=\"166\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">-2</text>\n\n    <!-- Đường thẳng x - y = 2 (nét liền vì kể cả bờ) -->\n    <line x1=\"65\" y1=\"225\" x2=\"215\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"2.2\"/>\n    <text x=\"218\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">d: x - y = 2</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Nửa mặt phẳng không bị gạch (kể cả bờ d)</div>\n</div>",
         [
-          "A. x - y &ge; -2",
+          "A. x - y + 2 &gt; 0",
           "B. x - y &ge; 2",
-          "C. x - y + 2 &gt; 0",
-          "D. x + y &ge; -2"
+          "C. x + y &ge; -2",
+          "D. x - y &ge; -2"
         ],
         1,
         "Đường thẳng bờ đi qua (2; 0) và (0; -2) có phương trình là x - y = 2. Gốc tọa độ O(0; 0) nằm trong miền bị gạch bỏ vì 0 - 0 = 0 &lt; 2. Miền nghiệm không bị gạch chứa các điểm thỏa mãn x - y &ge; 2 (ví dụ điểm (3; 0) có 3 - 0 = 3 &ge; 2)."
@@ -2677,10 +2677,10 @@ const suppliedExams = [
       [
         "Cho hệ bất phương trình: {x &lt; 3 ; y &gt; 0 ; x - y + 4 &gt; 0} có miền nghiệm là (S). Kết luận nào sau đây đúng?",
         [
-          "A. Điểm A(-1; 1) không thuộc S",
+          "A. Điểm E(1; 5) thuộc S",
           "B. Miền nghiệm của hệ là miền trong của một tam giác.",
-          "C. Tất cả các điểm trên đoạn thẳng AB với A(0; 1) và B(2; 2) đều nằm ngoài miền nghiệm (S)",
-          "D. Điểm E(1; 5) thuộc S"
+          "C. Điểm A(-1; 1) không thuộc S",
+          "D. Tất cả các điểm trên đoạn thẳng AB với A(0; 1) và B(2; 2) đều nằm ngoài miền nghiệm (S)"
         ],
         1,
         "Ba đường thẳng x = 3, y = 0, x - y + 4 = 0 cắt nhau đôi một tại 3 đỉnh phân biệt (-4; 0), (3; 0) và (3; 7). Miền nghiệm gồm các điểm nằm đồng thời về phía bên trái đường x = 3, phía trên trục hoành y = 0 và phía dưới đường x - y + 4 = 0, tạo thành miền trong của một tam giác."
@@ -2688,32 +2688,32 @@ const suppliedExams = [
       [
         "Miền tam giác (phần nền trắng) trong hình vẽ dưới đây là miền nghiệm của hệ bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 320 240\" width=\"320\" height=\"240\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan12_9\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/>\n      </pattern>\n    </defs>\n    <!-- Nền gạch ngoài tam giác -->\n    <rect x=\"20\" y=\"20\" width=\"280\" height=\"200\" fill=\"url(#hatchToan12_9)\"/>\n    <!-- Miền tam giác (phần nền trắng) -->\n    <!-- Đỉnh (0; 2): X = 150, Y = 120 - 2*30 = 60 -->\n    <!-- Đáy nằm trên y = -1: Y = 120 + 30 = 150 -->\n    <!-- Giao với x - y + 2 = 0 tại y = -1 => x = -3: X = 150 - 3*30 = 60 -->\n    <!-- Giao với 2x + y - 2 = 0 tại y = -1 => x = 1.5: X = 150 + 1.5*30 = 195 -->\n    <polygon points=\"150,60 60,150 195,150\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"120\" x2=\"295\" y2=\"120\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"295,120 287,116 287,124\" fill=\"#334155\"/>\n    <text x=\"287\" y=\"136\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n\n    <line x1=\"150\" y1=\"220\" x2=\"150\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"150,20 146,28 154,28\" fill=\"#334155\"/>\n    <text x=\"136\" y=\"25\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"136\" y=\"115\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Đường y = -1 -->\n    <line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#0284c7\" stroke-width=\"1.8\"/>\n    <text x=\"210\" y=\"165\" font-size=\"11\" font-weight=\"bold\" fill=\"#0284c7\">y = -1</text>\n\n    <!-- Điểm (0; 2) -->\n    <circle cx=\"150\" cy=\"60\" r=\"3\" fill=\"#2563eb\"/>\n    <text x=\"156\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Miền tam giác nền trắng giới hạn bởi 3 đường thẳng</div>\n</div>",
         [
-          "A. {x - y + 2 &ge; 0 ; y + 1 &ge; 0 ; 2x + y - 2 &le; 0}",
+          "A. {x - y &le; 2 ; 2x + y - 2 &ge; 0 ; y + 1 &le; 0}",
           "B. {x &ge; -1 ; 2x + y - 2 &ge; 0 ; x - y &le; 2}",
-          "C. {y &le; 1 ; 2x + y - 2 &ge; 0 ; x + 4y - 10 &ge; 0}",
-          "D. {x - y &le; 2 ; 2x + y - 2 &ge; 0 ; y + 1 &le; 0}"
+          "C. {x - y + 2 &ge; 0 ; y + 1 &ge; 0 ; 2x + y - 2 &le; 0}",
+          "D. {y &le; 1 ; 2x + y - 2 &ge; 0 ; x + 4y - 10 &ge; 0}"
         ],
-        0,
+        2,
         "Cạnh đáy của tam giác nằm trên đường y = -1, miền tam giác nằm phía trên nên y &ge; -1 &hArr; y + 1 &ge; 0. Hai cạnh bên là các đường thẳng x - y + 2 = 0 và 2x + y - 2 = 0. Gốc O(0; 0) nằm trong tam giác và thỏa mãn 0 - 0 + 2 &ge; 0, 0 + 1 &ge; 0, 2(0) + 0 - 2 &le; 0. Vậy hệ bất phương trình đúng là hệ A."
       ],
       [
         "Cho góc &alpha; có 90&deg; &lt; &alpha; &le; 180&deg;. Kết luận nào sau đây đúng?",
         [
-          "A. sin&alpha; &gt; 0; cos&alpha; &gt; 0",
-          "B. sin&alpha; &gt; 0; cot&alpha; &lt; 0",
-          "C. tan&alpha; . cot&alpha; &lt; 0",
-          "D. sin&alpha; &lt; 0; tan&alpha; &gt; 0"
+          "A. sin&alpha; &gt; 0; cot&alpha; &lt; 0",
+          "B. tan&alpha; . cot&alpha; &lt; 0",
+          "C. sin&alpha; &lt; 0; tan&alpha; &gt; 0",
+          "D. sin&alpha; &gt; 0; cos&alpha; &gt; 0"
         ],
-        1,
+        0,
         "Với góc tù &alpha; (90&deg; &lt; &alpha; &le; 180&deg;), điểm biểu diễn trên nửa đường tròn đơn vị có tung độ dương (sin&alpha; &gt; 0) và hoành độ âm (cos&alpha; &lt; 0). Do đó cot&alpha; = cos&alpha; / sin&alpha; &lt; 0. Kết luận đúng là sin&alpha; &gt; 0 và cot&alpha; &lt; 0."
       ],
       [
         "Cho sin&alpha; = 0,3 với &alpha; &gt; 90&deg;. Tính: cos&alpha;.",
         [
           "A. &plusmn;&radic;91 / 10",
-          "B. &plusmn;9 / 10",
+          "B. &plusmn;&radic;0,7",
           "C. -&radic;91 / 10",
-          "D. &plusmn;&radic;0,7"
+          "D. &plusmn;9 / 10"
         ],
         2,
         "Áp dụng công thức lượng giác cơ bản trong Toán 10: sin<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; = 1 &rArr; cos<sup>2</sup>&alpha; = 1 - 0,3<sup>2</sup> = 0,91 = 91/100. Vì &alpha; &gt; 90&deg; (góc tù) nên cos&alpha; &lt; 0, do đó cos&alpha; = -&radic;91 / 10."
@@ -2721,12 +2721,12 @@ const suppliedExams = [
       [
         "Cho tam giác ABC có BC = 6a, góc ABC = 60&deg;, cosBAC = 2/3. Tính AC theo a.",
         [
-          "A. 9a&radic;15 / 5",
-          "B. 9a / 5",
-          "C. 6a / &radic;5",
-          "D. 3a"
+          "A. 3a",
+          "B. 6a / &radic;5",
+          "C. 9a / 5",
+          "D. 9a&radic;15 / 5"
         ],
-        0,
+        3,
         "Vì góc A là góc trong tam giác nên sinA &gt; 0 &rArr; sinA = &radic;(1 - cos<sup>2</sup>A) = &radic;(1 - 4/9) = &radic;5 / 3. Áp dụng định lí sin: AC / sinB = BC / sinA &rArr; AC = BC . (sinB / sinA) = 6a . (sin60&deg; / (&radic;5/3)) = 6a . (&radic;3/2) . (3/&radic;5) = 9a&radic;3 / &radic;5 = 9a&radic;15 / 5."
       ]
     ],
@@ -2835,32 +2835,32 @@ const suppliedExams = [
       [
         "Đối tượng nghiên cứu cốt lõi của Vật lí học bao gồm:",
         [
-          "A. Các dạng vận động của vật chất và năng lượng.",
-          "B. Quy luật phát triển của xã hội loài người.",
-          "C. Sự phát sinh và biến dị di truyền của sinh vật.",
-          "D. Quá trình quang hợp của thực vật trong tự nhiên."
+          "A. Sự phát sinh và biến dị di truyền của sinh vật.",
+          "B. Các dạng vận động của vật chất và năng lượng.",
+          "C. Quá trình quang hợp của thực vật trong tự nhiên.",
+          "D. Quy luật phát triển của xã hội loài người."
         ],
-        0,
+        1,
         "Vật lí học là môn khoa học tự nhiên nghiên cứu các dạng vận động của vật chất và năng lượng."
       ],
       [
         "Hai phương pháp nghiên cứu cốt lõi thường được sử dụng tương hỗ trong quá trình phát triển của Vật lí học là:",
         [
-          "A. Phương pháp thực nghiệm và phương pháp lí thuyết.",
+          "A. Phương pháp khảo cổ học và phục dựng mô hình.",
           "B. Phương pháp điều tra xã hội học và phỏng vấn trực tiếp.",
-          "C. Phương pháp khảo cổ học và phục dựng mô hình.",
-          "D. Phương pháp phân tích văn bản và dịch thuật."
+          "C. Phương pháp phân tích văn bản và dịch thuật.",
+          "D. Phương pháp thực nghiệm và phương pháp lí thuyết."
         ],
-        0,
+        3,
         "Phương pháp thực nghiệm và phương pháp lí thuyết là hai phương pháp trụ cột hỗ trợ chặt chẽ cho nhau trong Vật lí."
       ],
       [
         "Để bảo đảm an toàn khi thực hành thí nghiệm có sử dụng nguồn điện xoay chiều 220 V trong phòng thực hành, hành động nào sau đây là BẮT BUỘC?",
         [
           "A. Chỉ được đóng điện sau khi giáo viên đã kiểm tra mạch điện an toàn.",
-          "B. Dùng tay trần chạm vào dây dẫn để kiểm tra xem có dòng điện chạy qua không.",
-          "C. Tự ý thay đổi sơ đồ mạch điện khi công tắc đang đóng.",
-          "D. Tháo dây dẫn bằng cách giật mạnh dây nguồn ra khỏi ổ cắm."
+          "B. Tự ý thay đổi sơ đồ mạch điện khi công tắc đang đóng.",
+          "C. Tháo dây dẫn bằng cách giật mạnh dây nguồn ra khỏi ổ cắm.",
+          "D. Dùng tay trần chạm vào dây dẫn để kiểm tra xem có dòng điện chạy qua không."
         ],
         0,
         "Khi thực hành điện áp nguy hiểm 220 V, học sinh chỉ được bật công tắc nguồn sau khi giáo viên hướng dẫn kiểm tra toàn bộ mạch."
@@ -2868,45 +2868,45 @@ const suppliedExams = [
       [
         "Trong phòng thực hành Vật lí, biển báo cảnh báo nguy cơ điện giật nguy hiểm có hình dạng và màu sắc như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><path d=\"M52,28 L36,54 L48,54 L44,76 L66,48 L54,48 Z\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "A. Cảnh báo khu vực có điện áp cao, nguy cơ điện giật nguy hiểm.",
-          "B. Nơi lưu trữ các chất ăn mòn hóa học mạnh.",
-          "C. Quy định bắt buộc phải đeo găng tay cách điện.",
-          "D. Lối thoát hiểm khẩn cấp khi có sự cố cháy nổ."
+          "A. Nơi lưu trữ các chất ăn mòn hóa học mạnh.",
+          "B. Cảnh báo khu vực có điện áp cao, nguy cơ điện giật nguy hiểm.",
+          "C. Lối thoát hiểm khẩn cấp khi có sự cố cháy nổ.",
+          "D. Quy định bắt buộc phải đeo găng tay cách điện."
         ],
-        0,
+        1,
         "Biển hình tam giác đều viền đen nền vàng có hình tia sét là biển báo cảnh báo nguy hiểm về điện."
       ],
       [
         "Phép đo nào sau đây là phép đo TRỰC TIẾP một đại lượng vật lí?",
         [
-          "A. Dùng thước cuộn đo trực tiếp chiều dài của phòng học.",
-          "B. Dùng công thức v = s/t để tính tốc độ chuyển động của xe.",
+          "A. Dùng vôn kế và ampe kế để tính điện trở của một đoạn dây dẫn.",
+          "B. Dùng thước cuộn đo trực tiếp chiều dài của phòng học.",
           "C. Dùng khối lượng và thể tích để tính khối lượng riêng của viên sỏi.",
-          "D. Dùng vôn kế và ampe kế để tính điện trở của một đoạn dây dẫn."
+          "D. Dùng công thức v = s/t để tính tốc độ chuyển động của xe."
         ],
-        0,
+        1,
         "Đo trực tiếp là so sánh trực tiếp đại lượng cần đo với dụng cụ đo (dùng thước đo chiều dài)."
       ],
       [
         "Một học sinh dùng thước thẳng đo 5 lần chiều dài tấm bìa và tính được giá trị trung bình L̄ = 20,4 cm, sai số tuyệt đối là ΔL = 0,2 cm. Kết quả phép đo được ghi đúng chuẩn là:",
         [
-          "A. L = (20,4 ± 0,2) cm.",
-          "B. L = 20,4 + 0,2 cm.",
-          "C. L = 20,4 - 0,2 cm.",
-          "D. L = 20,4 cm ± 2 mm."
+          "A. L = 20,4 + 0,2 cm.",
+          "B. L = 20,4 - 0,2 cm.",
+          "C. L = 20,4 cm ± 2 mm.",
+          "D. L = (20,4 ± 0,2) cm."
         ],
-        0,
+        3,
         "Cách ghi kết quả phép đo chuẩn của đại lượng A là A = Ā ± ΔA (có cùng đơn vị đo)."
       ],
       [
         "Một học sinh đi bộ từ nhà đến trường theo đường thẳng dài 500 m. Sau khi tan học, học sinh đó quay trở lại về nhà theo đúng con đường cũ. Độ dịch chuyển tổng cộng của học sinh đó sau cả chuyến đi và về là:",
         [
-          "A. 0 m.",
-          "B. 500 m.",
-          "C. 1000 m.",
+          "A. 500 m.",
+          "B. 1000 m.",
+          "C. 0 m.",
           "D. 250 m."
         ],
-        0,
+        2,
         "Vì vị trí đầu và vị trí cuối trùng nhau (đều ở nhà) nên vectơ độ dịch chuyển tổng cộng bằng 0 m."
       ],
       [
@@ -2914,8 +2914,8 @@ const suppliedExams = [
         [
           "A. v = v₁ + v₂.",
           "B. v = v₁ - v₂.",
-          "C. v = √(v₁² + v₂²).",
-          "D. v = v₁ · v₂."
+          "C. v = v₁ · v₂.",
+          "D. v = √(v₁² + v₂²)."
         ],
         0,
         "Khi ca nô chạy xuôi dòng, vận tốc thuyền và vận tốc nước cùng hướng nên vận tốc so với bờ là v = v₁ + v₂."
@@ -2924,9 +2924,9 @@ const suppliedExams = [
         "Trong thí nghiệm thực hành đo tốc độ của viên bi chuyển động trên máng nghiêng, thiết bị nào sau đây dùng để đo khoảng thời gian viên bi đi qua giữa hai cổng quang điện một cách chính xác nhất?",
         [
           "A. Đồng hồ đo thời gian hiện số kết nối với cổng quang điện.",
-          "B. Đồng hồ bấm giây cơ học cầm tay.",
+          "B. Thước kẹp có độ chia nhỏ nhất 0,1 mm.",
           "C. Đồng hồ đeo tay thông thường có kim giây.",
-          "D. Thước kẹp có độ chia nhỏ nhất 0,1 mm."
+          "D. Đồng hồ bấm giây cơ học cầm tay."
         ],
         0,
         "Đồng hồ đo thời gian hiện số kết hợp cổng quang điện đo thời gian tự động chính xác đến mili giây (0,001 s)."
@@ -2934,32 +2934,32 @@ const suppliedExams = [
       [
         "Đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm có dạng như hình vẽ bên. Nhận xét nào sau đây về trạng thái chuyển động của chất điểm là ĐÚNG? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"12\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">d(m)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"65\" x2=\"195\" y2=\"65\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"16\" y=\"69\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\" font-family=\"sans-serif\">d₀</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị độ dịch chuyển – thời gian (d – t)</div></div>",
         [
-          "A. Chất điểm đang đứng yên tại vị trí có độ dịch chuyển d₀.",
-          "B. Chất điểm chuyển động thẳng đều với vận tốc không đổi.",
-          "C. Chất điểm chuyển động thẳng nhanh dần đều theo chiều dương.",
-          "D. Chất điểm chuyển động chậm dần đều rồi dừng lại ở gốc tọa độ."
+          "A. Chất điểm chuyển động chậm dần đều rồi dừng lại ở gốc tọa độ.",
+          "B. Chất điểm chuyển động thẳng nhanh dần đều theo chiều dương.",
+          "C. Chất điểm đang đứng yên tại vị trí có độ dịch chuyển d₀.",
+          "D. Chất điểm chuyển động thẳng đều với vận tốc không đổi."
         ],
-        0,
+        2,
         "Đồ thị d – t là đường thẳng song song với trục thời gian t chứng tỏ độ dịch chuyển không đổi theo thời gian, tức là vật đứng yên."
       ],
       [
         "Gia tốc là một đại lượng vectơ đặc trưng cho:",
         [
-          "A. Sự biến thiên nhanh hay chậm của vận tốc theo thời gian.",
-          "B. Sự biến thiên nhanh hay chậm của độ dịch chuyển theo thời gian.",
+          "A. Sự biến thiên nhanh hay chậm của độ dịch chuyển theo thời gian.",
+          "B. Sự biến thiên nhanh hay chậm của vận tốc theo thời gian.",
           "C. Quãng đường vật đi được trong một đơn vị thời gian.",
           "D. Mức độ quán tính của vật khi có lực tác dụng."
         ],
-        0,
+        1,
         "Gia tốc a = Δv / Δt là đại lượng đặc trưng cho tốc độ thay đổi (biến thiên) của vận tốc."
       ],
       [
         "Một vật chuyển động thẳng chậm dần đều theo chiều dương của trục tọa độ. Dấu của vận tốc v và gia tốc a thỏa mãn điều kiện nào sau đây?",
         [
           "A. v > 0 và a < 0 (tích a · v < 0).",
-          "B. v > 0 và a > 0 (tích a · v > 0).",
-          "C. v < 0 và a < 0 (tích a · v > 0).",
-          "D. v = 0 và a > 0."
+          "B. v = 0 và a > 0.",
+          "C. v > 0 và a > 0 (tích a · v > 0).",
+          "D. v < 0 và a < 0 (tích a · v > 0)."
         ],
         0,
         "Trong chuyển động chậm dần đều, vectơ gia tốc ngược chiều vectơ vận tốc nên tích a · v < 0. Vì v > 0 nên a < 0."
@@ -2967,45 +2967,45 @@ const suppliedExams = [
       [
         "Đồ thị vận tốc – thời gian (v – t) của một đoàn tàu chuyển động thẳng biến đổi đều được cho như hình vẽ bên. Gia tốc của đoàn tàu là: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"10\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">v(m/s)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"125\" x2=\"185\" y2=\"35\" stroke=\"#ea580c\" stroke-width=\"3\"/><line x1=\"185\" y1=\"35\" x2=\"185\" y2=\"125\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><line x1=\"35\" y1=\"35\" x2=\"185\" y2=\"35\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><text x=\"180\" y=\"138\" font-size=\"11\" fill=\"#334155\">5</text><text x=\"14\" y=\"38\" font-size=\"11\" fill=\"#334155\">15</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị vận tốc – thời gian (v – t)</div></div>",
         [
-          "A. a = 3 m/s².",
+          "A. a = 0,33 m/s².",
           "B. a = 15 m/s².",
-          "C. a = 0,33 m/s².",
-          "D. a = 75 m/s²."
+          "C. a = 75 m/s².",
+          "D. a = 3 m/s²."
         ],
-        0,
+        3,
         "Gia tốc là độ dốc của đồ thị v – t: a = (v - v₀) / t = (15 - 0) / 5 = 3 m/s²."
       ],
       [
         "Công thức liên hệ giữa vận tốc ban đầu v₀, vận tốc lúc sau v, gia tốc a và độ dịch chuyển d trong chuyển động thẳng biến đổi đều là:",
         [
-          "A. v² - v₀² = 2ad.",
-          "B. v² + v₀² = 2ad.",
-          "C. v - v₀ = 2ad.",
+          "A. v² + v₀² = 2ad.",
+          "B. v - v₀ = 2ad.",
+          "C. v² - v₀² = 2ad.",
           "D. v² - v₀² = ad."
         ],
-        0,
+        2,
         "Công thức độc lập thời gian cốt lõi là v² - v₀² = 2ad."
       ],
       [
         "Thí nghiệm với ống hút chân không Niutơn cho thấy khi thả rơi đồng thời một viên bi chì và một chiếc lông chim trong ống đã hút hết không khí (hình bên phải) thì: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"180\" height=\"150\" viewBox=\"0 0 180 150\"><rect x=\"30\" y=\"20\" width=\"40\" height=\"110\" rx=\"10\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"110\" y=\"20\" width=\"40\" height=\"110\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"118\" r=\"6\" fill=\"#334155\"/><path d=\"M48,50 Q54,42 52,58\" stroke=\"#f59e0b\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"130\" cy=\"118\" r=\"6\" fill=\"#0284c7\"/><path d=\"M128,118 Q134,110 132,126\" stroke=\"#f59e0b\" stroke-width=\"3\" fill=\"none\"/><text x=\"20\" y=\"144\" font-size=\"10\" fill=\"#64748b\">Có không khí</text><text x=\"105\" y=\"144\" font-size=\"10\" fill=\"#0284c7\" font-weight=\"bold\">Chân không</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Thí nghiệm ống hút chân không Niutơn</div></div>",
         [
-          "A. Viên bi chì và chiếc lông chim rơi nhanh như nhau và chạm đáy cùng một lúc.",
-          "B. Viên bi chì luôn rơi nhanh hơn nhiều so với chiếc lông chim.",
+          "A. Viên bi chì luôn rơi nhanh hơn nhiều so với chiếc lông chim.",
+          "B. Chiếc lông chim rơi nhanh hơn viên bi chì do nhẹ hơn.",
           "C. Chiếc lông chim lơ lửng không rơi vì không có lực tác dụng.",
-          "D. Chiếc lông chim rơi nhanh hơn viên bi chì do nhẹ hơn."
+          "D. Viên bi chì và chiếc lông chim rơi nhanh như nhau và chạm đáy cùng một lúc."
         ],
-        0,
+        3,
         "Trong môi trường chân không (không có lực cản không khí), mọi vật đều rơi tự do như nhau với cùng gia tốc g."
       ],
       [
         "Một hòn sỏi được thả rơi tự do từ độ cao h = 20 m xuống mặt đất tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian hòn sỏi rơi từ lúc thả đến khi chạm đất là:",
         [
-          "A. 2,0 s.",
-          "B. 1,0 s.",
-          "C. 4,0 s.",
-          "D. 0,5 s."
+          "A. 0,5 s.",
+          "B. 4,0 s.",
+          "C. 2,0 s.",
+          "D. 1,0 s."
         ],
-        0,
+        2,
         "Thời gian rơi tự do: t = √(2h / g) = √(2 · 20 / 10) = √4 = 2,0 s."
       ]
     ],
@@ -3109,9 +3109,9 @@ const suppliedExams = [
         "Lĩnh vực nào sau đây thuộc phạm trù nghiên cứu của Vật lí cổ điển (hình thành trước đầu thế kỉ XX)?",
         [
           "A. Cơ học cổ điển, Nhiệt học, Điện từ học và Quang học.",
-          "B. Thuyết tương đối hẹp và thuyết tương đối rộng của Einstein.",
+          "B. Công nghệ vi mạch lượng tử và máy tính lượng tử.",
           "C. Cơ học lượng tử và cấu trúc hạt nhân nguyên tử.",
-          "D. Công nghệ vi mạch lượng tử và máy tính lượng tử."
+          "D. Thuyết tương đối hẹp và thuyết tương đối rộng của Einstein."
         ],
         0,
         "Cơ học, Nhiệt học, Điện từ học, Quang học là các nhánh trụ cột của Vật lí cổ điển."
@@ -3119,98 +3119,98 @@ const suppliedExams = [
       [
         "Khi làm thí nghiệm quang học có sử dụng nguồn phát tia laser, để bảo đảm an toàn cho mắt, học sinh TUYỆT ĐỐI KHÔNG được:",
         [
-          "A. Nhìn trực tiếp vào đầu phát tia laser hoặc để tia laser phản xạ vào mắt.",
-          "B. Đặt nguồn phát laser trên giá đỡ cố định chắc chắn.",
-          "C. Che chắn chùm tia laser bằng tấm chắn sáng mờ.",
-          "D. Tắt nguồn laser ngay sau khi kết thúc buổi thực hành."
+          "A. Tắt nguồn laser ngay sau khi kết thúc buổi thực hành.",
+          "B. Nhìn trực tiếp vào đầu phát tia laser hoặc để tia laser phản xạ vào mắt.",
+          "C. Đặt nguồn phát laser trên giá đỡ cố định chắc chắn.",
+          "D. Che chắn chùm tia laser bằng tấm chắn sáng mờ."
         ],
-        0,
+        1,
         "Tia laser có mật độ năng lượng rất cao, nhìn trực tiếp vào chùm tia có thể gây bỏng võng mạc và mù lòa vĩnh viễn."
       ],
       [
         "Trong phòng thực hành, biển báo có hình tròn nền xanh dương, hình vẽ màu trắng như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#2563eb\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"34\" cy=\"50\" r=\"14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\"/><circle cx=\"66\" cy=\"50\" r=\"14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\"/><line x1=\"48\" y1=\"50\" x2=\"52\" y2=\"50\" stroke=\"#fff\" stroke-width=\"5\"/><path d=\"M20,50 Q24,38 34,38\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/><path d=\"M80,50 Q76,38 66,38\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "A. Quy định bắt buộc phải đeo kính bảo hộ mắt khi tiến hành thí nghiệm.",
-          "B. Cảnh báo khu vực có nguy cơ nổ bình áp suất cao.",
+          "A. Nơi sơ cấp cứu và rửa mắt khẩn cấp.",
+          "B. Quy định bắt buộc phải đeo kính bảo hộ mắt khi tiến hành thí nghiệm.",
           "C. Cấm người đeo kính mắt vào phòng thí nghiệm.",
-          "D. Nơi sơ cấp cứu và rửa mắt khẩn cấp."
+          "D. Cảnh báo khu vực có nguy cơ nổ bình áp suất cao."
         ],
-        0,
+        1,
         "Biển tròn nền xanh dương hình trắng là biển báo hiệu lệnh bắt buộc thực hiện (đeo kính bảo hộ)."
       ],
       [
         "Phép đo nào sau đây là phép đo GIÁN TIẾP?",
         [
-          "A. Đo tốc độ trung bình của một viên bi bằng tỉ số quãng đường và thời gian (v = s/t).",
+          "A. Dùng đồng hồ bấm giây đo thời gian rơi của một vật.",
           "B. Dùng nhiệt kế thủy ngân đo nhiệt độ của một cốc nước nóng.",
-          "C. Dùng cân điện tử đo khối lượng của một quả cân bằng đồng.",
-          "D. Dùng đồng hồ bấm giây đo thời gian rơi của một vật."
+          "C. Đo tốc độ trung bình của một viên bi bằng tỉ số quãng đường và thời gian (v = s/t).",
+          "D. Dùng cân điện tử đo khối lượng của một quả cân bằng đồng."
         ],
-        0,
+        2,
         "Đo gián tiếp là xác định giá trị thông qua công thức liên hệ với các đại lượng đo trực tiếp."
       ],
       [
         "Khi dùng thước milimét có độ chia nhỏ nhất (ĐCNN) là 1 mm để đo độ dài, nếu không có quy định nào khác thì sai số dụng cụ thông thường được lấy bằng:",
         [
-          "A. Nửa độ chia nhỏ nhất (0,5 mm) hoặc một độ chia nhỏ nhất (1 mm).",
-          "B. Luôn luôn bằng 0 mm vì thước chuẩn.",
+          "A. Luôn luôn bằng 0 mm vì thước chuẩn.",
+          "B. 10% giá trị đo được trên thước.",
           "C. Gấp đôi độ chia nhỏ nhất (2 mm).",
-          "D. 10% giá trị đo được trên thước."
+          "D. Nửa độ chia nhỏ nhất (0,5 mm) hoặc một độ chia nhỏ nhất (1 mm)."
         ],
-        0,
+        3,
         "Sai số dụng cụ thông thường được quy ước lấy bằng một nửa hoặc một độ chia nhỏ nhất của dụng cụ."
       ],
       [
         "Một chất điểm chuyển động thẳng đều theo một chiều nhất định. So sánh giữa quãng đường đi được s và độ lớn của độ dịch chuyển |d|, ta luôn có:",
         [
-          "A. s = |d|.",
-          "B. s > |d|.",
-          "C. s < |d|.",
-          "D. s = 2|d|."
+          "A. s = 2|d|.",
+          "B. s < |d|.",
+          "C. s > |d|.",
+          "D. s = |d|."
         ],
-        0,
+        3,
         "Khi vật chuyển động thẳng và không đổi chiều chuyển động thì quãng đường đi được đúng bằng độ lớn độ dịch chuyển."
       ],
       [
         "Một hành khách ngồi yên trong một toa tàu hỏa đang chạy thẳng đều trên đường ray. Người hành khách này đứng yên so với:",
         [
-          "A. Toa tàu mà người đó đang ngồi.",
+          "A. Nhà ga mà tàu vừa rời đi.",
           "B. Các cột điện bên đường ray.",
-          "C. Nhà ga mà tàu vừa rời đi.",
+          "C. Toa tàu mà người đó đang ngồi.",
           "D. Mặt đường ray bên dưới toa tàu."
         ],
-        0,
+        2,
         "Vị trí của hành khách không thay đổi so với toa tàu nên người đó đứng yên so với toa tàu."
       ],
       [
         "Cổng quang điện trong bộ thí nghiệm thực hành Vật lí 10 hoạt động dựa trên nguyên lí:",
         [
-          "A. Cảm biến phát hiện sự ngắt và thông chùm tia hồng ngoại khi có vật chắn sáng đi qua.",
-          "B. Cảm biến siêu âm đo khoảng cách phản xạ âm thanh.",
-          "C. Cảm ứng từ trường nam châm điện biến thiên.",
-          "D. Cảm ứng nhiệt độ tỏa ra từ vật chuyển động."
+          "A. Cảm ứng từ trường nam châm điện biến thiên.",
+          "B. Cảm ứng nhiệt độ tỏa ra từ vật chuyển động.",
+          "C. Cảm biến phát hiện sự ngắt và thông chùm tia hồng ngoại khi có vật chắn sáng đi qua.",
+          "D. Cảm biến siêu âm đo khoảng cách phản xạ âm thanh."
         ],
-        0,
+        2,
         "Cổng quang gồm một đầu phát tia hồng ngoại và một đầu thu; khi vật chắn tia sáng thì đồng hồ đếm thời gian."
       ],
       [
         "Hình bên là đồ thị độ dịch chuyển – thời gian (d – t) của một xe máy chuyển động thẳng đều. Tốc độ của xe máy là: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"12\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">d(m)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"125\" x2=\"185\" y2=\"35\" stroke=\"#16a34a\" stroke-width=\"3\"/><line x1=\"185\" y1=\"35\" x2=\"185\" y2=\"125\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><line x1=\"35\" y1=\"35\" x2=\"185\" y2=\"35\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><text x=\"180\" y=\"138\" font-size=\"11\" fill=\"#334155\">4</text><text x=\"18\" y=\"38\" font-size=\"11\" fill=\"#334155\">20</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị độ dịch chuyển – thời gian (d – t)</div></div>",
         [
-          "A. 5 m/s.",
-          "B. 20 m/s.",
+          "A. 20 m/s.",
+          "B. 5 m/s.",
           "C. 4 m/s.",
           "D. 80 m/s."
         ],
-        0,
+        1,
         "Vận tốc trong đồ thị d – t là hệ số góc: v = Δd / Δt = 20 / 4 = 5 m/s."
       ],
       [
         "Đơn vị đo của gia tốc trong hệ đo lường quốc tế (SI) là:",
         [
           "A. m/s² (mét trên giây bình phương).",
-          "B. m/s (mét trên giây).",
-          "C. km/h (kilômét trên giờ).",
-          "D. m · s (mét nhân giây)."
+          "B. km/h (kilômét trên giờ).",
+          "C. m · s (mét nhân giây).",
+          "D. m/s (mét trên giây)."
         ],
         0,
         "Gia tốc có đơn vị SI là m/s²."
@@ -3218,45 +3218,45 @@ const suppliedExams = [
       [
         "Trong chuyển động thẳng nhanh dần đều:",
         [
-          "A. Vectơ gia tốc cùng hướng với vectơ vận tốc và gia tốc có độ lớn không đổi.",
+          "A. Vận tốc của vật giảm đều theo thời gian.",
           "B. Vectơ gia tốc ngược hướng với vectơ vận tốc.",
-          "C. Vận tốc của vật giảm đều theo thời gian.",
-          "D. Gia tốc tăng đều theo thời gian."
+          "C. Gia tốc tăng đều theo thời gian.",
+          "D. Vectơ gia tốc cùng hướng với vectơ vận tốc và gia tốc có độ lớn không đổi."
         ],
-        0,
+        3,
         "Chuyển động thẳng nhanh dần đều có gia tốc không đổi và vectơ gia tốc cùng hướng với vectơ vận tốc."
       ],
       [
         "Một ôtô đang chạy thì hãm phanh chuyển động chậm dần đều có đồ thị vận tốc – thời gian (v – t) như hình vẽ bên. Gia tốc của ôtô bằng: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"10\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">v(m/s)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"45\" x2=\"175\" y2=\"125\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"14\" y=\"48\" font-size=\"11\" fill=\"#334155\">20</text><text x=\"170\" y=\"138\" font-size=\"11\" fill=\"#334155\">4</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị vận tốc – thời gian (v – t)</div></div>",
         [
-          "A. –5 m/s².",
-          "B. 5 m/s².",
-          "C. –20 m/s².",
+          "A. –20 m/s².",
+          "B. –5 m/s².",
+          "C. 5 m/s².",
           "D. 0 m/s²."
         ],
-        0,
+        1,
         "a = (v - v₀) / t = (0 - 20) / 4 = –5 m/s²."
       ],
       [
         "Phương trình độ dịch chuyển của một vật chuyển động thẳng biến đổi đều không vận tốc đầu (v₀ = 0) dọc theo trục tọa độ là:",
         [
-          "A. d = 1/2 · a · t².",
-          "B. d = v₀ · t.",
-          "C. d = a · t.",
-          "D. d = 2 · a · t²."
+          "A. d = a · t.",
+          "B. d = 2 · a · t².",
+          "C. d = 1/2 · a · t².",
+          "D. d = v₀ · t."
         ],
-        0,
+        2,
         "Khi v₀ = 0 thì d = 1/2 · a · t²."
       ],
       [
         "Yếu tố nào sau đây là nguyên nhân chủ yếu khiến cho một chiếc lá rụng lại rơi chậm hơn nhiều so với một viên sỏi trong không khí?",
         [
-          "A. Lực cản của không khí tác dụng lên chiếc lá có ảnh hưởng đáng kể so với trọng lượng của nó.",
-          "B. Trọng lực tác dụng lên chiếc lá nhỏ hơn rất nhiều lần gia tốc trọng trường g.",
-          "C. Gia tốc rơi tự do của chiếc lá nhỏ hơn gia tốc rơi tự do của viên sỏi.",
-          "D. Trái Đất chỉ hút viên sỏi mà không hút chiếc lá."
+          "A. Trọng lực tác dụng lên chiếc lá nhỏ hơn rất nhiều lần gia tốc trọng trường g.",
+          "B. Gia tốc rơi tự do của chiếc lá nhỏ hơn gia tốc rơi tự do của viên sỏi.",
+          "C. Trái Đất chỉ hút viên sỏi mà không hút chiếc lá.",
+          "D. Lực cản của không khí tác dụng lên chiếc lá có ảnh hưởng đáng kể so với trọng lượng của nó."
         ],
-        0,
+        3,
         "Lực cản không khí so với trọng lượng của chiếc lá là đáng kể, làm chậm tốc độ rơi của chiếc lá."
       ],
       [
@@ -3291,9 +3291,9 @@ const suppliedExams = [
             "Δd = Δd_ng + Δd_dc = 0,08 + 0,1 = 0,18 mm."
           ],
           [
-            "Nếu làm tròn sai số tuyệt đối đến 1 chữ số có nghĩa là 0,2 mm thì kết quả đo ghi là d = (12,3 ± 0,2) mm.",
-            true,
-            "Quy tắc ghi kết quả đo: d = (12,3 ± 0,2) mm."
+            "Nếu làm tròn sai số tuyệt đối đến 1 chữ số có nghĩa thì kết quả đo được ghi là d = (12,3 ± 0,02) mm.",
+            false,
+            "Sai số tuyệt đối Δd = 0,18 mm làm tròn đến 1 chữ số có nghĩa là 0,2 mm, do đó kết quả ghi là d = (12,3 ± 0,2) mm (không phải 0,02 mm)."
           ]
         ]
       },
@@ -3359,31 +3359,31 @@ const suppliedExams = [
       [
         "Quy trình tìm hiểu thế giới tự nhiên dưới góc độ vật lí thường bao gồm các bước theo thứ tự nào sau đây?",
         [
-          "A. Quan sát, xuất phát câu hỏi &rArr; Xây dựng giả thuyết &rArr; Thiết kế và tiến hành thí nghiệm kiểm chứng &rArr; Phân tích kết quả, rút ra kết luận.",
-          "B. Xây dựng giả thuyết &rArr; Viết báo cáo &rArr; Khảo sát thực địa &rArr; Ra quyết định.",
-          "C. Tiến hành thí nghiệm trước &rArr; Đặt câu hỏi nghiên cứu &rArr; Giả thuyết &rArr; Kết luận.",
-          "D. Đọc sách tham khảo &rArr; Dự đoán kết quả &rArr; Công bố ngay mà không cần thí nghiệm."
+          "A. Tiến hành thí nghiệm trước &rArr; Đặt câu hỏi nghiên cứu &rArr; Giả thuyết &rArr; Kết luận.",
+          "B. Đọc sách tham khảo &rArr; Dự đoán kết quả &rArr; Công bố ngay mà không cần thí nghiệm.",
+          "C. Quan sát, xuất phát câu hỏi &rArr; Xây dựng giả thuyết &rArr; Thiết kế và tiến hành thí nghiệm kiểm chứng &rArr; Phân tích kết quả, rút ra kết luận.",
+          "D. Xây dựng giả thuyết &rArr; Viết báo cáo &rArr; Khảo sát thực địa &rArr; Ra quyết định."
         ],
-        0,
+        2,
         "Quy trình khoa học: Quan sát, đề xuất vấn đề &rArr; Giả thuyết &rArr; Thí nghiệm kiểm chứng &rArr; Phân tích dữ liệu &rArr; Kết luận."
       ],
       [
         "Thành tựu nào sau đây của Vật lí học đã mở đầu cho cuộc cách mạng công nghiệp lần thứ tư (Cách mạng 4.0)?",
         [
-          "A. Công nghệ nano, máy tính lượng tử, cảm biến thông minh và trí tuệ nhân tạo.",
-          "B. Sự chế tạo ra máy hơi nước sử dụng than đá.",
-          "C. Sự sản xuất hàng loạt trên dây chuyền cơ khí tự động hóa cơ bản.",
+          "A. Sự sản xuất hàng loạt trên dây chuyền cơ khí tự động hóa cơ bản.",
+          "B. Công nghệ nano, máy tính lượng tử, cảm biến thông minh và trí tuệ nhân tạo.",
+          "C. Sự chế tạo ra máy hơi nước sử dụng than đá.",
           "D. Phát minh ra kính thiên văn quang học khúc xạ."
         ],
-        0,
+        1,
         "CMCN 4.0 dựa trên nền tảng vật lí bán dẫn tiên tiến, cảm biến thông minh, điện toán lượng tử và kết nối số."
       ],
       [
         "Khi làm thí nghiệm nhiệt học trong phòng thực hành có sử dụng đèn cồn, hành động nào sau đây là ĐÚNG quy tắc an toàn?",
         [
           "A. Dùng nắp đậy chụp kín ngọn lửa để tắt đèn cồn.",
-          "B. Dùng miệng thổi mạnh vào ngọn lửa để dập tắt.",
-          "C. Dùng một đèn cồn đang cháy để châm lửa sang một đèn cồn khác.",
+          "B. Dùng một đèn cồn đang cháy để châm lửa sang một đèn cồn khác.",
+          "C. Dùng miệng thổi mạnh vào ngọn lửa để dập tắt.",
           "D. Rót cồn trực tiếp vào đèn cồn khi ngọn lửa vẫn đang cháy."
         ],
         0,
@@ -3392,45 +3392,45 @@ const suppliedExams = [
       [
         "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình ngọn lửa như hình vẽ mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><path d=\"M50,30 Q42,50 36,58 Q30,68 38,76 Q46,82 54,80 Q66,78 68,66 Q70,52 56,44 Q60,56 52,60 Q48,52 50,30 Z\" fill=\"#dc2626\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "A. Cảnh báo vật liệu hoặc chất dễ cháy nổ, cần cẩn trọng khi tiếp xúc.",
+          "A. Biển báo cho phép tự do đốt lửa sưởi ấm.",
           "B. Nơi đặt bình chữa cháy khẩn cấp.",
-          "C. Biển báo cho phép tự do đốt lửa sưởi ấm.",
+          "C. Cảnh báo vật liệu hoặc chất dễ cháy nổ, cần cẩn trọng khi tiếp xúc.",
           "D. Khu vực dành riêng cho việc đun nấu ăn uống."
         ],
-        0,
+        2,
         "Biển tam giác vàng viền đen hình ngọn lửa là biển cảnh báo nguy cơ cháy nổ từ các chất dễ cháy."
       ],
       [
         "Số chữ số có nghĩa của các số 0,0250 m và 12,04 cm lần lượt là:",
         [
-          "A. 3 và 4.",
-          "B. 4 và 4.",
+          "A. 4 và 4.",
+          "B. 3 và 4.",
           "C. 2 và 3.",
           "D. 5 và 4."
         ],
-        0,
+        1,
         "0,0250 có 3 chữ số có nghĩa (các chữ số 2, 5, 0 ở cuối; các số 0 đầu không tính). 12,04 có 4 chữ số có nghĩa."
       ],
       [
         "Một hình chữ nhật có chiều dài a = (10,0 ± 0,1) cm và chiều rộng b = (5,0 ± 0,1) cm. Sai số tỉ đối của diện tích hình chữ nhật S = a · b bằng:",
         [
-          "A. 3,0%.",
-          "B. 1,0%.",
+          "A. 0,2%.",
+          "B. 3,0%.",
           "C. 2,0%.",
-          "D. 0,2%."
+          "D. 1,0%."
         ],
-        0,
+        1,
         "δS = δa + δb = (0,1 / 10,0 × 100%) + (0,1 / 5,0 × 100%) = 1% + 2% = 3%."
       ],
       [
         "Một chất điểm chuyển động trên trục Ox. Tại thời điểm t₁ vật ở điểm M có tọa độ x₁ = –5 m, tại thời điểm t₂ vật ở điểm N có tọa độ x₂ = +15 m. Độ dịch chuyển của chất điểm trong khoảng thời gian đó là:",
         [
-          "A. d = +20 m.",
-          "B. d = –20 m.",
-          "C. d = +10 m.",
+          "A. d = +10 m.",
+          "B. d = +20 m.",
+          "C. d = –20 m.",
           "D. d = –10 m."
         ],
-        0,
+        1,
         "d = x₂ - x₁ = 15 - (-5) = +20 m."
       ],
       [
@@ -3438,8 +3438,8 @@ const suppliedExams = [
         [
           "A. v⃗_tb = d⃗ / Δt.",
           "B. v_tb = s / Δt.",
-          "C. v⃗_tb = a⃗ · Δt.",
-          "D. v⃗_tb = d⃗ · Δt."
+          "C. v⃗_tb = d⃗ · Δt.",
+          "D. v⃗_tb = a⃗ · Δt."
         ],
         0,
         "Vận tốc trung bình là đại lượng vectơ bằng thương số giữa vectơ độ dịch chuyển và khoảng thời gian: v⃗_tb = d⃗ / Δt."
@@ -3447,56 +3447,56 @@ const suppliedExams = [
       [
         "Trong thí nghiệm đo tốc độ tức thời dùng cổng quang điện, nếu tấm chắn sáng có bề rộng d và thời gian chắn chùm sáng đo được là Δt thì tốc độ tức thời được tính theo công thức:",
         [
-          "A. v = d / Δt.",
-          "B. v = Δt / d.",
-          "C. v = d · Δt.",
-          "D. v = 1/2 · d · (Δt)²."
+          "A. v = d · Δt.",
+          "B. v = 1/2 · d · (Δt)².",
+          "C. v = d / Δt.",
+          "D. v = Δt / d."
         ],
-        0,
+        2,
         "Tốc độ tức thời tại vị trí cổng quang xấp xỉ bằng tốc độ trung bình qua tấm chắn sáng nhỏ: v = d / Δt."
       ],
       [
         "Trên đồ thị độ dịch chuyển – thời gian (d – t), nếu đường biểu diễn là một đường thẳng dốc xuống từ trái sang phải thì vật đang:",
         [
-          "A. Chuyển động thẳng đều ngược chiều dương đã chọn.",
+          "A. Chuyển động nhanh dần đều theo chiều âm.",
           "B. Chuyển động thẳng đều cùng chiều dương đã chọn.",
           "C. Đứng yên tại một vị trí cố định.",
-          "D. Chuyển động nhanh dần đều theo chiều âm."
+          "D. Chuyển động thẳng đều ngược chiều dương đã chọn."
         ],
-        0,
+        3,
         "Đường thẳng dốc xuống có hệ số góc âm (v < 0), nghĩa là vật chuyển động thẳng đều ngược chiều dương."
       ],
       [
         "Một đoàn tàu đang chạy chậm dần đều vào ga. Nhận định nào sau đây về gia tốc a⃗ của đoàn tàu là ĐÚNG?",
         [
-          "A. Vectơ gia tốc a⃗ ngược chiều với vectơ vận tốc v⃗.",
+          "A. Gia tốc của đoàn tàu bằng 0.",
           "B. Vectơ gia tốc a⃗ cùng chiều với vectơ vận tốc v⃗.",
           "C. Vectơ gia tốc a⃗ luôn vuông góc với vectơ vận tốc v⃗.",
-          "D. Gia tốc của đoàn tàu bằng 0."
+          "D. Vectơ gia tốc a⃗ ngược chiều với vectơ vận tốc v⃗."
         ],
-        0,
+        3,
         "Trong chuyển động chậm dần đều, gia tốc luôn ngược hướng với vận tốc để làm giảm độ lớn của vận tốc."
       ],
       [
         "Một xe máy đang chạy với tốc độ 12 m/s thì người lái xe hãm phanh chuyển động chậm dần đều với độ lớn gia tốc 2 m/s². Quãng đường xe đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là:",
         [
-          "A. 36 m.",
-          "B. 72 m.",
-          "C. 24 m.",
-          "D. 144 m."
+          "A. 72 m.",
+          "B. 144 m.",
+          "C. 36 m.",
+          "D. 24 m."
         ],
-        0,
+        2,
         "Áp dụng v² - v₀² = 2ad &rArr; 0² - 12² = 2 · (-2) · s &rArr; s = -144 / (-4) = 36 m."
       ],
       [
         "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động thẳng nhanh dần đều xuất phát từ trạng thái nghỉ (v₀ = 0) là:",
         [
-          "A. Một đường thẳng xuất phát từ gốc tọa độ O và dốc lên trên.",
-          "B. Một đường thẳng song song với trục thời gian t.",
-          "C. Một đường cong parabol quay bề lõm lên trên.",
-          "D. Một đường thẳng dốc xuống cắt trục thời gian."
+          "A. Một đường thẳng song song với trục thời gian t.",
+          "B. Một đường cong parabol quay bề lõm lên trên.",
+          "C. Một đường thẳng dốc xuống cắt trục thời gian.",
+          "D. Một đường thẳng xuất phát từ gốc tọa độ O và dốc lên trên."
         ],
-        0,
+        3,
         "v = at (hàm bậc nhất) nên đồ thị v – t là đường thẳng đi qua gốc tọa độ O và dốc lên (a > 0)."
       ],
       [
@@ -3513,20 +3513,20 @@ const suppliedExams = [
       [
         "Tại cùng một vị trí địa lí trên Trái Đất và ở cùng một độ cao, nếu bỏ qua sức cản của không khí thì một quả tạ nặng 5 kg và một viên bi ve nặng 10 g khi được thả rơi tự do đồng thời sẽ:",
         [
-          "A. Rơi với cùng một gia tốc trọng trường g và chạm đất cùng một thời điểm.",
-          "B. Quả tạ nặng hơn nên rơi với gia tốc lớn hơn và chạm đất trước.",
+          "A. Quả tạ nặng hơn nên rơi với gia tốc lớn hơn và chạm đất trước.",
+          "B. Quả tạ rơi nhanh gấp 500 lần viên bi ve.",
           "C. Viên bi ve nhẹ hơn nên rơi nhanh hơn và chạm đất trước.",
-          "D. Quả tạ rơi nhanh gấp 500 lần viên bi ve."
+          "D. Rơi với cùng một gia tốc trọng trường g và chạm đất cùng một thời điểm."
         ],
-        0,
+        3,
         "Gia tốc rơi tự do g không phụ thuộc vào khối lượng của vật, do đó mọi vật ở cùng một nơi đều rơi như nhau."
       ],
       [
         "Một vật rơi tự do không vận tốc ban đầu. Quãng đường vật đi được trong 1 giây đầu tiên và trong 2 giây đầu tiên lần lượt là s₁ và s₂. Tỉ số s₂ / s₁ bằng:",
         [
           "A. 4.",
-          "B. 2.",
-          "C. 3.",
+          "B. 3.",
+          "C. 2.",
           "D. 1."
         ],
         0,
@@ -3621,78 +3621,78 @@ const suppliedExams = [
       [
         "Mục tiêu quan trọng nhất của việc học tập môn Vật lí trong nhà trường phổ thông là giúp học sinh:",
         [
-          "A. Hình thành và phát triển năng lực vật lí, nhận thức thế giới tự nhiên và vận dụng kiến thức vào thực tiễn đời sống.",
-          "B. Học thuộc lòng toàn bộ các công thức định lượng mà không cần hiểu bản chất.",
-          "C. Trở thành nhà khoa học chuyên sâu về cơ học lượng tử ngay trong trường phổ thông.",
-          "D. Thay thế hoàn toàn các môn khoa học tự nhiên khác như Hóa học và Sinh học."
+          "A. Thay thế hoàn toàn các môn khoa học tự nhiên khác như Hóa học và Sinh học.",
+          "B. Trở thành nhà khoa học chuyên sâu về cơ học lượng tử ngay trong trường phổ thông.",
+          "C. Học thuộc lòng toàn bộ các công thức định lượng mà không cần hiểu bản chất.",
+          "D. Hình thành và phát triển năng lực vật lí, nhận thức thế giới tự nhiên và vận dụng kiến thức vào thực tiễn đời sống."
         ],
-        0,
+        3,
         "Mục tiêu cốt lõi của môn Vật lí là phát triển phẩm chất, năng lực nhận thức tự nhiên và giải quyết các vấn đề thực tiễn."
       ],
       [
         "Phương pháp nghiên cứu lí thuyết trong Vật lí học sử dụng công cụ chủ yếu nào sau đây?",
         [
-          "A. Ngôn ngữ toán học và các mô hình tư duy trừu tượng hóa để xây dựng các định luật, thuyết vật lí.",
-          "B. Kính hiển vi quang học và que cấy vi sinh.",
-          "C. Máy khoan cắt kim loại trong xưởng cơ khí.",
-          "D. Thăm dò dư luận xã hội bằng bảng hỏi trực tuyến."
+          "A. Thăm dò dư luận xã hội bằng bảng hỏi trực tuyến.",
+          "B. Ngôn ngữ toán học và các mô hình tư duy trừu tượng hóa để xây dựng các định luật, thuyết vật lí.",
+          "C. Kính hiển vi quang học và que cấy vi sinh.",
+          "D. Máy khoan cắt kim loại trong xưởng cơ khí."
         ],
-        0,
+        1,
         "Phương pháp lí thuyết dùng toán học và các mô hình khái quát hóa để xây dựng hệ thống lí thuyết vật lí."
       ],
       [
         "Khi làm việc trong phòng thực hành có các nguồn phát tia phóng xạ, quy tắc an toàn cơ bản nào cần được tuân thủ nghiêm ngặt?",
         [
-          "A. Giữ khoảng cách an toàn, giảm tối đa thời gian tiếp xúc và sử dụng tấm chắn chì bảo vệ.",
-          "B. Được phép cầm trực tiếp chất phóng xạ bằng tay trần nếu đeo khẩu trang.",
+          "A. Được phép cầm trực tiếp chất phóng xạ bằng tay trần nếu đeo khẩu trang.",
+          "B. Để chất phóng xạ gần các nguồn nhiệt và ánh sáng mặt trời chiếu trực tiếp.",
           "C. Đổ chất thải phóng xạ trực tiếp vào bồn rửa tay thông thường.",
-          "D. Để chất phóng xạ gần các nguồn nhiệt và ánh sáng mặt trời chiếu trực tiếp."
+          "D. Giữ khoảng cách an toàn, giảm tối đa thời gian tiếp xúc và sử dụng tấm chắn chì bảo vệ."
         ],
-        0,
+        3,
         "Nguyên tắc an toàn phóng xạ cốt lõi: Khoảng cách xa, thời gian ngắn và che chắn bằng vật liệu hấp thụ (chì)."
       ],
       [
         "Trong phòng thực hành, biển báo có hình tròn nền xanh dương, bên trong có hình đôi găng tay màu trắng như hình vẽ mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#2563eb\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M40,78 L40,55 Q40,45 46,45 Q52,45 52,55 L52,78 Z\" fill=\"#fff\"/><path d=\"M52,78 L52,40 Q52,32 58,32 Q64,32 64,40 L64,78 Z\" fill=\"#fff\"/><path d=\"M32,68 L32,58 Q32,52 38,52 L40,52 L40,68 Z\" fill=\"#fff\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "A. Hiệu lệnh bắt buộc phải đeo găng tay bảo hộ thích hợp khi làm việc.",
-          "B. Biển cấm chạm tay vào các thiết bị đang hoạt động.",
-          "C. Nơi rửa tay sát khuẩn phòng dịch bệnh.",
-          "D. Cảnh báo nguy hiểm bỏng lạnh do khí hóa lỏng."
+          "A. Cảnh báo nguy hiểm bỏng lạnh do khí hóa lỏng.",
+          "B. Hiệu lệnh bắt buộc phải đeo găng tay bảo hộ thích hợp khi làm việc.",
+          "C. Biển cấm chạm tay vào các thiết bị đang hoạt động.",
+          "D. Nơi rửa tay sát khuẩn phòng dịch bệnh."
         ],
-        0,
+        1,
         "Biển tròn xanh dương hình găng tay trắng là biển lệnh bắt buộc phải đeo găng tay bảo hộ."
       ],
       [
         "Để đo thời gian rơi của một vật giữa hai điểm trong phòng thực hành một cách chính xác nhất, người ta sử dụng dụng cụ nào?",
         [
-          "A. Cổng quang điện nối với đồng hồ đo thời gian hiện số.",
-          "B. Đồng hồ bấm giây cầm tay thông thường.",
-          "C. Đồng hồ quả lắc treo tường.",
-          "D. Đồng hồ cát có vạch chia."
+          "A. Đồng hồ bấm giây cầm tay thông thường.",
+          "B. Cổng quang điện nối với đồng hồ đo thời gian hiện số.",
+          "C. Đồng hồ cát có vạch chia.",
+          "D. Đồng hồ quả lắc treo tường."
         ],
-        0,
+        1,
         "Cổng quang điện kết nối đồng hồ hiện số giúp loại trừ sai số phản xạ của con người, đo chính xác đến 0,001 s."
       ],
       [
         "Sai số ngẫu nhiên trong phép đo đại lượng vật lí là loại sai số:",
         [
-          "A. Xuất hiện do những nguyên nhân không rõ ràng, tác động ngẫu nhiên làm kết quả các lần đo dao động quanh giá trị thực.",
-          "B. Do dụng cụ đo bị cong vênh hoặc sai lệch vạch số 0 ban đầu.",
-          "C. Có thể triệt tiêu hoàn toàn chỉ sau một lần đo duy nhất.",
-          "D. Luôn có cùng một chiều lệch (luôn dương hoặc luôn âm)."
+          "A. Do dụng cụ đo bị cong vênh hoặc sai lệch vạch số 0 ban đầu.",
+          "B. Luôn có cùng một chiều lệch (luôn dương hoặc luôn âm).",
+          "C. Xuất hiện do những nguyên nhân không rõ ràng, tác động ngẫu nhiên làm kết quả các lần đo dao động quanh giá trị thực.",
+          "D. Có thể triệt tiêu hoàn toàn chỉ sau một lần đo duy nhất."
         ],
-        0,
+        2,
         "Sai số ngẫu nhiên do các yếu tố ngẫu nhiên từ môi trường hoặc thao tác, khắc phục bằng cách đo nhiều lần và lấy giá trị trung bình."
       ],
       [
         "Một hệ quy chiếu dùng để xác định vị trí và chuyển động của một vật bao gồm:",
         [
-          "A. Vật làm mốc, hệ tọa độ gắn với vật làm mốc, mốc thời gian và đồng hồ đo thời gian.",
-          "B. Chỉ cần một chiếc đồng hồ bấm giây chính xác.",
-          "C. Chỉ cần một cái thước dây có vạch milimét.",
-          "D. Người quan sát và vị trí của Trái Đất."
+          "A. Chỉ cần một cái thước dây có vạch milimét.",
+          "B. Người quan sát và vị trí của Trái Đất.",
+          "C. Vật làm mốc, hệ tọa độ gắn với vật làm mốc, mốc thời gian và đồng hồ đo thời gian.",
+          "D. Chỉ cần một chiếc đồng hồ bấm giây chính xác."
         ],
-        0,
+        2,
         "Hệ quy chiếu chuẩn gồm: Vật mốc + Hệ tọa độ gắn với vật mốc + Mốc thời gian + Đồng hồ đo thời gian."
       ],
       [
@@ -3709,12 +3709,12 @@ const suppliedExams = [
       [
         "Một xe ôtô chạy thẳng đều quãng đường 120 km trong thời gian 2,5 giờ. Tốc độ trung bình của xe ôtô bằng:",
         [
-          "A. 48 km/h.",
+          "A. 40 km/h.",
           "B. 50 km/h.",
-          "C. 60 km/h.",
-          "D. 40 km/h."
+          "C. 48 km/h.",
+          "D. 60 km/h."
         ],
-        0,
+        2,
         "v = s / t = 120 / 2,5 = 48 km/h."
       ],
       [
@@ -3722,8 +3722,8 @@ const suppliedExams = [
         [
           "A. Chuyển động thẳng đều xuất phát từ gốc tọa độ.",
           "B. Đứng yên tại gốc tọa độ O.",
-          "C. Chuyển động thẳng biến đổi đều có vận tốc đầu bằng 0.",
-          "D. Chuyển động tròn đều quanh gốc O."
+          "C. Chuyển động tròn đều quanh gốc O.",
+          "D. Chuyển động thẳng biến đổi đều có vận tốc đầu bằng 0."
         ],
         0,
         "d = vt là hàm bậc nhất không có hệ số tự do, đồ thị là đường thẳng qua gốc O biểu thị chuyển động thẳng đều."
@@ -3733,8 +3733,8 @@ const suppliedExams = [
         [
           "A. v < 0 và a < 0 (tích a · v > 0).",
           "B. v < 0 và a > 0 (tích a · v < 0).",
-          "C. v > 0 và a < 0 (tích a · v < 0).",
-          "D. v > 0 và a > 0 (tích a · v > 0)."
+          "C. v > 0 và a > 0 (tích a · v > 0).",
+          "D. v > 0 và a < 0 (tích a · v < 0)."
         ],
         0,
         "Vật chuyển động theo chiều âm nên v < 0. Nhanh dần đều thì gia tốc a cùng chiều với v nên a < 0 (a · v > 0)."
@@ -3742,43 +3742,43 @@ const suppliedExams = [
       [
         "Một ôtô đang chạy với tốc độ 15 m/s thì tăng ga chuyển động nhanh dần đều với gia tốc 2 m/s² trong thời gian 5 s. Vận tốc của ôtô ở cuối thời gian tăng ga là:",
         [
-          "A. 25 m/s.",
-          "B. 10 m/s.",
-          "C. 20 m/s.",
-          "D. 35 m/s."
+          "A. 20 m/s.",
+          "B. 35 m/s.",
+          "C. 10 m/s.",
+          "D. 25 m/s."
         ],
-        0,
+        3,
         "v = v₀ + at = 15 + 2 · 5 = 25 m/s."
       ],
       [
         "Trong đồ thị vận tốc – thời gian (v – t) của chuyển động thẳng, diện tích của hình phẳng giới hạn bởi đường biểu diễn v(t), trục hoành t và hai đường gióng thời gian t₁ và t₂ biểu thị đại lượng nào?",
         [
-          "A. Độ dịch chuyển của vật trong khoảng thời gian từ t₁ đến t₂.",
-          "B. Gia tốc tức thời của vật tại thời điểm t₁.",
-          "C. Tốc độ tức thời của vật tại thời điểm t₂.",
+          "A. Gia tốc tức thời của vật tại thời điểm t₁.",
+          "B. Tốc độ tức thời của vật tại thời điểm t₂.",
+          "C. Độ dịch chuyển của vật trong khoảng thời gian từ t₁ đến t₂.",
           "D. Lực kéo tác dụng lên vật."
         ],
-        0,
+        2,
         "Ý nghĩa hình học quan trọng: Diện tích hình giới hạn dưới đồ thị (v – t) chính bằng độ dịch chuyển d của vật."
       ],
       [
         "Một ôtô đang chạy với vận tốc 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 4 m/s². Thời gian từ lúc bắt đầu hãm phanh đến khi xe dừng hẳn là:",
         [
-          "A. 5 s.",
-          "B. 4 s.",
-          "C. 8 s.",
-          "D. 10 s."
+          "A. 10 s.",
+          "B. 5 s.",
+          "C. 4 s.",
+          "D. 8 s."
         ],
-        0,
+        1,
         "t = (v - v₀) / a = (0 - 20) / (-4) = 5 s."
       ],
       [
         "Đặc điểm nào sau đây KHÔNG PHẢI là đặc điểm của sự rơi tự do của một vật?",
         [
           "A. Tốc độ rơi phụ thuộc vào hình dạng và khối lượng của vật rơi.",
-          "B. Phương của chuyển động rơi tự do là phương thẳng đứng.",
-          "C. Chiều của chuyển động rơi tự do là chiều từ trên xuống dưới.",
-          "D. Chuyển động rơi tự do là chuyển động thẳng nhanh dần đều với gia tốc g."
+          "B. Chuyển động rơi tự do là chuyển động thẳng nhanh dần đều với gia tốc g.",
+          "C. Phương của chuyển động rơi tự do là phương thẳng đứng.",
+          "D. Chiều của chuyển động rơi tự do là chiều từ trên xuống dưới."
         ],
         0,
         "Rơi tự do không phụ thuộc vào khối lượng hay hình dạng của vật; mọi vật rơi tự do đều có cùng gia tốc g."
@@ -3786,12 +3786,12 @@ const suppliedExams = [
       [
         "Thả một hòn bi sắt rơi tự do từ đỉnh một tòa nhà cao 80 m tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian viên bi rơi đến khi chạm đất là:",
         [
-          "A. 4 s.",
-          "B. 8 s.",
-          "C. 2 s.",
-          "D. 16 s."
+          "A. 16 s.",
+          "B. 2 s.",
+          "C. 8 s.",
+          "D. 4 s."
         ],
-        0,
+        3,
         "t = √(2h / g) = √(2 · 80 / 10) = √16 = 4 s."
       ]
     ],
@@ -3883,21 +3883,21 @@ const suppliedExams = [
       [
         "Cuộc cách mạng công nghiệp lần thứ hai (cuối thế kỉ XIX) gắn liền với những phát minh đột phá nào của Vật lí học?",
         [
-          "A. Khám phá ra hiện tượng cảm ứng điện từ, máy phát điện và mạng lưới truyền tải điện năng.",
+          "A. Chế tạo ra mạng máy tính Internet toàn cầu.",
           "B. Chế tạo ra động cơ hơi nước đầu tiên.",
-          "C. Chế tạo ra mạng máy tính Internet toàn cầu.",
+          "C. Khám phá ra hiện tượng cảm ứng điện từ, máy phát điện và mạng lưới truyền tải điện năng.",
           "D. Khám phá ra hạt nhân nguyên tử và năng lượng phân hạch."
         ],
-        0,
+        2,
         "Hiện tượng cảm ứng điện từ của Faraday mở ra kỉ nguyên điện năng trong CMCN lần thứ hai."
       ],
       [
         "Đóng góp quan trọng nhất của Vật lí học đối với các ngành khoa học tự nhiên và công nghệ là:",
         [
           "A. Cung cấp các định luật cơ bản và công cụ thực nghiệm nền tảng cho Hóa học, Sinh học, Thiên văn học và Kĩ thuật.",
-          "B. Thay thế việc giảng dạy toán học trong các trường đại học.",
+          "B. Xóa bỏ hoàn toàn nhu cầu sử dụng năng lượng hóa thạch.",
           "C. Quyết định giá cả hàng hóa trên thị trường thương mại.",
-          "D. Xóa bỏ hoàn toàn nhu cầu sử dụng năng lượng hóa thạch."
+          "D. Thay thế việc giảng dạy toán học trong các trường đại học."
         ],
         0,
         "Vật lí học cung cấp các định luật tự nhiên cơ bản nhất và phương pháp nghiên cứu cho tất cả các ngành khoa học tự nhiên."
@@ -3905,65 +3905,65 @@ const suppliedExams = [
       [
         "Khi làm việc trong phòng thực hành có chứa các dung môi hữu cơ dễ bay hơi và dễ cháy như cồn, ete, benzen, hành động nào sau đây bị NGHIÊM CẤM tuyệt đối?",
         [
-          "A. Sử dụng ngọn lửa trần hoặc bật lửa gần khu vực chứa hóa chất.",
-          "B. Đậy kín nắp các bình chứa hóa chất sau khi sử dụng.",
-          "C. Mở quạt thông gió trong phòng thí nghiệm.",
-          "D. Đeo khẩu trang và kính bảo hộ khi rót hóa chất."
+          "A. Đậy kín nắp các bình chứa hóa chất sau khi sử dụng.",
+          "B. Sử dụng ngọn lửa trần hoặc bật lửa gần khu vực chứa hóa chất.",
+          "C. Đeo khẩu trang và kính bảo hộ khi rót hóa chất.",
+          "D. Mở quạt thông gió trong phòng thí nghiệm."
         ],
-        0,
+        1,
         "Hơi của dung môi hữu cơ rất dễ bắt lửa gây nổ dữ dội, cấm tuyệt đối ngọn lửa trần gần khu vực này."
       ],
       [
         "Biển báo có hình tròn viền đỏ, nền trắng, có gạch chéo đỏ đè lên hình ngọn lửa như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"8\"/><line x1=\"20\" y1=\"20\" x2=\"80\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"8\"/><line x1=\"36\" y1=\"68\" x2=\"64\" y2=\"40\" stroke=\"#78350f\" stroke-width=\"5\"/><circle cx=\"66\" cy=\"38\" r=\"5\" fill=\"#ea580c\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "A. Biển cấm lửa (cấm mang lửa hoặc tạo ra tia lửa trong khu vực này).",
-          "B. Nơi dành riêng để đốt rác thí nghiệm.",
-          "C. Khu vực đun nấu có kiểm soát ngọn lửa.",
-          "D. Cảnh báo nơi có nhiệt độ môi trường rất cao."
+          "A. Cảnh báo nơi có nhiệt độ môi trường rất cao.",
+          "B. Khu vực đun nấu có kiểm soát ngọn lửa.",
+          "C. Nơi dành riêng để đốt rác thí nghiệm.",
+          "D. Biển cấm lửa (cấm mang lửa hoặc tạo ra tia lửa trong khu vực này)."
         ],
-        0,
+        3,
         "Biển tròn viền đỏ có vạch gạch chéo đỏ là biển cấm; gạch chéo ngọn lửa nghĩa là cấm lửa."
       ],
       [
         "Cho đại lượng C được xác định bằng tổng hai đại lượng đo trực tiếp A và B (C = A + B). Nếu sai số tuyệt đối của A và B lần lượt là ΔA và ΔB thì sai số tuyệt đối ΔC bằng:",
         [
-          "A. ΔC = ΔA + ΔB.",
-          "B. ΔC = ΔA - ΔB.",
-          "C. ΔC = ΔA · ΔB.",
-          "D. ΔC = √(ΔA² + ΔB²)."
+          "A. ΔC = ΔA · ΔB.",
+          "B. ΔC = √(ΔA² + ΔB²).",
+          "C. ΔC = ΔA - ΔB.",
+          "D. ΔC = ΔA + ΔB."
         ],
-        0,
+        3,
         "Sai số tuyệt đối của một tổng hoặc một hiệu bằng tổng các sai số tuyệt đối thành phần: ΔC = ΔA + ΔB."
       ],
       [
         "Một phép đo thời gian cho kết quả t = (5,0 ± 0,1) s. Sai số tỉ đối δt của phép đo này bằng:",
         [
-          "A. 2,0%.",
-          "B. 0,2%.",
-          "C. 5,0%.",
+          "A. 0,2%.",
+          "B. 5,0%.",
+          "C. 2,0%.",
           "D. 1,0%."
         ],
-        0,
+        2,
         "δt = (Δt / t̄) × 100% = (0,1 / 5,0) × 100% = 2,0%."
       ],
       [
         "Một vận động viên bơi xuất phát từ đầu bể bơi dài 50 m đến cuối bể bơi, sau đó quay đầu bơi ngược trở lại 20 m thì dừng lại. Quãng đường s và độ lớn độ dịch chuyển d của người đó lần lượt là:",
         [
-          "A. s = 70 m và d = 30 m.",
-          "B. s = 30 m và d = 70 m.",
-          "C. s = 70 m và d = 70 m.",
-          "D. s = 30 m và d = 30 m."
+          "A. s = 30 m và d = 70 m.",
+          "B. s = 70 m và d = 70 m.",
+          "C. s = 30 m và d = 30 m.",
+          "D. s = 70 m và d = 30 m."
         ],
-        0,
+        3,
         "Quãng đường s = 50 + 20 = 70 m. Độ dịch chuyển cách điểm xuất phát: d = 50 - 20 = 30 m."
       ],
       [
         "Số chỉ của tốc kế (đồng hồ đo tốc độ) gắn trên xe máy hoặc ôtô khi đang lưu thông cho người lái xe biết:",
         [
           "A. Tốc độ tức thời của xe tại thời điểm quan sát.",
-          "B. Tốc độ trung bình của xe trong suốt chuyến đi.",
-          "C. Vận tốc trung bình của xe theo phương ngang.",
-          "D. Gia tốc tức thời của xe lúc tăng tốc."
+          "B. Vận tốc trung bình của xe theo phương ngang.",
+          "C. Gia tốc tức thời của xe lúc tăng tốc.",
+          "D. Tốc độ trung bình của xe trong suốt chuyến đi."
         ],
         0,
         "Tốc kế trên xe máy, ôtô đo tốc độ tức thời của xe tại đúng thời điểm đó."
@@ -3972,9 +3972,9 @@ const suppliedExams = [
         "Khi dùng đồng hồ đo thời gian hiện số kết hợp cổng quang điện để đo thời gian viên bi đi từ cổng A đến cổng B, chế độ đo (MODE) trên đồng hồ cần được chọn ở chế độ nào?",
         [
           "A. Chế độ đo khoảng thời gian từ A đến B (thường kí hiệu là A &hArr; B).",
-          "B. Chế độ đo thời gian chắn sáng một cổng A duy nhất.",
+          "B. Chế độ đếm số lần xung nhịp tự do.",
           "C. Chế độ đo chu kì dao động T.",
-          "D. Chế độ đếm số lần xung nhịp tự do."
+          "D. Chế độ đo thời gian chắn sáng một cổng A duy nhất."
         ],
         0,
         "Cần chọn chế độ đo A &hArr; B để đồng hồ bắt đầu đếm khi vật qua cổng A và dừng đếm khi vật chạm cổng B."
@@ -3982,32 +3982,32 @@ const suppliedExams = [
       [
         "Nếu đồ thị độ dịch chuyển – thời gian (d – t) của hai xe A và B là hai đường thẳng song song với nhau thì nhận định nào sau đây là ĐÚNG?",
         [
-          "A. Hai xe chuyển động thẳng đều với cùng vận tốc.",
-          "B. Hai xe luôn có cùng tọa độ ban đầu xuất phát.",
+          "A. Hai xe chuyển động ngược chiều nhau.",
+          "B. Hai xe chuyển động thẳng đều với cùng vận tốc.",
           "C. Xe A chuyển động nhanh hơn xe B.",
-          "D. Hai xe chuyển động ngược chiều nhau."
+          "D. Hai xe luôn có cùng tọa độ ban đầu xuất phát."
         ],
-        0,
+        1,
         "Hai đường thẳng song song có cùng độ dốc (hệ số góc), nghĩa là hai xe có cùng vận tốc chuyển động."
       ],
       [
         "Một ôtô đang chuyển động thẳng với vận tốc 10 m/s thì tăng tốc, sau 5 giây vận tốc đạt 20 m/s. Gia tốc trung bình của ôtô trong 5 giây đó là:",
         [
-          "A. 2 m/s².",
-          "B. 4 m/s².",
+          "A. 5 m/s².",
+          "B. 2 m/s².",
           "C. 1 m/s².",
-          "D. 5 m/s²."
+          "D. 4 m/s²."
         ],
-        0,
+        1,
         "a = (v - v₀) / t = (20 - 10) / 5 = 10 / 5 = 2 m/s²."
       ],
       [
         "Trong chuyển động thẳng biến đổi đều, công thức nào sau đây diễn tả đúng sự phụ thuộc của vận tốc v vào thời gian t?",
         [
           "A. v = v₀ + at.",
-          "B. v = v₀ + 1/2 · at².",
-          "C. v = v₀ · t + at.",
-          "D. v = a · t²."
+          "B. v = v₀ · t + at.",
+          "C. v = a · t².",
+          "D. v = v₀ + 1/2 · at²."
         ],
         0,
         "Công thức vận tốc theo thời gian là hàm bậc nhất: v = v₀ + at."
@@ -4015,45 +4015,45 @@ const suppliedExams = [
       [
         "Đồ thị vận tốc – thời gian (v – t) của một chất điểm chuyển động thẳng đều là:",
         [
-          "A. Một đường thẳng song song với trục thời gian t.",
-          "B. Một đường thẳng xiên góc đi qua gốc tọa độ O.",
-          "C. Một đường cong parabol quay bề lõm xuống.",
-          "D. Một đường thẳng trùng với trục thẳng đứng v."
+          "A. Một đường cong parabol quay bề lõm xuống.",
+          "B. Một đường thẳng trùng với trục thẳng đứng v.",
+          "C. Một đường thẳng xiên góc đi qua gốc tọa độ O.",
+          "D. Một đường thẳng song song với trục thời gian t."
         ],
-        0,
+        3,
         "Chuyển động thẳng đều có vận tốc không đổi theo thời gian, nên đồ thị v – t là đường thẳng song song với trục hoành t."
       ],
       [
         "Một vật chuyển động thẳng nhanh dần đều không vận tốc đầu với gia tốc a = 4 m/s². Quãng đường vật đi được sau 3 giây kể từ lúc bắt đầu chuyển động là:",
         [
-          "A. 18 m.",
-          "B. 36 m.",
-          "C. 12 m.",
-          "D. 24 m."
+          "A. 24 m.",
+          "B. 12 m.",
+          "C. 18 m.",
+          "D. 36 m."
         ],
-        0,
+        2,
         "s = 1/2 · a · t² = 0,5 · 4 · 3² = 2 · 9 = 18 m."
       ],
       [
         "Chuyển động của vật nào dưới đây có thể được coi gần đúng là chuyển động rơi tự do?",
         [
-          "A. Một quả táo chín rụng từ trên cành cây cao xuống đất trong ngày trời lặng gió.",
-          "B. Một chiếc lá bàng khô bay lượn lờ trong gió.",
-          "C. Một vận động viên nhảy dù đang bung dù rơi xuống mặt đất.",
+          "A. Một vận động viên nhảy dù đang bung dù rơi xuống mặt đất.",
+          "B. Một quả táo chín rụng từ trên cành cây cao xuống đất trong ngày trời lặng gió.",
+          "C. Một chiếc lá bàng khô bay lượn lờ trong gió.",
           "D. Một mẩu giấy ăn mỏng bị vo tròn nhẹ nhàng thả rơi."
         ],
-        0,
+        1,
         "Quả táo đặc, nặng, sức cản không khí rất nhỏ so với trọng lượng nên rơi gần đúng là rơi tự do."
       ],
       [
         "Một vật rơi tự do không vận tốc đầu từ độ cao h tại nơi có gia tốc trọng trường g. Vận tốc v của vật khi chạm đất được tính theo công thức:",
         [
-          "A. v = √(2gh).",
-          "B. v = 2gh.",
-          "C. v = √(gh).",
-          "D. v = gh."
+          "A. v = 2gh.",
+          "B. v = gh.",
+          "C. v = √(2gh).",
+          "D. v = √(gh)."
         ],
-        0,
+        2,
         "v² = 2gh &rArr; v = √(2gh)."
       ]
     ],
@@ -4145,98 +4145,98 @@ const suppliedExams = [
       [
         "Cuộc cách mạng công nghiệp lần thứ ba (nửa sau thế kỉ XX) với sự ra đời của máy tính điện tử và viễn thông được thúc đẩy mạnh mẽ bởi nhánh vật lí nào?",
         [
-          "A. Vật lí chất rắn và công nghệ vật liệu bán dẫn (silicon, transistor).",
+          "A. Thuyết tương đối rộng của Albert Einstein.",
           "B. Cơ học thiên thể và thuyết vạn vật hấp dẫn.",
           "C. Nhiệt động lực học cổ điển của thế kỉ XVIII.",
-          "D. Thuyết tương đối rộng của Albert Einstein."
+          "D. Vật lí chất rắn và công nghệ vật liệu bán dẫn (silicon, transistor)."
         ],
-        0,
+        3,
         "Vật lí chất rắn và linh kiện bán dẫn (transistor) là khởi nguồn cho kỉ nguyên máy tính và viễn thông."
       ],
       [
         "Trong tiến trình nghiên cứu Vật lí học, tiêu chuẩn cao nhất để khẳng định hoặc bác bỏ một giả thuyết khoa học là:",
         [
-          "A. Kết quả kiểm chứng độc lập từ thực nghiệm.",
-          "B. Ý kiến chủ quan của số đông mọi người.",
+          "A. Ý kiến chủ quan của số đông mọi người.",
+          "B. Kết quả kiểm chứng độc lập từ thực nghiệm.",
           "C. Suy đoán logic cảm tính không cần bằng chứng.",
           "D. Độ dài của bài báo cáo khoa học."
         ],
-        0,
+        1,
         "Thực nghiệm là tiêu chuẩn chân lí cao nhất để kiểm chứng tính đúng đắn của mọi giả thuyết vật lí."
       ],
       [
         "Khi làm thí nghiệm với các hóa chất có tính ăn mòn mạnh (như axit đặc, kiềm đặc), dụng cụ bảo hộ nào là BẮT BUỘC?",
         [
-          "A. Đeo kính bảo hộ mắt và mang găng tay cao su chuyên dụng.",
-          "B. Chỉ cần đeo khẩu trang vải thông thường.",
-          "C. Đi chân trần để di chuyển nhanh chóng.",
-          "D. Dùng tay trần cầm trực tiếp ống nghiệm đựng hóa chất."
+          "A. Chỉ cần đeo khẩu trang vải thông thường.",
+          "B. Đi chân trần để di chuyển nhanh chóng.",
+          "C. Dùng tay trần cầm trực tiếp ống nghiệm đựng hóa chất.",
+          "D. Đeo kính bảo hộ mắt và mang găng tay cao su chuyên dụng."
         ],
-        0,
+        3,
         "Hóa chất ăn mòn có thể gây bỏng da và tổn thương mắt nghiêm trọng, bắt buộc đeo kính và găng tay cao su bảo hộ."
       ],
       [
         "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình vẽ như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"44\" r=\"14\" fill=\"#000\"/><circle cx=\"44\" cy=\"42\" r=\"3\" fill=\"#facc15\"/><circle cx=\"56\" cy=\"42\" r=\"3\" fill=\"#facc15\"/><rect x=\"46\" y=\"54\" width=\"8\" height=\"8\" fill=\"#000\"/><line x1=\"30\" y1=\"68\" x2=\"70\" y2=\"48\" stroke=\"#000\" stroke-width=\"4\"/><line x1=\"30\" y1=\"48\" x2=\"70\" y2=\"68\" stroke=\"#000\" stroke-width=\"4\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất độc hại</div></div>",
         [
-          "A. Cảnh báo nguy hiểm chất độc hại hoặc khí độc gây nguy hiểm chết người.",
-          "B. Cảnh báo khu vực có nhiều vật sắc nhọn.",
-          "C. Biển chỉ dẫn khu vực phòng y tế của trường.",
+          "A. Biển chỉ dẫn khu vực phòng y tế của trường.",
+          "B. Cảnh báo nguy hiểm chất độc hại hoặc khí độc gây nguy hiểm chết người.",
+          "C. Cảnh báo khu vực có nhiều vật sắc nhọn.",
           "D. Nơi lưu trữ thực phẩm ăn uống an toàn."
         ],
-        0,
+        1,
         "Biển tam giác vàng hình đầu lâu xương chéo cảnh báo chất độc hại, nguy hiểm tính mạng."
       ],
       [
         "Để đo đường kính trong của một ống nghiệm thủy tinh nhỏ một cách chính xác đến 0,1 mm, người ta thường dùng dụng cụ đo nào sau đây?",
         [
-          "A. Thước kẹp (thước cặp).",
-          "B. Thước cuộn dài 5 m.",
-          "C. Thước dây vải may quần áo.",
-          "D. Thước kẻ học sinh chia đến milimét."
+          "A. Thước cuộn dài 5 m.",
+          "B. Thước kẻ học sinh chia đến milimét.",
+          "C. Thước kẹp (thước cặp).",
+          "D. Thước dây vải may quần áo."
         ],
-        0,
+        2,
         "Thước kẹp có các mỏ kẹp đo trong, đo chính xác đến 0,1 mm hoặc 0,05 mm."
       ],
       [
         "Cho đại lượng v = s/t. Nếu sai số tỉ đối của quãng đường là δs = 1,5% và của thời gian là δt = 0,5% thì sai số tỉ đối của tốc độ δv bằng:",
         [
-          "A. 2,0%.",
-          "B. 1,0%.",
-          "C. 3,0%.",
+          "A. 3,0%.",
+          "B. 2,0%.",
+          "C. 1,0%.",
           "D. 0,75%."
         ],
-        0,
+        1,
         "Sai số tỉ đối của thương bằng tổng các sai số tỉ đối thành phần: δv = δs + δt = 1,5% + 0,5% = 2,0%."
       ],
       [
         "Trong trường hợp nào dưới đây, một vật có thể được coi là một chất điểm?",
         [
-          "A. Một chiếc ôtô đang chạy trên tuyến đường từ Hà Nội vào Đà Nẵng.",
-          "B. Một viên phấn rơi từ bàn giáo viên xuống sàn nhà khi đang xét kích thước của nó.",
+          "A. Một viên phấn rơi từ bàn giáo viên xuống sàn nhà khi đang xét kích thước của nó.",
+          "B. Một người đang thực hiện các động tác bơi lội trong hồ bơi nhỏ.",
           "C. Trái Đất trong chuyển động tự quay quanh trục của chính nó.",
-          "D. Một người đang thực hiện các động tác bơi lội trong hồ bơi nhỏ."
+          "D. Một chiếc ôtô đang chạy trên tuyến đường từ Hà Nội vào Đà Nẵng."
         ],
-        0,
+        3,
         "Một vật được coi là chất điểm khi kích thước của nó rất nhỏ so với quãng đường đi được hoặc khoảng cách đang xét."
       ],
       [
         "Vận tốc tức thời của một vật chuyển động là đại lượng:",
         [
-          "A. Vectơ đặc trưng cho độ nhanh chậm và hướng chuyển động của vật tại một thời điểm xác định.",
-          "B. Vô hướng luôn mang giá trị dương trên cả quãng đường dài.",
-          "C. Bằng thương số giữa tổng quãng đường và tổng thời gian đi hết quãng đường đó.",
-          "D. Không đổi đối với mọi loại chuyển động."
+          "A. Vô hướng luôn mang giá trị dương trên cả quãng đường dài.",
+          "B. Bằng thương số giữa tổng quãng đường và tổng thời gian đi hết quãng đường đó.",
+          "C. Không đổi đối với mọi loại chuyển động.",
+          "D. Vectơ đặc trưng cho độ nhanh chậm và hướng chuyển động của vật tại một thời điểm xác định."
         ],
-        0,
+        3,
         "Vận tốc tức thời là đại lượng vectơ đặc trưng cho chiều và độ nhanh chậm tại đúng thời điểm đó."
       ],
       [
         "Khi bố trí thí nghiệm đo tốc độ của xe con trên máng đệm khí, để giảm thiểu tối đa ma sát cản trở chuyển động của xe, người ta sử dụng biện pháp nào?",
         [
           "A. Bơm dòng khí liên tục qua các lỗ nhỏ trên máng để tạo một lớp đệm khí nâng xe lên.",
-          "B. Bôi thật nhiều dầu nhớt đặc lên mặt máng.",
-          "C. Gắn thêm bánh xe cao su có gai to vào gầm xe.",
-          "D. Dùng dây kéo có tải trọng rất nặng."
+          "B. Gắn thêm bánh xe cao su có gai to vào gầm xe.",
+          "C. Dùng dây kéo có tải trọng rất nặng.",
+          "D. Bôi thật nhiều dầu nhớt đặc lên mặt máng."
         ],
         0,
         "Đệm không khí giúp xe di chuyển không chạm trực tiếp vào bề mặt máng, giảm ma sát tối đa."
@@ -4244,32 +4244,32 @@ const suppliedExams = [
       [
         "Hệ số góc (độ dốc) của đường biểu diễn trên đồ thị độ dịch chuyển – thời gian (d – t) cho ta biết giá trị của đại lượng nào?",
         [
-          "A. Vận tốc của chuyển động.",
-          "B. Gia tốc của chuyển động.",
-          "C. Quãng đường đi được.",
-          "D. Lực kéo tác dụng lên vật."
+          "A. Lực kéo tác dụng lên vật.",
+          "B. Quãng đường đi được.",
+          "C. Vận tốc của chuyển động.",
+          "D. Gia tốc của chuyển động."
         ],
-        0,
+        2,
         "Hệ số góc k = Δd / Δt chính là vận tốc v của chất điểm."
       ],
       [
         "Một chất điểm chuyển động dọc theo trục Ox có gia tốc a = –3 m/s² và vận tốc v = +6 m/s. Trạng thái chuyển động của chất điểm là:",
         [
-          "A. Chuyển động thẳng chậm dần đều cùng chiều dương.",
-          "B. Chuyển động thẳng nhanh dần đều cùng chiều dương.",
-          "C. Chuyển động thẳng chậm dần đều ngược chiều dương.",
-          "D. Chuyển động thẳng đều."
+          "A. Chuyển động thẳng nhanh dần đều cùng chiều dương.",
+          "B. Chuyển động thẳng đều.",
+          "C. Chuyển động thẳng chậm dần đều cùng chiều dương.",
+          "D. Chuyển động thẳng chậm dần đều ngược chiều dương."
         ],
-        0,
+        2,
         "Vì v > 0 nên vật chuyển động theo chiều dương. Vì a và v trái dấu (a · v = -18 < 0) nên là chuyển động chậm dần đều."
       ],
       [
         "Một đoàn tàu đang chạy với tốc độ 36 km/h (10 m/s) thì tăng tốc chuyển động thẳng nhanh dần đều với gia tốc 0,5 m/s². Sau 10 giây, tốc độ của tàu đạt được là:",
         [
           "A. 15 m/s.",
-          "B. 12 m/s.",
-          "C. 20 m/s.",
-          "D. 5 m/s."
+          "B. 20 m/s.",
+          "C. 5 m/s.",
+          "D. 12 m/s."
         ],
         0,
         "v = v₀ + at = 10 + 0,5 · 10 = 15 m/s."
@@ -4278,9 +4278,9 @@ const suppliedExams = [
         "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động là đường thẳng dốc xuống cắt trục thời gian tại điểm t = 5 s. Điều này chứng tỏ:",
         [
           "A. Vật chuyển động thẳng chậm dần đều và dừng lại hoàn toàn ở thời điểm t = 5 s.",
-          "B. Vật chuyển động nhanh dần đều đến thời điểm t = 5 s thì đổi chiều.",
-          "C. Vật luôn đứng yên trong suốt thời gian 5 s.",
-          "D. Gia tốc của vật tăng dần theo thời gian."
+          "B. Vật luôn đứng yên trong suốt thời gian 5 s.",
+          "C. Gia tốc của vật tăng dần theo thời gian.",
+          "D. Vật chuyển động nhanh dần đều đến thời điểm t = 5 s thì đổi chiều."
         ],
         0,
         "Đường dốc xuống cắt trục hoành v = 0 tại t = 5 s biểu thị chuyển động chậm dần đều dừng lại tại t = 5 s."
@@ -4289,9 +4289,9 @@ const suppliedExams = [
         "Một ôtô bắt đầu khởi hành từ điểm đứng yên với gia tốc 3 m/s². Vận tốc của ôtô sau khi đi được quãng đường 24 m là:",
         [
           "A. 12 m/s.",
-          "B. 144 m/s.",
-          "C. 6 m/s.",
-          "D. 24 m/s."
+          "B. 6 m/s.",
+          "C. 24 m/s.",
+          "D. 144 m/s."
         ],
         0,
         "v² - v₀² = 2ad &rArr; v² = 2 · 3 · 24 = 144 &rArr; v = 12 m/s."
@@ -4299,23 +4299,23 @@ const suppliedExams = [
       [
         "Khi một vật rơi tự do trong trọng trường gần mặt đất, đại lượng nào sau đây KHÔNG THAY ĐỔI theo thời gian?",
         [
-          "A. Gia tốc của vật (g = const).",
-          "B. Vận tốc tức thời của vật.",
-          "C. Quãng đường vật rơi được.",
-          "D. Độ cao của vật so với mặt đất."
+          "A. Độ cao của vật so với mặt đất.",
+          "B. Gia tốc của vật (g = const).",
+          "C. Vận tốc tức thời của vật.",
+          "D. Quãng đường vật rơi được."
         ],
-        0,
+        1,
         "Rơi tự do là chuyển động nhanh dần đều với gia tốc trọng trường g không đổi tại một nơi xác định."
       ],
       [
         "Thả một hòn bi rơi tự do không vận tốc đầu tại nơi có gia tốc trọng trường g = 9,8 m/s². Sau 3 giây kể từ khi thả, tốc độ của hòn bi đạt được là:",
         [
-          "A. 29,4 m/s.",
-          "B. 19,6 m/s.",
-          "C. 9,8 m/s.",
-          "D. 44,1 m/s."
+          "A. 9,8 m/s.",
+          "B. 44,1 m/s.",
+          "C. 29,4 m/s.",
+          "D. 19,6 m/s."
         ],
-        0,
+        2,
         "v = gt = 9,8 · 3 = 29,4 m/s."
       ]
     ],
@@ -4407,76 +4407,76 @@ const suppliedExams = [
       [
         "Phân ngành nào sau đây thuộc lĩnh vực nghiên cứu trọng tâm của Vật lí cổ điển?",
         [
-          "A. Cơ học, Quang học, Nhiệt học và Điện từ học.",
-          "B. Vật lí hạt cơ bản và máy gia tốc hạt lớn.",
-          "C. Công nghệ nano và vật liệu siêu dẫn nhiệt độ cao.",
-          "D. Vũ trụ học lượng tử và lỗ đen không-thời gian."
+          "A. Vũ trụ học lượng tử và lỗ đen không-thời gian.",
+          "B. Cơ học, Quang học, Nhiệt học và Điện từ học.",
+          "C. Vật lí hạt cơ bản và máy gia tốc hạt lớn.",
+          "D. Công nghệ nano và vật liệu siêu dẫn nhiệt độ cao."
         ],
-        0,
+        1,
         "Cơ học, Quang học, Nhiệt học và Điện từ học là các nhánh trụ cột cốt lõi của Vật lí cổ điển."
       ],
       [
         "Vật lí học được coi là cơ sở của khoa học tự nhiên và công nghệ vì:",
         [
-          "A. Các quy luật của Vật lí chi phối sự vận động của vật chất ở mọi quy mô từ vi mô đến vĩ mô.",
-          "B. Vật lí có số lượng công thức toán học nhiều nhất.",
-          "C. Mọi thiết bị điện đều do các nhà vật lí tự tay sản xuất hàng loạt.",
-          "D. Vật lí là môn học duy nhất có bài kiểm tra thực hành trong phòng thí nghiệm."
+          "A. Vật lí là môn học duy nhất có bài kiểm tra thực hành trong phòng thí nghiệm.",
+          "B. Các quy luật của Vật lí chi phối sự vận động của vật chất ở mọi quy mô từ vi mô đến vĩ mô.",
+          "C. Vật lí có số lượng công thức toán học nhiều nhất.",
+          "D. Mọi thiết bị điện đều do các nhà vật lí tự tay sản xuất hàng loạt."
         ],
-        0,
+        1,
         "Các quy luật vật lí là các quy luật tự nhiên bao quát nhất, chi phối cấu trúc và tương tác của vật chất."
       ],
       [
         "Khi xảy ra sự cố chập điện gây cháy trong phòng thực hành Vật lí, hành động đầu tiên và quan trọng nhất cần thực hiện là:",
         [
-          "A. Lập tức ngắt cầu dao (aptomat) tổng của phòng thực hành.",
-          "B. Dùng một xô nước hắt thật mạnh vào đám cháy có dây điện.",
-          "C. Dùng tay kéo người bị giật ra khỏi dây điện trần.",
-          "D. Mở toang các cửa sổ để khói thoát ra ngoài trước."
+          "A. Mở toang các cửa sổ để khói thoát ra ngoài trước.",
+          "B. Dùng tay kéo người bị giật ra khỏi dây điện trần.",
+          "C. Lập tức ngắt cầu dao (aptomat) tổng của phòng thực hành.",
+          "D. Dùng một xô nước hắt thật mạnh vào đám cháy có dây điện."
         ],
-        0,
+        2,
         "Hành động đầu tiên sống còn khi chập điện là ngắt ngay nguồn điện tổng; tuyệt đối không dùng nước dập cháy khi chưa ngắt điện."
       ],
       [
         "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình phát tia như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"52\" r=\"6\" fill=\"#000\"/><line x1=\"26\" y1=\"52\" x2=\"74\" y2=\"52\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"36\" y1=\"36\" x2=\"64\" y2=\"68\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"36\" y1=\"68\" x2=\"64\" y2=\"36\" stroke=\"#000\" stroke-width=\"3\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo tia laser</div></div>",
         [
-          "A. Cảnh báo khu vực có nguồn bức xạ tia laser nguy hiểm, tránh nhìn trực tiếp.",
-          "B. Cảnh báo nơi có nguy cơ rơi từ trên cao.",
-          "C. Biển chỉ dẫn khu vực chiếu sáng thông thường.",
-          "D. Khu vực dành riêng cho việc chụp ảnh lưu niệm."
+          "A. Khu vực dành riêng cho việc chụp ảnh lưu niệm.",
+          "B. Biển chỉ dẫn khu vực chiếu sáng thông thường.",
+          "C. Cảnh báo khu vực có nguồn bức xạ tia laser nguy hiểm, tránh nhìn trực tiếp.",
+          "D. Cảnh báo nơi có nguy cơ rơi từ trên cao."
         ],
-        0,
+        2,
         "Biển tam giác vàng viền đen hình tia phát sáng laser cảnh báo nguy hiểm bức xạ laser đối với mắt và da."
       ],
       [
         "Sai số của phép đo đại lượng vật lí bao gồm hai thành phần chủ yếu là:",
         [
-          "A. Sai số hệ thống (gồm sai số dụng cụ) và sai số ngẫu nhiên.",
+          "A. Sai số âm và sai số vô tỉ.",
           "B. Sai số do người đo và sai số do thời tiết.",
           "C. Sai số số lẻ và sai số số chẵn.",
-          "D. Sai số âm và sai số vô tỉ."
+          "D. Sai số hệ thống (gồm sai số dụng cụ) và sai số ngẫu nhiên."
         ],
-        0,
+        3,
         "Sai số phép đo gồm sai số hệ thống (trong đó có sai số dụng cụ) và sai số ngẫu nhiên."
       ],
       [
         "Cho đại lượng C = A - B với các giá trị đo A = (40 ± 1) mm và B = (15 ± 1) mm. Sai số tuyệt đối ΔC của đại lượng C bằng:",
         [
-          "A. 2 mm.",
-          "B. 0 mm.",
-          "C. 1 mm.",
-          "D. 25 mm."
+          "A. 1 mm.",
+          "B. 25 mm.",
+          "C. 2 mm.",
+          "D. 0 mm."
         ],
-        0,
+        2,
         "Sai số tuyệt đối của hiệu luôn bằng TỔNG các sai số tuyệt đối thành phần: ΔC = ΔA + ΔB = 1 + 1 = 2 mm."
       ],
       [
         "Một người đi từ điểm A đến điểm B cách nhau 6 m theo hướng Bắc, sau đó rẽ sang hướng Đông đi tiếp một đoạn 8 m đến điểm C. Độ lớn của vectơ độ dịch chuyển AC bằng:",
         [
           "A. 10 m.",
-          "B. 14 m.",
-          "C. 2 m.",
-          "D. 48 m."
+          "B. 2 m.",
+          "C. 48 m.",
+          "D. 14 m."
         ],
         0,
         "Do hai đoạn đường vuông góc nhau (Bắc và Đông) nên d = √(6² + 8²) = √100 = 10 m."
@@ -4484,45 +4484,45 @@ const suppliedExams = [
       [
         "Một ôtô chuyển động thẳng theo một hướng xác định. Trong 1 giờ đầu ôtô chạy được 60 km, trong 2 giờ tiếp theo ôtô chạy được 90 km. Vận tốc trung bình của ôtô trong suốt 3 giờ là:",
         [
-          "A. 50 km/h.",
-          "B. 75 km/h.",
+          "A. 75 km/h.",
+          "B. 55 km/h.",
           "C. 45 km/h.",
-          "D. 55 km/h."
+          "D. 50 km/h."
         ],
-        0,
+        3,
         "v_tb = (s₁ + s₂) / (t₁ + t₂) = (60 + 90) / (1 + 2) = 150 / 3 = 50 km/h."
       ],
       [
         "Khi cho tấm chắn sáng có bề rộng d = 2 cm đi qua cổng quang điện kết nối với đồng hồ đo hiện số, đồng hồ báo thời gian chắn sáng là 0,04 s. Tốc độ tức thời của tấm chắn sáng là:",
         [
-          "A. 0,5 m/s.",
-          "B. 50 m/s.",
-          "C. 0,08 m/s.",
-          "D. 2 m/s."
+          "A. 2 m/s.",
+          "B. 0,5 m/s.",
+          "C. 50 m/s.",
+          "D. 0,08 m/s."
         ],
-        0,
+        1,
         "d = 2 cm = 0,02 m. v = d / Δt = 0,02 / 0,04 = 0,5 m/s."
       ],
       [
         "Trên đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm chuyển động thẳng, độ dốc của tiếp tuyến tại một điểm trên đường cong cho biết:",
         [
-          "A. Vận tốc tức thời của chất điểm tại thời điểm đó.",
+          "A. Gia tốc của chất điểm tại thời điểm đó.",
           "B. Tốc độ trung bình trên toàn tuyến.",
-          "C. Gia tốc của chất điểm tại thời điểm đó.",
+          "C. Vận tốc tức thời của chất điểm tại thời điểm đó.",
           "D. Quãng đường vật đã đi được."
         ],
-        0,
+        2,
         "Độ dốc tiếp tuyến của đồ thị d – t tại thời điểm t chính bằng vận tốc tức thời tại thời điểm đó."
       ],
       [
         "Một ôtô đang chạy với tốc độ 72 km/h (20 m/s) thì người lái xe hãm phanh cho xe chạy chậm dần đều. Sau 10 giây xe dừng lại hẳn. Gia tốc của ôtô là:",
         [
-          "A. –2 m/s².",
-          "B. 2 m/s².",
+          "A. 2 m/s².",
+          "B. 0,5 m/s².",
           "C. –7,2 m/s².",
-          "D. 0,5 m/s²."
+          "D. –2 m/s²."
         ],
-        0,
+        3,
         "a = (v - v₀) / t = (0 - 20) / 10 = –2 m/s²."
       ],
       [
@@ -4530,8 +4530,8 @@ const suppliedExams = [
         [
           "A. 8 m/s.",
           "B. 4 m/s.",
-          "C. 16 m/s.",
-          "D. 32 m/s."
+          "C. 32 m/s.",
+          "D. 16 m/s."
         ],
         0,
         "v² = 2ad = 2 · 2 · 16 = 64 &rArr; v = 8 m/s."
@@ -4539,21 +4539,21 @@ const suppliedExams = [
       [
         "Trong chuyển động thẳng biến đổi đều, đồ thị vận tốc – thời gian (v – t) có dạng là:",
         [
-          "A. Một đường thẳng xiên góc với các trục tọa độ.",
-          "B. Một nhánh của đường parabol quay xuống.",
-          "C. Một đường cong hình sin lượn sóng.",
-          "D. Một đường thẳng luôn luôn song song với trục vận tốc."
+          "A. Một đường cong hình sin lượn sóng.",
+          "B. Một đường thẳng xiên góc với các trục tọa độ.",
+          "C. Một đường thẳng luôn luôn song song với trục vận tốc.",
+          "D. Một nhánh của đường parabol quay xuống."
         ],
-        0,
+        1,
         "v = v₀ + at là phương trình bậc nhất đối với t nên đồ thị v – t là đường thẳng xiên góc."
       ],
       [
         "Một đoàn tàu đang chạy thẳng đều với tốc độ 10 m/s thì tăng tốc với gia tốc a = 1 m/s² trong 6 s. Quãng đường tàu chạy được trong 6 s đó là:",
         [
           "A. 78 m.",
-          "B. 60 m.",
-          "C. 18 m.",
-          "D. 96 m."
+          "B. 96 m.",
+          "C. 60 m.",
+          "D. 18 m."
         ],
         0,
         "s = v₀t + 1/2 · at² = 10 · 6 + 0,5 · 1 · 6² = 60 + 18 = 78 m."
@@ -4562,8 +4562,8 @@ const suppliedExams = [
         "Một vật rơi tự do không vận tốc đầu từ độ cao 45 m tại nơi có g = 10 m/s². Thời gian vật rơi chạm đất là:",
         [
           "A. 3 s.",
-          "B. 4,5 s.",
-          "C. 9 s.",
+          "B. 9 s.",
+          "C. 4,5 s.",
           "D. 2 s."
         ],
         0,
@@ -4572,12 +4572,12 @@ const suppliedExams = [
       [
         "Thả một vật rơi tự do từ độ cao h. Trong 1 giây đầu tiên vật rơi được quãng đường 5 m (lấy g = 10 m/s²). Quãng đường vật rơi được trong giây thứ hai là:",
         [
-          "A. 15 m.",
-          "B. 10 m.",
-          "C. 20 m.",
-          "D. 25 m."
+          "A. 25 m.",
+          "B. 20 m.",
+          "C. 10 m.",
+          "D. 15 m."
         ],
-        0,
+        3,
         "Quãng đường sau 2 s: s₂ = 0,5 · 10 · 2² = 20 m. Quãng đường giây thứ hai: Δs = 20 - 5 = 15 m."
       ]
     ],
@@ -4596,9 +4596,9 @@ const suppliedExams = [
             "Tam giác vuông Đông - Bắc: d = √(12² + 9²) = √225 = 15 km."
           ],
           [
-            "Tốc độ trung bình của xe máy trong toàn bộ chuyến đi bằng 42 km/h.",
-            true,
-            "Tổng thời gian t = 15 + 5 + 10 = 30 phút = 0,5 h. v_tb = s / t = 21 / 0,5 = 42 km/h."
+            "Tốc độ trung bình của xe máy trong toàn bộ chuyến đi bằng 50 km/h.",
+            false,
+            "Tổng quãng đường s = 21 km, tổng thời gian t = 0,5 h &rArr; v_tb = s / t = 21 / 0,5 = 42 km/h (không phải 50 km/h)."
           ],
           [
             "Vận tốc trung bình của xe máy trong cả chuyến đi có độ lớn bằng 30 km/h.",
@@ -4669,21 +4669,21 @@ const suppliedExams = [
       [
         "Thành tựu mang tính bước ngoặt của Vật lí học mở đầu cho thời đại cơ giới hóa sản xuất trong cuộc cách mạng công nghiệp lần thứ nhất là:",
         [
-          "A. Sự hoàn thiện động cơ hơi nước dựa trên các định luật nhiệt học.",
-          "B. Khám phá ra sóng vô tuyến điện từ.",
-          "C. Chế tạo ra máy vi tính để bàn.",
+          "A. Khám phá ra sóng vô tuyến điện từ.",
+          "B. Chế tạo ra máy vi tính để bàn.",
+          "C. Sự hoàn thiện động cơ hơi nước dựa trên các định luật nhiệt học.",
           "D. Sản xuất ra năng lượng hạt nhân."
         ],
-        0,
+        2,
         "Động cơ hơi nước là biểu tượng và động lực cốt lõi của cuộc CMCN 1.0."
       ],
       [
         "Điểm khác biệt cốt lõi giữa phương pháp thực nghiệm và phương pháp lí thuyết trong nghiên cứu Vật lí là:",
         [
           "A. Phương pháp thực nghiệm dùng thí nghiệm và số liệu đo đạc thực tế; phương pháp lí thuyết dùng mô hình toán học và suy luận logic.",
-          "B. Phương pháp thực nghiệm không cần đến toán học.",
-          "C. Phương pháp lí thuyết không bao giờ cần kiểm chứng với thực tế.",
-          "D. Phương pháp thực nghiệm chỉ thực hiện ngoài trời."
+          "B. Phương pháp thực nghiệm chỉ thực hiện ngoài trời.",
+          "C. Phương pháp thực nghiệm không cần đến toán học.",
+          "D. Phương pháp lí thuyết không bao giờ cần kiểm chứng với thực tế."
         ],
         0,
         "Thực nghiệm dựa trên đo đạc thực tế; lí thuyết dựa trên các tiên đề, định luật toán học và mô hình trừu tượng."
@@ -4691,43 +4691,43 @@ const suppliedExams = [
       [
         "Khi thực hiện thí nghiệm đun sôi nước bằng bình thủy tinh chịu nhiệt trên bếp điện, để tránh bị bỏng, học sinh cần tuân thủ quy tắc nào?",
         [
-          "A. Đeo găng tay cách nhiệt và dùng kẹp gỗ gắp bình, không dùng tay trần chạm vào bình nóng.",
+          "A. Dùng tay bịt kín miệng bình đun để nước sôi nhanh hơn.",
           "B. Đổ nước lạnh trực tiếp vào bình ngay khi bình vừa nhấc khỏi bếp điện.",
           "C. Cúi sát mặt vào miệng bình đang sôi để quan sát bọt khí.",
-          "D. Dùng tay bịt kín miệng bình đun để nước sôi nhanh hơn."
+          "D. Đeo găng tay cách nhiệt và dùng kẹp gỗ gắp bình, không dùng tay trần chạm vào bình nóng."
         ],
-        0,
+        3,
         "Phải dùng kẹp chuyên dụng và găng tay cách nhiệt; tuyệt đối không đổ nước lạnh đột ngột làm nứt vỡ thủy tinh gây bỏng."
       ],
       [
         "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình vẽ ba cánh quạt như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"56\" r=\"6\" fill=\"#000\"/><path d=\"M50,56 L40,36 A18,18 0 0,1 60,36 Z\" fill=\"#000\"/><path d=\"M50,56 L68,64 A18,18 0 0,1 56,74 Z\" fill=\"#000\"/><path d=\"M50,56 L32,64 A18,18 0 0,0 44,74 Z\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất phóng xạ</div></div>",
         [
-          "A. Cảnh báo khu vực có chất phóng xạ hoặc bức xạ hạt nhân nguy hiểm.",
-          "B. Nơi đặt quạt thông gió công suất lớn.",
+          "A. Nơi đặt quạt thông gió công suất lớn.",
+          "B. Biển chỉ dẫn khu vực cắm trại ngoài trời.",
           "C. Cảnh báo nguy hiểm từ cánh đồng cối xay gió.",
-          "D. Biển chỉ dẫn khu vực cắm trại ngoài trời."
+          "D. Cảnh báo khu vực có chất phóng xạ hoặc bức xạ hạt nhân nguy hiểm."
         ],
-        0,
+        3,
         "Biển tam giác vàng hình ba cánh xòe là biểu tượng quốc tế cảnh báo chất phóng xạ và bức xạ ion hóa nguy hiểm."
       ],
       [
         "Trường hợp nào sau đây là phép đo TRỰC TIẾP?",
         [
-          "A. Dùng cân Rô-béc-van hoặc cân điện tử đo khối lượng của một bao gạo.",
-          "B. Dùng khối lượng và thể tích tính khối lượng riêng của chất lỏng.",
+          "A. Dùng gia tốc và thời gian tính độ cao thả rơi tự do.",
+          "B. Dùng cân Rô-béc-van hoặc cân điện tử đo khối lượng của một bao gạo.",
           "C. Dùng quãng đường và thời gian tính vận tốc của xe máy.",
-          "D. Dùng gia tốc và thời gian tính độ cao thả rơi tự do."
+          "D. Dùng khối lượng và thể tích tính khối lượng riêng của chất lỏng."
         ],
-        0,
+        1,
         "Đo khối lượng bằng cân là so sánh trực tiếp với quả cân hoặc thang đo cảm biến của cân."
       ],
       [
         "Khi đo hiệu điện thế của một viên pin được kết quả trung bình Ū = 1,52 V và sai số tuyệt đối ΔU = 0,02 V. Cách biểu diễn kết quả đo chuẩn là:",
         [
           "A. U = (1,52 ± 0,02) V.",
-          "B. U = 1,52 + 0,02 V.",
+          "B. U = (1,52 - 0,02) V.",
           "C. U = 1,52 V ± 2 mV.",
-          "D. U = (1,52 - 0,02) V."
+          "D. U = 1,52 + 0,02 V."
         ],
         0,
         "Kết quả đo chuẩn ghi dạng U = (Ū ± ΔU) cùng đơn vị đo."
@@ -4735,21 +4735,21 @@ const suppliedExams = [
       [
         "Một xe ôtô chạy trên đường thẳng từ vị trí có tọa độ x₁ = +10 km đến vị trí có tọa độ x₂ = –30 km. Độ dịch chuyển của ôtô bằng:",
         [
-          "A. –40 km.",
-          "B. +40 km.",
-          "C. –20 km.",
-          "D. +20 km."
+          "A. +40 km.",
+          "B. –40 km.",
+          "C. +20 km.",
+          "D. –20 km."
         ],
-        0,
+        1,
         "d = x₂ - x₁ = -30 - 10 = –40 km."
       ],
       [
         "Một chiếc thuyền chạy xuôi dòng nước. Gọi v_tb là vận tốc thuyền so với bờ, v_tn là vận tốc thuyền so với nước, v_nb là vận tốc nước so với bờ. Hệ thức đúng là:",
         [
           "A. v_tb = v_tn + v_nb.",
-          "B. v_tb = v_tn - v_nb.",
+          "B. v_tb = v_nb - v_tn.",
           "C. v_tb = √(v_tn² + v_nb²).",
-          "D. v_tb = v_nb - v_tn."
+          "D. v_tb = v_tn - v_nb."
         ],
         0,
         "Khi chạy xuôi dòng, vận tốc thuyền và vận tốc nước cùng hướng nên v_tb = v_tn + v_nb."
@@ -4757,75 +4757,75 @@ const suppliedExams = [
       [
         "Trong thí nghiệm thực hành đo tốc độ bằng đồng hồ đo thời gian hiện số, việc đặt cổng quang điện vuông góc với hướng chuyển động của thanh chắn sáng nhằm mục đích:",
         [
-          "A. Đo đúng bề rộng danh định d của thanh chắn sáng, giảm thiểu sai số đo thời gian.",
+          "A. Tránh làm hỏng bóng đèn led của cổng quang.",
           "B. Làm cho xe chuyển động chậm lại để dễ quan sát.",
           "C. Tăng lực hút nam châm điện của cổng quang.",
-          "D. Tránh làm hỏng bóng đèn led của cổng quang."
+          "D. Đo đúng bề rộng danh định d của thanh chắn sáng, giảm thiểu sai số đo thời gian."
         ],
-        0,
+        3,
         "Đặt vuông góc để chùm tia sáng quét qua đúng bề rộng thực của thanh chắn sáng, đảm bảo v = d / Δt chính xác."
       ],
       [
         "Trên đồ thị độ dịch chuyển – thời gian (d – t), nếu đường biểu diễn dốc lên trên từ trái sang phải chứng tỏ:",
         [
-          "A. Vật đang chuyển động thẳng đều theo chiều dương đã chọn.",
-          "B. Vật đang chuyển động thẳng đều theo chiều âm đã chọn.",
-          "C. Vật đứng yên tại một vị trí cố định.",
-          "D. Vật chuyển động nhanh dần đều theo chiều âm."
+          "A. Vật đứng yên tại một vị trí cố định.",
+          "B. Vật đang chuyển động thẳng đều theo chiều dương đã chọn.",
+          "C. Vật chuyển động nhanh dần đều theo chiều âm.",
+          "D. Vật đang chuyển động thẳng đều theo chiều âm đã chọn."
         ],
-        0,
+        1,
         "Đường dốc lên có hệ số góc dương (v > 0) nghĩa là vật chuyển động theo chiều dương."
       ],
       [
         "Biểu thức định nghĩa vectơ gia tốc của một chất điểm là:",
         [
-          "A. a⃗ = Δv⃗ / Δt.",
-          "B. a⃗ = v⃗ · Δt.",
-          "C. a⃗ = Δd⃗ / Δt.",
-          "D. a⃗ = Δs / Δt."
+          "A. a⃗ = v⃗ · Δt.",
+          "B. a⃗ = Δd⃗ / Δt.",
+          "C. a⃗ = Δs / Δt.",
+          "D. a⃗ = Δv⃗ / Δt."
         ],
-        0,
+        3,
         "Gia tốc là đạo hàm của vận tốc theo thời gian: a⃗ = Δv⃗ / Δt."
       ],
       [
         "Một ôtô đang chạy với tốc độ 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc 2 m/s². Quãng đường ôtô đi được từ lúc bắt đầu hãm phanh đến khi dừng lại hẳn là:",
         [
-          "A. 100 m.",
+          "A. 200 m.",
           "B. 50 m.",
-          "C. 200 m.",
+          "C. 100 m.",
           "D. 40 m."
         ],
-        0,
+        2,
         "s = (v² - v₀²) / (2a) = (0 - 20²) / (2 · (-2)) = -400 / (-4) = 100 m."
       ],
       [
         "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động thẳng nhanh dần đều xuất phát từ điểm v₀ > 0 là một đường thẳng:",
         [
-          "A. Cắt trục tung tại điểm v₀ và dốc lên phía trên.",
-          "B. Song song với trục hoành t.",
-          "C. Đi qua gốc tọa độ O.",
-          "D. Dốc xuống cắt trục hoành."
+          "A. Đi qua gốc tọa độ O.",
+          "B. Cắt trục tung tại điểm v₀ và dốc lên phía trên.",
+          "C. Dốc xuống cắt trục hoành.",
+          "D. Song song với trục hoành t."
         ],
-        0,
+        1,
         "v = v₀ + at (với v₀ > 0, a > 0), đồ thị cắt trục tung tại v₀ và dốc lên."
       ],
       [
         "Một xe đạp đang đi với tốc độ 4 m/s thì xuống một con dốc, chuyển động nhanh dần đều với gia tốc 0,5 m/s² trong 8 s. Tốc độ của xe ở chân dốc là:",
         [
-          "A. 8 m/s.",
+          "A. 10 m/s.",
           "B. 12 m/s.",
-          "C. 6 m/s.",
-          "D. 10 m/s."
+          "C. 8 m/s.",
+          "D. 6 m/s."
         ],
-        0,
+        2,
         "v = v₀ + at = 4 + 0,5 · 8 = 4 + 4 = 8 m/s."
       ],
       [
         "Một vật rơi tự do không vận tốc ban đầu từ độ cao h. Quãng đường vật đi được trong giây thứ nhất là (lấy g = 10 m/s²):",
         [
           "A. 5 m.",
-          "B. 10 m.",
-          "C. 20 m.",
+          "B. 20 m.",
+          "C. 10 m.",
           "D. 2,5 m."
         ],
         0,
@@ -4834,12 +4834,12 @@ const suppliedExams = [
       [
         "Thả một vật rơi tự do từ độ cao h = 80 m tại nơi có g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất là:",
         [
-          "A. 40 m/s.",
-          "B. 20 m/s.",
-          "C. 80 m/s.",
-          "D. 10 m/s."
+          "A. 80 m/s.",
+          "B. 10 m/s.",
+          "C. 40 m/s.",
+          "D. 20 m/s."
         ],
-        0,
+        2,
         "v = √(2gh) = √(2 · 10 · 80) = √1600 = 40 m/s."
       ]
     ],
@@ -4863,9 +4863,9 @@ const suppliedExams = [
             "s = s₁ + s₂ = 20 + 45 = 65 km."
           ],
           [
-            "Tốc độ trung bình của xe trên cả quãng đường bằng 52 km/h.",
-            true,
-            "Tổng thời gian t = 0,5 + 0,75 = 1,25 h. v_tb = s / t = 65 / 1,25 = 52 km/h."
+            "Tốc độ trung bình của xe trên cả quãng đường bằng 50 km/h.",
+            false,
+            "Tổng quãng đường s = 65 km, tổng thời gian t = 1,25 h &rArr; v_tb = 65 / 1,25 = 52 km/h (không phải 50 km/h)."
           ]
         ]
       },
@@ -4931,21 +4931,21 @@ const suppliedExams = [
       [
         "Bước đầu tiên trong quy trình tìm hiểu thế giới tự nhiên dưới góc độ vật lí là:",
         [
-          "A. Quan sát hiện tượng thực tế và đặt ra câu hỏi cần tìm hiểu.",
-          "B. Đề xuất ngay một công thức toán học trừu tượng.",
-          "C. Tiến hành làm báo cáo tổng kết thí nghiệm.",
-          "D. Đóng gói thiết bị cất vào kho thí nghiệm."
+          "A. Tiến hành làm báo cáo tổng kết thí nghiệm.",
+          "B. Đóng gói thiết bị cất vào kho thí nghiệm.",
+          "C. Đề xuất ngay một công thức toán học trừu tượng.",
+          "D. Quan sát hiện tượng thực tế và đặt ra câu hỏi cần tìm hiểu."
         ],
-        0,
+        3,
         "Quan sát hiện tượng và xuất phát câu hỏi nghiên cứu là bước khởi đầu của mọi khám phá khoa học."
       ],
       [
         "Sự ra đời của mạng Internet vạn vật (IoT), cảm biến bán dẫn siêu nhỏ và trí tuệ nhân tạo là thành tựu gắn liền với:",
         [
           "A. Cuộc cách mạng công nghiệp lần thứ tư (Cách mạng 4.0).",
-          "B. Cuộc cách mạng công nghiệp lần thứ nhất.",
-          "C. Thời kì phục hưng châu Âu thế kỉ XVI.",
-          "D. Kỉ nguyên đồ đồng cổ đại."
+          "B. Kỉ nguyên đồ đồng cổ đại.",
+          "C. Cuộc cách mạng công nghiệp lần thứ nhất.",
+          "D. Thời kì phục hưng châu Âu thế kỉ XVI."
         ],
         0,
         "CMCN 4.0 kết hợp thế giới vật lí, kỹ thuật số và sinh học trên nền tảng cảm biến và mạng kết nối."
@@ -4954,9 +4954,9 @@ const suppliedExams = [
         "Nếu không may bị hóa chất axit bắn vào da hoặc quần áo trong giờ thực hành, biện pháp xử lí khẩn cấp đầu tiên là:",
         [
           "A. Rửa ngay dưới vòi nước sạch chảy liên tục nhiều phút rồi báo cho giáo viên.",
-          "B. Đổ ngay dung dịch bazơ đặc lên vết thương để trung hòa.",
-          "C. Dùng khăn khô bọc kín vết thương lại không cho tiếp xúc không khí.",
-          "D. Tự ý bôi thuốc mỡ lên vết thương mà không rửa nước."
+          "B. Dùng khăn khô bọc kín vết thương lại không cho tiếp xúc không khí.",
+          "C. Tự ý bôi thuốc mỡ lên vết thương mà không rửa nước.",
+          "D. Đổ ngay dung dịch bazơ đặc lên vết thương để trung hòa."
         ],
         0,
         "Rửa ngay dưới vòi nước chảy liên tục ít nhất 10-15 phút để pha loãng và trôi hóa chất, sau đó báo giáo viên sơ cứu."
@@ -4964,98 +4964,98 @@ const suppliedExams = [
       [
         "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình hai ống nghiệm nhỏ giọt ăn mòn kim loại và bàn tay như hình vẽ mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><rect x=\"25\" y=\"65\" width=\"20\" height=\"6\" fill=\"#000\"/><path d=\"M30,42 L42,50\" stroke=\"#000\" stroke-width=\"3\"/><circle cx=\"35\" cy=\"58\" r=\"2\" fill=\"#000\"/><path d=\"M55,60 L75,60 L70,72 L60,72 Z\" fill=\"#000\"/><path d=\"M60,42 L68,52\" stroke=\"#000\" stroke-width=\"3\"/><circle cx=\"65\" cy=\"56\" r=\"2\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất ăn mòn</div></div>",
         [
-          "A. Cảnh báo hóa chất ăn mòn nguy hiểm, có thể gây bỏng da và phá hủy vật liệu.",
-          "B. Nơi lưu trữ nước ngọt giải khát.",
-          "C. Biển báo cấm thực hiện thao tác rót chất lỏng.",
-          "D. Cảnh báo nơi có độ ẩm không khí rất thấp."
+          "A. Nơi lưu trữ nước ngọt giải khát.",
+          "B. Cảnh báo nơi có độ ẩm không khí rất thấp.",
+          "C. Cảnh báo hóa chất ăn mòn nguy hiểm, có thể gây bỏng da và phá hủy vật liệu.",
+          "D. Biển báo cấm thực hiện thao tác rót chất lỏng."
         ],
-        0,
+        2,
         "Biển tam giác vàng hình giọt hóa chất ăn mòn cảnh báo chất ăn mòn cực kì nguy hiểm."
       ],
       [
         "Khi viết kết quả đo một đại lượng vật lí A = Ā ± ΔA, giá trị sai số tuyệt đối ΔA thường được viết đến:",
         [
-          "A. Một hoặc hai chữ số có nghĩa.",
-          "B. Năm chữ số có nghĩa.",
-          "C. Vô số chữ số thập phân.",
-          "D. Luôn luôn là một số nguyên dương."
+          "A. Luôn luôn là một số nguyên dương.",
+          "B. Vô số chữ số thập phân.",
+          "C. Năm chữ số có nghĩa.",
+          "D. Một hoặc hai chữ số có nghĩa."
         ],
-        0,
+        3,
         "Sai số tuyệt đối ΔA theo quy ước quốc tế thường được làm tròn đến một hoặc tối đa hai chữ số có nghĩa."
       ],
       [
         "Một sợi dây có chiều dài l = (100 ± 2) cm. Sai số tỉ đối của phép đo chiều dài này là:",
         [
-          "A. 2,0%.",
-          "B. 0,02%.",
-          "C. 0,2%.",
-          "D. 20%."
+          "A. 0,02%.",
+          "B. 2,0%.",
+          "C. 20%.",
+          "D. 0,2%."
         ],
-        0,
+        1,
         "δl = (2 / 100) × 100% = 2,0%."
       ],
       [
         "Khi nào thì quãng đường đi được s của một chất điểm đúng bằng độ lớn của độ dịch chuyển |d|?",
         [
-          "A. Khi chất điểm chuyển động trên một đường thẳng và không đổi chiều chuyển động.",
-          "B. Khi chất điểm chuyển động tròn đều một vòng khép kín.",
-          "C. Khi chất điểm đi tới rồi quay ngược trở lại điểm xuất phát.",
+          "A. Khi chất điểm chuyển động tròn đều một vòng khép kín.",
+          "B. Khi chất điểm đi tới rồi quay ngược trở lại điểm xuất phát.",
+          "C. Khi chất điểm chuyển động trên một đường thẳng và không đổi chiều chuyển động.",
           "D. Trong mọi trường hợp chuyển động của vật."
         ],
-        0,
+        2,
         "Chỉ khi chuyển động thẳng và không đổi chiều thì quãng đường s mới bằng độ lớn độ dịch chuyển |d|."
       ],
       [
         "Một chiếc thuyền chạy xuôi dòng nước với tốc độ đối với bờ là 20 km/h, khi chạy ngược dòng với tốc độ đối với bờ là 14 km/h. Vận tốc của dòng nước đối với bờ sông bằng:",
         [
-          "A. 3 km/h.",
-          "B. 6 km/h.",
-          "C. 17 km/h.",
-          "D. 34 km/h."
+          "A. 6 km/h.",
+          "B. 3 km/h.",
+          "C. 34 km/h.",
+          "D. 17 km/h."
         ],
-        0,
+        1,
         "v_nuoc = (v_xuoi - v_nguoc) / 2 = (20 - 14) / 2 = 6 / 2 = 3 km/h."
       ],
       [
         "Dụng cụ nào sau đây KHÔNG THỂ dùng để đo trực tiếp khoảng thời gian chuyển động của một vật?",
         [
-          "A. Thước cuộn chia milimét.",
-          "B. Đồng hồ bấm giây hiện số điện tử.",
+          "A. Đồng hồ bấm giây hiện số điện tử.",
+          "B. Đồng hồ bấm giây cơ học.",
           "C. Cổng quang điện nối với đồng hồ đếm hiện số.",
-          "D. Đồng hồ bấm giây cơ học."
+          "D. Thước cuộn chia milimét."
         ],
-        0,
+        3,
         "Thước cuộn dùng để đo chiều dài (quãng đường), không dùng để đo thời gian."
       ],
       [
         "Đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm có dạng là đường thẳng dốc lên xuất phát từ gốc tọa độ O. Tốc độ chuyển động của chất điểm là:",
         [
-          "A. Bằng độ dốc (hệ số góc) của đường thẳng đó.",
-          "B. Luôn luôn bằng 0.",
+          "A. Luôn luôn bằng 0.",
+          "B. Bằng độ dốc (hệ số góc) của đường thẳng đó.",
           "C. Giảm dần theo thời gian.",
           "D. Bằng diện tích hình phẳng dưới đường thẳng đó."
         ],
-        0,
+        1,
         "Tốc độ v trong chuyển động thẳng đều chính bằng độ dốc của đồ thị d – t."
       ],
       [
         "Một ôtô đang chạy với tốc độ 12 m/s thì người lái xe nhấn ga tăng tốc chuyển động nhanh dần đều với gia tốc 2 m/s² trong 4 s. Vận tốc của ôtô ở cuối thời gian tăng tốc là:",
         [
-          "A. 20 m/s.",
-          "B. 16 m/s.",
-          "C. 24 m/s.",
-          "D. 8 m/s."
+          "A. 16 m/s.",
+          "B. 8 m/s.",
+          "C. 20 m/s.",
+          "D. 24 m/s."
         ],
-        0,
+        2,
         "v = v₀ + at = 12 + 2 · 4 = 12 + 8 = 20 m/s."
       ],
       [
         "Một xe máy đang chạy với tốc độ 10 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Quãng đường xe máy đi được từ lúc bắt đầu hãm phanh đến khi dừng lại hẳn là:",
         [
           "A. 25 m.",
-          "B. 50 m.",
-          "C. 20 m.",
-          "D. 10 m."
+          "B. 20 m.",
+          "C. 10 m.",
+          "D. 50 m."
         ],
         0,
         "s = (v² - v₀²) / (2a) = (0 - 10²) / (2 · (-2)) = -100 / (-4) = 25 m."
@@ -5064,9 +5064,9 @@ const suppliedExams = [
         "Một chất điểm chuyển động theo phương trình vận tốc v = 8 + 2t (m/s). Gia tốc của chất điểm bằng:",
         [
           "A. 2 m/s².",
-          "B. 8 m/s².",
-          "C. 4 m/s².",
-          "D. 10 m/s²."
+          "B. 10 m/s².",
+          "C. 8 m/s².",
+          "D. 4 m/s²."
         ],
         0,
         "Phương trình có dạng v = v₀ + at &rArr; v₀ = 8 m/s, gia tốc a = 2 m/s²."
@@ -5074,34 +5074,34 @@ const suppliedExams = [
       [
         "Một ôtô bắt đầu khởi hành từ trạng thái đứng yên với gia tốc a = 1,5 m/s². Quãng đường ôtô đi được sau 10 giây là:",
         [
-          "A. 75 m.",
+          "A. 30 m.",
           "B. 150 m.",
           "C. 15 m.",
-          "D. 30 m."
+          "D. 75 m."
         ],
-        0,
+        3,
         "s = 1/2 · a · t² = 0,5 · 1,5 · 10² = 75 m."
       ],
       [
         "Đặc điểm nào sau đây là ĐÚNG khi nói về sự rơi tự do?",
         [
-          "A. Là chuyển động thẳng nhanh dần đều theo phương thẳng đứng, chiều từ trên xuống.",
-          "B. Là chuyển động thẳng đều với vận tốc không đổi.",
-          "C. Gia tốc rơi tự do của vật tỉ lệ thuận với khối lượng của vật.",
+          "A. Gia tốc rơi tự do của vật tỉ lệ thuận với khối lượng của vật.",
+          "B. Là chuyển động thẳng nhanh dần đều theo phương thẳng đứng, chiều từ trên xuống.",
+          "C. Là chuyển động thẳng đều với vận tốc không đổi.",
           "D. Quãng đường vật rơi được tỉ lệ thuận với thời gian rơi t."
         ],
-        0,
+        1,
         "Rơi tự do là chuyển động thẳng nhanh dần đều theo phương thẳng đứng với gia tốc g."
       ],
       [
         "Một vật rơi tự do từ độ cao h = 20 m tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian rơi của vật đến khi chạm đất là:",
         [
-          "A. 2,0 s.",
-          "B. 1,0 s.",
-          "C. 4,0 s.",
-          "D. 0,5 s."
+          "A. 4,0 s.",
+          "B. 0,5 s.",
+          "C. 2,0 s.",
+          "D. 1,0 s."
         ],
-        0,
+        2,
         "t = √(2h / g) = √(2 · 20 / 10) = √4 = 2,0 s."
       ]
     ],
@@ -5125,9 +5125,9 @@ const suppliedExams = [
             "v_tb = s / t = 45 / (0,5 + 0,25) = 45 / 0,75 = 60 km/h."
           ],
           [
-            "Vận tốc trung bình của xe ôtô trên toàn bộ hành trình có độ lớn bằng 20 km/h.",
-            true,
-            "v_tb = d / t = 15 / 0,75 = 20 km/h."
+            "Vận tốc trung bình của xe ôtô trên toàn bộ hành trình có độ lớn bằng 40 km/h.",
+            false,
+            "Vận tốc trung bình v_tb = d / t = 15 / 0,75 = 20 km/h (không phải 40 km/h)."
           ]
         ]
       },
@@ -5150,9 +5150,9 @@ const suppliedExams = [
             "s₂ = 0,5 · 10 · 2² = 20 m."
           ],
           [
-            "Quãng đường hòn bi rơi được trong 2 giây cuối cùng trước khi chạm đất là 60 m.",
-            true,
-            "Δs = h - s₂ = 80 - 20 = 60 m."
+            "Quãng đường hòn bi rơi được trong 2 giây cuối cùng trước khi chạm đất là 40 m.",
+            false,
+            "Quãng đường 2 giây đầu rơi 20 m nên quãng đường 2 giây cuối là Δs = 80 - 20 = 60 m (không phải 40 m)."
           ]
         ]
       }
@@ -5204,42 +5204,42 @@ const suppliedExams = [
       [
         "Mô hình chất điểm, mô hình khí lí tưởng, mô hình tia sáng trong Vật lí học là ví dụ điển hình của phương pháp nào?",
         [
-          "A. Phương pháp mô hình hóa trong nghiên cứu Vật lí.",
+          "A. Phương pháp đo đạc thủ công.",
           "B. Phương pháp điều tra phỏng vấn trực tiếp.",
-          "C. Phương pháp ngẫu nhiên không có căn cứ.",
-          "D. Phương pháp đo đạc thủ công."
+          "C. Phương pháp mô hình hóa trong nghiên cứu Vật lí.",
+          "D. Phương pháp ngẫu nhiên không có căn cứ."
         ],
-        0,
+        2,
         "Mô hình hóa là phương pháp xây dựng các mô hình đơn giản hóa để mô tả và giải thích bản chất hiện tượng vật lí."
       ],
       [
         "Để bảo đảm an toàn khi tiếp xúc với các thiết bị sinh nhiệt cao trong phòng thực hành Vật lí, học sinh cần tuân thủ quy tắc nào sau đây?",
         [
-          "A. Đeo găng tay cách nhiệt thích hợp và để thiết bị nguội hoàn toàn trước khi thu dọn cất giữ.",
+          "A. Rút dây nguồn điện bằng cách giật mạnh sợi dây từ xa.",
           "B. Dùng tay trần sờ trực tiếp vào bộ phận nung nóng để xem đã đủ nhiệt độ chưa.",
           "C. Đặt thiết bị sinh nhiệt sát ngay cạnh các chai lọ đựng cồn hoặc hóa chất dễ cháy.",
-          "D. Rút dây nguồn điện bằng cách giật mạnh sợi dây từ xa."
+          "D. Đeo găng tay cách nhiệt thích hợp và để thiết bị nguội hoàn toàn trước khi thu dọn cất giữ."
         ],
-        0,
+        3,
         "Cần dùng găng tay cách nhiệt và để thiết bị nguội tự nhiên trước khi cất dọn để phòng ngừa bỏng và cháy nổ."
       ],
       [
         "Trong phòng thực hành, biển báo có hình tròn nền xanh dương, hình vẽ màu trắng như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#2563eb\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M50,22 L50,34 M44,34 L56,34\" stroke=\"#fff\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"42\" r=\"3\" fill=\"#fff\"/><path d=\"M34,65 Q45,55 58,60 T68,70\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/><path d=\"M30,72 Q42,62 55,66 T65,76\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển lệnh bắt buộc rửa tay</div></div>",
         [
-          "A. Hiệu lệnh bắt buộc phải rửa sạch tay bằng xà phòng và nước sau khi hoàn thành buổi thực hành.",
-          "B. Nơi dành riêng để rửa các dụng cụ thủy tinh.",
-          "C. Cảnh báo nơi có vòi nước áp lực cao nguy hiểm.",
-          "D. Biển cấm sử dụng nước trong phòng thí nghiệm."
+          "A. Cảnh báo nơi có vòi nước áp lực cao nguy hiểm.",
+          "B. Hiệu lệnh bắt buộc phải rửa sạch tay bằng xà phòng và nước sau khi hoàn thành buổi thực hành.",
+          "C. Biển cấm sử dụng nước trong phòng thí nghiệm.",
+          "D. Nơi dành riêng để rửa các dụng cụ thủy tinh."
         ],
-        0,
+        1,
         "Biển tròn nền xanh dương hình bàn tay dưới vòi nước là biển hiệu lệnh bắt buộc phải rửa tay."
       ],
       [
         "Khi đo độ dài của một vật bằng thước thẳng có giới hạn đo 50 cm và độ chia nhỏ nhất 1 mm, kết quả đo nào sau đây được ghi ĐÚNG quy tắc?",
         [
           "A. L = 35,2 cm.",
-          "B. L = 35,25 cm.",
-          "C. L = 35,258 cm.",
+          "B. L = 35,258 cm.",
+          "C. L = 35,25 cm.",
           "D. L = 35 cm."
         ],
         0,
@@ -5249,9 +5249,9 @@ const suppliedExams = [
         "Một phép đo khối lượng cho kết quả m = (200 ± 4) g. Sai số tỉ đối của phép đo bằng:",
         [
           "A. 2,0%.",
-          "B. 4,0%.",
+          "B. 0,5%.",
           "C. 0,2%.",
-          "D. 0,5%."
+          "D. 4,0%."
         ],
         0,
         "δm = (4 / 200) × 100% = 2,0%."
@@ -5259,23 +5259,23 @@ const suppliedExams = [
       [
         "Một chiếc thuyền buồm chạy trên biển. Vị trí của thuyền thay đổi từ điểm A có tọa độ x_A = +15 km đến điểm B có tọa độ x_B = +45 km trên trục Ox trong thời gian 1,5 h. Vận tốc của thuyền bằng:",
         [
-          "A. 20 km/h.",
+          "A. 10 km/h.",
           "B. 30 km/h.",
           "C. 40 km/h.",
-          "D. 10 km/h."
+          "D. 20 km/h."
         ],
-        0,
+        3,
         "d = x_B - x_A = 45 - 15 = 30 km. v = d / t = 30 / 1,5 = 20 km/h."
       ],
       [
         "Tốc độ trung bình và vận tốc trung bình của một vật có cùng độ lớn khi và chỉ khi:",
         [
-          "A. Vật chuyển động trên một đường thẳng và theo một chiều duy nhất không đổi.",
-          "B. Vật chuyển động tròn đều một vòng khép kín.",
-          "C. Vật đi tới rồi quay ngược trở lại điểm xuất phát.",
-          "D. Vật chuyển động nhanh dần đều rồi chậm dần đều."
+          "A. Vật đi tới rồi quay ngược trở lại điểm xuất phát.",
+          "B. Vật chuyển động nhanh dần đều rồi chậm dần đều.",
+          "C. Vật chuyển động trên một đường thẳng và theo một chiều duy nhất không đổi.",
+          "D. Vật chuyển động tròn đều một vòng khép kín."
         ],
-        0,
+        2,
         "Chỉ khi chuyển động thẳng và không đổi chiều thì s = |d|, do đó tốc độ trung bình bằng độ lớn vận tốc trung bình."
       ],
       [
@@ -5292,78 +5292,78 @@ const suppliedExams = [
       [
         "Đồ thị độ dịch chuyển – thời gian (d – t) của một vật chuyển động thẳng có phương trình d = 10 + 4t (m, s). Vận tốc chuyển động của vật là:",
         [
-          "A. 4 m/s.",
-          "B. 10 m/s.",
+          "A. 10 m/s.",
+          "B. 2,5 m/s.",
           "C. 14 m/s.",
-          "D. 2,5 m/s."
+          "D. 4 m/s."
         ],
-        0,
+        3,
         "Phương trình d = d₀ + vt &rArr; v = 4 m/s."
       ],
       [
         "Một xe ôtô đang đứng yên thì khởi hành chuyển động thẳng nhanh dần đều với gia tốc 2,5 m/s². Tốc độ của ôtô sau 4 giây là:",
         [
-          "A. 10 m/s.",
-          "B. 5 m/s.",
+          "A. 5 m/s.",
+          "B. 2,5 m/s.",
           "C. 20 m/s.",
-          "D. 2,5 m/s."
+          "D. 10 m/s."
         ],
-        0,
+        3,
         "v = at = 2,5 · 4 = 10 m/s."
       ],
       [
         "Một xe tải đang chạy với vận tốc 18 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 3 m/s². Quãng đường xe tải đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là:",
         [
-          "A. 54 m.",
-          "B. 108 m.",
+          "A. 108 m.",
+          "B. 54 m.",
           "C. 36 m.",
           "D. 27 m."
         ],
-        0,
+        1,
         "s = (v² - v₀²) / (2a) = (0 - 18²) / (2 · (-3)) = -324 / (-6) = 54 m."
       ],
       [
         "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động là đường thẳng dốc lên qua gốc tọa độ O. Vật này đang:",
         [
-          "A. Chuyển động thẳng nhanh dần đều không vận tốc đầu.",
-          "B. Chuyển động thẳng đều với vận tốc không đổi.",
-          "C. Chuyển động thẳng chậm dần đều về gốc O.",
-          "D. Đứng yên tại gốc tọa độ."
+          "A. Đứng yên tại gốc tọa độ.",
+          "B. Chuyển động thẳng nhanh dần đều không vận tốc đầu.",
+          "C. Chuyển động thẳng đều với vận tốc không đổi.",
+          "D. Chuyển động thẳng chậm dần đều về gốc O."
         ],
-        0,
+        1,
         "v = at là hàm bậc nhất xuất phát từ 0 dốc lên biểu thị chuyển động nhanh dần đều không vận tốc đầu."
       ],
       [
         "Một ôtô đang chạy với tốc độ 10 m/s thì tăng tốc với gia tốc a = 2 m/s² trong thời gian 5 s. Quãng đường ôtô đi được trong 5 s đó là:",
         [
-          "A. 75 m.",
-          "B. 50 m.",
-          "C. 25 m.",
-          "D. 100 m."
+          "A. 25 m.",
+          "B. 100 m.",
+          "C. 75 m.",
+          "D. 50 m."
         ],
-        0,
+        2,
         "s = v₀t + 1/2 · at² = 10 · 5 + 0,5 · 2 · 5² = 50 + 25 = 75 m."
       ],
       [
         "Gia tốc trọng trường g tại một nơi xác định trên bề mặt Trái Đất có đặc điểm nào sau đây?",
         [
-          "A. Có giá trị như nhau đối với mọi vật rơi tự do tại nơi đó, không phụ thuộc vào khối lượng của vật.",
-          "B. Có giá trị càng lớn nếu vật rơi có khối lượng càng lớn.",
-          "C. Luôn luôn có phương nằm ngang hướng về phía Đông.",
-          "D. Bằng 0 nếu thả vật từ độ cao trên 100 m."
+          "A. Bằng 0 nếu thả vật từ độ cao trên 100 m.",
+          "B. Luôn luôn có phương nằm ngang hướng về phía Đông.",
+          "C. Có giá trị như nhau đối với mọi vật rơi tự do tại nơi đó, không phụ thuộc vào khối lượng của vật.",
+          "D. Có giá trị càng lớn nếu vật rơi có khối lượng càng lớn."
         ],
-        0,
+        2,
         "Tại một nơi xác định, gia tốc rơi tự do g là một hằng số không phụ thuộc vào khối lượng của vật."
       ],
       [
         "Một vật rơi tự do từ độ cao h = 500 m tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian vật rơi từ lúc thả đến khi chạm đất là:",
         [
-          "A. 10 s.",
-          "B. 50 s.",
-          "C. 5 s.",
-          "D. 20 s."
+          "A. 50 s.",
+          "B. 10 s.",
+          "C. 20 s.",
+          "D. 5 s."
         ],
-        0,
+        1,
         "t = √(2h / g) = √(2 · 500 / 10) = √100 = 10 s."
       ]
     ],
@@ -5387,9 +5387,9 @@ const suppliedExams = [
             "Tổng thời gian t = 1 + 1,5 = 2,5 h. v_tb = s / t = 120 / 2,5 = 48 km/h."
           ],
           [
-            "Vận tốc trung bình của xe ôtô trong cả chuyến đi bằng 0 km/h.",
-            true,
-            "Vận tốc trung bình v_tb = d / t = 0 / 2,5 = 0 km/h."
+            "Vận tốc trung bình của xe ôtô trong cả chuyến đi bằng 48 km/h.",
+            false,
+            "Vì điểm đầu và điểm cuối trùng nhau nên vectơ độ dịch chuyển d = 0 &rArr; vận tốc trung bình bằng 0 km/h (chỉ có tốc độ trung bình mới bằng 48 km/h)."
           ]
         ]
       },
@@ -5455,9 +5455,9 @@ const suppliedExams = [
       [
         "Đối tượng nghiên cứu của Hóa học là:",
         [
-          "A. Sự hình thành hệ Mặt Trời và chuyển động của các hành tinh.",
+          "A. Lịch sử tiến hóa của các loài sinh vật qua các kỉ địa chất.",
           "B. Cấu tạo của chất, sự biến đổi của chất và ứng dụng của chúng.",
-          "C. Lịch sử tiến hóa của các loài sinh vật qua các kỉ địa chất.",
+          "C. Sự hình thành hệ Mặt Trời và chuyển động của các hành tinh.",
           "D. Tốc độ truyền ánh sáng và sóng âm trong môi trường chân không."
         ],
         1,
@@ -5466,32 +5466,32 @@ const suppliedExams = [
       [
         "Hạt nhân của hầu hết các nguyên tử trong tự nhiên (trừ đồng vị <sup>1</sup><sub>1</sub>H) được cấu tạo từ các hạt cơ bản nào?",
         [
-          "A. Electron và neutron.",
-          "B. Proton và neutron.",
-          "C. Electron và proton.",
-          "D. Electron, proton và neutron."
+          "A. Proton và neutron.",
+          "B. Electron và neutron.",
+          "C. Electron, proton và neutron.",
+          "D. Electron và proton."
         ],
-        1,
+        0,
         "Hạt nhân nằm ở tâm nguyên tử, gồm proton (mang điện tích dương) và neutron (không mang điện). Riêng đồng vị <sup>1</sup><sub>1</sub>H chỉ có 1 proton, không có neutron."
       ],
       [
         "Khối lượng và điện tích của hạt electron lần lượt là:",
         [
-          "A. m &approx; 0,00055 amu, q = -1,602 &times; 10<sup>-19</sup> C.",
-          "B. m &approx; 1 amu, q = +1,602 &times; 10<sup>-19</sup> C.",
-          "C. m &approx; 1 amu, q = 0.",
-          "D. m &approx; 0,00055 amu, q = +1."
+          "A. m &approx; 1 amu, q = 0.",
+          "B. m &approx; 0,00055 amu, q = +1.",
+          "C. m &approx; 0,00055 amu, q = -1,602 &times; 10<sup>-19</sup> C.",
+          "D. m &approx; 1 amu, q = +1,602 &times; 10<sup>-19</sup> C."
         ],
-        0,
+        2,
         "Electron có khối lượng m<sub>e</sub> &approx; 9,109 &times; 10<sup>-31</sup> kg &approx; 0,00055 amu và mang điện tích âm q = -1,602 &times; 10<sup>-19</sup> C (quy ước bằng -1)."
       ],
       [
         "Hạt nhân của nguyên tử potassium (K) có điện tích bằng +30,438 &times; 10<sup>-19</sup> C. Biết điện tích của 1 proton là +1,602 &times; 10<sup>-19</sup> C. Số hạt proton trong hạt nhân nguyên tử potassium là:",
         [
           "A. 17.",
-          "B. 18.",
+          "B. 20.",
           "C. 19.",
-          "D. 20."
+          "D. 18."
         ],
         2,
         "Số proton Z = (+30,438 &times; 10<sup>-19</sup>) / (+1,602 &times; 10<sup>-19</sup>) = 19."
@@ -5500,29 +5500,29 @@ const suppliedExams = [
         "Nguyên tố hóa học là tập hợp các nguyên tử có cùng:",
         [
           "A. Số khối A.",
-          "B. Số neutron trong hạt nhân.",
-          "C. Số proton trong hạt nhân.",
-          "D. Khối lượng nguyên tử tuyệt đối."
+          "B. Khối lượng nguyên tử tuyệt đối.",
+          "C. Số neutron trong hạt nhân.",
+          "D. Số proton trong hạt nhân."
         ],
-        2,
+        3,
         "Định nghĩa: Nguyên tố hóa học là tập hợp các nguyên tử có cùng điện tích hạt nhân (cùng số proton Z)."
       ],
       [
         "Kí hiệu nguyên tử <sup>15</sup><sub>7</sub>N cho biết nguyên tử nitrogen có:",
         [
-          "A. 7 proton, 7 electron và 8 neutron.",
-          "B. 7 proton, 8 electron và 15 neutron.",
-          "C. 15 proton, 7 electron và 8 neutron.",
-          "D. 8 proton, 7 electron và 15 neutron."
+          "A. 7 proton, 8 electron và 15 neutron.",
+          "B. 8 proton, 7 electron và 15 neutron.",
+          "C. 7 proton, 7 electron và 8 neutron.",
+          "D. 15 proton, 7 electron và 8 neutron."
         ],
-        0,
+        2,
         "Z = 7 &rArr; số proton = số electron = 7; số khối A = 15 &rArr; số neutron N = A - Z = 15 - 7 = 8."
       ],
       [
         "Theo mô hình hiện đại, orbital s có dạng hình gì (như hình minh hoạ bên)?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 200 170\" width=\"200\" height=\"170\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <radialGradient id=\"sphereGrad\" cx=\"40%\" cy=\"35%\" r=\"65%\">\n        <stop offset=\"0%\" stop-color=\"#93c5fd\"/>\n        <stop offset=\"60%\" stop-color=\"#3b82f6\"/>\n        <stop offset=\"100%\" stop-color=\"#1d4ed8\"/>\n      </radialGradient>\n    </defs>\n    <!-- Trục toạ độ không gian 3 chiều -->\n    <line x1=\"20\" y1=\"90\" x2=\"180\" y2=\"90\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n    <text x=\"182\" y=\"94\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">y</text>\n\n    <line x1=\"100\" y1=\"160\" x2=\"100\" y2=\"15\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n    <text x=\"96\" y=\"12\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">z</text>\n\n    <line x1=\"150\" y1=\"140\" x2=\"50\" y2=\"40\" stroke=\"#64748b\" stroke-width=\"1.2\"/>\n    <text x=\"40\" y=\"38\" font-size=\"11\" font-weight=\"bold\" fill=\"#475569\">x</text>\n\n    <!-- Khối cầu Orbital s đối xứng cầu -->\n    <circle cx=\"100\" cy=\"90\" r=\"42\" fill=\"url(#sphereGrad)\" opacity=\"0.88\"/>\n    <circle cx=\"100\" cy=\"90\" r=\"42\" fill=\"none\" stroke=\"#1e40af\" stroke-width=\"1.5\"/>\n    <text x=\"95\" y=\"94\" font-size=\"12\" font-weight=\"bold\" fill=\"#ffffff\">s</text>\n  </svg>\n  <div class=\"figure-caption\">Hình dạng hình cầu đối xứng của orbital s trong không gian</div>\n</div>",
         [
-          "A. Hình số tám nổi.",
-          "B. Hình tròn phẳng.",
+          "A. Hình tròn phẳng.",
+          "B. Hình số tám nổi.",
           "C. Hình cầu.",
           "D. Hình bầu dục elip."
         ],
@@ -5532,34 +5532,34 @@ const suppliedExams = [
       [
         "Mỗi orbital nguyên tử (AO) chứa tối đa bao nhiêu electron theo nguyên lí Pauli?",
         [
-          "A. 1 electron.",
-          "B. 2 electron có chiều tự quay ngược nhau.",
-          "C. 6 electron có chiều tự quay cùng nhau.",
-          "D. 8 electron bão hòa."
+          "A. 2 electron có chiều tự quay ngược nhau.",
+          "B. 1 electron.",
+          "C. 8 electron bão hòa.",
+          "D. 6 electron có chiều tự quay cùng nhau."
         ],
-        1,
+        0,
         "Nguyên lí Pauli: Trên mỗi orbital nguyên tử chỉ chứa tối đa 2 electron và hai electron này có spin ngược chiều nhau."
       ],
       [
         "Số orbital nguyên tử có trong các phân lớp s, p, d, f lần lượt bằng:",
         [
-          "A. 1, 3, 5, 7.",
-          "B. 1, 2, 4, 6.",
+          "A. 1, 2, 4, 6.",
+          "B. 1, 4, 9, 16.",
           "C. 2, 6, 10, 14.",
-          "D. 1, 4, 9, 16."
+          "D. 1, 3, 5, 7."
         ],
-        0,
+        3,
         "Số AO: phân lớp s có 1 AO; p có 3 AO; d có 5 AO; f có 7 AO."
       ],
       [
         "Lớp electron thứ 3 (lớp M, n = 3) chứa tối đa bao nhiêu electron?",
         [
-          "A. 8 electron.",
-          "B. 9 electron.",
-          "C. 18 electron.",
-          "D. 32 electron."
+          "A. 18 electron.",
+          "B. 32 electron.",
+          "C. 8 electron.",
+          "D. 9 electron."
         ],
-        2,
+        0,
         "Số electron tối đa lớp n là 2n<sup>2</sup>. Lớp M (n = 3) chứa tối đa 2 &times; 3<sup>2</sup> = 18 electron."
       ],
       [
@@ -5567,8 +5567,8 @@ const suppliedExams = [
         [
           "A. [Ne] 3s<sup>1</sup> 3p<sup>4</sup>.",
           "B. [Ne] 3s<sup>2</sup> 3p<sup>3</sup>.",
-          "C. [Ne] 3s<sup>2</sup> 3p<sup>5</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>3</sup> 3p<sup>2</sup>."
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>3</sup> 3p<sup>2</sup>.",
+          "D. [Ne] 3s<sup>2</sup> 3p<sup>5</sup>."
         ],
         1,
         "Z = 15: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>3</sup>."
@@ -5576,34 +5576,34 @@ const suppliedExams = [
       [
         "Nguyên tử của một nguyên tố có cấu hình electron lớp ngoài cùng là 3s<sup>2</sup> 3p<sup>1</sup>. Nguyên tố này là:",
         [
-          "A. Kim loại.",
+          "A. Á kim.",
           "B. Phi kim.",
           "C. Khí hiếm.",
-          "D. Á kim."
+          "D. Kim loại."
         ],
-        0,
+        3,
         "Có 2 + 1 = 3 electron ở lớp ngoài cùng &rArr; là KIM LOẠI (Aluminium, Z = 13)."
       ],
       [
         "Bảng tuần hoàn các nguyên tố hóa học hiện đại được sắp xếp theo chiều tăng dần của:",
         [
-          "A. Khối lượng nguyên tử.",
-          "B. Số khối A.",
-          "C. Điện tích hạt nhân nguyên tử (Z).",
+          "A. Số khối A.",
+          "B. Điện tích hạt nhân nguyên tử (Z).",
+          "C. Khối lượng nguyên tử.",
           "D. Bán kính nguyên tử."
         ],
-        2,
+        1,
         "Nguyên tắc 1: Sắp xếp theo chiều tăng dần của điện tích hạt nhân nguyên tử (+Z)."
       ],
       [
         "Số thứ tự của chu kì trong Bảng tuần hoàn bằng:",
         [
-          "A. Số electron hóa trị.",
-          "B. Số lớp electron của nguyên tử.",
-          "C. Số phân lớp electron.",
+          "A. Số lớp electron của nguyên tử.",
+          "B. Số phân lớp electron.",
+          "C. Số electron hóa trị.",
           "D. Số electron ở lớp ngoài cùng."
         ],
-        1,
+        0,
         "Số thứ tự chu kì = Số lớp electron trong nguyên tử."
       ],
       [
@@ -5611,21 +5611,21 @@ const suppliedExams = [
         [
           "A. Nguyên tố s và nguyên tố d.",
           "B. Nguyên tố p và nguyên tố d.",
-          "C. Nguyên tố s và nguyên tố p.",
-          "D. Nguyên tố d và nguyên tố f."
+          "C. Nguyên tố d và nguyên tố f.",
+          "D. Nguyên tố s và nguyên tố p."
         ],
-        2,
+        3,
         "Nhóm A (phân nhóm chính) gồm các nguyên tố s và nguyên tố p."
       ],
       [
         "Nguyên tử của nguyên tố aluminium (Al) có Z = 13. Vị trí của Al trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 13, chu kì 3, nhóm IIIA.",
-          "B. Ô số 13, chu kì 3, nhóm VA.",
+          "A. Ô số 13, chu kì 3, nhóm IIIB.",
+          "B. Ô số 13, chu kì 3, nhóm IIIA.",
           "C. Ô số 13, chu kì 2, nhóm IIIA.",
-          "D. Ô số 13, chu kì 3, nhóm IIIB."
+          "D. Ô số 13, chu kì 3, nhóm VA."
         ],
-        0,
+        1,
         "Al (Z = 13): [Ne] 3s<sup>2</sup> 3p<sup>1</sup> &rArr; Ô số 13, chu kì 3 (3 lớp e), nhóm IIIA (nguyên tố p, 3e ngoài cùng)."
       ]
     ],
@@ -5734,42 +5734,42 @@ const suppliedExams = [
       [
         "Hiện tượng nào sau đây là hiện tượng hóa học (có sự tạo thành chất mới)?",
         [
-          "A. Thanh sắt nung đỏ, dát mỏng và uốn cong thành lưỡi cuốc.",
-          "B. Sục khí carbon dioxide vào dung dịch nước vôi trong thấy xuất hiện kết tủa vẩn đục.",
-          "C. Nước đá để ngoài không khí bị tan chảy thành nước lỏng.",
-          "D. Nhựa đường được đun nóng chảy để trải mặt đường giao thông."
+          "A. Nhựa đường được đun nóng chảy để trải mặt đường giao thông.",
+          "B. Nước đá để ngoài không khí bị tan chảy thành nước lỏng.",
+          "C. Thanh sắt nung đỏ, dát mỏng và uốn cong thành lưỡi cuốc.",
+          "D. Sục khí carbon dioxide vào dung dịch nước vôi trong thấy xuất hiện kết tủa vẩn đục."
         ],
-        1,
+        3,
         "Hiện tượng hóa học là hiện tượng có chất mới sinh ra. Phản ứng: CO<sub>2</sub> + Ca(OH)<sub>2</sub> &rarr; CaCO<sub>3</sub>↓ + H<sub>2</sub>O tạo kết tủa trắng CaCO<sub>3</sub>."
       ],
       [
         "Trong một nguyên tử trung hòa về điện, mối quan hệ giữa số hạt electron và proton là:",
         [
-          "A. Luôn bằng nhau (e = p = Z).",
-          "B. Số electron luôn lớn hơn số proton.",
-          "C. Số electron luôn nhỏ hơn số proton.",
-          "D. Không thể so sánh được."
+          "A. Số electron luôn nhỏ hơn số proton.",
+          "B. Luôn bằng nhau (e = p = Z).",
+          "C. Không thể so sánh được.",
+          "D. Số electron luôn lớn hơn số proton."
         ],
-        0,
+        1,
         "Nguyên tử trung hòa điện vì điện tích dương của hạt nhân bằng điện tích âm của vỏ electron &rArr; số proton = số electron."
       ],
       [
         "Số khối A của nguyên tử bằng:",
         [
-          "A. Tổng khối lượng các hạt proton và neutron tính theo gam.",
-          "B. Tổng số hạt proton và neutron trong hạt nhân nguyên tử.",
-          "C. Khối lượng nguyên tử tuyệt đối.",
+          "A. Tổng số hạt proton và neutron trong hạt nhân nguyên tử.",
+          "B. Khối lượng nguyên tử tuyệt đối.",
+          "C. Tổng khối lượng các hạt proton và neutron tính theo gam.",
           "D. Tổng số hạt proton, neutron và electron."
         ],
-        1,
+        0,
         "Số khối A = Z + N (tổng số proton và neutron trong hạt nhân)."
       ],
       [
         "Khối lượng thực của nguyên tử magnesium (Mg) là 39,8271 &times; 10<sup>-27</sup> kg. Biết 1 amu &approx; 1,6605 &times; 10<sup>-27</sup> kg. Khối lượng nguyên tử của magnesium theo amu xấp xỉ bằng:",
         [
           "A. 23,985 amu.",
-          "B. 66,133 amu.",
-          "C. 12,000 amu.",
+          "B. 12,000 amu.",
+          "C. 66,133 amu.",
           "D. 24,305 amu."
         ],
         0,
@@ -5778,43 +5778,43 @@ const suppliedExams = [
       [
         "Số hiệu nguyên tử Z của một nguyên tố hóa học KHÔNG cho biết thông tin nào sau đây?",
         [
-          "A. Số hạt proton trong hạt nhân.",
-          "B. Số hạt electron ở lớp vỏ nguyên tử trung hòa.",
-          "C. Số đơn vị điện tích hạt nhân.",
-          "D. Số hạt neutron trong hạt nhân."
+          "A. Số hạt neutron trong hạt nhân.",
+          "B. Số đơn vị điện tích hạt nhân.",
+          "C. Số hạt proton trong hạt nhân.",
+          "D. Số hạt electron ở lớp vỏ nguyên tử trung hòa."
         ],
-        3,
+        0,
         "Z cho biết proton, electron, số đơn vị điện tích hạt nhân. Muốn biết neutron phải biết thêm số khối A (N = A - Z)."
       ],
       [
         "Thông tin nào sau đây KHÔNG ĐÚNG về đồng vị chì <sup>206</sup><sub>82</sub>Pb?",
         [
-          "A. Số hiệu nguyên tử bằng 82.",
-          "B. Điện tích hạt nhân bằng 82.",
-          "C. Số hạt neutron trong hạt nhân bằng 124.",
-          "D. Số khối của nguyên tử bằng 206."
+          "A. Số khối của nguyên tử bằng 206.",
+          "B. Số hạt neutron trong hạt nhân bằng 124.",
+          "C. Điện tích hạt nhân bằng 82.",
+          "D. Số hiệu nguyên tử bằng 82."
         ],
-        1,
+        2,
         "Điện tích hạt nhân phải là +82 (hoặc +82e), 82 chỉ là số đơn vị điện tích hạt nhân."
       ],
       [
         "Theo mô hình hiện đại, các electron chuyển động xung quanh hạt nhân như thế nào?",
         [
-          "A. Rất nhanh theo những quỹ đạo tròn hoặc elip cố định.",
-          "B. Rất nhanh không theo những quỹ đạo xác định, tạo thành đám mây electron.",
-          "C. Rất chậm trên mặt phẳng bao quanh hạt nhân.",
-          "D. Đứng yên tại các vị trí xác định trong không gian."
+          "A. Đứng yên tại các vị trí xác định trong không gian.",
+          "B. Rất chậm trên mặt phẳng bao quanh hạt nhân.",
+          "C. Rất nhanh không theo những quỹ đạo xác định, tạo thành đám mây electron.",
+          "D. Rất nhanh theo những quỹ đạo tròn hoặc elip cố định."
         ],
-        1,
+        2,
         "Mô hình hiện đại: Electron chuyển động rất nhanh trong vùng không gian xung quanh hạt nhân không theo quỹ đạo xác định."
       ],
       [
         "Orbital nguyên tử (AO) được định nghĩa là:",
         [
-          "A. Quỹ đạo tròn mà electron chuyển động.",
+          "A. Khoảng cách cố định từ electron đến tâm hạt nhân.",
           "B. Đám mây hình cầu luôn chứa 2 electron ghép đôi.",
           "C. Khu vực không gian xung quanh hạt nhân mà xác suất tìm thấy electron khoảng 90%.",
-          "D. Khoảng cách cố định từ electron đến tâm hạt nhân."
+          "D. Quỹ đạo tròn mà electron chuyển động."
         ],
         2,
         "Định nghĩa: AO là khu vực không gian xung quanh hạt nhân có xác suất có mặt (tìm thấy) electron lớn nhất (khoảng 90%)."
@@ -5822,34 +5822,34 @@ const suppliedExams = [
       [
         "Các lớp electron từ gần hạt nhân ra ngoài được đánh số n = 1, 2, 3, 4 tương ứng với các chữ cái in hoa là:",
         [
-          "A. K, L, M, N.",
-          "B. L, M, N, O.",
-          "C. K, M, N, P.",
-          "D. A, B, C, D."
+          "A. A, B, C, D.",
+          "B. K, M, N, P.",
+          "C. L, M, N, O.",
+          "D. K, L, M, N."
         ],
-        0,
+        3,
         "n = 1 (K), n = 2 (L), n = 3 (M), n = 4 (N)."
       ],
       [
         "Cấu hình electron ở trạng thái cơ bản của nguyên tử fluorine (Z = 9) là:",
         [
           "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>3</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>3</sup> 2p<sup>4</sup>."
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>3</sup> 2p<sup>4</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>."
         ],
-        2,
+        1,
         "Z = 9: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>."
       ],
       [
         "Nguyên tử nguyên tố X có cấu hình electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>1</sup>. Số hiệu nguyên tử của X là:",
         [
-          "A. 18.",
-          "B. 19.",
-          "C. 20.",
-          "D. 21."
+          "A. 20.",
+          "B. 21.",
+          "C. 19.",
+          "D. 18."
         ],
-        1,
+        2,
         "Tổng e = 2 + 2 + 6 + 2 + 6 + 1 = 19 &rArr; Z = 19 (Potassium, K)."
       ],
       [
@@ -5857,8 +5857,8 @@ const suppliedExams = [
         [
           "A. 13.",
           "B. 15.",
-          "C. 16.",
-          "D. 17."
+          "C. 17.",
+          "D. 16."
         ],
         1,
         "1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup> &rArr; Tổng số e = 15 &rArr; Z = 15 (Phosphorus)."
@@ -5866,31 +5866,31 @@ const suppliedExams = [
       [
         "Số thứ tự của ô nguyên tố trong Bảng tuần hoàn bằng:",
         [
-          "A. Số neutron N.",
-          "B. Số khối A.",
-          "C. Số hiệu nguyên tử Z.",
-          "D. Khối lượng nguyên tử."
+          "A. Khối lượng nguyên tử.",
+          "B. Số hiệu nguyên tử Z.",
+          "C. Số khối A.",
+          "D. Số neutron N."
         ],
-        2,
+        1,
         "Số thứ tự ô nguyên tố = Số hiệu nguyên tử Z = P = E."
       ],
       [
         "Các chu kì nhỏ trong Bảng tuần hoàn gồm những chu kì nào?",
         [
-          "A. Chu kì 1, 2, 3.",
-          "B. Chu kì 1, 2, 3, 4.",
-          "C. Chu kì 4, 5, 6.",
-          "D. Chu kì 5, 6, 7."
+          "A. Chu kì 5, 6, 7.",
+          "B. Chu kì 4, 5, 6.",
+          "C. Chu kì 1, 2, 3, 4.",
+          "D. Chu kì 1, 2, 3."
         ],
-        0,
+        3,
         "Chu kì nhỏ gồm chu kì 1, 2, 3 (chứa từ 2 đến 8 nguyên tố)."
       ],
       [
         "Nhóm VIIIA trong Bảng tuần hoàn gồm các nguyên tố thuộc loại:",
         [
-          "A. Kim loại kiềm.",
+          "A. Halogen.",
           "B. Kim loại kiềm thổ.",
-          "C. Halogen.",
+          "C. Kim loại kiềm.",
           "D. Khí hiếm."
         ],
         3,
@@ -5899,12 +5899,12 @@ const suppliedExams = [
       [
         "Nguyên tử của nguyên tố Y có cấu hình electron lớp ngoài cùng là 3s<sup>2</sup> 3p<sup>4</sup>. Vị trí của Y trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 16, chu kì 3, nhóm IVA.",
-          "B. Ô số 16, chu kì 3, nhóm VIA.",
+          "A. Ô số 16, chu kì 3, nhóm VIA.",
+          "B. Ô số 16, chu kì 4, nhóm VIA.",
           "C. Ô số 14, chu kì 3, nhóm IVA.",
-          "D. Ô số 16, chu kì 4, nhóm VIA."
+          "D. Ô số 16, chu kì 3, nhóm IVA."
         ],
-        1,
+        0,
         "Y có cấu hình đầy đủ: [Ne] 3s<sup>2</sup> 3p<sup>4</sup> &rArr; Ô 16, chu kì 3 (3 lớp e), nhóm VIA (nguyên tố p, 6e ngoài cùng)."
       ]
     ],
@@ -6013,21 +6013,21 @@ const suppliedExams = [
       [
         "Phương pháp học tập Hóa học hiệu quả nhằm phát triển năng lực khoa học tự nhiên bao gồm những hoạt động nào?",
         [
-          "A. Chỉ ghi nhớ máy móc các phương trình hóa học và công thức tính toán.",
-          "B. Quan sát thực nghiệm, tư duy lý thuyết, sử dụng mô hình hóa và thực hành giải quyết vấn đề.",
-          "C. Chỉ đọc sách giáo khoa và tra cứu mạng Internet mà không làm thí nghiệm.",
-          "D. Học thuộc lòng đáp án các đề thi trắc nghiệm từ các năm trước."
+          "A. Quan sát thực nghiệm, tư duy lý thuyết, sử dụng mô hình hóa và thực hành giải quyết vấn đề.",
+          "B. Học thuộc lòng đáp án các đề thi trắc nghiệm từ các năm trước.",
+          "C. Chỉ ghi nhớ máy móc các phương trình hóa học và công thức tính toán.",
+          "D. Chỉ đọc sách giáo khoa và tra cứu mạng Internet mà không làm thí nghiệm."
         ],
-        1,
+        0,
         "Phương pháp học tập hóa học đúng đắn gồm: quan sát thực nghiệm thực tế, tư duy lí thuyết khoa học, mô hình hóa và thực hành giải quyết vấn đề trong học tập và đời sống."
       ],
       [
         "Trong nguyên tử carbon (C), số hạt proton là 6 và số hạt neutron là 6. Số hạt electron trong nguyên tử C là:",
         [
           "A. 6.",
-          "B. 12.",
-          "C. 18.",
-          "D. 8."
+          "B. 8.",
+          "C. 12.",
+          "D. 18."
         ],
         0,
         "Nguyên tử trung hòa điện nên số electron = số proton = 6."
@@ -6035,87 +6035,87 @@ const suppliedExams = [
       [
         "Nguyên tử có cấu tạo rỗng. Kích thước của toàn bộ nguyên tử lớn hơn kích thước của hạt nhân khoảng:",
         [
-          "A. 10 lần.",
-          "B. 100 lần.",
-          "C. 10 000 lần.",
+          "A. 100 lần.",
+          "B. 10 000 lần.",
+          "C. 10 lần.",
           "D. 1 000 000 lần."
         ],
-        2,
+        1,
         "Đường kính nguyên tử khoảng 10<sup>-10</sup> m, đường kính hạt nhân khoảng 10<sup>-14</sup> m đến 10<sup>-15</sup> m, nghĩa là đường kính nguyên tử lớn gấp khoảng 10 000 lần đường kính hạt nhân."
       ],
       [
         "Đơn vị đo kích thước nguyên tử thường dùng là nanomet (nm) và angstrom (&Aring;). Mối liên hệ chính xác giữa các đơn vị đo này là:",
         [
-          "A. 1 nm = 10<sup>-9</sup> m = 10 &Aring; = 10<sup>-7</sup> cm.",
+          "A. 1 nm = 10<sup>-12</sup> m = 100 &Aring;.",
           "B. 1 nm = 10<sup>-10</sup> m = 1 &Aring; = 10<sup>-8</sup> cm.",
-          "C. 1 &Aring; = 10<sup>-9</sup> m = 10 nm = 10<sup>-7</sup> cm.",
-          "D. 1 nm = 10<sup>-12</sup> m = 100 &Aring;."
+          "C. 1 nm = 10<sup>-9</sup> m = 10 &Aring; = 10<sup>-7</sup> cm.",
+          "D. 1 &Aring; = 10<sup>-9</sup> m = 10 nm = 10<sup>-7</sup> cm."
         ],
-        0,
+        2,
         "1 nm = 10<sup>-9</sup> m = 10<sup>-7</sup> cm = 10 &Aring;; 1 &Aring; = 10<sup>-10</sup> m = 10<sup>-8</sup> cm."
       ],
       [
         "Nhận định nào sau đây KHÔNG ĐÚNG khi nói về hai nguyên tử <sup>63</sup><sub>29</sub>Cu và <sup>65</sup><sub>29</sub>Cu?",
         [
-          "A. Là hai đồng vị của cùng nguyên tố copper (đồng).",
-          "B. Có cùng số electron ở lớp vỏ nguyên tử.",
-          "C. Có cùng số hạt neutron trong hạt nhân nguyên tử.",
+          "A. Có cùng số hạt neutron trong hạt nhân nguyên tử.",
+          "B. Là hai đồng vị của cùng nguyên tố copper (đồng).",
+          "C. Có cùng số electron ở lớp vỏ nguyên tử.",
           "D. Có cùng số hiệu nguyên tử Z = 29."
         ],
-        2,
+        0,
         "Hai đồng vị có cùng số proton Z = 29 nhưng khác nhau về số neutron: <sup>63</sup>Cu có N = 34; <sup>65</sup>Cu có N = 36."
       ],
       [
         "Cho ba nguyên tử có kí hiệu: <sup>24</sup><sub>12</sub>X, <sup>25</sup><sub>12</sub>Y, <sup>26</sup><sub>12</sub>Z. Phát biểu nào sau đây là SAI?",
         [
-          "A. Số hạt electron của các nguyên tử lần lượt là 12, 13, 14.",
-          "B. X, Y, Z là 3 đồng vị của cùng một nguyên tố hóa học.",
-          "C. X, Y, Z đều thuộc về nguyên tố magnesium (Mg).",
-          "D. Hạt nhân của mỗi nguyên tử đều có đúng 12 hạt proton."
+          "A. X, Y, Z đều thuộc về nguyên tố magnesium (Mg).",
+          "B. Hạt nhân của mỗi nguyên tử đều có đúng 12 hạt proton.",
+          "C. X, Y, Z là 3 đồng vị của cùng một nguyên tố hóa học.",
+          "D. Số hạt electron của các nguyên tử lần lượt là 12, 13, 14."
         ],
-        0,
+        3,
         "X, Y, Z đều có cùng Z = 12 nên số electron của mỗi nguyên tử đều bằng 12 hạt. Phát biểu số electron là 12, 13, 14 là SAI."
       ],
       [
         "Electron thuộc lớp nào sau đây liên kết chặt chẽ nhất với hạt nhân và có mức năng lượng thấp nhất?",
         [
-          "A. Lớp K (n = 1).",
-          "B. Lớp L (n = 2).",
-          "C. Lớp M (n = 3).",
-          "D. Lớp N (n = 4)."
+          "A. Lớp N (n = 4).",
+          "B. Lớp K (n = 1).",
+          "C. Lớp L (n = 2).",
+          "D. Lớp M (n = 3)."
         ],
-        0,
+        1,
         "Electron ở lớp K (n = 1) gần hạt nhân nhất, chịu lực hút của hạt nhân mạnh nhất nên có mức năng lượng thấp nhất và liên kết chặt chẽ nhất."
       ],
       [
         "Số electron tối đa chứa trong các phân lớp s, p, d, f lần lượt là:",
         [
-          "A. 2, 6, 10, 14.",
+          "A. 2, 4, 6, 8.",
           "B. 1, 3, 5, 7.",
-          "C. 2, 4, 6, 8.",
+          "C. 2, 6, 10, 14.",
           "D. 2, 8, 18, 32."
         ],
-        0,
+        2,
         "Phân lớp s chứa tối đa 2e; p chứa tối đa 6e; d chứa tối đa 10e; f chứa tối đa 14e."
       ],
       [
         "Lớp electron thứ 3 (lớp M) có bao nhiêu phân lớp electron?",
         [
-          "A. 1 phân lớp.",
+          "A. 4 phân lớp.",
           "B. 2 phân lớp.",
-          "C. 3 phân lớp.",
-          "D. 4 phân lớp."
+          "C. 1 phân lớp.",
+          "D. 3 phân lớp."
         ],
-        2,
+        3,
         "Lớp thứ n (n &le; 4) có n phân lớp. Lớp M (n = 3) có đúng 3 phân lớp là 3s, 3p, 3d."
       ],
       [
         "Số orbital nguyên tử tối đa có trong lớp M (n = 3) là:",
         [
-          "A. 3.",
+          "A. 18.",
           "B. 4.",
           "C. 9.",
-          "D. 18."
+          "D. 3."
         ],
         2,
         "Số AO tối đa ở lớp thứ n là n<sup>2</sup>. Lớp M (n = 3) có 3<sup>2</sup> = 9 AO (gồm 1 AO 3s, 3 AO 3p, 5 AO 3d)."
@@ -6123,67 +6123,67 @@ const suppliedExams = [
       [
         "Nguyên tử của nguyên tố nào sau đây có đúng 4 electron ở lớp ngoài cùng?",
         [
-          "A. Carbon (Z = 6).",
-          "B. Nitrogen (Z = 7).",
+          "A. Oxygen (Z = 8).",
+          "B. Carbon (Z = 6).",
           "C. Aluminium (Z = 13).",
-          "D. Oxygen (Z = 8)."
+          "D. Nitrogen (Z = 7)."
         ],
-        0,
+        1,
         "Carbon (Z = 6): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup> có 2 + 2 = 4 electron ở lớp ngoài cùng."
       ],
       [
         "Các electron của nguyên tử X được phân bố trên 3 lớp, lớp thứ 3 có 6 electron. Số đơn vị điện tích hạt nhân của nguyên tử X là:",
         [
           "A. 6.",
-          "B. 8.",
+          "B. 16.",
           "C. 14.",
-          "D. 16."
+          "D. 8."
         ],
-        3,
+        1,
         "3 lớp e: 2, 8, 6 &rArr; Z = 2 + 8 + 6 = 16 (Sulfur)."
       ],
       [
         "Nguyên tố p là những nguyên tố mà nguyên tử có electron cuối cùng được điền vào phân lớp nào?",
         [
-          "A. Phân lớp s.",
-          "B. Phân lớp p.",
+          "A. Phân lớp f.",
+          "B. Phân lớp s.",
           "C. Phân lớp d.",
-          "D. Phân lớp f."
+          "D. Phân lớp p."
         ],
-        1,
+        3,
         "Nguyên tố p là nguyên tố có electron cuối cùng điền vào phân lớp p theo mức năng lượng."
       ],
       [
         "Các nguyên tố thuộc nhóm B trong Bảng tuần hoàn bao gồm những loại nguyên tố nào?",
         [
-          "A. Nguyên tố s và nguyên tố p.",
-          "B. Nguyên tố d và nguyên tố f.",
+          "A. Nguyên tố d và nguyên tố f.",
+          "B. Nguyên tố s và nguyên tố p.",
           "C. Nguyên tố s và nguyên tố d.",
           "D. Nguyên tố p và nguyên tố f."
         ],
-        1,
+        0,
         "Nhóm B gồm các nguyên tố d và f (kim loại chuyển tiếp)."
       ],
       [
         "Cho các nguyên tố Na (Z = 11), Mg (Z = 12), Al (Z = 13). Các nguyên tố này có đặc điểm chung nào sau đây?",
         [
           "A. Cùng thuộc một nhóm A trong Bảng tuần hoàn.",
-          "B. Cùng có 3 electron ở lớp ngoài cùng.",
-          "C. Cùng thuộc chu kì 3 do nguyên tử đều có 3 lớp electron.",
-          "D. Đều là các nguyên tố p."
+          "B. Đều là các nguyên tố p.",
+          "C. Cùng có 3 electron ở lớp ngoài cùng.",
+          "D. Cùng thuộc chu kì 3 do nguyên tử đều có 3 lớp electron."
         ],
-        2,
+        3,
         "Na, Mg, Al đều có 3 lớp electron nên đều thuộc chu kì 3."
       ],
       [
         "Nguyên tử của nguyên tố T có cấu hình electron [Ne] 3s<sup>2</sup> 3p<sup>4</sup>. Vị trí của T trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 16, chu kì 3, nhóm VIA.",
-          "B. Ô số 16, chu kì 3, nhóm IVA.",
-          "C. Ô số 16, chu kì 4, nhóm VIA.",
-          "D. Ô số 14, chu kì 3, nhóm VIA."
+          "A. Ô số 16, chu kì 3, nhóm IVA.",
+          "B. Ô số 14, chu kì 3, nhóm VIA.",
+          "C. Ô số 16, chu kì 3, nhóm VIA.",
+          "D. Ô số 16, chu kì 4, nhóm VIA."
         ],
-        0,
+        2,
         "T (Z = 16): Ô số 16, chu kì 3, nhóm VIA."
       ]
     ],
@@ -6293,9 +6293,9 @@ const suppliedExams = [
         "Hóa học đóng vai trò nòng cốt đối với các lĩnh vực quan trọng nào của đời sống?",
         [
           "A. Y dược, Nông nghiệp, Công nghiệp vật liệu và Năng lượng mới.",
-          "B. Thiên văn học cổ đại và Khảo cổ học thuần túy.",
-          "C. Khoa học ngôn ngữ và Triết học phương Tây.",
-          "D. Nghệ thuật hội họa và Điêu khắc cổ điển."
+          "B. Nghệ thuật hội họa và Điêu khắc cổ điển.",
+          "C. Thiên văn học cổ đại và Khảo cổ học thuần túy.",
+          "D. Khoa học ngôn ngữ và Triết học phương Tây."
         ],
         0,
         "Hóa học đóng vai trò trung tâm trong sản xuất dược phẩm (Y dược), phân bón thuốc trừ sâu (Nông nghiệp), polyme bán dẫn (Vật liệu) và pin nhiên liệu (Năng lượng)."
@@ -6303,164 +6303,164 @@ const suppliedExams = [
       [
         "Phát biểu nào sau đây KHÔNG ĐÚNG về cấu tạo nguyên tử?",
         [
-          "A. Nguyên tử được cấu tạo từ các hạt cơ bản là proton, neutron và electron.",
-          "B. Nguyên tử có cấu trúc đặc khít, không có khoảng trống bên trong.",
-          "C. Hạt nhân nằm ở tâm nguyên tử, cấu tạo từ các hạt proton và neutron.",
-          "D. Lớp vỏ nguyên tử cấu tạo từ các hạt electron mang điện tích âm."
+          "A. Nguyên tử có cấu trúc đặc khít, không có khoảng trống bên trong.",
+          "B. Nguyên tử được cấu tạo từ các hạt cơ bản là proton, neutron và electron.",
+          "C. Lớp vỏ nguyên tử cấu tạo từ các hạt electron mang điện tích âm.",
+          "D. Hạt nhân nằm ở tâm nguyên tử, cấu tạo từ các hạt proton và neutron."
         ],
-        1,
+        0,
         "Nguyên tử có cấu trúc RỖNG, đường kính nguyên tử gấp khoảng 10 000 lần đường kính hạt nhân."
       ],
       [
         "Hạt mang điện tích âm trong cấu tạo nguyên tử là:",
         [
           "A. Proton.",
-          "B. Neutron.",
-          "C. Electron.",
-          "D. Hạt nhân."
+          "B. Electron.",
+          "C. Hạt nhân.",
+          "D. Neutron."
         ],
-        2,
+        1,
         "Electron mang điện tích âm (-1,602 &times; 10<sup>-19</sup> C)."
       ],
       [
         "Đối với các nguyên tử bền có số hiệu nguyên tử 2 &le; Z &le; 82, tỉ số giữa số neutron (N) và số proton (Z) luôn thỏa mãn hệ thức nào sau đây?",
         [
-          "A. 1 &le; N/Z &le; 1,52 hay S/3,52 &le; Z &le; S/3.",
-          "B. 1,52 &le; N/Z &le; 2 hay S/4 &le; Z &le; S/3.",
+          "A. 1,52 &le; N/Z &le; 2 hay S/4 &le; Z &le; S/3.",
+          "B. 1 &le; N/Z &le; 1,52 hay S/3,52 &le; Z &le; S/3.",
           "C. N/Z = 1 trong mọi trường hợp.",
           "D. N/Z &ge; 2."
         ],
-        0,
+        1,
         "Bất đẳng thức bền của hạt nhân: 1 &le; N/Z &le; 1,52 &rArr; S/3,52 &le; Z &le; S/3."
       ],
       [
         "Đặc trưng quan trọng nhất để phân biệt các nguyên tố hóa học khác nhau là:",
         [
-          "A. Số hạt neutron trong hạt nhân.",
-          "B. Số đơn vị điện tích hạt nhân (số hiệu nguyên tử Z).",
+          "A. Số electron ở phân lớp ngoài cùng.",
+          "B. Số hạt neutron trong hạt nhân.",
           "C. Số khối A của nguyên tử.",
-          "D. Số electron ở phân lớp ngoài cùng."
+          "D. Số đơn vị điện tích hạt nhân (số hiệu nguyên tử Z)."
         ],
-        1,
+        3,
         "Số hiệu nguyên tử Z (số proton) là đặc trưng cơ bản nhất của một nguyên tố hóa học."
       ],
       [
         "Nguyên tố R có hai đồng vị bền trong tự nhiên, nguyên tử khối trung bình là 79,91. Một trong hai đồng vị là <sup>79</sup>R (chiếm 54,5% số nguyên tử). Số khối của đồng vị thứ hai là:",
         [
-          "A. 80.",
-          "B. 81.",
-          "C. 82.",
-          "D. 83."
+          "A. 83.",
+          "B. 82.",
+          "C. 81.",
+          "D. 80."
         ],
-        1,
+        2,
         "Đồng vị thứ hai chiếm 45,5% &rArr; (79 &times; 54,5 + A<sub>2</sub> &times; 45,5) / 100 = 79,91 &rArr; A<sub>2</sub> = 81 (Bromine: <sup>79</sup>Br và <sup>81</sup>Br)."
       ],
       [
         "Quy tắc Hund quy định cách phân bố electron vào các orbital nguyên tử trong cùng một phân lớp chưa bão hòa sao cho:",
         [
-          "A. Số electron độc thân là nhỏ nhất.",
-          "B. Số electron độc thân là tối đa và các electron độc thân có chiều tự quay cùng chiều nhau.",
+          "A. Số electron độc thân là tối đa và các electron độc thân có chiều tự quay cùng chiều nhau.",
+          "B. Số electron ghép đôi là tối đa.",
           "C. Các electron phải ghép đôi hết trước khi sang orbital mới.",
-          "D. Số electron ghép đôi là tối đa."
+          "D. Số electron độc thân là nhỏ nhất."
         ],
-        1,
+        0,
         "Quy tắc Hund: Trong mỗi phân lớp chưa bão hòa, electron phân bố sao cho số electron độc thân là tối đa và có spin cùng chiều."
       ],
       [
         "Số orbital nguyên tử tối đa có trong lớp electron thứ n (với n &le; 4) bằng:",
         [
           "A. n.",
-          "B. 2n.",
-          "C. n<sup>2</sup>.",
+          "B. n<sup>2</sup>.",
+          "C. 2n.",
           "D. 2n<sup>2</sup>."
         ],
-        2,
+        1,
         "Số AO tối đa ở lớp n là n<sup>2</sup>. Số electron tối đa là 2n<sup>2</sup>."
       ],
       [
         "Cấu hình electron nguyên tử dạng thu gọn của iron (Fe, Z = 26) là:",
         [
-          "A. [Ar] 3d<sup>6</sup> 4s<sup>2</sup>.",
-          "B. [Ar] 4s<sup>2</sup> 3d<sup>6</sup>.",
-          "C. [Ar] 3d<sup>8</sup>.",
-          "D. [Ne] 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>6</sup> 4s<sup>2</sup>."
+          "A. [Ar] 4s<sup>2</sup> 3d<sup>6</sup>.",
+          "B. [Ar] 3d<sup>8</sup>.",
+          "C. [Ne] 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>6</sup> 4s<sup>2</sup>.",
+          "D. [Ar] 3d<sup>6</sup> 4s<sup>2</sup>."
         ],
-        0,
+        3,
         "Khí hiếm đứng trước Fe (Z = 26) là Ar (Z = 18). Cấu hình thu gọn là [Ar] 3d<sup>6</sup> 4s<sup>2</sup>."
       ],
       [
         "Trường hợp ngoại lệ bán bão hòa phân lớp 3d xảy ra ở nguyên tử nào sau đây khi viết cấu hình electron?",
         [
-          "A. Calcium (Z = 20).",
-          "B. Chromium (Z = 24).",
-          "C. Iron (Z = 26).",
-          "D. Zinc (Z = 30)."
+          "A. Iron (Z = 26).",
+          "B. Calcium (Z = 20).",
+          "C. Zinc (Z = 30).",
+          "D. Chromium (Z = 24)."
         ],
-        1,
+        3,
         "Chromium (Z = 24) có cấu hình bán bão hòa 3d<sup>5</sup> bền vững: [Ar] 3d<sup>5</sup> 4s<sup>1</sup> thay vì [Ar] 3d<sup>4</sup> 4s<sup>2</sup>."
       ],
       [
         "Trường hợp ngoại lệ bão hòa phân lớp 3d xảy ra ở nguyên tử copper (Cu, Z = 29), cấu hình electron đúng của Cu là:",
         [
-          "A. [Ar] 3d<sup>9</sup> 4s<sup>2</sup>.",
-          "B. [Ar] 3d<sup>10</sup> 4s<sup>1</sup>.",
-          "C. [Ar] 4s<sup>1</sup> 3d<sup>10</sup>.",
-          "D. [Ar] 3d<sup>8</sup> 4s<sup>2</sup> 4p<sup>1</sup>."
+          "A. [Ar] 3d<sup>8</sup> 4s<sup>2</sup> 4p<sup>1</sup>.",
+          "B. [Ar] 4s<sup>1</sup> 3d<sup>10</sup>.",
+          "C. [Ar] 3d<sup>10</sup> 4s<sup>1</sup>.",
+          "D. [Ar] 3d<sup>9</sup> 4s<sup>2</sup>."
         ],
-        1,
+        2,
         "Đồng (Z = 29) có cấu hình bão hòa 3d<sup>10</sup> bền vững: [Ar] 3d<sup>10</sup> 4s<sup>1</sup>."
       ],
       [
         "Nguyên tử nguyên tố X có tổng số electron trong các phân lớp p là 11. Nguyên tử nguyên tố Y có tổng số hạt mang điện ít hơn tổng số hạt mang điện trong X là 10 hạt. X và Y lần lượt là:",
         [
-          "A. <sub>13</sub>Al và <sub>35</sub>Br.",
-          "B. <sub>17</sub>Cl và <sub>12</sub>Mg.",
-          "C. <sub>14</sub>Si và <sub>11</sub>Na.",
-          "D. <sub>17</sub>Cl và <sub>13</sub>Al."
+          "A. <sub>17</sub>Cl và <sub>13</sub>Al.",
+          "B. <sub>14</sub>Si và <sub>11</sub>Na.",
+          "C. <sub>13</sub>Al và <sub>35</sub>Br.",
+          "D. <sub>17</sub>Cl và <sub>12</sub>Mg."
         ],
-        1,
+        3,
         "X có tổng e phân lớp p là 11 &rArr; 2p<sup>6</sup> 3p<sup>5</sup> &rArr; Z<sub>X</sub> = 17 (Cl), hạt mang điện = 34. Hạt mang điện của Y = 34 - 10 = 24 &rArr; 2Z<sub>Y</sub> = 24 &rArr; Z<sub>Y</sub> = 12 (Mg)."
       ],
       [
         "Nguyên tố Z nằm ở ô thứ 20, chu kì 4, nhóm IIA trong Bảng tuần hoàn. Cấu hình electron của Z là:",
         [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>2</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>1</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup> 4s<sup>2</sup>."
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>2</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup> 4s<sup>2</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>1</sup>."
         ],
-        0,
+        1,
         "Ô 20, chu kì 4, nhóm IIA &rArr; 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup> (Calcium)."
       ],
       [
         "Anion X<sup>2-</sup> có cấu hình electron lớp ngoài cùng là 3s<sup>2</sup> 3p<sup>6</sup>. Vị trí của nguyên tố X trong Bảng tuần hoàn là:",
         [
           "A. Ô số 18, chu kì 3, nhóm VIIIA.",
-          "B. Ô số 16, chu kì 3, nhóm VIA.",
-          "C. Ô số 20, chu kì 4, nhóm IIA.",
-          "D. Ô số 16, chu kì 3, nhóm IVA."
+          "B. Ô số 16, chu kì 3, nhóm IVA.",
+          "C. Ô số 16, chu kì 3, nhóm VIA.",
+          "D. Ô số 20, chu kì 4, nhóm IIA."
         ],
-        1,
+        2,
         "X nhận 2e tạo X<sup>2-</sup> (18e) &rArr; nguyên tử X có 16e: [Ne] 3s<sup>2</sup> 3p<sup>4</sup> &rArr; Ô số 16, chu kì 3, nhóm VIA (Sulfur)."
       ],
       [
         "Cation M<sup>3+</sup> có cấu hình phân lớp ngoài cùng là 3d<sup>5</sup>. Vị trí của nguyên tố M trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 23, chu kì 4, nhóm VB.",
-          "B. Ô số 26, chu kì 4, nhóm VIIIB.",
-          "C. Ô số 25, chu kì 4, nhóm VIIB.",
-          "D. Ô số 26, chu kì 4, nhóm IIIB."
+          "A. Ô số 26, chu kì 4, nhóm IIIB.",
+          "B. Ô số 25, chu kì 4, nhóm VIIB.",
+          "C. Ô số 26, chu kì 4, nhóm VIIIB.",
+          "D. Ô số 23, chu kì 4, nhóm VB."
         ],
-        1,
+        2,
         "M mất 3e tạo M<sup>3+</sup> (3d<sup>5</sup>) &rArr; M có cấu hình [Ar] 3d<sup>6</sup> 4s<sup>2</sup> &rArr; Z = 26: Ô 26, chu kì 4, nhóm VIIIB (Iron)."
       ],
       [
         "Bảng tuần hoàn các nguyên tố hóa học hiện nay có cấu trúc gồm:",
         [
           "A. 7 chu kì và 8 nhóm A, 8 nhóm B (chia làm 18 cột).",
-          "B. 8 chu kì và 16 nhóm.",
-          "C. 7 chu kì và 16 cột.",
-          "D. 6 chu kì và 18 nhóm."
+          "B. 6 chu kì và 18 nhóm.",
+          "C. 8 chu kì và 16 nhóm.",
+          "D. 7 chu kì và 16 cột."
         ],
         0,
         "Bảng tuần hoàn hiện đại gồm 7 chu kì và 18 cột (8 nhóm A và 8 nhóm B)."
@@ -6571,12 +6571,12 @@ const suppliedExams = [
       [
         "Quá trình nào sau đây là quá trình biến đổi vật lí (không tạo chất mới)?",
         [
-          "A. Nước lỏng để trong ngăn đông tủ lạnh bị đóng băng thành đá rắn.",
+          "A. Que diêm quẹt vào vỏ bao diêm bốc cháy tỏa nhiều nhiệt.",
           "B. Cơm để ngoài không khí lâu ngày bị thiu, chuyển sang vị chua.",
-          "C. Que diêm quẹt vào vỏ bao diêm bốc cháy tỏa nhiều nhiệt.",
+          "C. Nước lỏng để trong ngăn đông tủ lạnh bị đóng băng thành đá rắn.",
           "D. Đinh sắt để ngoài không khí ẩm lâu ngày bị gỉ sét màu nâu đỏ."
         ],
-        0,
+        2,
         "Nước đóng băng chỉ là sự thay đổi trạng thái vật lí từ lỏng sang rắn, công thức phân tử vẫn là H<sub>2</sub>O."
       ],
       [
@@ -6593,31 +6593,31 @@ const suppliedExams = [
       [
         "Hạt neutron trong hạt nhân nguyên tử có đặc điểm nào sau đây?",
         [
-          "A. Mang điện tích âm, khối lượng xấp xỉ 1 amu.",
-          "B. Mang điện tích dương, khối lượng rất nhỏ không đáng kể.",
-          "C. Không mang điện tích (q = 0), khối lượng xấp xỉ 1 amu.",
-          "D. Không mang điện tích, khối lượng bằng 0."
+          "A. Không mang điện tích (q = 0), khối lượng xấp xỉ 1 amu.",
+          "B. Không mang điện tích, khối lượng bằng 0.",
+          "C. Mang điện tích âm, khối lượng xấp xỉ 1 amu.",
+          "D. Mang điện tích dương, khối lượng rất nhỏ không đáng kể."
         ],
-        2,
+        0,
         "Neutron có điện tích q = 0 và khối lượng m<sub>n</sub> &approx; 1,675 &times; 10<sup>-27</sup> kg &approx; 1 amu."
       ],
       [
         "Khối lượng 1 mol nguyên tử chứa N<sub>A</sub> = 6,022 &times; 10<sup>23</sup> nguyên tử. Về mặt trị số, khối lượng mol nguyên tử M (g/mol) có giá trị bằng:",
         [
-          "A. Số hạt proton Z.",
-          "B. Số hạt neutron N.",
-          "C. Nguyên tử khối (amu) hay xấp xỉ số khối A.",
-          "D. Tổng số electron và proton."
+          "A. Số hạt neutron N.",
+          "B. Tổng số electron và proton.",
+          "C. Số hạt proton Z.",
+          "D. Nguyên tử khối (amu) hay xấp xỉ số khối A."
         ],
-        2,
+        3,
         "Về mặt trị số, khối lượng 1 mol nguyên tử M (g/mol) có giá trị bằng nguyên tử khối tương đối (amu) và xấp xỉ số khối A."
       ],
       [
         "Đồng vị của một nguyên tố hóa học là những nguyên tử có:",
         [
           "A. Cùng số proton nhưng khác nhau về số neutron, dẫn đến số khối A khác nhau.",
-          "B. Cùng số neutron nhưng khác nhau về số proton.",
-          "C. Cùng số khối A nhưng khác nhau về số proton.",
+          "B. Cùng số khối A nhưng khác nhau về số proton.",
+          "C. Cùng số neutron nhưng khác nhau về số proton.",
           "D. Cùng khối lượng nhưng khác nhau về tính chất hóa học."
         ],
         0,
@@ -6626,32 +6626,32 @@ const suppliedExams = [
       [
         "Boron (B) có hai đồng vị bền trong tự nhiên là <sup>10</sup>B (chiếm 19%) và <sup>11</sup>B (chiếm 81%). Nguyên tử khối trung bình của Boron là:",
         [
-          "A. 10,81 amu.",
-          "B. 10,50 amu.",
-          "C. 10,20 amu.",
-          "D. 11,00 amu."
+          "A. 10,50 amu.",
+          "B. 10,81 amu.",
+          "C. 11,00 amu.",
+          "D. 10,20 amu."
         ],
-        0,
+        1,
         "A̅ = (10 &times; 19 + 11 &times; 81) / 100 = (190 + 891) / 100 = 10,81 amu."
       ],
       [
         "Theo mô hình Rutherford - Bohr, các electron chuyển động xung quanh hạt nhân:",
         [
-          "A. Trên những quỹ đạo tròn hoặc bầu dục xác định như các hành tinh quay quanh Mặt Trời.",
-          "B. Rất nhanh không theo quỹ đạo xác định tạo thành đám mây electron.",
-          "C. Ngẫu nhiên hỗn loạn không có quy luật.",
-          "D. Cố định tại các đỉnh của khối đa diện."
+          "A. Rất nhanh không theo quỹ đạo xác định tạo thành đám mây electron.",
+          "B. Trên những quỹ đạo tròn hoặc bầu dục xác định như các hành tinh quay quanh Mặt Trời.",
+          "C. Cố định tại các đỉnh của khối đa diện.",
+          "D. Ngẫu nhiên hỗn loạn không có quy luật."
         ],
-        0,
+        1,
         "Mô hình hành tinh nguyên tử Rutherford - Bohr mô tả electron chuyển động trên các quỹ đạo xác định."
       ],
       [
         "Orbital p gồm 3 orbital p<sub>x</sub>, p<sub>y</sub>, p<sub>z</sub> có hình dạng và định hướng trong không gian như hình minh hoạ bên:\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 320 140\" width=\"320\" height=\"140\" xmlns=\"http://www.w3.org/2000/svg\">\n    <!-- 3 hình biểu diễn px, py, pz -->\n    <!-- px -->\n    <g transform=\"translate(10, 10)\">\n      <line x1=\"10\" y1=\"55\" x2=\"90\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1\"/>\n      <line x1=\"50\" y1=\"95\" x2=\"50\" y2=\"15\" stroke=\"#64748b\" stroke-width=\"1\"/>\n      <ellipse cx=\"32\" cy=\"55\" rx=\"16\" ry=\"10\" fill=\"#a855f7\" opacity=\"0.75\"/>\n      <ellipse cx=\"68\" cy=\"55\" rx=\"16\" ry=\"10\" fill=\"#a855f7\" opacity=\"0.75\"/>\n      <text x=\"42\" y=\"112\" font-size=\"11\" font-weight=\"bold\" fill=\"#6b21a8\">p_x</text>\n    </g>\n\n    <!-- py -->\n    <g transform=\"translate(115, 10)\">\n      <line x1=\"10\" y1=\"55\" x2=\"90\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1\"/>\n      <line x1=\"50\" y1=\"95\" x2=\"50\" y2=\"15\" stroke=\"#64748b\" stroke-width=\"1\"/>\n      <line x1=\"20\" y1=\"85\" x2=\"80\" y2=\"25\" stroke=\"#64748b\" stroke-width=\"1\"/>\n      <ellipse cx=\"33\" cy=\"72\" rx=\"16\" ry=\"10\" transform=\"rotate(-45 33 72)\" fill=\"#3b82f6\" opacity=\"0.75\"/>\n      <ellipse cx=\"67\" cy=\"38\" rx=\"16\" ry=\"10\" transform=\"rotate(-45 67 38)\" fill=\"#3b82f6\" opacity=\"0.75\"/>\n      <text x=\"42\" y=\"112\" font-size=\"11\" font-weight=\"bold\" fill=\"#1d4ed8\">p_y</text>\n    </g>\n\n    <!-- pz -->\n    <g transform=\"translate(220, 10)\">\n      <line x1=\"10\" y1=\"55\" x2=\"90\" y2=\"55\" stroke=\"#64748b\" stroke-width=\"1\"/>\n      <line x1=\"50\" y1=\"95\" x2=\"50\" y2=\"15\" stroke=\"#64748b\" stroke-width=\"1\"/>\n      <ellipse cx=\"50\" cy=\"35\" rx=\"10\" ry=\"16\" fill=\"#10b981\" opacity=\"0.75\"/>\n      <ellipse cx=\"50\" cy=\"75\" rx=\"10\" ry=\"16\" fill=\"#10b981\" opacity=\"0.75\"/>\n      <text x=\"42\" y=\"112\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">p_z</text>\n    </g>\n  </svg>\n  <div class=\"figure-caption\">Hình dạng số 8 nổi và định hướng trong không gian của 3 orbital p (px, py, pz)</div>\n</div>",
         [
-          "A. Hình cầu đối xứng trong không gian.",
+          "A. Hình bầu dục nằm trên mặt phẳng xOy.",
           "B. Hình số tám nổi định hướng theo 3 trục tọa độ vuông góc x, y, z.",
-          "C. Hình bầu dục nằm trên mặt phẳng xOy.",
-          "D. Hình hoa thị 4 cánh."
+          "C. Hình hoa thị 4 cánh.",
+          "D. Hình cầu đối xứng trong không gian."
         ],
         1,
         "3 AO p có dạng hình số tám nổi định hướng vuông góc nhau dọc theo 3 trục Ox, Oy, Oz."
@@ -6670,23 +6670,23 @@ const suppliedExams = [
       [
         "Cấu hình electron ở trạng thái cơ bản của nguyên tử silicon (Si, Z = 14) là:",
         [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup>.",
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>.",
           "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup> 3p<sup>3</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3p<sup>4</sup>."
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3p<sup>4</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup>."
         ],
-        0,
+        3,
         "Z = 14 &rArr; 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>2</sup>."
       ],
       [
         "Nguyên tử có 1, 2 hoặc 3 electron ở lớp ngoài cùng (trừ H, He, B) thường là nguyên tử của nguyên tố loại nào?",
         [
-          "A. Kim loại.",
-          "B. Phi kim.",
-          "C. Khí hiếm.",
-          "D. Á kim."
+          "A. Phi kim.",
+          "B. Khí hiếm.",
+          "C. Á kim.",
+          "D. Kim loại."
         ],
-        0,
+        3,
         "1, 2, 3e ngoài cùng là kim loại (dễ nhường e để đạt cấu hình khí hiếm)."
       ],
       [
@@ -6694,8 +6694,8 @@ const suppliedExams = [
         [
           "A. [Ar] 4s<sup>2</sup>.",
           "B. [Ne] 3s<sup>2</sup> 3p<sup>6</sup> (hay [Ar]).",
-          "C. [Ar] 3d<sup>2</sup>.",
-          "D. [Ne] 3s<sup>2</sup> 3p<sup>4</sup>."
+          "C. [Ne] 3s<sup>2</sup> 3p<sup>4</sup>.",
+          "D. [Ar] 3d<sup>2</sup>."
         ],
         1,
         "Ca: [Ar]4s<sup>2</sup> &rArr; nhường 2e ở 4s tạo Ca<sup>2+</sup>: [Ne]3s<sup>2</sup>3p<sup>6</sup> = [Ar]."
@@ -6703,10 +6703,10 @@ const suppliedExams = [
       [
         "Số thứ tự của chu kì trong Bảng tuần hoàn được xác định căn cứ vào:",
         [
-          "A. Số hạt proton trong hạt nhân.",
+          "A. Số phân lớp electron có chứa electron.",
           "B. Số electron hóa trị của nguyên tử.",
           "C. Số lớp electron của nguyên tử.",
-          "D. Số phân lớp electron có chứa electron."
+          "D. Số hạt proton trong hạt nhân."
         ],
         2,
         "Số thứ tự chu kì = số lớp electron của nguyên tử."
@@ -6714,21 +6714,21 @@ const suppliedExams = [
       [
         "Nhóm nguyên tố trong Bảng tuần hoàn gồm tập hợp các nguyên tố mà nguyên tử của chúng có:",
         [
-          "A. Cùng số lớp electron.",
-          "B. Cấu hình electron tương tự nhau, do đó có tính chất hóa học gần giống nhau.",
-          "C. Cùng khối lượng nguyên tử.",
-          "D. Cùng số hạt neutron."
+          "A. Cấu hình electron tương tự nhau, do đó có tính chất hóa học gần giống nhau.",
+          "B. Cùng số lớp electron.",
+          "C. Cùng số hạt neutron.",
+          "D. Cùng khối lượng nguyên tử."
         ],
-        1,
+        0,
         "Nhóm gồm các nguyên tố có cấu hình electron tương tự nhau (cùng số electron hóa trị), xếp thành một cột, có tính chất hóa học gần giống nhau."
       ],
       [
         "Nguyên tố sulfur (S) có Z = 16. Vị trí của sulfur trong Bảng tuần hoàn là:",
         [
           "A. Ô số 16, chu kì 3, nhóm VIA.",
-          "B. Ô số 16, chu kì 3, nhóm IVA.",
+          "B. Ô số 16, chu kì 2, nhóm VIA.",
           "C. Ô số 16, chu kì 4, nhóm VIA.",
-          "D. Ô số 16, chu kì 2, nhóm VIA."
+          "D. Ô số 16, chu kì 3, nhóm IVA."
         ],
         0,
         "S (Z = 16): [Ne] 3s<sup>2</sup> 3p<sup>4</sup> &rArr; Ô 16, chu kì 3, nhóm VIA."
@@ -6736,12 +6736,12 @@ const suppliedExams = [
       [
         "Nguyên tố X có cấu hình electron [Ar] 4s<sup>1</sup>. Vị trí và tính chất của X trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 19, chu kì 4, nhóm IA, là kim loại kiềm.",
-          "B. Ô số 19, chu kì 4, nhóm IB, là kim loại chuyển tiếp.",
-          "C. Ô số 19, chu kì 3, nhóm IA, là phi kim.",
-          "D. Ô số 20, chu kì 4, nhóm IIA, là kim loại kiềm thổ."
+          "A. Ô số 20, chu kì 4, nhóm IIA, là kim loại kiềm thổ.",
+          "B. Ô số 19, chu kì 3, nhóm IA, là phi kim.",
+          "C. Ô số 19, chu kì 4, nhóm IB, là kim loại chuyển tiếp.",
+          "D. Ô số 19, chu kì 4, nhóm IA, là kim loại kiềm."
         ],
-        0,
+        3,
         "Z = 19 (Potassium) &rArr; Ô 19, chu kì 4, nhóm IA, kim loại kiềm mạnh."
       ]
     ],
@@ -6851,42 +6851,42 @@ const suppliedExams = [
         "Khi đun nóng dung dịch trong ống nghiệm trên ngọn lửa đèn cồn, thao tác nào sau đây là ĐÚNG để đảm bảo an toàn?",
         [
           "A. Hướng miệng ống nghiệm về phía mặt mình để quan sát phản ứng xảy ra.",
-          "B. Hướng miệng ống nghiệm về phía không có người.",
+          "B. Đậy kín nút ống nghiệm khi đun sôi chất lỏng.",
           "C. Để đáy ống nghiệm chạm trực tiếp vào bấc đèn cồn.",
-          "D. Đậy kín nút ống nghiệm khi đun sôi chất lỏng."
+          "D. Hướng miệng ống nghiệm về phía không có người."
         ],
-        1,
+        3,
         "Quy tắc an toàn: Khi đun nóng chất lỏng trong ống nghiệm, phải nghiêng ống nghiệm khoảng 45–60 độ và hướng miệng ống nghiệm về phía không có người để tránh hóa chất sôi bắn vào người."
       ],
       [
         "Hạt nào sau đây mang điện tích âm trong cấu tạo nguyên tử?",
         [
-          "A. Proton.",
+          "A. Electron.",
           "B. Neutron.",
-          "C. Electron.",
-          "D. Hạt nhân."
+          "C. Hạt nhân.",
+          "D. Proton."
         ],
-        2,
+        0,
         "Electron mang điện tích âm (-1,602 &times; 10<sup>-19</sup> C, quy ước bằng -1). Proton mang điện dương (+1), neutron không mang điện."
       ],
       [
         "Đơn vị khối lượng nguyên tử (amu) được định nghĩa bằng bao nhiêu khối lượng của một nguyên tử đồng vị carbon-12 (<sup>12</sup>C)?",
         [
-          "A. 1/16.",
-          "B. 1/14.",
-          "C. 1/12.",
-          "D. 1/10."
+          "A. 1/10.",
+          "B. 1/12.",
+          "C. 1/14.",
+          "D. 1/16."
         ],
-        2,
+        1,
         "1 amu quy ước bằng đúng 1/12 khối lượng của một nguyên tử đồng vị <sup>12</sup>C, xấp xỉ 1,6605 &times; 10<sup>-27</sup> kg."
       ],
       [
         "Khối lượng của nguyên tử tập trung hầu như hoàn toàn ở hạt nhân là vì:",
         [
           "A. Số hạt proton luôn nhiều hơn số hạt electron.",
-          "B. Thể tích hạt nhân chiếm hầu hết thể tích của nguyên tử.",
+          "B. Các hạt neutron có khối lượng rất lớn so với toàn bộ nguyên tử.",
           "C. Khối lượng của electron rất bé (khoảng 0,00055 amu), không đáng kể so với proton và neutron (khoảng 1 amu).",
-          "D. Các hạt neutron có khối lượng rất lớn so với toàn bộ nguyên tử."
+          "D. Thể tích hạt nhân chiếm hầu hết thể tích của nguyên tử."
         ],
         2,
         "Khối lượng proton &approx; 1 amu, neutron &approx; 1 amu, trong khi electron chỉ &approx; 0,00055 amu (nhỏ hơn khoảng 1836 lần). Do đó hơn 99,9% khối lượng nguyên tử tập trung ở hạt nhân."
@@ -6894,10 +6894,10 @@ const suppliedExams = [
       [
         "Hai nguyên tử <sup>16</sup><sub>8</sub>O và <sup>18</sup><sub>8</sub>O là:",
         [
-          "A. Hai nguyên tố hóa học khác nhau.",
+          "A. Hai phân tử khác nhau.",
           "B. Hai đồng vị của cùng một nguyên tố hóa học oxygen.",
-          "C. Hai đồng phân của nhau.",
-          "D. Hai phân tử khác nhau."
+          "C. Hai nguyên tố hóa học khác nhau.",
+          "D. Hai đồng phân của nhau."
         ],
         1,
         "Cả hai nguyên tử đều có cùng số proton Z = 8 (cùng nguyên tố oxygen) nhưng khác số neutron (8 neutron và 10 neutron) nên là hai đồng vị của nhau."
@@ -6905,43 +6905,43 @@ const suppliedExams = [
       [
         "Kí hiệu nguyên tử <sup>35</sup><sub>17</sub>Cl cho biết nguyên tử chlorine có thành phần hạt gồm:",
         [
-          "A. 17 proton, 18 neutron, 17 electron.",
-          "B. 17 proton, 35 neutron, 17 electron.",
-          "C. 18 proton, 17 neutron, 18 electron.",
-          "D. 35 proton, 17 neutron, 35 electron."
+          "A. 17 proton, 35 neutron, 17 electron.",
+          "B. 18 proton, 17 neutron, 18 electron.",
+          "C. 35 proton, 17 neutron, 35 electron.",
+          "D. 17 proton, 18 neutron, 17 electron."
         ],
-        0,
+        3,
         "Z = 17 &rArr; số p = số e = 17. Số neutron N = A - Z = 35 - 17 = 18 hạt."
       ],
       [
         "Theo mô hình hiện đại về cấu tạo nguyên tử, electron chuyển động xung quanh hạt nhân:",
         [
-          "A. Theo các quỹ đạo tròn hoặc elip cố định xác định như hành tinh quay quanh Mặt Trời.",
-          "B. Rất nhanh, không theo quỹ đạo xác định nào, tạo thành đám mây electron.",
-          "C. Luôn chuyển động thẳng đều từ tâm ra ngoài biên.",
-          "D. Đứng yên tại các vị trí orbital cố định."
+          "A. Luôn chuyển động thẳng đều từ tâm ra ngoài biên.",
+          "B. Đứng yên tại các vị trí orbital cố định.",
+          "C. Theo các quỹ đạo tròn hoặc elip cố định xác định như hành tinh quay quanh Mặt Trời.",
+          "D. Rất nhanh, không theo quỹ đạo xác định nào, tạo thành đám mây electron."
         ],
-        1,
+        3,
         "Mô hình hiện đại chỉ ra electron chuyển động cực nhanh trong không gian xung quanh hạt nhân, không theo quỹ đạo xác định nào, tạo thành đám mây xác suất tìm thấy electron."
       ],
       [
         "Phân lớp electron p gồm có bao nhiêu orbital nguyên tử (AO)?",
         [
-          "A. 1 AO.",
-          "B. 3 AO.",
-          "C. 5 AO.",
+          "A. 5 AO.",
+          "B. 1 AO.",
+          "C. 3 AO.",
           "D. 7 AO."
         ],
-        1,
+        2,
         "Phân lớp s có 1 AO, phân lớp p có 3 AO (p<sub>x</sub>, p<sub>y</sub>, p<sub>z</sub>), phân lớp d có 5 AO, phân lớp f có 7 AO."
       ],
       [
         "Trật tự các mức năng lượng của các phân lớp electron tăng dần theo quy tắc Klechkowski là:",
         [
-          "A. 1s < 2s < 2p < 3s < 3p < 3d < 4s.",
+          "A. 1s < 2s < 3s < 2p < 3p < 4s < 3d.",
           "B. 1s < 2s < 2p < 3s < 3p < 4s < 3d.",
-          "C. 1s < 2s < 3s < 2p < 3p < 4s < 3d.",
-          "D. 1s < 2s < 2p < 3s < 4s < 3p < 3d."
+          "C. 1s < 2s < 2p < 3s < 4s < 3p < 3d.",
+          "D. 1s < 2s < 2p < 3s < 3p < 3d < 4s."
         ],
         1,
         "Theo quy tắc Klechkowski: Phân lớp 4s có mức năng lượng thấp hơn phân lớp 3d, do đó trật tự là: 1s < 2s < 2p < 3s < 3p < 4s < 3d."
@@ -6949,78 +6949,78 @@ const suppliedExams = [
       [
         "Cấu hình electron ở trạng thái cơ bản của nguyên tử sulfur (S, Z = 16) là:",
         [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup> 3p<sup>5</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup>."
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup> 3p<sup>5</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup>."
         ],
-        1,
+        2,
         "Z = 16: Điền 16 electron theo trật tự mức năng lượng: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>4</sup> hay [Ne] 3s<sup>2</sup> 3p<sup>4</sup>."
       ],
       [
         "Nguyên tử của một nguyên tố có 7 electron ở lớp ngoài cùng thường thuộc loại:",
         [
           "A. Kim loại mạnh.",
-          "B. Phi kim điển hình (nhóm halogen).",
-          "C. Khí hiếm.",
-          "D. Kim loại chuyển tiếp."
+          "B. Kim loại chuyển tiếp.",
+          "C. Phi kim điển hình (nhóm halogen).",
+          "D. Khí hiếm."
         ],
-        1,
+        2,
         "Nguyên tử có 7e ở lớp ngoài cùng (cấu hình ns<sup>2</sup> np<sup>5</sup>) có xu hướng nhận thêm 1e để đạt bát cấu 8e bền vững, là các phi kim điển hình (Halogen, nhóm VIIA)."
       ],
       [
         "Anion O<sup>2-</sup> được hình thành khi nguyên tử oxygen (Z = 8) nhận thêm 2 electron. Cấu hình electron của anion O<sup>2-</sup> là:",
         [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>.",
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
           "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>."
         ],
-        1,
+        0,
         "Oxygen (Z = 8) có cấu hình 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>. Khi nhận 2e tạo O<sup>2-</sup> có 8 + 2 = 10 electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> (giống khí hiếm Ne)."
       ],
       [
         "Trong Bảng tuần hoàn hiện đại, các nguyên tố hóa học được sắp xếp theo chiều tăng dần của:",
         [
-          "A. Khối lượng nguyên tử.",
-          "B. Bán kính nguyên tử.",
-          "C. Điện tích hạt nhân nguyên tử (số hiệu nguyên tử Z).",
+          "A. Bán kính nguyên tử.",
+          "B. Điện tích hạt nhân nguyên tử (số hiệu nguyên tử Z).",
+          "C. Khối lượng nguyên tử.",
           "D. Số neutron trong hạt nhân."
         ],
-        2,
+        1,
         "Nguyên tắc 1 của BTH hiện đại: Các nguyên tố được sắp xếp theo chiều tăng dần của điện tích hạt nhân nguyên tử."
       ],
       [
         "Các chu kì lớn trong Bảng tuần hoàn các nguyên tố hóa học gồm các chu kì nào?",
         [
-          "A. Chu kì 1, 2, 3.",
-          "B. Chu kì 4, 5, 6, 7.",
-          "C. Chu kì 3, 4, 5.",
-          "D. Chu kì 5, 6, 7."
+          "A. Chu kì 4, 5, 6, 7.",
+          "B. Chu kì 1, 2, 3.",
+          "C. Chu kì 5, 6, 7.",
+          "D. Chu kì 3, 4, 5."
         ],
-        1,
+        0,
         "Chu kì nhỏ gồm chu kì 1 (2 NT), 2 (8 NT), 3 (8 NT). Chu kì lớn gồm chu kì 4 (18 NT), 5 (18 NT), 6 (32 NT), 7 (chu kì chưa hoàn thiện / 32 NT)."
       ],
       [
         "Đối với các nguyên tố nhóm A, số thứ tự của nhóm luôn bằng:",
         [
-          "A. Số lớp electron của nguyên tử.",
+          "A. Số electron ở lớp ngoài cùng (số electron hóa trị).",
           "B. Số electron ở phân lớp ngoài cùng.",
-          "C. Số electron ở lớp ngoài cùng (số electron hóa trị).",
+          "C. Số lớp electron của nguyên tử.",
           "D. Tổng số hạt proton trong hạt nhân."
         ],
-        2,
+        0,
         "Với các nguyên tố nhóm A, số electron hóa trị bằng số electron lớp ngoài cùng và bằng chính số thứ tự nhóm A."
       ],
       [
         "Nguyên tố chlorine (Cl) có Z = 17. Vị trí của chlorine trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 17, chu kì 3, nhóm VA.",
-          "B. Ô số 17, chu kì 3, nhóm VIIA.",
-          "C. Ô số 17, chu kì 2, nhóm VIIA.",
-          "D. Ô số 17, chu kì 4, nhóm VIIB."
+          "A. Ô số 17, chu kì 4, nhóm VIIB.",
+          "B. Ô số 17, chu kì 2, nhóm VIIA.",
+          "C. Ô số 17, chu kì 3, nhóm VA.",
+          "D. Ô số 17, chu kì 3, nhóm VIIA."
         ],
-        1,
+        3,
         "Cl (Z = 17): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup> &rArr; Z = 17 (ô 17); 3 lớp e (chu kì 3); 7e lớp ngoài cùng, e cuối vào p (nhóm VIIA)."
       ]
     ],
@@ -7129,12 +7129,12 @@ const suppliedExams = [
       [
         "Mục tiêu cốt lõi của việc học tập và nghiên cứu môn Hóa học là:",
         [
-          "A. Ghi nhớ tên gọi và công thức của tất cả các chất hóa học trên thế giới.",
-          "B. Hiểu được mối quan hệ giữa cấu tạo, tính chất và sự biến đổi của chất để ứng dụng phục vụ đời sống con người và phát triển bền vững.",
+          "A. Hiểu được mối quan hệ giữa cấu tạo, tính chất và sự biến đổi của chất để ứng dụng phục vụ đời sống con người và phát triển bền vững.",
+          "B. Ghi nhớ tên gọi và công thức của tất cả các chất hóa học trên thế giới.",
           "C. Chế tạo ra các loại vũ khí và chất nổ có sức công phá mạnh nhất.",
           "D. Thay thế hoàn toàn các môn khoa học tự nhiên khác như Vật lí và Sinh học."
         ],
-        1,
+        0,
         "Mục tiêu của môn Hóa học là nghiên cứu cấu tạo, tính chất, sự biến đổi của chất và ứng dụng để phục vụ cuộc sống và bảo vệ môi trường bền vững."
       ],
       [
@@ -7142,19 +7142,19 @@ const suppliedExams = [
         [
           "A. Proton và neutron.",
           "B. Neutron và electron.",
-          "C. Proton và electron.",
-          "D. Chỉ có hạt proton mang điện tích."
+          "C. Chỉ có hạt proton mang điện tích.",
+          "D. Proton và electron."
         ],
-        2,
+        3,
         "Proton mang điện dương (+1,602 &times; 10<sup>-19</sup> C), electron mang điện âm (-1,602 &times; 10<sup>-19</sup> C), còn neutron không mang điện."
       ],
       [
         "Kích thước đường kính của hạt nhân nguyên tử so với kích thước toàn bộ nguyên tử:",
         [
-          "A. Lớn hơn nhiều lần đường kính nguyên tử.",
-          "B. Xấp xỉ bằng đường kính nguyên tử.",
+          "A. Bằng đúng một nửa đường kính nguyên tử.",
+          "B. Lớn hơn nhiều lần đường kính nguyên tử.",
           "C. Rất nhỏ bé, chỉ bằng khoảng 1/10 000 đến 1/100 000 lần đường kính nguyên tử.",
-          "D. Bằng đúng một nửa đường kính nguyên tử."
+          "D. Xấp xỉ bằng đường kính nguyên tử."
         ],
         2,
         "Đường kính nguyên tử &approx; 10<sup>-10</sup> m (1 &Aring;), trong khi đường kính hạt nhân chỉ &approx; 10<sup>-15</sup> đến 10<sup>-14</sup> m, nhỏ hơn từ 10 000 đến 100 000 lần."
@@ -7163,22 +7163,22 @@ const suppliedExams = [
         "Hạt nhân nguyên tử Carbon có số hiệu nguyên tử Z = 6. Điện tích của hạt nhân nguyên tử Carbon là:",
         [
           "A. +6.",
-          "B. -6.",
-          "C. +6 &times; 1,602 &times; 10<sup>-19</sup> C (hay +6 đơn vị điện tích hạt nhân).",
+          "B. +6 &times; 1,602 &times; 10<sup>-19</sup> C (hay +6 đơn vị điện tích hạt nhân).",
+          "C. -6.",
           "D. 0."
         ],
-        2,
+        1,
         "Z = 6 &rArr; hạt nhân có 6 proton &rArr; điện tích hạt nhân là +6 &times; 1,602 &times; 10<sup>-19</sup> C (hoặc số đơn vị điện tích hạt nhân bằng +6)."
       ],
       [
         "Số khối A của một nguyên tử được xác định bằng hệ thức nào sau đây?",
         [
-          "A. A = Z + e.",
-          "B. A = Z + N.",
-          "C. A = 2Z + N.",
-          "D. A = N - Z."
+          "A. A = N - Z.",
+          "B. A = Z + e.",
+          "C. A = Z + N.",
+          "D. A = 2Z + N."
         ],
-        1,
+        2,
         "Số khối A là tổng số hạt proton (Z) và hạt neutron (N) có trong hạt nhân: A = Z + N."
       ],
       [
@@ -7195,10 +7195,10 @@ const suppliedExams = [
       [
         "Điểm khác biệt căn bản giữa mô hình hiện đại về nguyên tử và mô hình Rutherford - Bohr là:",
         [
-          "A. Mô hình hiện đại cho rằng hạt nhân mang điện tích âm.",
+          "A. Mô hình hiện đại xem electron đứng yên trong hạt nhân.",
           "B. Mô hình hiện đại xem chuyển động của electron trong nguyên tử không theo những quỹ đạo xác định mà theo vùng không gian xác suất tìm thấy electron.",
           "C. Mô hình hiện đại phủ nhận sự tồn tại của hạt electron trong nguyên tử.",
-          "D. Mô hình hiện đại xem electron đứng yên trong hạt nhân."
+          "D. Mô hình hiện đại cho rằng hạt nhân mang điện tích âm."
         ],
         1,
         "Khác biệt cốt lõi: Mô hình Rutherford - Bohr giả định electron chuyển động theo quỹ đạo xác định (hình tròn/elip), còn mô hình hiện đại coi electron chuyển động hỗn loạn cực nhanh, không theo quỹ đạo cố định nào mà tạo nên đám mây electron với xác suất tìm thấy (khoảng 90%)."
@@ -7207,31 +7207,31 @@ const suppliedExams = [
         "Theo nguyên lí Pauli, mỗi orbital nguyên tử chứa tối đa bao nhiêu electron?",
         [
           "A. 1 electron.",
-          "B. 2 electron có chiều tự quay (spin) ngược nhau.",
-          "C. 6 electron.",
-          "D. 8 electron."
+          "B. 6 electron.",
+          "C. 8 electron.",
+          "D. 2 electron có chiều tự quay (spin) ngược nhau."
         ],
-        1,
+        3,
         "Nguyên lí Pauli: Trong một nguyên tử, mỗi AO chỉ chứa tối đa 2 electron và 2 electron này phải có spin ngược nhau (&uarr;&darr;)."
       ],
       [
         "Lớp electron thứ 3 (lớp M, n = 3) gồm có các phân lớp nào?",
         [
           "A. 3s và 3p.",
-          "B. 3s, 3p và 3d.",
-          "C. 3s, 3p, 3d và 3f.",
-          "D. Chỉ có phân lớp 3s."
+          "B. Chỉ có phân lớp 3s.",
+          "C. 3s, 3p và 3d.",
+          "D. 3s, 3p, 3d và 3f."
         ],
-        1,
+        2,
         "Lớp n có n phân lớp: Lớp thứ 3 (n = 3) có đúng 3 phân lớp là 3s, 3p và 3d."
       ],
       [
         "Cấu hình electron ở trạng thái cơ bản của nguyên tử Carbon (C, Z = 6) là:",
         [
           "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>1</sup> 2p<sup>3</sup>.",
-          "C. 1s<sup>2</sup> 2p<sup>4</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>4</sup>."
+          "B. 1s<sup>2</sup> 2p<sup>4</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>4</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>1</sup> 2p<sup>3</sup>."
         ],
         0,
         "Carbon có Z = 6: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>."
@@ -7240,66 +7240,66 @@ const suppliedExams = [
         "Nguyên tử có cấu hình electron lớp ngoài cùng bền vững dạng ns<sup>2</sup> np<sup>6</sup> (với 8 electron) thuộc loại nguyên tố nào?",
         [
           "A. Kim loại kiềm.",
-          "B. Halogen.",
-          "C. Khí hiếm (khí trơ).",
-          "D. Kim loại chuyển tiếp."
+          "B. Kim loại chuyển tiếp.",
+          "C. Halogen.",
+          "D. Khí hiếm (khí trơ)."
         ],
-        2,
+        3,
         "Cấu hình 8 electron lớp ngoài cùng (ns<sup>2</sup> np<sup>6</sup>) là cấu hình bát cấu bền vững đặc trưng cho các nguyên tố khí hiếm."
       ],
       [
         "Cation Na<sup>+</sup> được hình thành khi nguyên tử sodium (Na, Z = 11) nhường đi 1 electron. Cấu hình electron của cation Na<sup>+</sup> là:",
         [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>."
+          "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>.",
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>5</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
         ],
-        1,
+        3,
         "Na (Z = 11): [Ne] 3s<sup>1</sup> nhường 1e ở phân lớp 3s để tạo Na<sup>+</sup> có 10 electron với cấu hình [Ne] hay 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
       ],
       [
         "Nhà hóa học người Nga D. I. Mendeleev đã công bố Bảng tuần hoàn các nguyên tố hóa học đầu tiên vào năm nào và sắp xếp dựa trên đại lượng nào?",
         [
-          "A. Năm 1869, sắp xếp theo chiều tăng dần của khối lượng nguyên tử.",
-          "B. Năm 1913, sắp xếp theo chiều tăng dần của điện tích hạt nhân.",
-          "C. Năm 1945, sắp xếp theo cấu hình electron.",
+          "A. Năm 1945, sắp xếp theo cấu hình electron.",
+          "B. Năm 1869, sắp xếp theo chiều tăng dần của khối lượng nguyên tử.",
+          "C. Năm 1913, sắp xếp theo chiều tăng dần của điện tích hạt nhân.",
           "D. Năm 1803, sắp xếp theo số khối."
         ],
-        0,
+        1,
         "Năm 1869, Mendeleev công bố Bảng tuần hoàn đầu tiên sắp xếp các nguyên tố theo chiều tăng dần khối lượng nguyên tử."
       ],
       [
         "Chu kì 2 trong Bảng tuần hoàn các nguyên tố hóa học chứa bao nhiêu nguyên tố?",
         [
-          "A. 2 nguyên tố.",
-          "B. 8 nguyên tố.",
-          "C. 18 nguyên tố.",
-          "D. 32 nguyên tố."
+          "A. 8 nguyên tố.",
+          "B. 32 nguyên tố.",
+          "C. 2 nguyên tố.",
+          "D. 18 nguyên tố."
         ],
-        1,
+        0,
         "Chu kì 2 bắt đầu từ Lithium (<sub>3</sub>Li) đến Neon (<sub>10</sub>Ne), gồm đúng 8 nguyên tố."
       ],
       [
         "Nhóm IA trong Bảng tuần hoàn (trừ nguyên tố Hydrogen) được gọi là nhóm:",
         [
-          "A. Kim loại kiềm thổ.",
-          "B. Kim loại kiềm.",
-          "C. Halogen.",
-          "D. Khí hiếm."
+          "A. Kim loại kiềm.",
+          "B. Khí hiếm.",
+          "C. Kim loại kiềm thổ.",
+          "D. Halogen."
         ],
-        1,
+        0,
         "Nhóm IA (trừ H) gồm Li, Na, K, Rb, Cs, Fr được gọi là nhóm kim loại kiềm. Nhóm IIA là kim loại kiềm thổ."
       ],
       [
         "Nguyên tố silicon (Si) có số hiệu nguyên tử Z = 14. Vị trí của silicon trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 14, chu kì 3, nhóm IVA.",
+          "A. Ô số 14, chu kì 4, nhóm IVB.",
           "B. Ô số 14, chu kì 2, nhóm IVA.",
-          "C. Ô số 14, chu kì 3, nhóm IIIA.",
-          "D. Ô số 14, chu kì 4, nhóm IVB."
+          "C. Ô số 14, chu kì 3, nhóm IVA.",
+          "D. Ô số 14, chu kì 3, nhóm IIIA."
         ],
-        0,
+        2,
         "Si (Z = 14): 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>2</sup> &rArr; Ô số 14; 3 lớp electron &rArr; chu kì 3; 4e ngoài cùng, e cuối vào phân lớp p &rArr; nhóm IVA."
       ]
     ],
@@ -7318,9 +7318,9 @@ const suppliedExams = [
             "Đúng vì Carbon có Z = 6 (6 proton), số neutron N = 13 - 6 = 7 neutron."
           ],
           [
-            "Số loại phân tử carbon monoxide (CO) tối đa tạo thành từ 2 đồng vị Carbon và 2 đồng vị Oxygen trên là 4 loại.",
-            true,
-            "Đúng. Mỗi phân tử CO gồm 1 nguyên tử C và 1 nguyên tử O &rArr; số loại phân tử = 2 &times; 2 = 4 loại (<sup>12</sup>C<sup>16</sup>O, <sup>12</sup>C<sup>18</sup>O, <sup>13</sup>C<sup>16</sup>O, <sup>13</sup>C<sup>18</sup>O)."
+            "Số loại phân tử carbon monoxide (CO) tối đa tạo thành từ 2 đồng vị Carbon và 2 đồng vị Oxygen trên là 6 loại.",
+            false,
+            "Số loại phân tử CO tối đa là 2 × 2 = 4 loại (không phải 6 loại)."
           ],
           [
             "Đồng vị <sup>12</sup>C được quy ước quốc tế dùng làm đơn vị chuẩn để định nghĩa đơn vị khối lượng nguyên tử (amu).",
@@ -7408,34 +7408,34 @@ const suppliedExams = [
       [
         "Khi thực hiện các thí nghiệm có sinh ra khí độc hại như Cl<sub>2</sub>, SO<sub>2</sub>, NO<sub>2</sub>, ta BẮT BUỘC phải thực hiện thí nghiệm ở đâu?",
         [
-          "A. Trong phòng kín có đóng chặt tất cả các cửa sổ.",
-          "B. Trong tủ hút khí độc hoặc ở nơi cực kì thoáng khí.",
-          "C. Dưới ánh nắng Mặt Trời trực tiếp.",
+          "A. Dưới ánh nắng Mặt Trời trực tiếp.",
+          "B. Trong phòng kín có đóng chặt tất cả các cửa sổ.",
+          "C. Trong tủ hút khí độc hoặc ở nơi cực kì thoáng khí.",
           "D. Trong chậu nước lạnh."
         ],
-        1,
+        2,
         "Để bảo vệ sức khỏe và an toàn phòng thí nghiệm, mọi thí nghiệm sinh ra khí độc đều phải tiến hành trong tủ hút chuyên dụng hoặc nơi thoáng khí."
       ],
       [
         "Hạt cơ bản nào sau đây nằm trong hạt nhân nguyên tử nhưng KHÔNG mang điện tích?",
         [
-          "A. Proton.",
-          "B. Neutron.",
-          "C. Electron.",
-          "D. Positron."
+          "A. Electron.",
+          "B. Positron.",
+          "C. Proton.",
+          "D. Neutron."
         ],
-        1,
+        3,
         "Hạt neutron nằm trong hạt nhân nguyên tử và là hạt trung hòa về điện (điện tích bằng 0)."
       ],
       [
         "Khối lượng của hạt electron so với khối lượng của hạt proton có độ lớn như thế nào?",
         [
-          "A. Bằng nhau.",
+          "A. Rất bé, chỉ bằng khoảng 1/1836 khối lượng của proton.",
           "B. Lớn hơn khoảng 1836 lần.",
-          "C. Rất bé, chỉ bằng khoảng 1/1836 khối lượng của proton.",
-          "D. Lớn gấp 2 lần."
+          "C. Lớn gấp 2 lần.",
+          "D. Bằng nhau."
         ],
-        2,
+        0,
         "m<sub>p</sub> &approx; 1 amu, m<sub>e</sub> &approx; 0,00055 amu &approx; m<sub>p</sub> / 1836."
       ],
       [
@@ -7463,122 +7463,122 @@ const suppliedExams = [
       [
         "Kí hiệu nguyên tử <sup>19</sup><sub>9</sub>F cho biết trong hạt nhân nguyên tử Fluorine có:",
         [
-          "A. 9 proton và 19 neutron.",
-          "B. 9 proton và 10 neutron.",
-          "C. 10 proton và 9 neutron.",
-          "D. 19 proton và 9 electron."
+          "A. 9 proton và 10 neutron.",
+          "B. 19 proton và 9 electron.",
+          "C. 9 proton và 19 neutron.",
+          "D. 10 proton và 9 neutron."
         ],
-        1,
+        0,
         "Z = 9 &rArr; có 9 proton. Số neutron N = A - Z = 19 - 9 = 10 neutron."
       ],
       [
         "Nguyên lí Pauli phát biểu rằng:",
         [
-          "A. Trong một nguyên tử không thể có hai electron có cùng 4 số lượng tử, nghĩa là mỗi orbital nguyên tử chỉ chứa tối đa 2 electron có chiều tự quay ngược nhau.",
-          "B. Electron luôn điền vào orbital có mức năng lượng cao nhất trước.",
-          "C. Các electron trong cùng một phân lớp luôn ghép đôi với nhau.",
-          "D. Số electron tối đa trong một phân lớp luôn bằng số orbital."
+          "A. Các electron trong cùng một phân lớp luôn ghép đôi với nhau.",
+          "B. Số electron tối đa trong một phân lớp luôn bằng số orbital.",
+          "C. Electron luôn điền vào orbital có mức năng lượng cao nhất trước.",
+          "D. Trong một nguyên tử không thể có hai electron có cùng 4 số lượng tử, nghĩa là mỗi orbital nguyên tử chỉ chứa tối đa 2 electron có chiều tự quay ngược nhau."
         ],
-        0,
+        3,
         "Nguyên lí Pauli quy định mỗi AO chỉ chứa tối đa 2 electron có spin ngược chiều nhau (&uarr;&darr;)."
       ],
       [
         "Orbital nguyên tử loại s có dạng hình học nào trong không gian?",
         [
-          "A. Hình số 8 nổi.",
-          "B. Hình cầu đối xứng.",
-          "C. Hình elip dẹt.",
-          "D. Hình xoắn ốc."
+          "A. Hình xoắn ốc.",
+          "B. Hình elip dẹt.",
+          "C. Hình số 8 nổi.",
+          "D. Hình cầu đối xứng."
         ],
-        1,
+        3,
         "Orbital s có dạng hình cầu đối xứng trong không gian tâm tại hạt nhân; orbital p có dạng hình số 8 nổi định hướng theo các trục x, y, z."
       ],
       [
         "Số orbital nguyên tử (AO) tối đa có trong lớp electron thứ 3 (lớp M, n = 3) là:",
         [
-          "A. 3 AO.",
-          "B. 6 AO.",
-          "C. 9 AO.",
-          "D. 18 AO."
+          "A. 6 AO.",
+          "B. 9 AO.",
+          "C. 18 AO.",
+          "D. 3 AO."
         ],
-        2,
+        1,
         "Số AO tối đa của lớp thứ n là n<sup>2</sup> &rArr; n = 3 có 3<sup>2</sup> = 9 AO (gồm 1 AO 3s, 3 AO 3p và 5 AO 3d)."
       ],
       [
         "Cấu hình electron của nguyên tử Beryllium (Be, Z = 4) ở trạng thái cơ bản là:",
         [
-          "A. 1s<sup>2</sup> 2s<sup>2</sup>.",
+          "A. 1s<sup>2</sup> 2p<sup>2</sup>.",
           "B. 1s<sup>4</sup>.",
-          "C. 1s<sup>2</sup> 2p<sup>2</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup>.",
           "D. 2s<sup>4</sup>."
         ],
-        0,
+        2,
         "Be (Z = 4) có 4 electron: 1s<sup>2</sup> 2s<sup>2</sup>."
       ],
       [
         "Nguyên tử của nguyên tố X có cấu hình electron 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>3</sup>. Nguyên tố X thuộc loại:",
         [
-          "A. Kim loại.",
-          "B. Phi kim.",
-          "C. Khí hiếm.",
-          "D. Kim loại kiềm."
+          "A. Phi kim.",
+          "B. Kim loại.",
+          "C. Kim loại kiềm.",
+          "D. Khí hiếm."
         ],
-        1,
+        0,
         "X có 2 + 3 = 5 electron ở lớp ngoài cùng (lớp 3) &rArr; X là một phi kim (Phosphorus)."
       ],
       [
         "Cấu hình electron ở trạng thái cơ bản của nguyên tử Chromium (Cr, Z = 24) là:",
         [
-          "A. [Ar] 4s<sup>2</sup> 3d<sup>4</sup>.",
-          "B. [Ar] 3d<sup>5</sup> 4s<sup>1</sup>.",
-          "C. [Ar] 3d<sup>6</sup>.",
+          "A. [Ar] 3d<sup>5</sup> 4s<sup>1</sup>.",
+          "B. [Ar] 3d<sup>6</sup>.",
+          "C. [Ar] 4s<sup>2</sup> 3d<sup>4</sup>.",
           "D. [Ar] 4s<sup>1</sup> 3d<sup>5</sup>."
         ],
-        1,
+        0,
         "Hiện tượng bán bão hòa phân lớp 3d: 1 electron từ 4s nhảy sang 3d để đạt trạng thái bền vững hơn &rArr; cấu hình đúng là [Ar] 3d<sup>5</sup> 4s<sup>1</sup>."
       ],
       [
         "Trong Bảng tuần hoàn, các nguyên tố có cùng số electron hóa trị trong nguyên tử được xếp vào cùng một:",
         [
           "A. Chu kì.",
-          "B. Nhóm (cột).",
+          "B. Lớp electron.",
           "C. Ô nguyên tố.",
-          "D. Lớp electron."
+          "D. Nhóm (cột)."
         ],
-        1,
+        3,
         "Nguyên tắc 3 của BTH: Các nguyên tố có cùng số electron hóa trị có tính chất hóa học tương tự nhau và được xếp vào cùng một cột (nhóm)."
       ],
       [
         "Chu kì trong Bảng tuần hoàn gồm tập hợp các nguyên tố mà nguyên tử của chúng có cùng:",
         [
           "A. Số hạt neutron.",
-          "B. Số electron lớp ngoài cùng.",
-          "C. Số lớp electron.",
+          "B. Số lớp electron.",
+          "C. Số electron lớp ngoài cùng.",
           "D. Khối lượng nguyên tử."
         ],
-        2,
+        1,
         "Chu kì là dãy các nguyên tố có cùng số lớp electron trong nguyên tử, được sắp xếp theo chiều tăng dần của điện tích hạt nhân."
       ],
       [
         "Các nguyên tố thuộc họ d và họ f trong Bảng tuần hoàn được xếp vào các nhóm nào?",
         [
           "A. Nhóm A.",
-          "B. Nhóm B (kim loại chuyển tiếp).",
-          "C. Nhóm halogen.",
-          "D. Nhóm khí hiếm."
+          "B. Nhóm khí hiếm.",
+          "C. Nhóm B (kim loại chuyển tiếp).",
+          "D. Nhóm halogen."
         ],
-        1,
+        2,
         "Nhóm A gồm các nguyên tố họ s và họ p. Nhóm B gồm các nguyên tố họ d và họ f (gọi là các kim loại chuyển tiếp)."
       ],
       [
         "Nguyên tố scandium (Sc, Z = 21) có cấu hình electron [Ar] 3d<sup>1</sup> 4s<sup>2</sup>. Vị trí của scandium trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 21, chu kì 4, nhóm IIIB.",
-          "B. Ô số 21, chu kì 4, nhóm IIIA.",
-          "C. Ô số 21, chu kì 3, nhóm IIIB.",
-          "D. Ô số 21, chu kì 4, nhóm IB."
+          "A. Ô số 21, chu kì 3, nhóm IIIB.",
+          "B. Ô số 21, chu kì 4, nhóm IIIB.",
+          "C. Ô số 21, chu kì 4, nhóm IB.",
+          "D. Ô số 21, chu kì 4, nhóm IIIA."
         ],
-        0,
+        1,
         "Sc (Z = 21): Có 4 lớp electron &rArr; chu kì 4; cấu hình e hóa trị là 3d<sup>1</sup> 4s<sup>2</sup> có 1 + 2 = 3 electron hóa trị, electron cuối điền vào 3d &rArr; nhóm IIIB."
       ]
     ],
@@ -7688,11 +7688,11 @@ const suppliedExams = [
         "Lĩnh vực nào sau đây KHÔNG PHẢI là đối tượng ứng dụng trực tiếp của ngành Hóa học?",
         [
           "A. Sản xuất phân bón hóa học và thuốc bảo vệ thực vật cho nông nghiệp.",
-          "B. Tổng hợp các loại dược phẩm chữa bệnh và vaccine y tế.",
-          "C. Nghiên cứu chu kì quay của các hành tinh và thiên thạch trong vũ trụ.",
+          "B. Nghiên cứu chu kì quay của các hành tinh và thiên thạch trong vũ trụ.",
+          "C. Tổng hợp các loại dược phẩm chữa bệnh và vaccine y tế.",
           "D. Tinh chế nhiên liệu và chế tạo vật liệu pin lưu trữ năng lượng mới."
         ],
-        2,
+        1,
         "Nghiên cứu chu kì quay của các hành tinh và thiên thạch thuộc lĩnh vực Thiên văn học và Vật lí thiên văn."
       ],
       [
@@ -7700,8 +7700,8 @@ const suppliedExams = [
         [
           "A. Số hạt neutron trong hạt nhân.",
           "B. Số proton và bằng số electron trong nguyên tử trung hòa.",
-          "C. Tổng số hạt trong hạt nhân nguyên tử.",
-          "D. Số khối A của nguyên tử."
+          "C. Số khối A của nguyên tử.",
+          "D. Tổng số hạt trong hạt nhân nguyên tử."
         ],
         1,
         "Số đơn vị điện tích hạt nhân Z = số proton = số electron (trong nguyên tử trung hòa)."
@@ -7709,12 +7709,12 @@ const suppliedExams = [
       [
         "Đường kính của hạt nhân nguyên tử có độ lớn vào khoảng:",
         [
-          "A. 10<sup>-10</sup> m.",
-          "B. 10<sup>-14</sup> m đến 10<sup>-15</sup> m.",
-          "C. 10<sup>-6</sup> m.",
-          "D. 10<sup>-3</sup> m."
+          "A. 10<sup>-3</sup> m.",
+          "B. 10<sup>-6</sup> m.",
+          "C. 10<sup>-10</sup> m.",
+          "D. 10<sup>-14</sup> m đến 10<sup>-15</sup> m."
         ],
-        1,
+        3,
         "Đường kính nguyên tử &approx; 10<sup>-10</sup> m (0,1 nm), trong khi đường kính hạt nhân nhỏ hơn rất nhiều, vào khoảng 10<sup>-15</sup> đến 10<sup>-14</sup> m."
       ],
       [
@@ -7731,56 +7731,56 @@ const suppliedExams = [
       [
         "Đại lượng đặc trưng cơ bản nhất quyết định vị trí và toàn bộ tính chất hóa học của một nguyên tố là:",
         [
-          "A. Số khối A.",
+          "A. Điện tích hạt nhân (số hiệu nguyên tử Z).",
           "B. Số neutron trong hạt nhân.",
-          "C. Điện tích hạt nhân (số hiệu nguyên tử Z).",
-          "D. Bán kính nguyên tử."
+          "C. Bán kính nguyên tử.",
+          "D. Số khối A."
         ],
-        2,
+        0,
         "Số hiệu nguyên tử Z xác định số proton, số electron và cấu hình electron của nguyên tử, do đó quyết định toàn bộ tính chất hóa học của nguyên tố."
       ],
       [
         "Khí chlorine trong tự nhiên là hỗn hợp của 2 đồng vị bền: <sup>35</sup>Cl (chiếm 75,77%) và <sup>37</sup>Cl (chiếm 24,23%). Nguyên tử khối trung bình của Chlorine là:",
         [
-          "A. 35,50 amu.",
-          "B. 35,48 amu.",
-          "C. 36,00 amu.",
-          "D. 35,24 amu."
+          "A. 36,00 amu.",
+          "B. 35,50 amu.",
+          "C. 35,24 amu.",
+          "D. 35,48 amu."
         ],
-        1,
+        3,
         "A̅ = (35 &times; 75,77 + 37 &times; 24,23) / 100 = (2651,95 + 896,51) / 100 = 3548,46 / 100 &approx; 35,48 amu."
       ],
       [
         "Theo quy tắc Hund, trong cùng một phân lớp chưa bão hòa, các electron có xu hướng phân bố vào các AO sao cho:",
         [
-          "A. Số electron ghép đôi là tối đa.",
-          "B. Số electron độc thân là tối đa và các electron này phải có spin cùng chiều (song song).",
-          "C. Tập trung toàn bộ vào một orbital duy nhất.",
-          "D. Luôn có spin ngược chiều nhau."
+          "A. Luôn có spin ngược chiều nhau.",
+          "B. Tập trung toàn bộ vào một orbital duy nhất.",
+          "C. Số electron độc thân là tối đa và các electron này phải có spin cùng chiều (song song).",
+          "D. Số electron ghép đôi là tối đa."
         ],
-        1,
+        2,
         "Quy tắc Hund: Trong một phân lớp, các electron có xu hướng phân bố đều vào các orbital sao cho số electron độc thân là cực đại và có chiều tự quay song song nhau."
       ],
       [
         "Phân lớp electron d chứa tối đa bao nhiêu electron?",
         [
-          "A. 2 electron.",
-          "B. 6 electron.",
-          "C. 10 electron.",
-          "D. 14 electron."
+          "A. 10 electron.",
+          "B. 2 electron.",
+          "C. 14 electron.",
+          "D. 6 electron."
         ],
-        2,
+        0,
         "Phân lớp d có 5 AO, mỗi AO chứa tối đa 2e &rArr; phân lớp d chứa tối đa 5 &times; 2 = 10 electron."
       ],
       [
         "Số electron tối đa có thể chứa ở lớp electron thứ 2 (lớp L, n = 2) là:",
         [
           "A. 2 electron.",
-          "B. 8 electron.",
-          "C. 18 electron.",
+          "B. 18 electron.",
+          "C. 8 electron.",
           "D. 32 electron."
         ],
-        1,
+        2,
         "Lớp thứ n chứa tối đa 2n<sup>2</sup> electron &rArr; n = 2 chứa tối đa 2 &times; 2<sup>2</sup> = 8 electron (gồm 2s<sup>2</sup> và 2p<sup>6</sup>)."
       ],
       [
@@ -7788,8 +7788,8 @@ const suppliedExams = [
         [
           "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
           "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>4</sup> 2p<sup>4</sup>.",
-          "D. 1s<sup>2</sup> 2p<sup>8</sup>."
+          "C. 1s<sup>2</sup> 2p<sup>8</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>4</sup> 2p<sup>4</sup>."
         ],
         0,
         "Z = 10 có 10 electron: 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
@@ -7797,34 +7797,34 @@ const suppliedExams = [
       [
         "Nguyên tử iron (Fe, Z = 26) có cấu hình electron [Ar] 3d<sup>6</sup> 4s<sup>2</sup>. Iron là nguyên tố thuộc loại:",
         [
-          "A. Nguyên tố s, kim loại kiềm.",
-          "B. Nguyên tố p, phi kim.",
-          "C. Nguyên tố d, kim loại chuyển tiếp.",
-          "D. Nguyên tố f, khí hiếm."
+          "A. Nguyên tố p, phi kim.",
+          "B. Nguyên tố f, khí hiếm.",
+          "C. Nguyên tố s, kim loại kiềm.",
+          "D. Nguyên tố d, kim loại chuyển tiếp."
         ],
-        2,
+        3,
         "Fe có electron cuối cùng điền vào phân lớp 3d nên là nguyên tố d, thuộc nhóm VIIIB, là một kim loại chuyển tiếp."
       ],
       [
         "Khi nguyên tử Iron (Fe, Z = 26, [Ar] 3d<sup>6</sup> 4s<sup>2</sup>) nhường 3 electron để tạo cation Fe<sup>3+</sup>, cấu hình electron của ion Fe<sup>3+</sup> là:",
         [
           "A. [Ar] 3d<sup>3</sup> 4s<sup>2</sup>.",
-          "B. [Ar] 3d<sup>5</sup>.",
-          "C. [Ar] 3d<sup>6</sup>.",
+          "B. [Ar] 3d<sup>6</sup>.",
+          "C. [Ar] 3d<sup>5</sup>.",
           "D. [Ar] 3d<sup>4</sup> 4s<sup>1</sup>."
         ],
-        1,
+        2,
         "Nguyên tử Fe nhường 2e ở phân lớp 4s ngoài cùng trước, sau đó nhường tiếp 1e ở phân lớp 3d &rArr; cấu hình của Fe<sup>3+</sup> là [Ar] 3d<sup>5</sup> (trạng thái bán bão hòa bền vững)."
       ],
       [
         "Bảng tuần hoàn các nguyên tố hóa học hiện đại có tất cả bao nhiêu chu kì?",
         [
           "A. 5 chu kì.",
-          "B. 6 chu kì.",
-          "C. 7 chu kì.",
+          "B. 7 chu kì.",
+          "C. 6 chu kì.",
           "D. 8 chu kì."
         ],
-        2,
+        1,
         "Bảng tuần hoàn hiện nay gồm 7 chu kì được đánh số từ 1 đến 7."
       ],
       [
@@ -7832,30 +7832,30 @@ const suppliedExams = [
         [
           "A. Khí hiếm.",
           "B. Kim loại kiềm thổ.",
-          "C. Halogen.",
-          "D. Chalcogen."
+          "C. Chalcogen.",
+          "D. Halogen."
         ],
-        2,
+        3,
         "Nhóm VIIA (F, Cl, Br, I, At) được gọi là nhóm Halogen (chất sinh ra muối)."
       ],
       [
         "Nguyên tố p là các nguyên tố mà nguyên tử của chúng có đặc điểm nào sau đây?",
         [
-          "A. Có electron cuối cùng được điền vào phân lớp p.",
-          "B. Có 6 electron ở lớp ngoài cùng.",
-          "C. Có đúng 3 lớp electron.",
-          "D. Đều là các phi kim hoạt động mạnh."
+          "A. Đều là các phi kim hoạt động mạnh.",
+          "B. Có đúng 3 lớp electron.",
+          "C. Có electron cuối cùng được điền vào phân lớp p.",
+          "D. Có 6 electron ở lớp ngoài cùng."
         ],
-        0,
+        2,
         "Định nghĩa: Nguyên tố s, p, d, f là nguyên tố mà nguyên tử có electron cuối cùng được điền vào phân lớp tương ứng s, p, d, f."
       ],
       [
         "Nguyên tố potassium (K, Z = 19) có cấu hình [Ar] 4s<sup>1</sup>. Vị trí của potassium trong Bảng tuần hoàn là:",
         [
           "A. Ô số 19, chu kì 4, nhóm IA.",
-          "B. Ô số 19, chu kì 4, nhóm IB.",
+          "B. Ô số 19, chu kì 1, nhóm IVA.",
           "C. Ô số 19, chu kì 3, nhóm IA.",
-          "D. Ô số 19, chu kì 1, nhóm IVA."
+          "D. Ô số 19, chu kì 4, nhóm IB."
         ],
         0,
         "K (Z = 19): Ô số 19; 4 lớp electron &rArr; chu kì 4; 1 electron lớp ngoài cùng, e cuối vào phân lớp 4s &rArr; nhóm IA."
@@ -7966,21 +7966,21 @@ const suppliedExams = [
       [
         "Khi bị một lượng nhỏ dung dịch acid đặc (như H<sub>2</sub>SO<sub>4</sub> hoặc HCl đặc) bắn dính vào da tay, thao tác sơ cứu đầu tiên ĐÚNG NHẤT là:",
         [
-          "A. Đổ ngay dung dịch kiềm đặc (NaOH) vào chỗ dính acid để trung hòa.",
-          "B. Xả ngay dưới vòi nước chảy liên tục trong nhiều phút, sau đó rửa nhẹ bằng dung dịch NaHCO<sub>3</sub> loãng.",
-          "C. Dùng khăn khô chà xát thật mạnh lên vết thương.",
-          "D. Băng kín vết thương lại ngay lập tức."
+          "A. Xả ngay dưới vòi nước chảy liên tục trong nhiều phút, sau đó rửa nhẹ bằng dung dịch NaHCO<sub>3</sub> loãng.",
+          "B. Dùng khăn khô chà xát thật mạnh lên vết thương.",
+          "C. Băng kín vết thương lại ngay lập tức.",
+          "D. Đổ ngay dung dịch kiềm đặc (NaOH) vào chỗ dính acid để trung hòa."
         ],
-        1,
+        0,
         "Quy tắc an toàn: Khi bị acid bắn vào da, phải xả liên tục dưới vòi nước chảy trong ít nhất 10–15 phút để làm loãng và rửa trôi acid, sau đó rửa lại bằng dung dịch NaHCO<sub>3</sub> loãng (khoảng 2%). Tuyệt đối không dùng base đặc vì gây bỏng thêm."
       ],
       [
         "Nhà vật lí người Anh J. J. Thomson đã phát hiện ra hạt electron vào năm 1897 nhờ thí nghiệm nào sau đây?",
         [
-          "A. Thí nghiệm bắn phá lá vàng mỏng bằng hạt alpha (&alpha;).",
+          "A. Thí nghiệm tán xạ tia X.",
           "B. Thí nghiệm phóng điện qua chất khí trong ống tia âm cực.",
           "C. Thí nghiệm đo khối lượng bằng máy quang phổ khối.",
-          "D. Thí nghiệm tán xạ tia X."
+          "D. Thí nghiệm bắn phá lá vàng mỏng bằng hạt alpha (&alpha;)."
         ],
         1,
         "Năm 1897, J. J. Thomson phát hiện ra hạt electron khi nghiên cứu sự phóng điện trong ống tia âm cực."
@@ -7988,10 +7988,10 @@ const suppliedExams = [
       [
         "Khối lượng nguyên tử tập trung hầu như hoàn toàn ở hạt nhân là vì:",
         [
-          "A. Thể tích hạt nhân chiếm hầu hết thể tích nguyên tử.",
+          "A. Hạt nhân chứa toàn bộ các electron mang điện âm.",
           "B. Khối lượng của hạt electron vô cùng nhỏ (khoảng 0,00055 amu), không đáng kể so với proton và neutron.",
-          "C. Hạt nhân chứa toàn bộ các electron mang điện âm.",
-          "D. Hạt neutron có khối lượng lớn hơn proton hàng nghìn lần."
+          "C. Hạt neutron có khối lượng lớn hơn proton hàng nghìn lần.",
+          "D. Thể tích hạt nhân chiếm hầu hết thể tích nguyên tử."
         ],
         1,
         "Khối lượng electron (m<sub>e</sub> &approx; 0,00055 amu) quá bé so với proton và neutron (&approx; 1 amu), nên hơn 99,9% khối lượng nguyên tử tập trung ở hạt nhân."
@@ -7999,87 +7999,87 @@ const suppliedExams = [
       [
         "Một nguyên tử có 19 proton, 20 neutron và 19 electron. Kí hiệu nguyên tử của nguyên tố này là:",
         [
-          "A. <sup>20</sup><sub>19</sub>K.",
-          "B. <sup>39</sup><sub>19</sub>K.",
-          "C. <sup>39</sup><sub>20</sub>Ca.",
-          "D. <sup>19</sup><sub>39</sub>K."
+          "A. <sup>19</sup><sub>39</sub>K.",
+          "B. <sup>39</sup><sub>20</sub>Ca.",
+          "C. <sup>20</sup><sub>19</sub>K.",
+          "D. <sup>39</sup><sub>19</sub>K."
         ],
-        1,
+        3,
         "Z = 19 (Potassium, K); số khối A = Z + N = 19 + 20 = 39 &rArr; Kí hiệu đúng là <sup>39</sup><sub>19</sub>K."
       ],
       [
         "Các đồng vị của cùng một nguyên tố hóa học có tính chất hóa học tương tự nhau là vì chúng có:",
         [
-          "A. Cùng số neutron trong hạt nhân.",
-          "B. Cùng số khối A.",
-          "C. Cùng số proton và cấu hình electron tương tự nhau.",
-          "D. Cùng khối lượng nguyên tử."
+          "A. Cùng khối lượng nguyên tử.",
+          "B. Cùng số proton và cấu hình electron tương tự nhau.",
+          "C. Cùng số khối A.",
+          "D. Cùng số neutron trong hạt nhân."
         ],
-        2,
+        1,
         "Tính chất hóa học của nguyên tố do lớp vỏ electron (đặc biệt là electron hóa trị) quyết định. Các đồng vị có cùng số proton nên cùng số electron và cấu hình electron, do đó có tính chất hóa học tương tự nhau."
       ],
       [
         "Nguyên tố hydrogen có 3 đồng vị bền và phóng xạ nhẹ là <sup>1</sup>H (Protium), <sup>2</sup>H (Deuterium) và <sup>3</sup>H (Tritium). Số hạt neutron có trong từng đồng vị lần lượt là:",
         [
           "A. 1, 2, 3.",
-          "B. 0, 1, 2.",
-          "C. 1, 1, 1.",
-          "D. 0, 2, 3."
+          "B. 1, 1, 1.",
+          "C. 0, 2, 3.",
+          "D. 0, 1, 2."
         ],
-        1,
+        3,
         "Số neutron N = A - Z. Với <sup>1</sup><sub>1</sub>H: N = 1 - 1 = 0; <sup>2</sup><sub>1</sub>H: N = 2 - 1 = 1; <sup>3</sup><sub>1</sub>H: N = 3 - 1 = 2."
       ],
       [
         "Khu vực không gian xung quanh hạt nhân nguyên tử mà tại đó xác suất tìm thấy electron khoảng 90% được gọi là:",
         [
-          "A. Quỹ đạo tròn Bohr.",
-          "B. Orbital nguyên tử (AO).",
-          "C. Phân lớp electron.",
-          "D. Đám mây proton."
+          "A. Orbital nguyên tử (AO).",
+          "B. Quỹ đạo tròn Bohr.",
+          "C. Đám mây proton.",
+          "D. Phân lớp electron."
         ],
-        1,
+        0,
         "Orbital nguyên tử (AO) là vùng không gian xung quanh hạt nhân có xác suất bắt gặp electron lớn nhất (khoảng 90%)."
       ],
       [
         "Phân lớp electron f gồm bao nhiêu orbital nguyên tử và chứa tối đa bao nhiêu electron?",
         [
-          "A. 5 AO và tối đa 10 electron.",
-          "B. 7 AO và tối đa 14 electron.",
+          "A. 7 AO và tối đa 14 electron.",
+          "B. 9 AO và tối đa 18 electron.",
           "C. 3 AO và tối đa 6 electron.",
-          "D. 9 AO và tối đa 18 electron."
+          "D. 5 AO và tối đa 10 electron."
         ],
-        1,
+        0,
         "Phân lớp f gồm đúng 7 AO và chứa tối đa 7 &times; 2 = 14 electron."
       ],
       [
         "Theo quy tắc Klechkowski, phân lớp 4s có mức năng lượng so với phân lớp 3d như thế nào?",
         [
-          "A. Thấp hơn phân lớp 3d.",
-          "B. Cao hơn phân lớp 3d.",
-          "C. Bằng phân lớp 3d.",
-          "D. Bằng phân lớp 4p."
+          "A. Cao hơn phân lớp 3d.",
+          "B. Bằng phân lớp 4p.",
+          "C. Thấp hơn phân lớp 3d.",
+          "D. Bằng phân lớp 3d."
         ],
-        0,
+        2,
         "Theo trật tự Klechkowski: 1s 2s 2p 3s 3p 4s 3d 4p... nên phân lớp 4s có mức năng lượng thấp hơn phân lớp 3d (được điền electron trước 3d)."
       ],
       [
         "Cấu hình electron ở trạng thái cơ bản của nguyên tử copper (Cu, Z = 29) là:",
         [
           "A. [Ar] 4s<sup>2</sup> 3d<sup>9</sup>.",
-          "B. [Ar] 3d<sup>10</sup> 4s<sup>1</sup>.",
-          "C. [Ar] 3d<sup>9</sup> 4s<sup>2</sup>.",
-          "D. [Ar] 4s<sup>1</sup> 3d<sup>10</sup>."
+          "B. [Ar] 3d<sup>9</sup> 4s<sup>2</sup>.",
+          "C. [Ar] 4s<sup>1</sup> 3d<sup>10</sup>.",
+          "D. [Ar] 3d<sup>10</sup> 4s<sup>1</sup>."
         ],
-        1,
+        3,
         "Do hiện tượng bão hòa phân lớp 3d bền vững hơn, 1 electron phân lớp 4s nhảy sang 3d &rArr; cấu hình đúng của Cu là [Ar] 3d<sup>10</sup> 4s<sup>1</sup>."
       ],
       [
         "Nguyên tử của một nguyên tố có cấu hình electron lớp ngoài cùng dạng ns<sup>2</sup> np<sup>5</sup> thuộc loại nguyên tố nào?",
         [
-          "A. Kim loại kiềm mạnh.",
+          "A. Kim loại chuyển tiếp họ d.",
           "B. Phi kim điển hình (nhóm halogen).",
-          "C. Khí hiếm.",
-          "D. Kim loại chuyển tiếp họ d."
+          "C. Kim loại kiềm mạnh.",
+          "D. Khí hiếm."
         ],
         1,
         "Có 7 electron lớp ngoài cùng (ns<sup>2</sup> np<sup>5</sup>) là cấu hình đặc trưng của các phi kim điển hình nhóm VIIA (Halogen)."
@@ -8088,55 +8088,55 @@ const suppliedExams = [
         "Cation Mg<sup>2+</sup> được hình thành khi nguyên tử magnesium (Mg, Z = 12) nhường đi 2 electron. Cấu hình electron của cation Mg<sup>2+</sup> là:",
         [
           "A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup>.",
-          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>.",
-          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
-          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>."
+          "B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.",
+          "C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>1</sup>.",
+          "D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
         ],
-        1,
+        3,
         "Mg (Z = 12): [Ne] 3s<sup>2</sup> nhường 2e ở lớp thứ 3 tạo Mg<sup>2+</sup> có 10 electron với cấu hình [Ne] hay 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>."
       ],
       [
         "Định luật tuần hoàn hiện đại phát biểu rằng: Tính chất của các nguyên tố và đơn chất cũng như hợp chất của chúng biến đổi tuần hoàn theo chiều tăng của:",
         [
-          "A. Khối lượng nguyên tử.",
-          "B. Số neutron trong hạt nhân.",
-          "C. Điện tích hạt nhân của nguyên tử.",
-          "D. Bán kính nguyên tử."
+          "A. Điện tích hạt nhân của nguyên tử.",
+          "B. Bán kính nguyên tử.",
+          "C. Khối lượng nguyên tử.",
+          "D. Số neutron trong hạt nhân."
         ],
-        2,
+        0,
         "Định luật tuần hoàn hiện đại: Tính chất của các nguyên tố và hợp chất biến đổi tuần hoàn theo chiều tăng của điện tích hạt nhân nguyên tử."
       ],
       [
         "Chu kì 3 trong Bảng tuần hoàn bắt đầu bằng nguyên tố nào và kết thúc bằng nguyên tố nào?",
         [
-          "A. Bắt đầu bằng Lithium (Li) và kết thúc bằng Neon (Ne).",
-          "B. Bắt đầu bằng Sodium (Na) và kết thúc bằng Argon (Ar).",
-          "C. Bắt đầu bằng Potassium (K) và kết thúc bằng Krypton (Kr).",
+          "A. Bắt đầu bằng Potassium (K) và kết thúc bằng Krypton (Kr).",
+          "B. Bắt đầu bằng Lithium (Li) và kết thúc bằng Neon (Ne).",
+          "C. Bắt đầu bằng Sodium (Na) và kết thúc bằng Argon (Ar).",
           "D. Bắt đầu bằng Hydrogen (H) và kết thúc bằng Helium (He)."
         ],
-        1,
+        2,
         "Chu kì 3 bắt đầu bằng kim loại kiềm Sodium (<sub>11</sub>Na) và kết thúc bằng khí hiếm Argon (<sub>18</sub>Ar)."
       ],
       [
         "Nhóm VIIIA trong Bảng tuần hoàn gồm tập hợp các nguyên tố thuộc loại:",
         [
-          "A. Kim loại kiềm thổ.",
-          "B. Khí hiếm (khí trơ).",
-          "C. Halogen.",
-          "D. Kim loại chuyển tiếp."
+          "A. Halogen.",
+          "B. Kim loại chuyển tiếp.",
+          "C. Khí hiếm (khí trơ).",
+          "D. Kim loại kiềm thổ."
         ],
-        1,
+        2,
         "Nhóm VIIIA gồm He, Ne, Ar, Kr, Xe, Rn là các nguyên tố khí hiếm (khí trơ)."
       ],
       [
         "Nguyên tố manganese (Mn, Z = 25) có cấu hình electron [Ar] 3d<sup>5</sup> 4s<sup>2</sup>. Vị trí của manganese trong Bảng tuần hoàn là:",
         [
-          "A. Ô số 25, chu kì 4, nhóm VIIB.",
-          "B. Ô số 25, chu kì 4, nhóm VIIA.",
-          "C. Ô số 25, chu kì 3, nhóm VIIB.",
-          "D. Ô số 25, chu kì 4, nhóm IIB."
+          "A. Ô số 25, chu kì 3, nhóm VIIB.",
+          "B. Ô số 25, chu kì 4, nhóm IIB.",
+          "C. Ô số 25, chu kì 4, nhóm VIIB.",
+          "D. Ô số 25, chu kì 4, nhóm VIIA."
         ],
-        0,
+        2,
         "Mn (Z = 25): Ô số 25; 4 lớp electron &rArr; chu kì 4; cấu hình e hóa trị là 3d<sup>5</sup> 4s<sup>2</sup> có 5 + 2 = 7 electron, e cuối vào phân lớp d &rArr; nhóm VIIB."
       ]
     ],
@@ -8248,10 +8248,10 @@ const suppliedExams = [
       [
         "Theo nguyên lí Pauli, trong mỗi orbital nguyên tử, số electron tối đa là ...(1)..., và các electron này có chiều tự quay quanh trục của chúng là ...(2)... Các từ thích hợp để điền vào vị trí (1), (2) lần lượt là:",
         [
-          "A. 1, không đổi.",
+          "A. 1, thay đổi.",
           "B. 2, cùng chiều nhau.",
           "C. 2, ngược chiều nhau.",
-          "D. 1, thay đổi."
+          "D. 1, không đổi."
         ],
         2,
         "Theo nguyên lí Pauli, trong một orbital nguyên tử (AO) chỉ có thể chứa tối đa 2 electron và hai electron này phải có chiều tự quay quanh trục ngược nhau (spin ngược dấu)."
@@ -8272,8 +8272,8 @@ const suppliedExams = [
         [
           "A. 3.",
           "B. 2.",
-          "C. 1.",
-          "D. 4."
+          "C. 4.",
+          "D. 1."
         ],
         1,
         "Lớp thứ n có đúng n phân lớp electron. Do đó lớp thứ 2 (lớp L, n = 2) có đúng 2 phân lớp là 2s và 2p."
@@ -8281,21 +8281,21 @@ const suppliedExams = [
       [
         "Các phân lớp electron có trong lớp N là:",
         [
-          "A. 1s.",
-          "B. 2s, 2p.",
-          "C. 3s, 3p, 3d.",
-          "D. 4s, 4p, 4d, 4f."
+          "A. 2s, 2p.",
+          "B. 4s, 4p, 4d, 4f.",
+          "C. 1s.",
+          "D. 3s, 3p, 3d."
         ],
-        3,
+        1,
         "Lớp N tương ứng với n = 4, gồm 4 phân lớp electron kí hiệu là 4s, 4p, 4d, 4f."
       ],
       [
         "Số electron tối đa trong phân lớp p là:",
         [
           "A. 6.",
-          "B. 2.",
+          "B. 14.",
           "C. 10.",
-          "D. 14."
+          "D. 2."
         ],
         0,
         "Phân lớp p gồm 3 orbital p (px, py, pz). Mỗi orbital chứa tối đa 2 electron nên số electron tối đa của phân lớp p là 3 × 2 = 6 electron."
@@ -8303,8 +8303,8 @@ const suppliedExams = [
       [
         "Số electron tối đa trong phân lớp d là:",
         [
-          "A. 2.",
-          "B. 6.",
+          "A. 6.",
+          "B. 2.",
           "C. 10.",
           "D. 14."
         ],
@@ -8314,45 +8314,45 @@ const suppliedExams = [
       [
         "Cấu hình electron đúng của nguyên tử Li (Z = 3) là:",
         [
-          "A. 1s²1p¹.",
-          "B. 1s²2s¹.",
-          "C. 1s¹2s².",
-          "D. 1s³."
+          "A. 1s²2s¹.",
+          "B. 1s¹2s².",
+          "C. 1s³.",
+          "D. 1s²1p¹."
         ],
-        1,
+        0,
         "Lithium có Z = 3. Thứ tự lấp đầy năng lượng: 1s² 2s¹."
       ],
       [
         "Cấu hình electron đúng của nguyên tử F (Z = 9) là:",
         [
-          "A. 1s²2s²2p⁵.",
+          "A. 1s²2s²2p⁴.",
           "B. 1s²2s²2p⁴3s¹.",
           "C. 1s²1p⁶1d¹.",
-          "D. 1s²2s²2p⁴."
+          "D. 1s²2s²2p⁵."
         ],
-        0,
+        3,
         "Fluorine có Z = 9 electron. Cấu hình electron theo thứ tự năng lượng là 1s² 2s² 2p⁵."
       ],
       [
         "Nguyên tử X có cấu hình e là: 1s²2s²2p⁶3s²3p¹. Chọn phát biểu đúng.",
         [
-          "A. Số electron ở lớp ngoài cùng trong nguyên tử X là 1.",
-          "B. Nguyên tử X chứa 2 lớp electron.",
-          "C. Lớp electron ngoài cùng của nguyên tử X là lớp N.",
-          "D. Ở trạng thái cơ bản, nguyên tử X chứa 1 electron độc thân."
+          "A. Ở trạng thái cơ bản, nguyên tử X chứa 1 electron độc thân.",
+          "B. Số electron ở lớp ngoài cùng trong nguyên tử X là 1.",
+          "C. Nguyên tử X chứa 2 lớp electron.",
+          "D. Lớp electron ngoài cùng của nguyên tử X là lớp N."
         ],
-        3,
+        0,
         "Cấu hình của X có 3 lớp electron (lớp ngoài cùng là lớp 3 gồm phân lớp 3s² 3p¹ với 3 electron). Phân lớp 3p có 1 electron nằm trong 1 AO nên nguyên tử X chứa đúng 1 electron độc thân."
       ],
       [
         "Nguyên tử Y có cấu hình e là: 1s²2s²2p⁶3s²3p⁶3d⁵4s². Cho các nhận xét: (1) Số hiệu nguyên tử của Y là 25; (2) Nguyên tố Y là một kim loại; (3) Ở trạng thái cơ bản, nguyên tử Y chứa 5 electron độc thân. Các nhận xét đúng bao gồm:",
         [
           "A. chỉ (1) và (2).",
-          "B. cả (1), (2) và (3).",
+          "B. chỉ (2) và (3).",
           "C. chỉ (1) và (3).",
-          "D. chỉ (2) và (3)."
+          "D. cả (1), (2) và (3)."
         ],
-        1,
+        3,
         "Tổng số electron của Y = 25 &rArr; Z = 25 (Mn, (1) đúng). Y là kim loại chuyển tiếp (2 đúng). Phân lớp 3d⁵ có 5 orbital, theo quy tắc Hund mỗi AO chứa 1e &rArr; có 5 electron độc thân (3 đúng). Vậy cả 3 nhận xét đều đúng."
       ]
     ],
@@ -8519,63 +8519,63 @@ const suppliedExams = [
       [
         "Năm 1897, J.J. Thomson đã phát hiện ra electron từ thí nghiệm:",
         [
-          "A. phóng điện cao áp qua không khí.",
-          "B. phóng điện cao áp qua không khí rất loãng.",
-          "C. bắn phá nguyên tử nito bằng tia α.",
-          "D. quan sát nguyên tử qua kính hiển vi STM."
+          "A. phóng điện cao áp qua không khí rất loãng.",
+          "B. phóng điện cao áp qua không khí.",
+          "C. quan sát nguyên tử qua kính hiển vi STM.",
+          "D. bắn phá nguyên tử nito bằng tia α."
         ],
-        1,
+        0,
         "Năm 1897, J.J. Thomson thực hiện thí nghiệm phóng điện cao áp qua một ống thủy tinh chứa không khí ở áp suất rất loãng và phát hiện ra chùm tia âm cực (tia electron)."
       ],
       [
         "Khi dẫn tia âm cực đi qua khe hai bản của tụ điện đã tích điện, tia âm cực sẽ:",
         [
-          "A. đi lệch về phía bản tích điện dương.",
-          "B. đi lệch về phía bản tích điện âm.",
-          "C. đi thẳng.",
-          "D. đi lệch về cả hai phía."
+          "A. đi lệch về phía bản tích điện âm.",
+          "B. đi thẳng.",
+          "C. đi lệch về cả hai phía.",
+          "D. đi lệch về phía bản tích điện dương."
         ],
-        0,
+        3,
         "Tia âm cực là chùm hạt electron mang điện tích âm, do đó khi đi qua điện trường giữa hai bản tụ điện, chúng bị lệch về phía bản tích điện dương."
       ],
       [
         "Khi nghiên cứu về chùm tia âm cực có độ lớn điện tích là q và khối lượng là m, một số nhận định được đưa ra như sau: (1) m tăng thì q giảm; (2) m tăng thì q tăng; (3) tỉ số m/q = hằng số. Các nhận định đúng bao gồm:",
         [
-          "A. chỉ (1).",
+          "A. chỉ (2) và (3).",
           "B. chỉ (2).",
-          "C. chỉ (2) và (3).",
-          "D. chỉ (3)."
+          "C. chỉ (3).",
+          "D. chỉ (1)."
         ],
-        2,
+        0,
         "Vì chùm hạt gồm các electron giống hệt nhau có điện tích e và khối lượng me xác định, khi số electron tăng thì m tăng đồng thời q cũng tăng theo, và tỉ số m/q luôn là hằng số."
       ],
       [
         "Điện tích của một chùm electron không thể nhận giá trị nào sau đây nếu điện tích của electron có giá trị là e₀ = -1,60.10⁻¹⁹ C?",
         [
-          "A. -1,60.10⁻¹⁸ C.",
-          "B. -2,56.10⁻¹⁶ C.",
-          "C. -8,0.10⁻¹⁶ C.",
-          "D. -1,65.10⁻¹⁷ C."
+          "A. -8,0.10⁻¹⁶ C.",
+          "B. -1,65.10⁻¹⁷ C.",
+          "C. -2,56.10⁻¹⁶ C.",
+          "D. -1,60.10⁻¹⁸ C."
         ],
-        3,
+        1,
         "Điện tích chùm electron phải bằng một số nguyên lần điện tích của 1 electron. Với D: (-1,65.10⁻¹⁷) / (-1,60.10⁻¹⁹) = 103,125 (không phải số nguyên), nên không thể nhận giá trị này."
       ],
       [
         "Hạt α dùng để bắn phá các hạt nhân trong thí nghiệm phát hiện ra prôton là:",
         [
-          "A. nguyên tử heli, ⁴₂He.",
-          "B. hạt nhân nguyên tử heli, ⁴₂He²⁺.",
-          "C. hạt neutron.",
-          "D. nguyên tử ²₁D."
+          "A. hạt nhân nguyên tử heli, ⁴₂He²⁺.",
+          "B. nguyên tử ²₁D.",
+          "C. nguyên tử heli, ⁴₂He.",
+          "D. hạt neutron."
         ],
-        1,
+        0,
         "Hạt alpha (α) chính là dòng hạt nhân nguyên tử Helium, kí hiệu là ⁴₂He²⁺ (gồm 2 proton và 2 neutron, mất 2 electron)."
       ],
       [
         "Khi E. Rutherford và các cộng sự bắn hạt α vào một lá vàng rất mỏng, hầu hết các hạt xuyên qua lá vàng, một số ít lệch hướng và một số rất ít bị bật ngược trở lại. Một số nhận định về cấu tạo nguyên tử được đưa ra như sau: (1) Nguyên tử có cấu tạo rỗng; (2) Toàn bộ khối lượng nguyên tử chủ yếu tập trung ở hạt nhân. Nhận định đúng bao gồm:",
         [
-          "A. chỉ (1).",
-          "B. chỉ (2).",
+          "A. chỉ (2).",
+          "B. chỉ (1).",
           "C. cả (1) và (2).",
           "D. không phải (1) lẫn (2)."
         ],
@@ -8585,186 +8585,186 @@ const suppliedExams = [
       [
         "Đặc điểm nào dưới đây là của hạt proton?",
         [
-          "A. Khối lượng bằng khối lượng electron, điện tích có độ lớn là e₀ nhưng ngược dấu với electron.",
-          "B. Khối lượng xấp xỉ 1 u, điện tích có giá trị +1,60.10⁻¹⁹ C.",
+          "A. Khối lượng xấp xỉ 1 u, điện tích có giá trị +1,60.10⁻¹⁹ C.",
+          "B. Khối lượng xấp xỉ 1 u và không mang điện.",
           "C. Khối lượng là 1,6.10⁻¹⁹ kg, điện tích có giá trị là 1+ đơn vị điện tích.",
-          "D. Khối lượng xấp xỉ 1 u và không mang điện."
+          "D. Khối lượng bằng khối lượng electron, điện tích có độ lớn là e₀ nhưng ngược dấu với electron."
         ],
-        1,
+        0,
         "Hạt proton có khối lượng mp &approx; 1 amu (1,6726.10⁻²⁷ kg) và mang điện tích dương qp = +1,602.10⁻¹⁹ C (+1 đơn vị điện tích nguyên tố)."
       ],
       [
         "Năm 1932, J. Chadwick dùng hạt α bắn phá hạt nhân nguyên tử beri đã phát hiện được một loại hạt cơ bản không mang điện, có khối lượng xấp xỉ khối lượng prôton. Hạt cơ bản này là:",
         [
-          "A. neutron.",
+          "A. α.",
           "B. proton.",
           "C. electron.",
-          "D. α."
+          "D. neutron."
         ],
-        0,
+        3,
         "Hạt neutron (n) được James Chadwick phát hiện năm 1932: hạt không mang điện và có khối lượng xấp xỉ 1 amu (gần bằng khối lượng proton)."
       ],
       [
         "Hạt nhân nguyên tử được cấu tạo nên bởi các loại hạt cơ bản là:",
         [
-          "A. proton và electron.",
-          "B. proton và neutron.",
-          "C. neutron và electron.",
-          "D. proton, neutron, electron."
+          "A. proton, neutron, electron.",
+          "B. neutron và electron.",
+          "C. proton và electron.",
+          "D. proton và neutron."
         ],
-        1,
+        3,
         "Hạt nhân nguyên tử gồm 2 loại hạt cơ bản là proton và neutron (riêng đồng vị phổ biến ¹₁H chỉ có 1 proton)."
       ],
       [
         "Để biểu thị kích thước nguyên tử, người ta thường dùng đơn vị nanomet (nm) hay angstrom (Å). Biết rằng 1 nm = 10⁻⁹ m và 1 Å = 10⁻¹⁰ m. Cho biết 1 nm ứng với bao nhiêu Å?",
         [
-          "A. 0,1.",
-          "B. 10.",
-          "C. 1.10⁻¹⁹.",
+          "A. 1.10⁻¹⁹.",
+          "B. 0,1.",
+          "C. 10.",
           "D. 100."
         ],
-        1,
+        2,
         "1 nm = 10⁻⁹ m = 10 × 10⁻¹⁰ m = 10 Å."
       ],
       [
         "Nguyên tử hydrogen là nguyên tử nhỏ nhất với bán kính r_H = 0,53 angstrom. Bán kính nguyên tử hydrogen theo nanomet là bao nhiêu?",
         [
-          "A. 0,053 nm.",
-          "B. 5,3 nm.",
-          "C. 53 nm.",
-          "D. 5,3.10⁻¹⁹ nm."
+          "A. 5,3 nm.",
+          "B. 0,053 nm.",
+          "C. 5,3.10⁻¹⁹ nm.",
+          "D. 53 nm."
         ],
-        0,
+        1,
         "Vì 1 nm = 10 Å nên r_H = 0,53 Å = 0,53 / 10 = 0,053 nm."
       ],
       [
         "Phát biểu nào sau đây luôn chính xác?",
         [
-          "A. Nguyên tử của một nguyên tố luôn luôn được tạo nên từ ba loại hạt proton, neutron và electron.",
-          "B. Electron chuyển động xung quanh hạt nhân nguyên tử rất nhanh tạo nên lớp vỏ nguyên tử.",
-          "C. Với những nguyên tử có nhiều electron, không thể bỏ qua khối lượng electron so với khối lượng của nguyên tử do chúng cũng đáng kể.",
-          "D. Hạt nhân nguyên tử của mọi nguyên tố luôn được tạo ra từ hai loại hạt là proton, neutron."
+          "A. Hạt nhân nguyên tử của mọi nguyên tố luôn được tạo ra từ hai loại hạt là proton, neutron.",
+          "B. Nguyên tử của một nguyên tố luôn luôn được tạo nên từ ba loại hạt proton, neutron và electron.",
+          "C. Electron chuyển động xung quanh hạt nhân nguyên tử rất nhanh tạo nên lớp vỏ nguyên tử.",
+          "D. Với những nguyên tử có nhiều electron, không thể bỏ qua khối lượng electron so với khối lượng của nguyên tử do chúng cũng đáng kể."
         ],
-        1,
+        2,
         "Trong nguyên tử, các electron chuyển động rất nhanh trong không gian xung quanh hạt nhân tạo nên lớp vỏ nguyên tử."
       ],
       [
         "Hạt nhân một nguyên tử nguyên tố Vonfram, dùng làm dây tóc bóng đèn, chứa 74 proton và 110 neutron. Khối lượng nguyên tử Vonfram, W, có giá trị gần nhất với: (Cho mp ≈ mn ≈ 1,67.10⁻²⁴ gam và me = 9,1.10⁻²⁸ gam)",
         [
-          "A. 184 gam.",
-          "B. 1,24.10⁻²⁴ gam.",
-          "C. 3,07.10⁻²² gam.",
-          "D. 4,28.10⁻²² gam."
+          "A. 3,07.10⁻²² gam.",
+          "B. 184 gam.",
+          "C. 4,28.10⁻²² gam.",
+          "D. 1,24.10⁻²⁴ gam."
         ],
-        2,
+        0,
         "Tổng số nucleon = 74 + 110 = 184. Khối lượng nguyên tử m &approx; 184 × 1,67.10⁻²⁴ gam &approx; 3,07.10⁻²² gam."
       ],
       [
         "Nguyên tử calcium có 20 proton trong hạt nhân nguyên tử. Điện tích hạt nhân theo đơn vị Coulomb của nguyên tử calcium là bao nhiêu?",
         [
-          "A. 20+ C.",
-          "B. +3,2.10⁻¹⁹ C.",
-          "C. +3,2.10⁻¹⁸ C.",
-          "D. +6,4.10⁻¹⁸ C."
+          "A. +3,2.10⁻¹⁹ C.",
+          "B. 20+ C.",
+          "C. +6,4.10⁻¹⁸ C.",
+          "D. +3,2.10⁻¹⁸ C."
         ],
-        2,
+        3,
         "Điện tích hạt nhân q = +Z × e = +20 × 1,602.10⁻¹⁹ C &approx; +3,2.10⁻¹⁸ C."
       ],
       [
         "Cho các nhận định liên quan đến một nguyên tử thuỷ ngân có kí hiệu là ¹⁹⁸₈₀Hg như sau: (1) Nguyên tử ²⁰⁰₈₀Hg là đồng vị của nguyên tử trên; (2) Số khối của hạt nhân nguyên tử ¹⁹⁸₈₀Hg là 198; (3) Số hạt mang điện có trong nguyên tử ¹⁹⁸₈₀Hg là 80. Số lượng nhận xét đúng là:",
         [
-          "A. 2.",
-          "B. 0.",
-          "C. 1.",
-          "D. 3."
+          "A. 0.",
+          "B. 1.",
+          "C. 3.",
+          "D. 2."
         ],
-        0,
+        3,
         "(1) đúng vì cùng có Z = 80; (2) đúng vì số khối A = 198; (3) sai vì tổng số hạt mang điện trong nguyên tử là 2Z = 160 hạt. Vậy có 2 nhận xét đúng."
       ],
       [
         "Tổng số proton, neutron và electron trong một nguyên tử X là 13. Kí hiệu nguyên tử của X là:",
         [
-          "A. ⁷₄X.",
-          "B. ⁹₄X.",
-          "C. ¹³₆X.",
-          "D. ¹⁰₅X."
+          "A. ⁹₄X.",
+          "B. ¹³₆X.",
+          "C. ¹⁰₅X.",
+          "D. ⁷₄X."
         ],
-        1,
+        0,
         "Ta có 2Z + N = 13. Với các nguyên tố bền (Z &le; 82): Z &le; N &le; 1,5Z &rArr; 13/3,5 &le; Z &le; 13/3 &rArr; 3,7 &le; Z &le; 4,3 &rArr; Z = 4 (Be), N = 5, A = 9 &rArr; ⁹₄X."
       ],
       [
         "Nhận xét nào luôn chính xác?",
         [
-          "A. Trong hạt nhân nguyên tử, số proton bằng số neutron.",
-          "B. Hạt α chứa 2 electron ở lớp vỏ của nó.",
-          "C. Trong một nguyên tử, số proton trong hạt nhân luôn bằng số electron ở lớp vỏ.",
-          "D. Hạt nhân nguyên tử luôn chứa hai loại hạt neutron, proton."
+          "A. Hạt α chứa 2 electron ở lớp vỏ của nó.",
+          "B. Trong một nguyên tử, số proton trong hạt nhân luôn bằng số electron ở lớp vỏ.",
+          "C. Hạt nhân nguyên tử luôn chứa hai loại hạt neutron, proton.",
+          "D. Trong hạt nhân nguyên tử, số proton bằng số neutron."
         ],
-        2,
+        1,
         "Nguyên tử luôn trung hòa về điện, do đó số đơn vị điện tích dương của hạt nhân (số proton) luôn bằng số đơn vị điện tích âm ở lớp vỏ (số electron)."
       ],
       [
         "Biết rằng 1 mol nguyên tử hydrogen gồm 6,02.10²³ nguyên tử hydrogen có khối lượng là 1,008 gam. Khối lượng nguyên tử hydrogen, ¹₁H, tính theo gam là:",
         [
-          "A. 6,02.10⁻²³ gam.",
-          "B. 1,66.10⁻²⁴ gam.",
-          "C. 3,01.10⁻²³ gam.",
+          "A. 3,01.10⁻²³ gam.",
+          "B. 6,02.10⁻²³ gam.",
+          "C. 1,66.10⁻²⁴ gam.",
           "D. 6,02.10⁻²⁴ gam."
         ],
-        1,
+        2,
         "Khối lượng 1 nguyên tử H = 1,008 / (6,02.10²³) &approx; 1,67.10⁻²⁴ gam (gần nhất với 1,66.10⁻²⁴ gam)."
       ],
       [
         "Một nguyên tử Mg có khối lượng là 4,15.10⁻²³ g. Số khối của hạt nhân nguyên tử này là:",
         [
-          "A. 25.",
+          "A. 24.",
           "B. 23.",
-          "C. 24.",
+          "C. 25.",
           "D. 26."
         ],
-        0,
+        2,
         "Số khối A &approx; m / (1 amu) = 4,15.10⁻²³ / (1,6605.10⁻²⁴) &approx; 25."
       ],
       [
         "Đơn vị khối lượng nguyên tử, u hay amu, bằng:",
         [
           "A. khối lượng của 1/12 khối lượng nguyên tử cacbon.",
-          "B. khối lượng của 1 nguyên tử hydro bất kì.",
-          "C. 1/16 khối lượng của một nguyên tử đồng vị oxi 17.",
-          "D. 1/12 khối lượng một nguyên tử đồng vị cacbon 12."
+          "B. 1/12 khối lượng một nguyên tử đồng vị cacbon 12.",
+          "C. khối lượng của 1 nguyên tử hydro bất kì.",
+          "D. 1/16 khối lượng của một nguyên tử đồng vị oxi 17."
         ],
-        3,
+        1,
         "Theo quy ước quốc tế: 1 amu (hoặc 1 u) được định nghĩa bằng đúng 1/12 khối lượng của một nguyên tử đồng vị carbon-12 (¹²₆C)."
       ],
       [
         "Nguyên tố Ytrium, một nguyên tố được ứng dụng làm vật liệu siêu dẫn, tạo được oxide Y₂O₃ trong đó oxi chiếm 21,26% khối lượng. Tìm nguyên tử khối của Ytri biết nguyên tử khối của oxygen là 16,0 u.",
         [
-          "A. 39,0 u.",
-          "B. 88,9 u.",
-          "C. 168,0 u.",
-          "D. 177,8 u."
+          "A. 88,9 u.",
+          "B. 168,0 u.",
+          "C. 177,8 u.",
+          "D. 39,0 u."
         ],
-        1,
+        0,
         "Trong Y₂O₃: %m(O) = 48 / (2M_Y + 48) = 0,2126 &rArr; 2M_Y + 48 &approx; 225,78 &rArr; M_Y &approx; 88,9 u."
       ],
       [
         "Điện tích hạt nhân nguyên tử nguyên tố chromium, thường được dùng làm thép chống gỉ, là 3,84.10⁻¹⁸ C. Tổng số hạt mang điện trong một nguyên tử chromium là bao nhiêu?",
         [
-          "A. 26 hạt.",
-          "B. 24 hạt.",
-          "C. 48 hạt.",
+          "A. 24 hạt.",
+          "B. 48 hạt.",
+          "C. 26 hạt.",
           "D. 52 hạt."
         ],
-        2,
+        1,
         "Z = 3,84.10⁻¹⁸ / (1,6.10⁻¹⁹) = 24. Tổng số hạt mang điện trong nguyên tử trung hòa = 2Z = 48 hạt."
       ],
       [
         "Số khối hạt nhân một nguyên tử A là 63, điện tích hạt nhân nguyên tử này là 4,64.10⁻¹⁸ C. Số hạt không mang điện trong một nguyên tử A là:",
         [
           "A. 64.",
-          "B. 35.",
+          "B. 29.",
           "C. 34.",
-          "D. 29."
+          "D. 35."
         ],
         2,
         "Z = 4,64.10⁻¹⁸ / (1,6.10⁻¹⁹) = 29. Số hạt không mang điện (neutron) N = A - Z = 63 - 29 = 34 hạt."
@@ -8773,20 +8773,20 @@ const suppliedExams = [
         "Nguyên tử của nguyên tố Y có tổng số hạt cơ bản là 82 trong đó số hạt mang điện nhiều hơn số hạt không mang điện là 22 hạt. Kí hiệu nguyên tử của Y là:",
         [
           "A. ⁵²₃₀Y.",
-          "B. ³⁶₁₆Y.",
-          "C. ⁵⁶₂₆Y.",
-          "D. ¹⁴₆Y."
+          "B. ¹⁴₆Y.",
+          "C. ³⁶₁₆Y.",
+          "D. ⁵⁶₂₆Y."
         ],
-        2,
+        3,
         "2Z + N = 82 và 2Z - N = 22 &rArr; 4Z = 104 &rArr; Z = 26 (Fe), N = 30 &rArr; A = 56. Kí hiệu là ⁵⁶₂₆Y."
       ],
       [
         "Nếu coi nguyên tử là một quả cầu thì khối lượng riêng của một nguyên tử ⁶³Cu là bao nhiêu g/cm³ biết bán kính nguyên tử Cu là 1,35 Å?",
         [
-          "A. 10,52 g/cm³.",
+          "A. 6,12 gam/cm³.",
           "B. 10,15 g/cm³.",
-          "C. 8,91 gam/cm³.",
-          "D. 6,12 gam/cm³."
+          "C. 10,52 g/cm³.",
+          "D. 8,91 gam/cm³."
         ],
         1,
         "r = 1,35 Å = 1,35.10⁻⁸ cm &rArr; V = (4/3)πr³ &approx; 1,0306.10⁻²³ cm³. Khối lượng 1 nguyên tử ⁶³Cu = 63 × 1,6605.10⁻²⁴ gam &approx; 1,0461.10⁻²² gam &rArr; D = m/V &approx; 10,15 g/cm³."
@@ -8797,9 +8797,9 @@ const suppliedExams = [
         "stem": "Hydrogen sulfide là một khí độc, có mùi trứng thối. Một loại phân tử hydrogen sulfide được tạo ra từ các nguyên tử ¹₁H và ³²₁₆S. Xét tính Đúng/Sai của các phát biểu sau:",
         "items": [
           [
-            "a) Hydrogen sulfide nhẹ hơn không khí.",
-            false,
-            "Phát biểu SAI. Khối lượng mol của H₂S = 2(1) + 32 = 34 g/mol > M(không khí) &approx; 29 g/mol nên H₂S nặng hơn không khí."
+            "a) Khối lượng mol phân tử của khí hydrogen sulfide (H₂S) bằng 34 g/mol.",
+            true,
+            "M(H₂S) = 1 × 2 + 32 = 34 g/mol."
           ],
           [
             "b) Số electron có trong một phân tử hydrogen sulfide là 34.",
@@ -8890,76 +8890,76 @@ const suppliedExams = [
       [
         "Các hạt cấu tạo nên hạt nhân của hầu hết các nguyên tử là",
         [
-          "A. electron và proton.",
-          "B. proton và neutron.",
+          "A. proton và neutron.",
+          "B. electron và proton.",
           "C. neutron và electron.",
           "D. electron, proton và neutron."
         ],
-        1,
+        0,
         "Hạt nhân của hầu hết các nguyên tử được cấu tạo bởi hai loại hạt cơ bản là proton và neutron (riêng đồng vị 1_1 H hạt nhân chỉ có 1 proton)."
       ],
       [
         "Nguyên tử chứa những hạt mang điện là",
         [
-          "A. proton và α.",
-          "B. proton và neutron.",
-          "C. proton và electron.",
-          "D. electron và neutron."
+          "A. proton và electron.",
+          "B. proton và α.",
+          "C. electron và neutron.",
+          "D. proton và neutron."
         ],
-        2,
+        0,
         "Trong nguyên tử, các hạt mang điện là proton (mang điện tích dương +1) và electron (mang điện tích âm -1)."
       ],
       [
         "Khi các nguyên tử tiến lại gần nhau để hình thành liên kết hóa học, sự tiếp xúc đầu tiên giữa hai nguyên tử sẽ xảy ra giữa",
         [
-          "A. lớp vỏ với lớp vỏ.",
-          "B. lớp vỏ với hạt nhân.",
-          "C. hạt nhân với hạt nhân.",
+          "A. lớp vỏ với hạt nhân.",
+          "B. hạt nhân với hạt nhân.",
+          "C. lớp vỏ với lớp vỏ.",
           "D. hạt nhân với nguyên tử."
         ],
-        0,
+        2,
         "Lớp vỏ electron bao bọc bên ngoài nguyên tử nên khi các nguyên tử tiến lại gần nhau, sự tiếp xúc đầu tiên xảy ra giữa các lớp vỏ electron với nhau."
       ],
       [
         "Hạt nhân nguyên tử Na có 11 proton và 12 neutron. Số electron trong nguyên tử Na là",
         [
-          "A. 12.",
-          "B. 11.",
-          "C. 23.",
-          "D. 22."
+          "A. 22.",
+          "B. 23.",
+          "C. 11.",
+          "D. 12."
         ],
-        1,
+        2,
         "Vì nguyên tử trung hòa về điện nên số electron bằng số proton: E = P = 11."
       ],
       [
         "Nguyên tử trung hòa về điện vì",
         [
           "A. được tạo nên bởi các hạt không mang điện.",
-          "B. có tổng số hạt proton bằng tổng số hạt electron.",
-          "C. có tổng số hạt electron bằng tổng số hạt neutron.",
-          "D. tổng số hạt neutron bằng tổng số hạt proton."
+          "B. có tổng số hạt electron bằng tổng số hạt neutron.",
+          "C. tổng số hạt neutron bằng tổng số hạt proton.",
+          "D. có tổng số hạt proton bằng tổng số hạt electron."
         ],
-        1,
+        3,
         "Nguyên tử trung hòa về điện vì tổng số hạt proton (mang điện tích dương) bằng tổng số hạt electron (mang điện tích âm)."
       ],
       [
         "Nguyên tử oxygen (O) có 8 electron. Điện tích hạt nhân của nguyên tử oxygen là",
         [
-          "A. -8.",
-          "B. +8.",
+          "A. +8.",
+          "B. -8.",
           "C. -16.",
           "D. 16."
         ],
-        1,
+        0,
         "Nguyên tử oxygen có 8 electron nên hạt nhân có 8 proton, do đó điện tích hạt nhân là +8 (hoặc 8+)."
       ],
       [
         "Thông tin nào sau đây không đúng?",
         [
-          "A. Proton mang điện tích dương, nằm trong hạt nhân, khối lượng gần bằng 1 amu.",
+          "A. Nguyên tử trung hòa điện, có kích thước lớn hơn nhiều so với hạt nhân, nhưng có khối lượng gần bằng khối lượng hạt nhân.",
           "B. Electron mang điện tích âm, nằm trong hạt nhân, khối lượng gần bằng 0 amu.",
           "C. Neutron không mang điện, khối lượng gần bằng 1 amu.",
-          "D. Nguyên tử trung hòa điện, có kích thước lớn hơn nhiều so với hạt nhân, nhưng có khối lượng gần bằng khối lượng hạt nhân."
+          "D. Proton mang điện tích dương, nằm trong hạt nhân, khối lượng gần bằng 1 amu."
         ],
         1,
         "Thông tin B không đúng vì electron chuyển động xung quanh hạt nhân tạo nên lớp vỏ nguyên tử, electron không nằm trong hạt nhân."
@@ -8967,34 +8967,34 @@ const suppliedExams = [
       [
         "Nhận định nào sau đây không đúng?",
         [
-          "A. Tất cả các hạt nhân nguyên tử đều chứa proton và neutron.",
-          "B. Nguyên tử có kích thước vô cùng nhỏ và trung hòa về điện.",
+          "A. Nguyên tử có kích thước vô cùng nhỏ và trung hòa về điện.",
+          "B. Tất cả các hạt nhân nguyên tử đều chứa proton và neutron.",
           "C. Lớp vỏ nguyên tử chứa electron mang điện tích âm.",
           "D. Khối lượng nguyên tử hầu hết tập trung ở hạt nhân."
         ],
-        0,
+        1,
         "Nhận định A không đúng vì đồng vị phổ biến nhất của hydrogen là 1_1 H có hạt nhân chỉ chứa 1 proton, không chứa neutron."
       ],
       [
         "Các đám mây gây hiện tượng sấm sét tạo nên bởi những hạt nước nhỏ li ti mang điện tích. Một phép đo thực nghiệm cho thấy, một giọt nước có đường kính 50 μm, mang một lượng điện tích âm là -3,33.10⁻¹⁷ C. Hãy cho biết điện tích âm của giọt nước trên tương đương với điện tích của bao nhiêu electron?",
         [
-          "A. 208.",
-          "B. 2,08.",
-          "C. 1.",
-          "D. 108."
+          "A. 108.",
+          "B. 208.",
+          "C. 2,08.",
+          "D. 1."
         ],
-        0,
+        1,
         "Số electron = (-3,33.10⁻¹⁷) / (-1,602.10⁻¹⁹) &approx; 207,86 &approx; 208 hạt."
       ],
       [
         "Nếu phóng đại một nguyên tử gold (Au) lên 1 tỉ (10⁹) lần thì kích thước của nó tương đương một quả bóng rổ (có đường kính 30cm) và kích thước của hạt nhân tương đương một hạt cát (có đường kính 0,003cm). Cho biết kích thước nguyên tử Au lớn hơn so với hạt nhân bao nhiêu lần?",
         [
-          "A. 10000.",
-          "B. 1000.",
-          "C. 100.",
-          "D. 10."
+          "A. 10.",
+          "B. 100.",
+          "C. 1000.",
+          "D. 10000."
         ],
-        0,
+        3,
         "Tỉ lệ kích thước = 30 / 0,003 = 10 000 lần."
       ]
     ],
@@ -9157,8 +9157,8 @@ const suppliedExams = [
         "Phát biểu nào sau đây là không đúng?",
         [
           "A. Neutron là hạt không mang điện.",
-          "B. Trong nguyên tử, tổng số electron bằng tổng số proton.",
-          "C. Electron bị lệch về phía bản mang điện dương khi đi qua giữa hai khe của một tụ điện.",
+          "B. Electron bị lệch về phía bản mang điện dương khi đi qua giữa hai khe của một tụ điện.",
+          "C. Trong nguyên tử, tổng số electron bằng tổng số proton.",
           "D. Electron do Niels Bohr khám phá ra."
         ],
         3,
@@ -9167,42 +9167,42 @@ const suppliedExams = [
       [
         "Hạt nhân nguyên tử nào sau đây không chứa hạt neutron?",
         [
-          "A. ⁴₂He.",
-          "B. ²₁H.",
-          "C. ¹₁H.",
-          "D. ³₂He."
+          "A. ¹₁H.",
+          "B. ⁴₂He.",
+          "C. ³₂He.",
+          "D. ²₁H."
         ],
-        2,
+        0,
         "Đồng vị phổ biến nhất của hydrogen là ¹₁H có Z = 1, A = 1 nên số neutron N = 1 - 1 = 0."
       ],
       [
         "Thí nghiệm bắn phá lá vàng mỏng bằng tia α của E. Rutherford giúp ông khám phá ra được",
         [
-          "A. hạt nhân do neutron và proton cấu tạo nên.",
-          "B. hạt nhân có kích thước rất bé so với kích thước của nguyên tử.",
-          "C. hạt electron.",
-          "D. neutron là hạt trung hoà về điện tích."
+          "A. hạt electron.",
+          "B. neutron là hạt trung hoà về điện tích.",
+          "C. hạt nhân do neutron và proton cấu tạo nên.",
+          "D. hạt nhân có kích thước rất bé so với kích thước của nguyên tử."
         ],
-        1,
+        3,
         "Từ sự lệch hướng và bật ngược của một tỉ lệ rất nhỏ hạt α, Rutherford rút ra kết luận hạt nhân mang điện dương tập trung hầu hết khối lượng và có kích thước rất bé so với nguyên tử."
       ],
       [
         "Hai nguyên tử nào sau đây là đồng vị của nhau?",
         [
-          "A. ¹³₆X, ¹³₇Y.",
+          "A. ¹⁶₈X, ¹⁸₈Y.",
           "B. ⁵⁶₂₈X, ⁵⁶₂₇Y.",
-          "C. ¹⁶₈X, ¹⁸₈Y.",
+          "C. ¹³₆X, ¹³₇Y.",
           "D. ¹⁸₈X, ¹⁸₉Y."
         ],
-        2,
+        0,
         "Đồng vị là các nguyên tử có cùng số proton (cùng số hiệu Z = 8) nhưng khác số neutron (số khối khác nhau 16 và 18)."
       ],
       [
         "Biết 1 amu = 1,6605 × 10⁻²⁴ g. Nguyên tử khối của ²⁷₁₃Al là 26,98 amu. Khối lượng tính theo gam của một nguyên tử nhôm là",
         [
           "A. 4,480 × 10⁻²³ g.",
-          "B. 4,483 × 10⁻²³ g.",
-          "C. 26,98.",
+          "B. 26,98.",
+          "C. 4,483 × 10⁻²³ g.",
           "D. 2,159 × 10⁻²³ g."
         ],
         0,
@@ -9211,9 +9211,9 @@ const suppliedExams = [
       [
         "Lớp electron M của nguyên tử X chứa 3 electron. Số hiệu nguyên tử của X là",
         [
-          "A. 5.",
+          "A. 21.",
           "B. 13.",
-          "C. 21.",
+          "C. 5.",
           "D. 15."
         ],
         1,
@@ -9222,8 +9222,8 @@ const suppliedExams = [
       [
         "Một đồng vị của Au có số khối là 197. Hạt nhân nguyên tử Au này có bao nhiêu neutron nếu số hiệu nguyên tử của Au là 79?",
         [
-          "A. 79.",
-          "B. 100.",
+          "A. 100.",
+          "B. 79.",
           "C. 118.",
           "D. 128."
         ],
@@ -9233,9 +9233,9 @@ const suppliedExams = [
       [
         "Một số thuộc tính sau được đưa ra để so sánh các đồng vị của cùng một nguyên tố hoá học: (1) khối lượng nguyên tử; (2) tính chất hoá học; (3) điện tích hạt nhân. Các đồng vị của cùng một nguyên tố hoá học giống nhau về các thuộc tính",
         [
-          "A. chỉ (1) và (2).",
+          "A. cả (1), (2), (3).",
           "B. chỉ (1) và (3).",
-          "C. cả (1), (2), (3).",
+          "C. chỉ (1) và (2).",
           "D. chỉ (2) và (3)."
         ],
         3,
@@ -9246,8 +9246,8 @@ const suppliedExams = [
         [
           "A. 1s²2p².",
           "B. 1s²2s².",
-          "C. 1s¹2s¹2p².",
-          "D. 1s²1p²."
+          "C. 1s²1p².",
+          "D. 1s¹2s¹2p²."
         ],
         1,
         "Nguyên tử Be có Z = 4. Các electron phân bố lần lượt: 1s² 2s²."
@@ -9255,100 +9255,100 @@ const suppliedExams = [
       [
         "Cấu hình electron nguyên tử Mg (Z = 12) ở trạng thái cơ bản là",
         [
-          "A. 1s²2s²2p⁶3s².",
-          "B. 1s²1p⁶2s²3p².",
-          "C. 1s²2s²2p⁸.",
-          "D. 1s²2s²2p²."
+          "A. 1s²1p⁶2s²3p².",
+          "B. 1s²2s²2p⁶3s².",
+          "C. 1s²2s²2p².",
+          "D. 1s²2s²2p⁸."
         ],
-        0,
+        1,
         "Cấu hình của Mg (Z = 12): 1s² 2s² 2p⁶ 3s²."
       ],
       [
         "Cation M⁺ có cấu hình electron giống khí hiếm Neon (Z = 10). Số hiệu nguyên tử M là",
         [
-          "A. 9.",
-          "B. 11.",
-          "C. 10.",
-          "D. 20."
+          "A. 20.",
+          "B. 9.",
+          "C. 11.",
+          "D. 10."
         ],
-        1,
+        2,
         "M &rarr; M⁺ + 1e. Nguyên tử M có số electron = 10 + 1 = 11 &rArr; Z = 11 (Sodium)."
       ],
       [
         "Cấu hình electron của Fe (Z = 26) là",
         [
           "A. [Ar]3d⁸.",
-          "B. [Ar]3d⁶4s².",
-          "C. [Ar]4s²4p⁶.",
-          "D. [Ar]3d⁶."
+          "B. [Ar]3d⁶.",
+          "C. [Ar]3d⁶4s².",
+          "D. [Ar]4s²4p⁶."
         ],
-        1,
+        2,
         "Fe (Z = 26) có cấu hình e: 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s² = [Ar] 3d⁶ 4s²."
       ],
       [
         "Nguyên tố Mn (Z = 25) thuộc ô 25,",
         [
           "A. chu kì 3, nhóm VIIB của bảng tuần hoàn.",
-          "B. chu kì 4, nhóm VB của bảng tuần hoàn.",
-          "C. chu kì 4, nhóm VIIB của bảng tuần hoàn.",
-          "D. chu kì 4, nhóm VIIA của bảng tuần hoàn."
+          "B. chu kì 4, nhóm VIIB của bảng tuần hoàn.",
+          "C. chu kì 4, nhóm VIIA của bảng tuần hoàn.",
+          "D. chu kì 4, nhóm VB của bảng tuần hoàn."
         ],
-        2,
+        1,
         "Mn có cấu hình: [Ar] 3d⁵ 4s². Có 4 lớp electron &rArr; chu kì 4. Tổng electron hóa trị d + s = 5 + 2 = 7 &rArr; nhóm VIIB."
       ],
       [
         "Nguyên tố R thuộc chu kì 5, nhóm IIA của bảng tuần hoàn. Tổng số hạt mang điện có trong một nguyên tử R là",
         [
-          "A. 39.",
-          "B. 78.",
-          "C. 74.",
-          "D. 76."
+          "A. 74.",
+          "B. 39.",
+          "C. 76.",
+          "D. 78."
         ],
-        3,
+        2,
         "R thuộc chu kì 5 nhóm IIA &rArr; R là Strontium (Sr) có Z = 38. Tổng số hạt mang điện trong nguyên tử = 2Z = 76."
       ],
       [
         "Cho các nguyên tố: A(Z = 9), B(Z = 16), D(Z = 25), E(Z = 35), G(Z = 37). Các nguyên tố hoá học thuộc cùng một chu kì là",
         [
           "A. A và B.",
-          "B. B và D.",
-          "C. D và E.",
-          "D. E và G."
+          "B. D và E.",
+          "C. E và G.",
+          "D. B và D."
         ],
-        2,
+        1,
         "D (Z = 25, [Ar] 3d⁵ 4s²) và E (Z = 35, [Ar] 3d¹⁰ 4s² 4p⁵) đều có 4 lớp electron nên cùng thuộc chu kì 4."
       ],
       [
         "Hai nguyên tố X, Y (Z_X < Z_Y) thuộc hai ô kế tiếp nhau trong một chu kì. Tổng số hạt mang điện tích dương trong hạt nhân của hai nguyên tử này là 71. Nguyên tố Y là",
         [
-          "A. một kim loại nhóm A.",
-          "B. một kim loại nhóm B.",
+          "A. một khí hiếm.",
+          "B. một kim loại nhóm A.",
           "C. một phi kim.",
-          "D. một khí hiếm."
+          "D. một kim loại nhóm B."
         ],
-        3,
+        0,
         "Z_X + Z_Y = 71 và Z_Y - Z_X = 1 &rArr; Z_X = 35 (Br), Z_Y = 36 (Kr - khí hiếm Krypton)."
       ],
       [
         "Hai nguyên tố Q, T (Z_Q > Z_T) thuộc cùng một nhóm A ở hai chu kì kế tiếp nhau trong bảng tuần hoàn. Tổng số hạt mang điện trong hai nguyên tử Q, T là 28. Nguyên tố Q thuộc chu kì nào của bảng tuần hoàn?",
         [
-          "A. 3.",
-          "B. 2.",
-          "C. 1.",
-          "D. 4."
+          "A. 4.",
+          "B. 1.",
+          "C. 2.",
+          "D. 3."
         ],
-        0,
+        3,
         "2Z_Q + 2Z_T = 28 &rArr; Z_Q + Z_T = 14. Vì thuộc nhóm A ở 2 chu kì kế tiếp nên Z_Q - Z_T = 8 &rArr; Z_Q = 11 (Na, chu kì 3) và Z_T = 3 (Li, chu kì 2)."
       ],
       [
         "Hai nguyên tố D, E (Z_D < Z_E) thuộc hai nhóm A kế tiếp nhau trong một chu kì. Tổng số hạt mang điện trong hai nguyên tử D, E là 102. Ở trạng thái cơ bản, nguyên tử E có bao nhiêu electron độc thân?",
         [
-          "A. 3.",
-          "B. 0.",
-          "C. 1.",
-          "D. 2."
+          "A. 1.",
+          "B. 2.",
+          "C. 3.",
+          "D. 0."
         ],
-        2,
+        0,
         "2Z_D + 2Z_E = 102 &rArr; Z_D + Z_E = 51. Ở chu kì 4, nhóm IIA (Ca, Z=20) và nhóm IIIA (Ga, Z=31) có 20 + 31 = 51. E là Gallium (Ga, Z = 31) có cấu hình [Ar] 3d¹⁰ 4s² 4p¹ chứa đúng 1 electron độc thân."
       ]
     ],
@@ -9505,63 +9505,63 @@ const suppliedExams = [
       [
         "Các nguyên tố hóa học trong cùng một chu kỳ của bảng tuần hoàn có cùng",
         [
-          "A. số hiệu nguyên tử.",
-          "B. số electron hóa trị.",
-          "C. số lớp electron trong nguyên tử.",
-          "D. số electron ở lớp ngoài cùng."
+          "A. số electron ở lớp ngoài cùng.",
+          "B. số lớp electron trong nguyên tử.",
+          "C. số electron hóa trị.",
+          "D. số hiệu nguyên tử."
         ],
-        2,
+        1,
         "Chu kì là dãy các nguyên tố mà nguyên tử của chúng có cùng số lớp electron, được sắp xếp theo chiều điện tích hạt nhân tăng dần."
       ],
       [
         "Các nguyên tố hóa học trong cùng một nhóm A của bảng tuần hoàn có cùng",
         [
-          "A. số hiệu nguyên tử.",
-          "B. số electron hóa trị.",
-          "C. số lớp electron trong nguyên tử.",
-          "D. số electron ở lớp ngoài cùng."
+          "A. số electron ở lớp ngoài cùng.",
+          "B. số lớp electron trong nguyên tử.",
+          "C. số hiệu nguyên tử.",
+          "D. số electron hóa trị."
         ],
-        1,
+        3,
         "Các nguyên tố trong cùng một nhóm A có cấu hình electron tương tự nhau, đặc biệt có cùng số electron hóa trị (bằng số thứ tự nhóm)."
       ],
       [
         "Số nguyên tố hóa học trong chu kì 1 của bảng tuần hoàn là",
         [
-          "A. 1.",
-          "B. 2.",
-          "C. 6.",
+          "A. 2.",
+          "B. 6.",
+          "C. 1.",
           "D. 84."
         ],
-        1,
+        0,
         "Chu kì 1 chỉ gồm 2 nguyên tố là Hydrogen (H, Z=1) và Helium (He, Z=2)."
       ],
       [
         "Số nguyên tố hóa học trong chu kì 2 của bảng tuần hoàn là",
         [
-          "A. 8.",
-          "B. 2.",
+          "A. 2.",
+          "B. 8.",
           "C. 10.",
           "D. 18."
         ],
-        0,
+        1,
         "Chu kì 2 gồm 8 nguyên tố từ Lithium (Li, Z=3) đến Neon (Ne, Z=10)."
       ],
       [
         "Số nguyên tố hóa học trong chu kì 4 của bảng tuần hoàn là",
         [
-          "A. 18.",
-          "B. 8.",
-          "C. 10.",
-          "D. 32."
+          "A. 32.",
+          "B. 10.",
+          "C. 8.",
+          "D. 18."
         ],
-        0,
+        3,
         "Chu kì 4 là chu kì lớn gồm 18 nguyên tố từ Potassium (K, Z=19) đến Krypton (Kr, Z=36)."
       ],
       [
         "Hai chu kì nào có số nguyên tố hóa học bằng nhau?",
         [
-          "A. Chu kì 1 và chu kì 2.",
-          "B. Chu kì 5 và chu kì 6.",
+          "A. Chu kì 5 và chu kì 6.",
+          "B. Chu kì 1 và chu kì 2.",
           "C. Chu kì 2 và chu kì 3.",
           "D. Chu kì 3 và chu kì 4."
         ],
@@ -9571,21 +9571,21 @@ const suppliedExams = [
       [
         "Các nguyên tố có tính chất hóa học tương tự nhau thường",
         [
-          "A. có cùng số lớp electron trong nguyên tử.",
-          "B. thuộc cùng một chu kì trong bảng tuần hoàn.",
-          "C. có cùng số hiệu nguyên tử.",
-          "D. thuộc cùng một nhóm trong bảng tuần hoàn."
+          "A. có cùng số hiệu nguyên tử.",
+          "B. thuộc cùng một nhóm trong bảng tuần hoàn.",
+          "C. có cùng số lớp electron trong nguyên tử.",
+          "D. thuộc cùng một chu kì trong bảng tuần hoàn."
         ],
-        3,
+        1,
         "Các nguyên tố trong cùng một nhóm có cấu hình electron hóa trị tương tự nhau nên có tính chất hóa học tương tự nhau."
       ],
       [
         "Trong bảng tuần hoàn, các nguyên tố họ s, p",
         [
-          "A. là những kim loại.",
-          "B. là những phi kim.",
+          "A. là những phi kim.",
+          "B. thuộc nhóm B.",
           "C. thuộc nhóm A.",
-          "D. thuộc nhóm B."
+          "D. là những kim loại."
         ],
         2,
         "Các nguyên tố họ s và p là các nguyên tố thuộc nhóm A trong bảng tuần hoàn."
@@ -9593,12 +9593,12 @@ const suppliedExams = [
       [
         "Trong bảng tuần hoàn, các nguyên tố họ d, f",
         [
-          "A. là kim loại nhẹ.",
-          "B. là những phi kim.",
-          "C. thuộc nhóm A.",
-          "D. thuộc nhóm B."
+          "A. là những phi kim.",
+          "B. thuộc nhóm B.",
+          "C. là kim loại nhẹ.",
+          "D. thuộc nhóm A."
         ],
-        3,
+        1,
         "Các nguyên tố họ d và họ f là các kim loại chuyển tiếp, thuộc nhóm B và hai hàng dưới bảng tuần hoàn."
       ],
       [
@@ -9616,9 +9616,9 @@ const suppliedExams = [
         "Cho các nhận xét: (1) Các nguyên tố xếp cùng một hàng trong bảng tuần hoàn có cùng số lớp electron trong nguyên tử; (2) Các nguyên tố thuộc cùng một nhóm có tính chất hóa học tương tự nhau; (3) Chu kì 3 của bảng tuần hoàn có 18 nguyên tố hóa học. Các nhận xét đúng bao gồm",
         [
           "A. chỉ (1) và (2).",
-          "B. chỉ (1) và (3).",
+          "B. cả (1), (2) và (3).",
           "C. chỉ (2) và (3).",
-          "D. cả (1), (2) và (3)."
+          "D. chỉ (1) và (3)."
         ],
         0,
         "(1) và (2) đúng. (3) sai vì chu kì 3 chỉ có 8 nguyên tố hóa học."
@@ -9626,10 +9626,10 @@ const suppliedExams = [
       [
         "Osimium là một nguyên tố hóa học hiếm, thuộc nhóm platin, có ký hiệu Os và số nguyên tử 76. Nó rất cứng, nặng, bền, và được dùng trong hợp kim siêu bền. Trong bảng tuần hoàn, nguyên tố Os ở ô nguyên tố thứ bao nhiêu?",
         [
-          "A. 38.",
+          "A. 67.",
           "B. 76.",
           "C. 152.",
-          "D. 67."
+          "D. 38."
         ],
         1,
         "Số thứ tự của ô nguyên tố đúng bằng số hiệu nguyên tử: Ô thứ 76."
@@ -9637,42 +9637,42 @@ const suppliedExams = [
       [
         "Phân đạm cung cấp nitrogen cho cây dưới dạng NH₄⁺, NO₃⁻. Số hiệu nguyên tử của nitrogen là 7. Trong bảng tuần hoàn, nguyên tố nitrogen thuộc chu kì nào?",
         [
-          "A. Chu kì 1.",
-          "B. Chu kì 2.",
-          "C. Chu kì 3.",
-          "D. Chu kì 5."
+          "A. Chu kì 2.",
+          "B. Chu kì 1.",
+          "C. Chu kì 5.",
+          "D. Chu kì 3."
         ],
-        1,
+        0,
         "Nitrogen có Z = 7, cấu hình 1s² 2s² 2p³ có 2 lớp electron nên thuộc chu kì 2."
       ],
       [
         "Lithium là kim loại nhẹ nhất, thuộc nhóm kim loại kiềm, có ký hiệu Li và số nguyên tử 3. Nó được dùng chủ yếu trong công nghiệp sản xuất pin, acquy và các hợp kim nhẹ. Trong bảng tuần hoàn, nguyên tố lithium thuộc",
         [
-          "A. nhóm IA.",
-          "B. nhóm IIA.",
-          "C. nhóm IIIA.",
-          "D. nhóm IVA."
+          "A. nhóm IIA.",
+          "B. nhóm IIIA.",
+          "C. nhóm IVA.",
+          "D. nhóm IA."
         ],
-        0,
+        3,
         "Li (Z = 3) có 1 electron ở lớp ngoài cùng (2s¹) nên thuộc nhóm IA."
       ],
       [
         "Cho các nhận xét: (1) Các chu kì 1, 2, 3, 4 là các chu kỳ nhỏ; (2) Các chu kỳ 5, 6, 7 là các chu kỳ lớn; (3) Số thứ tự của nhóm A đúng bằng số electron ở lớp ngoài cùng trong nguyên tử của nguyên tố thuộc nhóm đó. Số lượng nhận xét không đúng là",
         [
-          "A. 3.",
-          "B. 2.",
-          "C. 1.",
-          "D. 0."
+          "A. 0.",
+          "B. 3.",
+          "C. 2.",
+          "D. 1."
         ],
-        1,
+        2,
         "(1) sai vì chu kì nhỏ là 1, 2, 3 (chu kì 4 là chu kì lớn); (2) sai vì chu kì lớn là 4, 5, 6, 7; (3) đúng. Vậy có 2 nhận xét không đúng."
       ],
       [
         "Zirconium (ký hiệu Zr, số nguyên tử 40) là kim loại chuyển tiếp màu xám bạc, có độ bền cao và khả năng chống ăn mòn tốt. Zr được sử dụng trong công nghiệp hạt nhân, hợp kim chịu nhiệt và gốm sứ kỹ thuật. Trong bảng tuần hoàn, nguyên tố Zr thuộc",
         [
           "A. chu kì 4, nhóm VB.",
-          "B. chu kì 5, nhóm IIB.",
-          "C. chu kì 5, nhóm IIA.",
+          "B. chu kì 5, nhóm IIA.",
+          "C. chu kì 5, nhóm IIB.",
           "D. chu kì 5, nhóm IVB."
         ],
         3,
@@ -9681,8 +9681,8 @@ const suppliedExams = [
       [
         "Nguyên tố X thuộc chu kì 3, nhóm VIA của bảng tuần hoàn. Số hạt mang điện có trong một nguyên tử X là",
         [
-          "A. 8.",
-          "B. 16.",
+          "A. 16.",
+          "B. 8.",
           "C. 32.",
           "D. 30."
         ],
@@ -9692,12 +9692,12 @@ const suppliedExams = [
       [
         "Tổng số electron, neutron, proton trong một nguyên tử R là 16. Trong bảng tuần hoàn, nguyên tố R ở",
         [
-          "A. chu kì 2, nhóm IIA.",
-          "B. chu kì 2, nhóm IIIA.",
+          "A. chu kì 2, nhóm IIIA.",
+          "B. chu kì 2, nhóm IIA.",
           "C. chu kì 3, nhóm IA.",
           "D. chu kì 2, nhóm VIA."
         ],
-        1,
+        0,
         "Ta có 2Z + N = 16 &rArr; 16/3,5 &le; Z &le; 16/3 &rArr; 4,57 &le; Z &le; 5,33 &rArr; Z = 5 (Boron). Cấu hình 1s² 2s² 2p¹ thuộc chu kì 2, nhóm IIIA."
       ]
     ],
@@ -9855,19 +9855,19 @@ const suppliedExams = [
         "Các hạt cấu tạo nên hầu hết các nguyên tử là",
         [
           "A. electron và proton.",
-          "B. proton và neutron.",
+          "B. electron, proton và neutron.",
           "C. neutron và electron.",
-          "D. electron, proton và neutron."
+          "D. proton và neutron."
         ],
-        3,
+        1,
         "Hầu hết các nguyên tử được cấu tạo từ ba loại hạt cơ bản: electron (vỏ), proton (hạt nhân) và neutron (hạt nhân)."
       ],
       [
         "Loại hạt được tìm thấy trong hạt nhân và không mang điện là",
         [
-          "A. electron.",
+          "A. proton.",
           "B. neutron.",
-          "C. proton.",
+          "C. electron.",
           "D. photon."
         ],
         1,
@@ -9876,10 +9876,10 @@ const suppliedExams = [
       [
         "Loại hạt được tìm thấy trong hạt nhân và mang điện tích dương là",
         [
-          "A. electron.",
-          "B. neutron.",
+          "A. neutron.",
+          "B. photon.",
           "C. proton.",
-          "D. photon."
+          "D. electron."
         ],
         2,
         "Trong hạt nhân, hạt proton mang điện tích dương (+1 đơn vị điện tích nguyên tố)."
@@ -9887,64 +9887,64 @@ const suppliedExams = [
       [
         "Thành phần nào không bị lệch hướng trong trường điện?",
         [
-          "A. Tia α.",
-          "B. Proton.",
-          "C. Nguyên tử hydrogen.",
-          "D. Tia âm cực."
+          "A. Tia âm cực.",
+          "B. Tia α.",
+          "C. Proton.",
+          "D. Nguyên tử hydrogen."
         ],
-        2,
+        3,
         "Nguyên tử hydrogen trung hòa về điện nên khi đi qua điện trường nó không bị lệch hướng."
       ],
       [
         "Đặc điểm của electron là",
         [
-          "A. mang điện tích dương và có khối lượng.",
-          "B. mang điện tích âm và có khối lượng.",
+          "A. mang điện tích âm và có khối lượng.",
+          "B. mang điện tích âm và không có khối lượng.",
           "C. không mang điện và có khối lượng.",
-          "D. mang điện tích âm và không có khối lượng."
+          "D. mang điện tích dương và có khối lượng."
         ],
-        1,
+        0,
         "Electron mang điện tích âm (-1,602.10⁻¹⁹ C) và có khối lượng xác định (me ≈ 9,109.10⁻³¹ kg ≈ 0,00055 amu)."
       ],
       [
         "Số đơn vị điện tích hạt nhân của nguyên tử X là 53. Nguyên tử chứa",
         [
-          "A. 53 electron và 53 proton.",
-          "B. 53 electron và 53 neutron.",
-          "C. 53 proton và 53 neutron.",
-          "D. 53 neutron."
+          "A. 53 neutron.",
+          "B. 53 electron và 53 proton.",
+          "C. 53 electron và 53 neutron.",
+          "D. 53 proton và 53 neutron."
         ],
-        0,
+        1,
         "Nguyên tử trung hòa về điện nên số proton bằng số electron và bằng số đơn vị điện tích hạt nhân: P = E = 53."
       ],
       [
         "Phát biểu nào sau đây là đúng khi nói về nguyên tử?",
         [
-          "A. Trong nguyên tử, số hạt proton luôn bằng số hạt neutron.",
-          "B. Điện tích của một nguyên tử có thể có giá trị âm, dương hoặc bằng 0.",
-          "C. Khối lượng của một nguyên tử (tính theo amu) luôn là số nguyên.",
-          "D. Lớp vỏ nguyên tử tạo nên bởi các electron."
+          "A. Lớp vỏ nguyên tử tạo nên bởi các electron.",
+          "B. Trong nguyên tử, số hạt proton luôn bằng số hạt neutron.",
+          "C. Điện tích của một nguyên tử có thể có giá trị âm, dương hoặc bằng 0.",
+          "D. Khối lượng của một nguyên tử (tính theo amu) luôn là số nguyên."
         ],
-        3,
+        0,
         "Lớp vỏ nguyên tử được tạo thành từ các electron chuyển động rất nhanh xung quanh hạt nhân."
       ],
       [
         "Hạt nhân của nguyên tử nguyên tố A có 24 hạt, trong đó số hạt không mang điện là 12. Số electron trong A là",
         [
-          "A. 12.",
-          "B. 24.",
-          "C. 13.",
-          "D. 6."
+          "A. 6.",
+          "B. 13.",
+          "C. 24.",
+          "D. 12."
         ],
-        0,
+        3,
         "Số proton = tổng hạt hạt nhân - neutron = 24 - 12 = 12 &rArr; số electron = 12."
       ],
       [
         "Trong nguyên tử aluminium (Al), số hạt mang điện tích dương là 13, số hạt không mang điện là 14. Số hạt electron trong Al là",
         [
           "A. 13.",
-          "B. 15.",
-          "C. 27.",
+          "B. 27.",
+          "C. 15.",
           "D. 14."
         ],
         0,
@@ -9953,10 +9953,10 @@ const suppliedExams = [
       [
         "Oxygen (O) có khối lượng nguyên tử là 15,999 amu (1 amu = 1,6605.10⁻²⁷ kg). Khối lượng 1 nguyên tử oxygen tính theo đơn vị gam là",
         [
-          "A. 26,566.10⁻²⁴ gam.",
+          "A. 26,556.10⁻²⁴ gam.",
           "B. 26,665.10⁻²⁴ gam.",
           "C. 26,656.10⁻²⁴ gam.",
-          "D. 26,556.10⁻²⁴ gam."
+          "D. 26,566.10⁻²⁴ gam."
         ],
         2,
         "m = 15,999 × 1,6605.10⁻²⁴ gam ≈ 26,656.10⁻²⁴ gam."
