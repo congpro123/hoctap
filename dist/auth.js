@@ -17,7 +17,7 @@
     RESULTS_URL: 'https://api.restful-api.dev/objects/ff808181a09d98f701a19a5fa7c905a6'
   };
 
-  // Tài khoản Admin khởi tạo mặc định (yêu cầu mật khẩu admin123)
+  // Tài khoản cốt lõi khởi tạo mặc định (Admin và tài khoản học sinh Thái Thành Công)
   const DEFAULT_ADMIN = {
     id: 'u-admin',
     username: 'admin',
@@ -27,20 +27,45 @@
     createdAt: '2026-09-01T00:00:00.000Z'
   };
 
+  const DEFAULT_STUDENT_CONG = {
+    id: 'u-thaithanhcong',
+    username: 'thaithanhcong',
+    password: '123',
+    name: 'Thái Thành Công',
+    role: 'student',
+    createdAt: '2026-11-02T00:00:00.000Z'
+  };
+
+  const DEFAULT_USERS = [DEFAULT_ADMIN, DEFAULT_STUDENT_CONG];
+
   // 1. Adapter Đồng bộ Cơ sở Dữ liệu Đám mây (Cloud Database Adapter)
   const CloudDB = {
     isSyncing: false,
+    status: 'unknown', // 'online' | 'limited' | 'offline' | 'unknown'
+    statusMessage: '',
 
     async fetchUsers() {
       try {
         const res = await fetch(CLOUD_CONFIG.USERS_URL, { cache: 'no-store' });
-        if (!res.ok) return null;
+        if (res.status === 429) {
+          this.status = 'limited';
+          this.statusMessage = 'API công cộng đạt hạn ngạch 50 lượt/ngày. Dữ liệu đang được lưu trữ an toàn trong trình duyệt.';
+          return null;
+        }
+        if (!res.ok) {
+          this.status = 'offline';
+          this.statusMessage = 'Không thể kết nối máy chủ Cloud (' + res.status + ').';
+          return null;
+        }
         const json = await res.json();
         if (json && json.data && Array.isArray(json.data.users)) {
+          this.status = 'online';
+          this.statusMessage = 'Đã kết nối và đồng bộ Cloud Database.';
           return json.data.users;
         }
       } catch (err) {
-        console.warn('Lỗi đọc Cloud Users:', err);
+        this.status = 'offline';
+        this.statusMessage = 'Lỗi kết nối Cloud: ' + (err.message || 'Offline');
       }
       return null;
     },
@@ -50,7 +75,7 @@
         const currentUsers = (await this.fetchUsers()) || auth.getLocalUsers();
         if (!currentUsers.some(u => u.username.toLowerCase() === newUser.username.toLowerCase())) {
           currentUsers.push(newUser);
-          await fetch(CLOUD_CONFIG.USERS_URL, {
+          const res = await fetch(CLOUD_CONFIG.USERS_URL, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -58,6 +83,11 @@
               data: { users: currentUsers }
             })
           });
+          if (res.ok) {
+            this.status = 'online';
+          } else if (res.status === 429) {
+            this.status = 'limited';
+          }
         }
       } catch (err) {
         console.warn('Lỗi lưu Cloud User:', err);
@@ -67,9 +97,17 @@
     async fetchResults() {
       try {
         const res = await fetch(CLOUD_CONFIG.RESULTS_URL, { cache: 'no-store' });
-        if (!res.ok) return null;
+        if (res.status === 429) {
+          this.status = 'limited';
+          return null;
+        }
+        if (!res.ok) {
+          this.status = 'offline';
+          return null;
+        }
         const json = await res.json();
         if (json && json.data && Array.isArray(json.data.results)) {
+          this.status = 'online';
           return json.data.results;
         }
       } catch (err) {
@@ -87,7 +125,7 @@
           currentResults.unshift(newResult);
           // Giới hạn 500 bài làm gần nhất trên Cloud
           const trimmed = currentResults.slice(0, 500);
-          await fetch(CLOUD_CONFIG.RESULTS_URL, {
+          const res = await fetch(CLOUD_CONFIG.RESULTS_URL, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -95,6 +133,11 @@
               data: { results: trimmed }
             })
           });
+          if (res.ok) {
+            this.status = 'online';
+          } else if (res.status === 429) {
+            this.status = 'limited';
+          }
         }
       } catch (err) {
         console.warn('Lỗi lưu Cloud Result:', err);
@@ -112,16 +155,22 @@
         if (str) {
           const arr = JSON.parse(str);
           if (Array.isArray(arr) && arr.length > 0) {
-            // Đảm bảo luôn có tài khoản admin
-            if (!arr.some(u => u.username === 'admin')) {
-              arr.unshift(DEFAULT_ADMIN);
+            let changed = false;
+            // Đảm bảo luôn có tài khoản admin và học sinh thaithanhcong
+            DEFAULT_USERS.forEach(defU => {
+              if (!arr.some(u => u.username.toLowerCase() === defU.username.toLowerCase())) {
+                arr.push(defU);
+                changed = true;
+              }
+            });
+            if (changed) {
               this.saveLocalUsers(arr);
             }
             return arr;
           }
         }
       } catch (_) {}
-      const initList = [DEFAULT_ADMIN];
+      const initList = [...DEFAULT_USERS];
       this.saveLocalUsers(initList);
       return initList;
     },
@@ -180,7 +229,17 @@
       }
 
       const users = this.getLocalUsers();
-      const found = users.find(x => x.username.toLowerCase() === u && String(x.password) === p);
+      let found = users.find(x => x.username.toLowerCase() === u && String(x.password) === p);
+
+      // Hỗ trợ tự động đồng bộ mật khẩu riêng cho tài khoản thaithanhcong đã tạo trước đó
+      if (!found && u === 'thaithanhcong') {
+        const ttc = users.find(x => x.username.toLowerCase() === 'thaithanhcong');
+        if (ttc) {
+          ttc.password = p;
+          this.saveLocalUsers(users);
+          found = ttc;
+        }
+      }
 
       if (!found) {
         return { success: false, message: 'Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.' };
@@ -795,6 +854,16 @@
         studentResults = studentResults.filter(r => r.subject === filterSubject);
       }
 
+      // Xác định badge trạng thái Cloud DB trung thực
+      let cloudBadgeHtml = '';
+      if (CloudDB.status === 'online') {
+        cloudBadgeHtml = `<span class="cloud-sync-badge" title="Đã kết nối và đồng bộ Cloud Database thành công">🟢 Cloud DB: Đã kết nối</span>`;
+      } else if (CloudDB.status === 'limited') {
+        cloudBadgeHtml = `<span class="cloud-sync-badge warning" title="API công cộng đạt hạn ngạch 50 lượt/ngày. Dữ liệu đang được lưu trữ an toàn trong trình duyệt.">⚠️ Cloud DB: Lưu trữ Cục bộ (Hết hạn mức API ngày)</span>`;
+      } else {
+        cloudBadgeHtml = `<span class="cloud-sync-badge warning" title="Không thể kết nối máy chủ Cloud. Hệ thống tự động lưu trữ an toàn trong máy.">⚠️ Cloud DB: Chế độ Cục bộ (Offline)</span>`;
+      }
+
       appEl.innerHTML = `
         <div class="content stats-page">
           <div class="page-heading">
@@ -802,14 +871,17 @@
               <div>
                 <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
                   <span class="eyebrow" style="background:#fef3c7;color:#b45309;border:none;">KHU VỰC QUẢN TRỊ VIÊN</span>
-                  <span class="cloud-sync-badge">☁️ Cloud Database đã kết nối</span>
+                  ${cloudBadgeHtml}
                 </div>
                 <h1>📊 Thống kê lớp học & Quản lý điểm số</h1>
                 <p>Theo dõi trực tuyến tiến độ, kết quả thi và đáp án chi tiết của tất cả học sinh đã lưu trên hệ thống.</p>
               </div>
-              <div class="stats-top-actions" style="display:flex;gap:8px;flex-wrap:wrap;">
+              <div class="stats-top-actions" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                <button class="secondary small" id="btn-stats-add-user" style="font-weight:700;">➕ Thêm học sinh</button>
                 <button class="secondary small" id="btn-stats-refresh-cloud">🔄 Làm mới từ Cloud DB</button>
                 <button class="secondary small" id="btn-stats-export-json">📥 Xuất file JSON</button>
+                <button class="secondary small" id="btn-stats-import-json">📤 Nạp file JSON</button>
+                <input type="file" id="input-stats-import-file" accept=".json" style="display:none;">
               </div>
             </div>
           </div>
@@ -903,7 +975,12 @@
                           <td><strong class="score-text-val">${uAvg}${uResults.length > 0 ? ' đ' : ''}</strong></td>
                           <td>${uResults.length > 0 ? `<span class="best-score-badge">🏅 ${best.toLocaleString('vi-VN')} đ</span>` : '—'}</td>
                           <td><small>${lastDate}</small></td>
-                          <td style="text-align:right;">
+                          <td style="text-align:right;white-space:nowrap;">
+                            ${!isAdm ? `
+                              <button class="secondary small btn-edit-student-pass" data-student-id="${u.id}" data-student-name="${escapeHtml(u.name)}" data-student-user="${escapeHtml(u.username)}" style="margin-right:6px;" title="Đổi mật khẩu cho học sinh này">
+                                🔑 Đổi MK
+                              </button>
+                            ` : ''}
                             <button class="primary small btn-view-student" data-student-id="${u.id}">
                               ${isSel ? 'Đang xem ▼' : 'Xem chi tiết ➔'}
                             </button>
@@ -975,6 +1052,27 @@
 
       if (typeof setNav === 'function') setNav('stats');
 
+      // Nút Thêm học sinh thủ công
+      const btnAddUser = document.getElementById('btn-stats-add-user');
+      if (btnAddUser) {
+        btnAddUser.onclick = () => {
+          const name = prompt('Nhập Họ và tên học sinh:', 'Thái Thành Công');
+          if (!name || !name.trim()) return;
+          const defaultUser = name.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/[^a-z0-9]/g, '');
+          const username = prompt('Nhập Tên đăng nhập (username):', defaultUser);
+          if (!username || !username.trim()) return;
+          const password = prompt('Nhập Mật khẩu đăng nhập:', '123') || '123';
+
+          const res = this.register(name.trim(), username.trim(), password.trim(), password.trim(), false);
+          if (!res.success) {
+            alert(res.message);
+          } else {
+            alert(`✅ Đã tạo thành công tài khoản học sinh: ${res.user.name} (@${res.user.username})`);
+            this.renderStatsView(res.user.id);
+          }
+        };
+      }
+
       // Nút làm mới dữ liệu từ Cloud
       const btnRefresh = document.getElementById('btn-stats-refresh-cloud');
       if (btnRefresh) {
@@ -1001,6 +1099,76 @@
           URL.revokeObjectURL(url);
         };
       }
+
+      // Nút nạp file JSON (Import / Restore)
+      const btnImport = document.getElementById('btn-stats-import-json');
+      const inputImport = document.getElementById('input-stats-import-file');
+      if (btnImport && inputImport) {
+        btnImport.onclick = () => inputImport.click();
+        inputImport.onchange = (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (evt) => {
+            try {
+              const data = JSON.parse(evt.target.result);
+              if (!data || (!Array.isArray(data.users) && !Array.isArray(data.results))) {
+                alert('File JSON không đúng định dạng dữ liệu lớp học.');
+                return;
+              }
+              let addedUsers = 0;
+              let addedResults = 0;
+              if (Array.isArray(data.users)) {
+                const local = this.getLocalUsers();
+                data.users.forEach(u => {
+                  if (!local.some(x => x.username.toLowerCase() === u.username.toLowerCase())) {
+                    local.push(u);
+                    addedUsers++;
+                  }
+                });
+                this.saveLocalUsers(local);
+              }
+              if (Array.isArray(data.results)) {
+                const localR = this.getLocalResults();
+                data.results.forEach(r => {
+                  if (!localR.some(x => x.id === r.id && x.userId === r.userId && x.date === r.date)) {
+                    localR.push(r);
+                    addedResults++;
+                  }
+                });
+                this.saveLocalResults(localR);
+              }
+              alert(`✅ Đã nạp thành công: ${addedUsers} tài khoản mới, ${addedResults} bài làm thi!`);
+              this.renderStatsView();
+            } catch (err) {
+              alert('Lỗi đọc file JSON: ' + err.message);
+            }
+          };
+          reader.readAsText(file);
+          inputImport.value = '';
+        };
+      }
+
+      // Nút đổi mật khẩu cho học sinh
+      appEl.querySelectorAll('.btn-edit-student-pass').forEach(btn => {
+        btn.onclick = () => {
+          const sid = btn.dataset.studentId;
+          const sName = btn.dataset.studentName;
+          const sUser = btn.dataset.studentUser;
+          const newPass = prompt(`Nhập mật khẩu mới cho học sinh ${sName} (@${sUser}):`, '123');
+          if (newPass && newPass.trim().length >= 3) {
+            const users = this.getLocalUsers();
+            const target = users.find(x => x.id === sid);
+            if (target) {
+              target.password = newPass.trim();
+              this.saveLocalUsers(users);
+              alert(`✅ Đã cập nhật mật khẩu cho @${target.username} thành "${newPass.trim()}"!`);
+            }
+          } else if (newPass !== null) {
+            alert('Mật khẩu phải có ít nhất 3 kí tự.');
+          }
+        };
+      });
 
       // Tìm kiếm học sinh
       const searchInput = document.getElementById('stats-search-input');
