@@ -169,4 +169,34 @@ assert.ok(reviewHtml.includes('review-toggle-bar'), 'reviewPast phải có thanh
 assert.ok(reviewHtml.includes('id="review-list-wrong"'), 'reviewPast phải có container review-list-wrong');
 assert.ok(reviewHtml.includes('id="review-list-all"'), 'reviewPast phải có container review-list-all');
 
+console.log('--- 7. Test đề Hóa 10 Đề 17 (THPT Đông Hà) ---');
+const testH17Code = `
+  const e17 = exams.find(e => e.id === 'hoahoc-10-de-17');
+  if (!e17) throw new Error('Không tìm thấy hoahoc-10-de-17');
+  const ans17 = {};
+  e17.questions.forEach((q, i) => { ans17['m' + i] = q[2]; });
+  e17.tf.forEach((q, i) => { q.items.forEach((it, j) => { ans17['t' + i + '-' + j] = it[1]; }); });
+  e17.short.forEach((q, i) => { ans17['s' + i] = q.answer; });
+  const sc17 = scoreExam(e17, ans17);
+  if (sc17.points !== 7 || sc17.correct !== 28) {
+    throw new Error('Sai điểm hoahoc-10-de-17: ' + JSON.stringify(sc17));
+  }
+  renderResult({
+    id: e17.id,
+    title: e17.title,
+    points: sc17.points,
+    maxPoints: sc17.max,
+    correct: sc17.correct,
+    total: sc17.total,
+    answers: ans17,
+    date: new Date().toISOString(),
+    reason: 'manual'
+  });
+`;
+vm.runInContext(testH17Code, context);
+const appHtml17 = elements.get('app').innerHTML;
+assert.ok(appHtml17.includes('hoahoc-10-de-17') || appHtml17.includes('Đông Hà'), 'renderResult phải hiển thị đề Đông Hà');
+assert.ok(appHtml17.includes('exam-figure') && appHtml17.includes('<svg'), 'Phải chứa đồ thị phổ khối lượng (MS) SVG');
+console.log('✓ hoahoc-10-de-17 đạt điểm 7/7 (28/28 ý đúng) và hiển thị đồ thị SVG trơn tru!');
+
 console.log('✅ TẤT CẢ CÁC BƯỚC KIỂM TRA ĐỀU THÀNH CÔNG VÀ CHÍNH XÁC!');

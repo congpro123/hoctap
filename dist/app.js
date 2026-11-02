@@ -241,7 +241,7 @@ function home() {
       <div class="hero-copy">
         <span class="eyebrow">🚀&nbsp; PHÒNG LUYỆN THI TRỰC TUYẾN 2026–2027</span>
         <h1>Học tập hôm nay,<br>tự tin ngày mai.</h1>
-        <p>Hệ thống ôn luyện trực tuyến với trọn bộ 30 đề thi chuẩn cấu trúc mới Bộ GD&ĐT (Toán 10, Vật lí 10, Hóa học 10), chấm điểm tức thì và hướng dẫn giải chi tiết.</p>
+        <p>Hệ thống ôn luyện trực tuyến với trọn bộ ${exams.length} đề thi chuẩn cấu trúc mới Bộ GD&ĐT (Toán 10, Vật lí 10, Hóa học 10), chấm điểm tức thì và hướng dẫn giải chi tiết.</p>
       </div>
       <div class="hero-art">
         <div class="orbit"></div>
@@ -259,7 +259,7 @@ function home() {
     <section class="section-head">
       <div>
         <h2>Đề thi nổi bật giữa kì I</h2>
-        <p>Kho 30 đề chọn lọc chuẩn cấu trúc mới kèm đáp án và hướng dẫn giải chi tiết</p>
+        <p>Kho ${exams.length} đề chọn lọc chuẩn cấu trúc mới kèm đáp án và hướng dẫn giải chi tiết</p>
       </div>
       <button class="text-link" data-viewto="subjects">Xem toàn bộ kho đề ➔</button>
     </section>
@@ -272,7 +272,7 @@ function home() {
       <div class="section-head">
         <div>
           <h2>Khám phá các môn học</h2>
-          <p>Lựa chọn môn học để xem toàn bộ danh sách 10 đề thi từng môn</p>
+          <p>Lựa chọn môn học để xem toàn bộ danh sách các đề thi từng môn</p>
         </div>
       </div>
       ${tiles()}
@@ -316,7 +316,7 @@ function catalog(index) {
       <button class="filter ${index === 1 ? 'active' : ''}" data-subjectto="1">Vật lý 10 (${exams.filter(e => e.subject === 'physics').length})</button>
       <button class="filter ${index === 5 ? 'active' : ''}" data-subjectto="5">Hóa học 10 (${exams.filter(e => e.subject === 'chemistry').length})</button>
     </div>
-    ${filtered.length ? `<div class="cards">${filtered.map(card).join('')}</div>` : `<div class="notice"><b>Bộ đề ${esc(title)} sẽ xuất hiện tại đây.</b><br>Trước mắt, bạn có thể luyện tập với 30 đề Toán 10, Vật lý 10 và Hóa học 10.<br><br><button class="primary" data-viewto="subjects">Xem tất cả đề thi ➔</button></div>`}
+    ${filtered.length ? `<div class="cards">${filtered.map(card).join('')}</div>` : `<div class="notice"><b>Bộ đề ${esc(title)} sẽ xuất hiện tại đây.</b><br>Hiện tại, bạn có thể luyện tập với trọn bộ ${exams.length} đề Toán 10, Vật lý 10 và Hóa học 10.<br><br><button class="primary" data-viewto="subjects">Xem tất cả đề thi ➔</button></div>`}
     ${index === undefined ? `<section class="lower-section"><div class="section-head"><h2>Danh mục môn học</h2></div>${tiles()}</section>` : ''}
   </div>`;
   setNav(index === undefined ? 'subjects' : `subject-${index}`);
