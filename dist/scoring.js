@@ -20,6 +20,15 @@ submitExam=function(reason){
   const e=activeExam;clearInterval(ticker);
   const score=scoreExam(e,answers);
   const currentUser = (typeof window !== 'undefined' && window.auth && typeof window.auth.getCurrentUser === 'function') ? window.auth.getCurrentUser() : null;
+
+  const totalMs = (e.minutes || e.duration || 45) * 60000;
+  const leftMs = (typeof isExamPaused !== 'undefined' && isExamPaused) ? (remainingMs || 0) : Math.max(0, (typeof deadline !== 'undefined' ? deadline : Date.now()) - Date.now());
+  const spentMs = reason === 'time' ? totalMs : Math.max(1000, Math.min(totalMs, totalMs - leftMs));
+  const timeSpentSeconds = Math.round(spentMs / 1000);
+  const m = Math.floor(timeSpentSeconds / 60);
+  const s = timeSpentSeconds % 60;
+  const timeSpentText = reason === 'time' ? `${e.minutes || e.duration || 45} phút (Hết giờ)` : (m > 0 ? (s > 0 ? `${m} phút ${s} giây` : `${m} phút`) : `${s} giây`);
+
   const result={
     id:e.id,
     title:e.title,
@@ -34,7 +43,9 @@ submitExam=function(reason){
     questionSetVersion:2,
     answers:{...answers},
     date:new Date().toISOString(),
-    reason
+    reason,
+    timeSpent: timeSpentSeconds,
+    timeSpentText: timeSpentText
   };
   const all=saved();all.unshift(result);
   localStorage.setItem('hoctap-results',JSON.stringify(all.slice(0,100)));

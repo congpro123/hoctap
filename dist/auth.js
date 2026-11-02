@@ -1205,7 +1205,7 @@
                         <div class="shc-score-row">
                           <div class="shc-score-box ${isPerfect ? 'perfect' : ''}">
                             <span class="shc-score-num">${pts.toLocaleString('vi-VN', { maximumFractionDigits: 2 })} / ${maxP.toLocaleString('vi-VN', { maximumFractionDigits: 2 })}</span>
-                            <small>${r.correct}/${r.total} ý đúng · ${r.reason === 'time' ? 'Hết giờ' : 'Đã nộp'}</small>
+                            <small>${r.correct}/${r.total} ý đúng · ${r.reason === 'time' ? 'Hết giờ' : 'Đã nộp'}${r.timeSpentText ? ` · ⏱ Làm trong: ${escapeHtml(r.timeSpentText)}` : (r.timeSpent ? ` · ⏱ Làm trong: ${Math.ceil(r.timeSpent / 60)} phút` : '')}</small>
                           </div>
                           <button class="primary small btn-review-result" data-result-idx="${rIdx}" data-student-id="${selectedUser.id}">
                             Xem lại câu đúng/sai ➔
@@ -1555,7 +1555,7 @@
             <h2>Bài làm của: ${escapeHtml(sName)}</h2>
             <p style="font-size:15px;color:#475569;margin-bottom:8px;">${escapeHtml(e.title)}</p>
             <div class="score">${pointText(score.points)} / ${pointText(score.max)} điểm</div>
-            <p>${score.correct}/${score.total} ý đúng · Nộp lúc: ${formatDate(r.date)}</p>
+            <p>${score.correct}/${score.total} ý đúng · Nộp lúc: ${formatDate(r.date)}${r.timeSpentText ? ` · ⏱ Thời gian làm bài: <b>${escapeHtml(r.timeSpentText)}</b>` : (r.timeSpent ? ` · ⏱ Thời gian làm bài: <b>${Math.ceil(r.timeSpent / 60)} phút</b>` : '')}</p>
             <div class="score-breakdown">
               <span>Phần I <b>${pointText(score.mc)} / ${pointText(e.questions.length * ((e.mcUnit !== undefined) ? e.mcUnit : 0.25))}</b></span>
               <span>Phần II <b>${pointText(score.tf)} / ${pointText(e.tf.length)}</b></span>

@@ -333,7 +333,7 @@ function history() {
     ${items.length ? `<div class="history-list">${items.map(x => `<div class="history-item">
       <div>
         <strong>${esc(x.title)}</strong>
-        <small>${formatDate(x.date)} · ${x.reason === 'time' ? 'Hết giờ' : 'Đã nộp bài'}</small>
+        <small>${formatDate(x.date)}${x.timeSpentText ? ` · ⏱ Làm trong: ${esc(x.timeSpentText)}` : (x.timeSpent ? ` · ⏱ Làm trong: ${Math.ceil(x.timeSpent / 60)} phút` : '')} · ${x.reason === 'time' ? 'Hết giờ' : 'Đã nộp bài'}</small>
       </div>
       <div class="history-score">${x.correct}/${x.total} (${(x.correct / x.total * 10).toFixed(1).replace('.', ',')} đ)</div>
     </div>`).join('')}</div>` : `<div class="notice">
@@ -730,6 +730,14 @@ function submitExam(reason) {
   const curUser = (typeof auth !== 'undefined' && typeof auth.getCurrentUser === 'function') ? auth.getCurrentUser() : null;
   const examSub = e.subject || (e.id.startsWith('toan-') ? 'math' : e.id.startsWith('vatli-') ? 'physics' : 'chemistry');
 
+  const totalMs = (e.minutes || e.duration || 45) * 60000;
+  const leftMs = isExamPaused ? (remainingMs || 0) : Math.max(0, deadline - Date.now());
+  const spentMs = reason === 'time' ? totalMs : Math.max(1000, Math.min(totalMs, totalMs - leftMs));
+  const timeSpentSeconds = Math.round(spentMs / 1000);
+  const m = Math.floor(timeSpentSeconds / 60);
+  const s = timeSpentSeconds % 60;
+  const timeSpentText = reason === 'time' ? `${e.minutes || e.duration || 45} phút (Hết giờ)` : (m > 0 ? (s > 0 ? `${m} phút ${s} giây` : `${m} phút`) : `${s} giây`);
+
   const result = {
     id: e.id,
     title: e.title,
@@ -742,6 +750,8 @@ function submitExam(reason) {
     answers: { ...answers },
     date: new Date().toISOString(),
     reason,
+    timeSpent: timeSpentSeconds,
+    timeSpentText: timeSpentText,
     userId: curUser ? curUser.id : 'u-congpro123',
     username: curUser ? curUser.username : 'congpro123',
     studentName: curUser ? curUser.name : 'Thái Thành Công'
@@ -769,7 +779,7 @@ function renderResult(r) {
     <div class="result-panel">
       <div class="result-icon">${scoreNum >= 7 ? '🎉' : scoreNum >= 5 ? '📘' : '💪'}</div>
       <h1>${r.reason === 'time' ? 'Đã hết giờ làm bài!' : 'Bạn đã hoàn thành bài thi!'}</h1>
-      <p><b>${esc(r.title)}</b> · Hoàn thành: ${formatDate(r.date)}</p>
+      <p><b>${esc(r.title)}</b> · Hoàn thành: ${formatDate(r.date)}${r.timeSpentText ? ` · ⏱ Thời gian làm bài: <b>${esc(r.timeSpentText)}</b>` : (r.timeSpent ? ` · ⏱ Thời gian làm bài: <b>${Math.ceil(r.timeSpent / 60)} phút</b>` : '')}</p>
       
       <div class="score">${scoreNum.toFixed(2).replace('.', ',')} / 10 Điểm</div>
       <p style="color:#64748b;font-size:15px;margin-bottom:24px;">Trả lời đúng: <b>${r.correct}</b> / ${r.total} ý hỏi · Điểm chuẩn cấu trúc Bộ GD&ĐT 2026–2027.</p>

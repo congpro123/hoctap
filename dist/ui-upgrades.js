@@ -58,7 +58,7 @@ function history(){
     </div>
   </div>${items.length?`<div class="history-list">${items.map((x,i)=>{
     const realIdx = allItems.indexOf(x);
-    return `<div class="history-item"><div><strong>${esc(x.title)}</strong><small>${formatDate(x.date)} · ${x.reason==='time'?'Hết giờ':'Đã nộp bài'} · ${Math.max(0,x.total-x.correct)} ý sai hoặc bỏ trống · Thí sinh: ${esc(x.studentName || (currentUser ? currentUser.name : 'Học sinh'))}</small></div><div class="history-actions"><span class="history-score">${x.correct}/${x.total}</span><button class="secondary" data-review="${realIdx}">Xem câu sai →</button></div></div>`;
+    return `<div class="history-item"><div><strong>${esc(x.title)}</strong><small>${formatDate(x.date)}${x.timeSpentText ? ` · ⏱ Làm trong: <b>${esc(x.timeSpentText)}</b>` : (x.timeSpent ? ` · ⏱ Làm trong: <b>${Math.ceil(x.timeSpent / 60)} phút</b>` : '')} · ${x.reason==='time'?'Hết giờ':'Đã nộp bài'} · ${Math.max(0,x.total-x.correct)} ý sai hoặc bỏ trống · Thí sinh: ${esc(x.studentName || (currentUser ? currentUser.name : 'Học sinh'))}</small></div><div class="history-actions"><span class="history-score">${x.correct}/${x.total}</span><button class="secondary" data-review="${realIdx}">Xem câu sai →</button></div></div>`;
   }).join('')}</div>`:`<div class="notice"><b>Chưa có bài thi nào cho tài khoản ${currentUser ? esc(currentUser.name) : ''}</b>Hãy thử một bộ đề để bắt đầu theo dõi kết quả.<br><br><button class="primary" data-viewto="subjects">Khám phá đề thi →</button></div>`}</div>`;
   setNav('history');
   const swBtn = document.getElementById('btn-hist-switch');
@@ -186,7 +186,7 @@ function reviewPast(index){
     <div id="review-list-all">${all.join('')}</div>
   `;
 
-  app.innerHTML=`<div class="content"><div class="result-panel"><div class="result-icon">📘</div><h1>Xem lại bài đã làm</h1><p>${esc(r.title)} · ${formatDate(r.date)}</p><div class="score">${r.correct}/${r.total}</div><p>${wrong.length} ý sai hoặc bỏ trống${legacy?' · Bài cũ chỉ có phần nhiều lựa chọn':''}</p>${sourceLine(e)}<div class="review-actions"><button class="secondary" data-viewto="history">← Lịch sử làm bài</button><button class="primary" data-start="${e.id}">Làm lại đề này ↻</button></div>${filterBarHtml}<div class="review">${listContainerHtml}</div></div></div>`;
+  app.innerHTML=`<div class="content"><div class="result-panel"><div class="result-icon">📘</div><h1>Xem lại bài đã làm</h1><p>${esc(r.title)} · ${formatDate(r.date)}${r.timeSpentText ? ` · ⏱ Thời gian làm bài: <b>${esc(r.timeSpentText)}</b>` : (r.timeSpent ? ` · ⏱ Thời gian làm bài: <b>${Math.ceil(r.timeSpent / 60)} phút</b>` : '')}</p><div class="score">${r.correct}/${r.total}</div><p>${wrong.length} ý sai hoặc bỏ trống${legacy?' · Bài cũ chỉ có phần nhiều lựa chọn':''}</p>${sourceLine(e)}<div class="review-actions"><button class="secondary" data-viewto="history">← Lịch sử làm bài</button><button class="primary" data-start="${e.id}">Làm lại đề này ↻</button></div>${filterBarHtml}<div class="review">${listContainerHtml}</div></div></div>`;
   setNav('result');window.scrollTo(0,0);
 }
 document.addEventListener('click',event=>{
