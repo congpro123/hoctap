@@ -580,7 +580,16 @@
       const targetId = userId || (cur ? cur.id : null);
       if (!targetId) return [];
       const all = this.getAllResults();
-      return all.filter(r => r.userId === targetId || (!r.userId && targetId === 'u-an'));
+      const users = this.getUsers();
+      const targetUser = users.find(u => u.id === targetId);
+      const targetUsername = targetUser ? (targetUser.username || '').toLowerCase() : '';
+
+      return all.filter(r => {
+        if (r.userId === targetId) return true;
+        if (targetUsername && r.username && r.username.toLowerCase() === targetUsername) return true;
+        if ((targetId === 'u-congpro123' || targetId === 'u-thaithanhcong' || targetUsername === 'congpro123' || targetUsername === 'thaithanhcong') && (r.username === 'congpro123' || r.username === 'thaithanhcong' || !r.userId)) return true;
+        return false;
+      });
     },
 
     getExamStatus(examId, userId) {
@@ -641,6 +650,28 @@
     // Đồng bộ tự động trong nền từ Firebase / Cloud Database khi mở trang
     async syncFromCloudSilently() {
       try {
+        // Tự động chuẩn hóa và đẩy các kết quả cũ chưa có thông tin học sinh lên Firebase
+        const cur = this.getCurrentUser();
+        const localBefore = this.getLocalResults();
+        let fixedLegacy = false;
+        localBefore.forEach(r => {
+          if (!r.userId || !r.username) {
+            r.userId = cur ? cur.id : 'u-congpro123';
+            r.username = cur ? cur.username : 'congpro123';
+            r.studentName = cur ? cur.name : 'Thái Thành Công';
+            if (r.points === undefined) r.points = (r.score !== undefined ? r.score : 0.25);
+            if (r.maxPoints === undefined) r.maxPoints = 10;
+            if (!r.subject) {
+              r.subject = (r.id && r.id.startsWith('toan-')) ? 'math' : (r.id && r.id.startsWith('vatli-')) ? 'physics' : 'chemistry';
+            }
+            fixedLegacy = true;
+          }
+        });
+        if (fixedLegacy) {
+          this.saveLocalResults(localBefore);
+          localBefore.forEach(r => CloudDB.pushResult(r));
+        }
+
         const [cloudUsers, cloudResults] = await Promise.all([
           CloudDB.fetchUsers(),
           CloudDB.fetchResults()

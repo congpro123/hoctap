@@ -520,20 +520,33 @@ function submitExam(reason) {
 
   const totalScore = Math.min(10, Math.round((scoreP1 + scoreP2 + scoreP3) * 100) / 100);
 
+  const curUser = (typeof auth !== 'undefined' && typeof auth.getCurrentUser === 'function') ? auth.getCurrentUser() : null;
+  const examSub = e.subject || (e.id.startsWith('toan-') ? 'math' : e.id.startsWith('vatli-') ? 'physics' : 'chemistry');
+
   const result = {
     id: e.id,
     title: e.title,
+    subject: examSub,
     total: totalItems(e),
     correct,
     score: totalScore,
+    points: totalScore,
+    maxPoints: 10,
     answers: { ...answers },
     date: new Date().toISOString(),
-    reason
+    reason,
+    userId: curUser ? curUser.id : 'u-congpro123',
+    username: curUser ? curUser.username : 'congpro123',
+    studentName: curUser ? curUser.name : 'Thái Thành Công'
   };
 
-  const all = saved();
-  all.unshift(result);
-  localStorage.setItem('hoctap-results', JSON.stringify(all.slice(0, 50)));
+  if (typeof auth !== 'undefined' && typeof auth.saveExamResult === 'function') {
+    auth.saveExamResult(result);
+  } else {
+    const all = saved();
+    all.unshift(result);
+    localStorage.setItem('hoctap-results', JSON.stringify(all.slice(0, 50)));
+  }
   localStorage.removeItem('hoctap-draft');
   activeExam = null;
   renderResult(result);
