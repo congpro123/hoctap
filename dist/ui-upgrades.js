@@ -169,6 +169,43 @@ function reviewPast(index){
     });
   }
 
+  const essayCards = [];
+  if (Array.isArray(e.essay) && e.essay.length > 0) {
+    e.essay.forEach((essay, i) => {
+      const userWork = a['tl' + i];
+      const hasWork = userWork !== undefined && String(userWork).trim() !== '';
+      essayCards.push(`
+        <div class="review-item" id="review-essay-${i}">
+          <div class="review-item-header">
+            <span class="review-part-tag" style="background:#fef3c7;color:#92400e;">Phần IV · Tự luận</span>
+            <span class="review-item-number">${esc(essay.title || `Câu ${i + 1}`)}</span>
+          </div>
+          <div class="review-q-text"><b>${esc(essay.title || `Câu ${i + 1}.`)}</b> ${essay.question}</div>
+          <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+            <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của bạn:</div>
+            <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${hasWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">(Bỏ qua ô nhập / làm ra giấy nháp — đối chiếu lời giải chi tiết và barem điểm chấm bên dưới)</span>'}</div>
+          </div>
+          <div class="solution-box theme-study">
+            <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM:</div>
+            <div class="solution-body">${essay.solution || 'Áp dụng định lý và kiến thức SGK để trình bày lời giải.'}</div>
+          </div>
+        </div>
+      `);
+    });
+  }
+
+  const essaySectionHtml = essayCards.length > 0 ? `
+    <div class="review-essay-section" style="margin-top:32px;border-top:2px dashed #cbd5e1;padding-top:24px;">
+      <div class="section-head" style="margin-bottom:16px;">
+        <div>
+          <h2>Phần IV · Tự luận (${essayCards.length} câu)</h2>
+          <p>Xem lại bài làm / ghi chú bạn đã lưu cùng barem điểm chấm và hướng dẫn giải chi tiết.</p>
+        </div>
+      </div>
+      <div class="review-essay-list">${essayCards.join('')}</div>
+    </div>
+  ` : '';
+
   const filterBarHtml=wrong.length>0?`<div class="review-toggle-bar">
     <button type="button" class="tab-btn active" data-review-filter="wrong">Chỉ câu sai & cần ôn lại (${wrong.length})</button>
     <button type="button" class="tab-btn" data-review-filter="all">Xem tất cả câu & lời giải (${all.length})</button>
@@ -186,8 +223,11 @@ function reviewPast(index){
     <div id="review-list-all">${all.join('')}</div>
   `;
 
-  app.innerHTML=`<div class="content"><div class="result-panel"><div class="result-icon">📘</div><h1>Xem lại bài đã làm</h1><p>${esc(r.title)} · ${formatDate(r.date)}${r.timeSpentText ? ` · ⏱ Thời gian làm bài: <b>${esc(r.timeSpentText)}</b>` : (r.timeSpent ? ` · ⏱ Thời gian làm bài: <b>${Math.ceil(r.timeSpent / 60)} phút</b>` : '')}</p><div class="score">${r.correct}/${r.total}</div><p>${wrong.length} ý sai hoặc bỏ trống${legacy?' · Bài cũ chỉ có phần nhiều lựa chọn':''}</p>${sourceLine(e)}<div class="review-actions"><button class="secondary" data-viewto="history">← Lịch sử làm bài</button><button class="primary" data-start="${e.id}">Làm lại đề này ↻</button></div>${filterBarHtml}<div class="review">${listContainerHtml}</div></div></div>`;
+  app.innerHTML=`<div class="content"><div class="result-panel"><div class="result-icon">📘</div><h1>Xem lại bài đã làm</h1><p>${esc(r.title)} · ${formatDate(r.date)}${r.timeSpentText ? ` · ⏱ Thời gian làm bài: <b>${esc(r.timeSpentText)}</b>` : (r.timeSpent ? ` · ⏱ Thời gian làm bài: <b>${Math.ceil(r.timeSpent / 60)} phút</b>` : '')}</p><div class="score">${r.correct}/${r.total}</div><p>${wrong.length} ý sai hoặc bỏ trống${legacy?' · Bài cũ chỉ có phần nhiều lựa chọn':''}</p>${sourceLine(e)}<div class="review-actions"><button class="secondary" data-viewto="history">← Lịch sử làm bài</button><button class="primary" data-start="${e.id}">Làm lại đề này ↻</button></div>${filterBarHtml}<div class="review">${listContainerHtml}${essaySectionHtml}</div></div></div>`;
   setNav('result');window.scrollTo(0,0);
+  if (typeof tryRenderKatex === 'function') {
+    tryRenderKatex(app);
+  }
 }
 document.addEventListener('click',event=>{
   const button=event.target.closest('[data-review]');

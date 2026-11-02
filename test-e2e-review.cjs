@@ -30,11 +30,21 @@ function mockElement(id) {
       },
       querySelectorAll(sel) {
         if (sel === ':scope > p') {
-          return [{ textContent: '' }, { textContent: '', insertAdjacentHTML() {} }];
+          return [
+            { textContent: '' },
+            {
+              textContent: '',
+              insertAdjacentHTML(pos, html) {
+                if (elements.has('app')) elements.get('app').innerHTML += html;
+              }
+            }
+          ];
         }
         return [mockElement('item-1'), mockElement('item-2')];
       },
-      insertAdjacentHTML() {}
+      insertAdjacentHTML(pos, html) {
+        if (elements.has('app')) elements.get('app').innerHTML += html;
+      }
     });
   }
   return elements.get(id);
@@ -42,7 +52,35 @@ function mockElement(id) {
 
 const document = {
   getElementById: id => mockElement(id),
-  querySelector: sel => mockElement('query-' + sel),
+  querySelector: sel => {
+    if (sel === '.result-panel') {
+      return {
+        querySelector: subSel => {
+          if (subSel === '.score') return { textContent: '' };
+          if (subSel === '.result-icon') return { textContent: '' };
+          if (subSel === '.score-breakdown') return null;
+          return null;
+        },
+        querySelectorAll: subSel => {
+          if (subSel === ':scope > p') {
+            return [
+              { textContent: '' },
+              {
+                textContent: '',
+                insertAdjacentHTML: (pos, html) => {
+                  if (elements.has('app')) {
+                    elements.get('app').innerHTML = elements.get('app').innerHTML.replace(/<\/p>/, '</p>' + html);
+                  }
+                }
+              }
+            ];
+          }
+          return [];
+        }
+      };
+    }
+    return mockElement('query-' + sel);
+  },
   querySelectorAll: sel => [mockElement('q-1'), mockElement('q-2')],
   addEventListener: () => {}
 };
@@ -198,5 +236,42 @@ const appHtml17 = elements.get('app').innerHTML;
 assert.ok(appHtml17.includes('hoahoc-10-de-17') || appHtml17.includes('Đông Hà'), 'renderResult phải hiển thị đề Đông Hà');
 assert.ok(appHtml17.includes('exam-figure') && appHtml17.includes('<svg'), 'Phải chứa đồ thị phổ khối lượng (MS) SVG');
 console.log('✓ hoahoc-10-de-17 đạt điểm 7/7 (28/28 ý đúng) và hiển thị đồ thị SVG trơn tru!');
+
+console.log('--- 8. Test reviewPast với phần tự luận (Phần IV · Tự luận) ---');
+const testEssayReviewCode = `
+  ans17['tl0'] = 'Cấu hình F: 1s2 2s2 2p5, Ca: [Ar] 4s2. F là phi kim, Ca là kim loại.';
+  ans17['tl1'] = '   '; // khoảng trắng -> hiển thị nhắc làm ra nháp
+  ans17['tl2'] = 'Công thức phân tử là AlCl3';
+
+  const essayResultObj = {
+    id: e17.id,
+    title: e17.title,
+    points: sc17.points,
+    maxPoints: sc17.max,
+    correct: sc17.correct,
+    total: sc17.total,
+    answers: ans17,
+    date: new Date().toISOString(),
+    reason: 'manual',
+    timeSpent: 1250,
+    timeSpentText: '20 phút 50 giây'
+  };
+
+  localStorage.setItem('hoctap-results', JSON.stringify([essayResultObj]));
+  reviewPast(0);
+`;
+vm.runInContext(testEssayReviewCode, context);
+const essayReviewHtml = elements.get('app').innerHTML;
+console.log('ESSAY REVIEW HTML LENGTH:', essayReviewHtml.length);
+if (!essayReviewHtml.includes('3 câu tự luận')) {
+  console.log('Snippet of HTML:', essayReviewHtml.slice(0, 1000));
+}
+assert.ok(essayReviewHtml.includes('Phần IV · Tự luận (3 câu)'), 'reviewPast phải hiển thị tiêu đề Phần IV · Tự luận');
+assert.ok(essayReviewHtml.includes('Cấu hình F: 1s2 2s2 2p5'), 'reviewPast phải hiển thị bài làm của học sinh cho câu 1');
+assert.ok(essayReviewHtml.includes('Bỏ qua ô nhập / làm ra giấy nháp'), 'reviewPast phải hiển thị hướng dẫn làm ra nháp khi học sinh để trống');
+assert.ok(essayReviewHtml.includes('Công thức phân tử là AlCl3'), 'reviewPast phải hiển thị bài làm câu 3');
+assert.ok(essayReviewHtml.includes('HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM'), 'reviewPast phải có barem điểm chấm và hướng dẫn giải');
+assert.ok(essayReviewHtml.includes('3 câu tự luận'), 'reviewPast phải có nhãn 3 câu tự luận trong score-breakdown');
+console.log('✓ reviewPast hiển thị đầy đủ bài làm tự luận của học sinh, barem chấm và lời giải chi tiết!');
 
 console.log('✅ TẤT CẢ CÁC BƯỚC KIỂM TRA ĐỀU THÀNH CÔNG VÀ CHÍNH XÁC!');
