@@ -9,7 +9,6 @@
   const STORAGE_USERS = 'hoctap-users';
   const STORAGE_CURRENT_USER = 'hoctap-current-user';
   const STORAGE_RESULTS = 'hoctap-results';
-  const ADMIN_SECRET_KEY = 'ADMIN2026'; // Mã xác thực khi đăng ký tài khoản Quản trị viên mới
 
   // Cấu hình Google Firebase Realtime Database (Đồng bộ thời gian thực đa trình duyệt, đa thiết bị)
   const FIREBASE_CONFIG = {
@@ -387,7 +386,7 @@
     },
 
     // Đăng ký tài khoản riêng: Bắt buộc tạo tài khoản mới
-    register(name, username, password, confirmPassword, isAdminRole = false, secretKey = '') {
+    register(name, username, password, confirmPassword, isAdminRole = false) {
       const n = String(name || '').trim();
       const u = String(username || '').trim().toLowerCase();
       const p = String(password || '').trim();
@@ -406,14 +405,12 @@
         return { success: false, message: 'Mật khẩu xác nhận không trùng khớp.' };
       }
 
-      // Kiểm tra quyền Admin khi đăng ký
-      let finalRole = 'student';
+      // Tuyệt đối không cho phép tự đăng ký quyền Quản trị viên ở giao diện công khai
       if (isAdminRole) {
-        if (String(secretKey || '').trim() !== ADMIN_SECRET_KEY) {
-          return { success: false, message: 'Mã xác thực Quản trị viên không chính xác. Vui lòng kiểm tra lại hoặc bỏ chọn mục này nếu bạn là Học sinh.' };
-        }
-        finalRole = 'admin';
+        return { success: false, message: 'Hệ thống đã khóa tính năng tự đăng ký quyền Quản trị viên.' };
       }
+
+      const finalRole = 'student';
 
       const users = this.getLocalUsers();
       if (users.some(x => x.username.toLowerCase() === u)) {
@@ -869,17 +866,6 @@
                   <input type="password" id="reg-confirm-password" placeholder="Nhập lại mật khẩu phía trên" required>
                 </div>
 
-                <div class="admin-secret-group">
-                  <label style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;cursor:pointer;color:#475569;">
-                    <input type="checkbox" id="reg-is-admin-check">
-                    Đăng ký quyền Quản trị viên (Admin / Giáo viên)
-                  </label>
-                  <div id="admin-secret-box" style="display:none;margin-top:8px;">
-                    <label for="reg-admin-secret" style="font-size:11px;color:#991b1b;font-weight:700;">Mã xác thực Quản trị viên (Admin Secret Key):</label>
-                    <input type="password" id="reg-admin-secret" placeholder="Nhập mã bí mật quản trị do nhà trường cấp">
-                    <small style="color:#64748b;font-size:11px;display:block;margin-top:2px;">Chỉ quản trị viên hoặc giáo viên có mã mới được cấp quyền Admin.</small>
-                  </div>
-                </div>
 
                 <div class="auth-error-msg" id="reg-error-msg"></div>
                 <button type="submit" class="primary auth-submit-btn">Tạo tài khoản và bắt đầu học ➔</button>
@@ -900,14 +886,6 @@
         }
       }
 
-      // Ẩn hiện ô mã bảo mật admin khi tích checkbox
-      const adminCheck = document.getElementById('reg-is-admin-check');
-      const adminSecretBox = document.getElementById('admin-secret-box');
-      if (adminCheck && adminSecretBox) {
-        adminCheck.onchange = () => {
-          adminSecretBox.style.display = adminCheck.checked ? 'block' : 'none';
-        };
-      }
 
       // Chuyển tab
       const tabBtns = modalRoot.querySelectorAll('.auth-tab');
@@ -945,10 +923,7 @@
           const u = document.getElementById('reg-username').value;
           const p = document.getElementById('reg-password').value;
           const cp = document.getElementById('reg-confirm-password').value;
-          const isAdmin = adminCheck ? adminCheck.checked : false;
-          const secret = document.getElementById('reg-admin-secret')?.value || '';
-
-          const res = this.register(name, u, p, cp, isAdmin, secret);
+          const res = this.register(name, u, p, cp);
           if (!res.success) {
             const err = document.getElementById('reg-error-msg');
             if (err) err.textContent = res.message;
