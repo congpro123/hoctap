@@ -3063,24 +3063,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Dùng thước có độ chia nhỏ nhất 1 mm để đo chiều dài một quyển sách giáo khoa Vật lí 10 được kết quả L = (240 ± 1) mm. Sai số tỉ đối δL của phép đo này bằng bao nhiêu phần trăm (nhập số nguyên hoặc số thập phân, ví dụ 0.42)?",
-        "answer": "0.42",
-        "explanation": "δL = (ΔL / L̄) × 100% = (1 / 240) × 100% ≈ 0,42%."
+        "question": "Hai ôtô cùng khởi hành một lúc từ hai địa điểm A và B cách nhau 120 km trên một đường thẳng, chuyển động thẳng đều ngược chiều nhau để gặp nhau. Xe từ A chạy với tốc độ 50 km/h, xe từ B chạy với tốc độ 30 km/h. Sau bao nhiêu giờ kể từ lúc xuất phát thì hai xe gặp nhau?",
+        "answer": "1.5",
+        "explanation": "Phương trình chuyển động của hai xe: x₁ = 50t; x₂ = 120 - 30t. Khi hai xe gặp nhau: 50t = 120 - 30t ⇔ 80t = 120 ⇔ t = 1,5 h."
       },
       {
-        "question": "Một bạn học sinh đi xe đạp thẳng đều từ nhà đến trường cách nhau 3,6 km hết đúng 15 phút. Tốc độ chuyển động của bạn học sinh tính theo đơn vị km/h là bao nhiêu?",
-        "answer": "14.4",
-        "explanation": "t = 15 phút = 0,25 h. v = s / t = 3,6 / 0,25 = 14,4 km/h."
+        "question": "Một chiếc ca nô chạy trên một khúc sông thẳng từ bến A đến bến B rồi ngay lập tức quay trở lại bến A. Vận tốc của ca nô khi xuôi dòng đối với bờ là 30 km/h, khi ngược dòng đối với bờ là 20 km/h. Tốc độ trung bình của ca nô trong toàn bộ chuyến đi cả đi lẫn về (không tính thời gian dừng) bằng bao nhiêu km/h?",
+        "answer": "24",
+        "explanation": "Gọi chiều dài khúc sông là s. Thời gian xuôi dòng t₁ = s/30, ngược dòng t₂ = s/20. Tốc độ trung bình v_tb = 2s / (t₁ + t₂) = 2s / (s/30 + s/20) = 2 / (5/60) = 24 km/h."
       },
       {
-        "question": "Một đoàn tàu hỏa bắt đầu rời ga chuyển động thẳng nhanh dần đều không vận tốc đầu với gia tốc a = 0,4 m/s². Sau bao nhiêu giây kể từ lúc rời ga thì tàu đạt tốc độ 12 m/s?",
-        "answer": "30",
-        "explanation": "t = v / a = 12 / 0,4 = 30 s."
+        "question": "Một ôtô đang chạy thẳng đều với tốc độ 72 km/h (20 m/s) thì người lái xe bất ngờ phát hiện chướng ngại vật phía trước. Thời gian phản xạ của người lái xe từ lúc nhìn thấy chướng ngại vật đến khi bắt đầu đạp phanh là 0,5 giây. Sau khi đạp phanh, ôtô chuyển động chậm dần đều với độ lớn gia tốc 5 m/s² cho đến khi dừng hẳn. Tổng quãng đường ôtô đi được từ thời điểm nhìn thấy chướng ngại vật đến khi xe dừng lại hoàn toàn là bao nhiêu mét?",
+        "answer": "50",
+        "explanation": "Quãng đường trong thời gian phản xạ: s₁ = v₀ · t_px = 20 · 0,5 = 10 m. Quãng đường từ lúc bắt đầu đạp phanh đến khi dừng hẳn: s₂ = (0 - v₀²) / (2a) = -400 / (2 · (-5)) = 40 m. Tổng quãng đường: s = s₁ + s₂ = 10 + 40 = 50 m."
       },
       {
-        "question": "Thả một hòn bi sắt rơi tự do từ tầng thượng của một tòa nhà cao 45 m xuống mặt đất tại nơi có g = 10 m/s². Bỏ qua sức cản không khí. Thời gian rơi của viên bi đến khi chạm đất là bao nhiêu giây?",
-        "answer": "3",
-        "explanation": "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
+        "question": "Thả rơi tự do một hòn bi sắt không vận tốc ban đầu từ đỉnh một tòa tháp cao xuống mặt đất tại nơi có g = 10 m/s². Biết trong 1 giây cuối cùng trước khi chạm đất, hòn bi rơi được một đoạn đường dài 35 m. Bỏ qua mọi sức cản không khí. Chiều cao của tòa tháp bằng bao nhiêu mét?",
+        "answer": "80",
+        "explanation": "Quãng đường rơi trong 1 giây cuối: Δh = 10t - 5 = 35 m ⇒ 10t = 40 ⇒ t = 4 s. Chiều cao của tòa tháp: h = 1/2 · g · t² = 0,5 · 10 · 4² = 80 m."
       }
     ]
   },
@@ -3325,24 +3325,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Một người chạy bộ trên một đường thẳng. Trong 20 phút đầu người đó chạy được 3 km, sau đó đi bộ 2 km trong 30 phút tiếp theo. Tốc độ trung bình của người đó trong toàn bộ 50 phút tập luyện tính theo đơn vị km/h là bao nhiêu?",
-        "answer": "6",
-        "explanation": "Tổng quãng đường s = 3 + 2 = 5 km. Tổng thời gian t = 50 phút = 50/60 = 5/6 h. v_tb = s / t = 5 / (5/6) = 6 km/h."
+        "question": "Hai bạn học sinh A và B đi xe đạp trên cùng một đường thẳng. Bạn A chạy trước với tốc độ không đổi 12 km/h. Bạn B xuất phát sau bạn A một khoảng cách 3 km và chạy với tốc độ không đổi 18 km/h để đuổi theo bạn A. Sau bao nhiêu phút kể từ lúc bạn B xuất phát thì bạn B đuổi kịp bạn A?",
+        "answer": "30",
+        "explanation": "Vận tốc tương đối giữa bạn B và bạn A: v_BA = 18 - 12 = 6 km/h. Thời gian để đuổi kịp: t = d / v_BA = 3 / 6 = 0,5 h = 30 phút."
       },
       {
-        "question": "Một chiếc ca nô chạy xuôi dòng trên một khúc sông từ bến A đến bến B dài 36 km hết 1,5 giờ. Biết vận tốc của dòng nước là 4 km/h. Vận tốc của ca nô so với dòng nước bằng bao nhiêu km/h?",
-        "answer": "20",
-        "explanation": "Vận tốc xuôi dòng v_xuoi = 36 / 1,5 = 24 km/h. Vận tốc ca nô so với nước v₁ = v_xuoi - v_nuoc = 24 - 4 = 20 km/h."
+        "question": "Một chiếc thuyền qua một khúc sông thẳng rộng 240 m. Mũi thuyền luôn hướng vuông góc với bờ sông và thuyền chuyển động với tốc độ không đổi 4 m/s đối với dòng nước. Dòng nước chảy xuôi dòng với tốc độ 3 m/s. Khi sang đến bờ bên kia, điểm cập bến của thuyền bị dòng nước cuốn trôi xuôi theo chiều dòng chảy một đoạn bằng bao nhiêu mét so với vị trí đối diện bờ bên này?",
+        "answer": "180",
+        "explanation": "Thời gian thuyền qua sông: t = d_sông / v_thuyền = 240 / 4 = 60 s. Đoạn đường thuyền bị nước cuốn trôi xuôi dòng: x = v_nước · t = 3 · 60 = 180 m."
       },
       {
-        "question": "Một xe ôtô bắt đầu khởi hành từ trạng thái nghỉ chuyển động thẳng nhanh dần đều với gia tốc 2,5 m/s². Vận tốc của ôtô sau 6 giây kể từ khi khởi hành bằng bao nhiêu m/s?",
-        "answer": "15",
-        "explanation": "v = v₀ + at = 0 + 2,5 · 6 = 15 m/s."
+        "question": "Một chất điểm bắt đầu xuất phát từ trạng thái nghỉ tại gốc tọa độ, chuyển động thẳng nhanh dần đều không vận tốc đầu với gia tốc a = 2 m/s². Quãng đường chất điểm đi được trong giây thứ 4 kể từ lúc bắt đầu chuyển động bằng bao nhiêu mét?",
+        "answer": "7",
+        "explanation": "Quãng đường sau 4 giây: s₄ = 0,5 · 2 · 4² = 16 m. Quãng đường sau 3 giây: s₃ = 0,5 · 2 · 3² = 9 m. Quãng đường đi trong giây thứ 4: Δs₄ = 16 - 9 = 7 m."
       },
       {
-        "question": "Thả một hòn đá rơi tự do từ miệng một giếng sâu xuống đáy giếng tại nơi có g = 10 m/s². Sau 2,5 giây thì hòn đá chạm đáy giếng. Bỏ qua thời gian truyền âm trong không khí, độ sâu của giếng bằng bao nhiêu mét?",
-        "answer": "31.25",
-        "explanation": "h = 1/2 · g · t² = 0,5 · 10 · (2,5)² = 5 · 6,25 = 31,25 m."
+        "question": "Thả một hòn đá nhỏ rơi tự do từ miệng một giếng sâu tại nơi có g = 10 m/s². Biết thời gian từ lúc thả đến khi hòn đá chạm đáy giếng là đúng 3,0 giây. Bỏ qua thời gian truyền âm trong không khí, độ sâu của giếng bằng bao nhiêu mét?",
+        "answer": "45",
+        "explanation": "Độ sâu của giếng: h = 1/2 · g · t² = 0,5 · 10 · 3² = 45 m."
       }
     ]
   },
@@ -3587,24 +3587,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Một chất điểm chuyển động dọc theo trục Ox từ điểm A có tọa độ x_A = 8 m đến điểm B có tọa độ x_B = 32 m. Độ dịch chuyển d của chất điểm bằng bao nhiêu mét?",
-        "answer": "24",
-        "explanation": "d = x_B - x_A = 32 - 8 = 24 m."
+        "question": "Một ôtô chuyển động thẳng từ A đến B. Trên nửa đoạn đường đầu tiên, xe chạy với tốc độ không đổi v₁ = 60 km/h. Trên nửa đoạn đường còn lại, xe chạy với tốc độ không đổi v₂ = 40 km/h. Tốc độ trung bình của ôtô trên cả quãng đường AB bằng bao nhiêu km/h?",
+        "answer": "48",
+        "explanation": "Gọi cả đoạn đường là 2s. Thời gian đi: t₁ = s/60, t₂ = s/40. Tốc độ trung bình: v_tb = 2s / (s/60 + s/40) = 2 / (5/120) = 48 km/h."
       },
       {
-        "question": "Một ca nô chạy xuôi dòng một khúc sông từ bến A đến bến B mất 2 giờ. Biết khoảng cách AB = 48 km và vận tốc của dòng nước chảy là 4 km/h. Vận tốc của ca nô so với dòng nước bằng bao nhiêu km/h?",
-        "answer": "20",
-        "explanation": "v_xuoi = 48 / 2 = 24 km/h. v_ca_no = v_xuoi - v_nuoc = 24 - 4 = 20 km/h."
+        "question": "Một chiếc thuyền máy chạy ngược dòng nước trên một con sông. Khi qua cầu A thì thuyền làm rơi một chiếc can nhựa trôi theo dòng nước. Thuyền tiếp tục chạy ngược dòng thêm 15 phút (0,25 h) đến điểm B thì quay đầu chạy xuôi dòng và đuổi kịp chiếc can nhựa tại điểm C cách cầu A một khoảng 3 km. Vận tốc của dòng nước chảy đối với bờ bằng bao nhiêu km/h?",
+        "answer": "6",
+        "explanation": "Trong hệ quy chiếu dòng nước, can đứng yên nên thời gian quay lại gặp can đúng bằng thời gian đi xa (15 phút). Tổng thời gian can trôi là t = 15 + 15 = 30 phút = 0,5 h. Vận tốc dòng nước: v = AC / t = 3 / 0,5 = 6 km/h."
       },
       {
-        "question": "Một xe ôtô bắt đầu chuyển động thẳng nhanh dần đều từ trạng thái đứng yên với gia tốc a = 2 m/s². Sau bao nhiêu giây kể từ lúc bắt đầu chuyển động thì ôtô đi được quãng đường 64 m?",
-        "answer": "8",
-        "explanation": "s = 1/2 · a · t² &rArr; 64 = 0,5 · 2 · t² &rArr; t² = 64 &rArr; t = 8 s."
+        "question": "Một đoàn tàu hỏa bắt đầu xuất phát từ trạng thái nghỉ, chuyển động thẳng nhanh dần đều với gia tốc a₁ = 0,5 m/s² trong 20 giây. Sau đó tàu tắt máy và chuyển động chậm dần đều với gia tốc có độ lớn 0,25 m/s² cho đến khi dừng lại hẳn. Tổng quãng đường đoàn tàu đi được từ lúc bắt đầu xuất phát đến khi dừng lại hoàn toàn là bao nhiêu mét?",
+        "answer": "300",
+        "explanation": "Vận tốc sau 20 s đầu: v₁ = 0,5 · 20 = 10 m/s. Quãng đường giai đoạn 1: s₁ = 0,5 · 0,5 · 20² = 100 m. Quãng đường giai đoạn 2: s₂ = (0 - 10²) / (2 · (-0,25)) = 200 m. Tổng quãng đường: s = 100 + 200 = 300 m."
       },
       {
-        "question": "Thả rơi tự do một vật từ độ cao h tại nơi có gia tốc trọng trường g = 10 m/s². Khi chạm đất, vận tốc của vật đo được là 20 m/s. Độ cao h lúc thả vật bằng bao nhiêu mét?",
-        "answer": "20",
-        "explanation": "v² = 2gh &rArr; h = v² / (2g) = 20² / (2 · 10) = 400 / 20 = 20 m."
+        "question": "Từ cùng một độ cao rất lớn, hai vật nhỏ A và B được thả rơi tự do không vận tốc đầu lần lượt cách nhau một khoảng thời gian Δt = 1,0 giây tại nơi có g = 10 m/s². Sau bao nhiêu giây kể từ lúc vật B bắt đầu rơi thì khoảng cách theo phương thẳng đứng giữa hai vật bằng 25 m?",
+        "answer": "2",
+        "explanation": "Khoảng cách giữa 2 vật: Δs = 5(t+1)² - 5t² = 10t + 5 = 25 m ⇒ 10t = 20 ⇒ t = 2 s."
       }
     ]
   },
@@ -3849,24 +3849,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Một người đi xe máy xuất phát từ điểm A chạy thẳng đều 18 km về phía Bắc hết 20 phút. Tốc độ chuyển động của xe máy tính theo đơn vị km/h là bao nhiêu?",
-        "answer": "54",
-        "explanation": "t = 20 phút = 1/3 h. v = s / t = 18 / (1/3) = 54 km/h."
+        "question": "Một ôtô chuyển động trên đoạn đường thẳng trong thời gian tổng cộng 2 giờ. Trong nửa thời gian đầu, ôtô chạy với tốc độ không đổi v₁ = 60 km/h. Trong nửa thời gian sau, ôtô chạy với tốc độ không đổi v₂ = 40 km/h. Tốc độ trung bình của ôtô trong cả chuyến đi bằng bao nhiêu km/h?",
+        "answer": "50",
+        "explanation": "Quãng đường đi được: s = 60 · 1 + 40 · 1 = 100 km. Tốc độ trung bình: v_tb = s / t = 100 / 2 = 50 km/h."
       },
       {
-        "question": "Một người chèo thuyền qua sông rộng 120 m. Mũi thuyền luôn hướng vuông góc với bờ sông và vận tốc của thuyền đối với nước là 3 m/s. Vận tốc dòng nước chảy là 4 m/s. Độ lớn vận tốc của thuyền đối với bờ sông bằng bao nhiêu m/s?",
-        "answer": "5",
-        "explanation": "Do hai vận tốc vuông góc nhau: v = √(v₁² + v₂²) = √(3² + 4²) = √25 = 5 m/s."
+        "question": "Hai ca nô A và B cùng chạy ngược dòng trên một khúc sông thẳng. Vận tốc của ca nô A đối với dòng nước là 25 km/h, của ca nô B đối với dòng nước là 15 km/h. Vận tốc của dòng nước đối với bờ là 3 km/h. Vận tốc của ca nô A đối với ca nô B có độ lớn bằng bao nhiêu km/h?",
+        "answer": "10",
+        "explanation": "Vận tốc tương đối giữa hai ca nô: v_AB = v_A/nước - v_B/nước = 25 - 15 = 10 km/h."
       },
       {
-        "question": "Một ôtô đang chạy với tốc độ 18 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 3 m/s². Quãng đường ôtô đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là bao nhiêu mét?",
-        "answer": "54",
-        "explanation": "s = (v² - v₀²) / (2a) = (0 - 18²) / (2 · (-3)) = -324 / (-6) = 54 m."
+        "question": "Một chiếc xe ôtô đang chạy với tốc độ 90 km/h (25 m/s) thì người lái xe hãm phanh chuyển động chậm dần đều để dừng lại trước trạm thu phí. Biết quãng đường xe đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là 125 m. Độ lớn gia tốc hãm của xe ôtô bằng bao nhiêu m/s²?",
+        "answer": "2.5",
+        "explanation": "v² - v₀² = 2as ⇒ 0 - 25² = 2 · a · 125 ⇒ a = -2,5 m/s². Độ lớn gia tốc hãm bằng 2,5 m/s²."
       },
       {
-        "question": "Một vật rơi tự do từ độ cao h. Khi chạm đất, vận tốc của vật đo được là 30 m/s. Lấy g = 10 m/s². Độ cao h lúc thả vật là bao nhiêu mét?",
-        "answer": "45",
-        "explanation": "h = v² / (2g) = 30² / (2 · 10) = 900 / 20 = 45 m."
+        "question": "Một vật rơi tự do không vận tốc ban đầu từ độ cao h = 125 m xuống mặt đất tại nơi có g = 10 m/s². Quãng đường vật rơi được trong 2 giây cuối cùng trước khi chạm đất bằng bao nhiêu mét?",
+        "answer": "80",
+        "explanation": "Tổng thời gian rơi chạm đất: t = √(2 · 125 / 10) = 5 s. Quãng đường rơi trong 3 giây đầu: s₃ = 0,5 · 10 · 3² = 45 m. Quãng đường rơi trong 2 giây cuối: Δs = 125 - 45 = 80 m."
       }
     ]
   },
@@ -4111,24 +4111,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Dùng thước chia milimét đo chiều rộng tấm bìa được kết quả d̄ = 150 mm và sai số tuyệt đối Δd = 1,5 mm. Sai số tỉ đối δd của phép đo bằng bao nhiêu phần trăm (nhập số nguyên hoặc số thập phân)?",
-        "answer": "1",
-        "explanation": "δd = (1,5 / 150) × 100% = 1%."
+        "question": "Trong một thí nghiệm đo gia tốc rơi tự do g = 2s / t², học sinh đo được quãng đường s = (1,000 ± 0,005) m và thời gian rơi t = (0,450 ± 0,009) s. Sai số tỉ đối δg của phép đo gia tốc trọng trường bằng bao nhiêu phần trăm (nhập số nguyên hoặc số thập phân)?",
+        "answer": "4.5",
+        "explanation": "δg = δs + 2δt = (0,005 / 1,000 × 100%) + 2 × (0,009 / 0,450 × 100%) = 0,5% + 4,0% = 4,5%."
       },
       {
-        "question": "Một người chạy bộ quanh một hồ nước hình tròn có bán kính R = 50 m. Người đó chạy đúng một vòng khép kín quanh bờ hồ hết 100 giây. Lấy π = 3,14. Tốc độ trung bình của người đó bằng bao nhiêu m/s?",
-        "answer": "3.14",
-        "explanation": "Chu vi hồ s = 2πR = 2 · 3,14 · 50 = 314 m. v_tb = s / t = 314 / 100 = 3,14 m/s."
+        "question": "Tại một ngã tư đường, hai xe máy A và B cùng xuất phát một lúc từ ngã tư. Xe A chạy thẳng đều về phía Bắc với tốc độ 30 km/h, xe B chạy thẳng đều về phía Đông với tốc độ 40 km/h. Sau 1,5 giờ kể từ lúc xuất phát, khoảng cách giữa hai xe bằng bao nhiêu kilômét?",
+        "answer": "75",
+        "explanation": "s_A = 30 · 1,5 = 45 km; s_B = 40 · 1,5 = 60 km. Khoảng cách: d = √(45² + 60²) = √5625 = 75 km."
       },
       {
-        "question": "Một đoàn tàu hỏa đang di chuyển với vận tốc 72 km/h (20 m/s) thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 1 m/s². Quãng đường đoàn tàu đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là bao nhiêu mét?",
-        "answer": "200",
-        "explanation": "s = (v² - v₀²) / (2a) = (0 - 20²) / (2 · (-1)) = -400 / (-2) = 200 m."
+        "question": "Một đoàn tàu hỏa đang di chuyển với vận tốc 54 km/h (15 m/s) thì hãm phanh chuyển động chậm dần đều với độ lớn gia tốc 0,5 m/s². Quãng đường đoàn tàu đi được sau 10 giây kể từ khi bắt đầu hãm phanh là bao nhiêu mét?",
+        "answer": "125",
+        "explanation": "Thời gian dừng hẳn là 30 s > 10 s. Quãng đường sau 10 s: s = v₀t + 1/2 · at² = 15 · 10 + 0,5 · (-0,5) · 10² = 150 - 25 = 125 m."
       },
       {
-        "question": "Một vật rơi tự do từ độ cao h = 500 m tại nơi có g = 10 m/s². Thời gian vật rơi từ lúc thả đến khi chạm đất là bao nhiêu giây?",
-        "answer": "10",
-        "explanation": "t = √(2h / g) = √(2 · 500 / 10) = √100 = 10 s."
+        "question": "Thả rơi tự do một vật từ độ cao h = 45 m so với mặt đất tại nơi có g = 10 m/s². Khi vật ở độ cao 25 m so với mặt đất thì vận tốc của vật có độ lớn bằng bao nhiêu m/s?",
+        "answer": "20",
+        "explanation": "Quãng đường vật đã rơi: s = 45 - 25 = 20 m. Vận tốc: v = √(2gs) = √(2 · 10 · 20) = 20 m/s."
       }
     ]
   },
@@ -4373,24 +4373,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Dùng thước đo độ dài thu được kết quả chiều dài sợi dây là L = (80,0 ± 0,8) cm. Sai số tỉ đối của phép đo chiều dài này bằng bao nhiêu phần trăm?",
-        "answer": "1",
-        "explanation": "δL = (0,8 / 80,0) × 100% = 1%."
+        "question": "Một người đi bộ trên một đoạn đường thẳng dài 6 km. Trong 2 km đầu người đó đi với tốc độ 4 km/h, trong 4 km sau người đó đi với tốc độ 6 km/h. Tốc độ trung bình của người đó trên cả đoạn đường 6 km bằng bao nhiêu km/h (nhập số làm tròn 2 chữ số thập phân)?",
+        "answer": "5.14",
+        "explanation": "t₁ = 2/4 = 0,5 h; t₂ = 4/6 = 2/3 h. Tổng thời gian t = 7/6 h. v_tb = 6 / (7/6) = 36/7 ≈ 5,14 km/h."
       },
       {
-        "question": "Một bạn học sinh chạy xe đạp điện đi từ trường về nhà cách nhau 4,5 km hết thời gian 15 phút. Tốc độ trung bình của bạn tính theo km/h là bao nhiêu?",
-        "answer": "18",
-        "explanation": "t = 15 phút = 0,25 h. v = 4,5 / 0,25 = 18 km/h."
+        "question": "Một chiếc ca nô chạy xuôi dòng từ bến A đến bến B mất 2 giờ, khi chạy ngược dòng từ B về A mất 3 giờ. Biết bến A cách bến B một khoảng 60 km. Vận tốc của dòng nước đối với bờ sông bằng bao nhiêu km/h?",
+        "answer": "5",
+        "explanation": "v_xuôi = 60/2 = 30 km/h; v_ngược = 60/3 = 20 km/h. Vận tốc nước: v_nước = (30 - 20) / 2 = 5 km/h."
       },
       {
-        "question": "Một xe ôtô đang chạy với tốc độ 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2,5 m/s². Sau bao nhiêu giây kể từ lúc bắt đầu hãm phanh thì xe dừng lại hoàn toàn?",
-        "answer": "8",
-        "explanation": "t = (v - v₀) / a = (0 - 20) / (-2,5) = 8 s."
+        "question": "Một ôtô bắt đầu khởi hành từ trạng thái đứng yên, chuyển động thẳng nhanh dần đều với gia tốc a = 2 m/s² trong 5 giây. Sau đó xe tiếp tục chạy thẳng đều trong 15 giây tiếp theo. Tổng quãng đường ôtô đi được sau 20 giây kể từ khi xuất phát là bao nhiêu mét?",
+        "answer": "175",
+        "explanation": "v₁ = 2 · 5 = 10 m/s. s₁ = 0,5 · 2 · 5² = 25 m. s₂ = 10 · 15 = 150 m. Tổng quãng đường: s = 25 + 150 = 175 m."
       },
       {
-        "question": "Thả một hòn đá rơi tự do từ mép cầu cao 20 m xuống dòng sông tại nơi có g = 10 m/s². Vận tốc của hòn đá ngay trước khi chạm mặt nước bằng bao nhiêu m/s?",
-        "answer": "20",
-        "explanation": "v = √(2gh) = √(2 · 10 · 20) = √400 = 20 m/s."
+        "question": "Một hòn bi sắt rơi tự do không vận tốc ban đầu từ đỉnh một tòa nhà cao tầng. Biết trong giây cuối cùng trước khi chạm đất, viên bi rơi được quãng đường 45 m. Lấy g = 10 m/s². Chiều cao của tòa nhà bằng bao nhiêu mét?",
+        "answer": "125",
+        "explanation": "Δh = 10t - 5 = 45 ⇒ 10t = 50 ⇒ t = 5 s. Chiều cao: h = 0,5 · 10 · 5² = 125 m."
       }
     ]
   },
@@ -4635,24 +4635,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Dùng cân điện tử đo khối lượng của một vật được kết quả m = (250 ± 2) g. Sai số tỉ đối của phép đo khối lượng này bằng bao nhiêu phần trăm?",
-        "answer": "0.8",
-        "explanation": "δm = (2 / 250) × 100% = 0,8%."
+        "question": "Một vận động viên chạy trên một đường chạy thẳng khép kín AB dài 200 m. Lượt đi vận động viên chạy từ A đến B với tốc độ 8 m/s, lượt về chạy từ B quay trở lại A với tốc độ 6 m/s. Tốc độ trung bình của vận động viên trong cả lượt đi và lượt về bằng bao nhiêu m/s (nhập số làm tròn 2 chữ số thập phân)?",
+        "answer": "6.86",
+        "explanation": "t₁ = 200/8 = 25 s; t₂ = 200/6 = 100/3 s. Tổng thời gian t = 175/3 s. v_tb = 400 / (175/3) = 1200/175 ≈ 6,86 m/s."
       },
       {
-        "question": "Một chiếc ca nô chạy xuôi dòng một khúc sông dài 36 km hết 1,5 giờ. Biết vận tốc dòng nước chảy là 4 km/h. Vận tốc của ca nô so với dòng nước bằng bao nhiêu km/h?",
-        "answer": "20",
-        "explanation": "v_xuoi = 36 / 1,5 = 24 km/h. v_cano = 24 - 4 = 20 km/h."
+        "question": "Một chiếc ca nô chạy qua sông với vận tốc đối với nước là 12 km/h hướng vuông góc với dòng sông. Dòng nước chảy xuôi dòng với vận tốc 9 km/h. Vận tốc của chiếc ca nô đối với bờ sông có độ lớn bằng bao nhiêu km/h?",
+        "answer": "15",
+        "explanation": "Do hai hướng vuông góc nhau: v = √(12² + 9²) = √225 = 15 km/h."
       },
       {
-        "question": "Một đoàn tàu hỏa rời ga chuyển động thẳng nhanh dần đều với gia tốc 0,6 m/s². Sau bao nhiêu giây kể từ lúc rời ga thì đoàn tàu đạt tốc độ 18 m/s?",
-        "answer": "30",
-        "explanation": "t = v / a = 18 / 0,6 = 30 s."
+        "question": "Một ôtô đang chạy với tốc độ 20 m/s thì người lái xe hãm phanh cho xe chuyển động chậm dần đều với độ lớn gia tốc 4 m/s². Quãng đường xe ôtô đi được từ thời điểm bắt đầu hãm phanh đến khi dừng lại hẳn là bao nhiêu mét?",
+        "answer": "50",
+        "explanation": "s = (0 - 20²) / (2 · (-4)) = -400 / (-8) = 50 m."
       },
       {
-        "question": "Thả một vật rơi tự do từ độ cao h = 180 m tại nơi có g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất bằng bao nhiêu m/s?",
-        "answer": "60",
-        "explanation": "v = √(2gh) = √(2 · 10 · 180) = √3600 = 60 m/s."
+        "question": "Một vật rơi tự do từ độ cao h = 80 m tại nơi có g = 10 m/s². Thời gian vật rơi đi hết nửa quãng đường đầu tiên (40 m đầu) là bao nhiêu giây (lấy gần đúng 2 chữ số thập phân)?",
+        "answer": "2.83",
+        "explanation": "t₁ = √(2 · 40 / 10) = √8 ≈ 2,83 s."
       }
     ]
   },
@@ -4897,24 +4897,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Dùng thước đo độ dài thu được kết quả l = (50,0 ± 0,5) cm. Sai số tỉ đối của phép đo bằng bao nhiêu phần trăm?",
+        "question": "Hai ôtô A và B chuyển động cùng chiều trên một đường thẳng. Xe A chạy phía trước với tốc độ không đổi 50 km/h. Xe B chạy phía sau cách xe A 20 km với tốc độ không đổi 70 km/h. Sau bao nhiêu giờ kể từ lúc hai xe ở vị trí trên thì xe B đuổi kịp xe A?",
         "answer": "1",
-        "explanation": "δl = (0,5 / 50,0) × 100% = 1%."
+        "explanation": "t = d / (v_B - v_A) = 20 / (70 - 50) = 1,0 h."
       },
       {
-        "question": "Một đoàn tàu hỏa chạy thẳng đều trên đường ray với tốc độ 54 km/h (15 m/s). Thời gian để tàu đi hết quãng đường 27 km là bao nhiêu phút?",
-        "answer": "30",
-        "explanation": "t = s / v = 27 / 54 = 0,5 h = 30 phút."
+        "question": "Một chiếc ca nô chạy ngược dòng sông từ bến A đến bến B mất 3 giờ. Biết vận tốc của ca nô đối với dòng nước là 22 km/h và vận tốc của dòng nước đối với bờ là 2 km/h. Khoảng cách giữa hai bến sông AB bằng bao nhiêu kilômét?",
+        "answer": "60",
+        "explanation": "v_ngược = 22 - 2 = 20 km/h. Khoảng cách AB = 20 · 3 = 60 km."
       },
       {
-        "question": "Một ôtô đang chạy với vận tốc 16 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Quãng đường xe đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là bao nhiêu mét?",
-        "answer": "64",
-        "explanation": "s = (v² - v₀²) / (2a) = (0 - 16²) / (2 · (-2)) = -256 / (-4) = 64 m."
+        "question": "Một xe máy đang chạy thẳng đều với tốc độ 36 km/h (10 m/s) thì tăng ga chuyển động nhanh dần đều với gia tốc a = 1 m/s² trong 10 giây. Quãng đường xe máy đi được trong 10 giây tăng ga đó là bao nhiêu mét?",
+        "answer": "150",
+        "explanation": "s = 10 · 10 + 0,5 · 1 · 10² = 100 + 50 = 150 m."
       },
       {
-        "question": "Thả một vật rơi tự do từ độ cao h. Khi chạm đất, vận tốc của vật đo được là 40 m/s. Lấy g = 10 m/s². Độ cao h lúc thả vật là bao nhiêu mét?",
-        "answer": "80",
-        "explanation": "h = v² / (2g) = 40² / 20 = 1600 / 20 = 80 m."
+        "question": "Thả một hòn đá rơi tự do từ đỉnh tháp cao 180 m xuống mặt đất tại nơi có g = 10 m/s². Sau bao nhiêu giây kể từ lúc thả rơi thì hòn đá rơi được một nửa chiều cao của tháp (90 m đầu, lấy gần đúng 2 chữ số thập phân)?",
+        "answer": "4.24",
+        "explanation": "t = √(2 · 90 / 10) = √18 ≈ 4,24 s."
       }
     ]
   },
@@ -5159,24 +5159,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Một người đi xe đạp chuyển động thẳng đều đi được quãng đường 12 km trong 40 phút. Tốc độ của người đi xe đạp tính theo đơn vị km/h là bao nhiêu?",
-        "answer": "18",
-        "explanation": "t = 40 phút = 2/3 h. v = s / t = 12 / (2/3) = 18 km/h."
+        "question": "Một người đi xe đạp trên đoạn đường AB chia làm 3 đoạn bằng nhau. Đoạn thứ nhất đi với tốc độ 10 km/h, đoạn thứ hai đi với tốc độ 15 km/h, đoạn thứ ba đi với tốc độ 30 km/h. Tốc độ trung bình của người đi xe đạp trên cả đoạn đường AB bằng bao nhiêu km/h?",
+        "answer": "15",
+        "explanation": "v_tb = 3s / (s/10 + s/15 + s/30) = 3 / (6/30) = 15 km/h."
       },
       {
-        "question": "Một chiếc thuyền đi xuôi dòng nước với vận tốc 16 km/h và đi ngược dòng nước với vận tốc 10 km/h. Vận tốc của chiếc thuyền đối với dòng nước đứng yên bằng bao nhiêu km/h?",
-        "answer": "13",
-        "explanation": "v_thuyen = (v_xuoi + v_nguoc) / 2 = (16 + 10) / 2 = 13 km/h."
+        "question": "Một chiếc thuyền chạy xuôi dòng một khúc sông dài 48 km. Biết vận tốc của thuyền đối với dòng nước là 20 km/h và vận tốc của dòng nước đối với bờ là 4 km/h. Thời gian thuyền chạy xuôi dòng hết khúc sông đó bằng bao nhiêu giờ?",
+        "answer": "2",
+        "explanation": "v = 20 + 4 = 24 km/h. t = 48 / 24 = 2,0 h."
       },
       {
-        "question": "Một ôtô đang chạy với tốc độ 12 m/s thì tăng tốc với gia tốc 2 m/s². Quãng đường ôtô đi được sau 4 giây kể từ khi tăng tốc là bao nhiêu mét?",
-        "answer": "64",
-        "explanation": "s = v₀t + 1/2 · at² = 12 · 4 + 0,5 · 2 · 4² = 48 + 16 = 64 m."
+        "question": "Một đoàn tàu hỏa đang chạy với vận tốc 72 km/h (20 m/s) thì hãm phanh chuyển động chậm dần đều và dừng lại hẳn sau khi đi được quãng đường 200 m. Độ lớn gia tốc hãm của đoàn tàu bằng bao nhiêu m/s²?",
+        "answer": "1",
+        "explanation": "v² - v₀² = 2as ⇒ 0 - 20² = 2 · a · 200 ⇒ a = -1 m/s². Độ lớn gia tốc hãm bằng 1 m/s²."
       },
       {
-        "question": "Thả rơi tự do một hòn bi từ độ cao h = 45 m tại nơi có g = 10 m/s². Thời gian hòn bi rơi chạm đất là bao nhiêu giây?",
-        "answer": "3",
-        "explanation": "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
+        "question": "Thả rơi tự do một vật từ độ cao h = 720 m tại nơi có g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất bằng bao nhiêu m/s?",
+        "answer": "120",
+        "explanation": "v = √(2gh) = √(2 · 10 · 720) = √14400 = 120 m/s."
       }
     ]
   },
@@ -5421,24 +5421,24 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Một người đi xe máy từ nhà đến cơ quan cách nhau 15 km hết thời gian 25 phút. Tốc độ trung bình của người này tính theo đơn vị km/h là bao nhiêu?",
-        "answer": "36",
-        "explanation": "t = 25 phút = 25/60 = 5/12 h. v = s / t = 15 / (5/12) = 36 km/h."
+        "question": "Một người đi bộ xuất phát từ điểm O đi thẳng 400 m về hướng Nam, sau đó rẽ sang hướng Tây đi thẳng tiếp 300 m. Độ lớn của vectơ độ dịch chuyển của người đó so với điểm O bằng bao nhiêu mét?",
+        "answer": "500",
+        "explanation": "Do hai hướng Nam và Tây vuông góc nhau nên độ dịch chuyển: d = √(400² + 300²) = √250000 = 500 m."
       },
       {
-        "question": "Một chiếc ca nô chạy xuôi dòng từ bến A đến bến B cách nhau 48 km hết 2 giờ. Biết vận tốc của dòng nước là 4 km/h. Vận tốc của ca nô đối với dòng nước đứng yên bằng bao nhiêu km/h?",
-        "answer": "20",
-        "explanation": "v_xuoi = 48 / 2 = 24 km/h. v_ca_no = 24 - 4 = 20 km/h."
+        "question": "Một ca nô chạy ngược dòng một đoạn sông dài 36 km. Biết vận tốc của ca nô đối với dòng nước là 22 km/h và vận tốc của nước đối với bờ là 4 km/h. Thời gian ca nô chạy ngược dòng hết đoạn sông đó là bao nhiêu giờ?",
+        "answer": "2",
+        "explanation": "v_ngược = 22 - 4 = 18 km/h. t = 36 / 18 = 2,0 h."
       },
       {
-        "question": "Một ôtô đang chạy với vận tốc 16 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Sau bao nhiêu giây kể từ lúc bắt đầu hãm phanh thì ôtô dừng lại hoàn toàn?",
+        "question": "Một ôtô đang chạy với tốc độ 24 m/s thì người lái xe đạp phanh chuyển động chậm dần đều với gia tốc có độ lớn 3 m/s². Sau bao nhiêu giây kể từ lúc bắt đầu đạp phanh thì xe ôtô dừng lại hoàn toàn?",
         "answer": "8",
-        "explanation": "t = (v - v₀) / a = (0 - 16) / (-2) = 8 s."
+        "explanation": "t = (v - v₀) / a = (0 - 24) / (-3) = 8 s."
       },
       {
-        "question": "Thả một vật rơi tự do từ độ cao h tại nơi có g = 10 m/s². Khi chạm đất, vật đạt tốc độ 30 m/s. Độ cao h lúc thả vật bằng bao nhiêu mét?",
-        "answer": "45",
-        "explanation": "h = v² / (2g) = 30² / 20 = 900 / 20 = 45 m."
+        "question": "Một hòn sỏi nhỏ được thả rơi tự do từ đỉnh một tòa tháp cao tầng tại nơi có g = 9,8 m/s². Biết hòn sỏi chạm đất sau thời gian đúng 5,0 giây. Chiều cao của tòa tháp bằng bao nhiêu mét?",
+        "answer": "122.5",
+        "explanation": "h = 1/2 · g · t² = 0,5 · 9,8 · 5² = 122,5 m."
       }
     ]
   },
