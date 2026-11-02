@@ -456,9 +456,9 @@
       const isAdm = this.isAdmin(cur);
 
       if (cur && isAdm) {
-        statsLink.innerHTML = `<span>📊</span> Thống kê lớp học <span class="admin-badge-tag">Admin</span>`;
+        statsLink.innerHTML = `<span>📊</span> Thống kê lớp <span class="admin-badge-tag">Admin</span>`;
       } else {
-        statsLink.innerHTML = `<span>🔒</span> Thống kê lớp học <span class="admin-lock-tag">Admin</span>`;
+        statsLink.innerHTML = `<span>🔒</span> Thống kê lớp <span class="admin-lock-tag">Admin</span>`;
       }
     },
 
