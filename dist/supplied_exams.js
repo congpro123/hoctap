@@ -2353,270 +2353,734 @@ const suppliedExams = [
     ]
   },
   {
-    "id": "vatli-10-de-01",
-    "title": "Vật lí 10 - Đề 01 - Trường THPT Hướng Hóa – Quảng Trị (Đề chuẩn ma trận 2026)",
-    "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
-    "mcUnit": 0.25,
-    "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Hướng Hóa",
-      "province": "Quảng Trị",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14299/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-huong-hoa-quang-tri",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "id": "toan-10-de-11",
+    "title": "Toán 10 - Đề 11 - Đề ôn tập kiểm tra giữa học kì I",
+    "subject": "math",
+    "duration": 90,
+    "school": "Đề ôn thi chuẩn cấu trúc Bộ GD&ĐT",
+    "province": "Đề chuẩn",
+    "year": "2026–2027",
+    "sourceUrl": "#",
     "questions": [
       [
-        "Lĩnh vực nghiên cứu nào sau đây KHÔNG thuộc đối tượng nghiên cứu cốt lõi của Vật lí học?",
+        "Cho mệnh đề P: \"&radic;2 là số hữu tỉ\". Hãy phát biểu mệnh đề phủ định của mệnh đề P.",
         [
-          "Các dạng vận động của vật chất và năng lượng.",
-          "Quy luật biến đổi tâm lí xã hội học của con người.",
-          "Hiện tượng quang học, nhiệt học và điện từ.",
-          "Cấu trúc vi mô của nguyên tử và các hạt cơ bản."
+          "A. P: \"&radic;2 là số vô tỉ\".",
+          "B. P: \"&radic;2 là số tự nhiên\".",
+          "C. P: \"&radic;2 là số nguyên\".",
+          "D. P: \"&radic;2 không phải là số hữu tỉ\"."
+        ],
+        3,
+        "Theo định nghĩa mệnh đề phủ định trong SGK Toán 10: Mệnh đề phủ định của mệnh đề P là mệnh đề \"Không phải P\", kí hiệu là P̄. Phủ định trực tiếp của khẳng định \"&radic;2 là số hữu tỉ\" là \"&radic;2 không phải là số hữu tỉ\" (thêm từ \"không phải\")."
+      ],
+      [
+        "Phát biểu nào sau đây không phải là mệnh đề P &rArr; Q?",
+        [
+          "A. Nếu P thì Q.",
+          "B. P là điều kiện đủ để có Q.",
+          "C. Q là điều kiện cần để có P.",
+          "D. P là điều kiện cần để có Q."
+        ],
+        3,
+        "Trong mệnh đề kéo theo P &rArr; Q, P là giả thiết (điều kiện đủ để có Q) và Q là kết luận (điều kiện cần để có P). Khẳng định \"P là điều kiện cần để có Q\" là cách diễn đạt của mệnh đề đảo Q &rArr; P, do đó không phải là mệnh đề P &rArr; Q."
+      ],
+      [
+        "Mệnh đề \"&exist;x &isin; <b>R</b>, x<sup>2</sup> = 18\" được phát biểu là:",
+        [
+          "A. Chỉ có một số thực mà bình phương của nó bằng 18.",
+          "B. Có ít nhất một số thực mà bình phương của nó bằng 18.",
+          "C. Nếu x là một số thực thì x<sup>2</sup> = 18.",
+          "D. Bình phương của mỗi số thực bằng 18."
         ],
         1,
-        "Vật lí học nghiên cứu các dạng vận động của vật chất và năng lượng. Tâm lí xã hội học thuộc phạm trù khoa học xã hội."
+        "Kí hiệu &exist; đọc là \"tồn tại\" hoặc \"có ít nhất một\". Do đó mệnh đề \"&exist;x &isin; <b>R</b>, x<sup>2</sup> = 18\" được phát biểu chuẩn là: \"Có ít nhất một số thực mà bình phương của nó bằng 18\"."
       ],
       [
-        "Trong phòng thực hành Vật lí, biển báo có hình tam giác đều viền đen, nền vàng, bên trong có hình vẽ như hình bên mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><path d=\"M52,28 L36,54 L48,54 L44,76 L66,48 L54,48 Z\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo nguy hiểm về điện</div></div>",
+        "Cho tập hợp A = {1; 3; 5; 7; 9}. Tập hợp nào sau đây không phải là tập con của tập A?",
         [
-          "Cảnh báo nơi có điện cao thế nguy hiểm.",
-          "Cảnh báo khu vực có chất dễ cháy.",
-          "Bắt buộc phải đeo găng tay cách điện.",
-          "Cấm sử dụng thiết bị dùng điện."
+          "A. {1; 3; 5}.",
+          "B. &empty;.",
+          "C. {1; 3}.",
+          "D. {1; 3; 6; 9}."
         ],
-        0,
-        "Biển tam giác vàng viền đen hình tia sét là biển cảnh báo nguy hiểm về điện (nguy cơ điện giật, điện áp cao)."
+        3,
+        "Tập hợp {1; 3; 6; 9} chứa phần tử 6 không thuộc tập hợp A (6 &notin; A), do đó theo định nghĩa tập con trong Toán 10 thì {1; 3; 6; 9} không phải là tập con của A."
       ],
       [
-        "Một học sinh dùng thước chia đến milimét đo chiều dài cuốn sách Vật lí 10 được giá trị trung bình L̄ = 240 mm. Sai số dụng cụ lấy bằng một nửa độ chia nhỏ nhất là ΔL = 0,5 mm. Cách ghi kết quả đo đúng là:",
+        "Miền nghiệm của bất phương trình 2x + y - 4 &gt; 0 KHÔNG chứa điểm nào sau đây?",
         [
-          "L = 240 ± 0,5 mm.",
-          "L = 240 ± 1 mm.",
-          "L = 240,0 ± 0,05 mm.",
-          "L = 24 ± 0,5 cm."
+          "A. (1; 1).",
+          "B. (3; 1).",
+          "C. (2; 2).",
+          "D. (0; 5)."
         ],
         0,
-        "Kết quả đo được viết dưới dạng: A = Ā ± ΔA. Ở đây Ā = 240 mm và ΔA = 0,5 mm, cùng đơn vị và bậc thập phân phù hợp."
+        "Thay (1; 1) vào: 2(1) + 1 - 4 = -1 &le; 0 nên điểm (1; 1) không thuộc miền nghiệm."
       ],
       [
-        "Cho một đại lượng đo có giá trị A = (50 ± 1) cm. Sai số tỉ đối δA của phép đo này bằng:",
+        "Trong các cặp số sau đây, cặp nào là nghiệm của bất phương trình 3x + 4y &lt; 1?",
         [
-          "2,0%.",
-          "1,0%.",
-          "0,5%.",
-          "5,0%."
+          "A. (-2; 1).",
+          "B. (3; 7).",
+          "C. (0; 1).",
+          "D. (1; 1)."
         ],
         0,
-        "Sai số tỉ đối: δA = (ΔA / Ā) × 100% = (1 / 50) × 100% = 2,0%."
+        "Thay tọa độ điểm (-2; 1) vào vế trái bất phương trình: 3(-2) + 4(1) = -6 + 4 = -2 &lt; 1 (thỏa mãn). Vậy cặp (-2; 1) là nghiệm."
       ],
       [
-        "Một học sinh đi bộ từ cổng trường vào lớp học theo đường thẳng hướng Đông dài 120 m. Độ dịch chuyển của học sinh đó có độ lớn bằng:",
+        "Cho bất phương trình x - y &le; 2. Khẳng định nào sau đây là đúng?",
         [
-          "120 m.",
-          "60 m.",
-          "0 m.",
-          "240 m."
+          "A. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 chứa gốc tọa độ.",
+          "B. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 không chứa gốc tọa độ.",
+          "C. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = -2 chứa gốc tọa độ.",
+          "D. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x + y = 2 chứa gốc tọa độ."
         ],
         0,
-        "Chuyển động thẳng không đổi chiều thì độ lớn độ dịch chuyển bằng quãng đường đi được: d = s = 120 m."
+        "Đường thẳng bờ của bất phương trình là d: x - y = 2. Thay tọa độ gốc O(0; 0) vào vế trái: 0 - 0 = 0 &le; 2 (thỏa mãn). Vậy miền nghiệm là nửa mặt phẳng bờ d: x - y = 2 có chứa gốc tọa độ O(0; 0)."
       ],
       [
-        "Đại lượng nào sau đây là đại lượng vectơ, cho biết hướng chuyển động và độ nhanh chậm của vật?",
+        "Giá trị của biểu thức P = sin30&deg; + cos60&deg; - tan45&deg; bằng:",
         [
-          "Vận tốc.",
-          "Tốc độ trung bình.",
-          "Quãng đường.",
-          "Thời gian chuyển động."
+          "A. 0.",
+          "B. 1.",
+          "C. 1/2.",
+          "D. -1."
         ],
         0,
-        "Vận tốc là đại lượng vectơ đặc trưng cho cả độ nhanh chậm và hướng chuyển động: v⃗ = d⃗ / Δt. Tốc độ và quãng đường là đại lượng vô hướng không âm."
+        "Ta có: sin30&deg; = 1/2, cos60&deg; = 1/2, tan45&deg; = 1 &rArr; P = 1/2 + 1/2 - 1 = 0."
       ],
       [
-        "Đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm là đường thẳng song song với trục thời gian Ot. Điều này cho biết:",
+        "Trong các cặp số sau, cặp nào là nghiệm của hệ bất phương trình {2x + 3y &gt; 4 ; x &gt; 0}?",
         [
-          "Chất điểm đang đứng yên.",
-          "Chất điểm chuyển động thẳng đều.",
-          "Chất điểm chuyển động nhanh dần đều.",
-          "Chất điểm chuyển động chậm dần đều."
+          "A. (-2; 1).",
+          "B. (0; 1).",
+          "C. (2; 1).",
+          "D. (1; -2)."
         ],
-        0,
-        "Đường biểu diễn song song với trục Ot có độ dốc bằng 0, nghĩa là tọa độ không thay đổi theo thời gian, vật đang đứng yên."
+        2,
+        "Thay cặp (2; 1): có x = 2 &gt; 0 và 2(2) + 3(1) = 7 &gt; 4. Cả hai bất phương trình đều thỏa mãn, do đó (2; 1) là nghiệm của hệ."
       ],
       [
-        "Một ca nô chạy xuôi dòng nước với vận tốc so với nước là v₁ = 15 km/h. Vận tốc dòng nước chảy so với bờ là v₂ = 3 km/h. Vận tốc của ca nô so với bờ bằng:",
+        "Trên mặt phẳng Oxy lấy điểm M thuộc nửa đường tròn đơn vị sao cho góc xOM = 120&deg;. Tung độ của điểm M bằng:",
         [
-          "18 km/h.",
-          "12 km/h.",
-          "15 km/h.",
-          "45 km/h."
+          "A. &radic;3 / 2.",
+          "B. -&radic;3 / 2.",
+          "C. -1/2.",
+          "D. 1."
         ],
         0,
-        "Khi xuôi dòng, vận tốc ca nô đối với bờ: v₁₃ = v₁₂ + v₂₃ = 15 + 3 = 18 km/h."
+        "Theo định nghĩa giá trị lượng giác trên nửa đường tròn đơn vị (Toán 10): tung độ của điểm M chính là sin(xOM) = sin120&deg;. Ta có sin120&deg; = sin(180&deg; - 60&deg;) = sin60&deg; = &radic;3 / 2."
       ],
       [
-        "Một người đi xe máy đi được quãng đường 15 km đầu tiên trong thời gian 20 phút và 15 km tiếp theo trong thời gian 40 phút. Tốc độ trung bình của xe trên cả quãng đường là:",
+        "Trong mặt phẳng toạ độ Oxy, phần nửa mặt phẳng không tô đậm (không kể bờ) trong hình vẽ dưới đây là biểu diễn hình học tập nghiệm của bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 300 230\" width=\"300\" height=\"230\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan11\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n      </pattern>\n    </defs>\n    <!-- Vùng tô đậm (gạch sọc) không chứa gốc O -->\n    <polygon points=\"190,30 280,30 280,215 95,215\" fill=\"url(#hatchToan11)\"/>\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"100\" x2=\"280\" y2=\"100\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"280,100 272,96 272,104\" fill=\"#334155\"/>\n    <text x=\"272\" y=\"118\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n    \n    <line x1=\"110\" y1=\"215\" x2=\"110\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"110,20 106,28 114,28\" fill=\"#334155\"/>\n    <text x=\"96\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"94\" y=\"116\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Điểm cắt (3/2; 0) và (0; -3) -->\n    <!-- 1 đơn vị = 26px: 3/2 = 1.5 -> X = 110 + 39 = 149; -3 -> Y = 100 + 78 = 178 -->\n    <line x1=\"149\" y1=\"97\" x2=\"149\" y2=\"103\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"141\" y=\"93\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">3/2</text>\n\n    <line x1=\"107\" y1=\"178\" x2=\"113\" y2=\"178\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"86\" y=\"182\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">-3</text>\n\n    <!-- Đường thẳng 2x - y = 3 (nét đứt vì không kể bờ) -->\n    <line x1=\"190\" y1=\"30\" x2=\"95\" y2=\"215\" stroke=\"#2563eb\" stroke-width=\"2.2\" stroke-dasharray=\"6,4\"/>\n    <text x=\"195\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2x - y = 3</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Miền không tô đậm (không kể bờ) trong mặt phẳng toạ độ Oxy</div>\n</div>",
         [
-          "30 km/h.",
-          "25 km/h.",
-          "35 km/h.",
-          "20 km/h."
+          "A. 2x - y &gt; 3.",
+          "B. 2x - y &lt; 3.",
+          "C. x - 2y &gt; 3.",
+          "D. x - 2y &lt; 3."
         ],
-        0,
-        "Tổng quãng đường s = 15 + 15 = 30 km. Tổng thời gian t = 20 + 40 = 60 phút = 1 h. Tốc độ trung bình v = s / t = 30 / 1 = 30 km/h."
+        1,
+        "Phương trình đường thẳng bờ đi qua (3/2; 0) và (0; -3) là x / (3/2) + y / (-3) = 1 &hArr; 2x/3 - y/3 = 1 &hArr; 2x - y = 3. Miền nghiệm không tô đậm chứa gốc tọa độ O(0; 0) và không kể bờ. Thay (0; 0): 2(0) - 0 = 0 &lt; 3 (thỏa mãn). Vậy bất phương trình tương ứng là 2x - y &lt; 3."
       ],
       [
-        "Đơn vị đo của gia tốc trong hệ đơn vị đo lường quốc tế (SI) là:",
+        "Tam giác ABC có góc B = 10&deg; và góc C = 20&deg;. Giá trị của tanA bằng:",
         [
-          "m/s².",
-          "m/s.",
-          "km/h.",
-          "m·s."
+          "A. -&radic;3.",
+          "B. &radic;3.",
+          "C. -1 / &radic;3.",
+          "D. 1 / &radic;3."
         ],
-        0,
-        "Gia tốc đặc trưng cho sự biến thiên vận tốc theo thời gian: a = Δv / Δt nên có đơn vị là (m/s) / s = m/s²."
-      ],
-      [
-        "Trong chuyển động thẳng nhanh dần đều, vectơ gia tốc a⃗ và vectơ vận tốc v⃗ có đặc điểm nào sau đây?",
-        [
-          "Cùng chiều nhau (tích a·v > 0).",
-          "Ngược chiều nhau (tích a·v < 0).",
-          "Vuông góc với nhau.",
-          "Có độ lớn luôn bằng nhau."
-        ],
-        0,
-        "Chuyển động thẳng nhanh dần đều có gia tốc cùng chiều với vận tốc (a·v > 0). Chuyển động chậm dần đều có gia tốc ngược chiều vận tốc (a·v < 0)."
-      ],
-      [
-        "Công thức liên hệ giữa vận tốc v, vận tốc ban đầu v₀, gia tốc a và độ dịch chuyển d trong chuyển động thẳng biến đổi đều là:",
-        [
-          "v² – v₀² = 2ad.",
-          "v² + v₀² = 2ad.",
-          "v – v₀ = 2ad.",
-          "v² – v₀² = ad."
-        ],
-        0,
-        "Hệ thức độc lập thời gian chuẩn: v² – v₀² = 2ad (với d là độ dịch chuyển)."
-      ],
-      [
-        "Độ dốc (hệ số góc) của đồ thị vận tốc – thời gian (v – t) cho biết đại lượng nào sau đây của chuyển động?",
-        [
-          "Gia tốc.",
-          "Độ dịch chuyển.",
-          "Quãng đường.",
-          "Vận tốc ban đầu."
-        ],
-        0,
-        "Hệ số góc của đường biểu diễn v – t: tan α = Δv / Δt = a, chính là gia tốc của chuyển động."
-      ],
-      [
-        "Nhận định nào sau đây là ĐÚNG khi nói về sự rơi tự do của một vật gần mặt đất (bỏ qua sức cản không khí)?",
-        [
-          "Là chuyển động thẳng nhanh dần đều theo phương thẳng đứng.",
-          "Vật nặng bao giờ cũng rơi nhanh hơn vật nhẹ.",
-          "Vận tốc rơi không thay đổi theo thời gian.",
-          "Gia tốc rơi tự do phụ thuộc vào khối lượng của vật."
-        ],
-        0,
-        "Rơi tự do là chuyển động thẳng nhanh dần đều theo phương thẳng đứng chiều từ trên xuống dưới, với gia tốc rơi tự do g không đổi tại một nơi."
-      ],
-      [
-        "Một vật rơi tự do không vận tốc ban đầu từ độ cao h tại nơi có gia tốc trọng trường g. Thời gian rơi t của vật được tính bằng công thức:",
-        [
-          "t = √(2h / g).",
-          "t = √(h / 2g).",
-          "t = 2h / g.",
-          "t = √(2gh)."
-        ],
-        0,
-        "Từ công thức quãng đường rơi tự do: h = 1/2·g·t² suy ra t = √(2h / g)."
-      ],
-      [
-        "Một ôtô đang chạy với tốc độ 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Thời gian từ lúc bắt đầu hãm phanh đến khi xe dừng hẳn là:",
-        [
-          "10 s.",
-          "5 s.",
-          "20 s.",
-          "40 s."
-        ],
-        0,
-        "Xe dừng hẳn khi v = 0. Thời gian hãm phanh: t = (v – v₀) / a = (0 – 20) / (–2) = 10 s."
+        2,
+        "Tổng ba góc trong tam giác ABC: A = 180&deg; - (B + C) = 180&deg; - (10&deg; + 20&deg;) = 150&deg;. Áp dụng tính chất giá trị lượng giác của hai góc bù nhau: tanA = tan150&deg; = tan(180&deg; - 30&deg;) = -tan30&deg; = -1 / &radic;3."
       ]
     ],
     "tf": [
       {
-        "stem": "Một vận động viên bơi lội tập luyện trong một hồ bơi tiêu chuẩn dài 50 m. Người đó bơi xuất phát từ đầu hồ đến cuối hồ hết 25 giây, sau đó quay đầu bơi ngược trở lại vị trí xuất phát hết 35 giây. Chọn trục tọa độ Ox trùng với thành hồ, chiều dương là chiều bơi lượt đi.",
+        "stem": "Cho tập hợp X = {x &isin; <b>R</b> | -3 &le; x &le; 1}.",
         "items": [
           [
-            "Quãng đường vận động viên bơi được ở lượt đi là 50 m.",
-            true,
-            "Lượt đi từ đầu hồ đến cuối hồ bơi dài 50 m."
-          ],
-          [
-            "Độ dịch chuyển của vận động viên sau khi bơi cả đi lẫn về là 100 m.",
+            "a) X = {-3; -2; -1; 0; 1}.",
             false,
-            "Điểm kết thúc trùng với điểm xuất phát nên độ dịch chuyển tổng cộng d = 0 m."
+            "Vì x là số thực (x &isin; <b>R</b>) nên tập X là đoạn [-3; 1], chứa vô số số thực chứ không chỉ gồm 5 số nguyên. Khẳng định này là SAI."
           ],
           [
-            "Tốc độ trung bình của vận động viên ở lượt bơi đi bằng 2 m/s.",
-            true,
-            "v = s₁ / t₁ = 50 / 25 = 2 m/s."
+            "b) Số phần tử của tập hợp X là 5.",
+            false,
+            "Đoạn số thực [-3; 1] chứa vô số phần tử liên tục trên trục số thực, không phải là tập hữu hạn có 5 phần tử. Khẳng định này là SAI."
           ],
           [
-            "Vận tốc trung bình của vận động viên trong toàn bộ thời gian bơi cả đi lẫn về bằng 0 m/s.",
+            "c) \"0 là một phần tử của tập hợp X\" là một mệnh đề đúng.",
             true,
-            "Vận tốc trung bình v_tb = d / t = 0 / 60 = 0 m/s."
+            "Vì 0 là số thực thỏa mãn -3 &le; 0 &le; 1 nên 0 &isin; X. Mệnh đề 0 &isin; X là mệnh đề đúng. Khẳng định này là ĐÚNG."
+          ],
+          [
+            "d) Mệnh đề phủ định của mệnh đề \"&forall;x &isin; X, x &lt; 1\" là một mệnh đề đúng.",
+            true,
+            "Mệnh đề phủ định của mệnh đề ban đầu là \"&exist;x &isin; X, x &ge; 1\". Do 1 &isin; X = [-3; 1] thỏa mãn 1 &ge; 1 nên tồn tại ít nhất một phần tử x = 1, suy ra mệnh đề phủ định này là ĐÚNG."
           ]
         ]
       },
       {
-        "stem": "Một xe ôtô đang chuyển động thẳng đều trên đường ngang với tốc độ 15 m/s thì tài xế nhìn thấy biển báo công trường nên hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 1,5 m/s² cho đến khi dừng lại. Chọn chiều dương là chiều chuyển động của xe.",
+        "stem": "Cho tam giác ABC có AB = 4, AC = 6 và góc A = 120&deg;.",
         "items": [
           [
-            "Gia tốc của xe trong giai đoạn hãm phanh có giá trị đại số a = –1,5 m/s².",
+            "a) sinA = &radic;3 / 2.",
             true,
-            "Xe chuyển động theo chiều dương và chuyển động chậm dần đều nên a ngược chiều v, tức a = –1,5 m/s²."
+            "Áp dụng giá trị lượng giác của hai góc bù nhau trong Toán 10: sin120&deg; = sin(180&deg; - 60&deg;) = sin60&deg; = &radic;3 / 2. Khẳng định này là ĐÚNG."
           ],
           [
-            "Trong quá trình hãm phanh, tích vận tốc và gia tốc a·v luôn mang giá trị dương.",
+            "b) cosA = 1/2.",
             false,
-            "Vì chuyển động chậm dần đều nên a và v ngược dấu, tích a·v < 0."
+            "Vì góc A = 120&deg; &gt; 90&deg; là góc tù nên cosA &lt; 0. Cụ thể cos120&deg; = -cos60&deg; = -1/2 &ne; 1/2. Khẳng định này là SAI."
           ],
           [
-            "Sau 4 giây kể từ khi bắt đầu hãm phanh, vận tốc của ôtô còn lại là 9 m/s.",
-            true,
-            "v = v₀ + at = 15 + (–1,5) × 4 = 15 – 6 = 9 m/s."
+            "c) BC = 2&radic;7.",
+            false,
+            "Áp dụng định lí côsin trong tam giác ABC: BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cosA = 4<sup>2</sup> + 6<sup>2</sup> - 2.4.6.(-1/2) = 16 + 36 + 24 = 76 &rArr; BC = &radic;76 = 2&radic;19 &ne; 2&radic;7. Khẳng định này là SAI."
           ],
           [
-            "Quãng đường ôtô đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là 75 m.",
+            "d) Diện tích tam giác ABC là S = 6&radic;3.",
             true,
-            "Khi dừng hẳn v = 0. s = (v² – v₀²) / (2a) = (0 – 15²) / (2 × (–1,5)) = –225 / –3 = 75 m."
+            "Áp dụng công thức tính diện tích tam giác: S = 1/2 . AB . AC . sinA = 1/2 . 4 . 6 . sin120&deg; = 12 . (&radic;3 / 2) = 6&radic;3. Khẳng định này là ĐÚNG."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một xe máy chạy thẳng đều trên đoạn đường dài 18 km hết 30 phút. Tốc độ chuyển động của xe máy tính theo đơn vị km/h là bao nhiêu?",
-        "answer": "36",
-        "explanation": "Đổi 30 phút = 0,5 h. Tốc độ v = s / t = 18 / 0,5 = 36 km/h."
+        "question": "Cho tập hợp A = {x | x là số nguyên tố nhỏ hơn 20} và B = {n &isin; <b>N</b> | 2 &le; n &le; 10}. Tìm số phần tử của tập hợp A &cup; B.",
+        "answer": "13",
+        "explanation": "Tập các số nguyên tố nhỏ hơn 20 là A = {2; 3; 5; 7; 11; 13; 17; 19} gồm 8 phần tử. Tập B = {2; 3; 4; 5; 6; 7; 8; 9; 10} gồm 9 phần tử. Giao của hai tập hợp là các số nguyên tố từ 2 đến 10: A &cap; B = {2; 3; 5; 7} gồm 4 phần tử. Số phần tử của hợp là n(A &cup; B) = n(A) + n(B) - n(A &cap; B) = 8 + 9 - 4 = 13 phần tử."
       },
       {
-        "question": "Một chiếc ca nô chạy xuôi dòng trên đoạn sông AB với vận tốc đối với bờ là 22 km/h. Khi chạy ngược dòng từ B về A, vận tốc của ca nô đối với bờ là 14 km/h. Vận tốc của dòng nước chảy so với bờ có độ lớn bằng bao nhiêu km/h?",
-        "answer": "4",
-        "explanation": "Ta có: v_xuôi = v_thuyền + v_nước = 22; v_ngược = v_thuyền – v_nước = 14. Suy ra v_nước = (22 – 14) / 2 = 4 km/h."
-      },
-      {
-        "question": "Một đoàn tàu hỏa bắt đầu rời ga chuyển động thẳng nhanh dần đều không vận tốc đầu. Sau 20 giây tàu đạt tốc độ 10 m/s. Gia tốc của đoàn tàu bằng bao nhiêu m/s²?",
-        "answer": "0.5",
-        "explanation": "Tàu rời ga với v₀ = 0. Gia tốc a = (v – v₀) / t = (10 – 0) / 20 = 0,5 m/s²."
-      },
-      {
-        "question": "Thả rơi tự do một hòn bi sắt từ đỉnh một tháp cao 45 m xuống mặt đất tại nơi có gia tốc trọng trường g = 10 m/s². Bỏ qua sức cản không khí. Thời gian rơi của viên bi đến khi chạm đất là bao nhiêu giây?",
+        "question": "Miền nghiệm của hệ bất phương trình {x + y &gt; 1 ; 3x - 2y &le; 6} chứa bao nhiêu điểm có toạ độ là cặp số nguyên và có tung độ nhỏ hơn 2?",
         "answer": "3",
-        "explanation": "Thời gian rơi tự do: t = √(2h / g) = √(2 × 45 / 10) = √9 = 3 s."
+        "explanation": "Từ hệ ta có 1 - y &lt; x &le; (6 + 2y)/3. Điều kiện để tồn tại x là 1 - y &le; (6 + 2y)/3 &hArr; 3 - 3y &le; 6 + 2y &hArr; 5y &ge; -3 &hArr; y &ge; -0,6. Với y là số nguyên nhỏ hơn 2, ta chỉ có y = 0 và y = 1: Với y = 1 thì 0 &lt; x &le; 8/3 &rArr; x &isin; {1; 2} (cho 2 điểm (1; 1), (2; 1)). Với y = 0 thì 1 &lt; x &le; 2 &rArr; x = 2 (cho 1 điểm (2; 0)). Với y &le; -1 thì khoảng nghiệm rỗng. Vậy có đúng 3 điểm nguyên thỏa mãn là (1; 1), (2; 1) và (2; 0)."
+      },
+      {
+        "question": "Lớp 10A2 có 45 học sinh, trong đó số học sinh tham gia đội bóng đá là 18, số học sinh tham gia đội bóng chuyền là 15. Biết rằng có 20 học sinh không tham gia bất cứ môn nào. Hỏi có bao nhiêu học sinh tham gia đồng thời cả hai môn bóng đá và bóng chuyền?",
+        "answer": "8",
+        "explanation": "Số học sinh tham gia ít nhất một môn thể thao là n(A &cup; B) = 45 - 20 = 25 học sinh. Áp dụng công thức số phần tử của hợp hai tập hợp: n(A &cup; B) = n(A) + n(B) - n(A &cap; B) &rArr; n(A &cap; B) = 18 + 15 - 25 = 8 học sinh."
+      },
+      {
+        "question": "Một phân xưởng có hai máy M₁, M₂ sản xuất hai loại sản phẩm I và II. Sản xuất 1 tấn loại I lãi 20 triệu đồng, cần dùng M₁ trong 3 giờ và M₂ trong 1 giờ. Sản xuất 1 tấn loại II lãi 15 triệu đồng, cần dùng M₁ trong 1 giờ và M₂ trong 1 giờ. Mỗi ngày máy M₁ làm việc không quá 6 giờ, máy M₂ không quá 4 giờ. Số tiền lãi lớn nhất mà phân xưởng có thể thu được trong một ngày là bao nhiêu triệu đồng?",
+        "answer": "65",
+        "explanation": "Gọi x, y (tấn) lần lượt là sản lượng sản phẩm loại I và II (x &ge; 0, y &ge; 0). Ta có hệ ràng buộc thời gian: {3x + y &le; 6 ; x + y &le; 4}. Tiền lãi thu được là L(x; y) = 20x + 15y (triệu đồng). Miền nghiệm là tứ giác OABC với O(0; 0), A(2; 0), B(1; 3), C(0; 4). Giá trị lãi tại các đỉnh: L(0; 0) = 0; L(2; 0) = 40; L(0; 4) = 60; L(1; 3) = 20(1) + 15(3) = 65 triệu đồng. Vậy tiền lãi lớn nhất là 65 triệu đồng."
+      }
+    ],
+    "essay": [
+      {
+        "title": "Câu 1 (1,0 điểm): Tìm tham số m để thỏa mãn điều kiện tập hợp",
+        "question": "Cho hai tập hợp A = [-4; 2] và B = [m - 1; m + 3]. Tìm tất cả các giá trị của tham số m để:<br>a) B &sub; A.<br>b) A &cap; B = &empty;.",
+        "solution": "a) Để B &sub; A &hArr; { m - 1 &ge; -4 và m + 3 &le; 2 } &hArr; { m &ge; -3 và m &le; -1 } &hArr; -3 &le; m &le; -1 (0,50 điểm).<br>b) Để A &cap; B = &empty; &hArr; m + 3 &lt; -4 hoặc m - 1 &gt; 2 &hArr; m &lt; -7 hoặc m &gt; 3 (0,50 điểm)."
+      },
+      {
+        "title": "Câu 2 (1,0 điểm): Bài toán tối ưu hóa quy hoạch tuyến tính thực tế",
+        "question": "Một cơ sở may mặc sản xuất hai loại áo A và B. Để may một áo loại A cần 2 m vải và 3 giờ công, tiền lãi là 100 nghìn đồng. Để may một áo loại B cần 1 m vải và 4 giờ công, tiền lãi là 120 nghìn đồng. Xưởng hiện có tối đa 80 m vải và 180 giờ công lao động. Hãy lập kế hoạch sản xuất để tiền lãi thu được là lớn nhất.",
+        "solution": "Gọi x, y lần lượt là số áo loại A và loại B cần may (x &ge; 0, y &ge; 0).<br>Hệ điều kiện: { 2x + y &le; 80 ; 3x + 4y &le; 180 ; x &ge; 0 ; y &ge; 0 }.<br>Miền nghiệm là tứ giác OABC với O(0; 0), A(40; 0), B(28; 24), C(0; 45).<br>Biểu thức tiền lãi: F(x; y) = 100x + 120y (nghìn đồng).<br>• F(0; 0) = 0.<br>• F(40; 0) = 4000.<br>• F(28; 24) = 100(28) + 120(24) = 2800 + 2880 = 5680 (nghìn đồng).<br>• F(0; 45) = 5400.<br>&rArr; Lợi nhuận lớn nhất là 5.680.000 đồng khi sản xuất 28 áo loại A và 24 áo loại B (1,0 điểm)."
+      },
+      {
+        "title": "Câu 3 (1,0 điểm): Ứng dụng giải tam giác tính khoảng cách",
+        "question": "Hai trạm quan sát A và B cách nhau 500 m trên bờ biển cùng quan sát một con tàu C ngoài khơi. Người ta đo được góc CAB = 70&deg; và góc CBA = 50&deg;. Tính khoảng cách từ trạm A đến con tàu C (làm tròn đến mét).",
+        "solution": "Trong tam giác ABC: góc ACB = 180&deg; - (70&deg; + 50&deg;) = 60&deg; (0,30 điểm).<br>Áp dụng định lí sin: AC / sinB = AB / sinC &rArr; AC = AB &times; sin50&deg; / sin60&deg; (0,40 điểm).<br>Thay số: AC = 500 &times; sin50&deg; / sin60&deg; &approx; 500 &times; 0,7660 / 0,8660 &approx; 442,3 m &approx; 442 m (0,30 điểm)."
+      }
+    ]
+  },
+  {
+    "id": "toan-10-de-12",
+    "title": "Toán 10 - Đề 12 - Đề minh họa kiểm tra giữa kì I (Năm học 2026–2027)",
+    "subject": "math",
+    "duration": 90,
+    "school": "Đề minh họa kiểm tra giữa kì I – Đề 1",
+    "province": "Bộ GD&ĐT",
+    "year": "2026–2027",
+    "sourceUrl": "#",
+    "questions": [
+      [
+        "Phát biểu nào sau đây không phải là một mệnh đề?",
+        [
+          "A. \"Nếu x &lt; 3 thì x<sup>2</sup> &lt; 9\"",
+          "B. \"&forall;x &gt; 0 ta đều có: &radic;x &gt; x\"",
+          "C. \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\"",
+          "D. \"Tồn tại x &isin; <b>R</b> sao cho x<sup>2</sup> + 3x - 4 = 0\""
+        ],
+        2,
+        "Theo định nghĩa mệnh đề trong SGK Toán 10: Mệnh đề là một câu khẳng định có tính đúng hoặc sai. Câu nghi vấn (câu hỏi) \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\" không phải là câu khẳng định nên không phải là một mệnh đề."
+      ],
+      [
+        "Tìm mệnh đề phủ định của mệnh đề M = \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường đều đạt giải\".",
+        [
+          "A. \"Có rất nhiều học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "B. \"Có ít nhất một học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "C. \"Không có học sinh nào trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
+          "D. \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\""
+        ],
+        1,
+        "Mệnh đề ban đầu có dạng \"&forall;x &isin; X, P(x)\" (tất cả... đều đạt giải). Phủ định của mệnh đề chứa lượng từ \"&forall;\" (tất cả) là mệnh đề chứa lượng từ \"&exist;\" (tồn tại / có ít nhất một) kèm phủ định của tính chất: \"Có ít nhất một học sinh trong đội chính thức... không đạt giải\"."
+      ],
+      [
+        "Cho hai tập hợp A = [3; 9] và B = (3; 11). Xác định tập hợp A &cap; B.",
+        [
+          "A. [3; 8)",
+          "B. {3; 4; 5; 6; 7; 8; 9}",
+          "C. (3; 9]",
+          "D. [3; 11)"
+        ],
+        2,
+        "Phần tử chung của A = [3; 9] và B = (3; 11) là các số thực x thỏa mãn 3 &le; x &le; 9 và 3 &lt; x &lt; 11 &hArr; 3 &lt; x &le; 9. Do đó A &cap; B = (3; 9]."
+      ],
+      [
+        "Hình vẽ biểu diễn trên trục số thực dưới đây là hình biểu diễn cho tập hợp số nào sau đây:\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 440 85\" width=\"440\" height=\"85\" xmlns=\"http://www.w3.org/2000/svg\">\n    <!-- Trục số -->\n    <line x1=\"20\" y1=\"45\" x2=\"420\" y2=\"45\" stroke=\"#334155\" stroke-width=\"2\"/>\n    <polygon points=\"420,45 410,40 410,50\" fill=\"#334155\"/>\n    <text x=\"412\" y=\"65\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">+∞</text>\n    <text x=\"15\" y=\"65\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">-∞</text>\n\n    <!-- Gạch bỏ từ -vô cùng đến 2 -->\n    <line x1=\"30\" y1=\"35\" x2=\"45\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"45\" y1=\"35\" x2=\"60\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"60\" y1=\"35\" x2=\"75\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"75\" y1=\"35\" x2=\"90\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n\n    <!-- Điểm 2: ngoặc vuông [ quay sang phải -->\n    <text x=\"96\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">[</text>\n    <text x=\"98\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2</text>\n\n    <!-- Khoảng lấy [2; 4]: đoạn thẳng đậm -->\n    <line x1=\"108\" y1=\"45\" x2=\"180\" y2=\"45\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n\n    <!-- Điểm 4: ngoặc vuông ] quay sang trái -->\n    <text x=\"180\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">]</text>\n    <text x=\"182\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">4</text>\n\n    <!-- Gạch bỏ từ 4 đến 6 -->\n    <line x1=\"195\" y1=\"35\" x2=\"210\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"210\" y1=\"35\" x2=\"225\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"225\" y1=\"35\" x2=\"240\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"240\" y1=\"35\" x2=\"255\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n\n    <!-- Điểm 6: ngoặc vuông [ quay sang phải -->\n    <text x=\"262\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">[</text>\n    <text x=\"264\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">6</text>\n\n    <!-- Khoảng lấy [6; 8): đoạn thẳng đậm -->\n    <line x1=\"274\" y1=\"45\" x2=\"340\" y2=\"45\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n\n    <!-- Điểm 8: ngoặc tròn ) quay sang trái -->\n    <text x=\"340\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">)</text>\n    <text x=\"342\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">8</text>\n\n    <!-- Gạch bỏ từ 8 đến +vô cùng -->\n    <line x1=\"355\" y1=\"35\" x2=\"370\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"370\" y1=\"35\" x2=\"385\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"385\" y1=\"35\" x2=\"400\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n  </svg>\n  <div class=\"figure-caption\">Hình biểu diễn tập hợp số trên trục số thực</div>\n</div>",
+        [
+          "A. K = [2; 8) \\ (4; 6)",
+          "B. K = {2; 3; 4; 6; 7; 8}",
+          "C. K = {2; 3; 4; 6; 7}",
+          "D. K = [2; 8) \\ [4; 6]"
+        ],
+        0,
+        "Tập hợp lấy từ 2 (có lấy đầu mút 2) đến 8 (không lấy đầu mút 8), và loại bỏ các phần tử nằm trong khoảng (4; 6) (hai điểm 4 và 6 vẫn được giữ lại do ngoặc quay ra vùng lấy). Do đó tập hợp số tương ứng là K = [2; 8) \\ (4; 6)."
+      ],
+      [
+        "Hệ bất phương trình nào sau đây có miền nghiệm là một miền tam giác trong mặt phẳng tọa độ Oxy?",
+        [
+          "A. {x &ge; 0 ; y &ge; 0 ; x + y &le; 3}.",
+          "B. {x &ge; 0 ; y &ge; 0}.",
+          "C. {x + y &le; 2 ; x - y &ge; 1}.",
+          "D. {x &gt; 1 ; y &lt; 2}."
+        ],
+        0,
+        "Hệ {x >= 0; y >= 0; x + y <= 3} bị giới hạn bởi trục Ox (y=0), trục Oy (x=0) và đường thẳng x + y = 3 tạo thành tam giác vuông có các đỉnh O(0; 0), A(3; 0), B(0; 3)."
+      ],
+      [
+        "Miền nghiệm của bất phương trình x + 2y &le; 4 chứa điểm nào sau đây?",
+        [
+          "A. A(1; 2)",
+          "B. B(2; 1)",
+          "C. C(4; 3)",
+          "D. D(-1; 3)"
+        ],
+        1,
+        "Thay tọa độ điểm B(2; 1) vào bất phương trình: 2 + 2(1) = 4 &le; 4 (thỏa mãn dấu \"&le;\"). Các điểm còn lại đều cho giá trị lớn hơn 4 (1 + 4 = 5 &gt; 4; 4 + 6 = 10 &gt; 4; -1 + 6 = 5 &gt; 4)."
+      ],
+      [
+        "Trong mặt phẳng toạ độ Oxy, phần nửa mặt phẳng không bị gạch (kể cả bờ) trong hình vẽ dưới đây là miền nghiệm của bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 290 230\" width=\"290\" height=\"230\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan12\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n      </pattern>\n    </defs>\n    <!-- Nửa mặt phẳng chứa O(0; 0) bị gạch sọc -->\n    <polygon points=\"65,225 210,35 20,35 20,225\" fill=\"url(#hatchToan12)\"/>\n\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"110\" x2=\"270\" y2=\"110\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"270,110 262,106 262,114\" fill=\"#334155\"/>\n    <text x=\"262\" y=\"128\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n\n    <line x1=\"120\" y1=\"225\" x2=\"120\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"120,20 116,28 124,28\" fill=\"#334155\"/>\n    <text x=\"106\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"104\" y=\"104\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Điểm (2; 0) và (0; -2) -->\n    <!-- 1 đơn vị = 26px: (2; 0) -> X = 120 + 52 = 172; (0; -2) -> Y = 110 + 52 = 162 -->\n    <line x1=\"172\" y1=\"107\" x2=\"172\" y2=\"113\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"168\" y=\"128\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">2</text>\n\n    <line x1=\"117\" y1=\"162\" x2=\"123\" y2=\"162\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"100\" y=\"166\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">-2</text>\n\n    <!-- Đường thẳng x - y = 2 (nét liền vì kể cả bờ) -->\n    <line x1=\"65\" y1=\"225\" x2=\"215\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"2.2\"/>\n    <text x=\"218\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">d: x - y = 2</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Nửa mặt phẳng không bị gạch (kể cả bờ d)</div>\n</div>",
+        [
+          "A. x - y &ge; -2",
+          "B. x - y &ge; 2",
+          "C. x - y + 2 &gt; 0",
+          "D. x + y &ge; -2"
+        ],
+        1,
+        "Đường thẳng bờ đi qua (2; 0) và (0; -2) có phương trình là x - y = 2. Gốc tọa độ O(0; 0) nằm trong miền bị gạch bỏ vì 0 - 0 = 0 &lt; 2. Miền nghiệm không bị gạch chứa các điểm thỏa mãn x - y &ge; 2 (ví dụ điểm (3; 0) có 3 - 0 = 3 &ge; 2)."
+      ],
+      [
+        "Cho hệ bất phương trình: {x &lt; 3 ; y &gt; 0 ; x - y + 4 &gt; 0} có miền nghiệm là (S). Kết luận nào sau đây đúng?",
+        [
+          "A. Điểm A(-1; 1) không thuộc S",
+          "B. Miền nghiệm của hệ là miền trong của một tam giác.",
+          "C. Tất cả các điểm trên đoạn thẳng AB với A(0; 1) và B(2; 2) đều nằm ngoài miền nghiệm (S)",
+          "D. Điểm E(1; 5) thuộc S"
+        ],
+        1,
+        "Ba đường thẳng x = 3, y = 0, x - y + 4 = 0 cắt nhau đôi một tại 3 đỉnh phân biệt (-4; 0), (3; 0) và (3; 7). Miền nghiệm gồm các điểm nằm đồng thời về phía bên trái đường x = 3, phía trên trục hoành y = 0 và phía dưới đường x - y + 4 = 0, tạo thành miền trong của một tam giác."
+      ],
+      [
+        "Miền tam giác (phần nền trắng) trong hình vẽ dưới đây là miền nghiệm của hệ bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 320 240\" width=\"320\" height=\"240\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan12_9\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/>\n      </pattern>\n    </defs>\n    <!-- Nền gạch ngoài tam giác -->\n    <rect x=\"20\" y=\"20\" width=\"280\" height=\"200\" fill=\"url(#hatchToan12_9)\"/>\n    <!-- Miền tam giác (phần nền trắng) -->\n    <!-- Đỉnh (0; 2): X = 150, Y = 120 - 2*30 = 60 -->\n    <!-- Đáy nằm trên y = -1: Y = 120 + 30 = 150 -->\n    <!-- Giao với x - y + 2 = 0 tại y = -1 => x = -3: X = 150 - 3*30 = 60 -->\n    <!-- Giao với 2x + y - 2 = 0 tại y = -1 => x = 1.5: X = 150 + 1.5*30 = 195 -->\n    <polygon points=\"150,60 60,150 195,150\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"120\" x2=\"295\" y2=\"120\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"295,120 287,116 287,124\" fill=\"#334155\"/>\n    <text x=\"287\" y=\"136\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n\n    <line x1=\"150\" y1=\"220\" x2=\"150\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"150,20 146,28 154,28\" fill=\"#334155\"/>\n    <text x=\"136\" y=\"25\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"136\" y=\"115\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Đường y = -1 -->\n    <line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#0284c7\" stroke-width=\"1.8\"/>\n    <text x=\"210\" y=\"165\" font-size=\"11\" font-weight=\"bold\" fill=\"#0284c7\">y = -1</text>\n\n    <!-- Điểm (0; 2) -->\n    <circle cx=\"150\" cy=\"60\" r=\"3\" fill=\"#2563eb\"/>\n    <text x=\"156\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Miền tam giác nền trắng giới hạn bởi 3 đường thẳng</div>\n</div>",
+        [
+          "A. {x - y + 2 &ge; 0 ; y + 1 &ge; 0 ; 2x + y - 2 &le; 0}",
+          "B. {x &ge; -1 ; 2x + y - 2 &ge; 0 ; x - y &le; 2}",
+          "C. {y &le; 1 ; 2x + y - 2 &ge; 0 ; x + 4y - 10 &ge; 0}",
+          "D. {x - y &le; 2 ; 2x + y - 2 &ge; 0 ; y + 1 &le; 0}"
+        ],
+        0,
+        "Cạnh đáy của tam giác nằm trên đường y = -1, miền tam giác nằm phía trên nên y &ge; -1 &hArr; y + 1 &ge; 0. Hai cạnh bên là các đường thẳng x - y + 2 = 0 và 2x + y - 2 = 0. Gốc O(0; 0) nằm trong tam giác và thỏa mãn 0 - 0 + 2 &ge; 0, 0 + 1 &ge; 0, 2(0) + 0 - 2 &le; 0. Vậy hệ bất phương trình đúng là hệ A."
+      ],
+      [
+        "Cho góc &alpha; có 90&deg; &lt; &alpha; &le; 180&deg;. Kết luận nào sau đây đúng?",
+        [
+          "A. sin&alpha; &gt; 0; cos&alpha; &gt; 0",
+          "B. sin&alpha; &gt; 0; cot&alpha; &lt; 0",
+          "C. tan&alpha; . cot&alpha; &lt; 0",
+          "D. sin&alpha; &lt; 0; tan&alpha; &gt; 0"
+        ],
+        1,
+        "Với góc tù &alpha; (90&deg; &lt; &alpha; &le; 180&deg;), điểm biểu diễn trên nửa đường tròn đơn vị có tung độ dương (sin&alpha; &gt; 0) và hoành độ âm (cos&alpha; &lt; 0). Do đó cot&alpha; = cos&alpha; / sin&alpha; &lt; 0. Kết luận đúng là sin&alpha; &gt; 0 và cot&alpha; &lt; 0."
+      ],
+      [
+        "Cho sin&alpha; = 0,3 với &alpha; &gt; 90&deg;. Tính: cos&alpha;.",
+        [
+          "A. &plusmn;&radic;91 / 10",
+          "B. &plusmn;9 / 10",
+          "C. -&radic;91 / 10",
+          "D. &plusmn;&radic;0,7"
+        ],
+        2,
+        "Áp dụng công thức lượng giác cơ bản trong Toán 10: sin<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; = 1 &rArr; cos<sup>2</sup>&alpha; = 1 - 0,3<sup>2</sup> = 0,91 = 91/100. Vì &alpha; &gt; 90&deg; (góc tù) nên cos&alpha; &lt; 0, do đó cos&alpha; = -&radic;91 / 10."
+      ],
+      [
+        "Cho tam giác ABC có BC = 6a, góc ABC = 60&deg;, cosBAC = 2/3. Tính AC theo a.",
+        [
+          "A. 9a&radic;15 / 5",
+          "B. 9a / 5",
+          "C. 6a / &radic;5",
+          "D. 3a"
+        ],
+        0,
+        "Vì góc A là góc trong tam giác nên sinA &gt; 0 &rArr; sinA = &radic;(1 - cos<sup>2</sup>A) = &radic;(1 - 4/9) = &radic;5 / 3. Áp dụng định lí sin: AC / sinB = BC / sinA &rArr; AC = BC . (sinB / sinA) = 6a . (sin60&deg; / (&radic;5/3)) = 6a . (&radic;3/2) . (3/&radic;5) = 9a&radic;3 / &radic;5 = 9a&radic;15 / 5."
+      ]
+    ],
+    "tf": [
+      {
+        "stem": "Xét tính đúng sai của các khẳng định sau về mệnh đề và mệnh đề kéo theo:",
+        "items": [
+          [
+            "a) Mệnh đề là một khẳng định đúng.",
+            false,
+            "Theo định nghĩa trong SGK Toán 10: Mệnh đề là một khẳng định có tính đúng hoặc sai. Một khẳng định sai vẫn là một mệnh đề (mệnh đề sai). Do đó khẳng định này là SAI."
+          ],
+          [
+            "b) Cho A, B là hai mệnh đề. Mệnh đề A &rArr; B chỉ đúng khi A, B đều đúng.",
+            false,
+            "Mệnh đề kéo theo A &rArr; B chỉ sai khi A đúng và B sai. Trong trường hợp giả thiết A sai thì mệnh đề A &rArr; B luôn đúng kể cả khi B sai. Khẳng định này là SAI."
+          ],
+          [
+            "c) Mệnh đề \"&exist;a &isin; <b>N</b> | (a + 1)/(2a + 1) &isin; <b>N</b>\" là một mệnh đề chứa biến.",
+            false,
+            "Câu có chứa biến khi đã được lượng từ hóa bằng kí hiệu &exist; (tồn tại) sẽ trở thành một mệnh đề toán học hoàn chỉnh có chân trị xác định (cụ thể với a = 0 &isin; <b>N</b> thì (0+1)/(0+1) = 1 &isin; <b>N</b> là mệnh đề đúng), không còn là mệnh đề chứa biến nữa. Khẳng định này là SAI."
+          ],
+          [
+            "d) Trong định lý: \"Nếu một tứ giác có hai đường chéo vuông góc với nhau thì diện tích của tứ giác đó bằng một nửa tích hai đường chéo\". Điều kiện đủ của định lý là: tứ giác có hai đường chéo vuông góc với nhau.",
+            true,
+            "Định lý có dạng P &rArr; Q, trong đó giả thiết P là \"tứ giác có hai đường chéo vuông góc với nhau\". Theo SGK Toán 10, giả thiết P là điều kiện đủ để có kết luận Q. Khẳng định này là ĐÚNG."
+          ]
+        ]
+      },
+      {
+        "stem": "Cho tam giác ABC có AB = 4, AC = 3 và góc BAC = 120&deg;. Khi đó:",
+        "items": [
+          [
+            "a) cosABC &gt; 0.",
+            true,
+            "Trong tam giác ABC có góc A = 120&deg; là góc tù. Vì một tam giác chỉ có tối đa một góc tù nên góc B bắt buộc là góc nhọn (0&deg; &lt; B &lt; 90&deg;). Do đó cosB &gt; 0. Khẳng định này là ĐÚNG."
+          ],
+          [
+            "b) Độ dài trung tuyến kẻ từ đỉnh B bằng: &radic;19.",
+            false,
+            "Theo định lí côsin: BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cos120&deg; = 4<sup>2</sup> + 3<sup>2</sup> - 2.4.3.(-1/2) = 16 + 9 + 12 = 37. Áp dụng công thức đường trung tuyến: m<sub>b</sub><sup>2</sup> = (2(BC<sup>2</sup> + AB<sup>2</sup>) - AC<sup>2</sup>) / 4 = (2(37 + 16) - 9) / 4 = (106 - 9)/4 = 97/4 &rArr; m<sub>b</sub> = &radic;97 / 2 &ne; &radic;19. Khẳng định này là SAI."
+          ],
+          [
+            "c) Bán kính đường tròn ngoại tiếp tam giác ABC bằng: &radic;(37/3).",
+            true,
+            "Áp dụng định lí sin trong tam giác ABC: 2R = BC / sinA &rArr; R = BC / (2.sin120&deg;) = &radic;37 / (2 . (&radic;3/2)) = &radic;37 / &radic;3 = &radic;(37/3). Khẳng định này là ĐÚNG."
+          ],
+          [
+            "d) cosACB = 20 / (3&radic;37).",
+            false,
+            "Áp dụng định lí côsin: cosACB = (AC<sup>2</sup> + BC<sup>2</sup> - AB<sup>2</sup>) / (2.AC.BC) = (9 + 37 - 16) / (2 . 3 . &radic;37) = 30 / (6&radic;37) = 5 / &radic;37 = 15 / (3&radic;37) &ne; 20 / (3&radic;37). Khẳng định này là SAI."
+          ]
+        ]
+      }
+    ],
+    "short": [
+      {
+        "question": "Mỗi học sinh lớp 10A đều đăng ký học tự chọn ít nhất một trong hai môn là Toán hoặc Văn. Có 85% chọn môn Toán, 75% chọn môn Văn và 16 học sinh chỉ học đúng một môn. Hỏi có bao nhiêu học sinh đăng ký học cả hai môn?",
+        "answer": "24",
+        "explanation": "Tỉ lệ học sinh đăng ký cả hai môn Toán và Văn là: 85% + 75% - 100% = 60%. Tỉ lệ học sinh chỉ học đúng một môn là: (85% - 60%) + (75% - 60%) = 25% + 15% = 40% (hoặc 100% - 60% = 40%). Tổng số học sinh của lớp 10A là: 16 / 40% = 40 học sinh. Số học sinh học cả hai môn là: 40 . 60% = 24 học sinh."
+      },
+      {
+        "question": "Cho hai tập hợp A = (-1; 8) và B = [m - 1; m + 2). Có bao nhiêu số nguyên m để B &sub; A?",
+        "answer": "6",
+        "explanation": "Để B là tập con của A, hai đầu mút của nửa khoảng B phải thuộc khoảng A: {m - 1 &gt; -1 ; m + 2 &le; 8} &hArr; {m &gt; 0 ; m &le; 6} &hArr; 0 &lt; m &le; 6. Vì m là số nguyên nên m &isin; {1; 2; 3; 4; 5; 6}. Vậy có đúng 6 giá trị nguyên của m thỏa mãn."
+      },
+      {
+        "question": "Cho biết: tan&alpha; = 10. Tính giá trị biểu thức M = (9sin&alpha; - cos&alpha;) / (sin&alpha; - 9cos&alpha;).",
+        "answer": "89",
+        "explanation": "Vì tan&alpha; xác định nên cos&alpha; &ne; 0. Chia cả tử và mẫu của M cho cos&alpha;, ta được: M = (9tan&alpha; - 1) / (tan&alpha; - 9). Thay tan&alpha; = 10: M = (9 . 10 - 1) / (10 - 9) = (90 - 1) / 1 = 89."
+      },
+      {
+        "question": "Cho tam giác ABC có độ dài các cạnh: AB = 6; AC = 8; BC = 12. Tính gần đúng góc A theo đơn vị độ (làm tròn đến hàng đơn vị)?",
+        "answer": "117",
+        "explanation": "Áp dụng hệ quả của định lí côsin: cosA = (AB<sup>2</sup> + AC<sup>2</sup> - BC<sup>2</sup>) / (2 . AB . AC) = (6<sup>2</sup> + 8<sup>2</sup> - 12<sup>2</sup>) / (2 . 6 . 8) = (36 + 64 - 144) / 96 = -44/96 = -11/24 &approx; -0,45833. Suy ra góc A &approx; 117,28&deg;, làm tròn đến hàng đơn vị được 117&deg;."
+      }
+    ],
+    "essay": [
+      {
+        "title": "Câu 1 (1,0 điểm): Tìm tham số m để thỏa mãn điều kiện giao của hai tập hợp",
+        "question": "Cho hai tập hợp X = (1; 6) và Y = [m; m + 2]. Tìm tất cả các giá trị của tham số m để X &cap; Y &ne; &empty;.",
+        "solution": "Hai tập hợp X = (1; 6) và Y = [m; m + 2] có giao khác rỗng khi và chỉ khi:<br>{ m &lt; 6 và m + 2 &gt; 1 } &hArr; { m &lt; 6 và m &gt; -1 } &hArr; -1 &lt; m &lt; 6.<br>Vậy m &isin; (-1; 6) (1,0 điểm)."
+      },
+      {
+        "title": "Câu 2 (1,0 điểm): Bài toán tối ưu chi phí thuê xe chở hàng",
+        "question": "Một công ty cần vận chuyển 30 tấn hàng bằng hai loại xe tải: xe loại I (chở tối đa 3 tấn, giá thuê 4 triệu đồng/chuyến) và xe loại II (chở tối đa 5 tấn, giá thuê 6 triệu đồng/chuyến). Đội xe chỉ có thể cung cấp tối đa 8 xe loại I và 6 xe loại II. Hỏi công ty cần thuê bao nhiêu xe mỗi loại để tổng chi phí thuê xe là thấp nhất?",
+        "solution": "Gọi x, y lần lượt là số xe loại I và loại II cần thuê (x, y &isin; N; 0 &le; x &le; 8; 0 &le; y &le; 6).<br>Điều kiện tải trọng: 3x + 5y &ge; 30.<br>Chi phí thuê xe: T(x; y) = 4x + 6y (triệu đồng).<br>Các điểm góc khả dĩ của miền nghiệm nguyên:<br>• Nếu y = 6: 3x + 30 &ge; 30 &rArr; x &ge; 0 &rArr; Chọn x = 0 &rArr; T(0; 6) = 36 triệu đồng (chở 30 tấn).<br>• Nếu y = 5: 3x + 25 &ge; 30 &rArr; 3x &ge; 5 &rArr; x &ge; 2 &rArr; Chọn x = 2 &rArr; T(2; 5) = 4(2) + 6(5) = 38 triệu đồng.<br>• Nếu y = 4: 3x + 20 &ge; 30 &rArr; 3x &ge; 10 &rArr; x &ge; 4 &rArr; T(4; 4) = 4(4) + 6(4) = 40 triệu đồng.<br>• Nếu x = 8: 24 + 5y &ge; 30 &rArr; 5y &ge; 6 &rArr; y &ge; 2 &rArr; T(8; 2) = 32 + 12 = 44 triệu đồng.<br>&rArr; Chi phí nhỏ nhất là 36 triệu đồng khi thuê 0 xe loại I và 6 xe loại II (1,0 điểm)."
+      },
+      {
+        "title": "Câu 3 (1,0 điểm): Ứng dụng định lí côsin đo khoảng cách qua hồ nước",
+        "question": "Để đo khoảng cách giữa hai điểm A và B bị ngăn cách bởi một hồ nước, người ta chọn một vị trí quan sát C trên bờ hồ sao cho nhìn thấy cả A và B. Kết quả đo được: CA = 80 m, CB = 120 m và góc ACB = 60&deg;. Tính khoảng cách giữa hai điểm A và B.",
+        "solution": "Áp dụng định lí côsin trong tam giác ABC:<br>AB<sup>2</sup> = CA<sup>2</sup> + CB<sup>2</sup> - 2.CA.CB.cosC (0,30 điểm).<br>Thay số: AB<sup>2</sup> = 80<sup>2</sup> + 120<sup>2</sup> - 2(80)(120)cos60&deg; = 6400 + 14400 - 19200 &times; (1/2)<br>= 20800 - 9600 = 11200 (0,40 điểm).<br>&rArr; AB = &radic;11200 = 40&radic;7 &approx; 105,8 m (0,30 điểm)."
+      }
+    ]
+  },
+  {
+    "id": "vatli-10-de-01",
+    "title": "Vật lí 10 - Đề 01 - Trường THPT Hướng Hóa – Quảng Trị (Đề chuẩn ma trận 2026)",
+    "subject": "physics",
+    "duration": 50,
+    "minutes": 50,
+    "mcUnit": 0.25,
+    "shortUnit": 0.25,
+    "source": "Trường THPT Hướng Hóa – Quảng Trị · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
+    "questions": [
+      [
+        "Đối tượng nghiên cứu cốt lõi của Vật lí học bao gồm:",
+        [
+          "A. Các dạng vận động của vật chất và năng lượng.",
+          "B. Quy luật phát triển của xã hội loài người.",
+          "C. Sự phát sinh và biến dị di truyền của sinh vật.",
+          "D. Quá trình quang hợp của thực vật trong tự nhiên."
+        ],
+        0,
+        "Vật lí học là môn khoa học tự nhiên nghiên cứu các dạng vận động của vật chất và năng lượng."
+      ],
+      [
+        "Hai phương pháp nghiên cứu cốt lõi thường được sử dụng tương hỗ trong quá trình phát triển của Vật lí học là:",
+        [
+          "A. Phương pháp thực nghiệm và phương pháp lí thuyết.",
+          "B. Phương pháp điều tra xã hội học và phỏng vấn trực tiếp.",
+          "C. Phương pháp khảo cổ học và phục dựng mô hình.",
+          "D. Phương pháp phân tích văn bản và dịch thuật."
+        ],
+        0,
+        "Phương pháp thực nghiệm và phương pháp lí thuyết là hai phương pháp trụ cột hỗ trợ chặt chẽ cho nhau trong Vật lí."
+      ],
+      [
+        "Để bảo đảm an toàn khi thực hành thí nghiệm có sử dụng nguồn điện xoay chiều 220 V trong phòng thực hành, hành động nào sau đây là BẮT BUỘC?",
+        [
+          "A. Chỉ được đóng điện sau khi giáo viên đã kiểm tra mạch điện an toàn.",
+          "B. Dùng tay trần chạm vào dây dẫn để kiểm tra xem có dòng điện chạy qua không.",
+          "C. Tự ý thay đổi sơ đồ mạch điện khi công tắc đang đóng.",
+          "D. Tháo dây dẫn bằng cách giật mạnh dây nguồn ra khỏi ổ cắm."
+        ],
+        0,
+        "Khi thực hành điện áp nguy hiểm 220 V, học sinh chỉ được bật công tắc nguồn sau khi giáo viên hướng dẫn kiểm tra toàn bộ mạch."
+      ],
+      [
+        "Trong phòng thực hành Vật lí, biển báo cảnh báo nguy cơ điện giật nguy hiểm có hình dạng và màu sắc như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><path d=\"M52,28 L36,54 L48,54 L44,76 L66,48 L54,48 Z\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
+        [
+          "A. Cảnh báo khu vực có điện áp cao, nguy cơ điện giật nguy hiểm.",
+          "B. Nơi lưu trữ các chất ăn mòn hóa học mạnh.",
+          "C. Quy định bắt buộc phải đeo găng tay cách điện.",
+          "D. Lối thoát hiểm khẩn cấp khi có sự cố cháy nổ."
+        ],
+        0,
+        "Biển hình tam giác đều viền đen nền vàng có hình tia sét là biển báo cảnh báo nguy hiểm về điện."
+      ],
+      [
+        "Phép đo nào sau đây là phép đo TRỰC TIẾP một đại lượng vật lí?",
+        [
+          "A. Dùng thước cuộn đo trực tiếp chiều dài của phòng học.",
+          "B. Dùng công thức v = s/t để tính tốc độ chuyển động của xe.",
+          "C. Dùng khối lượng và thể tích để tính khối lượng riêng của viên sỏi.",
+          "D. Dùng vôn kế và ampe kế để tính điện trở của một đoạn dây dẫn."
+        ],
+        0,
+        "Đo trực tiếp là so sánh trực tiếp đại lượng cần đo với dụng cụ đo (dùng thước đo chiều dài)."
+      ],
+      [
+        "Một học sinh dùng thước thẳng đo 5 lần chiều dài tấm bìa và tính được giá trị trung bình L̄ = 20,4 cm, sai số tuyệt đối là ΔL = 0,2 cm. Kết quả phép đo được ghi đúng chuẩn là:",
+        [
+          "A. L = (20,4 ± 0,2) cm.",
+          "B. L = 20,4 + 0,2 cm.",
+          "C. L = 20,4 - 0,2 cm.",
+          "D. L = 20,4 cm ± 2 mm."
+        ],
+        0,
+        "Cách ghi kết quả phép đo chuẩn của đại lượng A là A = Ā ± ΔA (có cùng đơn vị đo)."
+      ],
+      [
+        "Một học sinh đi bộ từ nhà đến trường theo đường thẳng dài 500 m. Sau khi tan học, học sinh đó quay trở lại về nhà theo đúng con đường cũ. Độ dịch chuyển tổng cộng của học sinh đó sau cả chuyến đi và về là:",
+        [
+          "A. 0 m.",
+          "B. 500 m.",
+          "C. 1000 m.",
+          "D. 250 m."
+        ],
+        0,
+        "Vì vị trí đầu và vị trí cuối trùng nhau (đều ở nhà) nên vectơ độ dịch chuyển tổng cộng bằng 0 m."
+      ],
+      [
+        "Một ca nô chạy xuôi dòng nước từ bến A đến bến B. Gọi v₁ là vận tốc của ca nô so với dòng nước, v₂ là vận tốc của dòng nước so với bờ. Vận tốc của ca nô so với bờ có độ lớn là:",
+        [
+          "A. v = v₁ + v₂.",
+          "B. v = v₁ - v₂.",
+          "C. v = √(v₁² + v₂²).",
+          "D. v = v₁ · v₂."
+        ],
+        0,
+        "Khi ca nô chạy xuôi dòng, vận tốc thuyền và vận tốc nước cùng hướng nên vận tốc so với bờ là v = v₁ + v₂."
+      ],
+      [
+        "Trong thí nghiệm thực hành đo tốc độ của viên bi chuyển động trên máng nghiêng, thiết bị nào sau đây dùng để đo khoảng thời gian viên bi đi qua giữa hai cổng quang điện một cách chính xác nhất?",
+        [
+          "A. Đồng hồ đo thời gian hiện số kết nối với cổng quang điện.",
+          "B. Đồng hồ bấm giây cơ học cầm tay.",
+          "C. Đồng hồ đeo tay thông thường có kim giây.",
+          "D. Thước kẹp có độ chia nhỏ nhất 0,1 mm."
+        ],
+        0,
+        "Đồng hồ đo thời gian hiện số kết hợp cổng quang điện đo thời gian tự động chính xác đến mili giây (0,001 s)."
+      ],
+      [
+        "Đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm có dạng như hình vẽ bên. Nhận xét nào sau đây về trạng thái chuyển động của chất điểm là ĐÚNG? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"12\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">d(m)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"65\" x2=\"195\" y2=\"65\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"16\" y=\"69\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\" font-family=\"sans-serif\">d₀</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị độ dịch chuyển – thời gian (d – t)</div></div>",
+        [
+          "A. Chất điểm đang đứng yên tại vị trí có độ dịch chuyển d₀.",
+          "B. Chất điểm chuyển động thẳng đều với vận tốc không đổi.",
+          "C. Chất điểm chuyển động thẳng nhanh dần đều theo chiều dương.",
+          "D. Chất điểm chuyển động chậm dần đều rồi dừng lại ở gốc tọa độ."
+        ],
+        0,
+        "Đồ thị d – t là đường thẳng song song với trục thời gian t chứng tỏ độ dịch chuyển không đổi theo thời gian, tức là vật đứng yên."
+      ],
+      [
+        "Gia tốc là một đại lượng vectơ đặc trưng cho:",
+        [
+          "A. Sự biến thiên nhanh hay chậm của vận tốc theo thời gian.",
+          "B. Sự biến thiên nhanh hay chậm của độ dịch chuyển theo thời gian.",
+          "C. Quãng đường vật đi được trong một đơn vị thời gian.",
+          "D. Mức độ quán tính của vật khi có lực tác dụng."
+        ],
+        0,
+        "Gia tốc a = Δv / Δt là đại lượng đặc trưng cho tốc độ thay đổi (biến thiên) của vận tốc."
+      ],
+      [
+        "Một vật chuyển động thẳng chậm dần đều theo chiều dương của trục tọa độ. Dấu của vận tốc v và gia tốc a thỏa mãn điều kiện nào sau đây?",
+        [
+          "A. v > 0 và a < 0 (tích a · v < 0).",
+          "B. v > 0 và a > 0 (tích a · v > 0).",
+          "C. v < 0 và a < 0 (tích a · v > 0).",
+          "D. v = 0 và a > 0."
+        ],
+        0,
+        "Trong chuyển động chậm dần đều, vectơ gia tốc ngược chiều vectơ vận tốc nên tích a · v < 0. Vì v > 0 nên a < 0."
+      ],
+      [
+        "Đồ thị vận tốc – thời gian (v – t) của một đoàn tàu chuyển động thẳng biến đổi đều được cho như hình vẽ bên. Gia tốc của đoàn tàu là: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"10\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">v(m/s)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"125\" x2=\"185\" y2=\"35\" stroke=\"#ea580c\" stroke-width=\"3\"/><line x1=\"185\" y1=\"35\" x2=\"185\" y2=\"125\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><line x1=\"35\" y1=\"35\" x2=\"185\" y2=\"35\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><text x=\"180\" y=\"138\" font-size=\"11\" fill=\"#334155\">5</text><text x=\"14\" y=\"38\" font-size=\"11\" fill=\"#334155\">15</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị vận tốc – thời gian (v – t)</div></div>",
+        [
+          "A. a = 3 m/s².",
+          "B. a = 15 m/s².",
+          "C. a = 0,33 m/s².",
+          "D. a = 75 m/s²."
+        ],
+        0,
+        "Gia tốc là độ dốc của đồ thị v – t: a = (v - v₀) / t = (15 - 0) / 5 = 3 m/s²."
+      ],
+      [
+        "Công thức liên hệ giữa vận tốc ban đầu v₀, vận tốc lúc sau v, gia tốc a và độ dịch chuyển d trong chuyển động thẳng biến đổi đều là:",
+        [
+          "A. v² - v₀² = 2ad.",
+          "B. v² + v₀² = 2ad.",
+          "C. v - v₀ = 2ad.",
+          "D. v² - v₀² = ad."
+        ],
+        0,
+        "Công thức độc lập thời gian cốt lõi là v² - v₀² = 2ad."
+      ],
+      [
+        "Thí nghiệm với ống hút chân không Niutơn cho thấy khi thả rơi đồng thời một viên bi chì và một chiếc lông chim trong ống đã hút hết không khí (hình bên phải) thì: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"180\" height=\"150\" viewBox=\"0 0 180 150\"><rect x=\"30\" y=\"20\" width=\"40\" height=\"110\" rx=\"10\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"110\" y=\"20\" width=\"40\" height=\"110\" rx=\"10\" fill=\"#e0f2fe\" stroke=\"#0284c7\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"118\" r=\"6\" fill=\"#334155\"/><path d=\"M48,50 Q54,42 52,58\" stroke=\"#f59e0b\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"130\" cy=\"118\" r=\"6\" fill=\"#0284c7\"/><path d=\"M128,118 Q134,110 132,126\" stroke=\"#f59e0b\" stroke-width=\"3\" fill=\"none\"/><text x=\"20\" y=\"144\" font-size=\"10\" fill=\"#64748b\">Có không khí</text><text x=\"105\" y=\"144\" font-size=\"10\" fill=\"#0284c7\" font-weight=\"bold\">Chân không</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Thí nghiệm ống hút chân không Niutơn</div></div>",
+        [
+          "A. Viên bi chì và chiếc lông chim rơi nhanh như nhau và chạm đáy cùng một lúc.",
+          "B. Viên bi chì luôn rơi nhanh hơn nhiều so với chiếc lông chim.",
+          "C. Chiếc lông chim lơ lửng không rơi vì không có lực tác dụng.",
+          "D. Chiếc lông chim rơi nhanh hơn viên bi chì do nhẹ hơn."
+        ],
+        0,
+        "Trong môi trường chân không (không có lực cản không khí), mọi vật đều rơi tự do như nhau với cùng gia tốc g."
+      ],
+      [
+        "Một hòn sỏi được thả rơi tự do từ độ cao h = 20 m xuống mặt đất tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian hòn sỏi rơi từ lúc thả đến khi chạm đất là:",
+        [
+          "A. 2,0 s.",
+          "B. 1,0 s.",
+          "C. 4,0 s.",
+          "D. 0,5 s."
+        ],
+        0,
+        "Thời gian rơi tự do: t = √(2h / g) = √(2 · 20 / 10) = √4 = 2,0 s."
+      ]
+    ],
+    "tf": [
+      {
+        "stem": "Một nhóm học sinh tiến hành thí nghiệm đo tốc độ trung bình và xác định sai số của một xe đồ chơi chuyển động trên máng thẳng. Dùng thước đo chiều dài quãng đường s = (1,00 ± 0,01) m và đồng hồ bấm giây hiện số đo thời gian xe đi hết quãng đường là t = (2,00 ± 0,04) s.",
+        "items": [
+          [
+            "Phép đo chiều dài quãng đường s và thời gian t đều là các phép đo trực tiếp.",
+            true,
+            "Quãng đường đo bằng thước và thời gian đo bằng đồng hồ là phép đo trực tiếp."
+          ],
+          [
+            "Sai số tỉ đối của phép đo quãng đường là δs = 1%.",
+            true,
+            "δs = (0,01 / 1,00) × 100% = 1%."
+          ],
+          [
+            "Tốc độ trung bình tính được của xe đồ chơi là v̄ = 0,50 m/s.",
+            true,
+            "v̄ = s̄ / t̄ = 1,00 / 2,00 = 0,50 m/s."
+          ],
+          [
+            "Sai số tỉ đối của tốc độ là δv = 5%.",
+            false,
+            "δv = δs + δt = 1% + (0,04 / 2,00 × 100%) = 1% + 2% = 3% (không phải 5%)."
+          ]
+        ]
+      },
+      {
+        "stem": "Một xe ôtô đang chạy thẳng đều với vận tốc 72 km/h (tương đương 20 m/s) trên đường thẳng ngang thì gặp chướng ngại vật, tài xế đạp phanh chuyển động chậm dần đều với độ lớn gia tốc hãm là 4 m/s².",
+        "items": [
+          [
+            "Vectơ gia tốc của ôtô trong giai đoạn hãm phanh ngược chiều với vectơ vận tốc.",
+            true,
+            "Chuyển động chậm dần đều có vectơ gia tốc ngược chiều vectơ vận tốc."
+          ],
+          [
+            "Thời gian từ lúc bắt đầu hãm phanh đến khi xe dừng lại hoàn toàn là 5 giây.",
+            true,
+            "t = (v - v₀) / a = (0 - 20) / (-4) = 5 s."
+          ],
+          [
+            "Sau 2 giây kể từ khi hãm phanh, vận tốc của xe còn lại là 12 m/s.",
+            true,
+            "v = v₀ + at = 20 - 4 × 2 = 12 m/s."
+          ],
+          [
+            "Quãng đường xe ôtô đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là 60 m.",
+            false,
+            "s = (v² - v₀²) / (2a) = (0 - 400) / (-8) = 50 m (không phải 60 m)."
+          ]
+        ]
+      }
+    ],
+    "short": [
+      {
+        "question": "Dùng thước có độ chia nhỏ nhất 1 mm để đo chiều dài một quyển sách giáo khoa Vật lí 10 được kết quả L = (240 ± 1) mm. Sai số tỉ đối δL của phép đo này bằng bao nhiêu phần trăm (nhập số nguyên hoặc số thập phân, ví dụ 0.42)?",
+        "answer": "0.42",
+        "explanation": "δL = (ΔL / L̄) × 100% = (1 / 240) × 100% ≈ 0,42%."
+      },
+      {
+        "question": "Một bạn học sinh đi xe đạp thẳng đều từ nhà đến trường cách nhau 3,6 km hết đúng 15 phút. Tốc độ chuyển động của bạn học sinh tính theo đơn vị km/h là bao nhiêu?",
+        "answer": "14.4",
+        "explanation": "t = 15 phút = 0,25 h. v = s / t = 3,6 / 0,25 = 14,4 km/h."
+      },
+      {
+        "question": "Một đoàn tàu hỏa bắt đầu rời ga chuyển động thẳng nhanh dần đều không vận tốc đầu với gia tốc a = 0,4 m/s². Sau bao nhiêu giây kể từ lúc rời ga thì tàu đạt tốc độ 12 m/s?",
+        "answer": "30",
+        "explanation": "t = v / a = 12 / 0,4 = 30 s."
+      },
+      {
+        "question": "Thả một hòn bi sắt rơi tự do từ tầng thượng của một tòa nhà cao 45 m xuống mặt đất tại nơi có g = 10 m/s². Bỏ qua sức cản không khí. Thời gian rơi của viên bi đến khi chạm đất là bao nhiêu giây?",
+        "answer": "3",
+        "explanation": "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
       }
     ]
   },
@@ -2624,267 +3088,261 @@ const suppliedExams = [
     "id": "vatli-10-de-02",
     "title": "Vật lí 10 - Đề 02 - Trường THPT Gio Linh – Quảng Trị (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Gio Linh",
-      "province": "Quảng Trị",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14298/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-gio-linh-quang-tri",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT Gio Linh – Quảng Trị · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Phương pháp nghiên cứu nào là phương pháp cốt lõi, đặc thù nhất của Vật lí học?",
+        "Cuộc cách mạng công nghiệp lần thứ nhất (cuối thế kỉ XVIII) gắn liền với thành tựu đột phá nào của Vật lí học?",
         [
-          "Phương pháp thực nghiệm kết hợp phương pháp lí thuyết.",
-          "Phương pháp điều tra xã hội học qua phiếu khảo sát.",
-          "Phương pháp suy luận thuần túy tư duy trừu tượng không cần kiểm chứng.",
-          "Phương pháp ghi nhận cảm tính của người quan sát."
+          "A. Sự phát minh và hoàn thiện động cơ hơi nước của James Watt.",
+          "B. Sự phát minh ra dòng điện và máy phát điện xoay chiều.",
+          "C. Sự ra đời của bóng bán dẫn và máy vi tính cá nhân.",
+          "D. Sự phát triển của trí tuệ nhân tạo và mạng Internet vạn vật."
         ],
         0,
-        "Phương pháp thực nghiệm (thí nghiệm kiểm chứng) kết hợp chặt chẽ với phương pháp lí thuyết là phương pháp nghiên cứu đặc trưng của Vật lí."
+        "Động cơ hơi nước dựa trên các nguyên lí nhiệt học vật lí là nền tảng của CMCN lần thứ nhất."
       ],
       [
-        "Trong phòng thí nghiệm Vật lí, biển báo có hình tròn nền xanh dương, hình vẽ màu trắng như hình bên có ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#2563eb\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><rect x=\"22\" y=\"38\" width=\"24\" height=\"24\" rx=\"8\" fill=\"#fff\"/><rect x=\"54\" y=\"38\" width=\"24\" height=\"24\" rx=\"8\" fill=\"#fff\"/><rect x=\"42\" y=\"46\" width=\"16\" height=\"6\" fill=\"#fff\"/><path d=\"M16,48 Q22,46 24,48 M76,48 Q82,46 84,48\" stroke=\"#fff\" stroke-width=\"4\" fill=\"none\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển lệnh bắt buộc đeo kính bảo hộ</div></div>",
+        "Lĩnh vực nào sau đây thuộc phạm trù nghiên cứu của Vật lí cổ điển (hình thành trước đầu thế kỉ XX)?",
         [
-          "Quy định bắt buộc phải đeo kính bảo hộ.",
-          "Cảnh báo khu vực có ánh sáng laser độc hại.",
-          "Cấm nhìn trực tiếp vào nguồn sáng.",
-          "Nơi để dụng cụ vệ sinh mắt."
+          "A. Cơ học cổ điển, Nhiệt học, Điện từ học và Quang học.",
+          "B. Thuyết tương đối hẹp và thuyết tương đối rộng của Einstein.",
+          "C. Cơ học lượng tử và cấu trúc hạt nhân nguyên tử.",
+          "D. Công nghệ vi mạch lượng tử và máy tính lượng tử."
         ],
         0,
-        "Biển báo hình tròn nền xanh hình trắng là biển hiệu lệnh bắt buộc thực hiện (ở đây là đeo kính bảo hộ bảo vệ mắt)."
+        "Cơ học, Nhiệt học, Điện từ học, Quang học là các nhánh trụ cột của Vật lí cổ điển."
       ],
       [
-        "Sai số nào sau đây sinh ra do đặc điểm cấu tạo của dụng cụ đo và không thể loại trừ hoàn toàn bằng cách đo nhiều lần?",
+        "Khi làm thí nghiệm quang học có sử dụng nguồn phát tia laser, để bảo đảm an toàn cho mắt, học sinh TUYỆT ĐỐI KHÔNG được:",
         [
-          "Sai số dụng cụ (sai số hệ thống).",
-          "Sai số ngẫu nhiên do mắt đọc lệch.",
-          "Sai số do thao tác bấm đồng hồ không đều.",
-          "Sai số do tác động bất chợt của gió."
+          "A. Nhìn trực tiếp vào đầu phát tia laser hoặc để tia laser phản xạ vào mắt.",
+          "B. Đặt nguồn phát laser trên giá đỡ cố định chắc chắn.",
+          "C. Che chắn chùm tia laser bằng tấm chắn sáng mờ.",
+          "D. Tắt nguồn laser ngay sau khi kết thúc buổi thực hành."
         ],
         0,
-        "Sai số dụng cụ là loại sai số hệ thống có tính quy luật, xuất phát từ giới hạn độ chính xác của dụng cụ chế tạo."
+        "Tia laser có mật độ năng lượng rất cao, nhìn trực tiếp vào chùm tia có thể gây bỏng võng mạc và mù lòa vĩnh viễn."
       ],
       [
-        "Dùng thước kẹp có độ chia nhỏ nhất 0,1 mm đo đường kính viên bi thép được kết quả d̄ = 12,4 mm. Sai số tuyệt đối là Δd = 0,1 mm. Sai số tỉ đối của phép đo xấp xỉ bằng:",
+        "Trong phòng thực hành, biển báo có hình tròn nền xanh dương, hình vẽ màu trắng như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#2563eb\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"34\" cy=\"50\" r=\"14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\"/><circle cx=\"66\" cy=\"50\" r=\"14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\"/><line x1=\"48\" y1=\"50\" x2=\"52\" y2=\"50\" stroke=\"#fff\" stroke-width=\"5\"/><path d=\"M20,50 Q24,38 34,38\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/><path d=\"M80,50 Q76,38 66,38\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "0,81%.",
-          "1,24%.",
-          "8,1%.",
-          "0,1%."
+          "A. Quy định bắt buộc phải đeo kính bảo hộ mắt khi tiến hành thí nghiệm.",
+          "B. Cảnh báo khu vực có nguy cơ nổ bình áp suất cao.",
+          "C. Cấm người đeo kính mắt vào phòng thí nghiệm.",
+          "D. Nơi sơ cấp cứu và rửa mắt khẩn cấp."
         ],
         0,
-        "Sai số tỉ đối δd = (Δd / d̄) × 100% = (0,1 / 12,4) × 100% ≈ 0,81%."
+        "Biển tròn nền xanh dương hình trắng là biển báo hiệu lệnh bắt buộc thực hiện (đeo kính bảo hộ)."
       ],
       [
-        "Một chất điểm chuyển động trên một đường thẳng, xuất phát từ điểm có tọa độ x₁ = –4 m đến điểm có tọa độ x₂ = 6 m. Độ dịch chuyển của chất điểm bằng:",
+        "Phép đo nào sau đây là phép đo GIÁN TIẾP?",
         [
-          "10 m.",
-          "2 m.",
-          "–10 m.",
-          "–2 m."
+          "A. Đo tốc độ trung bình của một viên bi bằng tỉ số quãng đường và thời gian (v = s/t).",
+          "B. Dùng nhiệt kế thủy ngân đo nhiệt độ của một cốc nước nóng.",
+          "C. Dùng cân điện tử đo khối lượng của một quả cân bằng đồng.",
+          "D. Dùng đồng hồ bấm giây đo thời gian rơi của một vật."
         ],
         0,
-        "Độ dịch chuyển d = x₂ – x₁ = 6 – (–4) = 10 m."
+        "Đo gián tiếp là xác định giá trị thông qua công thức liên hệ với các đại lượng đo trực tiếp."
       ],
       [
-        "Tốc độ tức thời của một chuyển động cho biết:",
+        "Khi dùng thước milimét có độ chia nhỏ nhất (ĐCNN) là 1 mm để đo độ dài, nếu không có quy định nào khác thì sai số dụng cụ thông thường được lấy bằng:",
         [
-          "Mức độ nhanh hay chậm của chuyển động tại một thời điểm xác định.",
-          "Quãng đường vật đi được trong một giờ.",
-          "Hướng chuyển động của vật trong không gian.",
-          "Độ dịch chuyển trung bình của vật."
+          "A. Nửa độ chia nhỏ nhất (0,5 mm) hoặc một độ chia nhỏ nhất (1 mm).",
+          "B. Luôn luôn bằng 0 mm vì thước chuẩn.",
+          "C. Gấp đôi độ chia nhỏ nhất (2 mm).",
+          "D. 10% giá trị đo được trên thước."
         ],
         0,
-        "Tốc độ tức thời đo độ nhanh chậm tại đúng thời điểm hoặc tại vị trí đang xét."
+        "Sai số dụng cụ thông thường được quy ước lấy bằng một nửa hoặc một độ chia nhỏ nhất của dụng cụ."
       ],
       [
-        "Khi vật chuyển động thẳng đều ngược chiều dương đã chọn, đồ thị độ dịch chuyển – thời gian (d – t) là một đường thẳng:",
+        "Một chất điểm chuyển động thẳng đều theo một chiều nhất định. So sánh giữa quãng đường đi được s và độ lớn của độ dịch chuyển |d|, ta luôn có:",
         [
-          "Dốc xuống (có hệ số góc âm).",
-          "Dốc lên (có hệ số góc dương).",
-          "Song song với trục hoành Ot.",
-          "Trùng với trục tung Od."
+          "A. s = |d|.",
+          "B. s > |d|.",
+          "C. s < |d|.",
+          "D. s = 2|d|."
         ],
         0,
-        "Hệ số góc v = Δd / Δt < 0 khi chuyển động ngược chiều dương, do đó đường biểu diễn d – t dốc xuống."
+        "Khi vật chuyển động thẳng và không đổi chiều chuyển động thì quãng đường đi được đúng bằng độ lớn độ dịch chuyển."
       ],
       [
-        "Một người đi bộ trên một thang cuốn đang chuyển động. Nếu người đó đi cùng chiều chuyển động của thang cuốn thì vận tốc của người đối với mặt đất sẽ:",
+        "Một hành khách ngồi yên trong một toa tàu hỏa đang chạy thẳng đều trên đường ray. Người hành khách này đứng yên so với:",
         [
-          "Bằng tổng vận tốc của người đối với thang và vận tốc của thang đối với đất.",
-          "Bằng hiệu vận tốc của người đối với thang và vận tốc của thang đối với đất.",
-          "Luôn bằng 0.",
-          "Bằng vận tốc của thang cuốn."
+          "A. Toa tàu mà người đó đang ngồi.",
+          "B. Các cột điện bên đường ray.",
+          "C. Nhà ga mà tàu vừa rời đi.",
+          "D. Mặt đường ray bên dưới toa tàu."
         ],
         0,
-        "Chuyển động cùng phương cùng chiều: v₁₃ = v₁₂ + v₂₃."
+        "Vị trí của hành khách không thay đổi so với toa tàu nên người đó đứng yên so với toa tàu."
       ],
       [
-        "Một chiếc xe ôtô chạy thẳng đều quãng đường 120 km trong thời gian 2 giờ 30 phút. Tốc độ của xe bằng:",
+        "Cổng quang điện trong bộ thí nghiệm thực hành Vật lí 10 hoạt động dựa trên nguyên lí:",
         [
-          "48 km/h.",
-          "50 km/h.",
-          "60 km/h.",
-          "45 km/h."
+          "A. Cảm biến phát hiện sự ngắt và thông chùm tia hồng ngoại khi có vật chắn sáng đi qua.",
+          "B. Cảm biến siêu âm đo khoảng cách phản xạ âm thanh.",
+          "C. Cảm ứng từ trường nam châm điện biến thiên.",
+          "D. Cảm ứng nhiệt độ tỏa ra từ vật chuyển động."
         ],
         0,
-        "Thời gian t = 2,5 h. Tốc độ v = s / t = 120 / 2,5 = 48 km/h."
+        "Cổng quang gồm một đầu phát tia hồng ngoại và một đầu thu; khi vật chắn tia sáng thì đồng hồ đếm thời gian."
       ],
       [
-        "Gia tốc là đại lượng vật lí đặc trưng cho:",
+        "Hình bên là đồ thị độ dịch chuyển – thời gian (d – t) của một xe máy chuyển động thẳng đều. Tốc độ của xe máy là: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"12\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">d(m)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"125\" x2=\"185\" y2=\"35\" stroke=\"#16a34a\" stroke-width=\"3\"/><line x1=\"185\" y1=\"35\" x2=\"185\" y2=\"125\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><line x1=\"35\" y1=\"35\" x2=\"185\" y2=\"35\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\"/><text x=\"180\" y=\"138\" font-size=\"11\" fill=\"#334155\">4</text><text x=\"18\" y=\"38\" font-size=\"11\" fill=\"#334155\">20</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị độ dịch chuyển – thời gian (d – t)</div></div>",
         [
-          "Sự thay đổi nhanh hay chậm của vận tốc.",
-          "Độ nhanh hay chậm của chuyển động.",
-          "Quãng đường vật đi được trong một đơn vị thời gian.",
-          "Sự thay đổi vị trí của vật trong không gian."
+          "A. 5 m/s.",
+          "B. 20 m/s.",
+          "C. 4 m/s.",
+          "D. 80 m/s."
         ],
         0,
-        "Gia tốc đặc trưng cho sự biến đổi nhanh hay chậm của vận tốc: a⃗ = Δv⃗ / Δt."
+        "Vận tốc trong đồ thị d – t là hệ số góc: v = Δd / Δt = 20 / 4 = 5 m/s."
       ],
       [
-        "Phương trình vận tốc của một vật chuyển động thẳng biến đổi đều dọc theo trục Ox có dạng v = 4 + 2t (m/s). Vận tốc ban đầu và gia tốc của vật lần lượt là:",
+        "Đơn vị đo của gia tốc trong hệ đo lường quốc tế (SI) là:",
         [
-          "v₀ = 4 m/s; a = 2 m/s².",
-          "v₀ = 2 m/s; a = 4 m/s².",
-          "v₀ = 4 m/s; a = 1 m/s².",
-          "v₀ = 0 m/s; a = 2 m/s²."
+          "A. m/s² (mét trên giây bình phương).",
+          "B. m/s (mét trên giây).",
+          "C. km/h (kilômét trên giờ).",
+          "D. m · s (mét nhân giây)."
         ],
         0,
-        "So sánh với dạng chuẩn v = v₀ + at, ta có v₀ = 4 m/s và a = 2 m/s²."
+        "Gia tốc có đơn vị SI là m/s²."
       ],
       [
-        "Một xe ôtô chuyển động thẳng nhanh dần đều với vận tốc đầu v₀ = 5 m/s và gia tốc a = 2 m/s². Độ dịch chuyển của xe sau 3 giây là:",
+        "Trong chuyển động thẳng nhanh dần đều:",
         [
-          "24 m.",
-          "15 m.",
-          "9 m.",
-          "21 m."
+          "A. Vectơ gia tốc cùng hướng với vectơ vận tốc và gia tốc có độ lớn không đổi.",
+          "B. Vectơ gia tốc ngược hướng với vectơ vận tốc.",
+          "C. Vận tốc của vật giảm đều theo thời gian.",
+          "D. Gia tốc tăng đều theo thời gian."
         ],
         0,
-        "Áp dụng công thức: d = v₀t + 1/2·a·t² = 5 × 3 + 0,5 × 2 × 3² = 15 + 9 = 24 m."
+        "Chuyển động thẳng nhanh dần đều có gia tốc không đổi và vectơ gia tốc cùng hướng với vectơ vận tốc."
       ],
       [
-        "Diện tích hình phẳng giới hạn bởi đồ thị vận tốc – thời gian (v – t) và trục hoành trong khoảng thời gian từ t₁ đến t₂ cho biết:",
+        "Một ôtô đang chạy thì hãm phanh chuyển động chậm dần đều có đồ thị vận tốc – thời gian (v – t) như hình vẽ bên. Gia tốc của ôtô bằng: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"220\" height=\"150\" viewBox=\"0 0 220 150\"><line x1=\"35\" y1=\"125\" x2=\"205\" y2=\"125\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"35\" y1=\"125\" x2=\"35\" y2=\"20\" stroke=\"#475569\" stroke-width=\"2\"/><polygon points=\"205,122 213,125 205,128\" fill=\"#475569\"/><polygon points=\"32,20 35,12 38,20\" fill=\"#475569\"/><text x=\"200\" y=\"142\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">t(s)</text><text x=\"10\" y=\"24\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">v(m/s)</text><text x=\"24\" y=\"138\" font-size=\"12\" fill=\"#334155\" font-family=\"sans-serif\">O</text><line x1=\"35\" y1=\"45\" x2=\"175\" y2=\"125\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"14\" y=\"48\" font-size=\"11\" fill=\"#334155\">20</text><text x=\"170\" y=\"138\" font-size=\"11\" fill=\"#334155\">4</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị vận tốc – thời gian (v – t)</div></div>",
         [
-          "Độ lớn của độ dịch chuyển trong khoảng thời gian đó.",
-          "Gia tốc tức thời của chuyển động.",
-          "Vận tốc trung bình của chuyển động.",
-          "Quãng đường tối đa vật có thể đi."
+          "A. –5 m/s².",
+          "B. 5 m/s².",
+          "C. –20 m/s².",
+          "D. 0 m/s²."
         ],
         0,
-        "Trong đồ thị v – t, diện tích giới hạn bởi đường đồ thị với trục Ot chính là độ dịch chuyển d."
+        "a = (v - v₀) / t = (0 - 20) / 4 = –5 m/s²."
       ],
       [
-        "Tại cùng một nơi trên Trái Đất, nếu bỏ qua lực cản không khí, hai vật có khối lượng m₁ và m₂ (m₁ > m₂) được thả rơi tự do từ cùng một độ cao thì:",
+        "Phương trình độ dịch chuyển của một vật chuyển động thẳng biến đổi đều không vận tốc đầu (v₀ = 0) dọc theo trục tọa độ là:",
         [
-          "Hai vật rơi chạm đất cùng một lúc.",
-          "Vật m₁ rơi chạm đất trước vật m₂.",
-          "Vật m₂ rơi chạm đất trước vật m₁.",
-          "Vận tốc chạm đất của vật m₁ lớn hơn vật m₂."
+          "A. d = 1/2 · a · t².",
+          "B. d = v₀ · t.",
+          "C. d = a · t.",
+          "D. d = 2 · a · t²."
         ],
         0,
-        "Gia tốc rơi tự do g không phụ thuộc vào khối lượng của vật, cùng thả từ độ cao h thì cùng chạm đất một lúc: t = √(2h / g)."
+        "Khi v₀ = 0 thì d = 1/2 · a · t²."
       ],
       [
-        "Một vật rơi tự do từ độ cao h. Lấy g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất được tính bởi hệ thức:",
+        "Yếu tố nào sau đây là nguyên nhân chủ yếu khiến cho một chiếc lá rụng lại rơi chậm hơn nhiều so với một viên sỏi trong không khí?",
         [
-          "v = √(2gh).",
-          "v = 2gh.",
-          "v = √(gh).",
-          "v = 1/2·gh²."
+          "A. Lực cản của không khí tác dụng lên chiếc lá có ảnh hưởng đáng kể so với trọng lượng của nó.",
+          "B. Trọng lực tác dụng lên chiếc lá nhỏ hơn rất nhiều lần gia tốc trọng trường g.",
+          "C. Gia tốc rơi tự do của chiếc lá nhỏ hơn gia tốc rơi tự do của viên sỏi.",
+          "D. Trái Đất chỉ hút viên sỏi mà không hút chiếc lá."
         ],
         0,
-        "Công thức liên hệ rơi tự do: v² = 2gh suy ra v = √(2gh)."
+        "Lực cản không khí so với trọng lượng của chiếc lá là đáng kể, làm chậm tốc độ rơi của chiếc lá."
       ],
       [
-        "Một đoàn tàu đang chạy thẳng đều với tốc độ 36 km/h thì tăng tốc nhanh dần đều với gia tốc 0,5 m/s². Sau 10 s kể từ lúc tăng tốc, tốc độ của đoàn tàu là:",
+        "Một vật rơi tự do từ độ cao h = 45 m tại nơi có gia tốc trọng trường g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất là:",
         [
-          "15 m/s.",
-          "12 m/s.",
-          "20 m/s.",
-          "18 m/s."
+          "A. 30 m/s.",
+          "B. 20 m/s.",
+          "C. 45 m/s.",
+          "D. 15 m/s."
         ],
         0,
-        "Đổi 36 km/h = 10 m/s. Vận tốc sau 10 s: v = v₀ + at = 10 + 0,5 × 10 = 15 m/s."
+        "Vận tốc khi chạm đất: v = √(2gh) = √(2 · 10 · 45) = √900 = 30 m/s."
       ]
     ],
     "tf": [
       {
-        "stem": "Đồ thị độ dịch chuyển – thời gian (d – t) của một vật chuyển động trên đường thẳng Ox được cho bởi các đoạn: từ t = 0 đến t = 4 s vật đi từ d = 0 đến d = 8 m; từ t = 4 s đến t = 8 s vật giữ nguyên ở d = 8 m; từ t = 8 s đến t = 10 s vật đi từ d = 8 m về lại d = 0.",
+        "stem": "Một học sinh dùng thước kẹp đo đường kính d của một viên bi thép 5 lần được các giá trị lần lượt là: 12,2 mm; 12,4 mm; 12,3 mm; 12,2 mm; 12,4 mm. Thước kẹp có độ chia nhỏ nhất là 0,1 mm và lấy sai số dụng cụ bằng độ chia nhỏ nhất.",
         "items": [
           [
-            "Trong 4 giây đầu tiên, vật chuyển động thẳng đều cùng chiều dương với vận tốc 2 m/s.",
+            "Giá trị trung bình của đường kính viên bi qua 5 lần đo là d̄ = 12,3 mm.",
             true,
-            "v = Δd / Δt = (8 – 0) / (4 – 0) = 2 m/s."
+            "d̄ = (12,2 + 12,4 + 12,3 + 12,2 + 12,4) / 5 = 61,5 / 5 = 12,3 mm."
           ],
           [
-            "Từ giây thứ 4 đến giây thứ 8, vật chuyển động thẳng đều với vận tốc 8 m/s.",
-            false,
-            "Độ dịch chuyển không đổi d = 8 m chứng tỏ vật đứng yên."
+            "Sai số ngẫu nhiên tuyệt đối trung bình của phép đo là Δd_ng = 0,08 mm.",
+            true,
+            "Các độ lệch: |12,2 - 12,3| = 0,1; |12,4 - 12,3| = 0,1; |12,3 - 12,3| = 0; |12,2 - 12,3| = 0,1; |12,4 - 12,3| = 0,1. Trung bình = 0,4 / 5 = 0,08 mm."
           ],
           [
-            "Trong 2 giây cuối (từ 8 s đến 10 s), vật chuyển động thẳng đều ngược chiều dương với vận tốc –4 m/s.",
+            "Sai số tuyệt đối toàn phần của phép đo là Δd = 0,18 mm.",
             true,
-            "v = (0 – 8) / (10 – 8) = –4 m/s."
+            "Δd = Δd_ng + Δd_dc = 0,08 + 0,1 = 0,18 mm."
           ],
           [
-            "Độ dịch chuyển tổng cộng của vật sau toàn bộ 10 giây chuyển động bằng 0 m.",
+            "Nếu làm tròn sai số tuyệt đối đến 1 chữ số có nghĩa là 0,2 mm thì kết quả đo ghi là d = (12,3 ± 0,2) mm.",
             true,
-            "Tại t = 10 s vật ở vị trí d = 0 trùng điểm xuất phát, nên độ dịch chuyển d = 0 m."
+            "Quy tắc ghi kết quả đo: d = (12,3 ± 0,2) mm."
           ]
         ]
       },
       {
-        "stem": "Một quả cầu nhỏ bằng kim loại được thả rơi tự do không vận tốc đầu từ mép mái nhà tầng 5 có độ cao h = 20 m so với mặt đất. Lấy gia tốc trọng trường g = 10 m/s² và bỏ qua sức cản của không khí.",
+        "stem": "Thả một quả cầu kim loại nhỏ rơi tự do từ đỉnh một tháp cao 80 m tại nơi có g = 10 m/s². Bỏ qua mọi sức cản của không khí.",
         "items": [
           [
-            "Chuyển động của quả cầu là chuyển động thẳng nhanh dần đều theo phương thẳng đứng.",
+            "Chuyển động rơi tự do của quả cầu là chuyển động thẳng nhanh dần đều theo phương thẳng đứng hướng từ trên xuống.",
             true,
-            "Rơi tự do là chuyển động thẳng nhanh dần đều với gia tốc g hướng xuống."
+            "Rơi tự do là chuyển động thẳng nhanh dần đều theo phương thẳng đứng với gia tốc g."
           ],
           [
-            "Thời gian quả cầu rơi từ mái nhà đến khi chạm mặt đất là 2 giây.",
+            "Thời gian quả cầu rơi chạm mặt đất là 4 giây.",
             true,
-            "t = √(2h / g) = √(2 × 20 / 10) = √4 = 2 s."
+            "t = √(2h / g) = √(2 · 80 / 10) = √16 = 4 s."
           ],
           [
-            "Tốc độ của quả cầu ngay trước khi tiếp xúc mặt đất là 15 m/s.",
+            "Vận tốc của quả cầu ngay trước khi chạm mặt đất là 40 m/s.",
+            true,
+            "v = gt = 10 · 4 = 40 m/s."
+          ],
+          [
+            "Quãng đường quả cầu rơi được trong giây thứ nhất bằng quãng đường quả cầu rơi trong giây thứ hai.",
             false,
-            "v = gt = 10 × 2 = 20 m/s (hoặc v = √(2gh) = √(2×10×20) = 20 m/s)."
-          ],
-          [
-            "Quãng đường quả cầu rơi được trong 1 giây đầu tiên là 5 m.",
-            true,
-            "h₁ = 1/2·g·t₁² = 0,5 × 10 × 1² = 5 m."
+            "Trong chuyển động nhanh dần đều, quãng đường các giây liên tiếp tăng dần theo tỉ lệ 1 : 3 : 5 (giây 1 rơi 5 m, giây 2 rơi 15 m)."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một xe ôtô chạy trên đường cao tốc với tốc độ đều 90 km/h. Đổi tốc độ này sang đơn vị mét trên giây (m/s) được kết quả là bao nhiêu?",
-        "answer": "25",
-        "explanation": "v = 90 / 3,6 = 25 m/s."
+        "question": "Một người chạy bộ trên một đường thẳng. Trong 20 phút đầu người đó chạy được 3 km, sau đó đi bộ 2 km trong 30 phút tiếp theo. Tốc độ trung bình của người đó trong toàn bộ 50 phút tập luyện tính theo đơn vị km/h là bao nhiêu?",
+        "answer": "6",
+        "explanation": "Tổng quãng đường s = 3 + 2 = 5 km. Tổng thời gian t = 50 phút = 50/60 = 5/6 h. v_tb = s / t = 5 / (5/6) = 6 km/h."
       },
       {
-        "question": "Một người chèo thuyền qua sông rộng 120 m. Mũi thuyền luôn hướng vuông góc với dòng sông và thuyền chuyển động với tốc độ 3 m/s đối với nước. Nước chảy xuôi với tốc độ 4 m/s. Vận tốc của thuyền so với bờ sông có độ lớn bằng bao nhiêu m/s?",
-        "answer": "5",
-        "explanation": "Do hai vận tốc vuông góc nhau: v = √(v_thuyền² + v_nước²) = √(3² + 4²) = √25 = 5 m/s."
+        "question": "Một chiếc ca nô chạy xuôi dòng trên một khúc sông từ bến A đến bến B dài 36 km hết 1,5 giờ. Biết vận tốc của dòng nước là 4 km/h. Vận tốc của ca nô so với dòng nước bằng bao nhiêu km/h?",
+        "answer": "20",
+        "explanation": "Vận tốc xuôi dòng v_xuoi = 36 / 1,5 = 24 km/h. Vận tốc ca nô so với nước v₁ = v_xuoi - v_nuoc = 24 - 4 = 20 km/h."
       },
       {
-        "question": "Một ôtô đang chạy với vận tốc 16 m/s thì giảm tốc độ chuyển động chậm dần đều, sau 4 giây tốc độ giảm xuống còn 8 m/s. Độ lớn gia tốc hãm của ôtô bằng bao nhiêu m/s²?",
-        "answer": "2",
-        "explanation": "Gia tốc a = (v – v₀) / t = (8 – 16) / 4 = –2 m/s². Độ lớn gia tốc là 2 m/s²."
+        "question": "Một xe ôtô bắt đầu khởi hành từ trạng thái nghỉ chuyển động thẳng nhanh dần đều với gia tốc 2,5 m/s². Vận tốc của ôtô sau 6 giây kể từ khi khởi hành bằng bao nhiêu m/s?",
+        "answer": "15",
+        "explanation": "v = v₀ + at = 0 + 2,5 · 6 = 15 m/s."
       },
       {
-        "question": "Một vật được thả rơi tự do từ độ cao h. Khi chạm đất, vận tốc của vật đo được là 30 m/s. Lấy g = 10 m/s². Độ cao h lúc thả vật bằng bao nhiêu mét?",
-        "answer": "45",
-        "explanation": "h = v² / (2g) = 30² / (2 × 10) = 900 / 20 = 45 m."
+        "question": "Thả một hòn đá rơi tự do từ miệng một giếng sâu xuống đáy giếng tại nơi có g = 10 m/s². Sau 2,5 giây thì hòn đá chạm đáy giếng. Bỏ qua thời gian truyền âm trong không khí, độ sâu của giếng bằng bao nhiêu mét?",
+        "answer": "31.25",
+        "explanation": "h = 1/2 · g · t² = 0,5 · 10 · (2,5)² = 5 · 6,25 = 31,25 m."
       }
     ]
   },
@@ -2892,267 +3350,261 @@ const suppliedExams = [
     "id": "vatli-10-de-03",
     "title": "Vật lí 10 - Đề 03 - Trường THPT Nguyễn Trãi – Đà Nẵng (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Nguyễn Trãi",
-      "province": "Đà Nẵng",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14297/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-nguyen-trai-da-nang",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT Nguyễn Trãi – Đà Nẵng · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Hoạt động nào sau đây đảm bảo an toàn tuyệt đối khi tiến hành thí nghiệm trong phòng thực hành Vật lí?",
+        "Quy trình tìm hiểu thế giới tự nhiên dưới góc độ vật lí thường bao gồm các bước theo thứ tự nào sau đây?",
         [
-          "Tắt nguồn điện và rút phích cắm khi đã hoàn thành hoặc xảy ra sự cố chập điện.",
-          "Dùng tay ướt cắm phích điện vào ổ cắm để tiết kiệm thời gian.",
-          "Tự ý pha trộn các hóa chất không rõ nguồn gốc.",
-          "Để các vật dễ cháy gần nguồn nhiệt đang hoạt động."
+          "A. Quan sát, xuất phát câu hỏi &rArr; Xây dựng giả thuyết &rArr; Thiết kế và tiến hành thí nghiệm kiểm chứng &rArr; Phân tích kết quả, rút ra kết luận.",
+          "B. Xây dựng giả thuyết &rArr; Viết báo cáo &rArr; Khảo sát thực địa &rArr; Ra quyết định.",
+          "C. Tiến hành thí nghiệm trước &rArr; Đặt câu hỏi nghiên cứu &rArr; Giả thuyết &rArr; Kết luận.",
+          "D. Đọc sách tham khảo &rArr; Dự đoán kết quả &rArr; Công bố ngay mà không cần thí nghiệm."
         ],
         0,
-        "Tắt nguồn điện và rút phích cắm khi kết thúc hoặc có sự cố là nguyên tắc an toàn cơ bản hàng đầu trong phòng thực hành."
+        "Quy trình khoa học: Quan sát, đề xuất vấn đề &rArr; Giả thuyết &rArr; Thí nghiệm kiểm chứng &rArr; Phân tích dữ liệu &rArr; Kết luận."
       ],
       [
-        "Trong phòng thực hành, biển báo có hình tam giác viền đen, nền vàng, bên trong có hình ngọn lửa như hình bên là biển cảnh báo: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><path d=\"M50,30 Q62,48 56,60 Q66,54 62,74 Q56,80 50,80 Q40,80 38,70 Q36,60 44,52 Q40,58 42,66 Q48,46 50,30 Z\" fill=\"#dc2626\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất dễ cháy</div></div>",
+        "Thành tựu nào sau đây của Vật lí học đã mở đầu cho cuộc cách mạng công nghiệp lần thứ tư (Cách mạng 4.0)?",
         [
-          "Khu vực có vật liệu, hóa chất dễ gây cháy nổ.",
-          "Khu vực có điện áp nguy hiểm.",
-          "Khu vực có bức xạ ion hóa.",
-          "Khu vực có vi sinh vật gây hại."
+          "A. Công nghệ nano, máy tính lượng tử, cảm biến thông minh và trí tuệ nhân tạo.",
+          "B. Sự chế tạo ra máy hơi nước sử dụng than đá.",
+          "C. Sự sản xuất hàng loạt trên dây chuyền cơ khí tự động hóa cơ bản.",
+          "D. Phát minh ra kính thiên văn quang học khúc xạ."
         ],
         0,
-        "Biển tam giác vàng hình ngọn lửa biểu thị cảnh báo nguy cơ cháy (chất dễ bắt cháy, dung môi hữu cơ)."
+        "CMCN 4.0 dựa trên nền tảng vật lí bán dẫn tiên tiến, cảm biến thông minh, điện toán lượng tử và kết nối số."
       ],
       [
-        "Đo thời gian rơi của một vật 5 lần được các giá trị t lần lượt là 0,40 s; 0,41 s; 0,39 s; 0,40 s; 0,40 s. Giá trị trung bình t̄ của thời gian rơi là:",
+        "Khi làm thí nghiệm nhiệt học trong phòng thực hành có sử dụng đèn cồn, hành động nào sau đây là ĐÚNG quy tắc an toàn?",
         [
-          "0,40 s.",
-          "0,41 s.",
-          "0,39 s.",
-          "0,42 s."
+          "A. Dùng nắp đậy chụp kín ngọn lửa để tắt đèn cồn.",
+          "B. Dùng miệng thổi mạnh vào ngọn lửa để dập tắt.",
+          "C. Dùng một đèn cồn đang cháy để châm lửa sang một đèn cồn khác.",
+          "D. Rót cồn trực tiếp vào đèn cồn khi ngọn lửa vẫn đang cháy."
         ],
         0,
-        "t̄ = (0,40 + 0,41 + 0,39 + 0,40 + 0,40) / 5 = 2,00 / 5 = 0,40 s."
+        "Tắt đèn cồn phải dùng nắp đậy chụp lại để cách ly oxy; tuyệt đối không thổi bằng miệng hoặc rót cồn khi đang cháy."
       ],
       [
-        "Một cạnh bàn hình chữ nhật đo được chiều dài a = (1,20 ± 0,01) m và chiều rộng b = (0,80 ± 0,01) m. Sai số tuyệt đối của chu vi hình chữ nhật C = 2(a + b) là:",
+        "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình ngọn lửa như hình vẽ mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><path d=\"M50,30 Q42,50 36,58 Q30,68 38,76 Q46,82 54,80 Q66,78 68,66 Q70,52 56,44 Q60,56 52,60 Q48,52 50,30 Z\" fill=\"#dc2626\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "0,04 m.",
-          "0,02 m.",
-          "0,01 m.",
-          "0,08 m."
+          "A. Cảnh báo vật liệu hoặc chất dễ cháy nổ, cần cẩn trọng khi tiếp xúc.",
+          "B. Nơi đặt bình chữa cháy khẩn cấp.",
+          "C. Biển báo cho phép tự do đốt lửa sưởi ấm.",
+          "D. Khu vực dành riêng cho việc đun nấu ăn uống."
         ],
         0,
-        "Chu vi C = 2a + 2b nên sai số tuyệt đối ΔC = 2Δa + 2Δb = 2 × 0,01 + 2 × 0,01 = 0,04 m."
+        "Biển tam giác vàng viền đen hình ngọn lửa là biển cảnh báo nguy cơ cháy nổ từ các chất dễ cháy."
       ],
       [
-        "Một người bơi dọc theo chiều dài bể bơi 50 m rồi bơi ngược trở lại 20 m. Quãng đường s và độ lớn độ dịch chuyển d của người đó lần lượt là:",
+        "Số chữ số có nghĩa của các số 0,0250 m và 12,04 cm lần lượt là:",
         [
-          "s = 70 m; d = 30 m.",
-          "s = 70 m; d = 70 m.",
-          "s = 30 m; d = 30 m.",
-          "s = 50 m; d = 20 m."
+          "A. 3 và 4.",
+          "B. 4 và 4.",
+          "C. 2 và 3.",
+          "D. 5 và 4."
         ],
         0,
-        "Quãng đường s = 50 + 20 = 70 m. Độ dịch chuyển d = 50 – 20 = 30 m."
+        "0,0250 có 3 chữ số có nghĩa (các chữ số 2, 5, 0 ở cuối; các số 0 đầu không tính). 12,04 có 4 chữ số có nghĩa."
       ],
       [
-        "Phát biểu nào sau đây về mối quan hệ giữa độ lớn vận tốc tức thời và tốc độ tức thời là ĐÚNG?",
+        "Một hình chữ nhật có chiều dài a = (10,0 ± 0,1) cm và chiều rộng b = (5,0 ± 0,1) cm. Sai số tỉ đối của diện tích hình chữ nhật S = a · b bằng:",
         [
-          "Độ lớn của vận tốc tức thời luôn bằng tốc độ tức thời tại thời điểm đó.",
-          "Độ lớn của vận tốc tức thời luôn lớn hơn tốc độ tức thời.",
-          "Độ lớn của vận tốc tức thời luôn nhỏ hơn tốc độ tức thời.",
-          "Hai đại lượng này không có liên hệ với nhau."
+          "A. 3,0%.",
+          "B. 1,0%.",
+          "C. 2,0%.",
+          "D. 0,2%."
         ],
         0,
-        "Tại một thời điểm xác định, độ lớn của vectơ vận tốc tức thời chính bằng tốc độ tức thời của vật."
+        "δS = δa + δb = (0,1 / 10,0 × 100%) + (0,1 / 5,0 × 100%) = 1% + 2% = 3%."
       ],
       [
-        "Hình vẽ bên biểu diễn đồ thị d – t của một xe chạy thẳng đều. Từ đồ thị, vận tốc của xe có giá trị bằng: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"240\" height=\"160\" viewBox=\"0 0 240 160\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;\"><line x1=\"40\" y1=\"130\" x2=\"230\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"230,126 240,130 230,134\" fill=\"#334155\"/><text x=\"224\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">t(s)</text><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"10\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"36,10 40,2 44,10\" fill=\"#334155\"/><text x=\"12\" y=\"14\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">d(m)</text><polyline points=\"40,130 100,93.33333333333334 160,56.66666666666667 220,20\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"3\"/><circle cx=\"40\" cy=\"130\" r=\"4\" fill=\"#dc2626\"/><text x=\"40\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">0</text><text x=\"32\" y=\"134\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">0</text><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"100\" cy=\"93.33333333333334\" r=\"4\" fill=\"#dc2626\"/><text x=\"100\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">1</text><text x=\"32\" y=\"97.33333333333334\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">20</text><line x1=\"40\" y1=\"93.33333333333334\" x2=\"100\" y2=\"93.33333333333334\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"100\" y1=\"130\" x2=\"100\" y2=\"93.33333333333334\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"160\" cy=\"56.66666666666667\" r=\"4\" fill=\"#dc2626\"/><text x=\"160\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">2</text><text x=\"32\" y=\"60.66666666666667\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">40</text><line x1=\"40\" y1=\"56.66666666666667\" x2=\"160\" y2=\"56.66666666666667\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"160\" y1=\"130\" x2=\"160\" y2=\"56.66666666666667\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"220\" cy=\"20\" r=\"4\" fill=\"#dc2626\"/><text x=\"220\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">3</text><text x=\"32\" y=\"24\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">60</text><line x1=\"40\" y1=\"20\" x2=\"220\" y2=\"20\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"220\" y1=\"130\" x2=\"220\" y2=\"20\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị độ dịch chuyển – thời gian (d – t)</div></div>",
+        "Một chất điểm chuyển động trên trục Ox. Tại thời điểm t₁ vật ở điểm M có tọa độ x₁ = –5 m, tại thời điểm t₂ vật ở điểm N có tọa độ x₂ = +15 m. Độ dịch chuyển của chất điểm trong khoảng thời gian đó là:",
         [
-          "20 m/s.",
-          "10 m/s.",
-          "30 m/s.",
-          "60 m/s."
+          "A. d = +20 m.",
+          "B. d = –20 m.",
+          "C. d = +10 m.",
+          "D. d = –10 m."
         ],
         0,
-        "Vận tốc chính là độ dốc đồ thị: v = Δd / Δt = (60 – 0) / (3 – 0) = 20 m/s."
+        "d = x₂ - x₁ = 15 - (-5) = +20 m."
       ],
       [
-        "Hai ôtô chạy ngược chiều nhau trên cùng một đoạn đường thẳng với tốc độ lần lượt là 50 km/h và 40 km/h. Độ lớn vận tốc của ôtô thứ nhất đối với ôtô thứ hai là:",
+        "Công thức định nghĩa vận tốc trung bình của một vật trong khoảng thời gian Δt là:",
         [
-          "90 km/h.",
-          "10 km/h.",
-          "50 km/h.",
-          "40 km/h."
+          "A. v⃗_tb = d⃗ / Δt.",
+          "B. v_tb = s / Δt.",
+          "C. v⃗_tb = a⃗ · Δt.",
+          "D. v⃗_tb = d⃗ · Δt."
         ],
         0,
-        "Hai xe chạy ngược chiều nhau thì vận tốc tương đối bằng tổng: v₁₂ = v₁ + v₂ = 50 + 40 = 90 km/h."
+        "Vận tốc trung bình là đại lượng vectơ bằng thương số giữa vectơ độ dịch chuyển và khoảng thời gian: v⃗_tb = d⃗ / Δt."
       ],
       [
-        "Một người đi xe đạp chuyển động đều với tốc độ 4 m/s. Thời gian để người đó đi hết đoạn đường 1,2 km là:",
+        "Trong thí nghiệm đo tốc độ tức thời dùng cổng quang điện, nếu tấm chắn sáng có bề rộng d và thời gian chắn chùm sáng đo được là Δt thì tốc độ tức thời được tính theo công thức:",
         [
-          "300 s.",
-          "120 s.",
-          "480 s.",
-          "240 s."
+          "A. v = d / Δt.",
+          "B. v = Δt / d.",
+          "C. v = d · Δt.",
+          "D. v = 1/2 · d · (Δt)²."
         ],
         0,
-        "Đổi 1,2 km = 1200 m. Thời gian t = s / v = 1200 / 4 = 300 s (tương đương 5 phút)."
+        "Tốc độ tức thời tại vị trí cổng quang xấp xỉ bằng tốc độ trung bình qua tấm chắn sáng nhỏ: v = d / Δt."
       ],
       [
-        "Gia tốc của một chất điểm chuyển động thẳng có giá trị âm (a < 0). Kết luận nào sau đây là CHẮC CHẮN ĐÚNG?",
+        "Trên đồ thị độ dịch chuyển – thời gian (d – t), nếu đường biểu diễn là một đường thẳng dốc xuống từ trái sang phải thì vật đang:",
         [
-          "Vectơ gia tốc ngược chiều với chiều dương được chọn.",
-          "Chất điểm chuyển động chậm dần đều.",
-          "Chất điểm chuyển động nhanh dần đều.",
-          "Vận tốc của chất điểm luôn giảm về 0."
+          "A. Chuyển động thẳng đều ngược chiều dương đã chọn.",
+          "B. Chuyển động thẳng đều cùng chiều dương đã chọn.",
+          "C. Đứng yên tại một vị trí cố định.",
+          "D. Chuyển động nhanh dần đều theo chiều âm."
         ],
         0,
-        "Dấu âm của gia tốc chỉ thể hiện vectơ gia tốc hướng ngược chiều dương đã chọn. Nếu v < 0 thì a·v > 0 vật vẫn nhanh dần đều."
+        "Đường thẳng dốc xuống có hệ số góc âm (v < 0), nghĩa là vật chuyển động thẳng đều ngược chiều dương."
       ],
       [
-        "Một vật chuyển động thẳng nhanh dần đều có vận tốc ban đầu v₀ = 2 m/s, sau 4 s đạt vận tốc v = 10 m/s. Gia tốc của chuyển động bằng:",
+        "Một đoàn tàu đang chạy chậm dần đều vào ga. Nhận định nào sau đây về gia tốc a⃗ của đoàn tàu là ĐÚNG?",
         [
-          "2 m/s².",
-          "3 m/s².",
-          "1 m/s².",
-          "4 m/s²."
+          "A. Vectơ gia tốc a⃗ ngược chiều với vectơ vận tốc v⃗.",
+          "B. Vectơ gia tốc a⃗ cùng chiều với vectơ vận tốc v⃗.",
+          "C. Vectơ gia tốc a⃗ luôn vuông góc với vectơ vận tốc v⃗.",
+          "D. Gia tốc của đoàn tàu bằng 0."
         ],
         0,
-        "a = (v – v₀) / t = (10 – 2) / 4 = 8 / 4 = 2 m/s²."
+        "Trong chuyển động chậm dần đều, gia tốc luôn ngược hướng với vận tốc để làm giảm độ lớn của vận tốc."
       ],
       [
-        "Trong các chuyển động sau đây, chuyển động nào có thể xem là chuyển động thẳng biến đổi đều?",
+        "Một xe máy đang chạy với tốc độ 12 m/s thì người lái xe hãm phanh chuyển động chậm dần đều với độ lớn gia tốc 2 m/s². Quãng đường xe đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là:",
         [
-          "Một hòn bi lăn xuống dốc thẳng không ma sát.",
-          "Chuyển động của đầu kim đồng hồ.",
-          "Chuyển động của một người đi bộ trên phố đông đúc.",
-          "Chiếc lá rơi từ cành cây xuống trong gió bão."
+          "A. 36 m.",
+          "B. 72 m.",
+          "C. 24 m.",
+          "D. 144 m."
         ],
         0,
-        "Hòn bi lăn xuống máng nghiêng thẳng không ma sát chịu thành phần trọng lực không đổi nên chuyển động nhanh dần đều."
+        "Áp dụng v² - v₀² = 2ad &rArr; 0² - 12² = 2 · (-2) · s &rArr; s = -144 / (-4) = 36 m."
       ],
       [
-        "Hình vẽ bên biểu diễn đồ thị vận tốc – thời gian (v – t) của một vật. Gia tốc của vật trong giai đoạn này bằng: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"240\" height=\"160\" viewBox=\"0 0 240 160\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;\"><line x1=\"40\" y1=\"130\" x2=\"230\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"230,126 240,130 230,134\" fill=\"#334155\"/><text x=\"216\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">t(s)</text><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"10\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"36,10 40,2 44,10\" fill=\"#334155\"/><text x=\"8\" y=\"14\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">v(m/s)</text><polyline points=\"40,130 220,20\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"3\"/><circle cx=\"40\" cy=\"130\" r=\"4\" fill=\"#ea580c\"/><text x=\"40\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">0</text><text x=\"32\" y=\"134\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">0</text><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"220\" cy=\"20\" r=\"4\" fill=\"#ea580c\"/><text x=\"220\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">5</text><text x=\"32\" y=\"24\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">20</text><line x1=\"40\" y1=\"20\" x2=\"220\" y2=\"20\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"220\" y1=\"130\" x2=\"220\" y2=\"20\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị vận tốc – thời gian (v – t)</div></div>",
+        "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động thẳng nhanh dần đều xuất phát từ trạng thái nghỉ (v₀ = 0) là:",
         [
-          "4 m/s².",
-          "2 m/s².",
-          "5 m/s².",
-          "10 m/s²."
+          "A. Một đường thẳng xuất phát từ gốc tọa độ O và dốc lên trên.",
+          "B. Một đường thẳng song song với trục thời gian t.",
+          "C. Một đường cong parabol quay bề lõm lên trên.",
+          "D. Một đường thẳng dốc xuống cắt trục thời gian."
         ],
         0,
-        "Gia tốc a = (v – v₀) / t = (20 – 0) / 5 = 4 m/s²."
+        "v = at (hàm bậc nhất) nên đồ thị v – t là đường thẳng đi qua gốc tọa độ O và dốc lên (a > 0)."
       ],
       [
-        "Một vật được thả rơi tự do từ độ cao h = 80 m tại nơi có g = 10 m/s². Thời gian rơi của vật đến khi chạm đất là:",
+        "Trong thí nghiệm đo gia tốc rơi tự do tại phòng thực hành Vật lí (hình bên), để xác định gia tốc rơi tự do g, học sinh cần đo chính xác hai đại lượng nào? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"180\" height=\"150\" viewBox=\"0 0 180 150\"><line x1=\"60\" y1=\"15\" x2=\"60\" y2=\"140\" stroke=\"#334155\" stroke-width=\"4\"/><rect x=\"52\" y=\"15\" width=\"16\" height=\"12\" fill=\"#dc2626\"/><circle cx=\"60\" cy=\"33\" r=\"5\" fill=\"#475569\"/><rect x=\"45\" y=\"55\" width=\"30\" height=\"8\" rx=\"2\" fill=\"#2563eb\"/><rect x=\"45\" y=\"115\" width=\"30\" height=\"8\" rx=\"2\" fill=\"#2563eb\"/><text x=\"82\" y=\"62\" font-size=\"10\" fill=\"#2563eb\">Cổng quang A</text><text x=\"82\" y=\"122\" font-size=\"10\" fill=\"#2563eb\">Cổng quang B</text><line x1=\"35\" y1=\"59\" x2=\"35\" y2=\"119\" stroke=\"#ea580c\" stroke-width=\"2\"/><polygon points=\"35,55 32,61 38,61\" fill=\"#ea580c\"/><polygon points=\"35,123 32,117 38,117\" fill=\"#ea580c\"/><text x=\"20\" y=\"90\" font-size=\"10\" fill=\"#ea580c\" font-weight=\"bold\">s</text></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Bộ dụng cụ đo gia tốc rơi tự do</div></div>",
         [
-          "4 s.",
-          "2 s.",
-          "8 s.",
-          "16 s."
+          "A. Quãng đường rơi s giữa hai cổng quang và khoảng thời gian rơi t của vật.",
+          "B. Khối lượng của vật m và lực hút của Trái Đất tác dụng lên vật.",
+          "C. Đường kính của vật rơi và thể tích của vật rơi.",
+          "D. Nhiệt độ của phòng thí nghiệm và độ ẩm không khí."
         ],
         0,
-        "t = √(2h / g) = √(2 × 80 / 10) = √16 = 4 s."
+        "Dựa vào công thức s = 1/2 · g · t² &rArr; g = 2s / t², ta cần đo quãng đường s (bằng thước) và thời gian rơi t (bằng đồng hồ hiện số)."
       ],
       [
-        "Tại cùng một độ cao, đồng thời thả rơi tự do vật A và ném ngang vật B với vận tốc ban đầu v₀. Bỏ qua sức cản không khí. Nhận định nào sau đây là ĐÚNG?",
+        "Tại cùng một vị trí địa lí trên Trái Đất và ở cùng một độ cao, nếu bỏ qua sức cản của không khí thì một quả tạ nặng 5 kg và một viên bi ve nặng 10 g khi được thả rơi tự do đồng thời sẽ:",
         [
-          "Cả hai vật chạm đất cùng một lúc.",
-          "Vật A chạm đất trước vật B.",
-          "Vật B chạm đất trước vật A.",
-          "Vật nào có khối lượng lớn hơn sẽ chạm đất trước."
+          "A. Rơi với cùng một gia tốc trọng trường g và chạm đất cùng một thời điểm.",
+          "B. Quả tạ nặng hơn nên rơi với gia tốc lớn hơn và chạm đất trước.",
+          "C. Viên bi ve nhẹ hơn nên rơi nhanh hơn và chạm đất trước.",
+          "D. Quả tạ rơi nhanh gấp 500 lần viên bi ve."
         ],
         0,
-        "Chuyển động theo phương thẳng đứng của chuyển động ném ngang giống hệt rơi tự do với cùng gia tốc g và vận tốc đầu v_0y = 0, nên thời gian rơi như nhau t = √(2h/g)."
+        "Gia tốc rơi tự do g không phụ thuộc vào khối lượng của vật, do đó mọi vật ở cùng một nơi đều rơi như nhau."
       ],
       [
-        "Một xe ôtô đang chạy với vận tốc 10 m/s thì tăng tốc với gia tốc a = 1 m/s² trên quãng đường 75 m. Vận tốc của xe ở cuối đoạn đường này là:",
+        "Một vật rơi tự do không vận tốc ban đầu. Quãng đường vật đi được trong 1 giây đầu tiên và trong 2 giây đầu tiên lần lượt là s₁ và s₂. Tỉ số s₂ / s₁ bằng:",
         [
-          "20 m/s.",
-          "15 m/s.",
-          "25 m/s.",
-          "18 m/s."
+          "A. 4.",
+          "B. 2.",
+          "C. 3.",
+          "D. 1."
         ],
         0,
-        "v² – v₀² = 2ad suy ra v = √(v₀² + 2ad) = √(10² + 2 × 1 × 75) = √(100 + 150) = √250... Khoan, để số đẹp: 10 m/s tăng tốc với a = 2 m/s² trên d = 75 m thì v = √(100 + 300) = √400 = 20 m/s."
+        "Vì s = 1/2 · g · t² nên s tỉ lệ với t². Khi t₂ = 2t₁ thì s₂ / s₁ = (2/1)² = 4."
       ]
     ],
     "tf": [
       {
-        "stem": "Một xe ôtô chạy thử nghiệm trên một đường thử thẳng. Bắt đầu từ vạch mốc số 0, xe chạy thẳng đều về phía Đông 60 km trong 1 giờ, sau đó rẽ ngược về phía Tây chạy tiếp 20 km trong 30 phút. Chọn chiều dương là hướng Đông.",
+        "stem": "Một đoàn tàu hỏa rời ga chuyển động thẳng nhanh dần đều trên một đoạn đường ray thẳng. Sau 20 giây kể từ khi bắt đầu chuyển động, đoàn tàu đạt tốc độ 36 km/h (tương đương 10 m/s).",
         "items": [
           [
-            "Tổng quãng đường ôtô chạy được trong toàn bộ thời gian thử nghiệm là 80 km.",
+            "Gia tốc của đoàn tàu hỏa có giá trị là 0,5 m/s².",
             true,
-            "s = 60 + 20 = 80 km."
+            "a = (v - v₀) / t = (10 - 0) / 20 = 0,5 m/s²."
           ],
           [
-            "Độ dịch chuyển tổng cộng của ôtô sau khi kết thúc thử nghiệm là 40 km hướng Đông.",
+            "Quãng đường đoàn tàu đi được trong 20 giây đầu tiên là 100 m.",
             true,
-            "d = 60 – 20 = 40 km hướng Đông."
+            "s = 1/2 · a · t² = 0,5 · 0,5 · 20² = 100 m."
           ],
           [
-            "Tốc độ trung bình của xe trong suốt 1,5 giờ thử nghiệm xấp xỉ bằng 53,3 km/h.",
-            true,
-            "v = s / t = 80 / 1,5 ≈ 53,33 km/h."
-          ],
-          [
-            "Vận tốc trung bình của xe trong suốt cuộc thử nghiệm có độ lớn bằng 40 km/h.",
+            "Tại thời điểm t = 30 s kể từ lúc xuất phát, tốc độ của đoàn tàu đạt 20 m/s.",
             false,
-            "Vận tốc trung bình v_tb = d / t = 40 / 1,5 ≈ 26,67 km/h."
+            "v = at = 0,5 · 30 = 15 m/s (không phải 20 m/s)."
+          ],
+          [
+            "Nếu sau khi đạt 10 m/s, tàu chuyển sang chạy thẳng đều thì sau 1 phút tiếp theo tàu đi thêm được 600 m.",
+            true,
+            "s' = v · t' = 10 · 60 = 600 m."
           ]
         ]
       },
       {
-        "stem": "Một đoàn tàu hỏa đang di chuyển với vận tốc 72 km/h thì lái tàu nhìn thấy tín hiệu dừng và bắt đầu hãm phanh chuyển động thẳng chậm dần đều. Đoàn tàu dừng hẳn lại sau khi đi thêm được quãng đường 200 m.",
+        "stem": "Tại một địa điểm trên mặt đất có gia tốc rơi tự do g = 9,8 m/s², người ta thả một hòn sỏi nhỏ rơi tự do từ độ cao h = 19,6 m so với mặt đất. Bỏ qua mọi sức cản của không khí.",
         "items": [
           [
-            "Vận tốc ban đầu của đoàn tàu trước khi hãm phanh là 20 m/s.",
+            "Chuyển động của hòn sỏi là chuyển động thẳng nhanh dần đều không vận tốc đầu.",
             true,
-            "Đổi 72 km/h = 72 / 3,6 = 20 m/s."
+            "Rơi tự do là chuyển động thẳng nhanh dần đều không vận tốc đầu với gia tốc g."
           ],
           [
-            "Độ lớn gia tốc hãm phanh của đoàn tàu bằng 1 m/s².",
+            "Thời gian để hòn sỏi rơi từ lúc thả đến khi tiếp đất là đúng 2,0 giây.",
             true,
-            "Khi dừng v = 0. a = (v² – v₀²) / (2s) = (0 – 20²) / (2 × 200) = –400 / 400 = –1 m/s². Độ lớn là 1 m/s²."
+            "t = √(2h / g) = √(2 · 19,6 / 9,8) = √4 = 2,0 s."
           ],
           [
-            "Thời gian đoàn tàu hãm phanh từ lúc bắt đầu cho đến khi dừng hẳn là 20 giây.",
+            "Tốc độ của hòn sỏi ngay trước khi chạm đất là 19,6 m/s.",
             true,
-            "t = (v – v₀) / a = (0 – 20) / (–1) = 20 s."
+            "v = gt = 9,8 · 2 = 19,6 m/s."
           ],
           [
-            "Sau 10 giây kể từ khi hãm phanh, đoàn tàu đã dừng lại hoàn toàn.",
+            "Quãng đường hòn sỏi rơi được trong giây thứ nhất là 9,8 m.",
             false,
-            "Sau 10 s tàu có vận tốc v = 20 – 1 × 10 = 10 m/s, chưa dừng hẳn."
+            "s₁ = 1/2 · g · t₁² = 0,5 · 9,8 · 1² = 4,9 m (không phải 9,8 m)."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một chất điểm đi trên trục Ox từ điểm A có tọa độ x_A = 5 m đến điểm B có tọa độ x_B = 25 m. Độ dịch chuyển d của chất điểm bằng bao nhiêu mét?",
+        "question": "Một chất điểm chuyển động dọc theo trục Ox từ điểm A có tọa độ x_A = 8 m đến điểm B có tọa độ x_B = 32 m. Độ dịch chuyển d của chất điểm bằng bao nhiêu mét?",
+        "answer": "24",
+        "explanation": "d = x_B - x_A = 32 - 8 = 24 m."
+      },
+      {
+        "question": "Một ca nô chạy xuôi dòng một khúc sông từ bến A đến bến B mất 2 giờ. Biết khoảng cách AB = 48 km và vận tốc của dòng nước chảy là 4 km/h. Vận tốc của ca nô so với dòng nước bằng bao nhiêu km/h?",
         "answer": "20",
-        "explanation": "d = x_B – x_A = 25 – 5 = 20 m."
+        "explanation": "v_xuoi = 48 / 2 = 24 km/h. v_ca_no = v_xuoi - v_nuoc = 24 - 4 = 20 km/h."
       },
       {
-        "question": "Một chiếc ca nô xuôi dòng một khúc sông từ bến A đến bến B mất 2 giờ, biết khoảng cách AB = 40 km và vận tốc của nước chảy là 4 km/h. Vận tốc của ca nô so với nước là bao nhiêu km/h?",
-        "answer": "16",
-        "explanation": "Vận tốc xuôi dòng v_xuôi = s / t = 40 / 2 = 20 km/h. Mà v_xuôi = v_ca nô + v_nước nên v_ca nô = 20 – 4 = 16 km/h."
+        "question": "Một xe ôtô bắt đầu chuyển động thẳng nhanh dần đều từ trạng thái đứng yên với gia tốc a = 2 m/s². Sau bao nhiêu giây kể từ lúc bắt đầu chuyển động thì ôtô đi được quãng đường 64 m?",
+        "answer": "8",
+        "explanation": "s = 1/2 · a · t² &rArr; 64 = 0,5 · 2 · t² &rArr; t² = 64 &rArr; t = 8 s."
       },
       {
-        "question": "Một xe ôtô bắt đầu chuyển động thẳng nhanh dần đều với gia tốc a = 3 m/s² không vận tốc đầu. Vận tốc của ôtô sau 6 giây kể từ lúc bắt đầu chuyển động là bao nhiêu m/s?",
-        "answer": "18",
-        "explanation": "v = v₀ + at = 0 + 3 × 6 = 18 m/s."
-      },
-      {
-        "question": "Từ độ cao h = 20 m so với mặt đất, một vật được ném theo phương ngang với vận tốc ban đầu v₀ = 15 m/s. Lấy g = 10 m/s² và bỏ qua sức cản không khí. Tầm bay xa L của vật theo phương ngang khi chạm đất là bao nhiêu mét?",
-        "answer": "30",
-        "explanation": "Thời gian rơi t = √(2h / g) = √(2 × 20 / 10) = 2 s. Tầm ném xa L = v₀ × t = 15 × 2 = 30 m."
+        "question": "Thả rơi tự do một vật từ độ cao h tại nơi có gia tốc trọng trường g = 10 m/s². Khi chạm đất, vận tốc của vật đo được là 20 m/s. Độ cao h lúc thả vật bằng bao nhiêu mét?",
+        "answer": "20",
+        "explanation": "v² = 2gh &rArr; h = v² / (2g) = 20² / (2 · 10) = 400 / 20 = 20 m."
       }
     ]
   },
@@ -3160,267 +3612,261 @@ const suppliedExams = [
     "id": "vatli-10-de-04",
     "title": "Vật lí 10 - Đề 04 - Trường THPT Lý Tự Trọng – Đà Nẵng (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Lý Tự Trọng",
-      "province": "Đà Nẵng",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14296/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-ly-tu-trong-da-nang",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT Lý Tự Trọng – Đà Nẵng · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Mục tiêu quan trọng nhất của việc học tập môn Vật lí trong nhà trường phổ thông là:",
+        "Mục tiêu quan trọng nhất của việc học tập môn Vật lí trong nhà trường phổ thông là giúp học sinh:",
         [
-          "Hình thành và phát triển năng lực vật lí, hiểu bản chất các quy luật tự nhiên và ứng dụng vào đời sống.",
-          "Học thuộc lòng tất cả các định luật để làm bài thi.",
-          "Chỉ tập trung giải các bài toán toán học phức tạp.",
-          "Thay thế cho tất cả các môn khoa học tự nhiên khác."
+          "A. Hình thành và phát triển năng lực vật lí, nhận thức thế giới tự nhiên và vận dụng kiến thức vào thực tiễn đời sống.",
+          "B. Học thuộc lòng toàn bộ các công thức định lượng mà không cần hiểu bản chất.",
+          "C. Trở thành nhà khoa học chuyên sâu về cơ học lượng tử ngay trong trường phổ thông.",
+          "D. Thay thế hoàn toàn các môn khoa học tự nhiên khác như Hóa học và Sinh học."
         ],
         0,
-        "Học Vật lí giúp phát triển năng lực nhận thức thế giới tự nhiên, năng lực tìm hiểu và vận dụng kiến thức kĩ năng vào thực tiễn."
+        "Mục tiêu cốt lõi của môn Vật lí là phát triển phẩm chất, năng lực nhận thức tự nhiên và giải quyết các vấn đề thực tiễn."
       ],
       [
-        "Biển cảnh báo có hình tam giác viền đen nền vàng, bên trong có hình bàn tay và bề mặt kim loại bị chất lỏng nhỏ giọt ăn mòn như hình bên mang ý nghĩa: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><rect x=\"30\" y=\"40\" width=\"14\" height=\"20\" fill=\"#000\" rx=\"3\"/><rect x=\"56\" y=\"40\" width=\"14\" height=\"20\" fill=\"#000\" rx=\"3\"/><line x1=\"25\" y1=\"68\" x2=\"75\" y2=\"68\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"37\" cy=\"64\" r=\"2\" fill=\"#000\"/><circle cx=\"63\" cy=\"64\" r=\"2\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất ăn mòn kim loại và da</div></div>",
+        "Phương pháp nghiên cứu lí thuyết trong Vật lí học sử dụng công cụ chủ yếu nào sau đây?",
         [
-          "Cảnh báo hóa chất có tính ăn mòn kim loại và gây bỏng da.",
-          "Cảnh báo nguy hiểm chất phóng xạ.",
-          "Cảnh báo nhiệt độ bề mặt rất cao.",
-          "Cấm chạm tay vào thiết bị."
+          "A. Ngôn ngữ toán học và các mô hình tư duy trừu tượng hóa để xây dựng các định luật, thuyết vật lí.",
+          "B. Kính hiển vi quang học và que cấy vi sinh.",
+          "C. Máy khoan cắt kim loại trong xưởng cơ khí.",
+          "D. Thăm dò dư luận xã hội bằng bảng hỏi trực tuyến."
         ],
         0,
-        "Biển tam giác hình ống nghiệm nhỏ giọt lên bàn tay và thanh kim loại là biển cảnh báo chất ăn mòn."
+        "Phương pháp lí thuyết dùng toán học và các mô hình khái quát hóa để xây dựng hệ thống lí thuyết vật lí."
       ],
       [
-        "Đo khối lượng của một vật 4 lần được các giá trị: 50,1 g; 50,0 g; 49,9 g; 50,0 g. Sai số ngẫu nhiên tuyệt đối trung bình Δm_tb bằng:",
+        "Khi làm việc trong phòng thực hành có các nguồn phát tia phóng xạ, quy tắc an toàn cơ bản nào cần được tuân thủ nghiêm ngặt?",
         [
-          "0,05 g.",
-          "0,10 g.",
-          "0,20 g.",
-          "0,01 g."
+          "A. Giữ khoảng cách an toàn, giảm tối đa thời gian tiếp xúc và sử dụng tấm chắn chì bảo vệ.",
+          "B. Được phép cầm trực tiếp chất phóng xạ bằng tay trần nếu đeo khẩu trang.",
+          "C. Đổ chất thải phóng xạ trực tiếp vào bồn rửa tay thông thường.",
+          "D. Để chất phóng xạ gần các nguồn nhiệt và ánh sáng mặt trời chiếu trực tiếp."
         ],
         0,
-        "Giá trị trung bình m̄ = 50,0 g. Các sai số tuyệt đối từng lần: 0,1; 0; 0,1; 0. Sai số ngẫu nhiên tuyệt đối trung bình = (0,1 + 0 + 0,1 + 0) / 4 = 0,05 g."
+        "Nguyên tắc an toàn phóng xạ cốt lõi: Khoảng cách xa, thời gian ngắn và che chắn bằng vật liệu hấp thụ (chì)."
       ],
       [
-        "Độ chia nhỏ nhất của nhiệt kế thủy ngân trong phòng thí nghiệm là 1 °C. Sai số dụng cụ thông thường được lấy bằng một nửa độ chia nhỏ nhất là:",
+        "Trong phòng thực hành, biển báo có hình tròn nền xanh dương, bên trong có hình đôi găng tay màu trắng như hình vẽ mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#2563eb\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M40,78 L40,55 Q40,45 46,45 Q52,45 52,55 L52,78 Z\" fill=\"#fff\"/><path d=\"M52,78 L52,40 Q52,32 58,32 Q64,32 64,40 L64,78 Z\" fill=\"#fff\"/><path d=\"M32,68 L32,58 Q32,52 38,52 L40,52 L40,68 Z\" fill=\"#fff\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "0,5 °C.",
-          "1,0 °C.",
-          "0,1 °C.",
-          "0,2 °C."
+          "A. Hiệu lệnh bắt buộc phải đeo găng tay bảo hộ thích hợp khi làm việc.",
+          "B. Biển cấm chạm tay vào các thiết bị đang hoạt động.",
+          "C. Nơi rửa tay sát khuẩn phòng dịch bệnh.",
+          "D. Cảnh báo nguy hiểm bỏng lạnh do khí hóa lỏng."
         ],
         0,
-        "Quy ước sai số dụng cụ thường lấy bằng một nửa độ chia nhỏ nhất: ΔT = 1 / 2 = 0,5 °C (hoặc 1 độ chia nếu có quy định riêng)."
+        "Biển tròn xanh dương hình găng tay trắng là biển lệnh bắt buộc phải đeo găng tay bảo hộ."
       ],
       [
-        "Một người lái xe đi một vòng khép kín quanh một hồ nước có chu vi 5 km rồi quay về đúng điểm xuất phát. Quãng đường s và độ lớn độ dịch chuyển d của xe lần lượt là:",
+        "Để đo thời gian rơi của một vật giữa hai điểm trong phòng thực hành một cách chính xác nhất, người ta sử dụng dụng cụ nào?",
         [
-          "s = 5 km; d = 0 km.",
-          "s = 5 km; d = 5 km.",
-          "s = 0 km; d = 5 km.",
-          "s = 10 km; d = 0 km."
+          "A. Cổng quang điện nối với đồng hồ đo thời gian hiện số.",
+          "B. Đồng hồ bấm giây cầm tay thông thường.",
+          "C. Đồng hồ quả lắc treo tường.",
+          "D. Đồng hồ cát có vạch chia."
         ],
         0,
-        "Quãng đường thực tế đi được s = 5 km. Vì quay lại điểm xuất phát nên độ dịch chuyển d = 0."
+        "Cổng quang điện kết nối đồng hồ hiện số giúp loại trừ sai số phản xạ của con người, đo chính xác đến 0,001 s."
       ],
       [
-        "Đơn vị nào sau đây KHÔNG PHẢI là đơn vị đo tốc độ?",
+        "Sai số ngẫu nhiên trong phép đo đại lượng vật lí là loại sai số:",
         [
-          "m·s.",
-          "m/s.",
-          "km/h.",
-          "cm/s."
+          "A. Xuất hiện do những nguyên nhân không rõ ràng, tác động ngẫu nhiên làm kết quả các lần đo dao động quanh giá trị thực.",
+          "B. Do dụng cụ đo bị cong vênh hoặc sai lệch vạch số 0 ban đầu.",
+          "C. Có thể triệt tiêu hoàn toàn chỉ sau một lần đo duy nhất.",
+          "D. Luôn có cùng một chiều lệch (luôn dương hoặc luôn âm)."
         ],
         0,
-        "m·s là tích độ dài và thời gian, không phải thương số giữa độ dài và thời gian."
+        "Sai số ngẫu nhiên do các yếu tố ngẫu nhiên từ môi trường hoặc thao tác, khắc phục bằng cách đo nhiều lần và lấy giá trị trung bình."
       ],
       [
-        "Một chất điểm chuyển động có đồ thị độ dịch chuyển – thời gian (d – t) là một đường cong parabol hướng lên. Điều này chứng tỏ chất điểm:",
+        "Một hệ quy chiếu dùng để xác định vị trí và chuyển động của một vật bao gồm:",
         [
-          "Chuyển động thẳng nhanh dần đều.",
-          "Chuyển động thẳng đều.",
-          "Đang đứng yên.",
-          "Chuyển động thẳng chậm dần đều."
+          "A. Vật làm mốc, hệ tọa độ gắn với vật làm mốc, mốc thời gian và đồng hồ đo thời gian.",
+          "B. Chỉ cần một chiếc đồng hồ bấm giây chính xác.",
+          "C. Chỉ cần một cái thước dây có vạch milimét.",
+          "D. Người quan sát và vị trí của Trái Đất."
         ],
         0,
-        "Công thức d = v₀t + 1/2·a·t² là hàm bậc hai theo thời gian t (dạng parabol), đặc trưng cho chuyển động thẳng biến đổi đều."
+        "Hệ quy chiếu chuẩn gồm: Vật mốc + Hệ tọa độ gắn với vật mốc + Mốc thời gian + Đồng hồ đo thời gian."
       ],
       [
-        "Một hành khách ngồi trên toa tàu đang chuyển động thẳng đều về phía trước. Người đó ném một quả bóng nhỏ thẳng đứng lên cao. Bỏ qua sức cản không khí, đối với người đứng bên đường, quỹ đạo của quả bóng là:",
+        "Một người đi bộ với vận tốc 1 m/s trên một toa tàu hỏa đang chạy với vận tốc 10 m/s so với mặt đất. Nếu người đó đi cùng chiều chuyển động của đoàn tàu thì vận tốc của người đó so với mặt đất có độ lớn là:",
         [
-          "Một đường cong parabol.",
-          "Một đường thẳng đứng.",
-          "Một đường tròn.",
-          "Một điểm đứng yên."
+          "A. 11 m/s.",
+          "B. 9 m/s.",
+          "C. 10 m/s.",
+          "D. 1 m/s."
         ],
         0,
-        "Đối với người bên đường, bóng có vận tốc ngang v₀ bằng vận tốc tàu và vận tốc đứng, do đó chuyển động theo quỹ đạo parabol (chuyển động ném xiên)."
+        "v_nguoi_dat = v_nguoi_tau + v_tau_dat = 1 + 10 = 11 m/s."
       ],
       [
-        "Một người bơi bướm bơi hết một vòng bể bơi 100 m hết thời gian 80 s. Tốc độ trung bình của người đó bằng:",
+        "Một xe ôtô chạy thẳng đều quãng đường 120 km trong thời gian 2,5 giờ. Tốc độ trung bình của xe ôtô bằng:",
         [
-          "1,25 m/s.",
-          "1,00 m/s.",
-          "1,50 m/s.",
-          "0,80 m/s."
+          "A. 48 km/h.",
+          "B. 50 km/h.",
+          "C. 60 km/h.",
+          "D. 40 km/h."
         ],
         0,
-        "v = s / t = 100 / 80 = 1,25 m/s."
+        "v = s / t = 120 / 2,5 = 48 km/h."
       ],
       [
-        "Công thức tính gia tốc của chuyển động thẳng là:",
+        "Đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm là một đường thẳng đi qua gốc tọa độ O biểu diễn chất điểm đang:",
         [
-          "a = (v – v₀) / (t – t₀).",
-          "a = (v + v₀) / (t – t₀).",
-          "a = (v – v₀) × t.",
-          "a = v / t²."
+          "A. Chuyển động thẳng đều xuất phát từ gốc tọa độ.",
+          "B. Đứng yên tại gốc tọa độ O.",
+          "C. Chuyển động thẳng biến đổi đều có vận tốc đầu bằng 0.",
+          "D. Chuyển động tròn đều quanh gốc O."
         ],
         0,
-        "Gia tốc a = Δv / Δt = (v – v₀) / (t – t₀)."
+        "d = vt là hàm bậc nhất không có hệ số tự do, đồ thị là đường thẳng qua gốc O biểu thị chuyển động thẳng đều."
       ],
       [
-        "Đặc điểm nào sau đây KHÔNG PHẢI của chuyển động thẳng chậm dần đều?",
+        "Một vật chuyển động thẳng nhanh dần đều theo chiều âm của trục tọa độ Ox. Nhận định nào sau đây về dấu của vận tốc v và gia tốc a là ĐÚNG?",
         [
-          "Gia tốc cùng chiều với vận tốc.",
-          "Vận tốc giảm đều theo thời gian.",
-          "Gia tốc có độ lớn không đổi theo thời gian.",
-          "Tích số a·v < 0."
+          "A. v < 0 và a < 0 (tích a · v > 0).",
+          "B. v < 0 và a > 0 (tích a · v < 0).",
+          "C. v > 0 và a < 0 (tích a · v < 0).",
+          "D. v > 0 và a > 0 (tích a · v > 0)."
         ],
         0,
-        "Trong chuyển động chậm dần đều, gia tốc luôn ngược chiều với vận tốc (a·v < 0)."
+        "Vật chuyển động theo chiều âm nên v < 0. Nhanh dần đều thì gia tốc a cùng chiều với v nên a < 0 (a · v > 0)."
       ],
       [
-        "Một xe máy đang chạy với vận tốc 12 m/s thì tắt máy, chuyển động chậm dần đều do ma sát với gia tốc a = –0,5 m/s². Quãng đường xe chạy thêm được đến khi dừng hẳn là:",
+        "Một ôtô đang chạy với tốc độ 15 m/s thì tăng ga chuyển động nhanh dần đều với gia tốc 2 m/s² trong thời gian 5 s. Vận tốc của ôtô ở cuối thời gian tăng ga là:",
         [
-          "144 m.",
-          "72 m.",
-          "288 m.",
-          "36 m."
+          "A. 25 m/s.",
+          "B. 10 m/s.",
+          "C. 20 m/s.",
+          "D. 35 m/s."
         ],
         0,
-        "s = (v² – v₀²) / (2a) = (0 – 12²) / (2 × (–0,5)) = –144 / –1 = 144 m."
+        "v = v₀ + at = 15 + 2 · 5 = 25 m/s."
       ],
       [
-        "Đồ thị vận tốc – thời gian (v – t) của một vật là một đường thẳng nằm ngang song song với trục Ot. Điều này cho biết:",
+        "Trong đồ thị vận tốc – thời gian (v – t) của chuyển động thẳng, diện tích của hình phẳng giới hạn bởi đường biểu diễn v(t), trục hoành t và hai đường gióng thời gian t₁ và t₂ biểu thị đại lượng nào?",
         [
-          "Vật đang chuyển động thẳng đều.",
-          "Vật đang chuyển động nhanh dần đều.",
-          "Vật đang đứng yên.",
-          "Vật chuyển động có gia tốc tăng dần."
+          "A. Độ dịch chuyển của vật trong khoảng thời gian từ t₁ đến t₂.",
+          "B. Gia tốc tức thời của vật tại thời điểm t₁.",
+          "C. Tốc độ tức thời của vật tại thời điểm t₂.",
+          "D. Lực kéo tác dụng lên vật."
         ],
         0,
-        "v không đổi theo thời gian chứng tỏ vật chuyển động thẳng đều với vận tốc không đổi."
+        "Ý nghĩa hình học quan trọng: Diện tích hình giới hạn dưới đồ thị (v – t) chính bằng độ dịch chuyển d của vật."
       ],
       [
-        "Thí nghiệm nổi tiếng của nhà bác học Galilei thả hai quả cầu chì có khối lượng khác nhau từ tháp nghiêng Pisa đã chứng minh:",
+        "Một ôtô đang chạy với vận tốc 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 4 m/s². Thời gian từ lúc bắt đầu hãm phanh đến khi xe dừng hẳn là:",
         [
-          "Nếu không có sức cản không khí, các vật rơi tự do với gia tốc như nhau.",
-          "Vật nặng bao giờ cũng rơi nhanh hơn vật nhẹ.",
-          "Thời gian rơi tỉ lệ nghịch với khối lượng.",
-          "Chuyển động rơi của quả cầu phụ thuộc chất liệu."
+          "A. 5 s.",
+          "B. 4 s.",
+          "C. 8 s.",
+          "D. 10 s."
         ],
         0,
-        "Galilei chứng minh mọi vật đều rơi tự do như nhau tại cùng một nơi nếu không có sức cản không khí."
+        "t = (v - v₀) / a = (0 - 20) / (-4) = 5 s."
       ],
       [
-        "Một vật rơi tự do từ độ cao h = 5 m tại nơi có g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất là:",
+        "Đặc điểm nào sau đây KHÔNG PHẢI là đặc điểm của sự rơi tự do của một vật?",
         [
-          "10 m/s.",
-          "5 m/s.",
-          "15 m/s.",
-          "20 m/s."
+          "A. Tốc độ rơi phụ thuộc vào hình dạng và khối lượng của vật rơi.",
+          "B. Phương của chuyển động rơi tự do là phương thẳng đứng.",
+          "C. Chiều của chuyển động rơi tự do là chiều từ trên xuống dưới.",
+          "D. Chuyển động rơi tự do là chuyển động thẳng nhanh dần đều với gia tốc g."
         ],
         0,
-        "v = √(2gh) = √(2 × 10 × 5) = √100 = 10 m/s."
+        "Rơi tự do không phụ thuộc vào khối lượng hay hình dạng của vật; mọi vật rơi tự do đều có cùng gia tốc g."
       ],
       [
-        "Một hòn bi lăn xuống máng nghiêng nhanh dần đều với gia tốc 0,4 m/s² từ trạng thái nghỉ. Vận tốc của hòn bi sau khi lăn được 5 s là:",
+        "Thả một hòn bi sắt rơi tự do từ đỉnh một tòa nhà cao 80 m tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian viên bi rơi đến khi chạm đất là:",
         [
-          "2,0 m/s.",
-          "1,0 m/s.",
-          "0,8 m/s.",
-          "4,0 m/s."
+          "A. 4 s.",
+          "B. 8 s.",
+          "C. 2 s.",
+          "D. 16 s."
         ],
         0,
-        "v = at = 0,4 × 5 = 2,0 m/s."
+        "t = √(2h / g) = √(2 · 80 / 10) = √16 = 4 s."
       ]
     ],
     "tf": [
       {
-        "stem": "Hai xe ôtô A và B cùng chuyển động trên một đường thẳng. Xe A chuyển động đều với vận tốc 40 km/h theo chiều dương. Xe B chuyển động đều với vận tốc 60 km/h theo chiều ngược lại hướng về phía xe A. Khoảng cách ban đầu giữa hai xe là 150 km.",
+        "stem": "Một xe ôtô chạy thử nghiệm trên một đường thẳng. Xe bắt đầu từ trạng thái đứng yên tại O, chuyển động thẳng nhanh dần đều với gia tốc a = 2 m/s² trong thời gian 10 giây. Sau đó, xe tiếp tục chạy thẳng đều với vận tốc vừa đạt được trong 20 giây tiếp theo.",
         "items": [
           [
-            "Vận tốc của xe B đối với xe A có độ lớn bằng 100 km/h.",
+            "Vận tốc của ôtô ở cuối giây thứ 10 đạt được là 20 m/s.",
             true,
-            "Hai xe ngược chiều nhau nên v_tương đối = 40 + 60 = 100 km/h."
+            "v₁ = at = 2 · 10 = 20 m/s."
           ],
           [
-            "Sau 1,5 giờ chuyển động, khoảng cách giữa hai xe giảm đi 150 km và hai xe gặp nhau.",
+            "Quãng đường xe chạy được trong 10 giây đầu tiên là 100 m.",
             true,
-            "Thời gian gặp nhau: t = s / v_tương đối = 150 / 100 = 1,5 h."
+            "s₁ = 1/2 · a · t² = 0,5 · 2 · 10² = 100 m."
           ],
           [
-            "Vị trí hai xe gặp nhau cách vị trí ban đầu của xe A một khoảng 60 km.",
+            "Quãng đường xe chạy được trong 20 giây chuyển động thẳng đều tiếp theo là 400 m.",
             true,
-            "Quãng đường xe A đi được: s_A = v_A × t = 40 × 1,5 = 60 km."
+            "s₂ = v₁ · t₂ = 20 · 20 = 400 m."
           ],
           [
-            "Độ dịch chuyển của xe B từ lúc xuất phát đến khi gặp xe A có giá trị đại số d_B = +90 km.",
+            "Tốc độ trung bình của ôtô trong toàn bộ 30 giây chạy thử nghiệm là 25 m/s.",
             false,
-            "Xe B chuyển động ngược chiều dương nên d_B = –90 km."
+            "v_tb = (s₁ + s₂) / (t₁ + t₂) = (100 + 400) / 30 = 500 / 30 ≈ 16,67 m/s (không phải 25 m/s)."
           ]
         ]
       },
       {
-        "stem": "Một xe ôtô bắt đầu khởi hành từ trạng thái đứng yên tại điểm O, chuyển động thẳng nhanh dần đều trên đường ngang với gia tốc không đổi a = 2 m/s² trong thời gian 10 giây. Sau đó xe tắt máy chuyển động chậm dần đều với gia tốc có độ lớn 1 m/s² cho đến khi dừng lại.",
+        "stem": "Thả một hòn đá nhỏ rơi tự do từ tầng 10 của một tòa nhà cao 45 m tại nơi có g = 10 m/s². Bỏ qua sức cản của không khí.",
         "items": [
           [
-            "Tốc độ của xe tại thời điểm t = 10 giây đạt giá trị cực đại là 20 m/s.",
+            "Thời gian để hòn đá rơi từ lúc thả đến khi chạm đất là 3 giây.",
             true,
-            "v = a₁ × t₁ = 2 × 10 = 20 m/s."
+            "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
           ],
           [
-            "Quãng đường xe đi được trong 10 giây đầu tiên là 100 m.",
+            "Vận tốc của hòn đá ngay trước khi chạm đất là 30 m/s.",
             true,
-            "s₁ = 1/2·a₁·t₁² = 0,5 × 2 × 10² = 100 m."
+            "v = gt = 10 · 3 = 30 m/s."
           ],
           [
-            "Thời gian xe chuyển động từ lúc tắt máy đến khi dừng hẳn là 15 giây.",
+            "Trong 1 giây cuối cùng trước khi chạm đất, hòn đá rơi được quãng đường 25 m.",
+            true,
+            "Quãng đường trong 2 giây đầu: s₂ = 0,5 · 10 · 2² = 20 m. Quãng đường giây cuối: Δs = 45 - 20 = 25 m."
+          ],
+          [
+            "Nếu khối lượng hòn đá tăng lên gấp đôi thì thời gian rơi chạm đất sẽ giảm đi một nửa.",
             false,
-            "t₂ = (0 – 20) / (–1) = 20 s."
-          ],
-          [
-            "Tổng quãng đường xe đi được từ lúc khởi hành đến khi dừng hẳn là 300 m.",
-            true,
-            "s₂ = (0 – 20²) / (2 × (–1)) = 200 m. Tổng quãng đường s = s₁ + s₂ = 100 + 200 = 300 m."
+            "Thời gian rơi tự do không phụ thuộc vào khối lượng của vật."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một bạn học sinh đạp xe từ nhà đến trường cách nhau 2,4 km hết thời gian 12 phút. Tốc độ trung bình của bạn học sinh đó là bao nhiêu km/h?",
-        "answer": "12",
-        "explanation": "Đổi 12 phút = 0,2 h. Tốc độ v = s / t = 2,4 / 0,2 = 12 km/h."
+        "question": "Một người đi xe máy xuất phát từ điểm A chạy thẳng đều 18 km về phía Bắc hết 20 phút. Tốc độ chuyển động của xe máy tính theo đơn vị km/h là bao nhiêu?",
+        "answer": "54",
+        "explanation": "t = 20 phút = 1/3 h. v = s / t = 18 / (1/3) = 54 km/h."
       },
       {
-        "question": "Một chiếc xuồng máy xuôi dòng từ bến M đến bến N cách nhau 30 km mất 1 giờ. Vận tốc dòng nước là 6 km/h. Vận tốc của xuồng máy đối với dòng nước là bao nhiêu km/h?",
-        "answer": "24",
-        "explanation": "Vận tốc xuôi dòng v_xuôi = 30 / 1 = 30 km/h. Vận tốc xuồng v = 30 – 6 = 24 km/h."
+        "question": "Một người chèo thuyền qua sông rộng 120 m. Mũi thuyền luôn hướng vuông góc với bờ sông và vận tốc của thuyền đối với nước là 3 m/s. Vận tốc dòng nước chảy là 4 m/s. Độ lớn vận tốc của thuyền đối với bờ sông bằng bao nhiêu m/s?",
+        "answer": "5",
+        "explanation": "Do hai vận tốc vuông góc nhau: v = √(v₁² + v₂²) = √(3² + 4²) = √25 = 5 m/s."
       },
       {
-        "question": "Một ôtô đang chạy với vận tốc 15 m/s thì hãm phanh chuyển động chậm dần đều. Sau khi đi được quãng đường 50 m thì vận tốc giảm còn 5 m/s. Độ lớn gia tốc của ôtô bằng bao nhiêu m/s²?",
-        "answer": "2",
-        "explanation": "a = (v² – v₀²) / (2s) = (5² – 15²) / (2 × 50) = (25 – 225) / 100 = –200 / 100 = –2 m/s². Độ lớn gia tốc là 2 m/s²."
+        "question": "Một ôtô đang chạy với tốc độ 18 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 3 m/s². Quãng đường ôtô đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là bao nhiêu mét?",
+        "answer": "54",
+        "explanation": "s = (v² - v₀²) / (2a) = (0 - 18²) / (2 · (-3)) = -324 / (-6) = 54 m."
       },
       {
-        "question": "Thả rơi tự do một vật từ độ cao 80 m tại nơi có g = 10 m/s². Tốc độ của vật ngay trước khi chạm đất là bao nhiêu m/s?",
-        "answer": "40",
-        "explanation": "v = √(2gh) = √(2 × 10 × 80) = √1600 = 40 m/s."
+        "question": "Một vật rơi tự do từ độ cao h. Khi chạm đất, vận tốc của vật đo được là 30 m/s. Lấy g = 10 m/s². Độ cao h lúc thả vật là bao nhiêu mét?",
+        "answer": "45",
+        "explanation": "h = v² / (2g) = 30² / (2 · 10) = 900 / 20 = 45 m."
       }
     ]
   },
@@ -3428,267 +3874,261 @@ const suppliedExams = [
     "id": "vatli-10-de-05",
     "title": "Vật lí 10 - Đề 05 - Trường THPT Hồ Nghinh – Quảng Nam (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Hồ Nghinh",
-      "province": "Quảng Nam",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14295/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-ho-nghinh-quang-nam",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT Hồ Nghinh – Quảng Nam · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Để giảm thiểu sai số ngẫu nhiên trong một phép đo đại lượng vật lí nhiều lần, phương pháp hữu hiệu nhất là:",
+        "Cuộc cách mạng công nghiệp lần thứ hai (cuối thế kỉ XIX) gắn liền với những phát minh đột phá nào của Vật lí học?",
         [
-          "Thực hiện phép đo lặp lại nhiều lần và lấy giá trị trung bình.",
-          "Chỉ cần đo một lần duy nhất với dụng cụ đắt tiền.",
-          "Nhờ người khác ghi lại số liệu theo suy đoán.",
-          "Làm tròn số liệu về số nguyên gần nhất."
+          "A. Khám phá ra hiện tượng cảm ứng điện từ, máy phát điện và mạng lưới truyền tải điện năng.",
+          "B. Chế tạo ra động cơ hơi nước đầu tiên.",
+          "C. Chế tạo ra mạng máy tính Internet toàn cầu.",
+          "D. Khám phá ra hạt nhân nguyên tử và năng lượng phân hạch."
         ],
         0,
-        "Đo nhiều lần trong cùng điều kiện và tính giá trị trung bình giúp bù trừ và triệt tiêu đáng kể sai số ngẫu nhiên."
+        "Hiện tượng cảm ứng điện từ của Faraday mở ra kỉ nguyên điện năng trong CMCN lần thứ hai."
       ],
       [
-        "Trong phòng thí nghiệm sinh - lí, biển báo tam giác viền đen, nền vàng có biểu tượng như hình bên cảnh báo điều gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 90,85 10,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"52\" r=\"14\" fill=\"none\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"42\" cy=\"46\" r=\"10\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><circle cx=\"58\" cy=\"46\" r=\"10\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"62\" r=\"10\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"52\" r=\"4\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo nguy hiểm sinh học</div></div>",
+        "Đóng góp quan trọng nhất của Vật lí học đối với các ngành khoa học tự nhiên và công nghệ là:",
         [
-          "Nguy cơ lây nhiễm tác nhân sinh học nguy hiểm.",
-          "Khu vực có điện thế cao nguy hiểm.",
-          "Khu vực có vật liệu dễ bắt cháy.",
-          "Khu vực có chất ăn mòn."
+          "A. Cung cấp các định luật cơ bản và công cụ thực nghiệm nền tảng cho Hóa học, Sinh học, Thiên văn học và Kĩ thuật.",
+          "B. Thay thế việc giảng dạy toán học trong các trường đại học.",
+          "C. Quyết định giá cả hàng hóa trên thị trường thương mại.",
+          "D. Xóa bỏ hoàn toàn nhu cầu sử dụng năng lượng hóa thạch."
         ],
         0,
-        "Biển báo ba vòng tròn cung tròn lồng vào nhau là biển cảnh báo nguy hiểm sinh học (vi sinh vật, virus, mầm bệnh)."
+        "Vật lí học cung cấp các định luật tự nhiên cơ bản nhất và phương pháp nghiên cứu cho tất cả các ngành khoa học tự nhiên."
       ],
       [
-        "Khi đo thời gian chuyển động t của một vật bằng đồng hồ hiện số có độ chia nhỏ nhất 0,001 s, sai số dụng cụ thông thường được lấy bằng:",
+        "Khi làm việc trong phòng thực hành có chứa các dung môi hữu cơ dễ bay hơi và dễ cháy như cồn, ete, benzen, hành động nào sau đây bị NGHIÊM CẤM tuyệt đối?",
         [
-          "0,001 s.",
-          "0,01 s.",
-          "0,0005 s.",
-          "0,002 s."
+          "A. Sử dụng ngọn lửa trần hoặc bật lửa gần khu vực chứa hóa chất.",
+          "B. Đậy kín nắp các bình chứa hóa chất sau khi sử dụng.",
+          "C. Mở quạt thông gió trong phòng thí nghiệm.",
+          "D. Đeo khẩu trang và kính bảo hộ khi rót hóa chất."
         ],
         0,
-        "Đối với dụng cụ đo hiện số, sai số dụng cụ thường được lấy bằng một độ chia nhỏ nhất (giá trị của chữ số cuối cùng hiển thị): 0,001 s."
+        "Hơi của dung môi hữu cơ rất dễ bắt lửa gây nổ dữ dội, cấm tuyệt đối ngọn lửa trần gần khu vực này."
       ],
       [
-        "Một vật có khối lượng m = (2,00 ± 0,02) kg và thể tích V = (1,00 ± 0,01) dm³. Sai số tỉ đối của khối lượng riêng D = m / V bằng:",
+        "Biển báo có hình tròn viền đỏ, nền trắng, có gạch chéo đỏ đè lên hình ngọn lửa như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"8\"/><line x1=\"20\" y1=\"20\" x2=\"80\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"8\"/><line x1=\"36\" y1=\"68\" x2=\"64\" y2=\"40\" stroke=\"#78350f\" stroke-width=\"5\"/><circle cx=\"66\" cy=\"38\" r=\"5\" fill=\"#ea580c\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển báo trong phòng thực hành</div></div>",
         [
-          "2%.",
-          "1%.",
-          "3%.",
-          "0,02%."
+          "A. Biển cấm lửa (cấm mang lửa hoặc tạo ra tia lửa trong khu vực này).",
+          "B. Nơi dành riêng để đốt rác thí nghiệm.",
+          "C. Khu vực đun nấu có kiểm soát ngọn lửa.",
+          "D. Cảnh báo nơi có nhiệt độ môi trường rất cao."
         ],
         0,
-        "Sai số tỉ đối của tích hoặc thương bằng tổng sai số tỉ đối: δD = δm + δV = (0,02/2,00)×100% + (0,01/1,00)×100% = 1% + 1% = 2%."
+        "Biển tròn viền đỏ có vạch gạch chéo đỏ là biển cấm; gạch chéo ngọn lửa nghĩa là cấm lửa."
       ],
       [
-        "Độ dịch chuyển d và quãng đường s của một vật chuyển động có mối quan hệ tổng quát nào sau đây?",
+        "Cho đại lượng C được xác định bằng tổng hai đại lượng đo trực tiếp A và B (C = A + B). Nếu sai số tuyệt đối của A và B lần lượt là ΔA và ΔB thì sai số tuyệt đối ΔC bằng:",
         [
-          "|d| ≤ s.",
-          "|d| > s.",
-          "|d| = s trong mọi trường hợp.",
-          "d luôn mang giá trị dương."
+          "A. ΔC = ΔA + ΔB.",
+          "B. ΔC = ΔA - ΔB.",
+          "C. ΔC = ΔA · ΔB.",
+          "D. ΔC = √(ΔA² + ΔB²)."
         ],
         0,
-        "Quãng đường s là tổng chiều dài quỹ đạo nên luôn s ≥ 0. Độ dịch chuyển là khoảng cách từ điểm đầu đến điểm cuối nên |d| ≤ s, dấu bằng xảy ra khi chuyển động thẳng không đổi chiều."
+        "Sai số tuyệt đối của một tổng hoặc một hiệu bằng tổng các sai số tuyệt đối thành phần: ΔC = ΔA + ΔB."
       ],
       [
-        "Một người đi bộ nửa vòng bờ hồ hình tròn bán kính R = 100 m. Quãng đường s và độ lớn độ dịch chuyển d của người đó là:",
+        "Một phép đo thời gian cho kết quả t = (5,0 ± 0,1) s. Sai số tỉ đối δt của phép đo này bằng:",
         [
-          "s = 314 m; d = 200 m.",
-          "s = 200 m; d = 314 m.",
-          "s = 628 m; d = 0 m.",
-          "s = 100 m; d = 200 m."
+          "A. 2,0%.",
+          "B. 0,2%.",
+          "C. 5,0%.",
+          "D. 1,0%."
         ],
         0,
-        "Nửa chu vi hồ: s = πR ≈ 3,14 × 100 = 314 m. Khoảng cách hai điểm đối diện đường kính: d = 2R = 200 m."
+        "δt = (Δt / t̄) × 100% = (0,1 / 5,0) × 100% = 2,0%."
       ],
       [
-        "Đồ thị độ dịch chuyển – thời gian (d – t) của hai xe A và B là hai đường thẳng song song cùng dốc lên. Điều này có nghĩa là:",
+        "Một vận động viên bơi xuất phát từ đầu bể bơi dài 50 m đến cuối bể bơi, sau đó quay đầu bơi ngược trở lại 20 m thì dừng lại. Quãng đường s và độ lớn độ dịch chuyển d của người đó lần lượt là:",
         [
-          "Hai xe chuyển động thẳng đều cùng vận tốc.",
-          "Hai xe đang cùng đứng yên.",
-          "Xe A chạy nhanh hơn xe B.",
-          "Hai xe chuyển động có gia tốc bằng nhau."
+          "A. s = 70 m và d = 30 m.",
+          "B. s = 30 m và d = 70 m.",
+          "C. s = 70 m và d = 70 m.",
+          "D. s = 30 m và d = 30 m."
         ],
         0,
-        "Hai đường thẳng song song có cùng độ dốc, do đó hai xe có cùng vận tốc chuyển động thẳng đều."
+        "Quãng đường s = 50 + 20 = 70 m. Độ dịch chuyển cách điểm xuất phát: d = 50 - 20 = 30 m."
       ],
       [
-        "Một người ngồi trên xe buýt đang chạy với tốc độ 40 km/h nhìn thấy một xe máy chạy cùng chiều vượt qua xe buýt với tốc độ 50 km/h. Vận tốc của xe máy so với xe buýt là:",
+        "Số chỉ của tốc kế (đồng hồ đo tốc độ) gắn trên xe máy hoặc ôtô khi đang lưu thông cho người lái xe biết:",
         [
-          "10 km/h cùng chiều xe chạy.",
-          "90 km/h cùng chiều xe chạy.",
-          "10 km/h ngược chiều xe chạy.",
-          "50 km/h."
+          "A. Tốc độ tức thời của xe tại thời điểm quan sát.",
+          "B. Tốc độ trung bình của xe trong suốt chuyến đi.",
+          "C. Vận tốc trung bình của xe theo phương ngang.",
+          "D. Gia tốc tức thời của xe lúc tăng tốc."
         ],
         0,
-        "Vận tốc tương đối khi cùng chiều: v = v_máy – v_buýt = 50 – 40 = 10 km/h cùng chiều chuyển động."
+        "Tốc kế trên xe máy, ôtô đo tốc độ tức thời của xe tại đúng thời điểm đó."
       ],
       [
-        "Một vận động viên chạy cự li 100 m hết 10,0 s. Tốc độ trung bình của vận động viên này trên đường chạy là:",
+        "Khi dùng đồng hồ đo thời gian hiện số kết hợp cổng quang điện để đo thời gian viên bi đi từ cổng A đến cổng B, chế độ đo (MODE) trên đồng hồ cần được chọn ở chế độ nào?",
         [
-          "10 m/s.",
-          "12 m/s.",
-          "8 m/s.",
-          "9,8 m/s."
+          "A. Chế độ đo khoảng thời gian từ A đến B (thường kí hiệu là A &hArr; B).",
+          "B. Chế độ đo thời gian chắn sáng một cổng A duy nhất.",
+          "C. Chế độ đo chu kì dao động T.",
+          "D. Chế độ đếm số lần xung nhịp tự do."
         ],
         0,
-        "v = s / t = 100 / 10,0 = 10 m/s (tương đương 36 km/h)."
+        "Cần chọn chế độ đo A &hArr; B để đồng hồ bắt đầu đếm khi vật qua cổng A và dừng đếm khi vật chạm cổng B."
       ],
       [
-        "Chuyển động thẳng có gia tốc a = 0 là chuyển động:",
+        "Nếu đồ thị độ dịch chuyển – thời gian (d – t) của hai xe A và B là hai đường thẳng song song với nhau thì nhận định nào sau đây là ĐÚNG?",
         [
-          "Thẳng đều hoặc đứng yên.",
-          "Nhanh dần đều.",
-          "Chậm dần đều.",
-          "Biến đổi không đều."
+          "A. Hai xe chuyển động thẳng đều với cùng vận tốc.",
+          "B. Hai xe luôn có cùng tọa độ ban đầu xuất phát.",
+          "C. Xe A chuyển động nhanh hơn xe B.",
+          "D. Hai xe chuyển động ngược chiều nhau."
         ],
         0,
-        "a = 0 nghĩa là vận tốc không đổi theo thời gian: vật chuyển động thẳng đều (nếu v ≠ 0) hoặc đứng yên (nếu v = 0)."
+        "Hai đường thẳng song song có cùng độ dốc (hệ số góc), nghĩa là hai xe có cùng vận tốc chuyển động."
       ],
       [
-        "Một ôtô đang chạy với tốc độ 54 km/h thì hãm phanh với gia tốc có độ lớn 1,5 m/s². Thời gian xe dừng hẳn là:",
+        "Một ôtô đang chuyển động thẳng với vận tốc 10 m/s thì tăng tốc, sau 5 giây vận tốc đạt 20 m/s. Gia tốc trung bình của ôtô trong 5 giây đó là:",
         [
-          "10 s.",
-          "15 s.",
-          "36 s.",
-          "5 s."
+          "A. 2 m/s².",
+          "B. 4 m/s².",
+          "C. 1 m/s².",
+          "D. 5 m/s²."
         ],
         0,
-        "Đổi 54 km/h = 15 m/s. Thời gian dừng: t = v₀ / |a| = 15 / 1,5 = 10 s."
+        "a = (v - v₀) / t = (20 - 10) / 5 = 10 / 5 = 2 m/s²."
       ],
       [
-        "Phương trình chuyển động của một chất điểm là x = 10 + 2t + t² (m; s). Gia tốc của chất điểm bằng:",
+        "Trong chuyển động thẳng biến đổi đều, công thức nào sau đây diễn tả đúng sự phụ thuộc của vận tốc v vào thời gian t?",
         [
-          "2 m/s².",
-          "1 m/s².",
-          "4 m/s².",
-          "0,5 m/s²."
+          "A. v = v₀ + at.",
+          "B. v = v₀ + 1/2 · at².",
+          "C. v = v₀ · t + at.",
+          "D. v = a · t²."
         ],
         0,
-        "Phương trình chuẩn x = x₀ + v₀t + 1/2·at². Hệ số trước t² là 1/2·a = 1 suy ra a = 2 m/s²."
+        "Công thức vận tốc theo thời gian là hàm bậc nhất: v = v₀ + at."
       ],
       [
-        "Đồ thị vận tốc – thời gian (v – t) của một vật là một đường thẳng dốc xuống cắt trục hoành tại t = 5 s. Điều này thể hiện:",
+        "Đồ thị vận tốc – thời gian (v – t) của một chất điểm chuyển động thẳng đều là:",
         [
-          "Vật chuyển động chậm dần đều và dừng hẳn tại thời điểm t = 5 s.",
-          "Vật chuyển động nhanh dần đều.",
-          "Vật chuyển động thẳng đều.",
-          "Vật đứng yên trong 5 s."
+          "A. Một đường thẳng song song với trục thời gian t.",
+          "B. Một đường thẳng xiên góc đi qua gốc tọa độ O.",
+          "C. Một đường cong parabol quay bề lõm xuống.",
+          "D. Một đường thẳng trùng với trục thẳng đứng v."
         ],
         0,
-        "v giảm đều theo thời gian đến 0 tại t = 5 s, biểu thị chuyển động chậm dần đều và dừng lại."
+        "Chuyển động thẳng đều có vận tốc không đổi theo thời gian, nên đồ thị v – t là đường thẳng song song với trục hoành t."
       ],
       [
-        "Tại một nơi có gia tốc trọng trường g = 9,8 m/s², quãng đường vật rơi tự do được trong giây thứ nhất là:",
+        "Một vật chuyển động thẳng nhanh dần đều không vận tốc đầu với gia tốc a = 4 m/s². Quãng đường vật đi được sau 3 giây kể từ lúc bắt đầu chuyển động là:",
         [
-          "4,9 m.",
-          "9,8 m.",
-          "19,6 m.",
-          "1,0 m."
+          "A. 18 m.",
+          "B. 36 m.",
+          "C. 12 m.",
+          "D. 24 m."
         ],
         0,
-        "s₁ = 1/2·g·t² = 0,5 × 9,8 × 1² = 4,9 m."
+        "s = 1/2 · a · t² = 0,5 · 4 · 3² = 2 · 9 = 18 m."
       ],
       [
-        "Một quả bóng ném ngang từ độ cao h có tầm bay xa L. Nếu tăng độ cao ném lên 4 lần (giữ nguyên vận tốc ném đầu) thì tầm bay xa L sẽ:",
+        "Chuyển động của vật nào dưới đây có thể được coi gần đúng là chuyển động rơi tự do?",
         [
-          "Tăng lên 2 lần.",
-          "Tăng lên 4 lần.",
-          "Không thay đổi.",
-          "Giảm đi 2 lần."
+          "A. Một quả táo chín rụng từ trên cành cây cao xuống đất trong ngày trời lặng gió.",
+          "B. Một chiếc lá bàng khô bay lượn lờ trong gió.",
+          "C. Một vận động viên nhảy dù đang bung dù rơi xuống mặt đất.",
+          "D. Một mẩu giấy ăn mỏng bị vo tròn nhẹ nhàng thả rơi."
         ],
         0,
-        "Tầm xa L = v₀·√(2h/g). Khi h tăng 4 lần thì √(2h/g) tăng √4 = 2 lần, do đó L tăng 2 lần."
+        "Quả táo đặc, nặng, sức cản không khí rất nhỏ so với trọng lượng nên rơi gần đúng là rơi tự do."
       ],
       [
-        "Một đoàn tàu đang chạy với tốc độ 20 m/s thì hãm phanh chuyển động chậm dần đều. Sau khi đi được 100 m, tốc độ của tàu giảm còn 10 m/s. Độ lớn gia tốc của tàu là:",
+        "Một vật rơi tự do không vận tốc đầu từ độ cao h tại nơi có gia tốc trọng trường g. Vận tốc v của vật khi chạm đất được tính theo công thức:",
         [
-          "1,5 m/s².",
-          "1,0 m/s².",
-          "2,0 m/s².",
-          "0,5 m/s²."
+          "A. v = √(2gh).",
+          "B. v = 2gh.",
+          "C. v = √(gh).",
+          "D. v = gh."
         ],
         0,
-        "Áp dụng v² – v₀² = 2as suy ra a = (10² – 20²) / (2 × 100) = (100 – 400) / 200 = –1,5 m/s². Độ lớn là 1,5 m/s²."
+        "v² = 2gh &rArr; v = √(2gh)."
       ]
     ],
     "tf": [
       {
-        "stem": "Một ca nô chạy trên một con sông thẳng từ bến A đến bến B cách nhau 24 km. Khi chạy xuôi dòng từ A đến B, ca nô mất thời gian 1 giờ. Khi chạy ngược dòng từ B về A, ca nô mất thời gian 2 giờ. Coi công suất máy ca nô không đổi và nước chảy đều.",
+        "stem": "Một chiếc ca nô chạy trên một đoạn sông thẳng từ bến A đến bến B cách nhau 40 km. Khi chạy xuôi dòng từ A đến B, ca nô mất thời gian 1 giờ 15 phút (1,25 h). Khi chạy ngược dòng từ B về A, ca nô mất thời gian 2 giờ. Coi vận tốc ca nô đối với nước và vận tốc nước đối với bờ là không đổi.",
         "items": [
           [
-            "Tốc độ của ca nô đối với bờ khi chạy xuôi dòng là 24 km/h.",
+            "Vận tốc của ca nô khi chạy xuôi dòng đối với bờ sông là 32 km/h.",
             true,
-            "v_xuôi = s / t_xuôi = 24 / 1 = 24 km/h."
+            "v_xuoi = 40 / 1,25 = 32 km/h."
           ],
           [
-            "Tốc độ của ca nô đối với bờ khi chạy ngược dòng là 12 km/h.",
+            "Vận tốc của ca nô khi chạy ngược dòng đối với bờ sông là 20 km/h.",
             true,
-            "v_ngược = s / t_ngược = 24 / 2 = 12 km/h."
+            "v_nguoc = 40 / 2 = 20 km/h."
           ],
           [
-            "Tốc độ chảy của dòng nước đối với bờ sông bằng 6 km/h.",
+            "Vận tốc của dòng nước chảy so với bờ sông là 6 km/h.",
             true,
-            "v_nước = (v_xuôi – v_ngược) / 2 = (24 – 12) / 2 = 6 km/h."
+            "v_nuoc = (v_xuoi - v_nguoc) / 2 = (32 - 20) / 2 = 6 km/h."
           ],
           [
-            "Tốc độ của ca nô khi nước đứng yên (đối với dòng nước) là 20 km/h.",
+            "Vận tốc của ca nô so với dòng nước là 30 km/h.",
             false,
-            "v_ca nô = (v_xuôi + v_ngược) / 2 = (24 + 12) / 2 = 18 km/h."
+            "v_ca_no = (v_xuoi + v_nguoc) / 2 = (32 + 20) / 2 = 26 km/h (không phải 30 km/h)."
           ]
         ]
       },
       {
-        "stem": "Một vật nhỏ được thả rơi tự do từ độ cao h = 45 m tại nơi có gia tốc rơi tự do g = 10 m/s². Lấy mặt đất làm mốc tính độ cao và bỏ qua sức cản của không khí.",
+        "stem": "Thả một hòn bi sắt rơi tự do từ đỉnh tháp cao h = 45 m tại nơi có gia tốc trọng trường g = 10 m/s². Bỏ qua mọi sức cản của không khí.",
         "items": [
           [
-            "Thời gian vật rơi từ lúc thả đến khi chạm đất là 3 giây.",
+            "Thời gian viên bi rơi từ đỉnh tháp đến khi chạm đất là 3 giây.",
             true,
-            "t = √(2h / g) = √(2 × 45 / 10) = √9 = 3 s."
+            "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
           ],
           [
-            "Vận tốc của vật ngay trước khi chạm mặt đất có độ lớn bằng 30 m/s.",
+            "Tốc độ của viên bi ngay trước khi chạm đất là 30 m/s.",
             true,
-            "v = gt = 10 × 3 = 30 m/s."
+            "v = gt = 10 · 3 = 30 m/s."
           ],
           [
-            "Quãng đường vật rơi được trong 2 giây đầu tiên là 20 m.",
+            "Quãng đường viên bi rơi được trong 2 giây đầu tiên là 20 m.",
             true,
-            "h₂ = 1/2·g·t₂² = 0,5 × 10 × 2² = 20 m."
+            "s₂ = 1/2 · g · t² = 0,5 · 10 · 2² = 20 m."
           ],
           [
-            "Quãng đường vật rơi được trong 1 giây cuối cùng trước khi chạm đất là 15 m.",
+            "Quãng đường viên bi rơi được trong giây thứ ba (giây cuối cùng) là 20 m.",
             false,
-            "Quãng đường trong 1 s cuối: Δh = h_toàn bộ – h₂ = 45 – 20 = 25 m."
+            "s_giay_3 = h - s₂ = 45 - 20 = 25 m (không phải 20 m)."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một xe ôtô chạy thẳng đều quãng đường 150 km hết thời gian 2,5 giờ. Tốc độ của xe ôtô là bao nhiêu km/h?",
-        "answer": "60",
-        "explanation": "v = s / t = 150 / 2,5 = 60 km/h."
+        "question": "Dùng thước chia milimét đo chiều rộng tấm bìa được kết quả d̄ = 150 mm và sai số tuyệt đối Δd = 1,5 mm. Sai số tỉ đối δd của phép đo bằng bao nhiêu phần trăm (nhập số nguyên hoặc số thập phân)?",
+        "answer": "1",
+        "explanation": "δd = (1,5 / 150) × 100% = 1%."
       },
       {
-        "question": "Một chiếc phà qua sông nước chảy. Vận tốc của phà đối với nước là 8 m/s, vận tốc của nước đối với bờ là 6 m/s theo hướng vuông góc với hướng lái phà. Vận tốc của phà đối với bờ sông có độ lớn bằng bao nhiêu m/s?",
+        "question": "Một người chạy bộ quanh một hồ nước hình tròn có bán kính R = 50 m. Người đó chạy đúng một vòng khép kín quanh bờ hồ hết 100 giây. Lấy π = 3,14. Tốc độ trung bình của người đó bằng bao nhiêu m/s?",
+        "answer": "3.14",
+        "explanation": "Chu vi hồ s = 2πR = 2 · 3,14 · 50 = 314 m. v_tb = s / t = 314 / 100 = 3,14 m/s."
+      },
+      {
+        "question": "Một đoàn tàu hỏa đang di chuyển với vận tốc 72 km/h (20 m/s) thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 1 m/s². Quãng đường đoàn tàu đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là bao nhiêu mét?",
+        "answer": "200",
+        "explanation": "s = (v² - v₀²) / (2a) = (0 - 20²) / (2 · (-1)) = -400 / (-2) = 200 m."
+      },
+      {
+        "question": "Một vật rơi tự do từ độ cao h = 500 m tại nơi có g = 10 m/s². Thời gian vật rơi từ lúc thả đến khi chạm đất là bao nhiêu giây?",
         "answer": "10",
-        "explanation": "v = √(8² + 6²) = √(64 + 36) = √100 = 10 m/s."
-      },
-      {
-        "question": "Một đoàn tàu đang chạy với vận tốc 25 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2,5 m/s². Sau bao nhiêu giây kể từ lúc hãm phanh thì đoàn tàu dừng lại hoàn toàn?",
-        "answer": "10",
-        "explanation": "t = v₀ / |a| = 25 / 2,5 = 10 s."
-      },
-      {
-        "question": "Một vật rơi tự do tại nơi có g = 10 m/s². Trong giây thứ 3, quãng đường vật rơi được là bao nhiêu mét?",
-        "answer": "25",
-        "explanation": "Quãng đường sau 3 s: s₃ = 0,5 × 10 × 3² = 45 m. Quãng đường sau 2 s: s₂ = 0,5 × 10 × 2² = 20 m. Quãng đường trong giây thứ 3: Δs = 45 – 20 = 25 m."
+        "explanation": "t = √(2h / g) = √(2 · 500 / 10) = √100 = 10 s."
       }
     ]
   },
@@ -3696,267 +4136,261 @@ const suppliedExams = [
     "id": "vatli-10-de-06",
     "title": "Vật lí 10 - Đề 06 - Trường THPT Hùng Vương – Quảng Nam (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Hùng Vương",
-      "province": "Quảng Nam",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14294/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-hung-vuong-quang-nam",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT Hùng Vương – Quảng Nam · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Phát biểu nào sau đây nêu đúng vai trò to lớn của Vật lí đối với sự tiến bộ của khoa học công nghệ?",
+        "Cuộc cách mạng công nghiệp lần thứ ba (nửa sau thế kỉ XX) với sự ra đời của máy tính điện tử và viễn thông được thúc đẩy mạnh mẽ bởi nhánh vật lí nào?",
         [
-          "Vật lí là cơ sở khoa học nền tảng tạo tiền đề cho các cuộc cách mạng công nghiệp.",
-          "Vật lí chỉ thuần túy giải thích hiện tượng tự nhiên mà không có ứng dụng kĩ thuật.",
-          "Mọi công nghệ hiện đại đều phát triển độc lập không cần định luật vật lí.",
-          "Vật lí không liên quan đến sự phát triển của vi mạch bán dẫn và máy tính."
+          "A. Vật lí chất rắn và công nghệ vật liệu bán dẫn (silicon, transistor).",
+          "B. Cơ học thiên thể và thuyết vạn vật hấp dẫn.",
+          "C. Nhiệt động lực học cổ điển của thế kỉ XVIII.",
+          "D. Thuyết tương đối rộng của Albert Einstein."
         ],
         0,
-        "Vật lí học là nền tảng tri thức cho kĩ thuật cơ khí, nhiệt điện, vi điện tử, laser, năng lượng hạt nhân và công nghệ thông tin."
+        "Vật lí chất rắn và linh kiện bán dẫn (transistor) là khởi nguồn cho kỉ nguyên máy tính và viễn thông."
       ],
       [
-        "Trong phòng thí nghiệm, biển báo có hình tròn viền đỏ, nền trắng, gạch chéo đỏ đè lên ngọn lửa như hình bên có ý nghĩa: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#fff\" stroke=\"#dc2626\" stroke-width=\"8\"/><path d=\"M50,28 Q58,40 54,50 Q60,46 58,60 Q52,66 48,66 Q40,66 40,58 Q42,52 46,46 Z\" fill=\"#dc2626\"/><line x1=\"20\" y1=\"20\" x2=\"80\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"8\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cấm lửa (cấm hút thuốc / đánh lửa)</div></div>",
+        "Trong tiến trình nghiên cứu Vật lí học, tiêu chuẩn cao nhất để khẳng định hoặc bác bỏ một giả thuyết khoa học là:",
         [
-          "Cấm lửa (không được hút thuốc, không bật lửa).",
-          "Cảnh báo chất lỏng dễ cháy.",
-          "Nơi đặt bình chữa cháy.",
-          "Bắt buộc phải bật lò đốt."
+          "A. Kết quả kiểm chứng độc lập từ thực nghiệm.",
+          "B. Ý kiến chủ quan của số đông mọi người.",
+          "C. Suy đoán logic cảm tính không cần bằng chứng.",
+          "D. Độ dài của bài báo cáo khoa học."
         ],
         0,
-        "Biển tròn viền đỏ gạch chéo là biển cấm; biểu tượng ngọn lửa bị gạch chéo là biển cấm lửa."
+        "Thực nghiệm là tiêu chuẩn chân lí cao nhất để kiểm chứng tính đúng đắn của mọi giả thuyết vật lí."
       ],
       [
-        "Khi dùng ampe kế đo cường độ dòng điện, kim chỉ thị dao động nhẹ quanh vạch đo do chấn động bên ngoài thuộc loại sai số nào?",
+        "Khi làm thí nghiệm với các hóa chất có tính ăn mòn mạnh (như axit đặc, kiềm đặc), dụng cụ bảo hộ nào là BẮT BUỘC?",
         [
-          "Sai số ngẫu nhiên.",
-          "Sai số hệ thống.",
-          "Sai số dụng cụ.",
-          "Sai số tỉ đối cố định."
+          "A. Đeo kính bảo hộ mắt và mang găng tay cao su chuyên dụng.",
+          "B. Chỉ cần đeo khẩu trang vải thông thường.",
+          "C. Đi chân trần để di chuyển nhanh chóng.",
+          "D. Dùng tay trần cầm trực tiếp ống nghiệm đựng hóa chất."
         ],
         0,
-        "Dao động bất định do môi trường ngoài (chấn động, gió, mắt đọc dao động) là nguyên nhân gây ra sai số ngẫu nhiên."
+        "Hóa chất ăn mòn có thể gây bỏng da và tổn thương mắt nghiêm trọng, bắt buộc đeo kính và găng tay cao su bảo hộ."
       ],
       [
-        "Một phép đo vận tốc có kết quả v = (12,5 ± 0,2) m/s. Sai số tuyệt đối của phép đo là:",
+        "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình vẽ như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"44\" r=\"14\" fill=\"#000\"/><circle cx=\"44\" cy=\"42\" r=\"3\" fill=\"#facc15\"/><circle cx=\"56\" cy=\"42\" r=\"3\" fill=\"#facc15\"/><rect x=\"46\" y=\"54\" width=\"8\" height=\"8\" fill=\"#000\"/><line x1=\"30\" y1=\"68\" x2=\"70\" y2=\"48\" stroke=\"#000\" stroke-width=\"4\"/><line x1=\"30\" y1=\"48\" x2=\"70\" y2=\"68\" stroke=\"#000\" stroke-width=\"4\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất độc hại</div></div>",
         [
-          "0,2 m/s.",
-          "12,5 m/s.",
-          "1,6%.",
-          "0,1 m/s."
+          "A. Cảnh báo nguy hiểm chất độc hại hoặc khí độc gây nguy hiểm chết người.",
+          "B. Cảnh báo khu vực có nhiều vật sắc nhọn.",
+          "C. Biển chỉ dẫn khu vực phòng y tế của trường.",
+          "D. Nơi lưu trữ thực phẩm ăn uống an toàn."
         ],
         0,
-        "Theo quy ước viết kết quả A = Ā ± ΔA, sai số tuyệt đối là Δv = 0,2 m/s."
+        "Biển tam giác vàng hình đầu lâu xương chéo cảnh báo chất độc hại, nguy hiểm tính mạng."
       ],
       [
-        "Một người đi xe đạp xuất phát từ điểm O đi về hướng Bắc 3 km, sau đó rẽ sang hướng Đông đi tiếp 4 km đến điểm M. Độ lớn độ dịch chuyển OM bằng:",
+        "Để đo đường kính trong của một ống nghiệm thủy tinh nhỏ một cách chính xác đến 0,1 mm, người ta thường dùng dụng cụ đo nào sau đây?",
         [
-          "5 km.",
-          "7 km.",
-          "1 km.",
-          "12 km."
+          "A. Thước kẹp (thước cặp).",
+          "B. Thước cuộn dài 5 m.",
+          "C. Thước dây vải may quần áo.",
+          "D. Thước kẻ học sinh chia đến milimét."
         ],
         0,
-        "Hai chuyển động vuông góc nhau tạo thành tam giác vuông: OM = √(3² + 4²) = √25 = 5 km."
+        "Thước kẹp có các mỏ kẹp đo trong, đo chính xác đến 0,1 mm hoặc 0,05 mm."
       ],
       [
-        "Tốc độ trung bình v_tb của một vật chuyển động trên quãng đường s trong khoảng thời gian t được tính bởi:",
+        "Cho đại lượng v = s/t. Nếu sai số tỉ đối của quãng đường là δs = 1,5% và của thời gian là δt = 0,5% thì sai số tỉ đối của tốc độ δv bằng:",
         [
-          "v_tb = s / t.",
-          "v_tb = d / t.",
-          "v_tb = s × t.",
-          "v_tb = 1/2·st."
+          "A. 2,0%.",
+          "B. 1,0%.",
+          "C. 3,0%.",
+          "D. 0,75%."
         ],
         0,
-        "Tốc độ trung bình bằng tổng quãng đường chia cho tổng thời gian: v_tb = s / t."
+        "Sai số tỉ đối của thương bằng tổng các sai số tỉ đối thành phần: δv = δs + δt = 1,5% + 0,5% = 2,0%."
       ],
       [
-        "Đồ thị độ dịch chuyển – thời gian (d – t) dưới đây mô tả chuyển động của một xe máy. Tốc độ của xe máy trong 2 giây đầu tiên là: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"240\" height=\"160\" viewBox=\"0 0 240 160\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;\"><line x1=\"40\" y1=\"130\" x2=\"230\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"230,126 240,130 230,134\" fill=\"#334155\"/><text x=\"224\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">t(s)</text><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"10\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"36,10 40,2 44,10\" fill=\"#334155\"/><text x=\"12\" y=\"14\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">d(m)</text><polyline points=\"40,130 130,75 220,20\" fill=\"none\" stroke=\"#0284c7\" stroke-width=\"3\"/><circle cx=\"40\" cy=\"130\" r=\"4\" fill=\"#dc2626\"/><text x=\"40\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">0</text><text x=\"32\" y=\"134\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">0</text><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"130\" cy=\"75\" r=\"4\" fill=\"#dc2626\"/><text x=\"130\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">1</text><text x=\"32\" y=\"79\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">20</text><line x1=\"40\" y1=\"75\" x2=\"130\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"130\" y1=\"130\" x2=\"130\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"220\" cy=\"20\" r=\"4\" fill=\"#dc2626\"/><text x=\"220\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">2</text><text x=\"32\" y=\"24\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">40</text><line x1=\"40\" y1=\"20\" x2=\"220\" y2=\"20\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"220\" y1=\"130\" x2=\"220\" y2=\"20\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị độ dịch chuyển – thời gian (d – t)</div></div>",
+        "Trong trường hợp nào dưới đây, một vật có thể được coi là một chất điểm?",
         [
-          "20 m/s.",
-          "40 m/s.",
-          "10 m/s.",
-          "30 m/s."
+          "A. Một chiếc ôtô đang chạy trên tuyến đường từ Hà Nội vào Đà Nẵng.",
+          "B. Một viên phấn rơi từ bàn giáo viên xuống sàn nhà khi đang xét kích thước của nó.",
+          "C. Trái Đất trong chuyển động tự quay quanh trục của chính nó.",
+          "D. Một người đang thực hiện các động tác bơi lội trong hồ bơi nhỏ."
         ],
         0,
-        "Độ dốc v = Δd / Δt = 40 / 2 = 20 m/s."
+        "Một vật được coi là chất điểm khi kích thước của nó rất nhỏ so với quãng đường đi được hoặc khoảng cách đang xét."
       ],
       [
-        "Một người đi ca nô từ bờ bên này sang bờ bên kia của một dòng sông nước chảy. Vận tốc của ca nô đối với mặt đất phụ thuộc vào:",
+        "Vận tốc tức thời của một vật chuyển động là đại lượng:",
         [
-          "Cả vận tốc của ca nô đối với dòng nước và vận tốc của dòng nước đối với bờ.",
-          "Chỉ phụ thuộc vào vận tốc của ca nô đối với nước.",
-          "Chỉ phụ thuộc vào tốc độ chảy của dòng sông.",
-          "Không phụ thuộc vào yếu tố nào ở trên."
+          "A. Vectơ đặc trưng cho độ nhanh chậm và hướng chuyển động của vật tại một thời điểm xác định.",
+          "B. Vô hướng luôn mang giá trị dương trên cả quãng đường dài.",
+          "C. Bằng thương số giữa tổng quãng đường và tổng thời gian đi hết quãng đường đó.",
+          "D. Không đổi đối với mọi loại chuyển động."
         ],
         0,
-        "Theo định lí cộng vận tốc: v⃗₁₃ = v⃗₁₂ + v⃗₂₃, phụ thuộc cả vận tốc thuyền so với nước và nước so với bờ."
+        "Vận tốc tức thời là đại lượng vectơ đặc trưng cho chiều và độ nhanh chậm tại đúng thời điểm đó."
       ],
       [
-        "Một ôtô chuyển động thẳng đều trên quãng đường 90 km trong thời gian 1 giờ 30 phút. Vận tốc của ôtô là:",
+        "Khi bố trí thí nghiệm đo tốc độ của xe con trên máng đệm khí, để giảm thiểu tối đa ma sát cản trở chuyển động của xe, người ta sử dụng biện pháp nào?",
         [
-          "60 km/h.",
-          "45 km/h.",
-          "75 km/h.",
-          "90 km/h."
+          "A. Bơm dòng khí liên tục qua các lỗ nhỏ trên máng để tạo một lớp đệm khí nâng xe lên.",
+          "B. Bôi thật nhiều dầu nhớt đặc lên mặt máng.",
+          "C. Gắn thêm bánh xe cao su có gai to vào gầm xe.",
+          "D. Dùng dây kéo có tải trọng rất nặng."
         ],
         0,
-        "Thời gian t = 1,5 h. Vận tốc v = 90 / 1,5 = 60 km/h."
+        "Đệm không khí giúp xe di chuyển không chạm trực tiếp vào bề mặt máng, giảm ma sát tối đa."
       ],
       [
-        "Chuyển động thẳng có vận tốc giảm dần đều theo thời gian với gia tốc a không đổi là chuyển động:",
+        "Hệ số góc (độ dốc) của đường biểu diễn trên đồ thị độ dịch chuyển – thời gian (d – t) cho ta biết giá trị của đại lượng nào?",
         [
-          "Thẳng chậm dần đều.",
-          "Thẳng nhanh dần đều.",
-          "Thẳng đều.",
-          "Tròn đều."
+          "A. Vận tốc của chuyển động.",
+          "B. Gia tốc của chuyển động.",
+          "C. Quãng đường đi được.",
+          "D. Lực kéo tác dụng lên vật."
         ],
         0,
-        "Vận tốc giảm đều theo thời gian là đặc điểm định nghĩa của chuyển động thẳng chậm dần đều."
+        "Hệ số góc k = Δd / Δt chính là vận tốc v của chất điểm."
       ],
       [
-        "Chọn công thức ĐÚNG về vận tốc tức thời trong chuyển động thẳng biến đổi đều:",
+        "Một chất điểm chuyển động dọc theo trục Ox có gia tốc a = –3 m/s² và vận tốc v = +6 m/s. Trạng thái chuyển động của chất điểm là:",
         [
-          "v = v₀ + at.",
-          "v = v₀ – at².",
-          "v = at / 2.",
-          "v = v₀t + at."
+          "A. Chuyển động thẳng chậm dần đều cùng chiều dương.",
+          "B. Chuyển động thẳng nhanh dần đều cùng chiều dương.",
+          "C. Chuyển động thẳng chậm dần đều ngược chiều dương.",
+          "D. Chuyển động thẳng đều."
         ],
         0,
-        "Công thức vận tốc chuẩn: v = v₀ + at."
+        "Vì v > 0 nên vật chuyển động theo chiều dương. Vì a và v trái dấu (a · v = -18 < 0) nên là chuyển động chậm dần đều."
       ],
       [
-        "Một xe ôtô đang chạy với tốc độ 10 m/s thì tăng tốc với gia tốc 2 m/s². Sau 5 giây, tốc độ của xe là:",
+        "Một đoàn tàu đang chạy với tốc độ 36 km/h (10 m/s) thì tăng tốc chuyển động thẳng nhanh dần đều với gia tốc 0,5 m/s². Sau 10 giây, tốc độ của tàu đạt được là:",
         [
-          "20 m/s.",
-          "15 m/s.",
-          "25 m/s.",
-          "30 m/s."
+          "A. 15 m/s.",
+          "B. 12 m/s.",
+          "C. 20 m/s.",
+          "D. 5 m/s."
         ],
         0,
-        "v = v₀ + at = 10 + 2 × 5 = 20 m/s."
+        "v = v₀ + at = 10 + 0,5 · 10 = 15 m/s."
       ],
       [
-        "Hình vẽ bên biểu diễn đồ thị vận tốc – thời gian (v – t) của một xe chuyển động thẳng. Đoạn đồ thị nằm ngang cho biết xe đang: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:12px 0;\"><svg width=\"240\" height=\"160\" viewBox=\"0 0 240 160\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;\"><line x1=\"40\" y1=\"130\" x2=\"230\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"230,126 240,130 230,134\" fill=\"#334155\"/><text x=\"216\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">t(s)</text><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"10\" stroke=\"#334155\" stroke-width=\"2\"/><polygon points=\"36,10 40,2 44,10\" fill=\"#334155\"/><text x=\"8\" y=\"14\" font-size=\"11\" font-weight=\"bold\" fill=\"#334155\">v(m/s)</text><polyline points=\"40,75 130,75 220,75\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"3\"/><circle cx=\"40\" cy=\"75\" r=\"4\" fill=\"#059669\"/><text x=\"40\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">0</text><text x=\"32\" y=\"79\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">15</text><line x1=\"40\" y1=\"75\" x2=\"40\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"40\" y1=\"130\" x2=\"40\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"130\" cy=\"75\" r=\"4\" fill=\"#059669\"/><text x=\"130\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">3</text><text x=\"32\" y=\"79\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">15</text><line x1=\"40\" y1=\"75\" x2=\"130\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"130\" y1=\"130\" x2=\"130\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><circle cx=\"220\" cy=\"75\" r=\"4\" fill=\"#059669\"/><text x=\"220\" y=\"146\" font-size=\"10\" fill=\"#475569\" text-anchor=\"middle\">6</text><text x=\"32\" y=\"79\" font-size=\"10\" fill=\"#475569\" text-anchor=\"end\">15</text><line x1=\"40\" y1=\"75\" x2=\"220\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"220\" y1=\"130\" x2=\"220\" y2=\"75\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Đồ thị vận tốc – thời gian (v – t)</div></div>",
+        "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động là đường thẳng dốc xuống cắt trục thời gian tại điểm t = 5 s. Điều này chứng tỏ:",
         [
-          "Chuyển động thẳng đều.",
-          "Chuyển động nhanh dần đều.",
-          "Chuyển động chậm dần đều.",
-          "Đang đứng yên."
+          "A. Vật chuyển động thẳng chậm dần đều và dừng lại hoàn toàn ở thời điểm t = 5 s.",
+          "B. Vật chuyển động nhanh dần đều đến thời điểm t = 5 s thì đổi chiều.",
+          "C. Vật luôn đứng yên trong suốt thời gian 5 s.",
+          "D. Gia tốc của vật tăng dần theo thời gian."
         ],
         0,
-        "v không đổi = 15 m/s theo thời gian, chứng tỏ xe chuyển động thẳng đều."
+        "Đường dốc xuống cắt trục hoành v = 0 tại t = 5 s biểu thị chuyển động chậm dần đều dừng lại tại t = 5 s."
       ],
       [
-        "Chuyển động nào sau đây có thể coi gần đúng là chuyển động rơi tự do?",
+        "Một ôtô bắt đầu khởi hành từ điểm đứng yên với gia tốc 3 m/s². Vận tốc của ôtô sau khi đi được quãng đường 24 m là:",
         [
-          "Một viên sỏi nhỏ được thả từ trên cầu xuống sông trong không khí tĩnh lặng.",
-          "Một chiếc dù đang bung ra rơi xuống đất.",
-          "Một tờ giấy phẳng thả rơi trong phòng.",
-          "Một quả bóng bay xì hơi lượn lờ trong gió."
+          "A. 12 m/s.",
+          "B. 144 m/s.",
+          "C. 6 m/s.",
+          "D. 24 m/s."
         ],
         0,
-        "Viên sỏi đặc có trọng lượng rất lớn so với lực cản không khí nên sự rơi của nó gần đúng là rơi tự do."
+        "v² - v₀² = 2ad &rArr; v² = 2 · 3 · 24 = 144 &rArr; v = 12 m/s."
       ],
       [
-        "Tại nơi có g = 10 m/s², một vật rơi tự do sau 3 giây kể từ lúc thả sẽ đạt tốc độ:",
+        "Khi một vật rơi tự do trong trọng trường gần mặt đất, đại lượng nào sau đây KHÔNG THAY ĐỔI theo thời gian?",
         [
-          "30 m/s.",
-          "15 m/s.",
-          "45 m/s.",
-          "20 m/s."
+          "A. Gia tốc của vật (g = const).",
+          "B. Vận tốc tức thời của vật.",
+          "C. Quãng đường vật rơi được.",
+          "D. Độ cao của vật so với mặt đất."
         ],
         0,
-        "v = gt = 10 × 3 = 30 m/s."
+        "Rơi tự do là chuyển động nhanh dần đều với gia tốc trọng trường g không đổi tại một nơi xác định."
       ],
       [
-        "Một xe tải đang chạy với vận tốc 15 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc 1 m/s². Quãng đường xe đi được sau 5 giây kể từ lúc hãm phanh là:",
+        "Thả một hòn bi rơi tự do không vận tốc đầu tại nơi có gia tốc trọng trường g = 9,8 m/s². Sau 3 giây kể từ khi thả, tốc độ của hòn bi đạt được là:",
         [
-          "62,5 m.",
-          "75 m.",
-          "50 m.",
-          "87,5 m."
+          "A. 29,4 m/s.",
+          "B. 19,6 m/s.",
+          "C. 9,8 m/s.",
+          "D. 44,1 m/s."
         ],
         0,
-        "s = v₀t + 1/2·at² = 15 × 5 + 0,5 × (–1) × 5² = 75 – 12,5 = 62,5 m."
+        "v = gt = 9,8 · 3 = 29,4 m/s."
       ]
     ],
     "tf": [
       {
-        "stem": "Một người tập thể dục đi bộ quanh một sân vận động hình chữ nhật có chiều dài 100 m và chiều rộng 60 m. Người đó bắt đầu từ góc A, đi qua góc B, góc C, góc D và quay trở lại điểm A đúng 1 vòng trong thời gian 4 phút.",
+        "stem": "Một chất điểm chuyển động dọc theo trục tọa độ Ox. Tại thời điểm ban đầu t = 0 vật ở gốc tọa độ O. Trong 4 giây đầu tiên vật chuyển động thẳng đều với vận tốc v₁ = 5 m/s. Trong 6 giây tiếp theo vật dừng lại đứng yên. Trong 5 giây cuối cùng vật chuyển động thẳng đều quay ngược trở lại gốc tọa độ với vận tốc v₂ = –4 m/s.",
         "items": [
           [
-            "Quãng đường người đó đi được trong 1 vòng là 320 m.",
+            "Trong 4 giây đầu tiên, độ dịch chuyển của chất điểm là d₁ = 20 m.",
             true,
-            "Chu vi hình chữ nhật: C = 2 × (100 + 60) = 320 m."
+            "d₁ = v₁ · t₁ = 5 · 4 = 20 m."
           ],
           [
-            "Độ lớn độ dịch chuyển của người đó sau khi hoàn thành 1 vòng là 320 m.",
+            "Từ thời điểm t = 4 s đến t = 10 s, đồ thị độ dịch chuyển – thời gian (d – t) là một đoạn thẳng song song với trục hoành t.",
+            true,
+            "Vật đứng yên nên độ dịch chuyển không đổi d = 20 m, đồ thị song song trục thời gian."
+          ],
+          [
+            "Độ dịch chuyển tổng cộng của chất điểm sau toàn bộ 15 giây chuyển động bằng 0 m.",
+            true,
+            "Quãng đường quay về d₂ = –4 · 5 = –20 m. Độ dịch chuyển tổng d = 20 + (-20) = 0 m."
+          ],
+          [
+            "Tốc độ trung bình của chất điểm trong suốt 15 giây bằng 0 m/s.",
             false,
-            "Điểm kết thúc trùng điểm xuất phát nên độ dịch chuyển d = 0 m."
-          ],
-          [
-            "Tốc độ trung bình của người đó trong chuyến đi xấp xỉ bằng 1,33 m/s.",
-            true,
-            "t = 4 phút = 240 s. v = 320 / 240 ≈ 1,33 m/s."
-          ],
-          [
-            "Vận tốc trung bình của người đó sau cả vòng đi bằng 0 m/s.",
-            true,
-            "Vì d = 0 nên v_tb = d / t = 0 m/s."
+            "Tổng quãng đường s = 20 + 20 = 40 m. Tốc độ trung bình v_tb = 40 / 15 ≈ 2,67 m/s (chỉ có vận tốc trung bình mới bằng 0)."
           ]
         ]
       },
       {
-        "stem": "Một xe ôtô chở hàng đang chuyển động thẳng đều với tốc độ 20 m/s thì tài xế nhìn thấy đèn đỏ phía trước cách xe 80 m liền đạp phanh. Xe chuyển động chậm dần đều với gia tốc có độ lớn 2,5 m/s².",
+        "stem": "Tại đỉnh một tháp cao h, người ta thả rơi tự do một vật nhỏ xuống mặt đất. Biết vật rơi chạm đất sau thời gian 5 giây và lấy gia tốc rơi tự do g = 10 m/s². Bỏ qua mọi sức cản không khí.",
         "items": [
           [
-            "Thời gian xe chuyển động từ lúc đạp phanh đến khi dừng hẳn là 8 giây.",
+            "Độ cao h của tháp bằng 125 m.",
             true,
-            "t = v₀ / |a| = 20 / 2,5 = 8 s."
+            "h = 1/2 · g · t² = 0,5 · 10 · 5² = 125 m."
           ],
           [
-            "Quãng đường xe ôtô đi được từ lúc bắt đầu đạp phanh đến khi dừng lại là 80 m.",
+            "Vận tốc của vật ngay trước khi tiếp xúc mặt đất có độ lớn bằng 50 m/s.",
             true,
-            "s = v₀² / (2|a|) = 20² / (2 × 2,5) = 400 / 5 = 80 m."
+            "v = gt = 10 · 5 = 50 m/s."
           ],
           [
-            "Xe ôtô dừng lại đúng tại vị trí cột đèn giao thông mà không bị vượt quá vạch.",
+            "Sau 2 giây kể từ khi thả rơi, vật rơi được quãng đường 20 m.",
             true,
-            "Vì quãng đường hãm phanh đúng bằng khoảng cách ban đầu 80 m."
+            "s₂ = 0,5 · 10 · 2² = 20 m."
           ],
           [
-            "Sau 4 giây kể từ khi đạp phanh, tốc độ của xe tải còn lại là 5 m/s.",
+            "Quãng đường vật rơi được trong 1 giây cuối cùng trước khi chạm đất là 25 m.",
             false,
-            "Sau 4 s: v = 20 – 2,5 × 4 = 10 m/s."
+            "Quãng đường 4 giây đầu: s₄ = 0,5 · 10 · 4² = 80 m. Quãng đường giây cuối: Δs = 125 - 80 = 45 m (không phải 25 m)."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một xe gắn máy đi từ thị xã A đến thị xã B cách nhau 45 km hết thời gian 1 giờ 15 phút. Tốc độ trung bình của xe tính theo km/h là bao nhiêu?",
-        "answer": "36",
-        "explanation": "Đổi 1 giờ 15 phút = 1,25 h. Tốc độ v = 45 / 1,25 = 36 km/h."
+        "question": "Dùng thước đo độ dài thu được kết quả chiều dài sợi dây là L = (80,0 ± 0,8) cm. Sai số tỉ đối của phép đo chiều dài này bằng bao nhiêu phần trăm?",
+        "answer": "1",
+        "explanation": "δL = (0,8 / 80,0) × 100% = 1%."
       },
       {
-        "question": "Hai tàu hỏa chạy cùng chiều trên hai đường ray song song với tốc độ lần lượt là 60 km/h và 40 km/h. Vận tốc của tàu thứ nhất so với tàu thứ hai có độ lớn bằng bao nhiêu km/h?",
+        "question": "Một bạn học sinh chạy xe đạp điện đi từ trường về nhà cách nhau 4,5 km hết thời gian 15 phút. Tốc độ trung bình của bạn tính theo km/h là bao nhiêu?",
+        "answer": "18",
+        "explanation": "t = 15 phút = 0,25 h. v = 4,5 / 0,25 = 18 km/h."
+      },
+      {
+        "question": "Một xe ôtô đang chạy với tốc độ 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2,5 m/s². Sau bao nhiêu giây kể từ lúc bắt đầu hãm phanh thì xe dừng lại hoàn toàn?",
+        "answer": "8",
+        "explanation": "t = (v - v₀) / a = (0 - 20) / (-2,5) = 8 s."
+      },
+      {
+        "question": "Thả một hòn đá rơi tự do từ mép cầu cao 20 m xuống dòng sông tại nơi có g = 10 m/s². Vận tốc của hòn đá ngay trước khi chạm mặt nước bằng bao nhiêu m/s?",
         "answer": "20",
-        "explanation": "Chạy cùng chiều nên vận tốc tương đối: v = 60 – 40 = 20 km/h."
-      },
-      {
-        "question": "Một xe máy đang chạy với vận tốc 10 m/s thì tăng tốc chuyển động thẳng nhanh dần đều với gia tốc 2 m/s² trên quãng đường dài 24 m. Vận tốc của xe máy ở cuối đoạn đường này là bao nhiêu m/s?",
-        "answer": "14",
-        "explanation": "v = √(v₀² + 2as) = √(10² + 2 × 2 × 24) = √(100 + 96) = √196 = 14 m/s."
-      },
-      {
-        "question": "Thả rơi tự do một hòn đá từ độ cao 20 m tại nơi có g = 10 m/s². Vận tốc của hòn đá ngay trước khi chạm đất là bao nhiêu m/s?",
-        "answer": "20",
-        "explanation": "v = √(2gh) = √(2 × 10 × 20) = √400 = 20 m/s."
+        "explanation": "v = √(2gh) = √(2 · 10 · 20) = √400 = 20 m/s."
       }
     ]
   },
@@ -3964,267 +4398,261 @@ const suppliedExams = [
     "id": "vatli-10-de-07",
     "title": "Vật lí 10 - Đề 07 - Trường THPT Nguyễn Huệ – Quảng Nam (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Nguyễn Huệ",
-      "province": "Quảng Nam",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/11213/de-thi-giua-ki-1-vat-li-10-nam-2024-2025-truong-thpt-nguyen-hue-quang",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT Nguyễn Huệ – Quảng Nam · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Phân ngành nào sau đây thuộc lĩnh vực nghiên cứu của Vật lí cổ điển?",
+        "Phân ngành nào sau đây thuộc lĩnh vực nghiên cứu trọng tâm của Vật lí cổ điển?",
         [
-          "Cơ học, Nhiệt học, Quang học và Điện từ học.",
-          "Vật lí lượng tử và hiệu ứng quang điện.",
-          "Cơ học lượng tử và cấu trúc quark.",
-          "Vật lí hạt nhân phóng xạ cao năng."
+          "A. Cơ học, Quang học, Nhiệt học và Điện từ học.",
+          "B. Vật lí hạt cơ bản và máy gia tốc hạt lớn.",
+          "C. Công nghệ nano và vật liệu siêu dẫn nhiệt độ cao.",
+          "D. Vũ trụ học lượng tử và lỗ đen không-thời gian."
         ],
         0,
-        "Vật lí cổ điển phát triển từ thế kỉ XVII đến cuối thế kỉ XIX, bao gồm Cơ học Newton, Nhiệt học, Quang học và Điện từ học Maxwell."
+        "Cơ học, Quang học, Nhiệt học và Điện từ học là các nhánh trụ cột cốt lõi của Vật lí cổ điển."
       ],
       [
-        "Trong phòng thí nghiệm Vật lí hiện đại, biển báo tam giác viền đen, nền vàng có hình ba cánh quạt như hình bên là biển cảnh báo: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"55\" r=\"7\" fill=\"#000\"/><path d=\"M50,48 L44,28 A24,24 0 0,1 56,28 Z\" fill=\"#000\"/><path d=\"M44,59 L26,69 A24,24 0 0,1 20,59 Z\" fill=\"#000\"/><path d=\"M56,59 L74,69 A24,24 0 0,0 80,59 Z\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất phóng xạ</div></div>",
+        "Vật lí học được coi là cơ sở của khoa học tự nhiên và công nghệ vì:",
         [
-          "Khu vực có nguồn bức xạ ion hóa, chất phóng xạ nguy hiểm.",
-          "Khu vực có điện trường mạnh.",
-          "Khu vực có quạt gió công suất lớn.",
-          "Khu vực có nguồn bức xạ laser."
+          "A. Các quy luật của Vật lí chi phối sự vận động của vật chất ở mọi quy mô từ vi mô đến vĩ mô.",
+          "B. Vật lí có số lượng công thức toán học nhiều nhất.",
+          "C. Mọi thiết bị điện đều do các nhà vật lí tự tay sản xuất hàng loạt.",
+          "D. Vật lí là môn học duy nhất có bài kiểm tra thực hành trong phòng thí nghiệm."
         ],
         0,
-        "Biểu tượng cánh quạt ba lá là biểu tượng quốc tế cảnh báo chất phóng xạ và bức xạ ion hóa."
+        "Các quy luật vật lí là các quy luật tự nhiên bao quát nhất, chi phối cấu trúc và tương tác của vật chất."
       ],
       [
-        "Cho hai đại lượng đo trực tiếp A và B có sai số tuyệt đối là ΔA và ΔB. Đại lượng C = A + B có sai số tuyệt đối ΔC bằng:",
+        "Khi xảy ra sự cố chập điện gây cháy trong phòng thực hành Vật lí, hành động đầu tiên và quan trọng nhất cần thực hiện là:",
         [
-          "ΔC = ΔA + ΔB.",
-          "ΔC = ΔA – ΔB.",
-          "ΔC = ΔA × ΔB.",
-          "ΔC = ΔA / ΔB."
+          "A. Lập tức ngắt cầu dao (aptomat) tổng của phòng thực hành.",
+          "B. Dùng một xô nước hắt thật mạnh vào đám cháy có dây điện.",
+          "C. Dùng tay kéo người bị giật ra khỏi dây điện trần.",
+          "D. Mở toang các cửa sổ để khói thoát ra ngoài trước."
         ],
         0,
-        "Sai số tuyệt đối của một tổng hoặc một hiệu luôn bằng tổng các sai số tuyệt đối thành phần: ΔC = ΔA + ΔB."
+        "Hành động đầu tiên sống còn khi chập điện là ngắt ngay nguồn điện tổng; tuyệt đối không dùng nước dập cháy khi chưa ngắt điện."
       ],
       [
-        "Một chất điểm chuyển động trên trục Ox từ vị trí x₁ = 2 m đến vị trí x₂ = –4 m. Độ dịch chuyển của chất điểm là:",
+        "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình phát tia như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"52\" r=\"6\" fill=\"#000\"/><line x1=\"26\" y1=\"52\" x2=\"74\" y2=\"52\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"36\" y1=\"36\" x2=\"64\" y2=\"68\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"36\" y1=\"68\" x2=\"64\" y2=\"36\" stroke=\"#000\" stroke-width=\"3\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo tia laser</div></div>",
         [
-          "–6 m.",
-          "6 m.",
-          "2 m.",
-          "–2 m."
+          "A. Cảnh báo khu vực có nguồn bức xạ tia laser nguy hiểm, tránh nhìn trực tiếp.",
+          "B. Cảnh báo nơi có nguy cơ rơi từ trên cao.",
+          "C. Biển chỉ dẫn khu vực chiếu sáng thông thường.",
+          "D. Khu vực dành riêng cho việc chụp ảnh lưu niệm."
         ],
         0,
-        "d = x₂ – x₁ = –4 – 2 = –6 m."
+        "Biển tam giác vàng viền đen hình tia phát sáng laser cảnh báo nguy hiểm bức xạ laser đối với mắt và da."
       ],
       [
-        "Trên đồ thị độ dịch chuyển – thời gian (d – t), đường biểu diễn là một đường thẳng đi xuống theo thời gian. Điều này chứng tỏ vật:",
+        "Sai số của phép đo đại lượng vật lí bao gồm hai thành phần chủ yếu là:",
         [
-          "Chuyển động thẳng đều ngược chiều dương.",
-          "Chuyển động thẳng đều cùng chiều dương.",
-          "Đang đứng yên tại chỗ.",
-          "Chuyển động nhanh dần đều."
+          "A. Sai số hệ thống (gồm sai số dụng cụ) và sai số ngẫu nhiên.",
+          "B. Sai số do người đo và sai số do thời tiết.",
+          "C. Sai số số lẻ và sai số số chẵn.",
+          "D. Sai số âm và sai số vô tỉ."
         ],
         0,
-        "Hệ số góc âm (v = Δd / Δt < 0) chứng tỏ vật chuyển động thẳng đều theo chiều âm (ngược chiều dương)."
+        "Sai số phép đo gồm sai số hệ thống (trong đó có sai số dụng cụ) và sai số ngẫu nhiên."
       ],
       [
-        "Một người chèo thuyền qua sông với vận tốc 3 m/s vuông góc với dòng chảy. Nước sông chảy xuôi với vận tốc 4 m/s. Vận tốc của thuyền so với bờ sông có độ lớn bằng:",
+        "Cho đại lượng C = A - B với các giá trị đo A = (40 ± 1) mm và B = (15 ± 1) mm. Sai số tuyệt đối ΔC của đại lượng C bằng:",
         [
-          "5 m/s.",
-          "7 m/s.",
-          "1 m/s.",
-          "3,5 m/s."
+          "A. 2 mm.",
+          "B. 0 mm.",
+          "C. 1 mm.",
+          "D. 25 mm."
         ],
         0,
-        "Hai vận tốc vuông góc nhau nên v = √(3² + 4²) = √25 = 5 m/s."
+        "Sai số tuyệt đối của hiệu luôn bằng TỔNG các sai số tuyệt đối thành phần: ΔC = ΔA + ΔB = 1 + 1 = 2 mm."
       ],
       [
-        "Một vật chuyển động thẳng nhanh dần đều không vận tốc đầu với gia tốc a. Quãng đường s đi được trong thời gian t tỉ lệ thuận với:",
+        "Một người đi từ điểm A đến điểm B cách nhau 6 m theo hướng Bắc, sau đó rẽ sang hướng Đông đi tiếp một đoạn 8 m đến điểm C. Độ lớn của vectơ độ dịch chuyển AC bằng:",
         [
-          "Bình phương thời gian t².",
-          "Thời gian t.",
-          "Căn bậc hai của t.",
-          "Nghịch đảo của thời gian t."
+          "A. 10 m.",
+          "B. 14 m.",
+          "C. 2 m.",
+          "D. 48 m."
         ],
         0,
-        "Vì s = 1/2·a·t² nên quãng đường s tỉ lệ thuận với bình phương thời gian t²."
+        "Do hai đoạn đường vuông góc nhau (Bắc và Đông) nên d = √(6² + 8²) = √100 = 10 m."
       ],
       [
-        "Một xe ôtô đang chạy với tốc độ 20 m/s thì hãm phanh với gia tốc có độ lớn 4 m/s². Thời gian từ lúc hãm phanh đến khi xe dừng lại là:",
+        "Một ôtô chuyển động thẳng theo một hướng xác định. Trong 1 giờ đầu ôtô chạy được 60 km, trong 2 giờ tiếp theo ôtô chạy được 90 km. Vận tốc trung bình của ôtô trong suốt 3 giờ là:",
         [
-          "5 s.",
-          "4 s.",
-          "8 s.",
-          "10 s."
+          "A. 50 km/h.",
+          "B. 75 km/h.",
+          "C. 45 km/h.",
+          "D. 55 km/h."
         ],
         0,
-        "t = (0 – 20) / (–4) = 5 s."
+        "v_tb = (s₁ + s₂) / (t₁ + t₂) = (60 + 90) / (1 + 2) = 150 / 3 = 50 km/h."
       ],
       [
-        "Hai vật rơi tự do tại cùng một nơi có thời gian rơi lần lượt là t₁ và t₂ = 2t₁. Tỉ số độ cao thả hai vật h₂ / h₁ bằng:",
+        "Khi cho tấm chắn sáng có bề rộng d = 2 cm đi qua cổng quang điện kết nối với đồng hồ đo hiện số, đồng hồ báo thời gian chắn sáng là 0,04 s. Tốc độ tức thời của tấm chắn sáng là:",
         [
-          "4.",
-          "2.",
-          "8.",
-          "16."
+          "A. 0,5 m/s.",
+          "B. 50 m/s.",
+          "C. 0,08 m/s.",
+          "D. 2 m/s."
         ],
         0,
-        "Vì h = 1/2·g·t² tỉ lệ thuận với t² nên h₂ / h₁ = (t₂ / t₁)² = 2² = 4."
+        "d = 2 cm = 0,02 m. v = d / Δt = 0,02 / 0,04 = 0,5 m/s."
       ],
       [
-        "Một giọt nước mưa rơi tự do từ mái nhà cao 20 m xuống mặt đất. Lấy g = 10 m/s². Tốc độ của giọt nước ngay trước khi chạm đất là:",
+        "Trên đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm chuyển động thẳng, độ dốc của tiếp tuyến tại một điểm trên đường cong cho biết:",
         [
-          "20 m/s.",
-          "10 m/s.",
-          "15 m/s.",
-          "25 m/s."
+          "A. Vận tốc tức thời của chất điểm tại thời điểm đó.",
+          "B. Tốc độ trung bình trên toàn tuyến.",
+          "C. Gia tốc của chất điểm tại thời điểm đó.",
+          "D. Quãng đường vật đã đi được."
         ],
         0,
-        "v = √(2gh) = √(2 × 10 × 20) = √400 = 20 m/s."
+        "Độ dốc tiếp tuyến của đồ thị d – t tại thời điểm t chính bằng vận tốc tức thời tại thời điểm đó."
       ],
       [
-        "Một quả bóng được ném ngang từ độ cao h = 5 m với vận tốc ban đầu v₀. Điểm chạm đất cách vị trí ném theo phương ngang là L = 12 m. Lấy g = 10 m/s². Tốc độ ném ban đầu v₀ bằng:",
+        "Một ôtô đang chạy với tốc độ 72 km/h (20 m/s) thì người lái xe hãm phanh cho xe chạy chậm dần đều. Sau 10 giây xe dừng lại hẳn. Gia tốc của ôtô là:",
         [
-          "12 m/s.",
-          "10 m/s.",
-          "6 m/s.",
-          "24 m/s."
+          "A. –2 m/s².",
+          "B. 2 m/s².",
+          "C. –7,2 m/s².",
+          "D. 0,5 m/s²."
         ],
         0,
-        "Thời gian rơi t = √(2h / g) = √(2 × 5 / 10) = 1 s. Tốc độ ném v₀ = L / t = 12 / 1 = 12 m/s."
+        "a = (v - v₀) / t = (0 - 20) / 10 = –2 m/s²."
       ],
       [
-        "Trong chuyển động ném ngang, tại điểm chạm đất, phương của vectơ vận tốc:",
+        "Một chất điểm bắt đầu chuyển động thẳng nhanh dần đều với gia tốc a = 2 m/s² từ trạng thái nghỉ. Vận tốc của chất điểm sau khi đi được quãng đường 16 m là:",
         [
-          "Nghiêng một góc so với phương ngang hướng xuống dưới.",
-          "Nằm ngang.",
-          "Thẳng đứng hướng xuống.",
-          "Thẳng đứng hướng lên."
+          "A. 8 m/s.",
+          "B. 4 m/s.",
+          "C. 16 m/s.",
+          "D. 32 m/s."
         ],
         0,
-        "Tại điểm chạm đất, vận tốc v⃗ = v⃗_x + v⃗_y có hai thành phần vuông góc nên hợp với phương ngang một góc nghiêng hướng xuống."
+        "v² = 2ad = 2 · 2 · 16 = 64 &rArr; v = 8 m/s."
       ],
       [
-        "Gia tốc tức thời là:",
+        "Trong chuyển động thẳng biến đổi đều, đồ thị vận tốc – thời gian (v – t) có dạng là:",
         [
-          "Gia tốc tại một thời điểm xác định trên quỹ đạo.",
-          "Gia tốc trung bình trên toàn bộ quãng đường.",
-          "Độ dịch chuyển chia cho thời gian.",
-          "Vận tốc tức thời chia cho thời gian."
+          "A. Một đường thẳng xiên góc với các trục tọa độ.",
+          "B. Một nhánh của đường parabol quay xuống.",
+          "C. Một đường cong hình sin lượn sóng.",
+          "D. Một đường thẳng luôn luôn song song với trục vận tốc."
         ],
         0,
-        "Gia tốc tức thời a⃗ = dv⃗ / dt đo sự thay đổi vận tốc tại thời điểm đang xét."
+        "v = v₀ + at là phương trình bậc nhất đối với t nên đồ thị v – t là đường thẳng xiên góc."
       ],
       [
-        "Một chất điểm chuyển động theo phương trình v = 6 – 2t (m/s). Chất điểm dừng lại tại thời điểm:",
+        "Một đoàn tàu đang chạy thẳng đều với tốc độ 10 m/s thì tăng tốc với gia tốc a = 1 m/s² trong 6 s. Quãng đường tàu chạy được trong 6 s đó là:",
         [
-          "t = 3 s.",
-          "t = 6 s.",
-          "t = 2 s.",
-          "t = 12 s."
+          "A. 78 m.",
+          "B. 60 m.",
+          "C. 18 m.",
+          "D. 96 m."
         ],
         0,
-        "Vật dừng lại khi v = 0 suy ra 6 – 2t = 0 nên t = 3 s."
+        "s = v₀t + 1/2 · at² = 10 · 6 + 0,5 · 1 · 6² = 60 + 18 = 78 m."
       ],
       [
-        "Khi thả rơi một chiếc lông chim và một hòn bi chì trong ống chân không Newton thì:",
+        "Một vật rơi tự do không vận tốc đầu từ độ cao 45 m tại nơi có g = 10 m/s². Thời gian vật rơi chạm đất là:",
         [
-          "Cả hai rơi nhanh như nhau và chạm đáy ống cùng lúc.",
-          "Hòn bi chì rơi nhanh hơn chạm đáy trước.",
-          "Chiếc lông chim rơi nhanh hơn hòn bi chì.",
-          "Cả hai đều lơ lửng không rơi."
+          "A. 3 s.",
+          "B. 4,5 s.",
+          "C. 9 s.",
+          "D. 2 s."
         ],
         0,
-        "Trong ống đã hút hết không khí (chân không), không còn lực cản nên mọi vật đều rơi tự do như nhau."
+        "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
       ],
       [
-        "Một xe đồ chơi chạy với vận tốc ban đầu v₀ = 2 m/s và gia tốc a = 1,5 m/s² trong thời gian 4 giây. Quãng đường xe đi được là:",
+        "Thả một vật rơi tự do từ độ cao h. Trong 1 giây đầu tiên vật rơi được quãng đường 5 m (lấy g = 10 m/s²). Quãng đường vật rơi được trong giây thứ hai là:",
         [
-          "20 m.",
-          "14 m.",
-          "12 m.",
-          "16 m."
+          "A. 15 m.",
+          "B. 10 m.",
+          "C. 20 m.",
+          "D. 25 m."
         ],
         0,
-        "s = v₀t + 1/2·at² = 2 × 4 + 0,5 × 1,5 × 4² = 8 + 12 = 20 m."
+        "Quãng đường sau 2 s: s₂ = 0,5 · 10 · 2² = 20 m. Quãng đường giây thứ hai: Δs = 20 - 5 = 15 m."
       ]
     ],
     "tf": [
       {
-        "stem": "Một xe máy xuất phát từ điểm A chạy thẳng đều về phía Đông 12 km trong 15 phút, sau đó dừng lại nghỉ 5 phút rồi rẽ sang hướng Bắc chạy thẳng đều tiếp 9 km trong 10 phút đến điểm B.",
+        "stem": "Một xe máy xuất phát từ điểm A chạy thẳng đều về phía Đông 12 km trong 15 phút (0,25 h), sau đó người đó dừng lại nghỉ ngơi 5 phút rồi tiếp tục chạy thẳng đều về phía Bắc 9 km trong 10 phút (1/6 h) đến điểm B.",
         "items": [
           [
             "Tổng quãng đường xe máy đi được từ A đến B là 21 km.",
             true,
-            "s = 12 + 9 = 21 km."
+            "Quãng đường s = 12 + 9 = 21 km."
           ],
           [
             "Độ lớn độ dịch chuyển AB của xe máy bằng 15 km.",
             true,
-            "Hai đoạn đường vuông góc Đông - Bắc: d = √(12² + 9²) = √225 = 15 km."
+            "Tam giác vuông Đông - Bắc: d = √(12² + 9²) = √225 = 15 km."
           ],
           [
             "Tốc độ trung bình của xe máy trong toàn bộ chuyến đi bằng 42 km/h.",
             true,
-            "Tổng thời gian t = 15 + 5 + 10 = 30 phút = 0,5 h. Tốc độ v = 21 / 0,5 = 42 km/h."
+            "Tổng thời gian t = 15 + 5 + 10 = 30 phút = 0,5 h. v_tb = s / t = 21 / 0,5 = 42 km/h."
           ],
           [
             "Vận tốc trung bình của xe máy trong cả chuyến đi có độ lớn bằng 30 km/h.",
             true,
-            "v_tb = d / t = 15 / 0,5 = 30 km/h."
+            "Vận tốc trung bình v_tb = d / t = 15 / 0,5 = 30 km/h."
           ]
         ]
       },
       {
-        "stem": "Một ôtô đang chuyển động thẳng đều với vận tốc 72 km/h thì bất ngờ hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s² cho đến khi dừng lại hẳn.",
+        "stem": "Thả một hòn đá nhỏ rơi tự do từ mép sân thượng của một tòa nhà cao tầng xuống mặt đất. Biết hòn đá chạm đất với vận tốc 40 m/s tại nơi có g = 10 m/s². Bỏ qua mọi sức cản không khí.",
         "items": [
           [
-            "Vận tốc ban đầu của ôtô khi bắt đầu hãm phanh là 20 m/s.",
+            "Thời gian hòn đá rơi từ lúc thả đến khi chạm đất là 4 giây.",
             true,
-            "Đổi 72 km/h = 20 m/s."
+            "t = v / g = 40 / 10 = 4 s."
           ],
           [
-            "Thời gian hãm phanh của xe đến khi dừng hẳn là 10 giây.",
+            "Độ cao sân thượng của tòa nhà so với mặt đất bằng 80 m.",
             true,
-            "t = v₀ / |a| = 20 / 2 = 10 s."
+            "h = v² / (2g) = 40² / 20 = 80 m."
           ],
           [
-            "Quãng đường xe ôtô đi được từ lúc bắt đầu hãm phanh đến khi dừng lại là 100 m.",
+            "Quãng đường hòn đá rơi được trong 2 giây đầu tiên là 20 m.",
             true,
-            "s = v₀² / (2|a|) = 20² / (2 × 2) = 400 / 4 = 100 m."
+            "s₂ = 0,5 · 10 · 2² = 20 m."
           ],
           [
-            "Sau 5 giây kể từ lúc hãm phanh, xe đã đi được quãng đường 85 m.",
+            "Quãng đường hòn đá rơi được trong 1 giây cuối cùng trước khi chạm đất là 20 m.",
             false,
-            "Sau 5 s: s₅ = 20 × 5 + 0,5 × (–2) × 5² = 100 – 25 = 75 m."
+            "Quãng đường 3 giây đầu: s₃ = 0,5 · 10 · 3² = 45 m. Giây cuối: Δs = 80 - 45 = 35 m (không phải 20 m)."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một bạn học sinh đi bộ từ nhà đến siêu thị cách nhà 1,5 km hết thời gian 20 phút. Tốc độ đi bộ trung bình của bạn tính theo km/h là bao nhiêu?",
-        "answer": "4.5",
-        "explanation": "Đổi 20 phút = 1/3 h. Tốc độ v = 1,5 / (1/3) = 4,5 km/h."
+        "question": "Dùng cân điện tử đo khối lượng của một vật được kết quả m = (250 ± 2) g. Sai số tỉ đối của phép đo khối lượng này bằng bao nhiêu phần trăm?",
+        "answer": "0.8",
+        "explanation": "δm = (2 / 250) × 100% = 0,8%."
       },
       {
-        "question": "Một chiếc ca nô chạy xuôi dòng một khúc sông dài 36 km hết 1,5 giờ. Biết vận tốc dòng nước là 4 km/h. Vận tốc của ca nô so với dòng nước là bao nhiêu km/h?",
+        "question": "Một chiếc ca nô chạy xuôi dòng một khúc sông dài 36 km hết 1,5 giờ. Biết vận tốc dòng nước chảy là 4 km/h. Vận tốc của ca nô so với dòng nước bằng bao nhiêu km/h?",
         "answer": "20",
-        "explanation": "v_xuôi = 36 / 1,5 = 24 km/h. Vận tốc ca nô = 24 – 4 = 20 km/h."
+        "explanation": "v_xuoi = 36 / 1,5 = 24 km/h. v_cano = 24 - 4 = 20 km/h."
       },
       {
-        "question": "Một đoàn tàu hỏa rời ga chuyển động thẳng nhanh dần đều. Sau 15 giây tàu đạt tốc độ 9 m/s. Gia tốc của đoàn tàu bằng bao nhiêu m/s²?",
-        "answer": "0.6",
-        "explanation": "a = (9 – 0) / 15 = 0,6 m/s²."
+        "question": "Một đoàn tàu hỏa rời ga chuyển động thẳng nhanh dần đều với gia tốc 0,6 m/s². Sau bao nhiêu giây kể từ lúc rời ga thì đoàn tàu đạt tốc độ 18 m/s?",
+        "answer": "30",
+        "explanation": "t = v / a = 18 / 0,6 = 30 s."
       },
       {
-        "question": "Thả một hòn đá rơi tự do từ đỉnh tháp cao 45 m xuống mặt đất tại nơi có g = 10 m/s². Thời gian hòn đá rơi là bao nhiêu giây?",
-        "answer": "3",
-        "explanation": "t = √(2h / g) = √(2 × 45 / 10) = √9 = 3 s."
+        "question": "Thả một vật rơi tự do từ độ cao h = 180 m tại nơi có g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất bằng bao nhiêu m/s?",
+        "answer": "60",
+        "explanation": "v = √(2gh) = √(2 · 10 · 180) = √3600 = 60 m/s."
       }
     ]
   },
@@ -4232,267 +4660,261 @@ const suppliedExams = [
     "id": "vatli-10-de-08",
     "title": "Vật lí 10 - Đề 08 - Trường THPT số 1 Lê Hồng Phong – Đắk Lắk (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT số 1 Lê Hồng Phong",
-      "province": "Đắk Lắk",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14293/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-so-1-le-hong-phong-dak-lak",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT số 1 Lê Hồng Phong – Đắk Lắk · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Để tìm hiểu các quy luật tự nhiên, phương pháp nào sau đây giúp kiểm chứng trực tiếp tính đúng đắn của giả thuyết khoa học?",
+        "Thành tựu mang tính bước ngoặt của Vật lí học mở đầu cho thời đại cơ giới hóa sản xuất trong cuộc cách mạng công nghiệp lần thứ nhất là:",
         [
-          "Phương pháp thực nghiệm (làm thí nghiệm kiểm tra).",
-          "Phương pháp phỏng đoán cảm tính.",
-          "Phương pháp tham khảo ý kiến số đông trên mạng.",
-          "Phương pháp tư biện không cần dữ liệu."
+          "A. Sự hoàn thiện động cơ hơi nước dựa trên các định luật nhiệt học.",
+          "B. Khám phá ra sóng vô tuyến điện từ.",
+          "C. Chế tạo ra máy vi tính để bàn.",
+          "D. Sản xuất ra năng lượng hạt nhân."
         ],
         0,
-        "Thực nghiệm là tiêu chuẩn chân lí cao nhất để khẳng định hay bác bỏ một giả thuyết vật lí."
+        "Động cơ hơi nước là biểu tượng và động lực cốt lõi của cuộc CMCN 1.0."
       ],
       [
-        "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình phát tia laser như hình bên cảnh báo: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"55\" r=\"8\" fill=\"#000\"/><line x1=\"26\" y1=\"55\" x2=\"74\" y2=\"55\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"34\" y1=\"39\" x2=\"66\" y2=\"71\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"34\" y1=\"71\" x2=\"66\" y2=\"39\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"50\" y1=\"31\" x2=\"50\" y2=\"79\" stroke=\"#000\" stroke-width=\"3\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo tia laser nguy hiểm</div></div>",
+        "Điểm khác biệt cốt lõi giữa phương pháp thực nghiệm và phương pháp lí thuyết trong nghiên cứu Vật lí là:",
         [
-          "Nguy hiểm do tia bức xạ laser gây tổn thương mắt và da.",
-          "Khu vực có đèn chiếu sáng thông thường.",
-          "Khu vực có điện áp thấp.",
-          "Khu vực cấm chụp ảnh."
+          "A. Phương pháp thực nghiệm dùng thí nghiệm và số liệu đo đạc thực tế; phương pháp lí thuyết dùng mô hình toán học và suy luận logic.",
+          "B. Phương pháp thực nghiệm không cần đến toán học.",
+          "C. Phương pháp lí thuyết không bao giờ cần kiểm chứng với thực tế.",
+          "D. Phương pháp thực nghiệm chỉ thực hiện ngoài trời."
         ],
         0,
-        "Biển tam giác hình vệt sáng phát tia là biển cảnh báo nguy hiểm từ nguồn bức xạ laser."
+        "Thực nghiệm dựa trên đo đạc thực tế; lí thuyết dựa trên các tiên đề, định luật toán học và mô hình trừu tượng."
       ],
       [
-        "Khi dùng đồng hồ bấm giây cơ học có độ chia nhỏ nhất 0,2 s, sai số dụng cụ được quy ước lấy bằng:",
+        "Khi thực hiện thí nghiệm đun sôi nước bằng bình thủy tinh chịu nhiệt trên bếp điện, để tránh bị bỏng, học sinh cần tuân thủ quy tắc nào?",
         [
-          "0,1 s hoặc 0,2 s.",
-          "0,01 s.",
-          "0,02 s.",
-          "1,0 s."
+          "A. Đeo găng tay cách nhiệt và dùng kẹp gỗ gắp bình, không dùng tay trần chạm vào bình nóng.",
+          "B. Đổ nước lạnh trực tiếp vào bình ngay khi bình vừa nhấc khỏi bếp điện.",
+          "C. Cúi sát mặt vào miệng bình đang sôi để quan sát bọt khí.",
+          "D. Dùng tay bịt kín miệng bình đun để nước sôi nhanh hơn."
         ],
         0,
-        "Sai số dụng cụ đo thông thường lấy bằng một nửa độ chia nhỏ nhất (0,1 s) hoặc một độ chia nhỏ nhất (0,2 s) tùy quy ước."
+        "Phải dùng kẹp chuyên dụng và găng tay cách nhiệt; tuyệt đối không đổ nước lạnh đột ngột làm nứt vỡ thủy tinh gây bỏng."
       ],
       [
-        "Một phép đo thời gian cho kết quả t = (4,0 ± 0,1) s. Sai số tỉ đối δt của phép đo là:",
+        "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình vẽ ba cánh quạt như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"56\" r=\"6\" fill=\"#000\"/><path d=\"M50,56 L40,36 A18,18 0 0,1 60,36 Z\" fill=\"#000\"/><path d=\"M50,56 L68,64 A18,18 0 0,1 56,74 Z\" fill=\"#000\"/><path d=\"M50,56 L32,64 A18,18 0 0,0 44,74 Z\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất phóng xạ</div></div>",
         [
-          "2,5%.",
-          "1,0%.",
-          "4,0%.",
-          "0,25%."
+          "A. Cảnh báo khu vực có chất phóng xạ hoặc bức xạ hạt nhân nguy hiểm.",
+          "B. Nơi đặt quạt thông gió công suất lớn.",
+          "C. Cảnh báo nguy hiểm từ cánh đồng cối xay gió.",
+          "D. Biển chỉ dẫn khu vực cắm trại ngoài trời."
         ],
         0,
-        "δt = (0,1 / 4,0) × 100% = 2,5%."
+        "Biển tam giác vàng hình ba cánh xòe là biểu tượng quốc tế cảnh báo chất phóng xạ và bức xạ ion hóa nguy hiểm."
       ],
       [
-        "Một người đi bộ từ điểm M(–2 m) đến điểm N(3 m) rồi đi tiếp đến điểm P(7 m) trên trục tọa độ Ox. Độ dịch chuyển tổng cộng của người đó là:",
+        "Trường hợp nào sau đây là phép đo TRỰC TIẾP?",
         [
-          "9 m.",
-          "5 m.",
-          "4 m.",
-          "12 m."
+          "A. Dùng cân Rô-béc-van hoặc cân điện tử đo khối lượng của một bao gạo.",
+          "B. Dùng khối lượng và thể tích tính khối lượng riêng của chất lỏng.",
+          "C. Dùng quãng đường và thời gian tính vận tốc của xe máy.",
+          "D. Dùng gia tốc và thời gian tính độ cao thả rơi tự do."
         ],
         0,
-        "d = x_P – x_M = 7 – (–2) = 9 m."
+        "Đo khối lượng bằng cân là so sánh trực tiếp với quả cân hoặc thang đo cảm biến của cân."
       ],
       [
-        "Một vật chuyển động tròn đều một vòng hết 10 giây. Tốc độ trung bình và độ lớn vận tốc trung bình của vật trong thời gian 10 giây đó là:",
+        "Khi đo hiệu điện thế của một viên pin được kết quả trung bình Ū = 1,52 V và sai số tuyệt đối ΔU = 0,02 V. Cách biểu diễn kết quả đo chuẩn là:",
         [
-          "Tốc độ trung bình khác 0; vận tốc trung bình bằng 0.",
-          "Cả hai đều bằng 0.",
-          "Cả hai đều khác 0 và bằng nhau.",
-          "Tốc độ trung bình bằng 0; vận tốc trung bình khác 0."
+          "A. U = (1,52 ± 0,02) V.",
+          "B. U = 1,52 + 0,02 V.",
+          "C. U = 1,52 V ± 2 mV.",
+          "D. U = (1,52 - 0,02) V."
         ],
         0,
-        "Vì đi hết 1 vòng nên điểm cuối trùng điểm đầu, độ dịch chuyển d = 0 suy ra vận tốc trung bình bằng 0. Quãng đường s > 0 nên tốc độ trung bình khác 0."
+        "Kết quả đo chuẩn ghi dạng U = (Ū ± ΔU) cùng đơn vị đo."
       ],
       [
-        "Đồ thị độ dịch chuyển – thời gian (d – t) của một vật chuyển động thẳng có dạng d = 5t (m; s). Vận tốc của vật là:",
+        "Một xe ôtô chạy trên đường thẳng từ vị trí có tọa độ x₁ = +10 km đến vị trí có tọa độ x₂ = –30 km. Độ dịch chuyển của ôtô bằng:",
         [
-          "5 m/s.",
-          "2,5 m/s.",
-          "10 m/s.",
-          "0 m/s."
+          "A. –40 km.",
+          "B. +40 km.",
+          "C. –20 km.",
+          "D. +20 km."
         ],
         0,
-        "Phương trình d = vt nên vận tốc v = 5 m/s."
+        "d = x₂ - x₁ = -30 - 10 = –40 km."
       ],
       [
-        "Một ca nô chạy xuôi dòng trên khúc sông thẳng. Vận tốc của ca nô so với dòng nước là 12 km/h, vận tốc dòng nước so với bờ là 3 km/h. Thời gian ca nô đi hết quãng đường 30 km là:",
+        "Một chiếc thuyền chạy xuôi dòng nước. Gọi v_tb là vận tốc thuyền so với bờ, v_tn là vận tốc thuyền so với nước, v_nb là vận tốc nước so với bờ. Hệ thức đúng là:",
         [
-          "2 giờ.",
-          "2,5 giờ.",
-          "1,5 giờ.",
-          "3 giờ."
+          "A. v_tb = v_tn + v_nb.",
+          "B. v_tb = v_tn - v_nb.",
+          "C. v_tb = √(v_tn² + v_nb²).",
+          "D. v_tb = v_nb - v_tn."
         ],
         0,
-        "Vận tốc xuôi dòng: v = 12 + 3 = 15 km/h. Thời gian t = s / v = 30 / 15 = 2 giờ."
+        "Khi chạy xuôi dòng, vận tốc thuyền và vận tốc nước cùng hướng nên v_tb = v_tn + v_nb."
       ],
       [
-        "Một vận động viên bơi bướm bơi với tốc độ trung bình 1,6 m/s trong thời gian 50 s. Quãng đường người đó bơi được là:",
+        "Trong thí nghiệm thực hành đo tốc độ bằng đồng hồ đo thời gian hiện số, việc đặt cổng quang điện vuông góc với hướng chuyển động của thanh chắn sáng nhằm mục đích:",
         [
-          "80 m.",
-          "50 m.",
-          "100 m.",
-          "64 m."
+          "A. Đo đúng bề rộng danh định d của thanh chắn sáng, giảm thiểu sai số đo thời gian.",
+          "B. Làm cho xe chuyển động chậm lại để dễ quan sát.",
+          "C. Tăng lực hút nam châm điện của cổng quang.",
+          "D. Tránh làm hỏng bóng đèn led của cổng quang."
         ],
         0,
-        "s = v × t = 1,6 × 50 = 80 m."
+        "Đặt vuông góc để chùm tia sáng quét qua đúng bề rộng thực của thanh chắn sáng, đảm bảo v = d / Δt chính xác."
       ],
       [
-        "Một ôtô đang đứng yên thì bắt đầu chuyển động nhanh dần đều với gia tốc a = 1,2 m/s². Vận tốc của ôtô sau 10 giây là:",
+        "Trên đồ thị độ dịch chuyển – thời gian (d – t), nếu đường biểu diễn dốc lên trên từ trái sang phải chứng tỏ:",
         [
-          "12 m/s.",
-          "6 m/s.",
-          "24 m/s.",
-          "1,2 m/s."
+          "A. Vật đang chuyển động thẳng đều theo chiều dương đã chọn.",
+          "B. Vật đang chuyển động thẳng đều theo chiều âm đã chọn.",
+          "C. Vật đứng yên tại một vị trí cố định.",
+          "D. Vật chuyển động nhanh dần đều theo chiều âm."
         ],
         0,
-        "v = at = 1,2 × 10 = 12 m/s."
+        "Đường dốc lên có hệ số góc dương (v > 0) nghĩa là vật chuyển động theo chiều dương."
       ],
       [
-        "Hệ thức nào sau đây liên hệ đúng giữa độ dịch chuyển d, vận tốc ban đầu v₀, vận tốc v và gia tốc a?",
+        "Biểu thức định nghĩa vectơ gia tốc của một chất điểm là:",
         [
-          "v² – v₀² = 2ad.",
-          "v² + v₀² = 2ad.",
-          "v – v₀ = ad².",
-          "v² – v₀² = ad."
+          "A. a⃗ = Δv⃗ / Δt.",
+          "B. a⃗ = v⃗ · Δt.",
+          "C. a⃗ = Δd⃗ / Δt.",
+          "D. a⃗ = Δs / Δt."
         ],
         0,
-        "Công thức độc lập thời gian chuẩn: v² – v₀² = 2ad."
+        "Gia tốc là đạo hàm của vận tốc theo thời gian: a⃗ = Δv⃗ / Δt."
       ],
       [
-        "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động chậm dần đều là đường thẳng:",
+        "Một ôtô đang chạy với tốc độ 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc 2 m/s². Quãng đường ôtô đi được từ lúc bắt đầu hãm phanh đến khi dừng lại hẳn là:",
         [
-          "Dốc xuống theo thời gian.",
-          "Dốc lên theo thời gian.",
-          "Song song với trục Ot.",
-          "Trùng với trục Ot."
+          "A. 100 m.",
+          "B. 50 m.",
+          "C. 200 m.",
+          "D. 40 m."
         ],
         0,
-        "Chuyển động chậm dần đều có vận tốc giảm dần nên đường biểu diễn v – t dốc xuống."
+        "s = (v² - v₀²) / (2a) = (0 - 20²) / (2 · (-2)) = -400 / (-4) = 100 m."
       ],
       [
-        "Một chất điểm chuyển động theo phương trình vận tốc v = 10 – 2t (m/s). Gia tốc của chất điểm là:",
+        "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động thẳng nhanh dần đều xuất phát từ điểm v₀ > 0 là một đường thẳng:",
         [
-          "–2 m/s².",
-          "2 m/s².",
-          "10 m/s².",
-          "5 m/s²."
+          "A. Cắt trục tung tại điểm v₀ và dốc lên phía trên.",
+          "B. Song song với trục hoành t.",
+          "C. Đi qua gốc tọa độ O.",
+          "D. Dốc xuống cắt trục hoành."
         ],
         0,
-        "So sánh với v = v₀ + at, ta có a = –2 m/s²."
+        "v = v₀ + at (với v₀ > 0, a > 0), đồ thị cắt trục tung tại v₀ và dốc lên."
       ],
       [
-        "Tại cùng một nơi, vật thứ nhất rơi tự do từ độ cao h hết thời gian t. Vật thứ hai rơi tự do từ độ cao 4h hết thời gian là:",
+        "Một xe đạp đang đi với tốc độ 4 m/s thì xuống một con dốc, chuyển động nhanh dần đều với gia tốc 0,5 m/s² trong 8 s. Tốc độ của xe ở chân dốc là:",
         [
-          "2t.",
-          "4t.",
-          "t / 2.",
-          "16t."
+          "A. 8 m/s.",
+          "B. 12 m/s.",
+          "C. 6 m/s.",
+          "D. 10 m/s."
         ],
         0,
-        "Thời gian rơi t = √(2h / g). Khi độ cao là 4h thì t' = √(2 × 4h / g) = 2√(2h / g) = 2t."
+        "v = v₀ + at = 4 + 0,5 · 8 = 4 + 4 = 8 m/s."
       ],
       [
-        "Vật rơi tự do từ độ cao h = 45 m tại nơi có g = 10 m/s². Quãng đường vật rơi được trong 2 giây đầu tiên là:",
+        "Một vật rơi tự do không vận tốc ban đầu từ độ cao h. Quãng đường vật đi được trong giây thứ nhất là (lấy g = 10 m/s²):",
         [
-          "20 m.",
-          "45 m.",
-          "10 m.",
-          "25 m."
+          "A. 5 m.",
+          "B. 10 m.",
+          "C. 20 m.",
+          "D. 2,5 m."
         ],
         0,
-        "s = 1/2·gt² = 0,5 × 10 × 2² = 20 m."
+        "s₁ = 1/2 · g · t² = 0,5 · 10 · 1² = 5 m."
       ],
       [
-        "Một vật ném ngang từ độ cao 20 m với tốc độ đầu v₀ = 10 m/s. Lấy g = 10 m/s². Tầm bay xa của vật là:",
+        "Thả một vật rơi tự do từ độ cao h = 80 m tại nơi có g = 10 m/s². Vận tốc của vật ngay trước khi chạm đất là:",
         [
-          "20 m.",
-          "10 m.",
-          "30 m.",
-          "40 m."
+          "A. 40 m/s.",
+          "B. 20 m/s.",
+          "C. 80 m/s.",
+          "D. 10 m/s."
         ],
         0,
-        "t = √(2h / g) = √(2 × 20 / 10) = 2 s. Tầm xa L = v₀t = 10 × 2 = 20 m."
+        "v = √(2gh) = √(2 · 10 · 80) = √1600 = 40 m/s."
       ]
     ],
     "tf": [
       {
-        "stem": "Một xe ôtô di chuyển trên một đại lộ thẳng. Trong 30 phút đầu, xe chuyển động thẳng đều với tốc độ 40 km/h. Sau đó xe tiếp tục tăng tốc và chạy đều với tốc độ 60 km/h trong 45 phút tiếp theo.",
+        "stem": "Một ôtô di chuyển trên một đại lộ thẳng. Trong 30 phút đầu tiên (0,5 h), xe chuyển động thẳng đều với tốc độ v₁ = 40 km/h. Trong 45 phút tiếp theo (0,75 h), xe chạy thẳng đều với tốc độ v₂ = 60 km/h theo cùng một hướng.",
         "items": [
           [
             "Quãng đường xe chạy được trong 30 phút đầu tiên là 20 km.",
             true,
-            "s₁ = 40 × 0,5 = 20 km."
+            "s₁ = v₁ · t₁ = 40 · 0,5 = 20 km."
           ],
           [
             "Quãng đường xe chạy được trong 45 phút tiếp theo là 45 km.",
             true,
-            "s₂ = 60 × 0,75 = 45 km."
+            "s₂ = v₂ · t₂ = 60 · 0,75 = 45 km."
           ],
           [
             "Tổng quãng đường xe đi được trong toàn bộ hành trình là 65 km.",
             true,
-            "s = 20 + 45 = 65 km."
+            "s = s₁ + s₂ = 20 + 45 = 65 km."
           ],
           [
-            "Tốc độ trung bình của xe trên cả quãng đường bằng 50 km/h.",
-            false,
-            "Tổng thời gian t = 0,5 + 0,75 = 1,25 h. Tốc độ v = 65 / 1,25 = 52 km/h."
+            "Tốc độ trung bình của xe trên cả quãng đường bằng 52 km/h.",
+            true,
+            "Tổng thời gian t = 0,5 + 0,75 = 1,25 h. v_tb = s / t = 65 / 1,25 = 52 km/h."
           ]
         ]
       },
       {
-        "stem": "Một viên bi sắt được thả rơi tự do từ đỉnh một tòa nhà cao tầng. Biết hòn bi chạm đất sau thời gian 4 giây. Lấy gia tốc trọng trường g = 10 m/s² và bỏ qua sức cản không khí.",
+        "stem": "Thả một viên bi kim loại rơi tự do từ đỉnh tháp cao 45 m tại nơi có g = 10 m/s². Bỏ qua mọi sức cản không khí.",
         "items": [
           [
-            "Độ cao của tòa nhà là 80 m.",
+            "Thời gian viên bi rơi chạm đất là 3 giây.",
             true,
-            "h = 1/2·gt² = 0,5 × 10 × 4² = 80 m."
+            "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
           ],
           [
-            "Vận tốc của viên bi ngay trước khi chạm đất có độ lớn bằng 40 m/s.",
+            "Vận tốc của viên bi ngay trước khi chạm đất là 30 m/s.",
             true,
-            "v = gt = 10 × 4 = 40 m/s."
+            "v = gt = 10 · 3 = 30 m/s."
           ],
           [
-            "Quãng đường viên bi rơi được trong giây đầu tiên là 10 m.",
+            "Quãng đường viên bi rơi được trong giây thứ nhất là 5 m.",
+            true,
+            "s₁ = 0,5 · 10 · 1² = 5 m."
+          ],
+          [
+            "Quãng đường viên bi rơi được trong 1 giây cuối cùng trước khi chạm đất là 15 m.",
             false,
-            "s₁ = 0,5 × 10 × 1² = 5 m."
-          ],
-          [
-            "Quãng đường viên bi rơi được trong 1 giây cuối cùng trước khi chạm đất là 35 m.",
-            true,
-            "Sau 3 s viên bi rơi được s₃ = 0,5 × 10 × 3² = 45 m. Quãng đường giây thứ 4: Δs = 80 – 45 = 35 m."
+            "Quãng đường 2 giây đầu: s₂ = 0,5 · 10 · 2² = 20 m. Giây cuối: Δs = 45 - 20 = 25 m (không phải 15 m)."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một đoàn tàu chạy thẳng đều trên đường ray với tốc độ 54 km/h. Thời gian để tàu đi hết quãng đường 27 km là bao nhiêu phút?",
+        "question": "Dùng thước đo độ dài thu được kết quả l = (50,0 ± 0,5) cm. Sai số tỉ đối của phép đo bằng bao nhiêu phần trăm?",
+        "answer": "1",
+        "explanation": "δl = (0,5 / 50,0) × 100% = 1%."
+      },
+      {
+        "question": "Một đoàn tàu hỏa chạy thẳng đều trên đường ray với tốc độ 54 km/h (15 m/s). Thời gian để tàu đi hết quãng đường 27 km là bao nhiêu phút?",
         "answer": "30",
-        "explanation": "t = 27 / 54 = 0,5 h = 30 phút."
+        "explanation": "t = s / v = 27 / 54 = 0,5 h = 30 phút."
       },
       {
-        "question": "Một ca nô chạy ngược dòng một đoạn sông dài 30 km mất 2 giờ. Vận tốc dòng nước chảy là 3 km/h. Vận tốc của ca nô đối với dòng nước là bao nhiêu km/h?",
-        "answer": "18",
-        "explanation": "v_ngược = 30 / 2 = 15 km/h. Vận tốc ca nô = 15 + 3 = 18 km/h."
+        "question": "Một ôtô đang chạy với vận tốc 16 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Quãng đường xe đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là bao nhiêu mét?",
+        "answer": "64",
+        "explanation": "s = (v² - v₀²) / (2a) = (0 - 16²) / (2 · (-2)) = -256 / (-4) = 64 m."
       },
       {
-        "question": "Một ôtô đang chạy với vận tốc 20 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Quãng đường xe đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là bao nhiêu mét?",
-        "answer": "100",
-        "explanation": "s = v₀² / (2|a|) = 20² / (2 × 2) = 400 / 4 = 100 m."
-      },
-      {
-        "question": "Một vật được ném ngang từ độ cao 45 m với vận tốc ban đầu v₀ = 20 m/s. Lấy g = 10 m/s². Tầm bay xa của vật theo phương ngang là bao nhiêu mét?",
-        "answer": "60",
-        "explanation": "Thời gian rơi t = √(2h / g) = √(2 × 45 / 10) = 3 s. Tầm ném xa L = v₀t = 20 × 3 = 60 m."
+        "question": "Thả một vật rơi tự do từ độ cao h. Khi chạm đất, vận tốc của vật đo được là 40 m/s. Lấy g = 10 m/s². Độ cao h lúc thả vật là bao nhiêu mét?",
+        "answer": "80",
+        "explanation": "h = v² / (2g) = 40² / 20 = 1600 / 20 = 80 m."
       }
     ]
   },
@@ -4500,267 +4922,261 @@ const suppliedExams = [
     "id": "vatli-10-de-09",
     "title": "Vật lí 10 - Đề 09 - Trường THPT số 1 Ngô Gia Tự – Đắk Lắk (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT số 1 Ngô Gia Tự",
-      "province": "Đắk Lắk",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14292/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-so-1-ngo-gia-tu-dak-lak",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT số 1 Ngô Gia Tự – Đắk Lắk · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
         "Bước đầu tiên trong quy trình tìm hiểu thế giới tự nhiên dưới góc độ vật lí là:",
         [
-          "Quan sát và xác định vấn đề cần nghiên cứu.",
-          "Đề xuất giải pháp và kết luận ngay.",
-          "Làm báo cáo khoa học.",
-          "Tính toán số liệu phức tạp."
+          "A. Quan sát hiện tượng thực tế và đặt ra câu hỏi cần tìm hiểu.",
+          "B. Đề xuất ngay một công thức toán học trừu tượng.",
+          "C. Tiến hành làm báo cáo tổng kết thí nghiệm.",
+          "D. Đóng gói thiết bị cất vào kho thí nghiệm."
         ],
         0,
-        "Quy trình nghiên cứu khoa học bắt đầu từ việc quan sát hiện tượng và đặt ra câu hỏi/vấn đề cần tìm hiểu."
+        "Quan sát hiện tượng và xuất phát câu hỏi nghiên cứu là bước khởi đầu của mọi khám phá khoa học."
       ],
       [
-        "Trong phòng thực hành, biển cảnh báo có hình tam giác viền đen nền vàng, bên trong có hình đầu lâu xương chéo như hình bên là biển cảnh báo: <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"46\" r=\"14\" fill=\"#000\"/><rect x=\"42\" y=\"56\" width=\"16\" height=\"8\" rx=\"2\" fill=\"#000\"/><circle cx=\"45\" cy=\"45\" r=\"3\" fill=\"#facc15\"/><circle cx=\"55\" cy=\"45\" r=\"3\" fill=\"#facc15\"/><line x1=\"30\" y1=\"72\" x2=\"70\" y2=\"72\" stroke=\"#000\" stroke-width=\"4\"/><line x1=\"35\" y1=\"65\" x2=\"65\" y2=\"79\" stroke=\"#000\" stroke-width=\"4\"/><line x1=\"35\" y1=\"79\" x2=\"65\" y2=\"65\" stroke=\"#000\" stroke-width=\"4\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo hóa chất độc hại</div></div>",
+        "Sự ra đời của mạng Internet vạn vật (IoT), cảm biến bán dẫn siêu nhỏ và trí tuệ nhân tạo là thành tựu gắn liền với:",
         [
-          "Chất độc hại nguy hiểm tính mạng.",
-          "Khu vực có điện thế cao.",
-          "Khu vực có chất dễ cháy.",
-          "Khu vực có chất ăn mòn."
+          "A. Cuộc cách mạng công nghiệp lần thứ tư (Cách mạng 4.0).",
+          "B. Cuộc cách mạng công nghiệp lần thứ nhất.",
+          "C. Thời kì phục hưng châu Âu thế kỉ XVI.",
+          "D. Kỉ nguyên đồ đồng cổ đại."
         ],
         0,
-        "Biểu tượng đầu lâu xương chéo cảnh báo hóa chất độc hại gây ngộ độc hoặc tử vong."
+        "CMCN 4.0 kết hợp thế giới vật lí, kỹ thuật số và sinh học trên nền tảng cảm biến và mạng kết nối."
       ],
       [
-        "Khi viết kết quả đo một đại lượng vật lí A, giá trị trung bình Ā có chữ số có nghĩa đến hàng nào thì sai số tuyệt đối ΔA phải được làm tròn đến hàng:",
+        "Nếu không may bị hóa chất axit bắn vào da hoặc quần áo trong giờ thực hành, biện pháp xử lí khẩn cấp đầu tiên là:",
         [
-          "Cùng hàng đơn vị thập phân đó.",
-          "Hàng thập phân nhỏ hơn một bậc.",
-          "Hàng thập phân lớn hơn một bậc.",
-          "Không cần quan tâm đến bậc thập phân."
+          "A. Rửa ngay dưới vòi nước sạch chảy liên tục nhiều phút rồi báo cho giáo viên.",
+          "B. Đổ ngay dung dịch bazơ đặc lên vết thương để trung hòa.",
+          "C. Dùng khăn khô bọc kín vết thương lại không cho tiếp xúc không khí.",
+          "D. Tự ý bôi thuốc mỡ lên vết thương mà không rửa nước."
         ],
         0,
-        "Sai số tuyệt đối ΔA và giá trị trung bình Ā phải được làm tròn đến cùng hàng thập phân sau dấu phẩy."
+        "Rửa ngay dưới vòi nước chảy liên tục ít nhất 10-15 phút để pha loãng và trôi hóa chất, sau đó báo giáo viên sơ cứu."
       ],
       [
-        "Cho phép đo chiều dài một sợi dây l = (100 ± 2) cm. Sai số tỉ đối của phép đo bằng:",
+        "Trong phòng thực hành, biển báo có hình tam giác viền đen nền vàng, bên trong có hình hai ống nghiệm nhỏ giọt ăn mòn kim loại và bàn tay như hình vẽ mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><polygon points=\"50,10 92,85 8,85\" fill=\"#facc15\" stroke=\"#000\" stroke-width=\"4\"/><rect x=\"25\" y=\"65\" width=\"20\" height=\"6\" fill=\"#000\"/><path d=\"M30,42 L42,50\" stroke=\"#000\" stroke-width=\"3\"/><circle cx=\"35\" cy=\"58\" r=\"2\" fill=\"#000\"/><path d=\"M55,60 L75,60 L70,72 L60,72 Z\" fill=\"#000\"/><path d=\"M60,42 L68,52\" stroke=\"#000\" stroke-width=\"3\"/><circle cx=\"65\" cy=\"56\" r=\"2\" fill=\"#000\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển cảnh báo chất ăn mòn</div></div>",
         [
-          "2%.",
-          "1%.",
-          "0,5%.",
-          "0,02%."
+          "A. Cảnh báo hóa chất ăn mòn nguy hiểm, có thể gây bỏng da và phá hủy vật liệu.",
+          "B. Nơi lưu trữ nước ngọt giải khát.",
+          "C. Biển báo cấm thực hiện thao tác rót chất lỏng.",
+          "D. Cảnh báo nơi có độ ẩm không khí rất thấp."
         ],
         0,
-        "δl = (2 / 100) × 100% = 2%."
+        "Biển tam giác vàng hình giọt hóa chất ăn mòn cảnh báo chất ăn mòn cực kì nguy hiểm."
       ],
       [
-        "Một người đi xe đạp chuyển động thẳng đều đi được quãng đường 12 km trong 40 phút. Tốc độ của người đó là:",
+        "Khi viết kết quả đo một đại lượng vật lí A = Ā ± ΔA, giá trị sai số tuyệt đối ΔA thường được viết đến:",
         [
-          "18 km/h.",
-          "12 km/h.",
-          "24 km/h.",
-          "15 km/h."
+          "A. Một hoặc hai chữ số có nghĩa.",
+          "B. Năm chữ số có nghĩa.",
+          "C. Vô số chữ số thập phân.",
+          "D. Luôn luôn là một số nguyên dương."
         ],
         0,
-        "Đổi 40 phút = 2/3 h. Tốc độ v = 12 / (2/3) = 18 km/h."
+        "Sai số tuyệt đối ΔA theo quy ước quốc tế thường được làm tròn đến một hoặc tối đa hai chữ số có nghĩa."
       ],
       [
-        "Khi nào thì độ lớn của độ dịch chuyển bằng quãng đường đi được?",
+        "Một sợi dây có chiều dài l = (100 ± 2) cm. Sai số tỉ đối của phép đo chiều dài này là:",
         [
-          "Khi vật chuyển động thẳng và không đổi chiều chuyển động.",
-          "Trong mọi trường hợp chuyển động.",
-          "Khi vật chuyển động cong đều.",
-          "Khi vật chuyển động tròn."
+          "A. 2,0%.",
+          "B. 0,02%.",
+          "C. 0,2%.",
+          "D. 20%."
         ],
         0,
-        "Khi chuyển động thẳng theo một chiều không đổi thì |d| = s."
+        "δl = (2 / 100) × 100% = 2,0%."
       ],
       [
-        "Đồ thị độ dịch chuyển – thời gian (d – t) là đường thẳng đi qua gốc tọa độ O biểu thị:",
+        "Khi nào thì quãng đường đi được s của một chất điểm đúng bằng độ lớn của độ dịch chuyển |d|?",
         [
-          "Chuyển động thẳng đều xuất phát từ gốc tọa độ.",
-          "Chuyển động nhanh dần đều.",
-          "Vật đứng yên tại gốc tọa độ.",
-          "Chuyển động có gia tốc tăng dần."
+          "A. Khi chất điểm chuyển động trên một đường thẳng và không đổi chiều chuyển động.",
+          "B. Khi chất điểm chuyển động tròn đều một vòng khép kín.",
+          "C. Khi chất điểm đi tới rồi quay ngược trở lại điểm xuất phát.",
+          "D. Trong mọi trường hợp chuyển động của vật."
         ],
         0,
-        "Đường thẳng d = vt qua gốc tọa độ O biểu diễn chuyển động thẳng đều xuất phát từ O."
+        "Chỉ khi chuyển động thẳng và không đổi chiều thì quãng đường s mới bằng độ lớn độ dịch chuyển |d|."
       ],
       [
-        "Một chiếc thuyền chạy xuôi dòng nước với tốc độ 20 km/h, chạy ngược dòng với tốc độ 14 km/h. Vận tốc dòng nước đối với bờ là:",
+        "Một chiếc thuyền chạy xuôi dòng nước với tốc độ đối với bờ là 20 km/h, khi chạy ngược dòng với tốc độ đối với bờ là 14 km/h. Vận tốc của dòng nước đối với bờ sông bằng:",
         [
-          "3 km/h.",
-          "6 km/h.",
-          "17 km/h.",
-          "7 km/h."
+          "A. 3 km/h.",
+          "B. 6 km/h.",
+          "C. 17 km/h.",
+          "D. 34 km/h."
         ],
         0,
-        "v_nước = (v_xuôi – v_ngược) / 2 = (20 – 14) / 2 = 3 km/h."
+        "v_nuoc = (v_xuoi - v_nguoc) / 2 = (20 - 14) / 2 = 6 / 2 = 3 km/h."
       ],
       [
-        "Một xe ôtô chạy với tốc độ không đổi 72 km/h. Trong 10 giây xe đi được quãng đường là:",
+        "Dụng cụ nào sau đây KHÔNG THỂ dùng để đo trực tiếp khoảng thời gian chuyển động của một vật?",
         [
-          "200 m.",
-          "720 m.",
-          "100 m.",
-          "144 m."
+          "A. Thước cuộn chia milimét.",
+          "B. Đồng hồ bấm giây hiện số điện tử.",
+          "C. Cổng quang điện nối với đồng hồ đếm hiện số.",
+          "D. Đồng hồ bấm giây cơ học."
         ],
         0,
-        "Đổi 72 km/h = 20 m/s. Quãng đường s = v × t = 20 × 10 = 200 m."
+        "Thước cuộn dùng để đo chiều dài (quãng đường), không dùng để đo thời gian."
       ],
       [
-        "Chuyển động thẳng biến đổi đều là chuyển động có:",
+        "Đồ thị độ dịch chuyển – thời gian (d – t) của một chất điểm có dạng là đường thẳng dốc lên xuất phát từ gốc tọa độ O. Tốc độ chuyển động của chất điểm là:",
         [
-          "Gia tốc không đổi theo thời gian.",
-          "Vận tốc không đổi theo thời gian.",
-          "Quãng đường không đổi theo thời gian.",
-          "Gia tốc tăng đều theo thời gian."
+          "A. Bằng độ dốc (hệ số góc) của đường thẳng đó.",
+          "B. Luôn luôn bằng 0.",
+          "C. Giảm dần theo thời gian.",
+          "D. Bằng diện tích hình phẳng dưới đường thẳng đó."
         ],
         0,
-        "Chuyển động thẳng biến đổi đều có gia tốc a = hằng số."
+        "Tốc độ v trong chuyển động thẳng đều chính bằng độ dốc của đồ thị d – t."
       ],
       [
-        "Một ôtô đang chạy với tốc độ 15 m/s thì tăng tốc với gia tốc 2 m/s² trong 5 s. Vận tốc đạt được là:",
+        "Một ôtô đang chạy với tốc độ 12 m/s thì người lái xe nhấn ga tăng tốc chuyển động nhanh dần đều với gia tốc 2 m/s² trong 4 s. Vận tốc của ôtô ở cuối thời gian tăng tốc là:",
         [
-          "25 m/s.",
-          "20 m/s.",
-          "17 m/s.",
-          "30 m/s."
+          "A. 20 m/s.",
+          "B. 16 m/s.",
+          "C. 24 m/s.",
+          "D. 8 m/s."
         ],
         0,
-        "v = v₀ + at = 15 + 2 × 5 = 25 m/s."
+        "v = v₀ + at = 12 + 2 · 4 = 12 + 8 = 20 m/s."
       ],
       [
-        "Một xe máy đang chạy với tốc độ 10 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Quãng đường đi được đến khi dừng hẳn là:",
+        "Một xe máy đang chạy với tốc độ 10 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Quãng đường xe máy đi được từ lúc bắt đầu hãm phanh đến khi dừng lại hẳn là:",
         [
-          "25 m.",
-          "50 m.",
-          "20 m.",
-          "10 m."
+          "A. 25 m.",
+          "B. 50 m.",
+          "C. 20 m.",
+          "D. 10 m."
         ],
         0,
-        "s = v₀² / (2|a|) = 10² / (2 × 2) = 100 / 4 = 25 m."
+        "s = (v² - v₀²) / (2a) = (0 - 10²) / (2 · (-2)) = -100 / (-4) = 25 m."
       ],
       [
-        "Độ dốc của đồ thị độ dịch chuyển – thời gian (d – t) cho biết:",
+        "Một chất điểm chuyển động theo phương trình vận tốc v = 8 + 2t (m/s). Gia tốc của chất điểm bằng:",
         [
-          "Vận tốc của chuyển động.",
-          "Gia tốc của chuyển động.",
-          "Quãng đường của chuyển động.",
-          "Độ lớn lực tác dụng."
+          "A. 2 m/s².",
+          "B. 8 m/s².",
+          "C. 4 m/s².",
+          "D. 10 m/s²."
         ],
         0,
-        "Độ dốc của d – t là tan α = Δd / Δt = v (vận tốc)."
+        "Phương trình có dạng v = v₀ + at &rArr; v₀ = 8 m/s, gia tốc a = 2 m/s²."
       ],
       [
-        "Đặc điểm nào sau đây KHÔNG PHẢI của sự rơi tự do?",
+        "Một ôtô bắt đầu khởi hành từ trạng thái đứng yên với gia tốc a = 1,5 m/s². Quãng đường ôtô đi được sau 10 giây là:",
         [
-          "Quãng đường rơi tỉ lệ thuận với thời gian rơi.",
-          "Gia tốc rơi tự do là đại lượng không đổi tại một vị trí xác định.",
-          "Phương chuyển động là phương thẳng đứng.",
-          "Chiều chuyển động là chiều từ trên xuống dưới."
+          "A. 75 m.",
+          "B. 150 m.",
+          "C. 15 m.",
+          "D. 30 m."
         ],
         0,
-        "Quãng đường rơi tự do h = 1/2·gt² tỉ lệ thuận với bình phương thời gian t², không phải tỉ lệ thuận với t."
+        "s = 1/2 · a · t² = 0,5 · 1,5 · 10² = 75 m."
       ],
       [
-        "Một vật rơi tự do từ độ cao h = 20 m tại nơi có g = 10 m/s². Thời gian rơi của vật đến khi chạm đất là:",
+        "Đặc điểm nào sau đây là ĐÚNG khi nói về sự rơi tự do?",
         [
-          "2 s.",
-          "1 s.",
-          "4 s.",
-          "3 s."
+          "A. Là chuyển động thẳng nhanh dần đều theo phương thẳng đứng, chiều từ trên xuống.",
+          "B. Là chuyển động thẳng đều với vận tốc không đổi.",
+          "C. Gia tốc rơi tự do của vật tỉ lệ thuận với khối lượng của vật.",
+          "D. Quãng đường vật rơi được tỉ lệ thuận với thời gian rơi t."
         ],
         0,
-        "t = √(2h / g) = √(2 × 20 / 10) = √4 = 2 s."
+        "Rơi tự do là chuyển động thẳng nhanh dần đều theo phương thẳng đứng với gia tốc g."
       ],
       [
-        "Một vật được ném ngang từ độ cao 5 m với vận tốc ban đầu v₀ = 10 m/s. Lấy g = 10 m/s². Vận tốc của vật khi chạm đất có độ lớn bằng:",
+        "Một vật rơi tự do từ độ cao h = 20 m tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian rơi của vật đến khi chạm đất là:",
         [
-          "14,1 m/s (10√2 m/s).",
-          "10 m/s.",
-          "20 m/s.",
-          "15 m/s."
+          "A. 2,0 s.",
+          "B. 1,0 s.",
+          "C. 4,0 s.",
+          "D. 0,5 s."
         ],
         0,
-        "v_y = √(2gh) = √(2 × 10 × 5) = 10 m/s. Vận tốc toàn phần v = √(v₀² + v_y²) = √(10² + 10²) = 10√2 ≈ 14,14 m/s."
+        "t = √(2h / g) = √(2 · 20 / 10) = √4 = 2,0 s."
       ]
     ],
     "tf": [
       {
-        "stem": "Một xe ôtô chạy trên đường thẳng từ trạm A đến trạm B dài 30 km hết 30 phút, sau đó từ B quay trở lại điểm C nằm giữa A và B cách B 15 km hết 15 phút. Chọn chiều dương là chiều từ A đến B.",
+        "stem": "Một xe ôtô chạy trên đường thẳng từ trạm A đến trạm B dài 30 km hết 30 phút (0,5 h), sau đó xe quay đầu chạy ngược trở lại một đoạn 15 km về trạm C hết 15 phút (0,25 h).",
         "items": [
           [
-            "Quãng đường xe ôtô đi được trên toàn hành trình là 45 km.",
+            "Tổng quãng đường xe ôtô đi được trên toàn hành trình là 45 km.",
             true,
-            "s = 30 + 15 = 45 km."
+            "Quãng đường s = 30 + 15 = 45 km."
           ],
           [
-            "Độ dịch chuyển tổng cộng của xe ôtô từ lúc xuất phát tại A đến khi dừng tại C là 15 km.",
+            "Độ dịch chuyển tổng cộng của xe ôtô từ lúc xuất phát tại A đến khi dừng tại C là 15 km hướng từ A sang B.",
             true,
-            "d = x_C – x_A = 15 – 0 = 15 km."
+            "d = 30 - 15 = 15 km."
           ],
           [
             "Tốc độ trung bình của xe ôtô trên cả quãng đường bằng 60 km/h.",
             true,
-            "Tổng thời gian t = 30 + 15 = 45 phút = 0,75 h. Tốc độ v = 45 / 0,75 = 60 km/h."
+            "v_tb = s / t = 45 / (0,5 + 0,25) = 45 / 0,75 = 60 km/h."
           ],
           [
-            "Vận tốc trung bình của xe ôtô trên toàn bộ hành trình có độ lớn bằng 40 km/h.",
-            false,
-            "Vận tốc trung bình v_tb = d / t = 15 / 0,75 = 20 km/h."
+            "Vận tốc trung bình của xe ôtô trên toàn bộ hành trình có độ lớn bằng 20 km/h.",
+            true,
+            "v_tb = d / t = 15 / 0,75 = 20 km/h."
           ]
         ]
       },
       {
-        "stem": "Một vật nhỏ được thả rơi tự do không vận tốc ban đầu từ độ cao 80 m so với mặt đất tại nơi có gia tốc trọng trường g = 10 m/s². Bỏ qua sức cản không khí.",
+        "stem": "Thả một hòn bi sắt rơi tự do không vận tốc đầu từ tầng cao của một tòa tháp có độ cao h = 80 m tại nơi có g = 10 m/s². Bỏ qua mọi sức cản không khí.",
         "items": [
           [
-            "Thời gian rơi tự do của vật đến khi chạm đất là 4 giây.",
+            "Thời gian rơi của hòn bi từ lúc thả đến khi chạm đất là 4 giây.",
             true,
-            "t = √(2h / g) = √(2 × 80 / 10) = √16 = 4 s."
+            "t = √(2h / g) = √(2 · 80 / 10) = √16 = 4 s."
           ],
           [
-            "Vận tốc của vật khi chạm mặt đất có độ lớn bằng 40 m/s.",
+            "Vận tốc của hòn bi khi vừa chạm đất có độ lớn là 40 m/s.",
             true,
-            "v = gt = 10 × 4 = 40 m/s."
+            "v = gt = 10 · 4 = 40 m/s."
           ],
           [
-            "Trong 2 giây đầu tiên, vật rơi được quãng đường 20 m.",
+            "Trong 2 giây đầu tiên, hòn bi rơi được quãng đường 20 m.",
             true,
-            "s₂ = 0,5 × 10 × 2² = 20 m."
+            "s₂ = 0,5 · 10 · 2² = 20 m."
           ],
           [
-            "Quãng đường vật rơi được trong 2 giây cuối cùng trước khi chạm đất là 40 m.",
-            false,
-            "Quãng đường 2 s cuối: Δs = 80 – s₂ = 80 – 20 = 60 m."
+            "Quãng đường hòn bi rơi được trong 2 giây cuối cùng trước khi chạm đất là 60 m.",
+            true,
+            "Δs = h - s₂ = 80 - 20 = 60 m."
           ]
         ]
       }
     ],
     "short": [
       {
-        "question": "Một xe máy đi thẳng đều trên một đoạn đường dài 27 km hết 45 phút. Tốc độ của xe máy tính theo đơn vị km/h là bao nhiêu?",
-        "answer": "36",
-        "explanation": "Đổi 45 phút = 0,75 h. Tốc độ v = 27 / 0,75 = 36 km/h."
+        "question": "Một người đi xe đạp chuyển động thẳng đều đi được quãng đường 12 km trong 40 phút. Tốc độ của người đi xe đạp tính theo đơn vị km/h là bao nhiêu?",
+        "answer": "18",
+        "explanation": "t = 40 phút = 2/3 h. v = s / t = 12 / (2/3) = 18 km/h."
       },
       {
-        "question": "Một chiếc thuyền đi xuôi dòng nước với vận tốc 16 km/h và đi ngược dòng nước với vận tốc 10 km/h. Vận tốc của dòng nước đối với bờ sông bằng bao nhiêu km/h?",
-        "answer": "3",
-        "explanation": "v_nước = (16 – 10) / 2 = 3 km/h."
+        "question": "Một chiếc thuyền đi xuôi dòng nước với vận tốc 16 km/h và đi ngược dòng nước với vận tốc 10 km/h. Vận tốc của chiếc thuyền đối với dòng nước đứng yên bằng bao nhiêu km/h?",
+        "answer": "13",
+        "explanation": "v_thuyen = (v_xuoi + v_nguoc) / 2 = (16 + 10) / 2 = 13 km/h."
       },
       {
         "question": "Một ôtô đang chạy với tốc độ 12 m/s thì tăng tốc với gia tốc 2 m/s². Quãng đường ôtô đi được sau 4 giây kể từ khi tăng tốc là bao nhiêu mét?",
         "answer": "64",
-        "explanation": "s = v₀t + 1/2·at² = 12 × 4 + 0,5 × 2 × 4² = 48 + 16 = 64 m."
+        "explanation": "s = v₀t + 1/2 · at² = 12 · 4 + 0,5 · 2 · 4² = 48 + 16 = 64 m."
       },
       {
-        "question": "Thả rơi tự do một hòn bi từ độ cao h. Khi chạm đất, vận tốc hòn bi đo được là 20 m/s. Lấy g = 10 m/s². Độ cao h lúc thả rơi hòn bi là bao nhiêu mét?",
-        "answer": "20",
-        "explanation": "h = v² / (2g) = 20² / (2 × 10) = 400 / 20 = 20 m."
+        "question": "Thả rơi tự do một hòn bi từ độ cao h = 45 m tại nơi có g = 10 m/s². Thời gian hòn bi rơi chạm đất là bao nhiêu giây?",
+        "answer": "3",
+        "explanation": "t = √(2h / g) = √(2 · 45 / 10) = √9 = 3 s."
       }
     ]
   },
@@ -4768,243 +5184,237 @@ const suppliedExams = [
     "id": "vatli-10-de-10",
     "title": "Vật lí 10 - Đề 10 - Trường THPT Ngô Gia Tự – Đắk Lắk (Đề chuẩn ma trận 2026)",
     "subject": "physics",
-    "duration": 45,
-    "minutes": 45,
+    "duration": 50,
+    "minutes": 50,
     "mcUnit": 0.25,
     "shortUnit": 0.25,
-    "source": {
-      "school": "Trường THPT Ngô Gia Tự",
-      "province": "Đắk Lắk",
-      "year": "2025–2026",
-      "url": "https://khoahoc.vietjack.com/chi-tiet-de-thi/14291/de-thi-giua-ki-1-vat-li-10-nam-2025-2026-truong-thpt-ngo-gia-tu-dak-lak",
-      "note": "Chuẩn ma trận Bộ GD&ĐT 2026 (16 câu MC, 2 câu TF, 4 câu Short)"
-    },
+    "source": "Trường THPT Ngô Gia Tự – Đắk Lắk · Đề kiểm tra Giữa kì I chuẩn ma trận 2026",
     "questions": [
       [
-        "Để bảo đảm an toàn khi tiếp xúc với các thiết bị sinh nhiệt trong phòng thực hành Vật lí, học sinh cần tuân thủ quy tắc nào?",
+        "Môn Vật lí nghiên cứu sự vận động của vật chất ở những thang bậc quy mô nào trong vũ trụ?",
         [
-          "Đeo găng tay cách nhiệt và không chạm tay trực tiếp vào các bề mặt đang nung nóng.",
-          "Dùng tay ướt để kiểm tra độ nóng của thiết bị.",
-          "Đặt các vật liệu dễ cháy xung quanh bếp nhiệt.",
-          "Thổi trực tiếp vào ngọn lửa đèn cồn."
+          "A. Từ quy mô cực nhỏ (các hạt hạ nguyên tử, nano) đến quy mô cực lớn (các hành tinh, thiên hà, toàn vũ trụ).",
+          "B. Chỉ nghiên cứu các vật thể kích thước lớn mắt thường nhìn thấy được.",
+          "C. Chỉ nghiên cứu các phản ứng biến đổi sinh hóa trong cơ thể người.",
+          "D. Chỉ nghiên cứu các tầng địa chất dưới lòng đất."
         ],
         0,
-        "Tuân thủ quy định bảo hộ cá nhân (găng tay cách nhiệt) để tránh nguy cơ bỏng nhiệt."
+        "Vật lí học nghiên cứu vật chất ở mọi quy mô từ thế giới vi mô hạ nguyên tử đến vĩ mô vũ trụ."
       ],
       [
-        "Biển báo có hình tròn viền đỏ, nền trắng có hình người đi bộ bị gạch chéo đỏ biểu thị:",
+        "Mô hình chất điểm, mô hình khí lí tưởng, mô hình tia sáng trong Vật lí học là ví dụ điển hình của phương pháp nào?",
         [
-          "Khu vực cấm người đi bộ qua lại.",
-          "Khu vực dành riêng cho người đi bộ.",
-          "Khu vực nguy hiểm về điện.",
-          "Khu vực có vật liệu dễ nổ."
+          "A. Phương pháp mô hình hóa trong nghiên cứu Vật lí.",
+          "B. Phương pháp điều tra phỏng vấn trực tiếp.",
+          "C. Phương pháp ngẫu nhiên không có căn cứ.",
+          "D. Phương pháp đo đạc thủ công."
         ],
         0,
-        "Biển tròn viền đỏ gạch chéo hình người đi bộ là biển cấm người đi bộ."
+        "Mô hình hóa là phương pháp xây dựng các mô hình đơn giản hóa để mô tả và giải thích bản chất hiện tượng vật lí."
       ],
       [
-        "Khi đo độ dài của một vật bằng thước có giới hạn đo 50 cm và độ chia nhỏ nhất 1 mm, kết quả đo hợp lí là:",
+        "Để bảo đảm an toàn khi tiếp xúc với các thiết bị sinh nhiệt cao trong phòng thực hành Vật lí, học sinh cần tuân thủ quy tắc nào sau đây?",
         [
-          "25,4 cm.",
-          "25,43 cm.",
-          "25,432 cm.",
-          "25 cm."
+          "A. Đeo găng tay cách nhiệt thích hợp và để thiết bị nguội hoàn toàn trước khi thu dọn cất giữ.",
+          "B. Dùng tay trần sờ trực tiếp vào bộ phận nung nóng để xem đã đủ nhiệt độ chưa.",
+          "C. Đặt thiết bị sinh nhiệt sát ngay cạnh các chai lọ đựng cồn hoặc hóa chất dễ cháy.",
+          "D. Rút dây nguồn điện bằng cách giật mạnh sợi dây từ xa."
         ],
         0,
-        "Độ chia nhỏ nhất 1 mm = 0,1 cm nên kết quả đo chỉ có 1 chữ số thập phân sau dấu phẩy theo cm: 25,4 cm."
+        "Cần dùng găng tay cách nhiệt và để thiết bị nguội tự nhiên trước khi cất dọn để phòng ngừa bỏng và cháy nổ."
+      ],
+      [
+        "Trong phòng thực hành, biển báo có hình tròn nền xanh dương, hình vẽ màu trắng như hình bên dưới mang ý nghĩa gì? <div class=\"exam-svg-wrap\" style=\"text-align:center;margin:10px 0;\"><svg width=\"90\" height=\"90\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"44\" fill=\"#2563eb\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><path d=\"M50,22 L50,34 M44,34 L56,34\" stroke=\"#fff\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"42\" r=\"3\" fill=\"#fff\"/><path d=\"M34,65 Q45,55 58,60 T68,70\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/><path d=\"M30,72 Q42,62 55,66 T65,76\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/></svg><div style=\"font-size:12px;color:#64748b;margin-top:4px;\">Hình: Biển lệnh bắt buộc rửa tay</div></div>",
+        [
+          "A. Hiệu lệnh bắt buộc phải rửa sạch tay bằng xà phòng và nước sau khi hoàn thành buổi thực hành.",
+          "B. Nơi dành riêng để rửa các dụng cụ thủy tinh.",
+          "C. Cảnh báo nơi có vòi nước áp lực cao nguy hiểm.",
+          "D. Biển cấm sử dụng nước trong phòng thí nghiệm."
+        ],
+        0,
+        "Biển tròn nền xanh dương hình bàn tay dưới vòi nước là biển hiệu lệnh bắt buộc phải rửa tay."
+      ],
+      [
+        "Khi đo độ dài của một vật bằng thước thẳng có giới hạn đo 50 cm và độ chia nhỏ nhất 1 mm, kết quả đo nào sau đây được ghi ĐÚNG quy tắc?",
+        [
+          "A. L = 35,2 cm.",
+          "B. L = 35,25 cm.",
+          "C. L = 35,258 cm.",
+          "D. L = 35 cm."
+        ],
+        0,
+        "Độ chia nhỏ nhất là 1 mm (0,1 cm) nên chữ số có nghĩa ước lượng cuối cùng phải ở hàng phần mười của xentimét (0,1 cm)."
       ],
       [
         "Một phép đo khối lượng cho kết quả m = (200 ± 4) g. Sai số tỉ đối của phép đo bằng:",
         [
-          "2%.",
-          "4%.",
-          "0,02%.",
-          "1%."
+          "A. 2,0%.",
+          "B. 4,0%.",
+          "C. 0,2%.",
+          "D. 0,5%."
         ],
         0,
-        "δm = (4 / 200) × 100% = 2%."
+        "δm = (4 / 200) × 100% = 2,0%."
       ],
       [
-        "Một chiếc thuyền buồm chạy trên biển. Vị trí của thuyền thay đổi từ điểm A có tọa độ x_A = 10 km đến điểm B có tọa độ x_B = 35 km trên trục tọa độ đã chọn. Độ dịch chuyển của thuyền là:",
+        "Một chiếc thuyền buồm chạy trên biển. Vị trí của thuyền thay đổi từ điểm A có tọa độ x_A = +15 km đến điểm B có tọa độ x_B = +45 km trên trục Ox trong thời gian 1,5 h. Vận tốc của thuyền bằng:",
         [
-          "25 km.",
-          "45 km.",
-          "35 km.",
-          "10 km."
+          "A. 20 km/h.",
+          "B. 30 km/h.",
+          "C. 40 km/h.",
+          "D. 10 km/h."
         ],
         0,
-        "d = x_B – x_A = 35 – 10 = 25 km."
+        "d = x_B - x_A = 45 - 15 = 30 km. v = d / t = 30 / 1,5 = 20 km/h."
       ],
       [
-        "Tốc độ trung bình và vận tốc trung bình có cùng giá trị khi:",
+        "Tốc độ trung bình và vận tốc trung bình của một vật có cùng độ lớn khi và chỉ khi:",
         [
-          "Vật chuyển động thẳng theo một chiều không đổi.",
-          "Vật chuyển động cong không đổi chiều.",
-          "Vật chuyển động tròn đều.",
-          "Trong mọi trường hợp chuyển động."
+          "A. Vật chuyển động trên một đường thẳng và theo một chiều duy nhất không đổi.",
+          "B. Vật chuyển động tròn đều một vòng khép kín.",
+          "C. Vật đi tới rồi quay ngược trở lại điểm xuất phát.",
+          "D. Vật chuyển động nhanh dần đều rồi chậm dần đều."
         ],
         0,
-        "Khi chuyển động thẳng theo 1 chiều không đổi thì quãng đường s bằng độ lớn độ dịch chuyển |d|, nên tốc độ trung bình bằng độ lớn vận tốc trung bình."
+        "Chỉ khi chuyển động thẳng và không đổi chiều thì s = |d|, do đó tốc độ trung bình bằng độ lớn vận tốc trung bình."
       ],
       [
-        "Đồ thị độ dịch chuyển – thời gian (d – t) của một vật chuyển động thẳng có dạng d = 10 + 4t (m; s). Vận tốc ban đầu của vật tại gốc thời gian t = 0 là:",
+        "Khi đo tốc độ chuyển động của xe đồ chơi bằng cổng quang điện, nếu cổng quang đặt ở vị trí có độ dịch chuyển 0,40 m và thời gian xe đi qua cổng là 0,80 s thì tốc độ trung bình của xe là:",
         [
-          "4 m/s.",
-          "10 m/s.",
-          "14 m/s.",
-          "0 m/s."
+          "A. 0,50 m/s.",
+          "B. 2,0 m/s.",
+          "C. 0,32 m/s.",
+          "D. 1,2 m/s."
         ],
         0,
-        "Độ dốc của hàm bậc nhất d = d₀ + vt là hệ số trước t: v = 4 m/s."
+        "v = s / t = 0,40 / 0,80 = 0,50 m/s."
       ],
       [
-        "Hai xe máy A và B cùng chuyển động trên đường thẳng ngược chiều nhau với tốc độ lần lượt là 35 km/h và 45 km/h. Vận tốc của xe A đối với xe B có độ lớn bằng:",
+        "Đồ thị độ dịch chuyển – thời gian (d – t) của một vật chuyển động thẳng có phương trình d = 10 + 4t (m, s). Vận tốc chuyển động của vật là:",
         [
-          "80 km/h.",
-          "10 km/h.",
-          "35 km/h.",
-          "45 km/h."
+          "A. 4 m/s.",
+          "B. 10 m/s.",
+          "C. 14 m/s.",
+          "D. 2,5 m/s."
         ],
         0,
-        "Hai xe chạy ngược chiều nên vận tốc tương đối: v = 35 + 45 = 80 km/h."
+        "Phương trình d = d₀ + vt &rArr; v = 4 m/s."
       ],
       [
-        "Một người đi bộ với tốc độ đều 1,2 m/s. Quãng đường người đó đi được trong 15 phút là:",
+        "Một xe ôtô đang đứng yên thì khởi hành chuyển động thẳng nhanh dần đều với gia tốc 2,5 m/s². Tốc độ của ôtô sau 4 giây là:",
         [
-          "1080 m.",
-          "18 m.",
-          "180 m.",
-          "540 m."
+          "A. 10 m/s.",
+          "B. 5 m/s.",
+          "C. 20 m/s.",
+          "D. 2,5 m/s."
         ],
         0,
-        "Đổi 15 phút = 900 s. Quãng đường s = v × t = 1,2 × 900 = 1080 m."
+        "v = at = 2,5 · 4 = 10 m/s."
       ],
       [
-        "Một xe ôtô đang đứng yên thì khởi hành chuyển động thẳng nhanh dần đều với gia tốc 2,5 m/s². Thời gian để xe đạt tốc độ 20 m/s là:",
+        "Một xe tải đang chạy với vận tốc 18 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 3 m/s². Quãng đường xe tải đi được từ lúc bắt đầu hãm phanh đến khi dừng hẳn là:",
         [
-          "8 s.",
-          "5 s.",
-          "10 s.",
-          "12 s."
+          "A. 54 m.",
+          "B. 108 m.",
+          "C. 36 m.",
+          "D. 27 m."
         ],
         0,
-        "t = v / a = 20 / 2,5 = 8 s."
+        "s = (v² - v₀²) / (2a) = (0 - 18²) / (2 · (-3)) = -324 / (-6) = 54 m."
       ],
       [
-        "Hệ thức nào sau đây diễn tả mối liên hệ giữa vận tốc, gia tốc và thời gian trong chuyển động thẳng biến đổi đều?",
+        "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động là đường thẳng dốc lên qua gốc tọa độ O. Vật này đang:",
         [
-          "v = v₀ + at.",
-          "v = v₀ – 1/2·at².",
-          "v = v₀t + at.",
-          "v = 1/2·at²."
+          "A. Chuyển động thẳng nhanh dần đều không vận tốc đầu.",
+          "B. Chuyển động thẳng đều với vận tốc không đổi.",
+          "C. Chuyển động thẳng chậm dần đều về gốc O.",
+          "D. Đứng yên tại gốc tọa độ."
         ],
         0,
-        "Công thức vận tốc chuẩn: v = v₀ + at."
+        "v = at là hàm bậc nhất xuất phát từ 0 dốc lên biểu thị chuyển động nhanh dần đều không vận tốc đầu."
       ],
       [
-        "Một xe tải đang chạy với vận tốc 18 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 1,5 m/s². Quãng đường xe đi được đến khi dừng hẳn là:",
+        "Một ôtô đang chạy với tốc độ 10 m/s thì tăng tốc với gia tốc a = 2 m/s² trong thời gian 5 s. Quãng đường ôtô đi được trong 5 s đó là:",
         [
-          "108 m.",
-          "54 m.",
-          "72 m.",
-          "216 m."
+          "A. 75 m.",
+          "B. 50 m.",
+          "C. 25 m.",
+          "D. 100 m."
         ],
         0,
-        "s = v₀² / (2|a|) = 18² / (2 × 1,5) = 324 / 3 = 108 m."
+        "s = v₀t + 1/2 · at² = 10 · 5 + 0,5 · 2 · 5² = 50 + 25 = 75 m."
       ],
       [
-        "Đồ thị vận tốc – thời gian (v – t) của một vật chuyển động là đường thẳng dốc lên qua gốc tọa độ O. Vật đó chuyển động:",
+        "Gia tốc trọng trường g tại một nơi xác định trên bề mặt Trái Đất có đặc điểm nào sau đây?",
         [
-          "Nhanh dần đều từ trạng thái nghỉ.",
-          "Chậm dần đều.",
-          "Thẳng đều.",
-          "Đứng yên."
+          "A. Có giá trị như nhau đối với mọi vật rơi tự do tại nơi đó, không phụ thuộc vào khối lượng của vật.",
+          "B. Có giá trị càng lớn nếu vật rơi có khối lượng càng lớn.",
+          "C. Luôn luôn có phương nằm ngang hướng về phía Đông.",
+          "D. Bằng 0 nếu thả vật từ độ cao trên 100 m."
         ],
         0,
-        "Đường thẳng v = at qua gốc tọa độ O với a > 0 biểu diễn chuyển động thẳng nhanh dần đều không vận tốc đầu."
+        "Tại một nơi xác định, gia tốc rơi tự do g là một hằng số không phụ thuộc vào khối lượng của vật."
       ],
       [
-        "Gia tốc trọng trường g tại một nơi trên bề mặt Trái Đất:",
+        "Một vật rơi tự do từ độ cao h = 500 m tại nơi có gia tốc trọng trường g = 10 m/s². Thời gian vật rơi từ lúc thả đến khi chạm đất là:",
         [
-          "Có giá trị gần đúng bằng 9,8 m/s² hoặc 10 m/s².",
-          "Phụ thuộc vào khối lượng của vật rơi.",
-          "Phụ thuộc vào kích thước của vật rơi.",
-          "Luôn bằng 0."
+          "A. 10 s.",
+          "B. 50 s.",
+          "C. 5 s.",
+          "D. 20 s."
         ],
         0,
-        "Gia tốc trọng trường tại mặt đất xấp xỉ 9,8 m/s² (hoặc lấy chẵn 10 m/s²) và độc lập với khối lượng, kích thước vật."
-      ],
-      [
-        "Một vật rơi tự do từ độ cao h = 500 m. Lấy g = 10 m/s². Thời gian vật rơi chạm đất là:",
-        [
-          "10 s.",
-          "5 s.",
-          "20 s.",
-          "50 s."
-        ],
-        0,
-        "t = √(2h / g) = √(2 × 500 / 10) = √100 = 10 s."
-      ],
-      [
-        "Một vật được ném ngang từ độ cao h với tốc độ ban đầu v₀ = 20 m/s. Bỏ qua sức cản không khí. Sau 2 giây kể từ lúc ném, tầm bay xa của vật theo phương ngang là:",
-        [
-          "40 m.",
-          "20 m.",
-          "80 m.",
-          "60 m."
-        ],
-        0,
-        "Theo phương ngang vật chuyển động thẳng đều: x = v₀t = 20 × 2 = 40 m."
+        "t = √(2h / g) = √(2 · 500 / 10) = √100 = 10 s."
       ]
     ],
     "tf": [
       {
-        "stem": "Một xe ôtô chạy thử nghiệm trên một đường đua thẳng khép kín AB. Xe xuất phát từ A chạy thẳng đều đến B cách A 60 km trong thời gian 1 giờ. Tại B, xe quay đầu chạy ngược về A với tốc độ đều 40 km/h hết 1,5 giờ. Chọn chiều dương là chiều từ A đến B.",
+        "stem": "Một xe ôtô chạy thử nghiệm trên một đường thẳng khép kín từ trạm A đến trạm B dài 60 km. Xe xuất phát từ A chạy thẳng đều đến B hết 1 giờ, sau đó lập tức quay đầu chạy thẳng đều từ B về lại A hết 1,5 giờ.",
         "items": [
           [
-            "Quãng đường xe ôtô chạy được cả đi lẫn về là 120 km.",
+            "Tổng quãng đường xe ôtô chạy được cả đi lẫn về là 120 km.",
             true,
-            "s = 60 + 60 = 120 km."
+            "Quãng đường s = 60 + 60 = 120 km."
           ],
           [
             "Độ dịch chuyển tổng cộng của xe ôtô sau khi quay về lại điểm A bằng 0 km.",
             true,
-            "Vị trí cuối trùng vị trí ban đầu nên d = 0 km."
+            "Điểm đầu và điểm cuối trùng nhau nên vectơ độ dịch chuyển d = 0 km."
           ],
           [
             "Tốc độ trung bình của xe ôtô trong toàn bộ thời gian chạy bằng 48 km/h.",
             true,
-            "Tổng thời gian t = 1 + 1,5 = 2,5 h. Tốc độ v = 120 / 2,5 = 48 km/h."
+            "Tổng thời gian t = 1 + 1,5 = 2,5 h. v_tb = s / t = 120 / 2,5 = 48 km/h."
           ],
           [
-            "Vận tốc trung bình của xe ôtô trong cả chuyến đi bằng 48 km/h.",
-            false,
+            "Vận tốc trung bình của xe ôtô trong cả chuyến đi bằng 0 km/h.",
+            true,
             "Vận tốc trung bình v_tb = d / t = 0 / 2,5 = 0 km/h."
           ]
         ]
       },
       {
-        "stem": "Một xe ôtô đang chạy với tốc độ 20 m/s thì tài xế nhìn thấy đèn vàng chuyển sang đỏ nên hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2,5 m/s².",
+        "stem": "Thả một quả cầu kim loại nhỏ rơi tự do từ miệng một giếng đứng sâu h = 80 m tại nơi có g = 10 m/s². Bỏ qua mọi sức cản của không khí.",
         "items": [
           [
-            "Thời gian xe chuyển động từ lúc hãm phanh đến khi dừng hẳn là 8 giây.",
+            "Thời gian để quả cầu rơi từ miệng giếng xuống đáy giếng là 4 giây.",
             true,
-            "t = v₀ / |a| = 20 / 2,5 = 8 s."
+            "t = √(2h / g) = √(2 · 80 / 10) = √16 = 4 s."
           ],
           [
-            "Quãng đường xe đi được từ lúc bắt đầu hãm phanh đến khi dừng lại là 80 m.",
+            "Vận tốc của quả cầu khi chạm đáy giếng có độ lớn là 40 m/s.",
             true,
-            "s = v₀² / (2|a|) = 20² / (2 × 2,5) = 400 / 5 = 80 m."
+            "v = gt = 10 · 4 = 40 m/s."
           ],
           [
-            "Tốc độ của ôtô sau 4 giây kể từ lúc bắt đầu hãm phanh là 10 m/s.",
-            true,
-            "v = v₀ – |a|t = 20 – 2,5 × 4 = 10 m/s."
-          ],
-          [
-            "Sau 6 giây kể từ lúc hãm phanh, xe đã dừng lại hoàn toàn.",
+            "Sau 2 giây kể từ khi thả rơi, quả cầu đã rơi được một nửa độ sâu của giếng.",
             false,
-            "Xe cần 8 s để dừng hẳn, nên sau 6 s xe vẫn đang chuyển động với v = 20 – 2,5 × 6 = 5 m/s."
+            "Sau 2 giây quả cầu rơi được s₂ = 0,5 · 10 · 2² = 20 m (chỉ bằng 1/4 độ sâu 80 m, không phải một nửa)."
+          ],
+          [
+            "Quãng đường quả cầu rơi được trong 1 giây cuối cùng trước khi chạm đáy giếng là 35 m.",
+            true,
+            "Quãng đường 3 giây đầu: s₃ = 0,5 · 10 · 3² = 45 m. Giây cuối: Δs = 80 - 45 = 35 m."
           ]
         ]
       }
@@ -5013,22 +5423,22 @@ const suppliedExams = [
       {
         "question": "Một người đi xe máy từ nhà đến cơ quan cách nhau 15 km hết thời gian 25 phút. Tốc độ trung bình của người này tính theo đơn vị km/h là bao nhiêu?",
         "answer": "36",
-        "explanation": "Đổi 25 phút = 25/60 h = 5/12 h. Tốc độ v = 15 / (5/12) = 36 km/h."
+        "explanation": "t = 25 phút = 25/60 = 5/12 h. v = s / t = 15 / (5/12) = 36 km/h."
       },
       {
-        "question": "Một chiếc ca nô chạy xuôi dòng từ bến A đến bến B cách nhau 48 km hết 2 giờ. Biết vận tốc dòng nước là 4 km/h. Vận tốc của ca nô đối với dòng nước bằng bao nhiêu km/h?",
+        "question": "Một chiếc ca nô chạy xuôi dòng từ bến A đến bến B cách nhau 48 km hết 2 giờ. Biết vận tốc của dòng nước là 4 km/h. Vận tốc của ca nô đối với dòng nước đứng yên bằng bao nhiêu km/h?",
         "answer": "20",
-        "explanation": "Vận tốc xuôi dòng v_xuôi = 48 / 2 = 24 km/h. Vận tốc ca nô v = 24 – 4 = 20 km/h."
+        "explanation": "v_xuoi = 48 / 2 = 24 km/h. v_ca_no = 24 - 4 = 20 km/h."
       },
       {
-        "question": "Một ôtô đang chạy với vận tốc 16 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Sau bao nhiêu giây kể từ lúc hãm phanh thì ôtô dừng lại hoàn toàn?",
+        "question": "Một ôtô đang chạy với vận tốc 16 m/s thì hãm phanh chuyển động chậm dần đều với gia tốc có độ lớn 2 m/s². Sau bao nhiêu giây kể từ lúc bắt đầu hãm phanh thì ôtô dừng lại hoàn toàn?",
         "answer": "8",
-        "explanation": "t = v₀ / |a| = 16 / 2 = 8 s."
+        "explanation": "t = (v - v₀) / a = (0 - 16) / (-2) = 8 s."
       },
       {
-        "question": "Thả rơi tự do một vật từ độ cao h tại nơi có g = 10 m/s². Khi chạm đất, vật đạt tốc độ 30 m/s. Độ cao h lúc thả vật là bao nhiêu mét?",
+        "question": "Thả một vật rơi tự do từ độ cao h tại nơi có g = 10 m/s². Khi chạm đất, vật đạt tốc độ 30 m/s. Độ cao h lúc thả vật bằng bao nhiêu mét?",
         "answer": "45",
-        "explanation": "h = v² / (2g) = 30² / (2 × 10) = 900 / 20 = 45 m."
+        "explanation": "h = v² / (2g) = 30² / 20 = 900 / 20 = 45 m."
       }
     ]
   },
@@ -9661,476 +10071,6 @@ const suppliedExams = [
         "title": "Bài toán 2 (2,0 điểm). Thí nghiệm tán xạ hạt alpha của Rutherford.",
         "question": "Nêu các hiện tượng chính quan sát được trong thí nghiệm bắn phá lá vàng mỏng bằng chùm hạt alpha của Rutherford và giải thích ý nghĩa của từng hiện tượng đối với việc khám phá cấu tạo nguyên tử.",
         "solution": "Các hiện tượng chính và ý nghĩa:<br>1. Hầu hết các hạt alpha truyền thẳng xuyên qua lá vàng mà không bị lệch hướng: Chứng minh nguyên tử có cấu tạo rỗng (phần không gian giữa hạt nhân và lớp vỏ electron là chân không) (0,75 điểm).<br>2. Một số ít hạt alpha bị tán xạ (lệch hướng ban đầu): Chứng tỏ trong nguyên tử có một vùng mang điện tích dương có kích thước rất nhỏ (hạt nhân) gây ra lực đẩy tĩnh điện đối với hạt alpha mang điện dương (0,75 điểm).<br>3. Rất hiếm hạt alpha bị bật ngược trở lại: Chứng tỏ hạt nhân có khối lượng rất lớn và mật độ vật chất cực kì đậm đặc so với hạt alpha (0,50 điểm)."
-      }
-    ]
-  },
-  {
-    "id": "toan-10-de-11",
-    "title": "Toán 10 - Đề 11 - Đề ôn tập kiểm tra giữa học kì I",
-    "subject": "math",
-    "duration": 90,
-    "school": "Đề ôn thi chuẩn cấu trúc Bộ GD&ĐT",
-    "province": "Đề chuẩn",
-    "year": "2026–2027",
-    "sourceUrl": "#",
-    "questions": [
-      [
-        "Cho mệnh đề P: \"&radic;2 là số hữu tỉ\". Hãy phát biểu mệnh đề phủ định của mệnh đề P.",
-        [
-          "A. P: \"&radic;2 là số vô tỉ\".",
-          "B. P: \"&radic;2 là số tự nhiên\".",
-          "C. P: \"&radic;2 là số nguyên\".",
-          "D. P: \"&radic;2 không phải là số hữu tỉ\"."
-        ],
-        3,
-        "Theo định nghĩa mệnh đề phủ định trong SGK Toán 10: Mệnh đề phủ định của mệnh đề P là mệnh đề \"Không phải P\", kí hiệu là P̄. Phủ định trực tiếp của khẳng định \"&radic;2 là số hữu tỉ\" là \"&radic;2 không phải là số hữu tỉ\" (thêm từ \"không phải\")."
-      ],
-      [
-        "Phát biểu nào sau đây không phải là mệnh đề P &rArr; Q?",
-        [
-          "A. Nếu P thì Q.",
-          "B. P là điều kiện đủ để có Q.",
-          "C. Q là điều kiện cần để có P.",
-          "D. P là điều kiện cần để có Q."
-        ],
-        3,
-        "Trong mệnh đề kéo theo P &rArr; Q, P là giả thiết (điều kiện đủ để có Q) và Q là kết luận (điều kiện cần để có P). Khẳng định \"P là điều kiện cần để có Q\" là cách diễn đạt của mệnh đề đảo Q &rArr; P, do đó không phải là mệnh đề P &rArr; Q."
-      ],
-      [
-        "Mệnh đề \"&exist;x &isin; <b>R</b>, x<sup>2</sup> = 18\" được phát biểu là:",
-        [
-          "A. Chỉ có một số thực mà bình phương của nó bằng 18.",
-          "B. Có ít nhất một số thực mà bình phương của nó bằng 18.",
-          "C. Nếu x là một số thực thì x<sup>2</sup> = 18.",
-          "D. Bình phương của mỗi số thực bằng 18."
-        ],
-        1,
-        "Kí hiệu &exist; đọc là \"tồn tại\" hoặc \"có ít nhất một\". Do đó mệnh đề \"&exist;x &isin; <b>R</b>, x<sup>2</sup> = 18\" được phát biểu chuẩn là: \"Có ít nhất một số thực mà bình phương của nó bằng 18\"."
-      ],
-      [
-        "Cho tập hợp A = {1; 3; 5; 7; 9}. Tập hợp nào sau đây không phải là tập con của tập A?",
-        [
-          "A. {1; 3; 5}.",
-          "B. &empty;.",
-          "C. {1; 3}.",
-          "D. {1; 3; 6; 9}."
-        ],
-        3,
-        "Tập hợp {1; 3; 6; 9} chứa phần tử 6 không thuộc tập hợp A (6 &notin; A), do đó theo định nghĩa tập con trong Toán 10 thì {1; 3; 6; 9} không phải là tập con của A."
-      ],
-      [
-        "Miền nghiệm của bất phương trình 2x + y - 4 &gt; 0 KHÔNG chứa điểm nào sau đây?",
-        [
-          "A. (1; 1).",
-          "B. (3; 1).",
-          "C. (2; 2).",
-          "D. (0; 5)."
-        ],
-        0,
-        "Thay (1; 1) vào: 2(1) + 1 - 4 = -1 &le; 0 nên điểm (1; 1) không thuộc miền nghiệm."
-      ],
-      [
-        "Trong các cặp số sau đây, cặp nào là nghiệm của bất phương trình 3x + 4y &lt; 1?",
-        [
-          "A. (-2; 1).",
-          "B. (3; 7).",
-          "C. (0; 1).",
-          "D. (1; 1)."
-        ],
-        0,
-        "Thay tọa độ điểm (-2; 1) vào vế trái bất phương trình: 3(-2) + 4(1) = -6 + 4 = -2 &lt; 1 (thỏa mãn). Vậy cặp (-2; 1) là nghiệm."
-      ],
-      [
-        "Cho bất phương trình x - y &le; 2. Khẳng định nào sau đây là đúng?",
-        [
-          "A. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 chứa gốc tọa độ.",
-          "B. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = 2 không chứa gốc tọa độ.",
-          "C. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x - y = -2 chứa gốc tọa độ.",
-          "D. Miền nghiệm của bất phương trình là nửa mặt phẳng bờ d: x + y = 2 chứa gốc tọa độ."
-        ],
-        0,
-        "Đường thẳng bờ của bất phương trình là d: x - y = 2. Thay tọa độ gốc O(0; 0) vào vế trái: 0 - 0 = 0 &le; 2 (thỏa mãn). Vậy miền nghiệm là nửa mặt phẳng bờ d: x - y = 2 có chứa gốc tọa độ O(0; 0)."
-      ],
-      [
-        "Giá trị của biểu thức P = sin30&deg; + cos60&deg; - tan45&deg; bằng:",
-        [
-          "A. 0.",
-          "B. 1.",
-          "C. 1/2.",
-          "D. -1."
-        ],
-        0,
-        "Ta có: sin30&deg; = 1/2, cos60&deg; = 1/2, tan45&deg; = 1 &rArr; P = 1/2 + 1/2 - 1 = 0."
-      ],
-      [
-        "Trong các cặp số sau, cặp nào là nghiệm của hệ bất phương trình {2x + 3y &gt; 4 ; x &gt; 0}?",
-        [
-          "A. (-2; 1).",
-          "B. (0; 1).",
-          "C. (2; 1).",
-          "D. (1; -2)."
-        ],
-        2,
-        "Thay cặp (2; 1): có x = 2 &gt; 0 và 2(2) + 3(1) = 7 &gt; 4. Cả hai bất phương trình đều thỏa mãn, do đó (2; 1) là nghiệm của hệ."
-      ],
-      [
-        "Trên mặt phẳng Oxy lấy điểm M thuộc nửa đường tròn đơn vị sao cho góc xOM = 120&deg;. Tung độ của điểm M bằng:",
-        [
-          "A. &radic;3 / 2.",
-          "B. -&radic;3 / 2.",
-          "C. -1/2.",
-          "D. 1."
-        ],
-        0,
-        "Theo định nghĩa giá trị lượng giác trên nửa đường tròn đơn vị (Toán 10): tung độ của điểm M chính là sin(xOM) = sin120&deg;. Ta có sin120&deg; = sin(180&deg; - 60&deg;) = sin60&deg; = &radic;3 / 2."
-      ],
-      [
-        "Trong mặt phẳng toạ độ Oxy, phần nửa mặt phẳng không tô đậm (không kể bờ) trong hình vẽ dưới đây là biểu diễn hình học tập nghiệm của bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 300 230\" width=\"300\" height=\"230\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan11\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n      </pattern>\n    </defs>\n    <!-- Vùng tô đậm (gạch sọc) không chứa gốc O -->\n    <polygon points=\"190,30 280,30 280,215 95,215\" fill=\"url(#hatchToan11)\"/>\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"100\" x2=\"280\" y2=\"100\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"280,100 272,96 272,104\" fill=\"#334155\"/>\n    <text x=\"272\" y=\"118\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n    \n    <line x1=\"110\" y1=\"215\" x2=\"110\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"110,20 106,28 114,28\" fill=\"#334155\"/>\n    <text x=\"96\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"94\" y=\"116\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Điểm cắt (3/2; 0) và (0; -3) -->\n    <!-- 1 đơn vị = 26px: 3/2 = 1.5 -> X = 110 + 39 = 149; -3 -> Y = 100 + 78 = 178 -->\n    <line x1=\"149\" y1=\"97\" x2=\"149\" y2=\"103\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"141\" y=\"93\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">3/2</text>\n\n    <line x1=\"107\" y1=\"178\" x2=\"113\" y2=\"178\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"86\" y=\"182\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">-3</text>\n\n    <!-- Đường thẳng 2x - y = 3 (nét đứt vì không kể bờ) -->\n    <line x1=\"190\" y1=\"30\" x2=\"95\" y2=\"215\" stroke=\"#2563eb\" stroke-width=\"2.2\" stroke-dasharray=\"6,4\"/>\n    <text x=\"195\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2x - y = 3</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Miền không tô đậm (không kể bờ) trong mặt phẳng toạ độ Oxy</div>\n</div>",
-        [
-          "A. 2x - y &gt; 3.",
-          "B. 2x - y &lt; 3.",
-          "C. x - 2y &gt; 3.",
-          "D. x - 2y &lt; 3."
-        ],
-        1,
-        "Phương trình đường thẳng bờ đi qua (3/2; 0) và (0; -3) là x / (3/2) + y / (-3) = 1 &hArr; 2x/3 - y/3 = 1 &hArr; 2x - y = 3. Miền nghiệm không tô đậm chứa gốc tọa độ O(0; 0) và không kể bờ. Thay (0; 0): 2(0) - 0 = 0 &lt; 3 (thỏa mãn). Vậy bất phương trình tương ứng là 2x - y &lt; 3."
-      ],
-      [
-        "Tam giác ABC có góc B = 10&deg; và góc C = 20&deg;. Giá trị của tanA bằng:",
-        [
-          "A. -&radic;3.",
-          "B. &radic;3.",
-          "C. -1 / &radic;3.",
-          "D. 1 / &radic;3."
-        ],
-        2,
-        "Tổng ba góc trong tam giác ABC: A = 180&deg; - (B + C) = 180&deg; - (10&deg; + 20&deg;) = 150&deg;. Áp dụng tính chất giá trị lượng giác của hai góc bù nhau: tanA = tan150&deg; = tan(180&deg; - 30&deg;) = -tan30&deg; = -1 / &radic;3."
-      ]
-    ],
-    "tf": [
-      {
-        "stem": "Cho tập hợp X = {x &isin; <b>R</b> | -3 &le; x &le; 1}.",
-        "items": [
-          [
-            "a) X = {-3; -2; -1; 0; 1}.",
-            false,
-            "Vì x là số thực (x &isin; <b>R</b>) nên tập X là đoạn [-3; 1], chứa vô số số thực chứ không chỉ gồm 5 số nguyên. Khẳng định này là SAI."
-          ],
-          [
-            "b) Số phần tử của tập hợp X là 5.",
-            false,
-            "Đoạn số thực [-3; 1] chứa vô số phần tử liên tục trên trục số thực, không phải là tập hữu hạn có 5 phần tử. Khẳng định này là SAI."
-          ],
-          [
-            "c) \"0 là một phần tử của tập hợp X\" là một mệnh đề đúng.",
-            true,
-            "Vì 0 là số thực thỏa mãn -3 &le; 0 &le; 1 nên 0 &isin; X. Mệnh đề 0 &isin; X là mệnh đề đúng. Khẳng định này là ĐÚNG."
-          ],
-          [
-            "d) Mệnh đề phủ định của mệnh đề \"&forall;x &isin; X, x &lt; 1\" là một mệnh đề đúng.",
-            true,
-            "Mệnh đề phủ định của mệnh đề ban đầu là \"&exist;x &isin; X, x &ge; 1\". Do 1 &isin; X = [-3; 1] thỏa mãn 1 &ge; 1 nên tồn tại ít nhất một phần tử x = 1, suy ra mệnh đề phủ định này là ĐÚNG."
-          ]
-        ]
-      },
-      {
-        "stem": "Cho tam giác ABC có AB = 4, AC = 6 và góc A = 120&deg;.",
-        "items": [
-          [
-            "a) sinA = &radic;3 / 2.",
-            true,
-            "Áp dụng giá trị lượng giác của hai góc bù nhau trong Toán 10: sin120&deg; = sin(180&deg; - 60&deg;) = sin60&deg; = &radic;3 / 2. Khẳng định này là ĐÚNG."
-          ],
-          [
-            "b) cosA = 1/2.",
-            false,
-            "Vì góc A = 120&deg; &gt; 90&deg; là góc tù nên cosA &lt; 0. Cụ thể cos120&deg; = -cos60&deg; = -1/2 &ne; 1/2. Khẳng định này là SAI."
-          ],
-          [
-            "c) BC = 2&radic;7.",
-            false,
-            "Áp dụng định lí côsin trong tam giác ABC: BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cosA = 4<sup>2</sup> + 6<sup>2</sup> - 2.4.6.(-1/2) = 16 + 36 + 24 = 76 &rArr; BC = &radic;76 = 2&radic;19 &ne; 2&radic;7. Khẳng định này là SAI."
-          ],
-          [
-            "d) Diện tích tam giác ABC là S = 6&radic;3.",
-            true,
-            "Áp dụng công thức tính diện tích tam giác: S = 1/2 . AB . AC . sinA = 1/2 . 4 . 6 . sin120&deg; = 12 . (&radic;3 / 2) = 6&radic;3. Khẳng định này là ĐÚNG."
-          ]
-        ]
-      }
-    ],
-    "short": [
-      {
-        "question": "Cho tập hợp A = {x | x là số nguyên tố nhỏ hơn 20} và B = {n &isin; <b>N</b> | 2 &le; n &le; 10}. Tìm số phần tử của tập hợp A &cup; B.",
-        "answer": "13",
-        "explanation": "Tập các số nguyên tố nhỏ hơn 20 là A = {2; 3; 5; 7; 11; 13; 17; 19} gồm 8 phần tử. Tập B = {2; 3; 4; 5; 6; 7; 8; 9; 10} gồm 9 phần tử. Giao của hai tập hợp là các số nguyên tố từ 2 đến 10: A &cap; B = {2; 3; 5; 7} gồm 4 phần tử. Số phần tử của hợp là n(A &cup; B) = n(A) + n(B) - n(A &cap; B) = 8 + 9 - 4 = 13 phần tử."
-      },
-      {
-        "question": "Miền nghiệm của hệ bất phương trình {x + y &gt; 1 ; 3x - 2y &le; 6} chứa bao nhiêu điểm có toạ độ là cặp số nguyên và có tung độ nhỏ hơn 2?",
-        "answer": "3",
-        "explanation": "Từ hệ ta có 1 - y &lt; x &le; (6 + 2y)/3. Điều kiện để tồn tại x là 1 - y &le; (6 + 2y)/3 &hArr; 3 - 3y &le; 6 + 2y &hArr; 5y &ge; -3 &hArr; y &ge; -0,6. Với y là số nguyên nhỏ hơn 2, ta chỉ có y = 0 và y = 1: Với y = 1 thì 0 &lt; x &le; 8/3 &rArr; x &isin; {1; 2} (cho 2 điểm (1; 1), (2; 1)). Với y = 0 thì 1 &lt; x &le; 2 &rArr; x = 2 (cho 1 điểm (2; 0)). Với y &le; -1 thì khoảng nghiệm rỗng. Vậy có đúng 3 điểm nguyên thỏa mãn là (1; 1), (2; 1) và (2; 0)."
-      },
-      {
-        "question": "Lớp 10A2 có 45 học sinh, trong đó số học sinh tham gia đội bóng đá là 18, số học sinh tham gia đội bóng chuyền là 15. Biết rằng có 20 học sinh không tham gia bất cứ môn nào. Hỏi có bao nhiêu học sinh tham gia đồng thời cả hai môn bóng đá và bóng chuyền?",
-        "answer": "8",
-        "explanation": "Số học sinh tham gia ít nhất một môn thể thao là n(A &cup; B) = 45 - 20 = 25 học sinh. Áp dụng công thức số phần tử của hợp hai tập hợp: n(A &cup; B) = n(A) + n(B) - n(A &cap; B) &rArr; n(A &cap; B) = 18 + 15 - 25 = 8 học sinh."
-      },
-      {
-        "question": "Một phân xưởng có hai máy M₁, M₂ sản xuất hai loại sản phẩm I và II. Sản xuất 1 tấn loại I lãi 20 triệu đồng, cần dùng M₁ trong 3 giờ và M₂ trong 1 giờ. Sản xuất 1 tấn loại II lãi 15 triệu đồng, cần dùng M₁ trong 1 giờ và M₂ trong 1 giờ. Mỗi ngày máy M₁ làm việc không quá 6 giờ, máy M₂ không quá 4 giờ. Số tiền lãi lớn nhất mà phân xưởng có thể thu được trong một ngày là bao nhiêu triệu đồng?",
-        "answer": "65",
-        "explanation": "Gọi x, y (tấn) lần lượt là sản lượng sản phẩm loại I và II (x &ge; 0, y &ge; 0). Ta có hệ ràng buộc thời gian: {3x + y &le; 6 ; x + y &le; 4}. Tiền lãi thu được là L(x; y) = 20x + 15y (triệu đồng). Miền nghiệm là tứ giác OABC với O(0; 0), A(2; 0), B(1; 3), C(0; 4). Giá trị lãi tại các đỉnh: L(0; 0) = 0; L(2; 0) = 40; L(0; 4) = 60; L(1; 3) = 20(1) + 15(3) = 65 triệu đồng. Vậy tiền lãi lớn nhất là 65 triệu đồng."
-      }
-    ],
-    "essay": [
-      {
-        "title": "Câu 1 (1,0 điểm): Tìm tham số m để thỏa mãn điều kiện tập hợp",
-        "question": "Cho hai tập hợp A = [-4; 2] và B = [m - 1; m + 3]. Tìm tất cả các giá trị của tham số m để:<br>a) B &sub; A.<br>b) A &cap; B = &empty;.",
-        "solution": "a) Để B &sub; A &hArr; { m - 1 &ge; -4 và m + 3 &le; 2 } &hArr; { m &ge; -3 và m &le; -1 } &hArr; -3 &le; m &le; -1 (0,50 điểm).<br>b) Để A &cap; B = &empty; &hArr; m + 3 &lt; -4 hoặc m - 1 &gt; 2 &hArr; m &lt; -7 hoặc m &gt; 3 (0,50 điểm)."
-      },
-      {
-        "title": "Câu 2 (1,0 điểm): Bài toán tối ưu hóa quy hoạch tuyến tính thực tế",
-        "question": "Một cơ sở may mặc sản xuất hai loại áo A và B. Để may một áo loại A cần 2 m vải và 3 giờ công, tiền lãi là 100 nghìn đồng. Để may một áo loại B cần 1 m vải và 4 giờ công, tiền lãi là 120 nghìn đồng. Xưởng hiện có tối đa 80 m vải và 180 giờ công lao động. Hãy lập kế hoạch sản xuất để tiền lãi thu được là lớn nhất.",
-        "solution": "Gọi x, y lần lượt là số áo loại A và loại B cần may (x &ge; 0, y &ge; 0).<br>Hệ điều kiện: { 2x + y &le; 80 ; 3x + 4y &le; 180 ; x &ge; 0 ; y &ge; 0 }.<br>Miền nghiệm là tứ giác OABC với O(0; 0), A(40; 0), B(28; 24), C(0; 45).<br>Biểu thức tiền lãi: F(x; y) = 100x + 120y (nghìn đồng).<br>• F(0; 0) = 0.<br>• F(40; 0) = 4000.<br>• F(28; 24) = 100(28) + 120(24) = 2800 + 2880 = 5680 (nghìn đồng).<br>• F(0; 45) = 5400.<br>&rArr; Lợi nhuận lớn nhất là 5.680.000 đồng khi sản xuất 28 áo loại A và 24 áo loại B (1,0 điểm)."
-      },
-      {
-        "title": "Câu 3 (1,0 điểm): Ứng dụng giải tam giác tính khoảng cách",
-        "question": "Hai trạm quan sát A và B cách nhau 500 m trên bờ biển cùng quan sát một con tàu C ngoài khơi. Người ta đo được góc CAB = 70&deg; và góc CBA = 50&deg;. Tính khoảng cách từ trạm A đến con tàu C (làm tròn đến mét).",
-        "solution": "Trong tam giác ABC: góc ACB = 180&deg; - (70&deg; + 50&deg;) = 60&deg; (0,30 điểm).<br>Áp dụng định lí sin: AC / sinB = AB / sinC &rArr; AC = AB &times; sin50&deg; / sin60&deg; (0,40 điểm).<br>Thay số: AC = 500 &times; sin50&deg; / sin60&deg; &approx; 500 &times; 0,7660 / 0,8660 &approx; 442,3 m &approx; 442 m (0,30 điểm)."
-      }
-    ]
-  },
-  {
-    "id": "toan-10-de-12",
-    "title": "Toán 10 - Đề 12 - Đề minh họa kiểm tra giữa kì I (Năm học 2026–2027)",
-    "subject": "math",
-    "duration": 90,
-    "school": "Đề minh họa kiểm tra giữa kì I – Đề 1",
-    "province": "Bộ GD&ĐT",
-    "year": "2026–2027",
-    "sourceUrl": "#",
-    "questions": [
-      [
-        "Phát biểu nào sau đây không phải là một mệnh đề?",
-        [
-          "A. \"Nếu x &lt; 3 thì x<sup>2</sup> &lt; 9\"",
-          "B. \"&forall;x &gt; 0 ta đều có: &radic;x &gt; x\"",
-          "C. \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\"",
-          "D. \"Tồn tại x &isin; <b>R</b> sao cho x<sup>2</sup> + 3x - 4 = 0\""
-        ],
-        2,
-        "Theo định nghĩa mệnh đề trong SGK Toán 10: Mệnh đề là một câu khẳng định có tính đúng hoặc sai. Câu nghi vấn (câu hỏi) \"Giải phương trình 2x<sup>2</sup> - 3x - 5 = 0?\" không phải là câu khẳng định nên không phải là một mệnh đề."
-      ],
-      [
-        "Tìm mệnh đề phủ định của mệnh đề M = \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường đều đạt giải\".",
-        [
-          "A. \"Có rất nhiều học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
-          "B. \"Có ít nhất một học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
-          "C. \"Không có học sinh nào trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\"",
-          "D. \"Tất cả học sinh trong đội chính thức tham gia thi chọn HSG cấp tỉnh của trường không đạt giải\""
-        ],
-        1,
-        "Mệnh đề ban đầu có dạng \"&forall;x &isin; X, P(x)\" (tất cả... đều đạt giải). Phủ định của mệnh đề chứa lượng từ \"&forall;\" (tất cả) là mệnh đề chứa lượng từ \"&exist;\" (tồn tại / có ít nhất một) kèm phủ định của tính chất: \"Có ít nhất một học sinh trong đội chính thức... không đạt giải\"."
-      ],
-      [
-        "Cho hai tập hợp A = [3; 9] và B = (3; 11). Xác định tập hợp A &cap; B.",
-        [
-          "A. [3; 8)",
-          "B. {3; 4; 5; 6; 7; 8; 9}",
-          "C. (3; 9]",
-          "D. [3; 11)"
-        ],
-        2,
-        "Phần tử chung của A = [3; 9] và B = (3; 11) là các số thực x thỏa mãn 3 &le; x &le; 9 và 3 &lt; x &lt; 11 &hArr; 3 &lt; x &le; 9. Do đó A &cap; B = (3; 9]."
-      ],
-      [
-        "Hình vẽ biểu diễn trên trục số thực dưới đây là hình biểu diễn cho tập hợp số nào sau đây:\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 440 85\" width=\"440\" height=\"85\" xmlns=\"http://www.w3.org/2000/svg\">\n    <!-- Trục số -->\n    <line x1=\"20\" y1=\"45\" x2=\"420\" y2=\"45\" stroke=\"#334155\" stroke-width=\"2\"/>\n    <polygon points=\"420,45 410,40 410,50\" fill=\"#334155\"/>\n    <text x=\"412\" y=\"65\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">+∞</text>\n    <text x=\"15\" y=\"65\" font-size=\"12\" font-style=\"italic\" fill=\"#64748b\">-∞</text>\n\n    <!-- Gạch bỏ từ -vô cùng đến 2 -->\n    <line x1=\"30\" y1=\"35\" x2=\"45\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"45\" y1=\"35\" x2=\"60\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"60\" y1=\"35\" x2=\"75\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"75\" y1=\"35\" x2=\"90\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n\n    <!-- Điểm 2: ngoặc vuông [ quay sang phải -->\n    <text x=\"96\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">[</text>\n    <text x=\"98\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">2</text>\n\n    <!-- Khoảng lấy [2; 4]: đoạn thẳng đậm -->\n    <line x1=\"108\" y1=\"45\" x2=\"180\" y2=\"45\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n\n    <!-- Điểm 4: ngoặc vuông ] quay sang trái -->\n    <text x=\"180\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">]</text>\n    <text x=\"182\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">4</text>\n\n    <!-- Gạch bỏ từ 4 đến 6 -->\n    <line x1=\"195\" y1=\"35\" x2=\"210\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"210\" y1=\"35\" x2=\"225\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"225\" y1=\"35\" x2=\"240\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"240\" y1=\"35\" x2=\"255\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n\n    <!-- Điểm 6: ngoặc vuông [ quay sang phải -->\n    <text x=\"262\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">[</text>\n    <text x=\"264\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">6</text>\n\n    <!-- Khoảng lấy [6; 8): đoạn thẳng đậm -->\n    <line x1=\"274\" y1=\"45\" x2=\"340\" y2=\"45\" stroke=\"#2563eb\" stroke-width=\"4\"/>\n\n    <!-- Điểm 8: ngoặc tròn ) quay sang trái -->\n    <text x=\"340\" y=\"52\" font-size=\"22\" font-weight=\"bold\" fill=\"#2563eb\">)</text>\n    <text x=\"342\" y=\"72\" font-size=\"13\" font-weight=\"bold\" fill=\"#0f172a\">8</text>\n\n    <!-- Gạch bỏ từ 8 đến +vô cùng -->\n    <line x1=\"355\" y1=\"35\" x2=\"370\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"370\" y1=\"35\" x2=\"385\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n    <line x1=\"385\" y1=\"35\" x2=\"400\" y2=\"55\" stroke=\"#94a3b8\" stroke-width=\"1.8\"/>\n  </svg>\n  <div class=\"figure-caption\">Hình biểu diễn tập hợp số trên trục số thực</div>\n</div>",
-        [
-          "A. K = [2; 8) \\ (4; 6)",
-          "B. K = {2; 3; 4; 6; 7; 8}",
-          "C. K = {2; 3; 4; 6; 7}",
-          "D. K = [2; 8) \\ [4; 6]"
-        ],
-        0,
-        "Tập hợp lấy từ 2 (có lấy đầu mút 2) đến 8 (không lấy đầu mút 8), và loại bỏ các phần tử nằm trong khoảng (4; 6) (hai điểm 4 và 6 vẫn được giữ lại do ngoặc quay ra vùng lấy). Do đó tập hợp số tương ứng là K = [2; 8) \\ (4; 6)."
-      ],
-      [
-        "Hệ bất phương trình nào sau đây có miền nghiệm là một miền tam giác trong mặt phẳng tọa độ Oxy?",
-        [
-          "A. {x &ge; 0 ; y &ge; 0 ; x + y &le; 3}.",
-          "B. {x &ge; 0 ; y &ge; 0}.",
-          "C. {x + y &le; 2 ; x - y &ge; 1}.",
-          "D. {x &gt; 1 ; y &lt; 2}."
-        ],
-        0,
-        "Hệ {x >= 0; y >= 0; x + y <= 3} bị giới hạn bởi trục Ox (y=0), trục Oy (x=0) và đường thẳng x + y = 3 tạo thành tam giác vuông có các đỉnh O(0; 0), A(3; 0), B(0; 3)."
-      ],
-      [
-        "Miền nghiệm của bất phương trình x + 2y &le; 4 chứa điểm nào sau đây?",
-        [
-          "A. A(1; 2)",
-          "B. B(2; 1)",
-          "C. C(4; 3)",
-          "D. D(-1; 3)"
-        ],
-        1,
-        "Thay tọa độ điểm B(2; 1) vào bất phương trình: 2 + 2(1) = 4 &le; 4 (thỏa mãn dấu \"&le;\"). Các điểm còn lại đều cho giá trị lớn hơn 4 (1 + 4 = 5 &gt; 4; 4 + 6 = 10 &gt; 4; -1 + 6 = 5 &gt; 4)."
-      ],
-      [
-        "Trong mặt phẳng toạ độ Oxy, phần nửa mặt phẳng không bị gạch (kể cả bờ) trong hình vẽ dưới đây là miền nghiệm của bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 290 230\" width=\"290\" height=\"230\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan12\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/>\n      </pattern>\n    </defs>\n    <!-- Nửa mặt phẳng chứa O(0; 0) bị gạch sọc -->\n    <polygon points=\"65,225 210,35 20,35 20,225\" fill=\"url(#hatchToan12)\"/>\n\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"110\" x2=\"270\" y2=\"110\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"270,110 262,106 262,114\" fill=\"#334155\"/>\n    <text x=\"262\" y=\"128\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n\n    <line x1=\"120\" y1=\"225\" x2=\"120\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"120,20 116,28 124,28\" fill=\"#334155\"/>\n    <text x=\"106\" y=\"25\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"104\" y=\"104\" font-size=\"13\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Điểm (2; 0) và (0; -2) -->\n    <!-- 1 đơn vị = 26px: (2; 0) -> X = 120 + 52 = 172; (0; -2) -> Y = 110 + 52 = 162 -->\n    <line x1=\"172\" y1=\"107\" x2=\"172\" y2=\"113\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"168\" y=\"128\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">2</text>\n\n    <line x1=\"117\" y1=\"162\" x2=\"123\" y2=\"162\" stroke=\"#1e293b\" stroke-width=\"1.5\"/>\n    <text x=\"100\" y=\"166\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">-2</text>\n\n    <!-- Đường thẳng x - y = 2 (nét liền vì kể cả bờ) -->\n    <line x1=\"65\" y1=\"225\" x2=\"215\" y2=\"30\" stroke=\"#2563eb\" stroke-width=\"2.2\"/>\n    <text x=\"218\" y=\"45\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">d: x - y = 2</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Nửa mặt phẳng không bị gạch (kể cả bờ d)</div>\n</div>",
-        [
-          "A. x - y &ge; -2",
-          "B. x - y &ge; 2",
-          "C. x - y + 2 &gt; 0",
-          "D. x + y &ge; -2"
-        ],
-        1,
-        "Đường thẳng bờ đi qua (2; 0) và (0; -2) có phương trình là x - y = 2. Gốc tọa độ O(0; 0) nằm trong miền bị gạch bỏ vì 0 - 0 = 0 &lt; 2. Miền nghiệm không bị gạch chứa các điểm thỏa mãn x - y &ge; 2 (ví dụ điểm (3; 0) có 3 - 0 = 3 &ge; 2)."
-      ],
-      [
-        "Cho hệ bất phương trình: {x &lt; 3 ; y &gt; 0 ; x - y + 4 &gt; 0} có miền nghiệm là (S). Kết luận nào sau đây đúng?",
-        [
-          "A. Điểm A(-1; 1) không thuộc S",
-          "B. Miền nghiệm của hệ là miền trong của một tam giác.",
-          "C. Tất cả các điểm trên đoạn thẳng AB với A(0; 1) và B(2; 2) đều nằm ngoài miền nghiệm (S)",
-          "D. Điểm E(1; 5) thuộc S"
-        ],
-        1,
-        "Ba đường thẳng x = 3, y = 0, x - y + 4 = 0 cắt nhau đôi một tại 3 đỉnh phân biệt (-4; 0), (3; 0) và (3; 7). Miền nghiệm gồm các điểm nằm đồng thời về phía bên trái đường x = 3, phía trên trục hoành y = 0 và phía dưới đường x - y + 4 = 0, tạo thành miền trong của một tam giác."
-      ],
-      [
-        "Miền tam giác (phần nền trắng) trong hình vẽ dưới đây là miền nghiệm của hệ bất phương trình nào?\n<div class=\"exam-figure\">\n  <svg viewBox=\"0 0 320 240\" width=\"320\" height=\"240\" xmlns=\"http://www.w3.org/2000/svg\">\n    <defs>\n      <pattern id=\"hatchToan12_9\" width=\"10\" height=\"10\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\">\n        <line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"10\" stroke=\"#cbd5e1\" stroke-width=\"1.2\"/>\n      </pattern>\n    </defs>\n    <!-- Nền gạch ngoài tam giác -->\n    <rect x=\"20\" y=\"20\" width=\"280\" height=\"200\" fill=\"url(#hatchToan12_9)\"/>\n    <!-- Miền tam giác (phần nền trắng) -->\n    <!-- Đỉnh (0; 2): X = 150, Y = 120 - 2*30 = 60 -->\n    <!-- Đáy nằm trên y = -1: Y = 120 + 30 = 150 -->\n    <!-- Giao với x - y + 2 = 0 tại y = -1 => x = -3: X = 150 - 3*30 = 60 -->\n    <!-- Giao với 2x + y - 2 = 0 tại y = -1 => x = 1.5: X = 150 + 1.5*30 = 195 -->\n    <polygon points=\"150,60 60,150 195,150\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"2\"/>\n\n    <!-- Trục toạ độ Oxy -->\n    <line x1=\"20\" y1=\"120\" x2=\"295\" y2=\"120\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"295,120 287,116 287,124\" fill=\"#334155\"/>\n    <text x=\"287\" y=\"136\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">x</text>\n\n    <line x1=\"150\" y1=\"220\" x2=\"150\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\"/>\n    <polygon points=\"150,20 146,28 154,28\" fill=\"#334155\"/>\n    <text x=\"136\" y=\"25\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">y</text>\n    <text x=\"136\" y=\"115\" font-size=\"12\" font-weight=\"bold\" fill=\"#475569\">O</text>\n\n    <!-- Đường y = -1 -->\n    <line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#0284c7\" stroke-width=\"1.8\"/>\n    <text x=\"210\" y=\"165\" font-size=\"11\" font-weight=\"bold\" fill=\"#0284c7\">y = -1</text>\n\n    <!-- Điểm (0; 2) -->\n    <circle cx=\"150\" cy=\"60\" r=\"3\" fill=\"#2563eb\"/>\n    <text x=\"156\" y=\"65\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">2</text>\n  </svg>\n  <div class=\"figure-caption\">Hình minh hoạ: Miền tam giác nền trắng giới hạn bởi 3 đường thẳng</div>\n</div>",
-        [
-          "A. {x - y + 2 &ge; 0 ; y + 1 &ge; 0 ; 2x + y - 2 &le; 0}",
-          "B. {x &ge; -1 ; 2x + y - 2 &ge; 0 ; x - y &le; 2}",
-          "C. {y &le; 1 ; 2x + y - 2 &ge; 0 ; x + 4y - 10 &ge; 0}",
-          "D. {x - y &le; 2 ; 2x + y - 2 &ge; 0 ; y + 1 &le; 0}"
-        ],
-        0,
-        "Cạnh đáy của tam giác nằm trên đường y = -1, miền tam giác nằm phía trên nên y &ge; -1 &hArr; y + 1 &ge; 0. Hai cạnh bên là các đường thẳng x - y + 2 = 0 và 2x + y - 2 = 0. Gốc O(0; 0) nằm trong tam giác và thỏa mãn 0 - 0 + 2 &ge; 0, 0 + 1 &ge; 0, 2(0) + 0 - 2 &le; 0. Vậy hệ bất phương trình đúng là hệ A."
-      ],
-      [
-        "Cho góc &alpha; có 90&deg; &lt; &alpha; &le; 180&deg;. Kết luận nào sau đây đúng?",
-        [
-          "A. sin&alpha; &gt; 0; cos&alpha; &gt; 0",
-          "B. sin&alpha; &gt; 0; cot&alpha; &lt; 0",
-          "C. tan&alpha; . cot&alpha; &lt; 0",
-          "D. sin&alpha; &lt; 0; tan&alpha; &gt; 0"
-        ],
-        1,
-        "Với góc tù &alpha; (90&deg; &lt; &alpha; &le; 180&deg;), điểm biểu diễn trên nửa đường tròn đơn vị có tung độ dương (sin&alpha; &gt; 0) và hoành độ âm (cos&alpha; &lt; 0). Do đó cot&alpha; = cos&alpha; / sin&alpha; &lt; 0. Kết luận đúng là sin&alpha; &gt; 0 và cot&alpha; &lt; 0."
-      ],
-      [
-        "Cho sin&alpha; = 0,3 với &alpha; &gt; 90&deg;. Tính: cos&alpha;.",
-        [
-          "A. &plusmn;&radic;91 / 10",
-          "B. &plusmn;9 / 10",
-          "C. -&radic;91 / 10",
-          "D. &plusmn;&radic;0,7"
-        ],
-        2,
-        "Áp dụng công thức lượng giác cơ bản trong Toán 10: sin<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; = 1 &rArr; cos<sup>2</sup>&alpha; = 1 - 0,3<sup>2</sup> = 0,91 = 91/100. Vì &alpha; &gt; 90&deg; (góc tù) nên cos&alpha; &lt; 0, do đó cos&alpha; = -&radic;91 / 10."
-      ],
-      [
-        "Cho tam giác ABC có BC = 6a, góc ABC = 60&deg;, cosBAC = 2/3. Tính AC theo a.",
-        [
-          "A. 9a&radic;15 / 5",
-          "B. 9a / 5",
-          "C. 6a / &radic;5",
-          "D. 3a"
-        ],
-        0,
-        "Vì góc A là góc trong tam giác nên sinA &gt; 0 &rArr; sinA = &radic;(1 - cos<sup>2</sup>A) = &radic;(1 - 4/9) = &radic;5 / 3. Áp dụng định lí sin: AC / sinB = BC / sinA &rArr; AC = BC . (sinB / sinA) = 6a . (sin60&deg; / (&radic;5/3)) = 6a . (&radic;3/2) . (3/&radic;5) = 9a&radic;3 / &radic;5 = 9a&radic;15 / 5."
-      ]
-    ],
-    "tf": [
-      {
-        "stem": "Xét tính đúng sai của các khẳng định sau về mệnh đề và mệnh đề kéo theo:",
-        "items": [
-          [
-            "a) Mệnh đề là một khẳng định đúng.",
-            false,
-            "Theo định nghĩa trong SGK Toán 10: Mệnh đề là một khẳng định có tính đúng hoặc sai. Một khẳng định sai vẫn là một mệnh đề (mệnh đề sai). Do đó khẳng định này là SAI."
-          ],
-          [
-            "b) Cho A, B là hai mệnh đề. Mệnh đề A &rArr; B chỉ đúng khi A, B đều đúng.",
-            false,
-            "Mệnh đề kéo theo A &rArr; B chỉ sai khi A đúng và B sai. Trong trường hợp giả thiết A sai thì mệnh đề A &rArr; B luôn đúng kể cả khi B sai. Khẳng định này là SAI."
-          ],
-          [
-            "c) Mệnh đề \"&exist;a &isin; <b>N</b> | (a + 1)/(2a + 1) &isin; <b>N</b>\" là một mệnh đề chứa biến.",
-            false,
-            "Câu có chứa biến khi đã được lượng từ hóa bằng kí hiệu &exist; (tồn tại) sẽ trở thành một mệnh đề toán học hoàn chỉnh có chân trị xác định (cụ thể với a = 0 &isin; <b>N</b> thì (0+1)/(0+1) = 1 &isin; <b>N</b> là mệnh đề đúng), không còn là mệnh đề chứa biến nữa. Khẳng định này là SAI."
-          ],
-          [
-            "d) Trong định lý: \"Nếu một tứ giác có hai đường chéo vuông góc với nhau thì diện tích của tứ giác đó bằng một nửa tích hai đường chéo\". Điều kiện đủ của định lý là: tứ giác có hai đường chéo vuông góc với nhau.",
-            true,
-            "Định lý có dạng P &rArr; Q, trong đó giả thiết P là \"tứ giác có hai đường chéo vuông góc với nhau\". Theo SGK Toán 10, giả thiết P là điều kiện đủ để có kết luận Q. Khẳng định này là ĐÚNG."
-          ]
-        ]
-      },
-      {
-        "stem": "Cho tam giác ABC có AB = 4, AC = 3 và góc BAC = 120&deg;. Khi đó:",
-        "items": [
-          [
-            "a) cosABC &gt; 0.",
-            true,
-            "Trong tam giác ABC có góc A = 120&deg; là góc tù. Vì một tam giác chỉ có tối đa một góc tù nên góc B bắt buộc là góc nhọn (0&deg; &lt; B &lt; 90&deg;). Do đó cosB &gt; 0. Khẳng định này là ĐÚNG."
-          ],
-          [
-            "b) Độ dài trung tuyến kẻ từ đỉnh B bằng: &radic;19.",
-            false,
-            "Theo định lí côsin: BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cos120&deg; = 4<sup>2</sup> + 3<sup>2</sup> - 2.4.3.(-1/2) = 16 + 9 + 12 = 37. Áp dụng công thức đường trung tuyến: m<sub>b</sub><sup>2</sup> = (2(BC<sup>2</sup> + AB<sup>2</sup>) - AC<sup>2</sup>) / 4 = (2(37 + 16) - 9) / 4 = (106 - 9)/4 = 97/4 &rArr; m<sub>b</sub> = &radic;97 / 2 &ne; &radic;19. Khẳng định này là SAI."
-          ],
-          [
-            "c) Bán kính đường tròn ngoại tiếp tam giác ABC bằng: &radic;(37/3).",
-            true,
-            "Áp dụng định lí sin trong tam giác ABC: 2R = BC / sinA &rArr; R = BC / (2.sin120&deg;) = &radic;37 / (2 . (&radic;3/2)) = &radic;37 / &radic;3 = &radic;(37/3). Khẳng định này là ĐÚNG."
-          ],
-          [
-            "d) cosACB = 20 / (3&radic;37).",
-            false,
-            "Áp dụng định lí côsin: cosACB = (AC<sup>2</sup> + BC<sup>2</sup> - AB<sup>2</sup>) / (2.AC.BC) = (9 + 37 - 16) / (2 . 3 . &radic;37) = 30 / (6&radic;37) = 5 / &radic;37 = 15 / (3&radic;37) &ne; 20 / (3&radic;37). Khẳng định này là SAI."
-          ]
-        ]
-      }
-    ],
-    "short": [
-      {
-        "question": "Mỗi học sinh lớp 10A đều đăng ký học tự chọn ít nhất một trong hai môn là Toán hoặc Văn. Có 85% chọn môn Toán, 75% chọn môn Văn và 16 học sinh chỉ học đúng một môn. Hỏi có bao nhiêu học sinh đăng ký học cả hai môn?",
-        "answer": "24",
-        "explanation": "Tỉ lệ học sinh đăng ký cả hai môn Toán và Văn là: 85% + 75% - 100% = 60%. Tỉ lệ học sinh chỉ học đúng một môn là: (85% - 60%) + (75% - 60%) = 25% + 15% = 40% (hoặc 100% - 60% = 40%). Tổng số học sinh của lớp 10A là: 16 / 40% = 40 học sinh. Số học sinh học cả hai môn là: 40 . 60% = 24 học sinh."
-      },
-      {
-        "question": "Cho hai tập hợp A = (-1; 8) và B = [m - 1; m + 2). Có bao nhiêu số nguyên m để B &sub; A?",
-        "answer": "6",
-        "explanation": "Để B là tập con của A, hai đầu mút của nửa khoảng B phải thuộc khoảng A: {m - 1 &gt; -1 ; m + 2 &le; 8} &hArr; {m &gt; 0 ; m &le; 6} &hArr; 0 &lt; m &le; 6. Vì m là số nguyên nên m &isin; {1; 2; 3; 4; 5; 6}. Vậy có đúng 6 giá trị nguyên của m thỏa mãn."
-      },
-      {
-        "question": "Cho biết: tan&alpha; = 10. Tính giá trị biểu thức M = (9sin&alpha; - cos&alpha;) / (sin&alpha; - 9cos&alpha;).",
-        "answer": "89",
-        "explanation": "Vì tan&alpha; xác định nên cos&alpha; &ne; 0. Chia cả tử và mẫu của M cho cos&alpha;, ta được: M = (9tan&alpha; - 1) / (tan&alpha; - 9). Thay tan&alpha; = 10: M = (9 . 10 - 1) / (10 - 9) = (90 - 1) / 1 = 89."
-      },
-      {
-        "question": "Cho tam giác ABC có độ dài các cạnh: AB = 6; AC = 8; BC = 12. Tính gần đúng góc A theo đơn vị độ (làm tròn đến hàng đơn vị)?",
-        "answer": "117",
-        "explanation": "Áp dụng hệ quả của định lí côsin: cosA = (AB<sup>2</sup> + AC<sup>2</sup> - BC<sup>2</sup>) / (2 . AB . AC) = (6<sup>2</sup> + 8<sup>2</sup> - 12<sup>2</sup>) / (2 . 6 . 8) = (36 + 64 - 144) / 96 = -44/96 = -11/24 &approx; -0,45833. Suy ra góc A &approx; 117,28&deg;, làm tròn đến hàng đơn vị được 117&deg;."
-      }
-    ],
-    "essay": [
-      {
-        "title": "Câu 1 (1,0 điểm): Tìm tham số m để thỏa mãn điều kiện giao của hai tập hợp",
-        "question": "Cho hai tập hợp X = (1; 6) và Y = [m; m + 2]. Tìm tất cả các giá trị của tham số m để X &cap; Y &ne; &empty;.",
-        "solution": "Hai tập hợp X = (1; 6) và Y = [m; m + 2] có giao khác rỗng khi và chỉ khi:<br>{ m &lt; 6 và m + 2 &gt; 1 } &hArr; { m &lt; 6 và m &gt; -1 } &hArr; -1 &lt; m &lt; 6.<br>Vậy m &isin; (-1; 6) (1,0 điểm)."
-      },
-      {
-        "title": "Câu 2 (1,0 điểm): Bài toán tối ưu chi phí thuê xe chở hàng",
-        "question": "Một công ty cần vận chuyển 30 tấn hàng bằng hai loại xe tải: xe loại I (chở tối đa 3 tấn, giá thuê 4 triệu đồng/chuyến) và xe loại II (chở tối đa 5 tấn, giá thuê 6 triệu đồng/chuyến). Đội xe chỉ có thể cung cấp tối đa 8 xe loại I và 6 xe loại II. Hỏi công ty cần thuê bao nhiêu xe mỗi loại để tổng chi phí thuê xe là thấp nhất?",
-        "solution": "Gọi x, y lần lượt là số xe loại I và loại II cần thuê (x, y &isin; N; 0 &le; x &le; 8; 0 &le; y &le; 6).<br>Điều kiện tải trọng: 3x + 5y &ge; 30.<br>Chi phí thuê xe: T(x; y) = 4x + 6y (triệu đồng).<br>Các điểm góc khả dĩ của miền nghiệm nguyên:<br>• Nếu y = 6: 3x + 30 &ge; 30 &rArr; x &ge; 0 &rArr; Chọn x = 0 &rArr; T(0; 6) = 36 triệu đồng (chở 30 tấn).<br>• Nếu y = 5: 3x + 25 &ge; 30 &rArr; 3x &ge; 5 &rArr; x &ge; 2 &rArr; Chọn x = 2 &rArr; T(2; 5) = 4(2) + 6(5) = 38 triệu đồng.<br>• Nếu y = 4: 3x + 20 &ge; 30 &rArr; 3x &ge; 10 &rArr; x &ge; 4 &rArr; T(4; 4) = 4(4) + 6(4) = 40 triệu đồng.<br>• Nếu x = 8: 24 + 5y &ge; 30 &rArr; 5y &ge; 6 &rArr; y &ge; 2 &rArr; T(8; 2) = 32 + 12 = 44 triệu đồng.<br>&rArr; Chi phí nhỏ nhất là 36 triệu đồng khi thuê 0 xe loại I và 6 xe loại II (1,0 điểm)."
-      },
-      {
-        "title": "Câu 3 (1,0 điểm): Ứng dụng định lí côsin đo khoảng cách qua hồ nước",
-        "question": "Để đo khoảng cách giữa hai điểm A và B bị ngăn cách bởi một hồ nước, người ta chọn một vị trí quan sát C trên bờ hồ sao cho nhìn thấy cả A và B. Kết quả đo được: CA = 80 m, CB = 120 m và góc ACB = 60&deg;. Tính khoảng cách giữa hai điểm A và B.",
-        "solution": "Áp dụng định lí côsin trong tam giác ABC:<br>AB<sup>2</sup> = CA<sup>2</sup> + CB<sup>2</sup> - 2.CA.CB.cosC (0,30 điểm).<br>Thay số: AB<sup>2</sup> = 80<sup>2</sup> + 120<sup>2</sup> - 2(80)(120)cos60&deg; = 6400 + 14400 - 19200 &times; (1/2)<br>= 20800 - 9600 = 11200 (0,40 điểm).<br>&rArr; AB = &radic;11200 = 40&radic;7 &approx; 105,8 m (0,30 điểm)."
       }
     ]
   }
