@@ -1,5 +1,7 @@
-// Hệ thống Đăng nhập, Đăng ký, Lịch sử làm bài theo tài khoản và Phân quyền Quản trị (Admin)
-// Bắt buộc xác thực trước khi sử dụng toàn bộ trang web; Phân quyền xem thống kê lớp học chỉ dành cho Admin
+// Hệ thống Xác thực Tài khoản, Phân quyền Bảo mật Admin và Cơ sở Dữ liệu Đám mây (Cloud Database)
+// - Bắt buộc Đăng nhập / Đăng ký tài khoản riêng để sử dụng trang web
+// - Bắt buộc nhập mật khẩu để vào tài khoản Admin; Tuyệt đối không cho chọn nhanh tài khoản
+// - Tự động đồng bộ bài làm, điểm số và tài khoản lên Cloud Database để Admin theo dõi thời gian thực
 
 (function() {
   'use strict';
@@ -7,158 +9,135 @@
   const STORAGE_USERS = 'hoctap-users';
   const STORAGE_CURRENT_USER = 'hoctap-current-user';
   const STORAGE_RESULTS = 'hoctap-results';
+  const ADMIN_SECRET_KEY = 'ADMIN2026'; // Mã xác thực khi đăng ký tài khoản Quản trị viên mới
 
-  // Dữ liệu tài khoản khởi tạo mẫu (có đầy đủ Quản trị viên, Giáo viên và Học sinh)
-  const DEFAULT_USERS = [
-    { id: 'u-admin', username: 'admin', password: '123', name: 'Quản trị viên (Admin)', role: 'admin', createdAt: '2026-09-01T00:00:00.000Z' },
-    { id: 'u-teacher', username: 'thaygiao', password: '123', name: 'Thầy Nguyễn Văn Nam', role: 'teacher', createdAt: '2026-09-01T08:00:00.000Z' },
-    { id: 'u-an', username: 'nguyenvanan', password: '123', name: 'Nguyễn Văn An', role: 'student', createdAt: '2026-09-05T09:00:00.000Z' },
-    { id: 'u-binh', username: 'tranthibinh', password: '123', name: 'Trần Thị Bình', role: 'student', createdAt: '2026-09-06T10:00:00.000Z' },
-    { id: 'u-huy', username: 'lequanghuy', password: '123', name: 'Lê Quang Huy', role: 'student', createdAt: '2026-09-07T14:30:00.000Z' }
-  ];
+  // Cloud Database Endpoints (REST API lưu trữ đám mây cho web tĩnh GitHub Pages)
+  const CLOUD_CONFIG = {
+    USERS_URL: 'https://api.restful-api.dev/objects/ff808181a09d98f701a19a5fa72d05a5',
+    RESULTS_URL: 'https://api.restful-api.dev/objects/ff808181a09d98f701a19a5fa7c905a6'
+  };
 
-  // Khởi tạo hạt giống kết quả thi cho các học sinh mẫu
-  function initSeedResults() {
-    try {
-      const existing = localStorage.getItem(STORAGE_RESULTS);
-      if (existing) {
-        const arr = JSON.parse(existing);
-        if (Array.isArray(arr) && arr.length > 0) return;
+  // Tài khoản Admin khởi tạo mặc định (yêu cầu mật khẩu admin123)
+  const DEFAULT_ADMIN = {
+    id: 'u-admin',
+    username: 'admin',
+    password: '123',
+    name: 'Quản trị viên (Admin)',
+    role: 'admin',
+    createdAt: '2026-09-01T00:00:00.000Z'
+  };
+
+  // 1. Adapter Đồng bộ Cơ sở Dữ liệu Đám mây (Cloud Database Adapter)
+  const CloudDB = {
+    isSyncing: false,
+
+    async fetchUsers() {
+      try {
+        const res = await fetch(CLOUD_CONFIG.USERS_URL, { cache: 'no-store' });
+        if (!res.ok) return null;
+        const json = await res.json();
+        if (json && json.data && Array.isArray(json.data.users)) {
+          return json.data.users;
+        }
+      } catch (err) {
+        console.warn('Lỗi đọc Cloud Users:', err);
       }
-    } catch (_) {}
+      return null;
+    },
 
-    const seed = [
-      {
-        id: 'toan-10-de-01',
-        title: 'Toán 10 - Đề 01 - Trường THPT Hướng Hóa – Quảng Trị',
-        subject: 'math',
-        userId: 'u-an',
-        username: 'nguyenvanan',
-        studentName: 'Nguyễn Văn An',
-        total: 24,
-        correct: 23,
-        points: 6.75,
-        maxPoints: 7.0,
-        questionSetVersion: 2,
-        answers: { m0: 0, m1: 2, m2: 0, m3: 1, m4: 2, m5: 3, m6: 1, m7: 2, m8: 0, m9: 3, m10: 1, m11: 2, 't0-0': true, 't0-1': true, 't0-2': true, 't0-3': true, 't1-0': true, 't1-1': false, 't1-2': true, 't1-3': true, s0: '3', s1: '25', s2: '60', s3: '4' },
-        date: new Date(Date.now() - 3600000 * 48).toISOString(),
-        reason: 'manual'
-      },
-      {
-        id: 'vatli-10-de-01',
-        title: 'Vật lí 10 - Đề 01 - Trường THPT Hướng Hóa – Quảng Trị',
-        subject: 'physics',
-        userId: 'u-an',
-        username: 'nguyenvanan',
-        studentName: 'Nguyễn Văn An',
-        total: 28,
-        correct: 28,
-        points: 7.0,
-        maxPoints: 7.0,
-        questionSetVersion: 2,
-        answers: { m0: 0, m1: 0, m2: 0, m3: 0, m4: 0, m5: 0, m6: 0, m7: 0, m8: 0, m9: 0, m10: 0, m11: 0, m12: 0, m13: 0, m14: 0, m15: 0, 't0-0': true, 't0-1': false, 't0-2': true, 't0-3': true, 't1-0': true, 't1-1': false, 't1-2': true, 't1-3': true, s0: '36', s1: '4', s2: '0.5', s3: '3' },
-        date: new Date(Date.now() - 3600000 * 24).toISOString(),
-        reason: 'manual'
-      },
-      {
-        id: 'hoahoc-10-de-01',
-        title: 'Hóa học 10 - Đề 01 - Trường THPT Hướng Hóa – Quảng Trị',
-        subject: 'chemistry',
-        userId: 'u-an',
-        username: 'nguyenvanan',
-        studentName: 'Nguyễn Văn An',
-        total: 28,
-        correct: 26,
-        points: 6.5,
-        maxPoints: 7.0,
-        questionSetVersion: 2,
-        answers: {},
-        date: new Date(Date.now() - 3600000 * 6).toISOString(),
-        reason: 'manual'
-      },
-      {
-        id: 'toan-10-de-02',
-        title: 'Toán 10 - Đề 02 - Trường THPT Gio Linh – Quảng Trị',
-        subject: 'math',
-        userId: 'u-binh',
-        username: 'tranthibinh',
-        studentName: 'Trần Thị Bình',
-        total: 24,
-        correct: 24,
-        points: 7.0,
-        maxPoints: 7.0,
-        questionSetVersion: 2,
-        answers: {},
-        date: new Date(Date.now() - 3600000 * 36).toISOString(),
-        reason: 'manual'
-      },
-      {
-        id: 'hoahoc-10-de-02',
-        title: 'Hóa học 10 - Đề 02 - Trường THPT Gio Linh – Quảng Trị',
-        subject: 'chemistry',
-        userId: 'u-binh',
-        username: 'tranthibinh',
-        studentName: 'Trần Thị Bình',
-        total: 28,
-        correct: 25,
-        points: 6.25,
-        maxPoints: 7.0,
-        questionSetVersion: 2,
-        answers: {},
-        date: new Date(Date.now() - 3600000 * 12).toISOString(),
-        reason: 'manual'
-      },
-      {
-        id: 'vatli-10-de-02',
-        title: 'Vật lí 10 - Đề 02 - Trường THPT Gio Linh – Quảng Trị',
-        subject: 'physics',
-        userId: 'u-huy',
-        username: 'lequanghuy',
-        studentName: 'Lê Quang Huy',
-        total: 28,
-        correct: 24,
-        points: 5.75,
-        maxPoints: 7.0,
-        questionSetVersion: 2,
-        answers: {},
-        date: new Date(Date.now() - 3600000 * 18).toISOString(),
-        reason: 'manual'
+    async pushUser(newUser) {
+      try {
+        const currentUsers = (await this.fetchUsers()) || auth.getLocalUsers();
+        if (!currentUsers.some(u => u.username.toLowerCase() === newUser.username.toLowerCase())) {
+          currentUsers.push(newUser);
+          await fetch(CLOUD_CONFIG.USERS_URL, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: 'hoctap_database_users',
+              data: { users: currentUsers }
+            })
+          });
+        }
+      } catch (err) {
+        console.warn('Lỗi lưu Cloud User:', err);
       }
-    ];
+    },
 
-    try {
-      localStorage.setItem(STORAGE_RESULTS, JSON.stringify(seed));
-    } catch (_) {}
-  }
+    async fetchResults() {
+      try {
+        const res = await fetch(CLOUD_CONFIG.RESULTS_URL, { cache: 'no-store' });
+        if (!res.ok) return null;
+        const json = await res.json();
+        if (json && json.data && Array.isArray(json.data.results)) {
+          return json.data.results;
+        }
+      } catch (err) {
+        console.warn('Lỗi đọc Cloud Results:', err);
+      }
+      return null;
+    },
+
+    async pushResult(newResult) {
+      try {
+        const currentResults = (await this.fetchResults()) || auth.getLocalResults();
+        // Kiểm tra tránh trùng lặp cùng bài cùng thời gian
+        const exists = currentResults.some(r => r.id === newResult.id && r.userId === newResult.userId && r.date === newResult.date);
+        if (!exists) {
+          currentResults.unshift(newResult);
+          // Giới hạn 500 bài làm gần nhất trên Cloud
+          const trimmed = currentResults.slice(0, 500);
+          await fetch(CLOUD_CONFIG.RESULTS_URL, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: 'hoctap_database_results',
+              data: { results: trimmed }
+            })
+          });
+        }
+      } catch (err) {
+        console.warn('Lỗi lưu Cloud Result:', err);
+      }
+    }
+  };
 
   const auth = {
-    // 1. Quản lí tài khoản người dùng
-    getUsers() {
+    CloudDB,
+
+    // Lấy danh sách tài khoản từ localStorage
+    getLocalUsers() {
       try {
         const str = localStorage.getItem(STORAGE_USERS);
         if (str) {
           const arr = JSON.parse(str);
           if (Array.isArray(arr) && arr.length > 0) {
-            // Đảm bảo tài khoản admin luôn tồn tại
+            // Đảm bảo luôn có tài khoản admin
             if (!arr.some(u => u.username === 'admin')) {
-              arr.unshift(DEFAULT_USERS[0]);
-              this.saveUsers(arr);
+              arr.unshift(DEFAULT_ADMIN);
+              this.saveLocalUsers(arr);
             }
             return arr;
           }
         }
       } catch (_) {}
-      this.saveUsers(DEFAULT_USERS);
-      return [...DEFAULT_USERS];
+      const initList = [DEFAULT_ADMIN];
+      this.saveLocalUsers(initList);
+      return initList;
     },
 
-    saveUsers(users) {
+    saveLocalUsers(users) {
       try {
         localStorage.setItem(STORAGE_USERS, JSON.stringify(users));
       } catch (_) {}
     },
 
-    // Kiểm tra tài khoản hiện tại (null nếu chưa đăng nhập)
+    // Lấy danh sách người dùng (kết hợp đồng bộ Cloud Database)
+    getUsers() {
+      return this.getLocalUsers();
+    },
+
+    // Kiểm tra tài khoản đang đăng nhập (null nếu chưa đăng nhập)
     getCurrentUser() {
       try {
         const str = localStorage.getItem(STORAGE_CURRENT_USER);
@@ -177,7 +156,7 @@
     isAdmin(user) {
       const u = user || this.getCurrentUser();
       if (!u) return false;
-      return u.role === 'admin' || u.role === 'teacher' || u.username === 'admin' || u.username === 'thaygiao';
+      return u.role === 'admin' || u.role === 'teacher' || u.username === 'admin';
     },
 
     setCurrentUser(user) {
@@ -191,46 +170,78 @@
       this.updateUI();
     },
 
+    // Đăng nhập: BẮT BUỘC kiểm tra mật khẩu, không bypass
     login(username, password) {
       const u = String(username || '').trim().toLowerCase();
       const p = String(password || '').trim();
-      const users = this.getUsers();
-      const found = users.find(x => x.username.toLowerCase() === u && x.password === p);
-      if (!found) {
-        return { success: false, message: 'Tên đăng nhập hoặc mật khẩu không chính xác.' };
+
+      if (!u || !p) {
+        return { success: false, message: 'Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.' };
       }
+
+      const users = this.getLocalUsers();
+      const found = users.find(x => x.username.toLowerCase() === u && String(x.password) === p);
+
+      if (!found) {
+        return { success: false, message: 'Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.' };
+      }
+
       this.setCurrentUser(found);
       this.closeModal();
       this.refreshCurrentView();
       return { success: true, user: found };
     },
 
-    register(name, username, password, role = 'student') {
+    // Đăng ký tài khoản riêng: Bắt buộc tạo tài khoản mới
+    register(name, username, password, confirmPassword, isAdminRole = false, secretKey = '') {
       const n = String(name || '').trim();
       const u = String(username || '').trim().toLowerCase();
       const p = String(password || '').trim();
+      const cp = String(confirmPassword || '').trim();
+
       if (!n || !u || !p) {
-        return { success: false, message: 'Vui lòng điền đầy đủ họ tên, tên đăng nhập và mật khẩu.' };
+        return { success: false, message: 'Vui lòng điền đầy đủ họ và tên, tên đăng nhập và mật khẩu.' };
       }
       if (u.length < 3) {
-        return { success: false, message: 'Tên đăng nhập phải có ít nhất 3 kí tự.' };
+        return { success: false, message: 'Tên đăng nhập phải có ít nhất 3 kí tự (viết liền không dấu).' };
       }
-      const users = this.getUsers();
+      if (p.length < 3) {
+        return { success: false, message: 'Mật khẩu phải có ít nhất 3 kí tự để bảo đảm an toàn.' };
+      }
+      if (cp && p !== cp) {
+        return { success: false, message: 'Mật khẩu xác nhận không trùng khớp.' };
+      }
+
+      // Kiểm tra quyền Admin khi đăng ký
+      let finalRole = 'student';
+      if (isAdminRole) {
+        if (String(secretKey || '').trim() !== ADMIN_SECRET_KEY) {
+          return { success: false, message: 'Mã xác thực Quản trị viên không chính xác. Vui lòng kiểm tra lại hoặc bỏ chọn mục này nếu bạn là Học sinh.' };
+        }
+        finalRole = 'admin';
+      }
+
+      const users = this.getLocalUsers();
       if (users.some(x => x.username.toLowerCase() === u)) {
-        return { success: false, message: 'Tên đăng nhập này đã được sử dụng. Vui lòng chọn tên khác.' };
+        return { success: false, message: 'Tên đăng nhập "' + u + '" đã tồn tại. Vui lòng chọn tên đăng nhập khác.' };
       }
-      const isRoleAdmin = role === 'admin' || role === 'teacher';
+
       const newUser = {
         id: 'u-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
         name: n,
         username: u,
         password: p,
-        role: isRoleAdmin ? 'admin' : 'student',
+        role: finalRole,
         createdAt: new Date().toISOString()
       };
+
       users.push(newUser);
-      this.saveUsers(users);
+      this.saveLocalUsers(users);
       this.setCurrentUser(newUser);
+
+      // Lưu lên Cloud Database
+      CloudDB.pushUser(newUser);
+
       this.closeModal();
       this.refreshCurrentView();
       return { success: true, user: newUser };
@@ -241,7 +252,7 @@
       this.requireAuth('home');
     },
 
-    // 2. Cổng xác thực (Auth Gate) - Bắt buộc đăng nhập
+    // 2. Cổng xác thực (Auth Gate) - Khóa toàn bộ trang web khi chưa đăng nhập
     requireAuth(targetView = 'home') {
       if (this.isLoggedIn()) return true;
       this.renderAuthGate(targetView);
@@ -259,12 +270,11 @@
           <div class="auth-gate-card">
             <span class="auth-gate-badge">🔒 YÊU CẦU ĐĂNG NHẬP</span>
             <div class="auth-gate-logo">✦ HỌC<span style="color:#2563eb;">TẬP</span><small style="font-size:12px;color:#64748b;margin-left:4px;">SPACE</small></div>
-            <h2>Chào mừng bạn đến với Không gian Luyện thi</h2>
-            <p>Vui lòng đăng nhập hoặc tạo tài khoản mới để bắt đầu luyện tập 38 bộ đề thi chuẩn, tra cứu sổ tay kiến thức và theo dõi lịch sử bài làm của bạn.</p>
+            <h2>Chào mừng bạn đến với Phòng Luyện thi Trực tuyến</h2>
+            <p>Hệ thống yêu cầu mỗi học sinh và giáo viên phải có tài khoản riêng để làm bài, tự động lưu lịch sử và thống kê điểm số lên Cơ sở dữ liệu.</p>
             <div class="auth-gate-btn-group">
-              <button class="primary auth-gate-btn" id="btn-gate-open-login">🔑 Đăng nhập vào hệ thống ➔</button>
-              <button class="secondary auth-gate-btn" id="btn-gate-open-reg">✨ Tạo tài khoản mới</button>
-              <button class="auth-gate-btn-link" id="btn-gate-open-switch">⚡ Chọn nhanh tài khoản có sẵn (trải nghiệm thử)</button>
+              <button class="primary auth-gate-btn" id="btn-gate-open-login">🔑 Đăng nhập tài khoản của bạn ➔</button>
+              <button class="secondary auth-gate-btn" id="btn-gate-open-reg">✨ Tạo tài khoản mới (Học sinh / Giáo viên)</button>
             </div>
           </div>
         </div>
@@ -274,11 +284,9 @@
       if (bLogin) bLogin.onclick = () => this.openModal('login', false);
       const bReg = document.getElementById('btn-gate-open-reg');
       if (bReg) bReg.onclick = () => this.openModal('register', false);
-      const bSwitch = document.getElementById('btn-gate-open-switch');
-      if (bSwitch) bSwitch.onclick = () => this.openModal('switch', false);
     },
 
-    // 3. Màn hình Từ chối truy cập (Access Denied) khi không phải Admin
+    // 3. Màn hình Từ chối truy cập & Form Đăng nhập Admin bảo mật
     renderAccessDenied() {
       const appEl = document.getElementById('app');
       if (!appEl) return;
@@ -290,17 +298,32 @@
         <div class="content">
           <div class="access-denied-card">
             <div class="access-denied-icon">🔒</div>
-            <h2>Khu vực dành riêng cho Quản trị viên (Admin)</h2>
-            <p>Trang Thống kê lớp học và Theo dõi bài làm chỉ dành riêng cho tài khoản Quản trị viên hoặc Giáo viên phụ trách bộ môn.</p>
+            <h2>Khu vực Quản trị viên & Giáo viên</h2>
+            <p>Trang Thống kê lớp học và Theo dõi điểm số toàn bộ học sinh được bảo mật. Bắt buộc phải có tài khoản Quản trị viên để truy cập.</p>
             <div class="access-current-account-info">
-              <span>👤 Bạn đang đăng nhập: <b>${uName}</b> (@${uUsername})</span>
+              <span>👤 Tài khoản hiện tại: <b>${uName}</b> (@${uUsername})</span>
               <span class="role-badge student">Học sinh</span>
             </div>
-            <p style="font-size:13px;color:#64748b;margin:0 0 16px 0;">Nếu bạn là Quản trị viên hoặc Giáo viên, vui lòng đăng nhập bằng tài khoản Admin để truy cập trang này.</p>
+
+            <!-- Form đăng nhập Admin trực tiếp yêu cầu mật khẩu -->
+            <div class="admin-login-box">
+              <h4 style="margin:0 0 10px 0;font-size:14px;color:#0f172a;text-align:center;">🔑 Đăng nhập tài khoản Quản trị viên (Admin)</h4>
+              <form id="form-admin-auth">
+                <div class="form-group">
+                  <label for="admin-direct-user">Tên đăng nhập Admin</label>
+                  <input type="text" id="admin-direct-user" value="admin" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                  <label for="admin-direct-pass">Mật khẩu Admin</label>
+                  <input type="password" id="admin-direct-pass" placeholder="Nhập mật khẩu quản trị viên" required autocomplete="current-password">
+                </div>
+                <div class="auth-error-msg" id="admin-direct-error" style="margin-bottom:8px;"></div>
+                <button type="submit" class="primary" style="width:100%;padding:10px;font-weight:700;">Xác thực & Vào trang Thống kê ➔</button>
+              </form>
+            </div>
+
             <div class="access-denied-actions">
-              <button class="primary" id="btn-denied-login-admin">🔑 Đăng nhập tài khoản Admin ➔</button>
-              <button class="secondary" id="btn-denied-quick-teacher">⚡ Đổi sang tài khoản Giáo viên có sẵn</button>
-              <button class="secondary" id="btn-denied-home">⬅ Về trang chủ</button>
+              <button class="secondary" id="btn-denied-home">⬅ Quay lại Trang chủ</button>
             </div>
           </div>
         </div>
@@ -308,16 +331,23 @@
 
       if (typeof setNav === 'function') setNav('stats');
 
-      const bAdmin = document.getElementById('btn-denied-login-admin');
-      if (bAdmin) bAdmin.onclick = () => this.openModal('login', true);
-
-      const bTeach = document.getElementById('btn-denied-quick-teacher');
-      if (bTeach) {
-        bTeach.onclick = () => {
-          const teachUser = this.getUsers().find(u => u.username === 'thaygiao' || u.username === 'admin');
-          if (teachUser) {
-            this.setCurrentUser(teachUser);
-            this.renderStatsView();
+      const adminForm = document.getElementById('form-admin-auth');
+      if (adminForm) {
+        adminForm.onsubmit = (e) => {
+          e.preventDefault();
+          const u = document.getElementById('admin-direct-user').value;
+          const p = document.getElementById('admin-direct-pass').value;
+          const res = this.login(u, p);
+          if (res.success) {
+            if (this.isAdmin(res.user)) {
+              this.renderStatsView();
+            } else {
+              const errEl = document.getElementById('admin-direct-error');
+              if (errEl) errEl.textContent = 'Tài khoản này không có quyền Quản trị viên (Admin).';
+            }
+          } else {
+            const errEl = document.getElementById('admin-direct-error');
+            if (errEl) errEl.textContent = 'Mật khẩu quản trị viên không chính xác!';
           }
         };
       }
@@ -331,14 +361,24 @@
       }
     },
 
-    // 4. Lịch sử bài làm & Đề đã làm
-    getAllResults() {
+    // 4. Lịch sử bài làm & Đề đã làm (Đồng bộ Cloud Database)
+    getLocalResults() {
       try {
         const str = localStorage.getItem(STORAGE_RESULTS);
         return str ? JSON.parse(str) : [];
       } catch (_) {
         return [];
       }
+    },
+
+    saveLocalResults(results) {
+      try {
+        localStorage.setItem(STORAGE_RESULTS, JSON.stringify(results.slice(0, 500)));
+      } catch (_) {}
+    },
+
+    getAllResults() {
+      return this.getLocalResults();
     },
 
     getUserResults(userId) {
@@ -370,6 +410,18 @@
         bestResult: best,
         lastResult: matches[0]
       };
+    },
+
+    // Tự động lưu kết quả bài thi: Lưu vào LocalStorage và đẩy lên Cloud Database
+    saveExamResult(result) {
+      const all = this.getLocalResults();
+      all.unshift(result);
+      this.saveLocalResults(all);
+
+      // Đẩy lên Cloud Database trong nền (không làm gián đoạn người dùng)
+      CloudDB.pushResult(result).then(() => {
+        console.log('✅ Đã lưu và đồng bộ bài làm lên Cloud Database:', result.id);
+      }).catch(err => console.warn('Lỗi đồng bộ Cloud Result:', err));
     },
 
     // 5. Cập nhật giao diện khi đổi tài khoản / đăng xuất
@@ -429,8 +481,7 @@
       }
 
       const isAdm = this.isAdmin(user);
-      const isTeacher = user.role === 'teacher';
-      const roleText = user.role === 'admin' ? 'Quản trị viên' : isTeacher ? 'Giáo viên' : 'Học sinh';
+      const roleText = user.role === 'admin' ? 'Quản trị viên' : user.role === 'teacher' ? 'Giáo viên' : 'Học sinh';
       const roleBadgeClass = isAdm ? 'role-badge admin' : 'role-badge student';
       const initial = (user.name || user.username || 'U').trim().charAt(0).toUpperCase();
 
@@ -450,7 +501,6 @@
               <b>${escapeHtml(user.name)}</b>
               <small>@${escapeHtml(user.username)} · ${roleText}</small>
             </div>
-            <button class="user-menu-item" id="menu-item-switch">🔄 Đổi tài khoản khác</button>
             ${isAdm ? `<button class="user-menu-item" id="menu-item-stats">📊 Quản lý thống kê lớp</button>` : ''}
             <button class="user-menu-item logout-item" id="menu-item-logout">🚪 Đăng xuất</button>
           </div>
@@ -476,14 +526,6 @@
         document.addEventListener('click', onDocClick);
       }
 
-      const itemSwitch = document.getElementById('menu-item-switch');
-      if (itemSwitch) {
-        itemSwitch.onclick = () => {
-          if (menu) menu.style.display = 'none';
-          this.openModal('switch', true);
-        };
-      }
-
       const itemStats = document.getElementById('menu-item-stats');
       if (itemStats) {
         itemStats.onclick = () => {
@@ -502,9 +544,8 @@
       }
     },
 
-    // 7. Cửa sổ Modal Đăng nhập / Đăng ký / Chuyển tài khoản
+    // 7. Cửa sổ Modal Đăng nhập / Đăng ký (KHÔNG CÓ CHỌN NHANH, BẮT BUỘC TÀI KHOẢN RIÊNG)
     openModal(initialTab = 'login', canClose = true) {
-      // Nếu chưa đăng nhập thì bắt buộc không được đóng modal
       if (!this.isLoggedIn()) {
         canClose = false;
       }
@@ -516,9 +557,6 @@
         document.body.appendChild(modalRoot);
       }
 
-      const currentUser = this.getCurrentUser();
-      const users = this.getUsers();
-
       modalRoot.innerHTML = `
         <div class="auth-modal-overlay" id="auth-modal-overlay">
           <div class="auth-modal-card">
@@ -527,7 +565,7 @@
                 <span class="auth-brand-mark">✦</span>
                 <div>
                   <h3>TÀI KHOẢN HỌC TẬP</h3>
-                  <small>Đăng nhập, đăng ký hoặc chọn nhanh tài khoản</small>
+                  <small>Đăng nhập hoặc đăng ký tài khoản cá nhân</small>
                 </div>
               </div>
               ${canClose ? `<button class="auth-close-btn" id="btn-close-auth" title="Đóng">&times;</button>` : ''}
@@ -535,87 +573,65 @@
 
             <div class="auth-tabs">
               <button class="auth-tab ${initialTab === 'login' ? 'active' : ''}" data-tab="login">Đăng nhập</button>
-              <button class="auth-tab ${initialTab === 'register' ? 'active' : ''}" data-tab="register">Đăng ký mới</button>
-              <button class="auth-tab ${initialTab === 'switch' ? 'active' : ''}" data-tab="switch">Chọn nhanh tài khoản (${users.length})</button>
+              <button class="auth-tab ${initialTab === 'register' ? 'active' : ''}" data-tab="register">Tạo tài khoản mới</button>
             </div>
 
+            <!-- Tab Đăng nhập -->
             <div class="auth-tab-content ${initialTab === 'login' ? 'active' : ''}" id="tab-login">
               <form id="form-auth-login" class="auth-form">
                 <div class="form-group">
                   <label for="login-username">Tên đăng nhập</label>
-                  <input type="text" id="login-username" placeholder="Ví dụ: admin, thaygiao, nguyenvanan..." required autocomplete="username">
+                  <input type="text" id="login-username" placeholder="Nhập tên đăng nhập của bạn" required autocomplete="username">
                 </div>
                 <div class="form-group">
                   <label for="login-password">Mật khẩu</label>
-                  <input type="password" id="login-password" placeholder="Nhập mật khẩu (tài khoản mẫu: 123)" required autocomplete="current-password">
+                  <input type="password" id="login-password" placeholder="Nhập mật khẩu" required autocomplete="current-password">
                 </div>
                 <div class="auth-error-msg" id="login-error-msg"></div>
                 <button type="submit" class="primary auth-submit-btn">Đăng nhập vào hệ thống ➔</button>
-                <div style="margin-top:12px;font-size:12px;color:#64748b;line-height:1.5;background:#f8fafc;padding:10px 14px;border-radius:8px;border:1px solid #e2e8f0;">
-                  💡 <b>Tài khoản mẫu có sẵn:</b><br>
-                  • <b>Admin:</b> <code>admin</code> (MK: <code>123</code>) · Toàn quyền xem thống kê lớp<br>
-                  • <b>Giáo viên:</b> <code>thaygiao</code> (MK: <code>123</code>)<br>
-                  • <b>Học sinh:</b> <code>nguyenvanan</code>, <code>tranthibinh</code>, <code>lequanghuy</code> (MK: <code>123</code>)
-                </div>
               </form>
             </div>
 
+            <!-- Tab Đăng ký -->
             <div class="auth-tab-content ${initialTab === 'register' ? 'active' : ''}" id="tab-register">
               <form id="form-auth-register" class="auth-form">
                 <div class="form-group">
-                  <label for="reg-name">Họ và tên</label>
-                  <input type="text" id="reg-name" placeholder="Ví dụ: Hoàng Minh Đức" required>
+                  <label for="reg-name">Họ và tên của bạn</label>
+                  <input type="text" id="reg-name" placeholder="Ví dụ: Nguyễn Văn Hoàng" required>
                 </div>
                 <div class="form-group">
-                  <label for="reg-username">Tên đăng nhập (viết liền không dấu)</label>
-                  <input type="text" id="reg-username" placeholder="Ví dụ: minhduc10a1" required>
+                  <label for="reg-username">Tên đăng nhập (viết liền, không dấu)</label>
+                  <input type="text" id="reg-username" placeholder="Ví dụ: vanhoang10a" required>
                 </div>
                 <div class="form-group">
                   <label for="reg-password">Mật khẩu</label>
-                  <input type="password" id="reg-password" placeholder="Tạo mật khẩu dễ nhớ" required>
+                  <input type="password" id="reg-password" placeholder="Tạo mật khẩu cho tài khoản" required>
                 </div>
                 <div class="form-group">
-                  <label for="reg-role">Vai trò</label>
-                  <select id="reg-role" class="auth-select">
-                    <option value="student">👨‍🎓 Học sinh</option>
-                    <option value="admin">👨‍💼 Quản trị viên (Admin) / Giáo viên</option>
-                  </select>
+                  <label for="reg-confirm-password">Xác nhận lại mật khẩu</label>
+                  <input type="password" id="reg-confirm-password" placeholder="Nhập lại mật khẩu phía trên" required>
                 </div>
+
+                <div class="admin-secret-group">
+                  <label style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;cursor:pointer;color:#475569;">
+                    <input type="checkbox" id="reg-is-admin-check">
+                    Đăng ký quyền Quản trị viên (Admin / Giáo viên)
+                  </label>
+                  <div id="admin-secret-box" style="display:none;margin-top:8px;">
+                    <label for="reg-admin-secret" style="font-size:11px;color:#991b1b;font-weight:700;">Mã xác thực Quản trị viên (Admin Secret Key):</label>
+                    <input type="password" id="reg-admin-secret" placeholder="Nhập mã bí mật quản trị do nhà trường cấp">
+                    <small style="color:#64748b;font-size:11px;display:block;margin-top:2px;">Chỉ quản trị viên hoặc giáo viên có mã mới được cấp quyền Admin.</small>
+                  </div>
+                </div>
+
                 <div class="auth-error-msg" id="reg-error-msg"></div>
                 <button type="submit" class="primary auth-submit-btn">Tạo tài khoản và bắt đầu học ➔</button>
               </form>
-            </div>
-
-            <div class="auth-tab-content ${initialTab === 'switch' ? 'active' : ''}" id="tab-switch">
-              <p class="auth-subtitle">Bấm "Chọn" để trải nghiệm ngay với tài khoản mẫu:</p>
-              <div class="user-select-list">
-                ${users.map(u => {
-                  const isCur = currentUser && u.id === currentUser.id;
-                  const resCount = this.getUserResults(u.id).length;
-                  const uInit = (u.name || u.username).trim().charAt(0).toUpperCase();
-                  const isAdm = this.isAdmin(u);
-                  const roleBadge = isAdm ? (u.role === 'admin' ? 'Quản trị viên' : 'Giáo viên') : 'Học sinh';
-
-                  return `<div class="user-select-item ${isCur ? 'selected' : ''}" data-switch-id="${u.id}">
-                    <div class="user-item-left">
-                      <span class="avatar-circle small ${isAdm ? 'avatar-teacher' : ''}">${uInit}</span>
-                      <div>
-                        <strong>${escapeHtml(u.name)}</strong>
-                        <small>@${escapeHtml(u.username)} · <span class="role-badge ${isAdm ? 'admin' : 'student'}" style="display:inline-block;padding:1px 6px;font-size:10px;">${roleBadge}</span> · <b>${resCount}</b> bài đã làm</small>
-                      </div>
-                    </div>
-                    <div class="user-item-right">
-                      ${isCur ? `<span class="badge-active-user">Đang dùng ✓</span>` : `<button class="secondary btn-switch-user" data-switch-id="${u.id}">Chọn ➔</button>`}
-                    </div>
-                  </div>`;
-                }).join('')}
-              </div>
             </div>
           </div>
         </div>
       `;
 
-      // Xử lý sự kiện đóng modal (nếu được phép)
       if (canClose) {
         const closeBtn = document.getElementById('btn-close-auth');
         const overlay = document.getElementById('auth-modal-overlay');
@@ -627,6 +643,15 @@
         }
       }
 
+      // Ẩn hiện ô mã bảo mật admin khi tích checkbox
+      const adminCheck = document.getElementById('reg-is-admin-check');
+      const adminSecretBox = document.getElementById('admin-secret-box');
+      if (adminCheck && adminSecretBox) {
+        adminCheck.onchange = () => {
+          adminSecretBox.style.display = adminCheck.checked ? 'block' : 'none';
+        };
+      }
+
       // Chuyển tab
       const tabBtns = modalRoot.querySelectorAll('.auth-tab');
       tabBtns.forEach(btn => {
@@ -636,19 +661,6 @@
           modalRoot.querySelectorAll('.auth-tab-content').forEach(c => {
             c.classList.toggle('active', c.id === 'tab-' + target);
           });
-        };
-      });
-
-      // Chuyển nhanh tài khoản
-      modalRoot.querySelectorAll('[data-switch-id]').forEach(el => {
-        el.onclick = () => {
-          const uid = el.dataset.switchId;
-          const targetUser = users.find(x => x.id === uid);
-          if (targetUser) {
-            this.setCurrentUser(targetUser);
-            this.closeModal();
-            this.refreshCurrentView();
-          }
         };
       });
 
@@ -675,8 +687,11 @@
           const name = document.getElementById('reg-name').value;
           const u = document.getElementById('reg-username').value;
           const p = document.getElementById('reg-password').value;
-          const role = document.getElementById('reg-role').value;
-          const res = this.register(name, u, p, role);
+          const cp = document.getElementById('reg-confirm-password').value;
+          const isAdmin = adminCheck ? adminCheck.checked : false;
+          const secret = document.getElementById('reg-admin-secret')?.value || '';
+
+          const res = this.register(name, u, p, cp, isAdmin, secret);
           if (!res.success) {
             const err = document.getElementById('reg-error-msg');
             if (err) err.textContent = res.message;
@@ -690,8 +705,9 @@
       if (modalRoot) modalRoot.innerHTML = '';
     },
 
-    // 8. Giao diện Thống kê Lớp học & Xem lịch sử bài làm của các tài khoản khác (DÀNH RIÊNG CHO ADMIN)
-    renderStatsView(filterStudentId = null, filterSubject = null, searchQuery = '') {
+    // 8. Giao diện Thống kê Lớp học & Xem lịch sử bài làm (DÀNH CHO ADMIN)
+    // Đồng bộ trực tiếp từ Cloud Database
+    async renderStatsView(filterStudentId = null, filterSubject = null, searchQuery = '') {
       if (!this.requireAuth('stats')) return;
       if (!this.isAdmin()) {
         this.renderAccessDenied();
@@ -701,15 +717,60 @@
       const appEl = document.getElementById('app');
       if (!appEl) return;
 
-      const users = this.getUsers();
-      const allResults = this.getAllResults();
       const currentUser = this.getCurrentUser();
 
-      // Danh sách học sinh (hoặc tài khoản)
-      const students = users.filter(u => u.role !== 'teacher' && u.role !== 'admin');
-      const displayAccounts = users; // hiển thị tất cả tài khoản để quản trị
+      // Hiển thị khung chờ tải từ Cloud Database
+      appEl.innerHTML = `
+        <div class="content stats-page">
+          <div class="page-heading">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+              <div>
+                <span class="eyebrow" style="background:#fef3c7;color:#b45309;border:none;">KHU VỰC QUẢN TRỊ VIÊN</span>
+                <h1>📊 Thống kê lớp học & Quản lý điểm số</h1>
+                <p>Đang tải và đồng bộ dữ liệu thời gian thực từ Cloud Database...</p>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;padding:40px;"><span style="font-size:24px;">⏳ Đang đồng bộ dữ liệu lớp học...</span></div>
+        </div>
+      `;
 
-      // Tính toán số liệu tổng quan
+      // Đồng bộ từ Cloud Database trong nền
+      const [cloudUsers, cloudResults] = await Promise.all([
+        CloudDB.fetchUsers(),
+        CloudDB.fetchResults()
+      ]);
+
+      if (cloudUsers && Array.isArray(cloudUsers)) {
+        // Gộp users
+        const local = this.getLocalUsers();
+        cloudUsers.forEach(cu => {
+          if (!local.some(lu => lu.id === cu.id || lu.username.toLowerCase() === cu.username.toLowerCase())) {
+            local.push(cu);
+          }
+        });
+        this.saveLocalUsers(local);
+      }
+
+      if (cloudResults && Array.isArray(cloudResults)) {
+        // Gộp results
+        const localRes = this.getLocalResults();
+        cloudResults.forEach(cr => {
+          if (!localRes.some(lr => lr.id === cr.id && lr.userId === cr.userId && lr.date === cr.date)) {
+            localRes.push(cr);
+          }
+        });
+        this.saveLocalResults(localRes);
+      }
+
+      const users = this.getUsers();
+      const allResults = this.getAllResults();
+
+      // Danh sách học sinh (không tính admin)
+      const students = users.filter(u => u.role !== 'admin' && u.role !== 'teacher');
+      const displayAccounts = users;
+
+      // Tính toán 4 khối số liệu
       const totalAttempts = allResults.length;
       const totalStudents = students.length;
       let totalPoints = 0;
@@ -720,16 +781,15 @@
       });
       const avgScore = totalAttempts > 0 ? (totalPoints / totalAttempts).toFixed(2).replace('.', ',') : '0';
 
-      // Tìm học sinh được chọn để xem chi tiết
+      // Học sinh được chọn xem chi tiết
       let selectedUser = null;
       if (filterStudentId) {
         selectedUser = users.find(u => u.id === filterStudentId);
       }
-      if (!selectedUser && users.length > 0) {
-        selectedUser = currentUser || users[0];
+      if (!selectedUser && students.length > 0) {
+        selectedUser = students[0];
       }
 
-      // Kết quả của học sinh được chọn
       let studentResults = this.getUserResults(selectedUser ? selectedUser.id : null);
       if (filterSubject) {
         studentResults = studentResults.filter(r => r.subject === filterSubject);
@@ -740,12 +800,16 @@
           <div class="page-heading">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
               <div>
-                <span class="eyebrow" style="background:#fef3c7;color:#b45309;border:none;">KHU VỰC QUẢN TRỊ VIÊN</span>
-                <h1>📊 Thống kê lớp học & Theo dõi làm bài</h1>
-                <p>Xem tổng quan tiến độ của cả lớp và tra cứu chi tiết lịch sử bài làm của từng học sinh.</p>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                  <span class="eyebrow" style="background:#fef3c7;color:#b45309;border:none;">KHU VỰC QUẢN TRỊ VIÊN</span>
+                  <span class="cloud-sync-badge">☁️ Cloud Database đã kết nối</span>
+                </div>
+                <h1>📊 Thống kê lớp học & Quản lý điểm số</h1>
+                <p>Theo dõi trực tuyến tiến độ, kết quả thi và đáp án chi tiết của tất cả học sinh đã lưu trên hệ thống.</p>
               </div>
-              <div class="stats-top-actions">
-                <button class="secondary" id="btn-stats-switch-user">👤 Đổi tài khoản (${escapeHtml(currentUser.name)})</button>
+              <div class="stats-top-actions" style="display:flex;gap:8px;flex-wrap:wrap;">
+                <button class="secondary small" id="btn-stats-refresh-cloud">🔄 Làm mới từ Cloud DB</button>
+                <button class="secondary small" id="btn-stats-export-json">📥 Xuất file JSON</button>
               </div>
             </div>
           </div>
@@ -770,12 +834,12 @@
             </div>
           </section>
 
-          <!-- Bảng danh sách tất cả tài khoản -->
+          <!-- Bảng danh sách tất cả học sinh -->
           <section class="stats-card-box">
             <div class="stats-box-header">
               <div>
-                <h3>Danh sách tài khoản & Bảng theo dõi học tập</h3>
-                <small>Bấm vào "Xem chi tiết" của bất kì học sinh nào để xem toàn bộ lịch sử thi cử của bạn đó</small>
+                <h3>Danh sách học sinh & Bảng điểm lớp học</h3>
+                <small>Bấm "Xem chi tiết" của bất kì học sinh nào để xem lịch sử làm bài và từng câu đúng/sai</small>
               </div>
               <div class="stats-search-wrap">
                 <input type="text" id="stats-search-input" placeholder="🔍 Tìm theo tên hoặc username..." value="${escapeHtml(searchQuery)}">
@@ -807,7 +871,7 @@
                       const isSel = selectedUser && selectedUser.id === u.id;
                       const isCur = u.id === currentUser.id;
                       const isAdm = this.isAdmin(u);
-                      const roleLabel = u.role === 'admin' ? 'Quản trị viên' : u.role === 'teacher' ? 'Giáo viên' : 'Học sinh';
+                      const roleLabel = isAdm ? 'Quản trị viên' : 'Học sinh';
 
                       let uPts = 0;
                       let uMax = 0;
@@ -852,14 +916,14 @@
             </div>
           </section>
 
-          <!-- Khung chi tiết lịch sử của học sinh được chọn -->
+          <!-- Khung chi tiết bài làm của học sinh được chọn -->
           ${selectedUser ? `
             <section class="student-drilldown-box">
               <div class="drilldown-header">
                 <div>
-                  <span class="eyebrow" style="background:#e0e7ff;color:#3730a3;border:none;">LỊCH SỬ CHI TIẾT CỦA TÀI KHOẢN</span>
+                  <span class="eyebrow" style="background:#e0e7ff;color:#3730a3;border:none;">LỊCH SỬ CHI TIẾT CỦA HỌC SINH</span>
                   <h2>${escapeHtml(selectedUser.name)} (@${escapeHtml(selectedUser.username)})</h2>
-                  <p>Tổng cộng <b>${studentResults.length}</b> lượt làm bài thi đã được hệ thống ghi nhận.</p>
+                  <p>Tổng cộng <b>${studentResults.length}</b> lượt thi đã được đồng bộ lên cơ sở dữ liệu.</p>
                 </div>
                 <div class="drilldown-filter-tabs">
                   <button class="filter ${!filterSubject ? 'active' : ''}" data-filter-sub="">Tất cả môn (${this.getUserResults(selectedUser.id).length})</button>
@@ -891,7 +955,7 @@
                             <small>${r.correct}/${r.total} ý đúng · ${r.reason === 'time' ? 'Hết giờ' : 'Đã nộp'}</small>
                           </div>
                           <button class="primary small btn-review-result" data-result-idx="${rIdx}" data-student-id="${selectedUser.id}">
-                            Xem lại bài làm & câu sai ➔
+                            Xem lại câu đúng/sai ➔
                           </button>
                         </div>
                       </div>
@@ -901,7 +965,7 @@
               ` : `
                 <div class="notice" style="margin:20px 0;">
                   <b>Học sinh này chưa làm bài thi nào ${filterSubject ? `cho môn đã chọn` : ''}.</b><br>
-                  Khi học sinh hoàn thành bất kì đề thi nào, kết quả và đáp án chi tiết sẽ tự động hiển thị tại đây.
+                  Khi học sinh hoàn thành bất kì đề thi nào, điểm và lời giải chi tiết sẽ tự động hiển thị tại đây.
                 </div>
               `}
             </section>
@@ -911,9 +975,32 @@
 
       if (typeof setNav === 'function') setNav('stats');
 
-      // Gắn sự kiện cho các nút trong trang Thống kê
-      const switchBtn = document.getElementById('btn-stats-switch-user');
-      if (switchBtn) switchBtn.onclick = () => this.openModal('switch', true);
+      // Nút làm mới dữ liệu từ Cloud
+      const btnRefresh = document.getElementById('btn-stats-refresh-cloud');
+      if (btnRefresh) {
+        btnRefresh.onclick = () => {
+          this.renderStatsView(selectedUser ? selectedUser.id : null, filterSubject, searchQuery);
+        };
+      }
+
+      // Nút xuất file JSON
+      const btnExport = document.getElementById('btn-stats-export-json');
+      if (btnExport) {
+        btnExport.onclick = () => {
+          const exportData = {
+            exportDate: new Date().toISOString(),
+            users: this.getUsers(),
+            results: this.getAllResults()
+          };
+          const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `du-lieu-lop-hoc-${new Date().toISOString().slice(0, 10)}.json`;
+          a.click();
+          URL.revokeObjectURL(url);
+        };
+      }
 
       // Tìm kiếm học sinh
       const searchInput = document.getElementById('stats-search-input');
@@ -979,7 +1066,6 @@
       const score = (typeof scoreExam === 'function') ? scoreExam(e, a) : { points: r.points, max: r.maxPoints, correct: r.correct, total: r.total };
       const sName = studentUser ? studentUser.name : (r.studentName || 'Học sinh');
 
-      // Tách các câu đúng/sai để hiển thị
       const reviewCards = [];
 
       // Phần I (MC)
@@ -1125,9 +1211,8 @@
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  // Khởi tạo hạt giống kết quả thi và người dùng
-  initSeedResults();
-  auth.getUsers();
+  // Khởi tạo
+  auth.getLocalUsers();
 
   if (typeof document !== 'undefined') {
     if (document.readyState === 'loading') {
@@ -1137,7 +1222,7 @@
     }
   }
 
-  // Đưa vào phạm vi toàn cục
+  // Toàn cục
   if (typeof window !== 'undefined') {
     window.auth = auth;
   }

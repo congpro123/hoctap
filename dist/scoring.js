@@ -38,6 +38,7 @@ submitExam=function(reason){
   };
   const all=saved();all.unshift(result);
   localStorage.setItem('hoctap-results',JSON.stringify(all.slice(0,100)));
+  if (typeof window !== 'undefined' && window.auth && typeof window.auth.saveExamResult === 'function') { window.auth.saveExamResult(result); }
   localStorage.removeItem('hoctap-draft');activeExam=null;renderResult(result);
 };
 const previousRenderExam=renderExam;

@@ -1,5 +1,4 @@
-const fs = require('fs');
-const assert = require('assert');
+const assert = require('assert/strict');
 
 // Thiết lập môi trường DOM giả lập cho Node.js
 class MockClassList {
@@ -28,28 +27,12 @@ class MockElement {
     this.classList = new MockClassList();
     this.style = {};
     this.attributes = {};
-    this.children = [];
-    this.parentElement = null;
   }
-
   setAttribute(k, v) { this.attributes[k] = v; }
   getAttribute(k) { return this.attributes[k] || null; }
-
-  querySelector(sel) {
-    return this.querySelectorAll(sel)[0] || null;
-  }
-
-  querySelectorAll(sel) {
-    const res = [];
-    // Hỗ trợ tìm kiếm cơ bản dựa trên innerHTML / ID
-    if (sel.startsWith('#')) {
-      const targetId = sel.slice(1);
-      if (this.id === targetId) res.push(this);
-    }
-    return res;
-  }
-
-  closest(sel) { return null; }
+  querySelector(sel) { return null; }
+  querySelectorAll() { return []; }
+  closest() { return null; }
   scrollIntoView() {}
 }
 
@@ -61,19 +44,15 @@ const mockLocalStorage = {
   clear() { this.store = {}; }
 };
 
-// Khởi tạo window, document, localStorage
 global.window = global;
 global.localStorage = mockLocalStorage;
 
 const appEl = new MockElement('div');
 appEl.id = 'app';
-
 const modalRoot = new MockElement('div');
 modalRoot.id = 'modal-root';
-
 const topRight = new MockElement('div');
 topRight.classList.add('top-right');
-
 const statsLink = new MockElement('a');
 statsLink.setAttribute('href', '#stats');
 statsLink.setAttribute('data-view', 'stats');
@@ -82,9 +61,6 @@ global.document = {
   getElementById(id) {
     if (id === 'app') return appEl;
     if (id === 'modal-root') return modalRoot;
-    if (id === 'btn-close-auth') return new MockElement('button');
-    if (id === 'login-username') return { value: 'admin' };
-    if (id === 'login-password') return { value: '123' };
     return new MockElement('div');
   },
   querySelector(sel) {
@@ -94,91 +70,92 @@ global.document = {
   },
   querySelectorAll() { return []; },
   createElement(tag) { return new MockElement(tag); },
-  body: {
-    appendChild(child) {}
-  },
+  body: { appendChild() {} },
   addEventListener() {},
   removeEventListener() {}
 };
 
 global.location = { hash: '#home' };
-global.setNav = function(view) {};
-global.formatDate = function(d) { return '02/11/2026'; };
+global.setNav = function() {};
+global.formatDate = function() { return '02/11/2026'; };
 global.getSubjectMeta = function(s) { return { name: s, icon: '⚛', bg: '#fff', color: '#000' }; };
 global.pointText = function(p) { return String(p); };
 
 // Nạp dist/auth.js
 require('./dist/auth.js');
 
-console.log('--- BẮT ĐẦU KIỂM THỬ AUTH GATE & PHÂN QUYỀN ADMIN ---');
+console.log('--- BẮT ĐẦU KIỂM THỬ BẢO MẬT ADMIN & DATABASE ĐỒNG BỘ ---');
 
 // TEST 1: Khởi tạo chưa đăng nhập (Auth Gate)
 mockLocalStorage.clear();
-assert.strictEqual(window.auth.getCurrentUser(), null, 'Chưa đăng nhập thì getCurrentUser() phải trả về null');
-assert.strictEqual(window.auth.isLoggedIn(), false, 'isLoggedIn() phải là false');
-assert.strictEqual(window.auth.isAdmin(), false, 'isAdmin() phải là false khi chưa đăng nhập');
+assert.strictEqual(window.auth.getCurrentUser(), null, 'Chưa đăng nhập thì getCurrentUser() = null');
+assert.strictEqual(window.auth.isLoggedIn(), false, 'isLoggedIn() = false');
+assert.strictEqual(window.auth.isAdmin(), false, 'isAdmin() = false');
 
-// Gọi requireAuth() khi chưa đăng nhập
-const authResult = window.auth.requireAuth('home');
-assert.strictEqual(authResult, false, 'requireAuth() phải trả về false khi chưa đăng nhập');
-assert.ok(appEl.innerHTML.includes('auth-gate-screen'), 'Phải hiển thị .auth-gate-screen khi chưa đăng nhập');
-assert.ok(modalRoot.innerHTML.includes('auth-modal-card'), 'Phải mở modal xác thực');
-assert.ok(!modalRoot.innerHTML.includes('btn-close-auth'), 'Modal không được có nút đóng khi canClose=false (chưa đăng nhập)');
-console.log('✓ TEST 1 ĐẠT: Cổng Auth Gate bắt buộc đăng nhập hoạt động chính xác (modal không thể tắt khi chưa đăng nhập)');
+// Bật modal khi chưa đăng nhập
+window.auth.openModal('login', false);
+assert.ok(!modalRoot.innerHTML.includes('tab-switch'), 'TUYỆT ĐỐI KHÔNG CÓ tab "Chọn nhanh tài khoản" (switch)');
+assert.ok(!modalRoot.innerHTML.includes('btn-switch-user'), 'Không có nút chọn nhanh tài khoản');
+assert.ok(modalRoot.innerHTML.includes('Tạo tài khoản mới'), 'Có tab Đăng ký tài khoản');
+assert.ok(modalRoot.innerHTML.includes('Đăng nhập'), 'Có tab Đăng nhập');
+assert.ok(!modalRoot.innerHTML.includes('btn-close-auth'), 'Không cho tắt modal khi chưa đăng nhập');
+console.log('✓ TEST 1 ĐẠT: Không cho chọn nhanh tài khoản, bắt buộc đăng ký/đăng nhập tài khoản riêng');
 
-// TEST 2: Đăng nhập tài khoản Học sinh (nguyenvanan)
-const loginStudent = window.auth.login('nguyenvanan', '123');
-assert.ok(loginStudent.success, 'Đăng nhập học sinh nguyenvanan thành công');
-assert.strictEqual(window.auth.isLoggedIn(), true, 'Đã đăng nhập thành công');
-assert.strictEqual(window.auth.getCurrentUser().username, 'nguyenvanan', 'User hiện tại là nguyenvanan');
-assert.strictEqual(window.auth.isAdmin(), false, 'Học sinh không phải là admin');
+// TEST 2: Đăng nhập Admin BẮT BUỘC có mật khẩu đúng
+const failAdmin1 = window.auth.login('admin', 'wrong_pass');
+assert.strictEqual(failAdmin1.success, false, 'Nhập sai mật khẩu Admin phải bị từ chối');
+assert.strictEqual(window.auth.isLoggedIn(), false, 'Chưa đăng nhập được khi mật khẩu sai');
 
-// Học sinh truy cập trang Thống kê lớp học (#stats)
-window.auth.renderStatsView();
-assert.ok(appEl.innerHTML.includes('access-denied-card'), 'Học sinh truy cập #stats phải bị chuyển vào màn hình Access Denied');
-assert.ok(appEl.innerHTML.includes('Khu vực dành riêng cho Quản trị viên'), 'Phải có tiêu đề cảnh báo từ chối truy cập');
-assert.ok(!appEl.innerHTML.includes('stats-table'), 'Học sinh tuyệt đối không được xem bảng thống kê lớp học');
-console.log('✓ TEST 2 ĐẠT: Học sinh truy cập #stats bị chặn bởi Access Denied');
+const failAdmin2 = window.auth.login('admin', '');
+assert.strictEqual(failAdmin2.success, false, 'Không nhập mật khẩu Admin phải bị từ chối');
 
-// TEST 3: Đăng nhập tài khoản Admin (admin / 123)
-const loginAdmin = window.auth.login('admin', '123');
-assert.ok(loginAdmin.success, 'Đăng nhập admin thành công');
-assert.strictEqual(window.auth.isLoggedIn(), true, 'Admin đã đăng nhập');
-assert.strictEqual(window.auth.isAdmin(), true, 'isAdmin() phải trả về true');
+const okAdmin = window.auth.login('admin', '123');
+assert.strictEqual(okAdmin.success, true, 'Nhập đúng mật khẩu 123 đăng nhập Admin thành công');
+assert.strictEqual(window.auth.isAdmin(), true, 'Tài khoản admin có quyền Quản trị viên');
+console.log('✓ TEST 2 ĐẠT: Vào tài khoản Admin BẮT BUỘC phải nhập đúng mật khẩu, chặn hoàn toàn mật khẩu sai');
 
-// Admin truy cập trang Thống kê lớp học (#stats)
-window.auth.renderStatsView();
-assert.ok(!appEl.innerHTML.includes('access-denied-card'), 'Admin không bị từ chối');
-assert.ok(appEl.innerHTML.includes('stats-page'), 'Admin được xem trang stats-page');
-assert.ok(appEl.innerHTML.includes('stats-table'), 'Admin xem được bảng danh sách học sinh stats-table');
-assert.ok(appEl.innerHTML.includes('Nguyễn Văn An'), 'Bảng có chứa học sinh Nguyễn Văn An');
-console.log('✓ TEST 3 ĐẠT: Tài khoản Admin xem đầy đủ Thống kê lớp học và chi tiết học sinh');
-
-// TEST 4: Tài khoản Giáo viên (thaygiao / 123) cũng có quyền Admin
-const loginTeacher = window.auth.login('thaygiao', '123');
-assert.ok(loginTeacher.success, 'Đăng nhập giáo viên thaygiao thành công');
-assert.strictEqual(window.auth.isAdmin(), true, 'Giáo viên thaygiao có quyền Admin xem thống kê');
-window.auth.renderStatsView();
-assert.ok(appEl.innerHTML.includes('stats-table'), 'Giáo viên xem được bảng thống kê');
-console.log('✓ TEST 4 ĐẠT: Tài khoản Giáo viên có quyền Admin quản trị thống kê lớp');
-
-// TEST 5: Đăng xuất (Logout)
+// TEST 3: Đăng xuất và Tạo tài khoản Học sinh riêng
 window.auth.logout();
-assert.strictEqual(window.auth.isLoggedIn(), false, 'Sau khi logout, isLoggedIn() phải là false');
-assert.strictEqual(window.auth.getCurrentUser(), null, 'Sau khi logout, currentUser là null');
-assert.ok(appEl.innerHTML.includes('auth-gate-screen'), 'Sau khi logout, app lập tức quay về auth-gate-screen');
-console.log('✓ TEST 5 ĐẠT: Đăng xuất xóa phiên và lập tức khóa màn hình Auth Gate');
+assert.strictEqual(window.auth.isLoggedIn(), false, 'Đã đăng xuất thành công');
 
-// TEST 6: Đăng ký tài khoản mới
-const regStudent = window.auth.register('Trần Văn Nam', 'tvnam10', '123456', 'student');
-assert.ok(regStudent.success, 'Đăng ký học sinh mới thành công');
-assert.strictEqual(window.auth.getCurrentUser().username, 'tvnam10');
-assert.strictEqual(window.auth.isAdmin(), false, 'Tài khoản mới đăng ký vai trò học sinh');
+// Đăng ký học sinh bình thường
+const regStudent = window.auth.register('Trần Thu Trang', 'thutrang10a', 'trang123', 'trang123', false);
+assert.strictEqual(regStudent.success, true, 'Đăng ký học sinh mới thành công');
+assert.strictEqual(window.auth.getCurrentUser().username, 'thutrang10a');
+assert.strictEqual(window.auth.isAdmin(), false, 'Tài khoản học sinh không có quyền Admin');
 
-const regAdmin = window.auth.register('Cô Lê Thảo', 'lethao_gv', '123456', 'admin');
-assert.ok(regAdmin.success, 'Đăng ký giáo viên/admin mới thành công');
-assert.strictEqual(window.auth.getCurrentUser().username, 'lethao_gv');
-assert.strictEqual(window.auth.isAdmin(), true, 'Tài khoản mới đăng ký vai trò admin có quyền quản trị');
-console.log('✓ TEST 6 ĐẠT: Đăng ký tài khoản mới và phân quyền vai trò chuẩn xác');
+// Thử tự phong Admin bằng cách không có mã bí mật
+const failFakeAdmin = window.auth.register('Kẻ Mạo Danh', 'hacker99', '123456', '123456', true, 'wrong_key');
+assert.strictEqual(failFakeAdmin.success, false, 'Đăng ký Admin với mã bí mật sai phải bị từ chối');
+console.log('✓ TEST 3 ĐẠT: Học sinh tạo tài khoản riêng, không thể tự phong quyền Admin nếu không có mã xác thực');
 
-console.log('=== TẤT CẢ CÁC BÀI TEST AUTH GATE & ADMIN ĐỀU THÀNH CÔNG 100%! ===');
+// TEST 4: Học sinh truy cập trang Thống kê lớp học (#stats)
+window.auth.renderAccessDenied();
+assert.ok(appEl.innerHTML.includes('access-denied-card'), 'Hiển thị màn hình từ chối');
+assert.ok(appEl.innerHTML.includes('admin-login-box'), 'Hiển thị form đăng nhập Admin trực tiếp yêu cầu mật khẩu');
+assert.ok(!appEl.innerHTML.includes('Đổi sang tài khoản Giáo viên có sẵn'), 'Tuyệt đối không có nút chuyển nhanh sang Admin');
+console.log('✓ TEST 4 ĐẠT: Học sinh vào #stats bị chặn, muốn vào phải nhập đúng mật khẩu Quản trị viên');
+
+// TEST 5: Lưu kết quả làm bài vào Database
+const sampleResult = {
+  id: 'vatli-10-de-01',
+  title: 'Vật lí 10 - Đề 01',
+  subject: 'physics',
+  userId: window.auth.getCurrentUser().id,
+  username: window.auth.getCurrentUser().username,
+  studentName: window.auth.getCurrentUser().name,
+  total: 28,
+  correct: 27,
+  points: 6.75,
+  maxPoints: 7.0,
+  answers: { m0: 0 },
+  date: new Date().toISOString()
+};
+
+window.auth.saveExamResult(sampleResult);
+const savedResults = window.auth.getUserResults(sampleResult.userId);
+assert.strictEqual(savedResults.length, 1, 'Bài làm đã được lưu vào database');
+assert.strictEqual(savedResults[0].points, 6.75, 'Điểm số bài làm được lưu chính xác');
+console.log('✓ TEST 5 ĐẠT: Bài làm và điểm số được lưu tự động lên Database');
+
+console.log('\n=== TẤT CẢ 5 BÀI TEST BẢO MẬT ADMIN & DATABASE ĐỀU ĐẠT 100%! ===');
