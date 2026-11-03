@@ -9,6 +9,14 @@
   const STORAGE_USERS = 'hoctap-users';
   const STORAGE_CURRENT_USER = 'hoctap-current-user';
   const STORAGE_RESULTS = 'hoctap-results';
+  // One-time cleanup requested on 2026-11-03. Keep later attempts, even below 3 points.
+  const LOW_SCORE_CUTOFF = Date.parse('2026-11-03T16:53:42Z');
+  const isRemovedLowScore = result => {
+    const points = Number(result?.points ?? result?.score);
+    const submittedAt = Date.parse(result?.date);
+    return Number.isFinite(points) && points < 3 && Number.isFinite(submittedAt) && submittedAt <= LOW_SCORE_CUTOFF;
+  };
+  const keepResults = results => results.filter(result => !isRemovedLowScore(result));
 
   // Cấu hình Google Firebase Realtime Database (Đồng bộ thời gian thực đa trình duyệt, đa thiết bị)
   const FIREBASE_CONFIG = {
@@ -189,8 +197,8 @@
             if (data) {
               this.status = 'online';
               this.engine = 'firebase';
-              if (Array.isArray(data)) return data;
-              if (typeof data === 'object') return Object.values(data);
+              if (Array.isArray(data)) return keepResults(data);
+              if (typeof data === 'object') return keepResults(Object.values(data));
             }
           }
         } catch (err) {
@@ -212,7 +220,7 @@
         if (json && json.data && Array.isArray(json.data.results)) {
           this.status = 'online';
           this.engine = 'rest';
-          return json.data.results;
+          return keepResults(json.data.results);
         }
       } catch (err) {
         console.warn('Lỗi đọc Cloud Results:', err);
@@ -235,7 +243,7 @@
           if (newResult && !merged.some(lr => lr.id === newResult.id && lr.userId === newResult.userId && lr.date === newResult.date)) {
             merged.unshift(newResult);
           }
-          const trimmed = merged.slice(0, 500);
+          const trimmed = keepResults(merged).slice(0, 500);
           const res = await fetch(`${fbUrl}/results.json`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -546,7 +554,11 @@
     getLocalResults() {
       try {
         const str = localStorage.getItem(STORAGE_RESULTS);
-        return str ? JSON.parse(str) : [];
+        const results = str ? JSON.parse(str) : [];
+        if (!Array.isArray(results)) return [];
+        const kept = keepResults(results);
+        if (kept.length !== results.length) this.saveLocalResults(kept);
+        return kept;
       } catch (_) {
         return [];
       }
@@ -554,7 +566,7 @@
 
     saveLocalResults(results) {
       try {
-        localStorage.setItem(STORAGE_RESULTS, JSON.stringify(results.slice(0, 500)));
+        localStorage.setItem(STORAGE_RESULTS, JSON.stringify(keepResults(results).slice(0, 500)));
       } catch (_) {}
     },
 
@@ -605,7 +617,7 @@
     // Tự động lưu kết quả bài thi: Lưu vào LocalStorage và đẩy lên Cloud Database
     saveExamResult(result) {
       const all = this.getLocalResults();
-      all.unshift(result);
+      if (!all.some(r => r.id === result.id && r.userId === result.userId && r.date === result.date)) all.unshift(result);
       this.saveLocalResults(all);
 
       // Đẩy lên Cloud Database trong nền (không làm gián đoạn người dùng)

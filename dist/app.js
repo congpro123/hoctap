@@ -139,7 +139,7 @@ function tryRenderKatex(root) {
 }
 
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const saved = () => { try { return JSON.parse(localStorage.getItem('hoctap-results') || '[]'); } catch { return []; } };
+const saved = () => { try { return window.auth?.getLocalResults?.() || JSON.parse(localStorage.getItem('hoctap-results') || '[]'); } catch { return []; } };
 const formatDate = d => {
   try {
     return new Intl.DateTimeFormat('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(d));
