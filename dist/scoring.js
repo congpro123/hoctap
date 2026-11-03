@@ -102,3 +102,33 @@ reviewPast=function(index){
   }
   if(typeof tryRenderKatex==='function')tryRenderKatex(panel);
 };
+
+function regradeAllSavedResults(){
+  try{
+    const all = typeof saved === 'function' ? saved() : [];
+    let changed = false;
+    all.forEach(r => {
+      if(!r || !r.id || !r.answers) return;
+      const sc = scoreForResult(r);
+      if(!sc) return;
+      if(Math.abs((r.points !== undefined ? r.points : r.score) - sc.points) > 0.001 || r.correct !== sc.correct){
+        r.points = sc.points;
+        r.score = sc.points;
+        r.correct = sc.correct;
+        r.total = sc.total;
+        r.maxPoints = sc.max;
+        changed = true;
+      }
+    });
+    if(changed && typeof localStorage !== 'undefined'){
+      localStorage.setItem('hoctap-results', JSON.stringify(all));
+    }
+  }catch(_){}
+}
+if(typeof document !== 'undefined'){
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', regradeAllSavedResults);
+  } else {
+    regradeAllSavedResults();
+  }
+}

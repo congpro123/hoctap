@@ -10475,8 +10475,8 @@ const suppliedExams = [
           "C. 8.",
           "D. 6."
         ],
-        0,
-        "Số electron tối đa trong lớp thứ n là 2n² (với n ≤ 4). Với lớp thứ 3 (n = 3), số e tối đa là 2 × 3² = 18 electron (gồm 3s² 3p⁶ 3d¹⁰)."
+        2,
+        "Nguyên tử nguyên tố X có 3 lớp electron ⇒ X thuộc chu kỳ 3. Lớp thứ 3 chính là lớp ngoài cùng của X. Theo quy tắc số electron tối đa ở lớp ngoài cùng của mọi nguyên tử không vượt quá 8 electron, do đó số electron tối đa ở lớp thứ 3 của X là 8 electron (khi đạt cấu hình khí hiếm Argon 3s² 3p⁶). (Lưu ý phân biệt: Công thức 2n² = 18e áp dụng cho lớp 3 nói chung khi đã có lớp 4 bao bọc ở ngoài như Zn [Ar] 3d¹⁰ 4s²; còn ở đây đề cho X chỉ có 3 lớp electron nên lớp 3 là lớp ngoài cùng tối đa 8e)."
       ],
       [
         "Nguyên tử Y có cấu hình electron 1s² 2s² 2p⁶ 3s¹. Vị trí của Y trong bảng tuần hoàn là",
@@ -10569,8 +10569,8 @@ const suppliedExams = [
           ],
           [
             "Ở trạng thái cơ bản nguyên tử nguyên tố X có 13 electron ở lớp thứ 3 và có 5 e độc thân, X thuộc nhóm VIB.",
-            true,
-            "ĐÚNG. Lớp thứ 3 có 13 electron: 3s² 3p⁶ 3d⁵. Cấu hình electron đầy đủ ở trạng thái cơ bản là 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s¹ (Z = 24, Chromium). Lớp thứ 3 có phân lớp 3d⁵ gồm 5 e độc thân. Cấu hình e hóa trị là 3d⁵ 4s¹ ⇒ tổng e hóa trị bằng 6, nguyên tố d ⇒ X thuộc nhóm VIB, chu kỳ 4."
+            false,
+            "SAI. Lớp thứ 3 có 13 electron: 3s² 3p⁶ 3d⁵.<br>• Nếu là Chromium (Cr, Z = 24, thuộc nhóm VIB): Cấu hình electron là [Ar] 3d⁵ 4s¹. Nguyên tử có 13e ở lớp thứ 3 nhưng có tới 6 electron độc thân (5e ở 3d và 1e ở 4s), không phải 5e độc thân.<br>• Nếu nguyên tử có 13e ở lớp thứ 3 và có đúng 5e độc thân thì phân lớp 4s phải chứa 2e ghép đôi: [Ar] 3d⁵ 4s² (Z = 25, Manganese). Khi đó tổng số e hóa trị là 5 + 2 = 7, nguyên tố d ⇒ X thuộc nhóm VIIB (không phải nhóm VIB).<br>Do đó phát biểu này là SAI."
           ]
         ]
       }

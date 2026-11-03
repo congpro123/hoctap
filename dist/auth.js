@@ -688,11 +688,38 @@
           const localR = this.getLocalResults();
           let changedR = false;
           cloudResults.forEach(cr => {
-            if (!localR.some(lr => lr.id === cr.id && lr.userId === cr.userId && lr.date === cr.date)) {
+            const existing = localR.find(lr => lr.id === cr.id && lr.userId === cr.userId && lr.date === cr.date);
+            if (!existing) {
               localR.push(cr);
+              changedR = true;
+            } else if (cr.points !== undefined && (cr.points !== existing.points || cr.correct !== existing.correct)) {
+              existing.points = cr.points;
+              existing.score = cr.score;
+              existing.correct = cr.correct;
+              existing.total = cr.total;
+              existing.maxPoints = cr.maxPoints;
               changedR = true;
             }
           });
+
+          // Tự động chấm lại toàn bộ bài làm theo đáp án cập nhật mới nhất
+          if (typeof exams !== 'undefined' && Array.isArray(exams) && typeof scoreExam === 'function') {
+            localR.forEach(r => {
+              if (!r || !r.id || !r.answers) return;
+              const ex = exams.find(x => x.id === r.id);
+              if (!ex) return;
+              const sc = scoreExam(ex, r.answers, r.total === ex.questions.length);
+              if (sc && (Math.abs((r.points !== undefined ? r.points : r.score) - sc.points) > 0.001 || r.correct !== sc.correct)) {
+                r.points = sc.points;
+                r.score = sc.points;
+                r.correct = sc.correct;
+                r.total = sc.total;
+                r.maxPoints = sc.max;
+                changedR = true;
+              }
+            });
+          }
+
           if (changedR) this.saveLocalResults(localR);
         }
       } catch (_) {}
