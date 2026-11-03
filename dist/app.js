@@ -21,7 +21,7 @@ function cleanItemText(text) {
 }
 
 const isTfTrue = v => (v === true || v === 'true' || v === 'Đúng' || v === 'đúng');
-const isTfMatch = (user, expected) => user !== undefined && user !== null && Boolean(user) === isTfTrue(expected);
+const isTfMatch = (user, expected) => user !== undefined && user !== null && isTfTrue(user) === isTfTrue(expected);
 
 // Hàm chuẩn hóa dữ liệu đề thi tự động tương thích
 function normalizeExam(e) {
@@ -37,7 +37,7 @@ function normalizeExam(e) {
   if (!e.minutes && e.duration) e.minutes = e.duration;
   if (!e.minutes) e.minutes = e.subject === 'math' ? 90 : 45;
   if (!e.description) {
-    e.description = `Bộ đề kiểm tra giữa học kì I môn ${e.subject === 'math' ? 'Toán 10' : e.subject === 'chemistry' ? 'Hóa học 10' : 'Vật lí 10'}.`;
+    e.description = `Bộ đề kiểm tra giữa học kì I môn ${e.subject === 'math' ? 'Toán 10' : e.subject === 'chemistry' ? 'Hóa học 10' : e.subject === 'english' ? 'Tiếng Anh 10' : 'Vật lí 10'}.`;
   }
   
   const letterMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 };
@@ -94,6 +94,15 @@ const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedE
 
 if (rawData.length > 0) {
   exams = rawData.map(normalizeExam);
+  exams.filter(e => e.subject === 'english').forEach(e => {
+    e.source = {
+      school: 'REVIEW 1.docx do người dùng cung cấp',
+      province: '',
+      year: '',
+      url: 'supplied/REVIEW-1.docx',
+      note: 'Nội dung bài tập lấy từ tài liệu Word; đáp án và giải thích do hệ thống biên soạn.'
+    };
+  });
 } else {
   exams = [
     {
@@ -154,6 +163,7 @@ if (subjectNavEl) {
 function getSubjectMeta(subj) {
   if (subj === 'math') return { icon: '∑', name: 'TOÁN 10', color: '#6155e8', bg: '#e9e7ff', id: 0 };
   if (subj === 'chemistry') return { icon: '🧪', name: 'HÓA HỌC 10', color: '#d76fab', bg: '#fceaf4', id: 5 };
+  if (subj === 'english') return { icon: 'Aa', name: 'TIẾNG ANH 10', color: '#ec8e63', bg: '#fff0e8', id: 4 };
   return { icon: '⚛️', name: 'VẬT LÝ 10', color: '#4b9ad8', bg: '#e7f4ff', id: 1 };
 }
 
@@ -540,7 +550,7 @@ function renderExam() {
         </div>
         ${sourceLine(e)}
         
-        <h2 class="part-heading">Phần I · Nhiều lựa chọn (${(e.questions || []).length} câu)</h2>
+        ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · Nhiều lựa chọn (${e.questions.length} câu)</h2>` : ''}
         ${(e.questions || []).map((q, i) => `<div class="question" id="q-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
@@ -554,7 +564,7 @@ function renderExam() {
           </div>
         </div>`).join('')}
 
-        <h2 class="part-heading">Phần II · Đúng / Sai (2 câu, mỗi câu 4 ý a, b, c, d)</h2>
+        ${(e.tf || []).length ? `<h2 class="part-heading">Phần II · Đúng / Sai (${e.tf.length} câu)</h2>` : ''}
         ${(e.tf || []).map((q, i) => `<div class="question" id="tf-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
@@ -569,23 +579,23 @@ function renderExam() {
           </div>`).join('')}
         </div>`).join('')}
 
-        <h2 class="part-heading">Phần III · Trả lời ngắn (4 câu)</h2>
-        <p class="short-hint">Điền số đáp án chính xác (chấp nhận cả dấu phẩy và dấu chấm thập phân).</p>
+        ${(e.short || []).length ? `<h2 class="part-heading">Phần III · Trả lời ngắn (${e.short.length} câu)</h2>
+        <p class="short-hint">${e.subject === 'english' ? 'Điền từ hoặc cụm từ thích hợp.' : 'Điền số đáp án chính xác (chấp nhận cả dấu phẩy và dấu chấm thập phân).'}</p>` : ''}
         ${(e.short || []).map((q, i) => `<div class="question" id="short-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
             <span>${q.text || q.question}</span>
           </div>
           <div class="short-field">
-            <input type="text" inputmode="decimal" autocomplete="off" data-kind="s" data-index="${i}" value="${esc(answers['s' + i] ?? '')}" aria-label="Trả lời ngắn câu ${i + 1}">
+            <input type="text" inputmode="${e.subject === 'english' ? 'text' : 'decimal'}" autocomplete="off" data-kind="s" data-index="${i}" value="${esc(answers['s' + i] ?? '')}" aria-label="Trả lời ngắn câu ${i + 1}">
             <span>${esc(q.unit || '')}</span>
           </div>
         </div>`).join('')}
 
         ${(e.essay && e.essay.length > 0) ? `
-        <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu · 3,0 điểm)</h2>
+        <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu${e.subject === 'english' ? '' : ' · 3,0 điểm'})</h2>
         <div class="essay-guide-banner" style="background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0 16px;font-size:13.5px;color:#1e3a8a;line-height:1.55;">
-          📝 <b>Lưu ý phần tự luận:</b> Bạn có thể làm bài ra giấy nháp. Nếu <b>không muốn gõ lại bài làm lên máy, bạn có thể bỏ qua các ô bên dưới</b> và bấm <b>"Nộp bài thi"</b> bất cứ lúc nào. Khi nộp bài, hệ thống sẽ mở đầy đủ <b>Lời giải chi tiết và Barem điểm chấm từng bước</b> để bạn tự chấm điểm và đối chiếu.
+          📝 <b>Lưu ý phần tự luận:</b> Bạn có thể làm bài ra giấy nháp. Nếu <b>không muốn gõ lại bài làm lên máy, bạn có thể bỏ qua các ô bên dưới</b> và bấm <b>"Nộp bài thi"</b> bất cứ lúc nào. Khi nộp bài, hệ thống sẽ mở <b>lời giải và đáp án</b> để bạn tự đối chiếu.
         </div>
         ${e.essay.map((q, i) => `<div class="question" id="essay-${i}">
           <div class="q-title" style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;">
@@ -649,7 +659,7 @@ function updateProgress() {
   const progText = document.getElementById('progress-text');
   const progFill = document.getElementById('progress-fill');
   if (progText) {
-    progText.textContent = `${n}/${total} ý trắc nghiệm/điền số${essayCount > 0 ? ` · ${essayCount} câu TL có ghi chú` : ''}`;
+    progText.textContent = `${total ? `${n}/${total} ý đã làm` : `${essayCount}/${(activeExam.essay || []).length} câu tự luận có ghi chú`}${total && essayCount > 0 ? ` · ${essayCount} câu TL có ghi chú` : ''}`;
   }
   if (progFill) progFill.style.width = `${total > 0 ? (100 * n / total) : 0}%`;
   document.querySelectorAll('.q-jump[data-jump]').forEach((x, i) => {
@@ -685,7 +695,13 @@ function shortCorrect(input, answer) {
   if (/^-?\d+(\.\d+)?$/.test(strippedInput) && /^-?\d+(\.\d+)?$/.test(strippedAns)) {
     return Math.abs(Number(strippedInput) - Number(strippedAns)) < 0.001;
   }
-  return normInput.toLowerCase() === normAns.toLowerCase();
+  const normalizeWords = value => String(value).trim().toLowerCase()
+    .replace(/[’‘`]/g, "'").replace(/\s+/g, ' ').replace(/[.!?]+$/g, '');
+  const entered = normalizeWords(normInput);
+  return normAns.split(/\s+\/\s+/).some(part => {
+    const option = normalizeWords(part);
+    return entered === option || entered === normalizeWords(option.split(/\s*(?:->|→)\s*/).pop());
+  });
 }
 
 function submitExam(reason) {

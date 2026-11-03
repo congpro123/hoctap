@@ -1,6 +1,6 @@
 // Mở rộng kho đề và cho phép xem lại các câu sai trong lịch sử.
 function card(e){
-  const label=e.subject==='math'?'∑ &nbsp; TOÁN 10':e.subject==='chemistry'?'⚗ &nbsp; HÓA HỌC 10':'⚛ &nbsp; VẬT LÝ 10';
+  const label=e.subject==='math'?'∑ &nbsp; TOÁN 10':e.subject==='chemistry'?'⚗ &nbsp; HÓA HỌC 10':e.subject==='english'?'Aa &nbsp; TIẾNG ANH 10':'⚛ &nbsp; VẬT LÝ 10';
   let statusBadge = '';
   let bottomAction = `<button class="primary" data-start="${e.id}">Bắt đầu làm bài →</button>`;
   
@@ -17,23 +17,23 @@ function card(e){
     }
   }
 
-  return `<article class="exam-card ${statusBadge.includes('completed') ? 'card-completed' : ''}"><div class="card-top"><span class="subject-pill">${label}</span><span class="card-code">${e.id}</span></div>${statusBadge}<h3>${e.title}</h3><p>${e.description}</p><div class="meta"><span>◷ &nbsp; ${e.minutes} phút</span><span>☷ &nbsp; ${e.questions.length} nhiều lựa chọn</span><span>✓ &nbsp; ${e.tf.length} đúng/sai</span><span>✎ &nbsp; ${e.short.length} trả lời ngắn</span></div>${sourceLine(e)}<div class="card-bottom"><span>Giữa học kì I</span>${bottomAction}</div></article>`;
+  return `<article class="exam-card ${statusBadge.includes('completed') ? 'card-completed' : ''}"><div class="card-top"><span class="subject-pill">${label}</span><span class="card-code">${esc(e.id)}</span></div>${statusBadge}<h3>${esc(e.title)}</h3><p>${esc(e.description)}</p><div class="meta"><span>◷ &nbsp; ${e.minutes} phút</span>${e.questions.length?`<span>☷ &nbsp; ${e.questions.length} nhiều lựa chọn</span>`:''}${e.tf.length?`<span>✓ &nbsp; ${e.tf.length} đúng/sai</span>`:''}${e.short.length?`<span>✎ &nbsp; ${e.short.length} trả lời ngắn</span>`:''}${e.essay?.length?`<span>📝 &nbsp; ${e.essay.length} tự luận</span>`:''}</div>${sourceLine(e)}<div class="card-bottom"><span>Giữa học kì I</span>${bottomAction}</div></article>`;
 }
 function tiles(){
-  const counts={0:'math',1:'physics',5:'chemistry'};
+  const counts={0:'math',1:'physics',4:'english',5:'chemistry'};
   return `<div class="subject-grid">${subjects.map((s,i)=>`<button class="subject-tile" data-subjectto="${i}"><span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span><b>${s[0]}</b><small>${counts[i]?exams.filter(e=>e.subject===counts[i]).length+' đề thi':'Sắp cập nhật đề thi'}</small></button>`).join('')}</div>`;
 }
 function home(){
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('home')) return;
-  const groups=[['math',0,'Toán 10 · Giữa kì I','Mệnh đề, tập hợp, bất phương trình và hệ thức lượng'],['physics',1,'Vật lý 10 · Giữa kì I','Ưu tiên nguồn Quảng Trị và miền Trung'],['chemistry',5,'Hóa học 10 · Giữa kì I','Cấu tạo nguyên tử và bảng tuần hoàn']];
-  app.innerHTML=`<div class="content"><section class="hero"><div class="hero-copy"><span class="eyebrow">✦ &nbsp; KHÔNG GIAN HỌC TẬP CỦA BẠN</span><h1>Học tập hôm nay,<br>tự tin ngày mai.</h1><p>Luyện đề Toán, Vật lý và Hóa học lớp 10 với đồng hồ thi, ba dạng câu hỏi và phần xem lại bài đã nộp.</p></div><div class="hero-art"><div class="orbit"></div><div class="planet one">📚</div><div class="planet two">∑</div><div class="planet three">✦</div></div></section><section class="stats"><div class="stat"><span class="stat-icon purple">▦</span><div><b>07</b><small>Môn học</small></div></div><div class="stat"><span class="stat-icon orange">☷</span><div><b>${String(exams.length).padStart(2,'0')}</b><small>Đề thi sẵn sàng</small></div></div><div class="stat"><span class="stat-icon green">◷</span><div><b>${String(saved().length).padStart(2,'0')}</b><small>Lượt thi đã hoàn thành</small></div></div></section><section class="handbook-feature-banner"><div class="hfb-left"><span class="eyebrow" style="background:#ffffff22;color:#ffffff;border-color:#ffffff33;">📖 TÀI LIỆU ÔN THI ĐẶC BIỆT</span><h2>Sổ tay Công thức & Lý thuyết Giữa kì I</h2><p>Tổng hợp cô đọng toàn bộ công thức, định lí quan trọng và bẫy đề thi cần thuộc cho môn Toán 10, Vật lí 10, Hóa học 10.</p><div class="hfb-tags"><span>∑ Toán 10</span><span>⚛️ Vật lý 10</span><span>🧪 Hóa học 10</span></div></div><div class="hfb-right"><a href="#handbook" class="hfb-btn">Mở sổ tay kiến thức →</a></div></section>${groups.map(([subject,index,title,desc])=>{const list=exams.filter(e=>e.subject===subject);return `<section class="lower-section"><div class="section-head"><div><h2>${title}</h2><p>${list.length} bài luyện · ${desc}</p></div><button class="text-link" data-subjectto="${index}">Xem tất cả →</button></div><div class="cards">${list.slice(0,4).map(card).join('')}</div></section>`}).join('')}<section class="lower-section"><div class="section-head"><div><h2>Khám phá môn học</h2><p>7 môn trong tổ hợp học tập của bạn</p></div></div>${tiles()}</section></div>`;
+  const groups=[['math',0,'Toán 10 · Giữa kì I','Mệnh đề, tập hợp, bất phương trình và hệ thức lượng'],['physics',1,'Vật lý 10 · Giữa kì I','Ưu tiên nguồn Quảng Trị và miền Trung'],['english',4,'Tiếng Anh 10 · REVIEW 1','Ba đề kiểm tra và hai chuyên đề ngữ pháp từ tài liệu bạn cung cấp'],['chemistry',5,'Hóa học 10 · Giữa kì I','Cấu tạo nguyên tử và bảng tuần hoàn']];
+  app.innerHTML=`<div class="content"><section class="hero"><div class="hero-copy"><span class="eyebrow">✦ &nbsp; KHÔNG GIAN HỌC TẬP CỦA BẠN</span><h1>Học tập hôm nay,<br>tự tin ngày mai.</h1><p>Luyện đề Toán, Vật lý, Tiếng Anh và Hóa học lớp 10 với đồng hồ thi, đáp án và phần xem lại bài đã nộp.</p></div><div class="hero-art"><div class="orbit"></div><div class="planet one">📚</div><div class="planet two">∑</div><div class="planet three">✦</div></div></section><section class="stats"><div class="stat"><span class="stat-icon purple">▦</span><div><b>07</b><small>Môn học</small></div></div><div class="stat"><span class="stat-icon orange">☷</span><div><b>${String(exams.length).padStart(2,'0')}</b><small>Đề thi sẵn sàng</small></div></div><div class="stat"><span class="stat-icon green">◷</span><div><b>${String(saved().length).padStart(2,'0')}</b><small>Lượt thi đã hoàn thành</small></div></div></section><section class="handbook-feature-banner"><div class="hfb-left"><span class="eyebrow" style="background:#ffffff22;color:#ffffff;border-color:#ffffff33;">📖 TÀI LIỆU ÔN THI ĐẶC BIỆT</span><h2>Sổ tay Công thức & Lý thuyết Giữa kì I</h2><p>Tổng hợp cô đọng toàn bộ công thức, định lí quan trọng và bẫy đề thi cần thuộc cho môn Toán 10, Vật lí 10, Hóa học 10.</p><div class="hfb-tags"><span>∑ Toán 10</span><span>⚛️ Vật lý 10</span><span>🧪 Hóa học 10</span></div></div><div class="hfb-right"><a href="#handbook" class="hfb-btn">Mở sổ tay kiến thức →</a></div></section>${groups.map(([subject,index,title,desc])=>{const list=exams.filter(e=>e.subject===subject);return `<section class="lower-section"><div class="section-head"><div><h2>${title}</h2><p>${list.length} bài luyện · ${desc}</p></div><button class="text-link" data-subjectto="${index}">Xem tất cả →</button></div><div class="cards">${list.slice(0,4).map(card).join('')}</div></section>`}).join('')}<section class="lower-section"><div class="section-head"><div><h2>Khám phá môn học</h2><p>7 môn trong tổ hợp học tập của bạn</p></div></div>${tiles()}</section></div>`;
   setNav('home');
 }
 function catalog(index){
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('subjects')) return;
-  const mapping={0:'math',1:'physics',5:'chemistry'},list=index===undefined?exams:exams.filter(e=>e.subject===mapping[index]);
+  const mapping={0:'math',1:'physics',4:'english',5:'chemistry'},list=index===undefined?exams:exams.filter(e=>e.subject===mapping[index]);
   const name=index===undefined?'Kho đề thi':subjects[index][0];
-  app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện giữa kì I lớp 10 · Nhiều lựa chọn, đúng/sai và trả lời ngắn · Không có tự luận.`:'Môn học này đang được cập nhật đề thi.'}</p><div style="margin:14px 0 10px;"><a href="#handbook${index!==undefined?'-'+mapping[index]:''}" class="secondary handbook-quick-btn" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:8px 16px;border-radius:8px;"><span>📖</span> Xem sổ tay công thức & lý thuyết ${index!==undefined?name:'các môn'} ➔</a></div></div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${[[0,'Toán'],[1,'Vật lý'],[5,'Hóa học']].map(([i,n])=>`<button class="filter" data-subjectto="${i}">${n} (${exams.filter(e=>e.subject===mapping[i]).length})</button>`).join('')}</div>`:''}${list.length?`<div class="cards">${list.map(card).join('')}</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;
+  app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện lớp 10 · Xem cấu trúc từng bài trên thẻ đề và lời giải sau khi nộp.`:'Môn học này đang được cập nhật đề thi.'}</p>${mapping[index] && mapping[index]!=='english'?`<div style="margin:14px 0 10px;"><a href="#handbook-${mapping[index]}" class="secondary handbook-quick-btn" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:8px 16px;border-radius:8px;"><span>📖</span> Xem sổ tay công thức & lý thuyết ${name} ➔</a></div>`:''}</div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${[[0,'Toán'],[1,'Vật lý'],[4,'Tiếng Anh'],[5,'Hóa học']].map(([i,n])=>`<button class="filter" data-subjectto="${i}">${n} (${exams.filter(e=>e.subject===mapping[i]).length})</button>`).join('')}</div>`:''}${list.length?`<div class="cards">${list.map(card).join('')}</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;
   setNav(index===undefined?'subjects':'subject-'+index);
 }
 function history(){
@@ -110,7 +110,7 @@ function reviewPast(index){
 
   if(!legacy){
     const isTrue=v=>(v===true||v==='true'||v==='Đúng'||v==='đúng');
-    const isMatch=(u,exp)=>u!==undefined&&u!==null&&Boolean(u)===isTrue(exp);
+    const isMatch=(u,exp)=>u!==undefined&&u!==null&&isTrue(u)===isTrue(exp);
     (e.tf||[]).forEach((q,i)=>{
       (q.items||[]).forEach((item,j)=>{
         const chosen=a['t'+i+'-'+j];
@@ -186,7 +186,7 @@ function reviewPast(index){
             <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${hasWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">(Bỏ qua ô nhập / làm ra giấy nháp — đối chiếu lời giải chi tiết và barem điểm chấm bên dưới)</span>'}</div>
           </div>
           <div class="solution-box theme-study">
-            <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM:</div>
+            <div class="solution-header">${e.subject === 'english' ? '💡 LỜI GIẢI VÀ ĐÁP ÁN:' : '💡 HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM:'}</div>
             <div class="solution-body">${essay.solution || 'Áp dụng định lý và kiến thức SGK để trình bày lời giải.'}</div>
           </div>
         </div>
@@ -199,7 +199,7 @@ function reviewPast(index){
       <div class="section-head" style="margin-bottom:16px;">
         <div>
           <h2>Phần IV · Tự luận (${essayCards.length} câu)</h2>
-          <p>Xem lại bài làm / ghi chú bạn đã lưu cùng barem điểm chấm và hướng dẫn giải chi tiết.</p>
+          <p>${e.subject === 'english' ? 'Xem lại bài làm / ghi chú bạn đã lưu cùng lời giải và đáp án.' : 'Xem lại bài làm / ghi chú bạn đã lưu cùng barem điểm chấm và hướng dẫn giải chi tiết.'}</p>
         </div>
       </div>
       <div class="review-essay-list">${essayCards.join('')}</div>

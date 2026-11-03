@@ -10306,8 +10306,8 @@ const suppliedExams = [
       },
       {
         "question": "Trong nguyên tử Helium, tỉ lệ phần trăm khối lượng của các electron ở lớp vỏ so với toàn bộ khối lượng nguyên tử xấp xỉ bằng bao nhiêu phần trăm (nhập kết quả làm tròn đến 4 chữ số thập phân)?",
-        "answer": "0.0272",
-        "explanation": "%m(e) = (2 × 0,0005486 / 4,0026) × 100% &approx; 0,0274% (hoặc 0,0272%)."
+      "answer": "0.0274",
+      "explanation": "%m(e) = (2 × 0,0005486 / 4,0026) × 100% &approx; 0,0274%."
       },
       {
         "question": "Trong nguyên tử aluminium (Al), số hạt mang điện tích dương là 13, số hạt không mang điện là 14. Tổng số hạt electron trong toàn bộ vỏ nguyên tử Al là bao nhiêu?",
@@ -10615,4 +10615,1774 @@ const suppliedExams = [
       }
     ]
   }
+,
+{
+  "id": "tienganh-10-de-01",
+  "title": "Tiếng Anh 10 - Đề 01 - Đề thi giữa học kì 1 (Global Success)",
+  "subject": "english",
+  "duration": 45,
+  "school": "Bộ GD&ĐT - Tiếng Anh 10 Global Success",
+  "province": "Toàn quốc",
+  "year": "2026–2027",
+  "source": {
+    "school": "Tiếng Anh 10 Global Success",
+    "province": "Bộ GD&ĐT",
+    "year": "2026–2027",
+    "note": "Đề thi giữa học kì 1 chuẩn chương trình GDPT 2018 (Unit 1, 2, 3)"
+  },
+  "description": "Đề thi giữa học kì 1 môn Tiếng Anh 10 Global Success (Đề số 1). Đầy đủ các phần: Phonetics, Grammar & Vocabulary, Word form, Reading (Julia Hill, The Zookeeper) và Writing (Sentence Transformation).",
+  "questions": [
+    [
+      "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
+      [
+        "A. emission",
+        "B. issue",
+        "C. musical",
+        "D. sugar"
+      ],
+      2,
+      "Trong từ 'musical', chữ 's' được phát âm là /z/. Trong các từ 'emission', 'issue', 'sugar', chữ 's' (hoặc 'ss') được phát âm là /ʃ/."
+    ],
+    [
+      "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
+      [
+        "A. grocery",
+        "B. adopt",
+        "C. social",
+        "D. homemaker"
+      ],
+      1,
+      "Trong từ 'adopt', chữ 'o' được phát âm là /ɒ/. Trong các từ 'grocery', 'social', 'homemaker', chữ 'o' được phát âm là /əʊ/."
+    ],
+    [
+      "<b>PHONETICS</b><br>Choose the word which has a different stress pattern from the others:",
+      [
+        "A. damage",
+        "B. support",
+        "C. offer",
+        "D. strengthen"
+      ],
+      1,
+      "'support' có trọng âm rơi vào âm tiết thứ 2 (/səˈpɔːt/). Các từ còn lại có trọng âm rơi vào âm tiết thứ 1: 'damage' (/ˈdæmɪdʒ/), 'offer' (/ˈɒfə/), 'strengthen' (/ˈstreŋkθn/)."
+    ],
+    [
+      "<b>PHONETICS</b><br>Choose the word which has a different stress pattern from the others:",
+      [
+        "A. appliance",
+        "B. encourage",
+        "C. energy",
+        "D. organic"
+      ],
+      2,
+      "'energy' có trọng âm rơi vào âm tiết thứ 1 (/ˈenədʒi/). Các từ còn lại có trọng âm rơi vào âm tiết thứ 2: 'appliance' (/əˈplaɪəns/), 'encourage' (/ɪnˈkʌrɪdʒ/), 'organic' (/ɔːˈɡænɪk/)."
+    ],
+    [
+      "<b>GRAMMAR AND VOCABULARY</b><br>Choose the best answer A, B, C or D to complete the sentence:<br>My mum usually cooks and _______ groceries.",
+      [
+        "A. goes for",
+        "B. does for",
+        "C. shops for",
+        "D. takes for"
+      ],
+      2,
+      "Cụm từ cố định (collocation): 'shop for groceries' mang nghĩa đi chợ mua thực phẩm, đồ tạp hóa."
+    ],
+    [
+      "Doing chores together helps _______ family bonds.",
+      [
+        "A. ruin",
+        "B. destroy",
+        "C. strengthen",
+        "D. break"
+      ],
+      2,
+      "Cụm từ cố định: 'strengthen family bonds' mang nghĩa củng cố, thắt chặt tình cảm gắn kết gia đình. Các từ khác mang nghĩa tiêu cực (hủy hoại, phá vỡ)."
+    ],
+    [
+      "Parents should encourage their children _______ the housework.",
+      [
+        "A. sharing",
+        "B. to sharing",
+        "C. to share",
+        "D. share"
+      ],
+      2,
+      "Cấu trúc: encourage somebody to do something (khuyến khích ai đó làm gì)."
+    ],
+    [
+      "_______ such as cooking, cleaning or taking care of other are important for all children when they grow up.",
+      [
+        "A. Social skills",
+        "B. Hard skills",
+        "C. Organizational Skills",
+        "D. Life skills"
+      ],
+      3,
+      "'Life skills' mang nghĩa kỹ năng sống (nấu ăn, dọn dẹp, chăm sóc người khác,...)."
+    ],
+    [
+      "Each of us _______ one or three household tasks according to personal choice.",
+      [
+        "A. choose",
+        "B. choosing",
+        "C. chooses",
+        "D. chose"
+      ],
+      2,
+      "Chủ ngữ 'Each of us' (mỗi người trong chúng tôi) là đại từ số ít, ở thì hiện tại đơn động từ chia số ít thêm 's': 'chooses'."
+    ],
+    [
+      "My dad _______ a list of all the household chores and give it to me.",
+      [
+        "A. do",
+        "B. take",
+        "C. make",
+        "D. has"
+      ],
+      3,
+      "Chủ ngữ 'My dad' là ngôi thứ 3 số ít; phương án D 'has' (có một danh sách việc nhà) hòa hợp số ít với chủ ngữ."
+    ],
+    [
+      "_______ are the behaviour that is considered correct while you are having a meal at a table with other people.",
+      [
+        "A. Displaying good manners",
+        "B. Table manners",
+        "C. Party etiquettes",
+        "D. Social etiquette"
+      ],
+      1,
+      "'Table manners' là phép tắc, văn hóa ăn uống lịch sự trên bàn ăn cùng người khác."
+    ],
+    [
+      "_______ are ideas or beliefs that give great importance to the traditional family of a mother, a father, and children all living together.",
+      [
+        "A. Moral values",
+        "B. Personal values",
+        "C. Social values",
+        "D. Family values"
+      ],
+      3,
+      "'Family values' là giá trị gia đình (các niềm tin, giá trị coi trọng mô hình gia đình truyền thống sống hạnh phúc bên nhau)."
+    ],
+    [
+      "We’ll organise more activities to raise local people’s awareness of _______ issues.",
+      [
+        "A. environment",
+        "B. environmental",
+        "C. environmentalist",
+        "D. environmentally"
+      ],
+      1,
+      "Đứng trước danh từ 'issues' cần một tính từ bổ nghĩa: 'environmental issues' (các vấn đề về môi trường)."
+    ],
+    [
+      "Linda doesn’t like to drive, _______ she takes the bus everywhere.",
+      [
+        "A. but",
+        "B. yet",
+        "C. so",
+        "D. because"
+      ],
+      2,
+      "Liên từ 'so' dùng để chỉ kết quả: Linda không thích lái xe, vì vậy cô ấy đi xe buýt khắp mọi nơi."
+    ],
+    [
+      "I was on time, _______ everyone else was late.",
+      [
+        "A. so",
+        "B. but",
+        "C. or",
+        "D. for"
+      ],
+      1,
+      "Liên từ 'but' chỉ sự đối lập, tương phản: Tôi đến đúng giờ, nhưng mọi người khác đều đến muộn."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word(s):<br>My mom feels happy when she sees our home <u>spotlessly</u> clean when she goes home.",
+      [
+        "A. quite",
+        "B. pretty",
+        "C. fairy",
+        "D. extremely"
+      ],
+      3,
+      "'spotlessly clean' nghĩa là sạch bong kin kít, sạch không một vết bẩn = 'extremely clean' (cực kỳ sạch sẽ)."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word(s):<br>I’m <u>keen</u> to reduce my carbon footprint but I don’t know what to do.",
+      [
+        "A. eager",
+        "B. unconcerned",
+        "C. disinterested",
+        "D. unenthusiastic"
+      ],
+      0,
+      "'keen to do sth' (háo hức, tha thiết muốn làm gì) đồng nghĩa với 'eager'."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word(s):<br>Its aim is to improve our environment and encourage people to <u>adopt</u> a greener lifestyle.",
+      [
+        "A. follow",
+        "B. support",
+        "C. adapt",
+        "D. neglect"
+      ],
+      3,
+      "'adopt' (tiếp nhận, bắt đầu thực hiện lối sống xanh) trái nghĩa với 'neglect' (sao nhãng, ngó lơ, bỏ bê)."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word(s):<br>They will require car makers to <u>reduce</u> emissions of carbon dioxide by 30%.",
+      [
+        "A. lessen",
+        "B. turn down",
+        "C. weaken",
+        "D. increase"
+      ],
+      3,
+      "'reduce' (giảm bớt) trái nghĩa với 'increase' (tăng lên)."
+    ],
+    [
+      "<b>READING - CLOZE TEXT</b><br>In late 1997, the Pacific Lumber Company was planning to cut down a 600-year-old, 61-metre-tall redwood tree in California, USA. To (26) _______ the tree, people camped in tents near it but, as winter approached, they went home.",
+      [
+        "A. protect",
+        "B. hold",
+        "C. care",
+        "D. ensure"
+      ],
+      0,
+      "'protect the tree' (bảo vệ cái cây khỏi bị chặt hạ)."
+    ],
+    [
+      "Tree lover Julia Hill decided that she had to stay to (27) _______ the company from cutting down the tree, so she climbed it.",
+      [
+        "A. control",
+        "B. stop",
+        "C. check",
+        "D. get"
+      ],
+      1,
+      "Cấu trúc: stop somebody from doing something (ngăn cản ai làm việc gì)."
+    ],
+    [
+      "Friends visited her nightly and supplied her with food in a bucket. (28) _______ she had thought she might stay up there for perhaps a month, she stayed for much longer, nearly two years.",
+      [
+        "A. Although",
+        "B. When",
+        "C. Since",
+        "D. Where"
+      ],
+      0,
+      "'Although' (mặc dù) diễn tả sự tương phản: Mặc dù ban đầu nghĩ chỉ ở khoảng 1 tháng, nhưng thực tế cô đã ở gần 2 năm."
+    ],
+    [
+      "Julia had (29) _______ famous all over the world. It ended on December 17. 1999.",
+      [
+        "A. acted",
+        "B. recognised",
+        "C. turned",
+        "D. become"
+      ],
+      3,
+      "Cụm từ: 'become famous' (trở nên nổi tiếng)."
+    ],
+    [
+      "The Pacific Lumber Company received $50,000, and the tree was (30) _______ to live. Finally, Julia was able to climb down and go home.",
+      [
+        "A. caused",
+        "B. made",
+        "C. allowed",
+        "D. let"
+      ],
+      2,
+      "Cấu trúc bị động: be allowed to do something (được phép làm gì / được giữ lại sống)."
+    ],
+    [
+      "<b>READING COMPREHENSION</b><br>Read the text 'The Zookeeper' by Mark Porter and answer the question:<br><i>The Zookeeper</i><br>My name's Mark Porter. I've been interested in the natural world since I was very young...<br><br><b>What is the writer trying to do in this text?</b>",
+      [
+        "A. how people can protect animals",
+        "B. give an account of one day in his life",
+        "C. describe some of the people he works with",
+        "D. encourage people to have a career with wildlife."
+      ],
+      3,
+      "Ở đoạn cuối tác giả viết: '...and I hope that you'll think about working with animals, too' (khuyến khích mọi người theo đuổi sự nghiệp làm việc với động vật)."
+    ],
+    [
+      "<b>What can a reader find out from this text?</b>",
+      [
+        "A. what subject Mark needed to learn to get a better job",
+        "B. how many hours a day does Mark have to work",
+        "C. how long Mark has been keen on animals",
+        "D. where you can find the best sea-life centres"
+      ],
+      0,
+      "Đoạn 1 nêu rõ: '...I knew I had to go to college if I wanted a better job. So I went to university to study Biology...' (môn học Mark cần học là Sinh học - Biology)."
+    ],
+    [
+      "<b>What does Mark say about his current job?</b>",
+      [
+        "A. It allows him to do a variety of things.",
+        "B. It was quite difficult to get.",
+        "C. It is better paid than his last job.",
+        "D. It gives him time off work to go diving."
+      ],
+      0,
+      "Đoạn 2 nêu: '...because there are lots of different activities I'm involved in here. As part of my job, I get to do research, and I manage an education centre...' (công việc cho phép anh làm nhiều việc phong phú, đa dạng)."
+    ],
+    [
+      "<b>How does Mark feel about visitors to the zoo?</b>",
+      [
+        "A. nervous that a fish might hurt them",
+        "B. annoyed when they don't behave well",
+        "C. upset when they take the fish out of the water",
+        "D. sad when they don't ask questions"
+      ],
+      1,
+      "Đoạn 3: '...some try to touch the fish or put sweet wrappers in the water - that makes me angry' (tức giận, khó chịu khi khách có hành vi xấu ném rác vào nước)."
+    ],
+    [
+      "<b>What might Mark write in his diary today?</b>",
+      [
+        "A. Today, I performed an operation on a sick fish that had eaten a sweet wrapper.",
+        "B. I spent all day in the research laboratory again today doing boring experiments.",
+        "C. I gave a talk today to a group of schoolchildren about looking after animals.",
+        "D. Today I watched my boss go swimming with sharks - I wish I was allowed to do that too!"
+      ],
+      2,
+      "Đoạn 2: 'I manage an education centre where I tell people of all ages about what they can do to protect fish and animals' (anh thuyết trình cho học sinh/mọi người nghe về cách bảo vệ động vật)."
+    ]
+  ],
+  "short": [
+    {
+      "question": "Make the correct form of the verb in bracket:<br>I can’t read when I am traveling. It makes me (feel) _______ sick.",
+      "answer": "feel",
+      "explanation": "Cấu trúc 'make somebody do something' (make sb + V-bare): động từ 'feel' giữ nguyên dạng."
+    },
+    {
+      "question": "Make the correct form of the verb in bracket:<br>I promised (be) _______ on time.",
+      "answer": "to be",
+      "explanation": "Cấu trúc 'promise to do something' (hứa làm gì): promised to be."
+    },
+    {
+      "question": "Make the correct form of the verb in bracket:<br>I mustn’t (be) _______ late.",
+      "answer": "be",
+      "explanation": "Động từ khuyết thiếu 'mustn't' đi với động từ nguyên mẫu không to (V-bare): mustn't be."
+    },
+    {
+      "question": "Make the correct form of the verb in bracket:<br>Would you like (go) _______ now or shall we wait till the end?",
+      "answer": "to go",
+      "explanation": "Cấu trúc lời mời/hỏi ý kiến: 'Would you like to do something': Would you like to go."
+    },
+    {
+      "question": "Choose the correct phrase to complete the sentence:<br>You look tired. Sit down and I (will make / am going to make) _______ you a cup of tea.",
+      "answer": "will make",
+      "explanation": "Quyết định tức thì ngay tại thời điểm nói đưa ra lời đề nghị giúp đỡ dùng thì tương lai đơn 'will make'."
+    },
+    {
+      "question": "Choose the correct phrase to complete the sentence:<br>I (won’t come / am not coming) _______ with you tonight. I have to stay in and finish my project.",
+      "answer": "am not coming",
+      "explanation": "Hành động đã có kế hoạch/lịch trình sắp xếp từ trước dùng thì hiện tại tiếp diễn chỉ tương lai: 'am not coming'."
+    },
+    {
+      "question": "Choose the correct phrase to complete the sentence:<br>I (only work / ’m only working) _______ there for a couple of months - I’m going abroad in the summer.",
+      "answer": "'m only working / am only working",
+      "explanation": "Tình huống tạm thời trong một khoảng thời gian ngắn ('for a couple of months') dùng thì hiện tại tiếp diễn: 'm only working."
+    }
+  ],
+  "essay": [
+    {
+      "title": "Câu 1. Viết lại câu gián tiếp với lời nhắc nhở 'remind'",
+      "question": "Lan said to him: “Remember to close all the window and turn off the lights before going out”.<br>➔ Lan reminded ________________________________________",
+      "solution": "Lan reminded him to close all the windows and turn off the lights before going out.<br>• Cấu trúc: remind somebody to do something (nhắc nhở ai nhớ làm gì)."
+    },
+    {
+      "title": "Câu 2. Chuyển đổi cấu trúc 'spend time doing sth' sang 'It takes sb time to do sth'",
+      "question": "Thanh spends 3 hours a day doing the homework.<br>➔ It takes ________________________________________",
+      "solution": "It takes Thanh 3 hours a day to do the homework.<br>• Cấu trúc tương đương: S + spend + time + V-ing ➔ It takes + sb + time + to V."
+    },
+    {
+      "title": "Câu 3. Viết lại câu tường thuật với 'tell sb to do sth'",
+      "question": "Linh told him: “Don't forget to repair my bicycle”.<br>➔ Linh told him ________________________________________",
+      "solution": "Linh told him to repair her bicycle. (hoặc: Linh told him not to forget to repair her bicycle).<br>• Cấu trúc: tell sb to do sth (bảo ai làm gì) hoặc tell sb not to do sth."
+    },
+    {
+      "title": "Câu 4. Chuyển câu sang thể bị động với 'be going to'",
+      "question": "They’re going to repair the machine tomorrow.<br>➔ The machine ________________________________________",
+      "solution": "The machine is going to be repaired tomorrow.<br>• Cấu trúc bị động tương lai gần: S + is/am/are + going to be + V3/ed."
+    },
+    {
+      "title": "Câu 5. Chuyển câu sang thể bị động với 'will'",
+      "question": "They will publish her new book next month.<br>➔ Her new book ________________________________________",
+      "solution": "Her new book will be published next month.<br>• Cấu trúc bị động tương lai đơn: S + will be + V3/ed."
+    }
+  ]
+},
+{
+  "id": "tienganh-10-de-02",
+  "title": "Tiếng Anh 10 - Đề 02 - Đề thi giữa học kì 1 (Global Success)",
+  "subject": "english",
+  "duration": 45,
+  "school": "Bộ GD&ĐT - Tiếng Anh 10 Global Success",
+  "province": "Toàn quốc",
+  "year": "2026–2027",
+  "source": {
+    "school": "Tiếng Anh 10 Global Success",
+    "province": "Bộ GD&ĐT",
+    "year": "2026–2027",
+    "note": "Đề thi giữa học kì 1 chuẩn chương trình GDPT 2018 (Unit 1, 2, 3)"
+  },
+  "description": "Đề thi giữa học kì 1 môn Tiếng Anh 10 Global Success (Đề số 2). Đầy đủ các phần: Phonetics, Grammar & Vocabulary, Error correction, Reading (Art & Artists, Feeling Special) và Writing (Sentence Transformation).",
+  "questions": [
+    [
+      "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
+      [
+        "A. character",
+        "B. cheer",
+        "C. chemical",
+        "D. mechanic"
+      ],
+      1,
+      "Trong từ 'cheer', chữ 'ch' được phát âm là /tʃ/. Trong các từ 'character', 'chemical', 'mechanic', chữ 'ch' được phát âm là /k/."
+    ],
+    [
+      "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
+      [
+        "A. damage",
+        "B. manner",
+        "C. value",
+        "D. talent"
+      ],
+      0,
+      "Trong từ 'damage', chữ 'a' thứ hai được phát âm là /ɪ/ (/ˈdæmɪdʒ/). Trong các từ 'manner', 'value', 'talent', âm tiết thứ hai có nguyên âm /ə/ hoặc /uː/."
+    ],
+    [
+      "<b>PHONETICS</b><br>Choose the word which has a different stress pattern from the others:",
+      [
+        "A. comment",
+        "B. concert",
+        "C. routine",
+        "D. trumpet"
+      ],
+      2,
+      "'routine' có trọng âm rơi vào âm tiết thứ 2 (/ruːˈtiːn/). Các từ còn lại có trọng âm rơi vào âm tiết thứ 1: 'comment' (/ˈkɒment/), 'concert' (/ˈkɒnsət/), 'trumpet' (/ˈtrʌmpɪt/)."
+    ],
+    [
+      "<b>PHONETICS</b><br>Choose the word which has a different stress pattern from the others:",
+      [
+        "A. emission",
+        "B. material",
+        "C. instrument",
+        "D. location"
+      ],
+      2,
+      "'instrument' có trọng âm rơi vào âm tiết thứ 1 (/ˈɪnstrəmənt/). Các từ còn lại có trọng âm rơi vào âm tiết thứ 2: 'emission' (/ɪˈmɪʃn/), 'material' (/məˈtɪəriəl/), 'location' (/ləʊˈkeɪʃn/)."
+    ],
+    [
+      "<b>GRAMMAR AND VOCABULARY</b><br>Choose the best answer A, B, C or D to complete the sentence:<br>Children are encouraged to _______ litter that they see on the street.",
+      [
+        "A. drop",
+        "B. leave",
+        "C. pick up",
+        "D. strew"
+      ],
+      2,
+      "'pick up litter' mang nghĩa nhặt rác. Trẻ em được khuyến khích nhặt rác nhìn thấy trên đường phố."
+    ],
+    [
+      "Remember to _______ your household appliances when they are not used.",
+      [
+        "A. turn down",
+        "B. take off",
+        "C. put down",
+        "D. turn off"
+      ],
+      3,
+      "'turn off' nghĩa là tắt (thiết bị điện gia dụng khi không sử dụng)."
+    ],
+    [
+      "The restaurant only uses _______ ingredients that are good for our health and environment.",
+      [
+        "A. eco-friendly",
+        "B. organic",
+        "C. reusable",
+        "D. man-made"
+      ],
+      1,
+      "'organic ingredients' nghĩa là nguyên liệu hữu cơ (tốt cho sức khỏe và môi trường)."
+    ],
+    [
+      "Don’t _______ your used household items but sort and recycle them.",
+      [
+        "A. put away",
+        "B. take away",
+        "C. throw away",
+        "D. go away"
+      ],
+      2,
+      "'throw away' mang nghĩa vứt bỏ (đồ gia dụng đã qua sử dụng)."
+    ],
+    [
+      "Runners are encouraged to carry _______ water bottles.",
+      [
+        "A. disposable",
+        "B. replaceable",
+        "C. refillable",
+        "D. removable"
+      ],
+      2,
+      "'refillable water bottles' mang nghĩa bình nước có thể rót/làm đầy lại nhiều lần (giúp giảm rác thải nhựa)."
+    ],
+    [
+      "The supermarket chain has promised to cut down _______ packaging.",
+      [
+        "A. in",
+        "B. for",
+        "C. with",
+        "D. on"
+      ],
+      3,
+      "Cụm động từ: 'cut down on something' mang nghĩa cắt giảm cái gì."
+    ],
+    [
+      "Waste is separated into four different bins in order to _______ it.",
+      [
+        "A. reduce",
+        "B. reuse",
+        "C. recycle",
+        "D. redo"
+      ],
+      2,
+      "'recycle waste' mang nghĩa tái chế rác thải."
+    ],
+    [
+      "More trees _______ in the school yard next year.",
+      [
+        "A. will plant",
+        "B. plant",
+        "C. will be planted",
+        "D. are planted"
+      ],
+      2,
+      "Câu bị động ở thì tương lai đơn với 'next year': S + will be + V3/ed ('will be planted')."
+    ],
+    [
+      "Sharing housework helps children to learn to take _______.",
+      [
+        "A. responsible",
+        "B. responsibly",
+        "C. irresponsibility",
+        "D. responsibility"
+      ],
+      3,
+      "Cụm cố định: 'take responsibility' (học cách chịu trách nhiệm)."
+    ],
+    [
+      "I think the weather _______ be bad tomorrow.",
+      [
+        "A. shall",
+        "B. will",
+        "C. is going",
+        "D. could"
+      ],
+      1,
+      "Dự đoán dựa trên quan điểm cá nhân với 'I think' dùng thì tương lai đơn: 'will be'."
+    ],
+    [
+      "Look! Mary _______ a beautiful new dress. She _______ so pretty in the dress.",
+      [
+        "A. was wearing / looked",
+        "B. wears / has looked",
+        "C. has been wearing / is looking",
+        "D. is wearing / looks"
+      ],
+      3,
+      "Dấu hiệu 'Look!' dùng thì hiện tại tiếp diễn 'is wearing'. Vế sau 'look' là động từ nối (linking verb) chỉ cảm giác/vẻ ngoài, chia ở hiện tại đơn 'looks'."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word(s):<br>Most definitions of <u>sustainable</u> energy include considerations of environmental aspects such as greenhouse gas emissions and social and economic aspects such as energy poverty.",
+      [
+        "A. temporary",
+        "B. wasteful",
+        "C. renewable",
+        "D. unendurable"
+      ],
+      2,
+      "'sustainable' (bền vững, tái tạo được) gần nghĩa nhất với 'renewable' (có thể tái tạo)."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word(s):<br>His father was a tailor who owned a clothing store but lost it in the 1929 stock market crash; his mother was a <u>homemaker</u>.",
+      [
+        "A. breadwinner",
+        "B. income producer",
+        "C. home engineer",
+        "D. meal ticket"
+      ],
+      2,
+      "'homemaker' (người nội trợ gia đình) đồng nghĩa với 'home engineer' (cách gọi trang trọng/hóm hỉnh của người làm nội trợ)."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word(s):<br>When kids perform housekeeping, they learn to <u>appreciate</u> all of their parents' hard work around the house.",
+      [
+        "A. give thanks",
+        "B. cherish",
+        "C. acknowledge",
+        "D. overlook"
+      ],
+      3,
+      "'appreciate' (trân trọng, đánh giá cao) trái nghĩa với 'overlook' (ngó lơ, xem nhẹ, bỏ qua)."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word(s):<br>Kids that practice housework <u>develop</u> valuable life skills that they will use throughout their entire lives.",
+      [
+        "A. establish",
+        "B. foster",
+        "C. progress",
+        "D. end"
+      ],
+      3,
+      "'develop' (phát triển, trau dồi) trái nghĩa với 'end' (chấm dứt, kết thúc)."
+    ],
+    [
+      "<b>READING - CLOZE TEXT</b><br>The ability to make a work of art is one of the most creative things anyone can do. It doesn't matter, whether it is a painter creating a landscape painting, or a sculptor carving a marble statue, as all artists share the same passion to capture a moment in (26) _______ life that has inspired them.",
+      [
+        "A. their",
+        "B. there",
+        "C. this",
+        "D. those"
+      ],
+      0,
+      "Tính từ sở hữu chỉ danh từ số nhiều 'all artists' là 'their' (trong cuộc đời của họ)."
+    ],
+    [
+      "(27) _______ artist needs to start somewhere. The moment may be at home with their first painting set, or in their first art class, but when it comes it will never leave them.",
+      [
+        "A. few",
+        "B. several",
+        "C. every",
+        "D. those"
+      ],
+      2,
+      "Đứng trước danh từ đếm được số ít 'artist' và động từ 'needs' là lượng từ 'every' (mỗi nghệ sĩ)."
+    ],
+    [
+      "However, (28) _______ is unique for every artist is the journey that drives them to complete their creation.",
+      [
+        "A. what",
+        "B. when",
+        "C. why",
+        "D. where"
+      ],
+      0,
+      "Mệnh đề danh ngữ làm chủ ngữ: 'What is unique for every artist...' (Điều độc đáo đối với mỗi nghệ sĩ...)."
+    ],
+    [
+      "There are some artists who just (29) _______ their art at home, whereas others try to earn a living from it. You can take a visit to the local galleries to purchase one.",
+      [
+        "A. give",
+        "B. take",
+        "C. get",
+        "D. keep"
+      ],
+      3,
+      "'keep their art at home' (giữ các tác phẩm của mình ở nhà thay vì đem bán)."
+    ],
+    [
+      "If you are fortunate, you may find yourself (30) _______ bargain. And who knows this artist may be the next Picasso or Van Gogh?",
+      [
+        "A. an",
+        "B. a",
+        "C. the",
+        "D. x"
+      ],
+      1,
+      "Cụm từ: 'a bargain' (một món hời, mua được giá tốt); 'bargain' bắt đầu bằng phụ âm nên dùng mạo từ 'a'."
+    ],
+    [
+      "<b>READING COMPREHENSION</b><br>Read the text about feeling special and answer the question:<br><i>Everybody likes to feel special. Sadly, many of us grow up believing that we're not special at all...</i><br><br><b>What is the writer's main aim in writing the text?</b>",
+      [
+        "A. to talk about your family problems",
+        "B. to explain the importance of being yourself",
+        "C. to describe how intelligent we are",
+        "D. to suggest how people can change their way of life"
+      ],
+      1,
+      "Mục đích chính của tác giả là giải thích tầm quan trọng của việc trân trọng chính bản thân mình (being yourself) và nhận ra mỗi người đều đặc biệt theo cách riêng."
+    ],
+    [
+      "<b>This essay was most likely written by _______</b>",
+      [
+        "A. a young person",
+        "B. a coach",
+        "C. a teacher",
+        "D. a parent"
+      ],
+      0,
+      "Bài viết sử dụng ngôi kể 'we', nói về việc lớn lên và mối quan hệ với cha mẹ ('Our parents often forget to tell us...'), phù hợp nhất với góc nhìn của một người trẻ (a young person)."
+    ],
+    [
+      "<b>What does the writer say about our parents?</b>",
+      [
+        "A. They always tell us that we are good enough.",
+        "B. They never forget to tell us that we are special.",
+        "C. They always tell us that we are special.",
+        "D. They frequently forget to tell us that we are special."
+      ],
+      3,
+      "Đoạn cuối: 'Our parents often forget to tell us that we are special, that we are good enough just as we are' (cha mẹ thường quên nói với chúng ta rằng chúng ta rất đặc biệt)."
+    ],
+    [
+      "<b>The author of this essay believes that … .</b>",
+      [
+        "A. we are all good enough just the way we are",
+        "B. the richer you are, the better you are",
+        "C. intelligent people are more special than others",
+        "D. not everyone can be special"
+      ],
+      0,
+      "Câu kết bài: 'What we are is enough!' (chúng ta đều đã đủ tốt theo đúng con người của mình)."
+    ],
+    [
+      "<b>Which of the following would be the best title for this passage?</b>",
+      [
+        "A. What Makes You Laugh?",
+        "B. What Makes You Happy?",
+        "C. What Makes You Special?",
+        "D. What Makes You Stronger?"
+      ],
+      2,
+      "Tiêu đề phù hợp nhất phản ánh toàn bộ ý nghĩa bài viết là: 'What Makes You Special?' (Điều gì làm cho bạn trở nên đặc biệt?)."
+    ]
+  ],
+  "short": [
+    {
+      "question": "Make the correct form of the verb in bracket:<br>Can you afford _______ (buy) so many presents?",
+      "answer": "to buy",
+      "explanation": "Cấu trúc: afford to do something (có đủ khả năng tài chính để mua/làm gì)."
+    },
+    {
+      "question": "Make the correct form of the verb in bracket:<br>How did you learn _______ (speak) Vietnamese so well?",
+      "answer": "to speak",
+      "explanation": "Cấu trúc: learn to do something (học làm cái gì)."
+    },
+    {
+      "question": "Make the correct form of the verb in bracket:<br>It was very kind of Jimmy to offer _______ (baby-sit) this weekend.",
+      "answer": "to baby-sit / to babysit",
+      "explanation": "Cấu trúc: offer to do something (đề nghị làm giúp việc gì)."
+    },
+    {
+      "question": "Find and correct the mistake in the sentence:<br>The weather are seeming to be better. What about a picnic this weekend?<br>➔ Sửa lỗi sai:",
+      "answer": "are seeming -> seems / seems",
+      "explanation": "Động từ 'seem' là động từ trạng thái (stative verb), không chia ở thì tiếp diễn; chủ ngữ 'The weather' số ít ➔ sửa thành 'seems'."
+    },
+    {
+      "question": "Find and correct the mistake in the sentence:<br>Don’t let the dog sitting on the sofa!<br>➔ Sửa lỗi sai:",
+      "answer": "sitting -> sit / sit",
+      "explanation": "Cấu trúc: let somebody/something do something (let + V-bare) ➔ sửa 'sitting' thành 'sit'."
+    },
+    {
+      "question": "Find and correct the mistake in the sentence:<br>Look at the dark clouds. It will rain soon.<br>➔ Sửa lỗi sai:",
+      "answer": "will rain -> is going to rain / is going to rain",
+      "explanation": "Dự đoán có bằng chứng rõ ràng ở hiện tại ('Look at the dark clouds') dùng cấu trúc 'be going to' ➔ sửa 'will rain' thành 'is going to rain'."
+    }
+  ],
+  "essay": [
+    {
+      "title": "Câu 1. Chuyển đổi câu sang thể bị động thì Quá khứ đơn",
+      "question": "The German didn’t build this factory during the Second World War.<br>➔ This factory ________________________________________",
+      "solution": "This factory was not built by the Germans during the Second World War.<br>• Cấu trúc bị động quá khứ đơn: S + was/were + not + V3/ed + by O."
+    },
+    {
+      "title": "Câu 2. Chuyển đổi câu sang thể bị động tương lai gần 'be going to'",
+      "question": "The Greens are going to paint this house and these cars for Christmas Day.<br>➔ This house ________________________________________",
+      "solution": "This house and these cars are going to be painted by the Greens for Christmas Day.<br>• Cấu trúc: S + are going to be + V3/ed + by O."
+    },
+    {
+      "title": "Câu 3. Chuyển đổi câu sang thể bị động thì Hiện tại đơn",
+      "question": "He hides the broken cup in the drawer.<br>➔ The broken ________________________________________",
+      "solution": "The broken cup is hidden in the drawer (by him).<br>• Cấu trúc bị động hiện tại đơn: S + am/is/are + V3/ed (hide ➔ hidden)."
+    },
+    {
+      "title": "Câu 4. Viết lại câu với cấu trúc bị động hoặc 'expect sb to do sth'",
+      "question": "I expect that she will give me some advice.<br>➔ I expect ________________________________________",
+      "solution": "I expect her to give me some advice (hoặc: I expect to be given some advice by her).<br>• Cấu trúc: expect somebody to do something hoặc expect to be V3/ed."
+    },
+    {
+      "title": "Câu 5. Chuyển đổi từ 'allow' sang 'let'",
+      "question": "The doctor doesn’t allow me to go out.<br>➔ The doctor doesn’t let ________________________________________",
+      "solution": "The doctor doesn’t let me go out.<br>• Cấu trúc tương đương: allow sb to do sth ➔ let sb do sth (let đi với động từ nguyên mẫu không to)."
+    }
+  ]
+},
+{
+  "id": "tienganh-10-de-03",
+  "title": "Tiếng Anh 10 - Đề 03 - Đề thi giữa học kì 1 (Global Success)",
+  "subject": "english",
+  "duration": 45,
+  "school": "Bộ GD&ĐT - Tiếng Anh 10 Global Success",
+  "province": "Toàn quốc",
+  "year": "2026–2027",
+  "source": {
+    "school": "Tiếng Anh 10 Global Success",
+    "province": "Bộ GD&ĐT",
+    "year": "2026–2027",
+    "note": "Đề thi giữa học kì 1 chuẩn chương trình GDPT 2018 (Unit 1, 2, 3)"
+  },
+  "description": "Đề thi giữa học kì 1 môn Tiếng Anh 10 Global Success (Đề số 3). Đầy đủ các phần: Phonetics, Grammar & Vocabulary, Stative verbs & Tenses, Reading (Bagpipes, Snakebites) và Writing (Sentence Transformation).",
+  "questions": [
+    [
+      "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
+      [
+        "A. gratitude",
+        "B. human",
+        "C. education",
+        "D. value"
+      ],
+      2,
+      "Trong từ 'education', chữ 'u' được phát âm là /u/ hoặc /juː/ với tổ hợp âm /dʒu/. Trong các từ 'gratitude' (/ˈɡrætɪtjuːd/), 'human' (/ˈhjuːmən/), 'value' (/ˈvæljuː/), chữ 'u' phát âm rõ là /juː/."
+    ],
+    [
+      "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
+      [
+        "A. comment",
+        "B. support",
+        "C. organic",
+        "D. resource"
+      ],
+      0,
+      "Trong từ 'comment', chữ 'o' được phát âm là /ɒ/ (/ˈkɒment/). Trong 'support' là /ə/, 'organic' là /ɔː/, 'resource' là /ɪ/."
+    ],
+    [
+      "<b>PHONETICS</b><br>Choose the word which has a different stress pattern from the others:",
+      [
+        "A. upload",
+        "B. issue",
+        "C. support",
+        "D. routine"
+      ],
+      1,
+      "'issue' có trọng âm rơi vào âm tiết thứ 1 (/ˈɪʃuː/). Các từ còn lại có trọng âm rơi vào âm tiết thứ 2: 'upload' (/ʌpˈləʊd/), 'support' (/səˈpɔːt/), 'routine' (/ruːˈtiːn/)."
+    ],
+    [
+      "<b>PHONETICS</b><br>Choose the word which has a different stress pattern from the others:",
+      [
+        "A. breadwinner",
+        "B. homemaker",
+        "C. lifestyle",
+        "D. washing-up"
+      ],
+      3,
+      "'washing-up' có trọng âm rơi vào âm tiết thứ hai /ˌwɒʃɪŋ ˈʌp/. Các từ còn lại có trọng âm rơi vào âm tiết thứ 1: 'breadwinner' (/ˈbredwɪnə/), 'homemaker' (/ˈhəʊmmeɪkə/), 'lifestyle' (/ˈlaɪfstaɪl/)."
+    ],
+    [
+      "<b>GRAMMAR AND VOCABULARY</b><br>Choose the best answer A, B, C or D to complete the sentence:<br>The award _______ for his work in cancer research in 1995.",
+      [
+        "A. has made",
+        "B. was made",
+        "C. has been made",
+        "D. made"
+      ],
+      1,
+      "Có mốc thời gian xác định trong quá khứ 'in 1995' và mang nghĩa bị động: 'was made'."
+    ],
+    [
+      "When she was young, she _______ at the local theatre in her hometown during the tourist season.",
+      [
+        "A. has performed",
+        "B. performed",
+        "C. has been performed",
+        "D. was performed"
+      ],
+      1,
+      "Mệnh đề chỉ thời gian trong quá khứ 'When she was young' dùng thì quá khứ đơn ở thể chủ động: 'performed'."
+    ],
+    [
+      "Many fans say that BTS’s songs helped _______ more love and hope into their lives.",
+      [
+        "A. to bringing",
+        "B. bring",
+        "C. bringing",
+        "D. to be brought"
+      ],
+      1,
+      "Cấu trúc: help (to) do something (giúp đỡ làm gì) ➔ dùng động từ nguyên thể 'bring'."
+    ],
+    [
+      "We encourage _______ participation during our show.",
+      [
+        "A. viewer",
+        "B. watcher",
+        "C. audience",
+        "D. spectator"
+      ],
+      2,
+      "'audience participation' là cụm từ chỉ sự tham gia của khán giả trong buổi biểu diễn/chương trình hòa nhạc."
+    ],
+    [
+      "She was invited to be a _______ in a cookery competition.",
+      [
+        "A. judge",
+        "B. court",
+        "C. foreman",
+        "D. jury"
+      ],
+      0,
+      "'judge' là giám khảo (trong một cuộc thi nấu ăn cookery competition)."
+    ],
+    [
+      "The media _______ a major role in influencing people's opinions.",
+      [
+        "A. give",
+        "B. have",
+        "C. play",
+        "D. do"
+      ],
+      2,
+      "Cụm từ cố định: 'play a role in doing something' (đóng một vai trò quan trọng trong việc gì)."
+    ],
+    [
+      "The college principal promised _______ into the matter.",
+      [
+        "A. look",
+        "B. looking",
+        "C. to look",
+        "D. to be looked"
+      ],
+      2,
+      "Cấu trúc: promise to do something (hứa sẽ làm việc gì)."
+    ],
+    [
+      "Please do not hesitate _______ me if you have any queries.",
+      [
+        "A. contact",
+        "B. contacting",
+        "C. to contact",
+        "D. contacted"
+      ],
+      2,
+      "Cấu trúc: hesitate to do something (ngập ngừng, do dự làm gì) ➔ 'do not hesitate to contact me' (đừng ngần ngại liên hệ với tôi)."
+    ],
+    [
+      "Chau van is a(n) _______ form of Vietnamese arts that mixes singing and dancing and is meant to celebrate the virtues of beneficent deities or national heroes.",
+      [
+        "A. ancient",
+        "B. modern",
+        "C. contemporary",
+        "D. latest"
+      ],
+      0,
+      "'ancient form of Vietnamese arts' (loại hình nghệ thuật cổ truyền của Việt Nam)."
+    ],
+    [
+      "Using public transport can help reduce the carbon footprint and your _______ on the environment.",
+      [
+        "A. affect",
+        "B. impact",
+        "C. role",
+        "D. mission"
+      ],
+      1,
+      "Cụm từ: 'impact on the environment' (tác động lên môi trường). Lưu ý 'affect' là động từ."
+    ],
+    [
+      "Many people adopt a(n) _______ because it’s good for the environment.",
+      [
+        "A. rural lifestyle",
+        "B. healthy lifestyle",
+        "C. nomadic lifestyle.",
+        "D. green lifestyle"
+      ],
+      3,
+      "'adopt a green lifestyle' (áp dụng lối sống xanh, thân thiện với môi trường)."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word(s):<br>I didn't enjoy the book because I couldn't <u>identify with</u> any of the main characters.",
+      [
+        "A. disregard",
+        "B. sympathize",
+        "C. ignore",
+        "D. scorn"
+      ],
+      1,
+      "'identify with somebody' nghĩa là cảm thông, đồng cảm sâu sắc với ai = 'sympathize with'."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) CLOSEST in meaning to the underlined word(s):<br>He is a <u>popular</u> teen idol around the world.",
+      [
+        "A. unknown",
+        "B. unpopular",
+        "C. disliked",
+        "D. well-known"
+      ],
+      3,
+      "'popular' (nổi tiếng, được nhiều người yêu thích) đồng nghĩa với 'well-known'."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word(s):<br>Some of these young musicians are incredibly <u>talented</u>.",
+      [
+        "A. gifted",
+        "B. skilled",
+        "C. brilliant",
+        "D. incompetent"
+      ],
+      3,
+      "'talented' (tài năng, có năng khiếu) trái nghĩa với 'incompetent' (bất tài, thiếu năng lực)."
+    ],
+    [
+      "Mark the letter A, B, C, or D to indicate the word(s) OPPOSITE in meaning to the underlined word(s):<br>All the English teams were <u>eliminated</u> in the early stages of the competition.",
+      [
+        "A. defeated",
+        "B. omitted",
+        "C. passed",
+        "D. knocked out"
+      ],
+      2,
+      "'eliminated' (bị loại) trái nghĩa với 'passed' (vượt qua, lọt vào vòng trong)."
+    ],
+    [
+      "<b>READING - CLOZE TEXT: BAGPIPES</b><br>Bagpipes are a woodwind (26) _______ that is played in Scotland during cultural festivals and celebrations. It is considered Scotland's national instrument.",
+      [
+        "A. heritage",
+        "B. occasions",
+        "C. instrument",
+        "D. regiments"
+      ],
+      2,
+      "'woodwind instrument' mang nghĩa nhạc cụ bộ hơi."
+    ],
+    [
+      "There are over thirty different types of bagpipes, but the one used in Scotland is the Highland Pipes. They are part of Scottish life, and they are used on special (27) _______.",
+      [
+        "A. heritage",
+        "B. occasions",
+        "C. instrument",
+        "D. parade"
+      ],
+      1,
+      "'on special occasions' mang nghĩa vào các dịp đặc biệt."
+    ],
+    [
+      "All Scottish Army (28) _______ have a piper to play the bagpipes...",
+      [
+        "A. heritage",
+        "B. occasions",
+        "C. instrument",
+        "D. regiments"
+      ],
+      3,
+      "'Scottish Army regiments' mang nghĩa các trung đoàn quân đội Scotland."
+    ],
+    [
+      "...when they go on (29) _______.",
+      [
+        "A. heritage",
+        "B. parade",
+        "C. instrument",
+        "D. regiments"
+      ],
+      1,
+      "'go on parade' mang nghĩa đi diễu hành."
+    ],
+    [
+      "They are an essential feature in many songs, stories and poems as they represent the cultural (30) _______ of the Scots.",
+      [
+        "A. heritage",
+        "B. occasions",
+        "C. instrument",
+        "D. regiments"
+      ],
+      0,
+      "'cultural heritage' mang nghĩa di sản văn hóa."
+    ],
+    [
+      "<b>READING COMPREHENSION: SNAKEBITES</b><br>Read the text about snakebites and answer the question:<br><i>You're hiking with a friend and then as you step over a tree log a snake beneath bites your leg...</i><br><br><b>What is the writer trying to do in this text?</b>",
+      [
+        "A. explain the dangers of snakes.",
+        "B. advise against walking in the countryside.",
+        "C. warn about certain venomous snakes.",
+        "D. offer information about snake bites."
+      ],
+      3,
+      "Bài viết giải thích cơ chế, phân biệt nọc độc và độc tố, cũng như cung cấp thông tin/lời khuyên xử lý đúng khi bị rắn cắn (offer information about snake bites)."
+    ],
+    [
+      "<b>The writer advises against sucking the venom because …</b>",
+      [
+        "A. it tastes awful.",
+        "B. it is risky.",
+        "C. it will hurt more.",
+        "D. it will kill you"
+      ],
+      1,
+      "Đoạn 2 & 4: '...the venom could enter his bloodstream... venom sucking isn't a solution... Experts now strongly advise against it' vì điều đó tiềm ẩn nhiều rủi ro (it is risky) và không hiệu quả."
+    ],
+    [
+      "<b>According to the writer, poison ...</b>",
+      [
+        "A. is usually breathed in.",
+        "B. has to be injected.",
+        "C. is not the same as venom.",
+        "D. is less dangerous than venom."
+      ],
+      2,
+      "Đoạn 3 nêu rõ sự khác biệt giữa hai khái niệm: 'To understand how to treat snakebites, you need to know the difference between poisons and venoms' ➔ poison is not the same as venom."
+    ],
+    [
+      "<b>If bitten by a snake, you should ...</b>",
+      [
+        "A. run to the nearest place for help.",
+        "B. not move at all.",
+        "C. try to keep cool.",
+        "D. sit and decide if it was a dangerous snake."
+      ],
+      2,
+      "Đoạn 5: 'The best way to prevent the venom from quickly moving through the bloodstream is to remain calm' (giữ bình tĩnh, không hoảng loạn = try to keep cool)."
+    ],
+    [
+      "<b>Which would be the best advice leaflet for snakebites?</b>",
+      [
+        "A. ATTENTION WALKERS - Based on worldwide data, millions die of snakebites yearly! Take your snake bite kit with you. Be safe!",
+        "B. SAFE NOT SORRY - If you like walking or are travelling abroad, get information on snake species. Be careful and be find out emergency contact information.",
+        "C. WORRIED ABOUT SNAKES? Read here about how to treat your own snakebites! Very few people die from bites if they follow this treatment. Follow it step by step.",
+        "D. ALL YOU NEED TO KNOW ABOUT SNAKES Snake venom travels slowly so keep calm. Only if you think it is a dangerous snake, move as fast as you can to get help. Read more about snakes here!"
+      ],
+      1,
+      "Tờ rơi B đưa ra lời khuyên cẩn trọng và chuẩn bị thông tin về các loài rắn cũng như số liên hệ khẩn cấp (SAFE NOT SORRY)."
+    ]
+  ],
+  "short": [
+    {
+      "question": "Choose the correct verb form to complete the sentence:<br>I never do anything I (feel / ’m feeling) _______ is against my principles.",
+      "answer": "feel",
+      "explanation": "'feel' ở đây là động từ chỉ quan điểm/cảm nghĩ (stative verb), dùng ở thì hiện tại đơn: 'feel'."
+    },
+    {
+      "question": "Choose the correct verb form to complete the sentence:<br>He (appears / ’s appearing) _______ to be very friendly but I don’t know him very well.",
+      "answer": "appears",
+      "explanation": "'appear' mang nghĩa 'dường như' là linking verb chỉ trạng thái, không dùng ở thì tiếp diễn: 'appears'."
+    },
+    {
+      "question": "Choose the correct verb form to complete the sentence:<br>We (have / are having) _______ a great time here in London.",
+      "answer": "are having",
+      "explanation": "Cụm 'have a great time' chỉ trải nghiệm/hành động đang diễn ra nên dùng thì hiện tại tiếp diễn: 'are having'."
+    },
+    {
+      "question": "Choose the correct verb form to complete the sentence:<br>When do you think it (will / is going to) _______ be convenient for me to pop round?",
+      "answer": "will",
+      "explanation": "Câu hỏi dự đoán với 'do you think' đi với thì tương lai đơn 'will'."
+    },
+    {
+      "question": "Choose the correct verb form to complete the sentence:<br>Yes, don’t worry. I (’m not forgetting / won’t forget) _______. Anything else?",
+      "answer": "won't forget / will not forget",
+      "explanation": "Lời hứa trong tương lai dùng thì tương lai đơn: 'won't forget'."
+    },
+    {
+      "question": "Choose the correct verb form to complete the sentence:<br>I (’m seeing / will see) _______ my dentist tomorrow. Is Thursday OK?",
+      "answer": "'m seeing / am seeing",
+      "explanation": "Lịch hẹn cố định với bác sĩ nha khoa đã lên lịch trình từ trước dùng hiện tại tiếp diễn chỉ tương lai: 'm seeing."
+    }
+  ],
+  "essay": [
+    {
+      "title": "Câu 1. Chuyển đổi câu sang thể bị động thì Hiện tại tiếp diễn",
+      "question": "They are building a new school in West Street.<br>➔ A new school ________________________________________",
+      "solution": "A new school is being built in West Street.<br>• Cấu trúc bị động hiện tại tiếp diễn: S + is/am/are + being + V3/ed."
+    },
+    {
+      "title": "Câu 2. Chuyển đổi câu sang thể bị động thì Hiện tại hoàn thành",
+      "question": "The police have just arrested him on suspicion of murder.<br>➔ He ________________________________________",
+      "solution": "He has just been arrested on suspicion of murder by the police.<br>• Cấu trúc bị động hiện tại hoàn thành: S + has/have + been + V3/ed."
+    },
+    {
+      "title": "Câu 3. Chuyển đổi câu sang thể bị động tương lai gần 'be going to'",
+      "question": "He’s going to repair the machine tomorrow.<br>➔ The machine ________________________________________",
+      "solution": "The machine is going to be repaired tomorrow.<br>• Cấu trúc bị động tương lai gần: S + is/am/are + going to be + V3/ed."
+    },
+    {
+      "title": "Câu 4. Chuyển đổi câu sang cấu trúc 'plan to do sth'",
+      "question": "I’m going to the theatre next Sunday.<br>➔ I plan ________________________________________",
+      "solution": "I plan to go to the theatre next Sunday.<br>• Cấu trúc: plan to do something (lên kế hoạch làm gì)."
+    },
+    {
+      "title": "Câu 5. Chuyển đổi từ 'look forward to' sang 'expect to'",
+      "question": "We’re looking forward to traveling around our country.<br>➔ We expect ________________________________________",
+      "solution": "We expect to travel around our country.<br>• Cấu trúc: expect to do something (kỳ vọng/trông chờ làm gì)."
+    }
+  ]
+},
+{
+  "id": "tienganh-10-de-04",
+  "title": "Tiếng Anh 10 - Đề 04 - Chuyên đề: Câu bị động (Passive Voice)",
+  "subject": "english",
+  "duration": 45,
+  "school": "Tiếng Anh 10 Global Success",
+  "province": "Toàn quốc",
+  "year": "2026–2027",
+  "source": {
+    "school": "Tiếng Anh 10 Global Success",
+    "province": "Bộ GD&ĐT",
+    "year": "2026–2027",
+    "note": "Chuyên đề ngữ pháp trọng tâm Giữa học kì 1: Câu bị động (Passive Voice)"
+  },
+  "description": "Trọn bộ 25 câu bài tập chuyển đổi sang câu bị động (Change into passive voice) từ cơ bản đến nâng cao: các thì hiện tại đơn, quá khứ đơn, tiếp diễn, hoàn thành, tương lai, câu hỏi Wh- và động từ khuyết thiếu.",
+  "questions": [],
+  "short": [],
+  "essay": [
+    {
+      "title": "Câu 1. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "My father waters this flower every morning.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>This flower is watered by my father every morning.</b><br>• Giải thích ngữ pháp: Hiện tại đơn: S + am/is/are + V3/ed + by O."
+    },
+    {
+      "title": "Câu 2. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "John invited Fiona to his birthday party last night.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>Fiona was invited to John's birthday party last night (by John).</b><br>• Giải thích ngữ pháp: Quá khứ đơn: S + was/were + V3/ed."
+    },
+    {
+      "title": "Câu 3. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Her mother is preparing the dinner in the kitchen.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>The dinner is being prepared by her mother in the kitchen.</b><br>• Giải thích ngữ pháp: Hiện tại tiếp diễn: S + am/is/are + being + V3/ed."
+    },
+    {
+      "title": "Câu 4. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "We should clean our teeth twice a day.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>Our teeth should be cleaned twice a day.</b><br>• Giải thích ngữ pháp: Động từ khuyết thiếu: S + modal + be + V3/ed."
+    },
+    {
+      "title": "Câu 5. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Our teachers have explained the English grammar.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>The English grammar has been explained by our teachers.</b><br>• Giải thích ngữ pháp: Hiện tại hoàn thành: S + has/have + been + V3/ed."
+    },
+    {
+      "title": "Câu 6. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Some drunk drivers caused the accident in this city.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>The accident in this city was caused by some drunk drivers.</b><br>• Giải thích ngữ pháp: Quá khứ đơn: S + was/were + V3/ed + by O."
+    },
+    {
+      "title": "Câu 7. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Tom will visit his parents next month.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>Tom's parents will be visited by him next month.</b><br>• Giải thích ngữ pháp: Tương lai đơn: S + will be + V3/ed + by O."
+    },
+    {
+      "title": "Câu 8. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "The manager didn’t phone the secretary this morning.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>The secretary was not phoned by the manager this morning.</b><br>• Giải thích ngữ pháp: Phủ định quá khứ đơn: S + was/were not + V3/ed."
+    },
+    {
+      "title": "Câu 9. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Did Mary buy this beautiful dress?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>Was this beautiful dress bought by Mary?</b><br>• Giải thích ngữ pháp: Nghi vấn quá khứ đơn: Was/Were + S + V3/ed + by O?"
+    },
+    {
+      "title": "Câu 10. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "I won’t hang these old pictures in the living room.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>These old pictures won't be hung in the living room.</b><br>• Giải thích ngữ pháp: Phủ định tương lai đơn: S + won't be + V3/ed (hang ➔ hung)."
+    },
+    {
+      "title": "Câu 11. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "The German didn’t build this factory during the Second World War.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>This factory was not built by the Germans during the Second World War.</b><br>• Giải thích ngữ pháp: Phủ định quá khứ đơn: S + was not + V3/ed."
+    },
+    {
+      "title": "Câu 12. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "The Greens are going to paint this house and these cars for Christmas Day.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>This house and these cars are going to be painted by the Greens for Christmas Day.</b><br>• Giải thích ngữ pháp: Tương lai gần: S + are going to be + V3/ed."
+    },
+    {
+      "title": "Câu 13. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Ann had fed the cats before she went to the cinema.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>The cats had been fed by Ann before she went to the cinema.</b><br>• Giải thích ngữ pháp: Quá khứ hoàn thành: S + had been + V3/ed."
+    },
+    {
+      "title": "Câu 14. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "The students have discussed the pollution problems since last week.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>The pollution problems have been discussed by the students since last week.</b><br>• Giải thích ngữ pháp: Hiện tại hoàn thành: S + have been + V3/ed."
+    },
+    {
+      "title": "Câu 15. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Have the thieves stolen the most valuable painting in the national museum?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>Has the most valuable painting in the national museum been stolen by the thieves?</b><br>• Giải thích ngữ pháp: Nghi vấn hiện tại hoàn thành: Has/Have + S + been + V3/ed?"
+    },
+    {
+      "title": "Câu 16. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Some people will interview the new president on TV.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>The new president will be interviewed on TV.</b><br>• Giải thích ngữ pháp: Tương lai đơn: S + will be + V3/ed."
+    },
+    {
+      "title": "Câu 17. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "How many languages do they speak in Canada?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>How many languages are spoken in Canada?</b><br>• Giải thích ngữ pháp: Nghi vấn WH- hiện tại đơn: How many + N + are + V3/ed?"
+    },
+    {
+      "title": "Câu 18. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Are you going to repair those shoes?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>Are those shoes going to be repaired?</b><br>• Giải thích ngữ pháp: Nghi vấn tương lai gần: Are + S + going to be + V3/ed?"
+    },
+    {
+      "title": "Câu 19. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "He has broken his nose in a football match.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>His nose has been broken in a football match.</b><br>• Giải thích ngữ pháp: Hiện tại hoàn thành: S + has been + V3/ed (broken)."
+    },
+    {
+      "title": "Câu 20. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "Have you finished the above sentences?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>Have the above sentences been finished?</b><br>• Giải thích ngữ pháp: Nghi vấn hiện tại hoàn thành: Have + S + been + V3/ed?"
+    },
+    {
+      "title": "Câu 21. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "When will you do the work?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>When will the work be done?</b><br>• Giải thích ngữ pháp: Nghi vấn WH- tương lai đơn: When will + S + be + V3/ed (done)?"
+    },
+    {
+      "title": "Câu 22. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "How are you going to deal with this problem?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>How is this problem going to be dealt with?</b><br>• Giải thích ngữ pháp: Nghi vấn WH- tương lai gần: How is + S + going to be + V3/ed (dealt with)?"
+    },
+    {
+      "title": "Câu 23. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "How do you spend this amount of money?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>How is this amount of money spent?</b><br>• Giải thích ngữ pháp: Nghi vấn WH- hiện tại đơn: How is + S + V3/ed (spent)?"
+    },
+    {
+      "title": "Câu 24. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "I wonder whether the board of directors will choose Susan or Jane for the position.<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>I wonder whether Susan or Jane will be chosen for the position by the board of directors.</b><br>• Giải thích ngữ pháp: Mệnh đề danh ngữ bị động: will be chosen."
+    },
+    {
+      "title": "Câu 25. Chuyển câu sau sang thể bị động (Passive Voice)",
+      "question": "How did the police find the lost man?<br>➔ <i>Chuyển sang câu bị động:</i>",
+      "solution": "<b>How was the lost man found by the police?</b><br>• Giải thích ngữ pháp: Nghi vấn WH- quá khứ đơn: How was + S + V3/ed (found) + by O?"
+    }
+  ]
+},
+{
+  "id": "tienganh-10-de-05",
+  "title": "Tiếng Anh 10 - Đề 05 - Chuyên đề: To-infinitives và Bare infinitives",
+  "subject": "english",
+  "duration": 45,
+  "school": "Tiếng Anh 10 Global Success",
+  "province": "Toàn quốc",
+  "year": "2026–2027",
+  "source": {
+    "school": "Tiếng Anh 10 Global Success",
+    "province": "Bộ GD&ĐT",
+    "year": "2026–2027",
+    "note": "Chuyên đề ngữ pháp trọng tâm Giữa học kì 1: Động từ nguyên mẫu có to và không to"
+  },
+  "description": "Trọn bộ 60 câu bài tập chuyên đề Động từ nguyên mẫu có to (To-infinitives) và không to (Bare infinitives) bám sát chương trình Tiếng Anh 10 Global Success: 20 câu trắc nghiệm nhiều lựa chọn và 40 câu điền dạng đúng của động từ.",
+  "questions": [
+    [
+      "<b>Ex2 - Question 1:</b> My parents want me ________ harder for the final exam.",
+      [
+        "A. study",
+        "B. studying",
+        "C. to study"
+      ],
+      2,
+      "Cấu trúc: want somebody to do something (muốn ai làm gì)."
+    ],
+    [
+      "<b>Ex2 - Question 2:</b> We watched the children ________ football in the playground.",
+      [
+        "A. plays",
+        "B. to play",
+        "C. playing"
+      ],
+      2,
+      "Cấu trúc: watch somebody doing something (chứng kiến một phần hành động đang diễn ra) hoặc watch sb do sth."
+    ],
+    [
+      "<b>Ex2 - Question 3:</b> The teacher asked us ________ the homework before class.",
+      [
+        "A. finish",
+        "B. to finish",
+        "C. finishing"
+      ],
+      1,
+      "Cấu trúc: ask somebody to do something (yêu cầu ai làm gì)."
+    ],
+    [
+      "<b>Ex2 - Question 4:</b> She made her younger brother ________ his room.",
+      [
+        "A. clean",
+        "B. to clean",
+        "C. cleaning"
+      ],
+      0,
+      "Cấu trúc: make somebody do something (sai bảo/bắt ai làm gì, dùng V-bare)."
+    ],
+    [
+      "<b>Ex2 - Question 5:</b> They decided ________ a new house next year.",
+      [
+        "A. buy",
+        "B. buying",
+        "C. to buy"
+      ],
+      2,
+      "Cấu trúc: decide to do something (quyết định làm gì)."
+    ],
+    [
+      "<b>Ex2 - Question 6:</b> I heard the baby ________ loudly in the next room.",
+      [
+        "A. cry",
+        "B. to cry",
+        "C. cried"
+      ],
+      0,
+      "Cấu trúc: hear somebody do something (nghe thấy ai làm gì, dùng V-bare)."
+    ],
+    [
+      "<b>Ex2 - Question 7:</b> My father encouraged me ________ part in the competition.",
+      [
+        "A. take",
+        "B. taking",
+        "C. to take"
+      ],
+      2,
+      "Cấu trúc: encourage somebody to do something (khuyến khích ai tham gia)."
+    ],
+    [
+      "<b>Ex2 - Question 8:</b> The manager let the employees ________ home early.",
+      [
+        "A. go",
+        "B. to go",
+        "C. going"
+      ],
+      0,
+      "Cấu trúc: let somebody do something (để/cho phép ai làm gì, dùng V-bare)."
+    ],
+    [
+      "<b>Ex2 - Question 9:</b> She hopes ________ a scholarship to study abroad.",
+      [
+        "A. get",
+        "B. getting",
+        "C. to get"
+      ],
+      2,
+      "Cấu trúc: hope to do something (hy vọng đạt được điều gì)."
+    ],
+    [
+      "<b>Ex2 - Question 10:</b> We saw a bird ________ from the tree.",
+      [
+        "A. fly",
+        "B. flew",
+        "C. to fly"
+      ],
+      0,
+      "Cấu trúc: see somebody/something do something (nhìn thấy toàn bộ hành động, dùng V-bare)."
+    ],
+    [
+      "<b>Ex5 - Question 1:</b> My sister wants ________ a new bike.",
+      [
+        "A. buy",
+        "B. buying",
+        "C. to buy",
+        "D. bought"
+      ],
+      2,
+      "Cấu trúc: want to do something ➔ to buy."
+    ],
+    [
+      "<b>Ex5 - Question 2:</b> You must ________ your seat belt.",
+      [
+        "A. wear",
+        "B. to wear",
+        "C. wearing",
+        "D. wore"
+      ],
+      0,
+      "Động từ khuyết thiếu must + V-bare ➔ wear."
+    ],
+    [
+      "<b>Ex5 - Question 3:</b> My teacher advised me ________ more books.",
+      [
+        "A. read",
+        "B. to read",
+        "C. reading",
+        "D. reads"
+      ],
+      1,
+      "Cấu trúc: advise somebody to do something ➔ to read."
+    ],
+    [
+      "<b>Ex5 - Question 4:</b> Let us ________ this problem together.",
+      [
+        "A. to solve",
+        "B. solving",
+        "C. solve",
+        "D. solved"
+      ],
+      2,
+      "Cấu trúc: let somebody do something (V-bare) ➔ solve."
+    ],
+    [
+      "<b>Ex5 - Question 5:</b> He promised ________ me later.",
+      [
+        "A. call",
+        "B. calling",
+        "C. to call",
+        "D. called"
+      ],
+      2,
+      "Cấu trúc: promise to do something ➔ to call."
+    ],
+    [
+      "<b>Ex5 - Question 6:</b> She can ________ very fast.",
+      [
+        "A. runs",
+        "B. running",
+        "C. run",
+        "D. to run"
+      ],
+      2,
+      "Động từ khuyết thiếu can + V-bare ➔ run."
+    ],
+    [
+      "<b>Ex5 - Question 7:</b> The coach made the players ________ harder.",
+      [
+        "A. train",
+        "B. to train",
+        "C. training",
+        "D. trained"
+      ],
+      0,
+      "Cấu trúc: make somebody do something (V-bare) ➔ train."
+    ],
+    [
+      "<b>Ex5 - Question 8:</b> They hope ________ the competition.",
+      [
+        "A. win",
+        "B. winning",
+        "C. to win",
+        "D. won"
+      ],
+      2,
+      "Cấu trúc: hope to do something ➔ to win."
+    ],
+    [
+      "<b>Ex5 - Question 9:</b> You should ________ your room regularly.",
+      [
+        "A. clean",
+        "B. to clean",
+        "C. cleaning",
+        "D. cleaned"
+      ],
+      0,
+      "Động từ khuyết thiếu should + V-bare ➔ clean."
+    ],
+    [
+      "<b>Ex5 - Question 10:</b> My father told me ________ home before 10 p.m.",
+      [
+        "A. come",
+        "B. coming",
+        "C. to come",
+        "D. came"
+      ],
+      2,
+      "Cấu trúc: tell somebody to do something ➔ to come."
+    ]
+  ],
+  "short": [
+    {
+      "question": "<b>Ex1 - Câu 1:</b> My brother wants (learn) _______ how to play the guitar.",
+      "answer": "to learn",
+      "explanation": "Cấu trúc want to do something ➔ to learn."
+    },
+    {
+      "question": "<b>Ex1 - Câu 2:</b> The film was so exciting that it made us (stay) _______ awake until midnight.",
+      "answer": "stay",
+      "explanation": "Cấu trúc make somebody do something (V-bare) ➔ stay."
+    },
+    {
+      "question": "<b>Ex1 - Câu 3:</b> The school allowed students (use) _______ dictionaries during the activity.",
+      "answer": "to use",
+      "explanation": "Cấu trúc allow somebody to do something ➔ to use."
+    },
+    {
+      "question": "<b>Ex1 - Câu 4:</b> We plan (visit) _______ the museum this weekend.",
+      "answer": "to visit",
+      "explanation": "Cấu trúc plan to do something ➔ to visit."
+    },
+    {
+      "question": "<b>Ex1 - Câu 5:</b> The teacher let us (work) _______ in groups.",
+      "answer": "work",
+      "explanation": "Cấu trúc let somebody do something (V-bare) ➔ work."
+    },
+    {
+      "question": "<b>Ex1 - Câu 6:</b> They expect (win) _______ the competition this year.",
+      "answer": "to win",
+      "explanation": "Cấu trúc expect to do something ➔ to win."
+    },
+    {
+      "question": "<b>Ex1 - Câu 7:</b> Her parents made her (clean) _______ her room before going out.",
+      "answer": "clean",
+      "explanation": "Cấu trúc make somebody do something (V-bare) ➔ clean."
+    },
+    {
+      "question": "<b>Ex1 - Câu 8:</b> I would like (travel) _______ around the world one day.",
+      "answer": "to travel",
+      "explanation": "Cấu trúc would like to do something ➔ to travel."
+    },
+    {
+      "question": "<b>Ex1 - Câu 9:</b> The police officer helped the old woman (cross) _______ the road safely.",
+      "answer": "cross / to cross",
+      "explanation": "Cấu trúc help somebody (to) do something ➔ cross hoặc to cross."
+    },
+    {
+      "question": "<b>Ex1 - Câu 10:</b> The director decided (cancel) _______ the meeting because of the storm.",
+      "answer": "to cancel",
+      "explanation": "Cấu trúc decide to do something ➔ to cancel."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (1):</b> One day, Mr. Brown decided (1) _______ (buy) some flower seeds.",
+      "answer": "to buy",
+      "explanation": "decide to do something ➔ to buy."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (2):</b> After that, he encouraged his son (2) _______ (help) him in the garden.",
+      "answer": "to help",
+      "explanation": "encourage somebody to do something ➔ to help."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (3):</b> Every morning, they would get up early and begin (3) _______ (water) the plants.",
+      "answer": "to water / watering",
+      "explanation": "begin to do sth hoặc begin doing sth ➔ to water."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (4):</b> One afternoon, they saw some birds (4) _______ (eat) the seeds.",
+      "answer": "eat / eating",
+      "explanation": "see somebody do/doing something ➔ eat hoặc eating."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (5):</b> Mr. Brown tried (5) _______ (chase) them away, but the birds kept coming back.",
+      "answer": "to chase",
+      "explanation": "try to do something (cố gắng làm gì) ➔ to chase."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (6):</b> His neighbor advised him (6) _______ (put) a scarecrow in the garden.",
+      "answer": "to put",
+      "explanation": "advise somebody to do something ➔ to put."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (7):</b> Mr. Brown made his son (7) _______ (build) one from old clothes and sticks.",
+      "answer": "build",
+      "explanation": "make somebody do something (V-bare) ➔ build."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (8):</b> A few days later, they watched the birds (8) _______ (fly) away from the garden.",
+      "answer": "fly / flying",
+      "explanation": "watch somebody do/doing something ➔ fly hoặc flying."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (9):</b> Mr. Brown was delighted and hoped (9) _______ (grow) many beautiful flowers.",
+      "answer": "to grow",
+      "explanation": "hope to do something ➔ to grow."
+    },
+    {
+      "question": "<b>Ex3 - Đoạn văn (10):</b> In the end, his hard work helped him (10) _______ (create) a colorful and attractive garden.",
+      "answer": "create / to create",
+      "explanation": "help somebody (to) do something ➔ create hoặc to create."
+    },
+    {
+      "question": "<b>Ex4 - Câu 1:</b> My parents want me __________ (study) harder for the final exam.",
+      "answer": "to study",
+      "explanation": "Cấu trúc ngữ pháp: want sb to do sth ➔ đáp án là 'to study'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 2:</b> The teacher made the students __________ (rewrite) their essays.",
+      "answer": "rewrite",
+      "explanation": "Cấu trúc ngữ pháp: make sb do sth (V-bare) ➔ đáp án là 'rewrite'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 3:</b> We hope __________ (visit) Singapore next summer.",
+      "answer": "to visit",
+      "explanation": "Cấu trúc ngữ pháp: hope to do sth ➔ đáp án là 'to visit'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 4:</b> Don't let the children __________ (play) near the river.",
+      "answer": "play",
+      "explanation": "Cấu trúc ngữ pháp: let sb do sth (V-bare) ➔ đáp án là 'play'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 5:</b> I heard someone __________ (knock) on the door last night.",
+      "answer": "knock / knocking",
+      "explanation": "Cấu trúc ngữ pháp: hear sb do/doing sth ➔ đáp án là 'knock / knocking'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 6:</b> This funny movie made us __________ (laugh) a lot.",
+      "answer": "laugh",
+      "explanation": "Cấu trúc ngữ pháp: make sb do sth (V-bare) ➔ đáp án là 'laugh'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 7:</b> They decided __________ (buy) a new computer for their son.",
+      "answer": "to buy",
+      "explanation": "Cấu trúc ngữ pháp: decide to do sth ➔ đáp án là 'to buy'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 8:</b> Her coach encouraged her __________ (join) the swimming competition.",
+      "answer": "to join",
+      "explanation": "Cấu trúc ngữ pháp: encourage sb to do sth ➔ đáp án là 'to join'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 9:</b> We watched the birds __________ (fly) across the sky.",
+      "answer": "fly / flying",
+      "explanation": "Cấu trúc ngữ pháp: watch sb do/doing sth ➔ đáp án là 'fly / flying'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 10:</b> My father asked me __________ (help) him with the gardening.",
+      "answer": "to help",
+      "explanation": "Cấu trúc ngữ pháp: ask sb to do sth ➔ đáp án là 'to help'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 11:</b> The manager let the staff __________ (leave) early on Friday.",
+      "answer": "leave",
+      "explanation": "Cấu trúc ngữ pháp: let sb do sth (V-bare) ➔ đáp án là 'leave'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 12:</b> She plans __________ (become) a doctor in the future.",
+      "answer": "to become",
+      "explanation": "Cấu trúc ngữ pháp: plan to do sth ➔ đáp án là 'to become'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 13:</b> I saw a little boy __________ (cross) the street carefully.",
+      "answer": "cross / crossing",
+      "explanation": "Cấu trúc ngữ pháp: see sb do/doing sth ➔ đáp án là 'cross / crossing'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 14:</b> His story made everyone __________ (cry).",
+      "answer": "cry",
+      "explanation": "Cấu trúc ngữ pháp: make sb do sth (V-bare) ➔ đáp án là 'cry'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 15:</b> The teacher advised us __________ (review) the lesson before the test.",
+      "answer": "to review",
+      "explanation": "Cấu trúc ngữ pháp: advise sb to do sth ➔ đáp án là 'to review'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 16:</b> They expect __________ (receive) the results next week.",
+      "answer": "to receive",
+      "explanation": "Cấu trúc ngữ pháp: expect to do sth ➔ đáp án là 'to receive'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 17:</b> The police officer helped the old woman __________ (carry) her bags.",
+      "answer": "carry / to carry",
+      "explanation": "Cấu trúc ngữ pháp: help sb (to) do sth ➔ đáp án là 'carry / to carry'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 18:</b> We agreed __________ (meet) at the bus station at 8 a.m.",
+      "answer": "to meet",
+      "explanation": "Cấu trúc ngữ pháp: agree to do sth ➔ đáp án là 'to meet'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 19:</b> Her parents won't allow her __________ (stay) out late.",
+      "answer": "to stay",
+      "explanation": "Cấu trúc ngữ pháp: allow sb to do sth ➔ đáp án là 'to stay'."
+    },
+    {
+      "question": "<b>Ex4 - Câu 20:</b> The audience watched the singer __________ (perform) on stage.",
+      "answer": "perform / performing",
+      "explanation": "Cấu trúc ngữ pháp: watch sb do/doing sth ➔ đáp án là 'perform / performing'."
+    }
+  ],
+  "essay": []
+}
 ];

@@ -326,7 +326,7 @@
         const str = localStorage.getItem(STORAGE_CURRENT_USER);
         if (str) {
           const u = JSON.parse(str);
-          if (u && u.id) return u;
+          if (u && u.id) return this.getLocalUsers().find(x => x.id === u.id && x.username === u.username) || null;
         }
       } catch (_) {}
       return null;
@@ -339,7 +339,7 @@
     isAdmin(user) {
       const u = user || this.getCurrentUser();
       if (!u) return false;
-      return u.role === 'admin' || u.role === 'teacher' || u.username === 'admin';
+      return u.role === 'admin' || u.role === 'teacher';
     },
 
     setCurrentUser(user) {
@@ -364,16 +364,6 @@
 
       const users = this.getLocalUsers();
       let found = users.find(x => x.username.toLowerCase() === u && String(x.password) === p);
-
-      // Hỗ trợ tự động đồng bộ mật khẩu riêng cho tài khoản congpro123 và thaithanhcong đã tạo trước đó
-      if (!found && (u === 'congpro123' || u === 'thaithanhcong')) {
-        const target = users.find(x => x.username.toLowerCase() === u);
-        if (target) {
-          target.password = p;
-          this.saveLocalUsers(users);
-          found = target;
-        }
-      }
 
       if (!found) {
         return { success: false, message: 'Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại.' };
@@ -1105,7 +1095,7 @@
             </div>
             <div class="stat">
               <span class="stat-icon blue">📋</span>
-              <div><b>${(typeof exams !== "undefined" && exams.length) ? exams.length : 39}</b><small>Bộ đề thi chuẩn 3 môn</small></div>
+              <div><b>${(typeof exams !== "undefined" && exams.length) ? exams.length : 0}</b><small>Bộ đề luyện tập</small></div>
             </div>
           </section>
 
@@ -1209,6 +1199,7 @@
                   <button class="filter ${!filterSubject ? 'active' : ''}" data-filter-sub="">Tất cả môn (${this.getUserResults(selectedUser.id).length})</button>
                   <button class="filter ${filterSubject === 'math' ? 'active' : ''}" data-filter-sub="math">Toán (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'math').length})</button>
                   <button class="filter ${filterSubject === 'physics' ? 'active' : ''}" data-filter-sub="physics">Vật lí (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'physics').length})</button>
+                  <button class="filter ${filterSubject === 'english' ? 'active' : ''}" data-filter-sub="english">Tiếng Anh (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'english').length})</button>
                   <button class="filter ${filterSubject === 'chemistry' ? 'active' : ''}" data-filter-sub="chemistry">Hóa học (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'chemistry').length})</button>
                 </div>
               </div>
@@ -1264,9 +1255,12 @@
           const defaultUser = name.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/[^a-z0-9]/g, '');
           const username = prompt('Nhập Tên đăng nhập (username):', defaultUser);
           if (!username || !username.trim()) return;
-          const password = prompt('Nhập Mật khẩu đăng nhập:', '123') || '123';
+          const password = prompt('Nhập mật khẩu đăng nhập cho học sinh (ít nhất 3 ký tự):');
+          if (!password || !password.trim()) return;
 
+          const adminUser = this.getCurrentUser();
           const res = this.register(name.trim(), username.trim(), password.trim(), password.trim(), false);
+          if (res.success) this.setCurrentUser(adminUser);
           if (!res.success) {
             alert(res.message);
           } else {

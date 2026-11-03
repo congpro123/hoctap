@@ -8,7 +8,7 @@ function scoreExam(e,a={},legacy=false){
   const shortUnit = (e && typeof e.shortUnit === 'number') ? e.shortUnit : ((e && e.subject === 'chemistry') ? 0.25 : 0.5);
   if(!legacy){
     const isTrue=v=>(v===true||v==='true'||v==='Đúng'||v==='đúng');
-    const isMatch=(u,exp)=>u!==undefined&&u!==null&&Boolean(u)===isTrue(exp);
+    const isMatch=(u,exp)=>u!==undefined&&u!==null&&isTrue(u)===isTrue(exp);
     e.tf.forEach((q,i)=>{const count=q.items.reduce((n,item,j)=>n+(isMatch(a['t'+i+'-'+j],item[1])?1:0),0);tfCorrect+=count;tf+=[0,.1,.25,.5,1][count]});
     e.short.forEach((q,i)=>{if(shortCorrect(a['s'+i],q.answer)){shortCorrectCount++;short+=shortUnit}});
   }
@@ -60,7 +60,8 @@ renderExam=function(){
     const mcUnit = typeof activeExam.mcUnit === 'number' ? activeExam.mcUnit : 0.25;
     const sUnit = typeof activeExam.shortUnit === 'number' ? activeExam.shortUnit : (activeExam.subject === 'chemistry' ? 0.25 : 0.5);
     const essayPoints = typeof activeExam.essayPoints === 'number' ? activeExam.essayPoints : 3.0;
-    line.insertAdjacentHTML('afterend',`<p class="grading-note">Thang điểm: Phần I ${pointText(mcUnit)} điểm/câu · Phần II tối đa 1 điểm/câu (đúng 1/2/3/4 ý: 0,1/0,25/0,5/1 điểm) · Phần III ${pointText(sUnit)} điểm/câu. Tổng tối đa ${pointText(scoreExam(activeExam).max)} điểm (phần trắc nghiệm tự động)${essayPoints > 0 ? ` + ${pointText(essayPoints)} điểm phần Tự luận` : ''}.</p>`);
+    const graded=[activeExam.questions.length?`Phần I ${pointText(mcUnit)} điểm/câu`:null,activeExam.tf.length?'Phần II tối đa 1 điểm/câu':null,activeExam.short.length?`Phần III ${pointText(sUnit)} điểm/câu`:null].filter(Boolean);
+    line.insertAdjacentHTML('afterend',`<p class="grading-note">${graded.length?`Thang điểm tự chấm: ${graded.join(' · ')}. Tổng tối đa ${pointText(scoreExam(activeExam).max)} điểm.`:'Bài tự luyện: đối chiếu lời giải sau khi nộp, không chấm tự động.'}${activeExam.essay?.length && essayPoints>0?` Phần tự luận cần tự đối chiếu lời giải.`:''}</p>`);
   }
 };
 const previousRenderResult=renderResult;
@@ -74,12 +75,16 @@ renderResult=function(r){
   panel.querySelector('.score').textContent=`${pointText(score.points)} / ${pointText(score.max)} điểm`;
   panel.querySelector('.result-icon').textContent=score.points/score.max>=.7?'🏅':'📘';
   const detail=panel.querySelectorAll(':scope > p')[1];
-  detail.textContent=`${score.correct}/${score.total} ý đúng · Điểm theo bố cục bài luyện, không quy đổi về thang 10.`;
+  if (score.max === 0) {
+    panel.querySelector('.score').textContent='Bài tự luyện · tự đối chiếu lời giải';
+    panel.querySelector('.result-icon').textContent='📖';
+  }
+  detail.textContent=score.max === 0 ? 'Bài này gồm câu tự luận, hệ thống không tự chấm điểm.' : `${score.correct}/${score.total} ý đúng · Điểm theo bố cục bài luyện, không quy đổi về thang 10.`;
   const essayBadge=(examObj && Array.isArray(examObj.essay) && examObj.essay.length > 0)?`<span>Phần IV <b>${examObj.essay.length} câu tự luận</b></span>`:'';
   detail.insertAdjacentHTML('afterend',`<div class="score-breakdown"><span>Phần I <b>${pointText(score.mc)} / ${pointText(examObj.questions.length*mcUnit)}</b></span>${r.total===examObj.questions.length?'':`<span>Phần II <b>${pointText(score.tf)} / ${pointText(examObj.tf.length)}</b></span><span>Phần III <b>${pointText(score.short)} / ${pointText(examObj.short.length*sUnit)}</b></span>`}${essayBadge}</div>`);
 };
 const previousHistory=history;
-history=function(){previousHistory();document.querySelectorAll('.history-item').forEach((item,i)=>{const r=saved()[i],score=scoreForResult(r);if(!score)return;item.querySelector('.history-score').textContent=`${pointText(score.points)} / ${pointText(score.max)} điểm`;item.querySelector('small').textContent+=` · ${score.correct}/${score.total} ý đúng`})};
+history=function(){previousHistory();document.querySelectorAll('.history-item').forEach(item=>{const index=Number(item.querySelector('[data-review]')?.dataset.review),r=saved()[index],score=r&&scoreForResult(r);if(!score)return;item.querySelector('.history-score').textContent=score.max===0?'Tự luyện':`${pointText(score.points)} / ${pointText(score.max)} điểm`;if(score.max>0)item.querySelector('small').textContent+=` · ${score.correct}/${score.total} ý đúng`})};
 const previousReviewPast=reviewPast;
 reviewPast=function(index){
   previousReviewPast(index);
@@ -87,7 +92,7 @@ reviewPast=function(index){
   const panel=document.querySelector('.result-panel');
   if(!panel||!score)return;
   const el=panel.querySelector('.score');
-  if(el)el.textContent=`${pointText(score.points)} / ${pointText(score.max)} điểm`;
+  if(el)el.textContent=score.max===0?'Bài tự luyện · tự đối chiếu lời giải':`${pointText(score.points)} / ${pointText(score.max)} điểm`;
   const icon=panel.querySelector('.result-icon');
   if(icon)icon.textContent=score.points/score.max>=.7?'🏅':'📘';
   const e=typeof historicalExamForResult==='function'?historicalExamForResult(r):exams.find(x=>x.id===r.id);
