@@ -227,6 +227,7 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
   .nav::-webkit-scrollbar { display: none; }
   .nav-link, .nav-link.active, .nav-link:not(.active) { flex: none; justify-content: flex-start; font-size: 12px; min-height: 38px; padding: 8px 10px; white-space: nowrap; gap: 6px; border-radius: 7px; }
   .nav-link > span:first-child { font-size: 16px; width: 17px; }
+  .nav-link .nav-text { font-size: 12px; }
   .nav-link.active::before { display: none; }
   .topbar { height: 62px; padding: 0 18px; z-index: 40; }
   .breadcrumb { font-size: 9px; letter-spacing: .35px; }
