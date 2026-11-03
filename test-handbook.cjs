@@ -80,6 +80,7 @@ for (const file of [
   'app.js',
   'ui-upgrades.js',
   'handbook.js',
+  'handbook-english.js',
   'scoring.js',
   'dedup.js'
 ]) {
@@ -92,6 +93,7 @@ assert.ok(hb, 'handbookData phải tồn tại');
 assert.ok(hb.math, 'Có phần Toán 10');
 assert.ok(hb.physics, 'Có phần Vật lý 10');
 assert.ok(hb.chemistry, 'Có phần Hóa học 10');
+assert.ok(hb.english, 'Có phần Tiếng Anh từ REVIEW 1');
 
 // Kiểm tra số lượng chương và công thức
 assert.ok(hb.math.sections.length === 3, 'Toán 10 có đúng 3 chương chuẩn tiến độ (Mệnh đề, BPT, Hệ thức lượng)');
@@ -149,6 +151,19 @@ appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Không tìm thấy công thức phù hợp'), 'Hiển thị thông báo khi không tìm thấy');
 
 console.log('--- 8. Kiểm tra Banner Sổ tay trên trang chủ home() ---');
+vm.runInContext("renderHandbook('english')", context);
+appHtml = elements.get('app').innerHTML;
+assert.ok(appHtml.includes('supplied/REVIEW-1.docx'), 'Sổ tay Tiếng Anh có liên kết tài liệu nguồn');
+assert.ok(appHtml.includes('Passive Voice') && appHtml.includes('Stative verbs'), 'Có ngữ pháp trong tài liệu');
+assert.ok(!appHtml.includes('Heron: S ='), 'Lọc Tiếng Anh không hiển thị công thức Toán');
+vm.runInContext("renderHandbook('english', 'passive')", context);
+appHtml = elements.get('app').innerHTML;
+assert.ok(appHtml.includes('Bảng công thức bị động theo thì'), 'Tìm theo passive hiển thị kiến thức bị động');
+assert.ok(!appHtml.includes('Gia đình và trách nhiệm'), 'Tìm kiếm loại các mục không phù hợp');
+vm.runInContext(`renderHandbook('english', '\\x22><img src=x onerror=alert(1)>')`, context);
+appHtml = elements.get('app').innerHTML;
+assert.ok(!appHtml.includes('<img src=x'), 'Từ khóa tìm kiếm được hiển thị an toàn');
+
 vm.runInContext("home()", context);
 appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('handbook-feature-banner'), 'Trang chủ có banner nổi bật sổ tay');
@@ -158,5 +173,7 @@ console.log('--- 9. Kiểm tra nút mở sổ tay trong catalog() ---');
 vm.runInContext("catalog(0)", context);
 appHtml = elements.get('app').innerHTML;
 assert.ok(appHtml.includes('Xem sổ tay công thức'), 'Kho đề có nút xem sổ tay công thức');
+vm.runInContext('catalog(4)', context);
+assert.ok(elements.get('app').innerHTML.includes('#handbook-english'), 'Kho đề Tiếng Anh mở được sổ tay Tiếng Anh');
 
 console.log('✅ TẤT CẢ CÁC KIỂM TRA CHO SỔ TAY KIẾN THỨC ĐỀU THÀNH CÔNG VÀ CHÍNH XÁC!');

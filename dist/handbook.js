@@ -321,15 +321,16 @@ const handbookData = {
 function renderHandbook(selectedSubject, filterQuery) {
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('handbook')) return;
   window.currentView = 'handbook';
-  const sidebar = document.getElementById('sidebar');
+  const sidebar = document.querySelector('.sidebar');
   if (sidebar) {
     sidebar.querySelectorAll('a').forEach(a => a.classList.remove('active'));
     const btn = sidebar.querySelector('[data-view="handbook"]');
     if (btn) btn.classList.add('active');
   }
 
-  const activeSubject = selectedSubject || 'all';
+  const activeSubject = Object.prototype.hasOwnProperty.call(handbookData, selectedSubject) ? selectedSubject : 'all';
   const query = (filterQuery || '').trim().toLowerCase();
+  const safeQuery = query.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
   const subjectsToRender = activeSubject === 'all'
     ? Object.keys(handbookData)
@@ -365,10 +366,11 @@ function renderHandbook(selectedSubject, filterQuery) {
           <div class="handbook-item-desc">${item.desc}</div>
           ${item.example ? `
             <div class="example-box">
-              <span class="example-title">💡 VÍ DỤ MINH HỌA TỪ ĐỀ THI:</span>
+              <span class="example-title">💡 VÍ DỤ MINH HỌA TỪ TÀI LIỆU / ĐỀ THI:</span>
               <p>${item.example}</p>
             </div>
           ` : ''}
+          ${item.reference ? `<div class="handbook-reference">Đối chiếu: ${item.reference}</div>` : ''}
           ${item.traps ? `
             <div class="trap-box">
               <span class="trap-title">⚠️ BẪY ĐỀ THI & MẸO NHỚ NHANH</span>
@@ -400,7 +402,8 @@ function renderHandbook(selectedSubject, filterQuery) {
             <span class="handbook-subject-icon" style="background:${subj.bg};color:${subj.color}">${subj.icon}</span>
             <div>
               <h2 style="font-size:20px;font-weight:700;margin:0;color:#1e293b">${subj.name}</h2>
-              <small style="color:#64748b;font-size:12.5px">Đã đối chiếu và tổng hợp chuẩn xác theo toàn bộ các bộ đề thi trong hệ thống</small>
+              <small style="color:#64748b;font-size:12.5px">Công thức, cách dùng và các điểm cần chú ý khi làm bài</small>
+              ${subj.source ? `<p class="handbook-source">${subj.source} <a href="supplied/REVIEW-1.docx" download>Xem tài liệu REVIEW 1</a></p>` : ''}
             </div>
           </div>
           <div class="handbook-subject-actions">
@@ -422,9 +425,9 @@ function renderHandbook(selectedSubject, filterQuery) {
     <div class="handbook-container">
       <div class="handbook-hero">
         <div>
-          <span class="eyebrow" style="background:rgba(255,255,255,0.15);color:#fff">HỌC TẬP SPACE · SỔ TAY BÁM SÁT 39 BỘ ĐỀ THI</span>
+          <span class="eyebrow" style="background:rgba(255,255,255,0.15);color:#fff">HỌC TẬP SPACE · KIẾN THỨC TRỌNG TÂM</span>
           <h1 style="font-size:clamp(22px, 2.5vw, 30px);font-weight:700;margin:10px 0 8px">Sổ tay Công thức & Lý thuyết Trọng tâm (Lớp 10)</h1>
-          <p style="font-size:14px;color:#cbd5e1;line-height:1.6;margin:0">Bám sát 100% dạng bài thi từ toàn bộ 39 bộ đề chính thức (Toán 10, Vật lí 10, Hóa học 10): Đề thi hỏi về dạng bài nào thì sổ tay tập trung ôn luyện sâu dạng bài đó!</p>
+          <p style="font-size:14px;color:#cbd5e1;line-height:1.6;margin:0">Ôn tập Toán, Vật lý, Hóa học và Tiếng Anh theo các dạng bài trong kho đề. Tra cứu công thức, xem ví dụ và ghi nhớ những lỗi dễ gặp.</p>
         </div>
         <div style="text-align:right">
           <button class="btn btn-secondary" onclick="window.print()" style="white-space:nowrap;background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.3)">
@@ -435,18 +438,7 @@ function renderHandbook(selectedSubject, filterQuery) {
 
       <div class="handbook-toolbar">
         <div class="handbook-tabs">
-          <button class="btn ${activeSubject === 'all' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('all', '${query}')">
-            Tất cả môn (39 đề)
-          </button>
-          <button class="btn ${activeSubject === 'math' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('math', '${query}')">
-            📐 Toán 10 (13 đề)
-          </button>
-          <button class="btn ${activeSubject === 'physics' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('physics', '${query}')">
-            ⚛️ Vật lý 10 (10 đề)
-          </button>
-          <button class="btn ${activeSubject === 'chemistry' ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('chemistry', '${query}')">
-            🧪 Hóa học 10 (16 đề)
-          </button>
+          ${[['all', 'Tất cả môn'], ...Object.values(handbookData).map(s => [s.id, `${s.icon} ${s.id === 'english' ? 'Tiếng Anh 10' : s.name}`])].map(([id, label]) => `<button class="btn ${activeSubject === id ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('${id}', document.getElementById('handbookSearchInput').value)">${label}</button>`).join('')}
         </div>
 
         <div class="handbook-search-wrap">
@@ -454,8 +446,9 @@ function renderHandbook(selectedSubject, filterQuery) {
             type="text"
             class="handbook-search-input"
             id="handbookSearchInput"
-            placeholder="🔍 Tìm nhanh: phủ định, giao hợp, miền nghiệm, Heron, sai số, rơi tự do, Klechkowski, chu kì..."
-            value="${query}"
+            placeholder="Tìm kiến thức: Heron, sai số, bị động, passive, to-infinitive..."
+            aria-label="Tìm kiến thức trong sổ tay"
+            value="${safeQuery}"
             oninput="renderHandbook('${activeSubject}', this.value)"
           />
         </div>
@@ -467,7 +460,7 @@ function renderHandbook(selectedSubject, filterQuery) {
             <span style="font-size:42px">🔍</span>
             <h3 style="margin:16px 0 8px;font-size:18px">Không tìm thấy công thức phù hợp</h3>
             <p style="color:var(--muted);font-size:13px;max-width:400px;margin:auto">
-              Không có kết quả nào khớp với từ khóa "<strong>${query}</strong>". Bạn hãy thử tìm bằng từ khóa khác hoặc xóa ô tìm kiếm.
+              Không có kết quả nào khớp với từ khóa "<strong>${safeQuery}</strong>". Bạn hãy thử tìm bằng từ khóa khác hoặc xóa ô tìm kiếm.
             </p>
             <button class="btn btn-outline btn-sm" style="margin-top:16px" onclick="renderHandbook('${activeSubject}', '')">
               Xóa tìm kiếm
@@ -479,7 +472,7 @@ function renderHandbook(selectedSubject, filterQuery) {
       <div class="handbook-footer-cta">
         <div>
           <strong style="display:block;font-size:16px;color:#166534">Đã nắm vững lý thuyết và các bẫy đề thi?</strong>
-          <span style="font-size:13px;color:#15803d">Hãy thực hành ngay trên 39 bộ đề kiểm tra có chấm điểm tự động và barem giải chi tiết!</span>
+          <span style="font-size:13px;color:#15803d">Thực hành trong kho đề và xem lại đáp án, lời giải sau khi nộp bài.</span>
         </div>
         <a href="#subjects" class="btn btn-primary" style="white-space:nowrap;background:#16a34a;border-color:#16a34a">
           Vào phòng luyện thi ngay &rarr;
