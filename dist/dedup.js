@@ -61,4 +61,9 @@ for(const subject of Object.keys(fallback)){
     }
   }
 }
-home();
+// Giữ trang được yêu cầu khi nạp lại dữ liệu thay vì luôn quay về Tổng quan.
+if (typeof location !== 'undefined' && location.hash && typeof window !== 'undefined' && window.dispatchEvent) {
+  window.dispatchEvent(new Event('hashchange'));
+} else {
+  home();
+}
