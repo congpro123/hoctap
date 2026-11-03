@@ -1,39 +1,53 @@
 // Mở rộng kho đề và cho phép xem lại các câu sai trong lịch sử.
 function card(e){
-  const label=e.subject==='math'?'∑ &nbsp; TOÁN 10':e.subject==='chemistry'?'⚗ &nbsp; HÓA HỌC 10':e.subject==='english'?'Aa &nbsp; TIẾNG ANH 10':'⚛ &nbsp; VẬT LÝ 10';
-  let statusBadge = '';
-  let bottomAction = `<button class="primary" data-start="${e.id}">Bắt đầu làm bài →</button>`;
-  
-  if (typeof window !== 'undefined' && window.auth && typeof window.auth.getExamStatus === 'function') {
-    const st = window.auth.getExamStatus(e.id);
-    if (st && st.hasDone && st.bestResult) {
-      const best = st.bestResult;
-      const pts = (typeof pointText === 'function') ? pointText(best.points) : best.points;
-      const maxPts = (typeof pointText === 'function') ? pointText(best.maxPoints) : best.maxPoints;
-      statusBadge = `<div class="exam-status-badge completed"><span class="status-icon">✓</span><span class="status-text">ĐÃ LÀM · <b>${pts} / ${maxPts}</b> điểm</span>${st.attempts > 1 ? `<span class="attempts-count">(${st.attempts} lần)</span>` : ''}</div>`;
-      bottomAction = `<div class="card-action-group"><button class="secondary btn-card-review" data-review-exam="${e.id}">Xem lại</button><button class="primary" data-start="${e.id}">Làm lại →</button></div>`;
-    } else {
-      statusBadge = `<div class="exam-status-badge pending"><span class="status-icon">○</span><span class="status-text">Chưa làm</span></div>`;
+  const labels={math:'Toán 10',physics:'Vật lý 10',chemistry:'Hóa học 10',english:'Tiếng Anh 10'};
+  let status='<span class="exam-status-badge pending">Chưa làm</span>';
+  let action=`<button class="primary" data-start="${esc(e.id)}">Làm bài</button>`;
+  if(window.auth && typeof window.auth.getExamStatus==='function'){
+    const st=window.auth.getExamStatus(e.id);
+    if(st?.hasDone && st.bestResult){
+      const best=st.bestResult;
+      status=`<span class="exam-status-badge completed">Đã làm · <b>${pointText(best.points)} / ${pointText(best.maxPoints)}</b></span>`;
+      action=`<div class="card-action-group"><button class="secondary btn-card-review" data-review-exam="${esc(e.id)}">Xem lại</button><button class="primary" data-start="${esc(e.id)}">Làm lại</button></div>`;
     }
   }
-
-  return `<article class="exam-card ${statusBadge.includes('completed') ? 'card-completed' : ''}" data-subject="${e.subject}"><div class="card-top"><span class="subject-pill">${label}</span><span class="card-code">${esc(e.id)}</span></div>${statusBadge}<h3>${esc(e.title)}</h3><p>${esc(e.description)}</p><div class="meta"><span>◷ &nbsp; ${e.minutes} phút</span>${e.questions.length?`<span>☷ &nbsp; ${e.questions.length} nhiều lựa chọn</span>`:''}${e.tf.length?`<span>✓ &nbsp; ${e.tf.length} đúng/sai</span>`:''}${e.short.length?`<span>✎ &nbsp; ${e.short.length} trả lời ngắn</span>`:''}${e.essay?.length?`<span>📝 &nbsp; ${e.essay.length} tự luận</span>`:''}</div>${sourceLine(e)}<div class="card-bottom"><span>Giữa học kì I</span>${bottomAction}</div></article>`;
+  return `<article class="exam-card" data-subject="${esc(e.subject)}"><div class="exam-body"><div class="card-top"><span class="subject-pill">${labels[e.subject]||'Lớp 10'}</span><span class="card-code">${esc(e.id)}</span></div><h3>${esc(e.title)}</h3><div class="meta"><span>${e.minutes} phút</span>${e.questions.length?`<span>${e.questions.length} nhiều lựa chọn</span>`:''}${e.tf.length?`<span>${e.tf.length} đúng/sai</span>`:''}${e.short.length?`<span>${e.short.length} trả lời ngắn</span>`:''}${e.essay?.length?`<span>${e.essay.length} tự luận</span>`:''}</div>${sourceLine(e)}</div><div class="exam-actions">${status}${action}</div></article>`;
 }
+
 function tiles(){
   const counts={0:'math',1:'physics',4:'english',5:'chemistry'};
   return `<div class="subject-grid">${subjects.map((s,i)=>`<button class="subject-tile" data-subjectto="${i}"><span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span><b>${s[0]}</b><small>${counts[i]?exams.filter(e=>e.subject===counts[i]).length+' đề thi':'Sắp cập nhật đề thi'}</small></button>`).join('')}</div>`;
 }
 function home(){
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('home')) return;
-  const groups=[['math',0,'Toán 10 · Giữa kì I','Mệnh đề, tập hợp, bất phương trình và hệ thức lượng'],['physics',1,'Vật lý 10 · Giữa kì I','Ưu tiên nguồn Quảng Trị và miền Trung'],['english',4,'Tiếng Anh 10 · REVIEW 1','Ba đề kiểm tra và hai chuyên đề ngữ pháp từ tài liệu bạn cung cấp'],['chemistry',5,'Hóa học 10 · Giữa kì I','Cấu tạo nguyên tử và bảng tuần hoàn']];
-  app.innerHTML=`<div class="content"><section class="hero"><div class="hero-copy"><span class="eyebrow">✦ &nbsp; KHÔNG GIAN HỌC TẬP CỦA BẠN</span><h1>Học tập hôm nay,<br>tự tin ngày mai.</h1><p>Luyện đề Toán, Vật lý, Tiếng Anh và Hóa học lớp 10 với đồng hồ thi, đáp án và phần xem lại bài đã nộp.</p><div class="hero-actions"><a class="hero-primary" href="#subjects">Khám phá kho đề <span>→</span></a><a class="hero-secondary" href="#handbook">Ôn tập kiến thức ↗</a></div></div><div class="hero-art"><div class="orbit"></div><div class="planet one">📚</div><div class="planet two">∑</div><div class="planet three">✦</div></div></section><section class="stats"><div class="stat"><span class="stat-icon purple">▦</span><div><b>07</b><small>Môn học</small></div></div><div class="stat"><span class="stat-icon orange">☷</span><div><b>${String(exams.length).padStart(2,'0')}</b><small>Đề thi sẵn sàng</small></div></div><div class="stat"><span class="stat-icon green">◷</span><div><b>${String(saved().length).padStart(2,'0')}</b><small>Lượt thi đã hoàn thành</small></div></div></section><section class="handbook-feature-banner"><div class="hfb-left"><span class="eyebrow" style="background:#ffffff22;color:#ffffff;border-color:#ffffff33;">📖 TÀI LIỆU ÔN THI ĐẶC BIỆT</span><h2>Sổ tay Công thức & Lý thuyết Giữa kì I</h2><p>Công thức, ngữ pháp và ví dụ theo các dạng bài Toán, Vật lý, Hóa học và Tiếng Anh. Tìm nhanh kiến thức trước mỗi lượt luyện tập.</p><div class="hfb-tags"><span>∑ Toán 10</span><span>⚛️ Vật lý 10</span><span>🧪 Hóa học 10</span><span>Aa Tiếng Anh 10</span></div></div><div class="hfb-right"><a href="#handbook" class="hfb-btn">Mở sổ tay kiến thức →</a></div></section>${groups.map(([subject,index,title,desc])=>{const list=exams.filter(e=>e.subject===subject);return `<section class="lower-section"><div class="section-head"><div><h2>${title}</h2><p>${list.length} bài luyện · ${desc}</p></div><button class="text-link" data-subjectto="${index}">Xem tất cả →</button></div><div class="cards">${list.slice(0,4).map(card).join('')}</div></section>`}).join('')}<section class="lower-section"><div class="section-head"><div><h2>Khám phá môn học</h2><p>7 môn trong tổ hợp học tập của bạn</p></div></div>${tiles()}</section></div>`;
+  const groups = [
+    ['math',0,'Toán','Mệnh đề, tập hợp và hệ thức lượng','T'],
+    ['physics',1,'Vật lý','Đo lường và chuyển động','L'],
+    ['chemistry',5,'Hóa học','Nguyên tử và bảng tuần hoàn','H'],
+    ['english',4,'Tiếng Anh','REVIEW 1 · Ngữ pháp và kỹ năng','EN']
+  ];
+  const featured = groups.map(([subject])=>exams.find(e=>e.subject===subject)).filter(Boolean);
+  app.innerHTML = `<div class="content dashboard-page">
+    <div class="workspace-heading"><div><div class="page-pretitle">Lớp 10 · Học kỳ I</div><h1>Tổng quan học tập</h1><p>Chọn môn học, ôn lại kiến thức và bắt đầu một lượt luyện đề.</p></div><button class="btn btn-primary" data-viewto="subjects">Vào kho đề thi <img src="vendor/tabler/icons/arrow-right.svg" alt="" class="button-icon"></button></div>
+    <section class="summary-strip" aria-label="Tổng quan kho học tập">
+      <div><span>Đề thi trong kho</span><strong>${exams.length}</strong></div>
+      <div><span>Môn có đề luyện</span><strong>${new Set(exams.map(e=>e.subject)).size}<small> / 7 môn</small></strong></div>
+      <div><span>Lượt thi đã hoàn thành</span><strong>${saved().length}</strong></div>
+    </section>
+    <div class="overview-grid">
+      <section class="card course-panel"><div class="card-header"><h2 class="card-title">Môn đang ôn tập</h2><button class="text-link" data-viewto="subjects">Xem kho đề</button></div><div class="course-list">${groups.map(([subject,index,name,desc,mark])=>`<button class="course-row" data-subjectto="${index}"><span class="course-mark">${mark}</span><span class="course-description"><strong>${name}</strong><small>${desc}</small></span><span class="course-count">${exams.filter(e=>e.subject===subject).length} đề</span><img src="vendor/tabler/icons/arrow-right.svg" class="row-arrow" alt=""></button>`).join('')}</div><div class="card-footer"><span>Kiểm tra giữa học kỳ I</span><button class="text-link" data-viewto="subjects">Tất cả 7 môn →</button></div></section>
+      <section class="card handbook-feature-banner"><div class="card-header"><h2 class="card-title">Sổ tay kiến thức</h2><img src="vendor/tabler/icons/book-2.svg" width="20" height="20" alt=""></div><div class="card-body"><p class="handbook-intro">Tra cứu công thức, ngữ pháp và ví dụ theo các dạng bài trong đề.</p><div class="handbook-shortcuts">${groups.map(([subject,,name])=>`<a href="#handbook-${subject}"><span>${name}</span><img src="vendor/tabler/icons/arrow-right.svg" class="row-arrow" alt=""></a>`).join('')}</div></div><div class="card-footer"><a class="text-link" href="#handbook">Mở sổ tay kiến thức →</a></div></section>
+    </div>
+    <section class="recent-section"><div class="section-head"><div><h2>Đề luyện theo môn</h2><p>Mỗi môn một đề để bắt đầu. Xem toàn bộ đề trong kho khi cần luyện thêm.</p></div><button class="text-link" data-viewto="subjects">Tất cả ${exams.length} đề →</button></div><div class="cards exam-list">${featured.map(card).join('')}</div></section>
+  </div>`;
   setNav('home');
 }
+
 function catalog(index){
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('subjects')) return;
   const mapping={0:'math',1:'physics',4:'english',5:'chemistry'},list=index===undefined?exams:exams.filter(e=>e.subject===mapping[index]);
   const name=index===undefined?'Kho đề thi':subjects[index][0];
-  app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện lớp 10 · Xem cấu trúc từng bài trên thẻ đề và lời giải sau khi nộp.`:'Môn học này đang được cập nhật đề thi.'}</p>${mapping[index]?`<div style="margin:14px 0 10px;"><a href="#handbook-${mapping[index]}" class="secondary handbook-quick-btn" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:8px 16px;border-radius:8px;"><span>📖</span> Xem sổ tay công thức & lý thuyết ${name} ➔</a></div>`:''}</div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${[[0,'Toán'],[1,'Vật lý'],[4,'Tiếng Anh'],[5,'Hóa học']].map(([i,n])=>`<button class="filter" data-subjectto="${i}">${n} (${exams.filter(e=>e.subject===mapping[i]).length})</button>`).join('')}</div>`:''}${list.length?`<div class="cards">${list.map(card).join('')}</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;
+  app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện lớp 10 · Xem cấu trúc từng bài trên thẻ đề và lời giải sau khi nộp.`:'Môn học này đang được cập nhật đề thi.'}</p>${mapping[index]?`<div style="margin:14px 0 10px;"><a href="#handbook-${mapping[index]}" class="secondary handbook-quick-btn" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:8px 16px;border-radius:8px;"><span>📖</span> Xem sổ tay công thức & lý thuyết ${name} ➔</a></div>`:''}</div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${[[0,'Toán'],[1,'Vật lý'],[4,'Tiếng Anh'],[5,'Hóa học']].map(([i,n])=>`<button class="filter" data-subjectto="${i}">${n} (${exams.filter(e=>e.subject===mapping[i]).length})</button>`).join('')}</div>`:''}${list.length?`<div class="catalog-toolbar"><label class="catalog-search"><img src="vendor/tabler/icons/search.svg" alt="" width="18" height="18"><input class="form-control" type="search" data-exam-search aria-label="Tìm đề thi" placeholder="Tìm tên đề, trường hoặc tỉnh…"></label><span class="catalog-count" data-catalog-count aria-live="polite">${list.length} đề thi</span></div><div class="cards exam-list">${list.map(card).join('')}</div><div class="catalog-empty notice" data-catalog-empty hidden>Không tìm thấy đề phù hợp. Hãy thử tên trường, tỉnh hoặc từ khóa khác.</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;
   setNav(index===undefined?'subjects':'subject-'+index);
 }
 function history(){
@@ -271,3 +285,14 @@ if (typeof location !== 'undefined' && location.hash) {
 } else {
   home();
 }
+
+// Filter the current catalog without changing exam data or answers.
+document.addEventListener('input', event=>{
+  if(!event.target.matches?.('[data-exam-search]'))return;
+  const normalize=value=>value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d');
+  const query=normalize(event.target.value.trim());
+  let count=0;
+  document.querySelectorAll('#app .exam-list .exam-card').forEach(row=>{row.hidden=!normalize(row.textContent).includes(query);if(!row.hidden)count++;});
+  const label=document.querySelector('[data-catalog-count]');if(label)label.textContent=count+' đề thi';
+  const empty=document.querySelector('[data-catalog-empty]');if(empty)empty.hidden=count!==0;
+});

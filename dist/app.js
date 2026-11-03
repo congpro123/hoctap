@@ -156,7 +156,7 @@ if (todayEl) {
 const subjectNavEl = document.getElementById('subject-nav');
 if (subjectNavEl) {
   subjectNavEl.innerHTML = subjects.map((s, i) =>
-    `<a href="#subject-${i}" class="subject-link" data-subjectto="${i}"><span class="subject-icon">${s[1]}</span>${s[0]}</a>`
+    `<a href="#subject-${i}" class="subject-link" data-subjectto="${i}"><span class="subject-icon" aria-hidden="true">${s[1]}</span>${s[0]}</a>`
   ).join('');
 }
 

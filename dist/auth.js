@@ -458,7 +458,7 @@
         <div class="content auth-gate-screen">
           <div class="auth-gate-card">
             <span class="auth-gate-badge">🔒 YÊU CẦU ĐĂNG NHẬP</span>
-            <div class="auth-gate-logo">✦ HỌC<span style="color:#2563eb;">TẬP</span><small style="font-size:12px;color:#64748b;margin-left:4px;">SPACE</small></div>
+            <div class="auth-gate-logo">Học tập <small>Tổ hợp Tin · Lớp 10</small></div>
             <h2>Chào mừng bạn đến với Phòng Luyện thi Trực tuyến</h2>
             <p>Hệ thống yêu cầu mỗi học sinh và giáo viên phải có tài khoản riêng để làm bài, tự động lưu lịch sử và thống kê điểm số lên Cơ sở dữ liệu.</p>
             <div class="auth-gate-btn-group">
