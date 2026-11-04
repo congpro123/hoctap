@@ -85,7 +85,7 @@ function normalizeExam(e) {
 // Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
-  ? suppliedExams
+  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
     : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
@@ -190,7 +190,8 @@ function sourceLine(e) {
   const prov = src.province || e.province || '';
   const yr = src.year || e.year || '';
   const note = src.note || '';
-  return `<div class="source-line">Nguồn tham khảo: <a href="${url}" target="_blank" rel="noopener noreferrer">${esc(school)}${prov ? ' · ' + esc(prov) : ''}${yr ? ' · ' + esc(yr) : ''} ↗</a>${note ? `<small>${esc(note)}</small>` : ''}</div>`;
+  const label = `${esc(school)}${prov ? ' · ' + esc(prov) : ''}${yr ? ' · ' + esc(yr) : ''}`;
+  return `<div class="source-line">${e.id === 'toan-10-de-13' ? 'Nguồn đề' : 'Nguồn tham khảo'}: ${url && url !== '#' ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>` : `<span>${label}</span>`}${note ? `<small>${esc(note)}</small>` : ''}</div>`;
 }
 
 function totalItems(e) {
@@ -223,7 +224,7 @@ function card(e) {
     ${sourceLine(e)}
     <div class="card-bottom">
       <span>Giữa học kì I</span>
-      <button class="primary" data-start="${esc(e.id)}">Bắt đầu làm bài ➔</button>
+      ${e.originalPdf ? `<a class="primary" href="${esc(e.source.url)}" target="_blank" rel="noopener noreferrer">Xem đề gốc PDF ↗</a>` : `<button class="primary" data-start="${esc(e.id)}">Bắt đầu làm bài ➔</button>`}
     </div>
   </article>`;
 }
