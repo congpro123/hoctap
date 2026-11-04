@@ -10642,10 +10642,10 @@ const suppliedExams = [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
       [
-        "A. emission",
-        "B. issue",
-        "C. musical",
-        "D. sugar"
+        "A. emi<u>ss</u>ion",
+        "B. i<u>ss</u>ue",
+        "C. mu<u>s</u>ical",
+        "D. <u>s</u>ugar"
       ],
       2,
       "Trong từ 'musical', chữ 's' được phát âm là /z/. Trong các từ 'emission', 'issue', 'sugar', chữ 's' (hoặc 'ss') được phát âm là /ʃ/."
@@ -10653,10 +10653,10 @@ const suppliedExams = [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
       [
-        "A. grocery",
-        "B. adopt",
-        "C. social",
-        "D. homemaker"
+        "A. gr<u>o</u>cery",
+        "B. ad<u>o</u>pt",
+        "C. s<u>o</u>cial",
+        "D. h<u>o</u>memaker"
       ],
       1,
       "Trong từ 'adopt', chữ 'o' được phát âm là /ɒ/. Trong các từ 'grocery', 'social', 'homemaker', chữ 'o' được phát âm là /əʊ/."
@@ -11043,10 +11043,10 @@ const suppliedExams = [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
       [
-        "A. character",
-        "B. cheer",
-        "C. chemical",
-        "D. mechanic"
+        "A. <u>ch</u>aracter",
+        "B. <u>ch</u>eer",
+        "C. <u>ch</u>emical",
+        "D. me<u>ch</u>anic"
       ],
       1,
       "Trong từ 'cheer', chữ 'ch' được phát âm là /tʃ/. Trong các từ 'character', 'chemical', 'mechanic', chữ 'ch' được phát âm là /k/."
@@ -11054,10 +11054,10 @@ const suppliedExams = [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
       [
-        "A. damage",
-        "B. manner",
-        "C. value",
-        "D. talent"
+        "A. dam<u>a</u>ge",
+        "B. m<u>a</u>nner",
+        "C. v<u>a</u>lue",
+        "D. t<u>a</u>lent"
       ],
       0,
       "Trong từ 'damage', chữ 'a' thứ hai được phát âm là /ɪ/ (/ˈdæmɪdʒ/). Trong các từ 'manner', 'value', 'talent', âm tiết thứ hai có nguyên âm /ə/ hoặc /uː/."
@@ -11439,10 +11439,10 @@ const suppliedExams = [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
       [
-        "A. gratitude",
-        "B. human",
-        "C. education",
-        "D. value"
+        "A. gratit<u>u</u>de",
+        "B. h<u>u</u>man",
+        "C. ed<u>u</u>cation",
+        "D. val<u>u</u>e"
       ],
       2,
       "Trong từ 'education', chữ 'u' được phát âm là /u/ hoặc /juː/ với tổ hợp âm /dʒu/. Trong các từ 'gratitude' (/ˈɡrætɪtjuːd/), 'human' (/ˈhjuːmən/), 'value' (/ˈvæljuː/), chữ 'u' phát âm rõ là /juː/."
@@ -11450,13 +11450,13 @@ const suppliedExams = [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
       [
-        "A. comment",
-        "B. support",
-        "C. organic",
-        "D. resource"
+        "A. c<u>o</u>mment",
+        "B. supp<u>or</u>t",
+        "C. <u>or</u>ganic",
+        "D. res<u>our</u>ce"
       ],
       0,
-      "Trong từ 'comment', chữ 'o' được phát âm là /ɒ/ (/ˈkɒment/). Trong 'support' là /ə/, 'organic' là /ɔː/, 'resource' là /ɪ/."
+      "Trong từ 'comment', chữ 'o' được phát âm là /ɒ/ (/ˈkɒment/). Các phần gạch chân ở 'support', 'organic', 'resource' được phát âm là /ɔː/ (theo giọng Anh-Anh)."
     ],
     [
       "<b>PHONETICS</b><br>Choose the word which has a different stress pattern from the others:",
