@@ -1,16 +1,17 @@
 # Interface sources
 
-The study interface uses **Tabler UI 1.0.0**, stored locally at
-`dist/vendor/tabler/tabler.min.css`. Its MIT license is included alongside it.
-The application adapter is `dist/design-refresh.css`; no UI CDN is needed at runtime.
+The study interface now uses **Volt Free Bootstrap 5 Dashboard**, selected by
+the site owner. The compiled CSS is stored locally at `dist/vendor/volt/volt.css`.
+The original MIT license is included at `dist/vendor/volt/LICENSE.md`. The
+application-specific Volt adapter is `dist/volt-theme.css`.
 
-- Framework: https://github.com/tabler/tabler/releases/tag/v1.0.0
-- Dashboard reference: https://preview.tabler.io/
-- Component reference: https://docs.tabler.io/ui/components/card
-- Secondary layout reference: https://getbootstrap.com/docs/5.3/examples/dashboard/
-- Outline icons: https://github.com/tabler/tabler-icons, MIT license in the icons folder.
+- Dashboard reference: https://demo.themesberg.com/volt/pages/dashboard/dashboard.html
+- Volt source: https://github.com/themesberg/volt-bootstrap-5-dashboard
+- Compiled CSS source: https://github.com/themesberg/volt-laravel-dashboard/blob/master/public/css/volt.css
+- License: https://github.com/themesberg/volt-bootstrap-5-dashboard/blob/master/LICENSE.md
+- Outline icons: https://github.com/tabler/tabler-icons (MIT license in `dist/vendor/tabler/icons/`)
 
-The adapter keeps the existing exam, scoring, history and admin controls, with
-compact page headings, neutral surfaces, a single blue action color, and list
-rows for exam browsing. Decorative hero artwork and marketing banners were
-removed. Exam content is not changed by this interface update.
+The earlier Tabler adapter remains below Volt's CSS as a layout compatibility
+layer. Volt's theme adapter applies the final palette and component styling to
+the existing exam, scoring, history, handbook and admin views. Exam contents
+and answer data were not changed.
