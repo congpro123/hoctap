@@ -469,10 +469,6 @@ function startExam(id) {
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('exam')) return;
   const e = exams.find(x => x.id === id);
   if (!e) return;
-  if (e.originalPdf) {
-    renderOriginalPdfExam(e);
-    return;
-  }
   hidePauseModal();
   hideStopModal();
   isExamPaused = false;
@@ -570,7 +566,8 @@ function renderExam() {
           </div>
         </div>
         ${sourceLine(e)}
-        
+        ${e.originalPdf ? `<div class="original-pdf-pages" aria-label="Ba trang đề gốc, gồm hình minh họa">${[1, 2, 3].map(n => `<figure class="original-pdf-page"><img src="${esc(e.source.url.replace(/\.pdf$/i, ''))}-page-${n}.png" alt="Trang ${n} trên 3 của đề Toán 10 mã đề 101" loading="${n === 1 ? 'eager' : 'lazy'}"><figcaption>Trang ${n}/3</figcaption></figure>`).join('')}</div><h2 class="part-heading">Phiếu trả lời · đối chiếu từng câu với đề gốc phía trên</h2>` : ''}
+
         ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · Nhiều lựa chọn (${e.questions.length} câu)</h2>` : ''}
         ${(e.questions || []).map((q, i) => `<div class="question" id="q-${i}">
           <div class="q-title">
