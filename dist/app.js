@@ -555,7 +555,7 @@ function renderExam() {
           <div>
             <span class="subject-pill" style="background:${sm.bg};color:${sm.color}">${sm.icon}&nbsp; PHÒNG THI ${sm.name}</span>
             <h1>${esc(e.title)}</h1>
-            <p>Phần I: ${qLen} trắc nghiệm (0,25đ/câu) · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)${(e.essay && e.essay.length > 0) ? ` · Phần IV: ${e.essay.length} câu tự luận` : ''}</p>
+            <p>Phần I: ${qLen} trắc nghiệm (0,25đ/câu) · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} ${e.originalPdf ? 'câu tự luận có ô nhập kết quả' : 'câu trả lời ngắn (0,5đ/câu)'}${(e.essay && e.essay.length > 0) ? ` · Phần IV: ${e.essay.length} câu tự luận` : ''}</p>
           </div>
           <div class="exam-header-controls">
             <div class="timer" id="timer">--:--</div>
@@ -597,15 +597,15 @@ function renderExam() {
           </div>`).join('')}
         </div>`).join('')}
 
-        ${(e.short || []).length ? `<h2 class="part-heading">Phần III · Trả lời ngắn (${e.short.length} câu)</h2>
-        <p class="short-hint">${e.subject === 'english' ? 'Điền từ hoặc cụm từ thích hợp.' : 'Điền số đáp án chính xác (chấp nhận cả dấu phẩy và dấu chấm thập phân).'}</p>` : ''}
+        ${(e.short || []).length ? `<h2 class="part-heading">Phần III · ${e.originalPdf ? 'Tự luận · nhập kết quả để chấm tự động' : 'Trả lời ngắn'} (${e.short.length} câu)</h2>
+        <p class="short-hint">${e.originalPdf ? 'Làm bài theo nguyên văn trang 3; nhập kết quả cuối cùng vào từng ô để hệ thống chấm điểm.' : e.subject === 'english' ? 'Điền từ hoặc cụm từ thích hợp.' : 'Điền số đáp án chính xác (chấp nhận cả dấu phẩy và dấu chấm thập phân).'}</p>` : ''}
         ${(e.short || []).map((q, i) => `<div class="question" id="short-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
             <span>${q.text || q.question}</span>
           </div>
           <div class="short-field">
-            <input type="text" inputmode="${e.subject === 'english' ? 'text' : 'decimal'}" autocomplete="off" data-kind="s" data-index="${i}" value="${esc(answers['s' + i] ?? '')}" aria-label="Trả lời ngắn câu ${i + 1}">
+            <input type="text" inputmode="${e.subject === 'english' || e.originalPdf ? 'text' : 'decimal'}" autocomplete="off" data-kind="s" data-index="${i}" value="${esc(answers['s' + i] ?? '')}" aria-label="Nhập đáp án câu ${i + 1} phần III">
             <span>${esc(q.unit || '')}</span>
           </div>
         </div>`).join('')}
@@ -701,7 +701,8 @@ function tick() {
   if (left <= 0) submitExam('time');
 }
 
-function shortCorrect(input, answer) {
+function shortCorrect(input, answer, acceptedAnswers) {
+  if (Array.isArray(acceptedAnswers) && acceptedAnswers.some(alias => shortCorrect(input, alias))) return true;
   if (input === undefined || String(input).trim() === '') return false;
   const normInput = String(input).trim().replace(',', '.');
   const normAns = String(answer).trim().replace(',', '.');
@@ -753,7 +754,7 @@ function submitExam(reason) {
 
   let scoreP3 = 0;
   (e.short || []).forEach((q, i) => {
-    if (shortCorrect(answers['s' + i], q.answer)) {
+    if (shortCorrect(answers['s' + i], q.answer, q.acceptedAnswers)) {
       correct++;
       scoreP3 += 0.5;
     }
@@ -892,7 +893,7 @@ function renderResult(r) {
         <h3>Phần III · Trả lời ngắn (4 câu)</h3>
         ${(e.short || []).map((q, i) => {
           const user = r.answers['s' + i];
-          const ok = shortCorrect(user, q.answer);
+          const ok = shortCorrect(user, q.answer, q.acceptedAnswers);
           return `<div class="review-item">
             <div class="review-item-header">
               <span class="review-part-tag">Phần III · Trả lời ngắn</span>
