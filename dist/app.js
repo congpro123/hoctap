@@ -469,6 +469,11 @@ function startExam(id) {
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('exam')) return;
   const e = exams.find(x => x.id === id);
   if (!e) return;
+  // Tài liệu PDF gốc không phải bài thi tương tác; mở nguyên bản thay vì tạo phòng thi rỗng.
+  if (e.originalPdf && e.source && e.source.url) {
+    window.open(e.source.url, '_blank', 'noopener,noreferrer');
+    return;
+  }
   hidePauseModal();
   hideStopModal();
   isExamPaused = false;
