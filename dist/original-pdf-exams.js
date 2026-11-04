@@ -21,14 +21,14 @@ const originalPdfExams = [
       { stem: 'Phần II, Câu 1 — xem nguyên văn bảng mệnh đề ở trang 3 của đề gốc.', items: [['Mệnh đề a) trong đề gốc.', true, 'Đúng. B = {2; 7}.'], ['Mệnh đề b) trong đề gốc.', false, 'Sai: với x = 10, x² − 10x + 9 = 9 > 0.'], ['Mệnh đề c) trong đề gốc.', true, 'Đúng: A ∪ B = {1; 2; 5; 6; 7; 10}.'], ['Mệnh đề d) trong đề gốc.', true, 'Đúng: A \\ B = {1; 5; 6; 10}.']] },
       { stem: 'Phần II, Câu 2 — xem nguyên văn bảng mệnh đề ở trang 3 của đề gốc.', items: [['Mệnh đề a) trong đề gốc.', true, 'Đúng: tan 60° = √3.'], ['Mệnh đề b) trong đề gốc.', false, 'Sai: sin(A + C) = sin 120° = √3/2, còn cos B = 1/2.'], ['Mệnh đề c) trong đề gốc.', true, 'Đúng: AC² = 2² + 3² − 2·2·3·cos 60° = 7.'], ['Mệnh đề d) trong đề gốc.', false, 'Sai: diện tích tam giác là 3√3/2.']] }
     ],
-    shortUnit: 0.5,
-    short: [
-      { text: 'Phần III · Câu 1 — nhập tập A ∩ B (xem đề gốc trang 3).', answer: '[−4;2)', acceptedAnswers: ['[-4;2)', '[−4,2)', '[-4,2)'], explain: 'A ∩ B = [−4; 2).' },
-      { text: 'Phần III · Câu 2 — nhập số học sinh giỏi ít nhất một môn (xem đề gốc trang 3).', answer: '37', explain: '20 + 17 + 14 − 6 − 5 − 4 + 1 = 37.' },
-      { text: 'Phần III · Câu 3 — nhập bất phương trình dạng y ≤ ... biểu diễn miền nghiệm (xem đề gốc trang 3).', answer: 'y≤2x', acceptedAnswers: ['y <= 2x', 'y<=2x', '2x−y≥0', '2x-y>=0'], explain: 'Vẽ đường thẳng y = 2x bằng nét liền; lấy nửa mặt phẳng y ≤ 2x, gồm cả đường thẳng.' },
-      { text: 'Phần III · Câu 4 — nhập độ dài đường cao hₐ (xem đề gốc trang 3).', answer: '7√2/2', acceptedAnswers: ['7sqrt2/2', '7*sqrt(2)/2', '7/√2', '7/sqrt(2)', '4.949747'], explain: 'sin A = 4/5, S = 14, a = 4√2 nên hₐ = 2S/a = 7√2/2.' },
-      { text: 'Phần III · Câu 5 — nhập số tấn trục sắt và đinh ốc theo dạng (trục sắt; đinh ốc) (xem đề gốc trang 3).', answer: '(1;3)', acceptedAnswers: ['1;3', '(1,3)', '1,3', '1 3'], explain: '3x + y ≤ 6, x + y ≤ 4, x,y ≥ 0. Lợi nhuận 2x + y đạt 5 triệu đồng tại x = 1 tấn trục sắt, y = 3 tấn đinh ốc.' },
-      { text: 'Phần III · Câu 6 — nhập bán kính đường tròn ngoại tiếp (xem đề gốc trang 3).', answer: '4.5', acceptedAnswers: ['9/2'], explain: 'S(BDE)/S(ABC) = cos² B = 1/9, do đó cos B = 1/3. Từ DE = AC·cos B suy ra AC = 6√2; R = AC/(2sin B) = 9/2.' }
+    short: [],
+    essay: [
+      { title: 'Phần III · Câu 1', question: 'Xem nguyên văn câu 1 trên trang 3 của đề gốc.', solution: 'A ∩ B = [−4; 2).' },
+      { title: 'Phần III · Câu 2', question: 'Xem nguyên văn câu 2 trên trang 3 của đề gốc.', solution: 'Số học sinh giỏi ít nhất một môn: 20 + 17 + 14 − 6 − 5 − 4 + 1 = 37.' },
+      { title: 'Phần III · Câu 3', question: 'Xem nguyên văn câu 3 trên trang 3 của đề gốc.', solution: 'Vẽ đường thẳng y = 2x bằng nét liền; miền nghiệm là nửa mặt phẳng y ≤ 2x, gồm cả đường thẳng.' },
+      { title: 'Phần III · Câu 4', question: 'Xem nguyên văn câu 4 trên trang 3 của đề gốc.', solution: 'sin A = 4/5; diện tích tam giác bằng (7·5·4/5)/2 = 14. Theo định lý cos, a = √(7² + 5² − 2·7·5·3/5) = 4√2. Do đó hₐ = 2·14/(4√2) = 7√2/2.' },
+      { title: 'Phần III · Câu 5', question: 'Xem nguyên văn câu 5 trên trang 3 của đề gốc.', solution: 'Gọi x, y lần lượt là số tấn trục sắt và đinh ốc. Ràng buộc: 3x + y ≤ 6, x + y ≤ 4, x ≥ 0, y ≥ 0. Tối đa hóa 2x + y. Giá trị lớn nhất là 5 triệu đồng tại (x, y) = (1, 3).' },
+      { title: 'Phần III · Câu 6', question: 'Xem nguyên văn câu 6 trên trang 3 của đề gốc.', solution: 'Hai tam giác BDE và BAC đồng dạng với tỉ số cos B. Từ S(ABC) = 9S(BDE), suy ra cos B = 1/3. DE = AC·cos B nên AC = 6√2. Vì sin B = 2√2/3, bán kính đường tròn ngoại tiếp R = AC/(2sin B) = 9/2.' }
     ]
   }
 ];

@@ -14,7 +14,7 @@ function card(e){
       action=`<div class="card-action-group"><button class="secondary btn-card-review" data-review-exam="${esc(e.id)}">Xem lại</button><button class="primary" data-start="${esc(e.id)}">Làm lại</button></div>`;
     }
   }
-  return `<article class="exam-card" data-subject="${esc(e.subject)}"><div class="exam-body"><div class="card-top"><span class="subject-pill">${labels[e.subject]||'Lớp 10'}</span><span class="card-code">${esc(e.id)}</span></div><h3>${esc(e.title)}</h3><div class="meta"><span>${e.minutes} phút</span>${e.questions.length?`<span>${e.questions.length} nhiều lựa chọn</span>`:''}${e.tf.length?`<span>${e.tf.length} đúng/sai</span>`:''}${e.short.length?`<span>${e.short.length} ${e.originalPdf ? 'tự luận có chấm điểm' : 'trả lời ngắn'}</span>`:''}${e.essay?.length?`<span>${e.essay.length} tự luận</span>`:''}</div>${sourceLine(e)}</div><div class="exam-actions">${status}${action}</div></article>`;
+  return `<article class="exam-card" data-subject="${esc(e.subject)}"><div class="exam-body"><div class="card-top"><span class="subject-pill">${labels[e.subject]||'Lớp 10'}</span><span class="card-code">${esc(e.id)}</span></div><h3>${esc(e.title)}</h3><div class="meta"><span>${e.minutes} phút</span>${e.questions.length?`<span>${e.questions.length} nhiều lựa chọn</span>`:''}${e.tf.length?`<span>${e.tf.length} đúng/sai</span>`:''}${e.short.length?`<span>${e.short.length} trả lời ngắn</span>`:''}${e.essay?.length?`<span>${e.essay.length} tự luận</span>`:''}</div>${sourceLine(e)}</div><div class="exam-actions">${status}${action}</div></article>`;
 }
 
 function tiles(){
@@ -162,7 +162,7 @@ function reviewPast(index){
 
     (e.short||[]).forEach((q,i)=>{
       const chosen=a['s'+i];
-      const ok=shortCorrect(chosen,q.answer,q.acceptedAnswers);
+      const ok=shortCorrect(chosen,q.answer);
       const statusHtml=`<div class="review-status-row">
         ${ok?`<span class="badge-user-ans correct">✓ Bạn điền: ${esc(chosen)} (Chính xác)</span>`:chosen===undefined||String(chosen).trim()===''?`<span class="badge-user-ans unanswered">⚠️ Chưa điền đáp án (Bỏ trống · 0 điểm)</span>`:`<span class="badge-user-ans wrong">✗ Bạn đã điền: ${esc(chosen)}</span>`}
         <span class="badge-correct-ans">✓ Đáp án chuẩn: <b>${esc(q.answer)}${q.unit?' '+esc(q.unit):''}</b></span>

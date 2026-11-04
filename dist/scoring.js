@@ -10,7 +10,7 @@ function scoreExam(e,a={},legacy=false){
     const isTrue=v=>(v===true||v==='true'||v==='Đúng'||v==='đúng');
     const isMatch=(u,exp)=>u!==undefined&&u!==null&&isTrue(u)===isTrue(exp);
     e.tf.forEach((q,i)=>{const count=q.items.reduce((n,item,j)=>n+(isMatch(a['t'+i+'-'+j],item[1])?1:0),0);tfCorrect+=count;tf+=e.tfScoring==='per-item'?count*.25:[0,.1,.25,.5,1][count]});
-    e.short.forEach((q,i)=>{if(shortCorrect(a['s'+i],q.answer,q.acceptedAnswers)){shortCorrectCount++;short+=shortUnit}});
+    e.short.forEach((q,i)=>{if(shortCorrect(a['s'+i],q.answer)){shortCorrectCount++;short+=shortUnit}});
   }
   return {mc,tf,short,points:Math.round((mc+tf+short)*100)/100,max:Math.round((e.questions.length*mcUnit+(legacy?0:e.tf.length+e.short.length*shortUnit))*100)/100,correct:mcCorrect+tfCorrect+shortCorrectCount,total:e.questions.length+(legacy?0:e.tf.reduce((n,q)=>n+q.items.length,0)+e.short.length)};
 }
@@ -60,7 +60,7 @@ renderExam=function(){
     const mcUnit = typeof activeExam.mcUnit === 'number' ? activeExam.mcUnit : 0.25;
     const sUnit = typeof activeExam.shortUnit === 'number' ? activeExam.shortUnit : (activeExam.subject === 'chemistry' ? 0.25 : 0.5);
     const essayPoints = typeof activeExam.essayPoints === 'number' ? activeExam.essayPoints : 3.0;
-    const graded=[activeExam.questions.length?`Phần I ${pointText(mcUnit)} điểm/câu`:null,activeExam.tf.length?'Phần II tối đa 1 điểm/câu':null,activeExam.short.length?`Phần III ${pointText(sUnit)} điểm/câu${activeExam.originalPdf ? ' theo kết quả nhập' : ''}`:null].filter(Boolean);
+    const graded=[activeExam.questions.length?`Phần I ${pointText(mcUnit)} điểm/câu`:null,activeExam.tf.length?'Phần II tối đa 1 điểm/câu':null,activeExam.short.length?`Phần III ${pointText(sUnit)} điểm/câu`:null].filter(Boolean);
     line.insertAdjacentHTML('afterend',`<p class="grading-note">${graded.length?`Thang điểm tự chấm: ${graded.join(' · ')}. Tổng tối đa ${pointText(scoreExam(activeExam).max)} điểm.`:'Bài tự luyện: đối chiếu lời giải sau khi nộp, không chấm tự động.'}${activeExam.essay?.length && essayPoints>0?` Phần tự luận cần tự đối chiếu lời giải.`:''}</p>`);
   }
 };
