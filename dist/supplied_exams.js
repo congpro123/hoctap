@@ -2846,7 +2846,7 @@ const suppliedExams = [
       [
         "Hệ bất phương trình nào là hệ bất phương trình bậc nhất hai ẩn?",
         [
-          "<span class=\"math-system\"><span>{</span><span>3x + y ≥ 9<br>2/x − 3y ≤ 1</span></span>",
+          "<span class=\"math-system\"><span>{</span><span>3x + y ≥ 9<br><span class=\"math-fraction\"><span>2</span><span>x</span></span> − 3y ≤ 1</span></span>",
           "<span class=\"math-system\"><span>{</span><span>x + y<sup>2</sup> > 4<br>−3x − 5y ≤ −6</span></span>",
           "<span class=\"math-system\"><span>{</span><span>√x + y > 0<br>−x − y ≤ 10</span></span>",
           "<span class=\"math-system\"><span>{</span><span>−3x + y ≤ 1<br>x − √7·y > 2</span></span>"

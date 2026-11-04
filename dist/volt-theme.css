@@ -119,6 +119,8 @@ body { background: #f3f4f6; color: #1f2937; font-family: Inter, 'Segoe UI', Aria
 .example-box { background: #f3faf7; border-color: #d9ece3; border-left-color: #4aaa83; }
 .math-system { display: inline-flex; align-items: center; vertical-align: middle; gap: 6px; line-height: 1.65; white-space: nowrap; }
 .math-system > span:first-child { font-family: Georgia, serif; font-size: 2.6em; font-weight: 300; line-height: 1; transform: scaleX(.68); transform-origin: left center; margin-right: -5px; }
+.math-fraction { display: inline-flex; flex-direction: column; vertical-align: middle; line-height: 1.05; text-align: center; margin: 0 2px; }
+.math-fraction > span:first-child { border-bottom: 1px solid currentColor; padding: 0 3px 2px; }
 .source-exam-table { border-collapse: collapse; margin: 12px 0; width: min(100%, 450px); font-size: inherit; }
 .source-exam-table th, .source-exam-table td { border: 1px solid #9ca3af; padding: 5px 12px; text-align: center; }
 .source-exam-table th { font-weight: 600; background: #f9fafb; }
