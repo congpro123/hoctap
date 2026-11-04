@@ -18,7 +18,7 @@ const originalPdfExams = [
     questions: [3, 0, 0, 1, 2, 2, 0, 2, 2, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1]
       .map((answer, i) => [`Câu ${i + 1} — xem nguyên văn và hình minh họa ở trang ${i < 10 ? 1 : 2} của đề gốc.`, ['Phương án A trong đề gốc', 'Phương án B trong đề gốc', 'Phương án C trong đề gốc', 'Phương án D trong đề gốc'], answer, `Đáp án ${'ABCD'[answer]}. Đối chiếu với câu ${i + 1} trên trang đề gốc.`]),
     tf: [
-      { stem: 'Phần II, Câu 1 — xem nguyên văn bảng mệnh đề ở trang 3 của đề gốc.', items: [['Mệnh đề a) trong đề gốc.', true, 'Đúng. B = {2; 7}.'], ['Mệnh đề b) trong đề gốc.', false, 'Sai: với x = 10, x² − 10x + 9 = 9 > 0.'], ['Mệnh đề c) trong đề gốc.', true, 'Đúng: A ∪ B = {1; 2; 5; 6; 7; 10}.'], ['Mệnh đề d) trong đề gốc.', true, 'Đúng: A \\ B = {1; 5; 6; 10}.']] },
+      { stem: 'Phần II, Câu 1 — xem nguyên văn bảng mệnh đề ở trang 3 của đề gốc.', items: [['Mệnh đề a) trong đề gốc.', true, 'Đúng. B = {2; 7}.'], ['Mệnh đề b) trong đề gốc.', false, 'Sai: với x = 10, x² − 10x + 9 = 9 > 0.'], ['Mệnh đề c) trong đề gốc.', true, 'Đúng: A ∪ B = {1; 2; 5; 6; 7; 10}.'], ['Mệnh đề d) trong đề gốc.', false, 'Sai: đề ghi A \\ B = {1; 5; 6; 7; 10}, nhưng A \\ B = {1; 5; 6; 10}; số 7 không thuộc A.']] },
       { stem: 'Phần II, Câu 2 — xem nguyên văn bảng mệnh đề ở trang 3 của đề gốc.', items: [['Mệnh đề a) trong đề gốc.', true, 'Đúng: tan 60° = √3.'], ['Mệnh đề b) trong đề gốc.', false, 'Sai: sin(A + C) = sin 120° = √3/2, còn cos B = 1/2.'], ['Mệnh đề c) trong đề gốc.', true, 'Đúng: AC² = 2² + 3² − 2·2·3·cos 60° = 7.'], ['Mệnh đề d) trong đề gốc.', false, 'Sai: diện tích tam giác là 3√3/2.']] }
     ],
     short: [],
