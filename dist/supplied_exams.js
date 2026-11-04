@@ -2824,142 +2824,142 @@ const suppliedExams = [
   },
   {
     "id": "toan-10-de-13",
-    "title": "Toán 10 - Đề 13 - Trường THPT Đông Hà – Quảng Trị (Đề kiểm tra giữa học kì I 2026–2027 - Mã đề 1003)",
+    "title": "Toán 10 - Đề 13 - Trường THPT Đông Hà – Quảng Trị (Giữa học kì I 2026–2027 · Mã đề 1003)",
     "subject": "math",
     "duration": 90,
     "school": "Trường THPT Đông Hà",
     "province": "Quảng Trị",
     "year": "2026–2027",
-    "sourceUrl": "#",
+    "sourceUrl": "",
     "questions": [
       [
-        "Cho mệnh đề: \"Nếu hai tam giác bằng nhau thì diện tích hai tam giác đó bằng nhau\". Mệnh đề đảo của mệnh đề đã cho là:",
+        "Cho mệnh đề: \"Nếu hai tam giác bằng nhau thì diện tích hai tam giác đó bằng nhau\". Mệnh đề đảo của mệnh đề trên là",
         [
-          "A. Nếu hai tam giác có diện tích không bằng nhau thì hai tam giác đó không bằng nhau.",
-          "B. Nếu hai tam giác không bằng nhau thì diện tích hai tam giác đó không bằng nhau.",
-          "C. Hai tam giác bằng nhau khi và chỉ khi diện tích hai tam giác đó bằng nhau.",
-          "D. Nếu hai tam giác có diện tích bằng nhau thì hai tam giác đó bằng nhau."
+          "Nếu hai tam giác không bằng nhau thì diện tích hai tam giác đó không bằng nhau.",
+          "Nếu hai tam giác có diện tích không bằng nhau thì hai tam giác đó không bằng nhau.",
+          "Hai tam giác bằng nhau khi và chỉ khi diện tích hai tam giác đó bằng nhau.",
+          "Nếu hai tam giác có diện tích bằng nhau thì hai tam giác đó bằng nhau."
         ],
         3,
         "Mệnh đề đã cho có dạng P &rArr; Q với P: \"Hai tam giác bằng nhau\", Q: \"Diện tích hai tam giác đó bằng nhau\".<br>Mệnh đề đảo có dạng Q &rArr; P: \"Nếu hai tam giác có diện tích bằng nhau thì hai tam giác đó bằng nhau\"."
       ],
       [
-        "Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?",
+        "Hệ bất phương trình nào là hệ bất phương trình bậc nhất hai ẩn?",
         [
-          "A. { -3x + y &le; 1 ; x - 7y<sup>2</sup> > 2 }",
-          "B. { -3x + y &le; 1 ; x<sup>2</sup> - &radic;7y > 2 }",
-          "C. { -3x<sup>2</sup> + y &le; 1 ; x - &radic;7y > 2 }",
-          "D. { -3x + y &le; 1 ; x - &radic;7y > 2 }"
+          "<span class=\"math-system\"><span>{</span><span>3x + y ≥ 9<br>2/x − 3y ≤ 1</span></span>",
+          "<span class=\"math-system\"><span>{</span><span>x + y<sup>2</sup> > 4<br>−3x − 5y ≤ −6</span></span>",
+          "<span class=\"math-system\"><span>{</span><span>√x + y > 0<br>−x − y ≤ 10</span></span>",
+          "<span class=\"math-system\"><span>{</span><span>−3x + y ≤ 1<br>x − √7·y > 2</span></span>"
         ],
         3,
-        "Hệ bất phương trình bậc nhất hai ẩn là hệ gồm các bất phương trình bậc nhất hai ẩn x, y. Ở phương án D, cả hai bất phương trình -3x + y &le; 1 và x - &radic;7y > 2 đều là bất phương trình bậc nhất hai ẩn. Các phương án A, B, C đều chứa số mũ bậc hai (y<sup>2</sup> hoặc x<sup>2</sup>)."
+        "Chỉ ở D, cả hai bất phương trình đều có dạng ax + by ≤ c hoặc ax + by > c, với hệ số là hằng số. Các phương án A, B, C lần lượt chứa 1/x, y² hoặc √x."
       ],
       [
-        "Cho hai tập hợp A = [-2; 4) và B = (0; +&infin;). Khẳng định nào sau đây là đúng?",
+        "Cho hai tập hợp A = [−2;4) và B = (0;+∞). Khẳng định nào sau đây đúng?",
         [
-          "A. A &cap; B = (0; 4)",
-          "B. A &cap; B = [-2; +&infin;)",
-          "C. A &cap; B = (0; 4]",
-          "D. A &cap; B = [-2; 0)"
+          "A ∩ B = (0;4).",
+          "A ∪ B = (0;4).",
+          "A ∩ B = [−2;+∞).",
+          "A ∪ B = (4;+∞)."
         ],
         0,
         "Giao của hai tập hợp A = [-2; 4) và B = (0; +&infin;) là tập hợp các phần tử thuộc cả A và B.<br>Ta có A &cap; B = [-2; 4) &cap; (0; +&infin;) = (0; 4)."
       ],
       [
-        "Điểm A(-1; 3) thuộc miền nghiệm của bất phương trình nào sau đây?",
+        "Điểm A(−1;3) thuộc miền nghiệm của bất phương trình nào sau đây?",
         [
-          "A. 2x - y + 4 > 0",
-          "B. 3x - y > 0",
-          "C. x + 3y < 0",
-          "D. -3x + 2y - 4 > 0"
+          "x + 3y < 0.",
+          "2x + y − 4 > 0.",
+          "x − 3y > 0.",
+          "−3x + 2y − 4 > 0."
         ],
         3,
-        "Thay tọa độ điểm A(-1; 3) vào từng bất phương trình:<br>• Với A: 2(-1) - 3 + 4 = -1 > 0 (Sai).<br>• Với B: 3(-1) - 3 = -6 > 0 (Sai).<br>• Với C: -1 + 3(3) = 8 < 0 (Sai).<br>• Với D: -3(-1) + 2(3) - 4 = 3 + 6 - 4 = 5 > 0 (Đúng)."
+        "Thay A(−1;3): phương án A cho 8 < 0, B cho −3 > 0, C cho −10 > 0 đều sai. Phương án D cho 5 > 0, đúng."
       ],
       [
-        "Cho mệnh đề chứa biến P(x): \"x<sup>2</sup> > 3x\" với x là số thực. Mệnh đề nào sau đây là mệnh đề đúng?",
+        "Cho mệnh đề chứa biến P(x): \"x<sup>2</sup> > 3x\" với x là số thực. Mệnh đề nào đúng?",
         [
-          "A. P(2)",
-          "B. P(3)",
-          "C. P(4)",
-          "D. P(1)"
+          "P(3)",
+          "P(1)",
+          "P(4)",
+          "P(2)"
         ],
         2,
-        "Thay từng giá trị của x vào bất thức x<sup>2</sup> > 3x:<br>• Với x = 2: 2<sup>2</sup> = 4 > 3(2) = 6 (Sai).<br>• Với x = 3: 3<sup>2</sup> = 9 > 3(3) = 9 (Sai).<br>• Với x = 4: 4<sup>2</sup> = 16 > 3(4) = 12 (Đúng).<br>• Với x = 1: 1<sup>2</sup> = 1 > 3(1) = 3 (Sai).<br>Vậy P(4) là mệnh đề đúng."
+        "Với x = 4, ta có 4² = 16 > 12 = 3·4. Các giá trị 3, 1, 2 không thỏa mãn."
       ],
       [
-        "Trong mặt phẳng tọa độ Oxy, phần mặt phẳng không bị gạch chéo (kể cả bờ) trong hình vẽ bên dưới là miền nghiệm của bất phương trình nào?<div style=\"margin:14px auto;text-align:center;max-width:300px;\"><svg viewBox=\"0 0 250 190\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;width:100%;max-width:270px;height:auto;display:inline-block;\"><defs><pattern id=\"hatch6\" width=\"8\" height=\"8\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"8\" stroke=\"#64748b\" stroke-width=\"1.2\"/></pattern><marker id=\"arrow6\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 2 L 8 5 L 0 8 z\" fill=\"#1e293b\"/></marker></defs><polygon points=\"-10,165 240,40 240,190 -10,190\" fill=\"url(#hatch6)\" opacity=\"0.75\"/><line x1=\"15\" y1=\"80\" x2=\"235\" y2=\"80\" stroke=\"#1e293b\" stroke-width=\"1.5\" marker-end=\"url(#arrow6)\"/><text x=\"235\" y=\"75\" font-size=\"14\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">x</text><line x1=\"80\" y1=\"175\" x2=\"80\" y2=\"15\" stroke=\"#1e293b\" stroke-width=\"1.5\" marker-end=\"url(#arrow6)\"/><text x=\"86\" y=\"22\" font-size=\"14\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">y</text><line x1=\"-10\" y1=\"165\" x2=\"240\" y2=\"40\" stroke=\"#1e40af\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"80\" r=\"3\" fill=\"#1e293b\"/><text x=\"158\" y=\"98\" font-size=\"13\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">2</text><circle cx=\"80\" cy=\"120\" r=\"3\" fill=\"#1e293b\"/><text x=\"58\" y=\"124\" font-size=\"13\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">-1</text><circle cx=\"80\" cy=\"80\" r=\"2.5\" fill=\"#1e293b\"/><text x=\"66\" y=\"96\" font-size=\"13\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e293b\">O</text><text x=\"215\" y=\"35\" font-size=\"13\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e40af\" font-weight=\"bold\">d</text></svg></div>",
+        "Miền không gạch chéo trong hình vẽ (bao gồm cả đường thẳng d) là miền nghiệm của bất phương trình bậc nhất hai ẩn nào dưới đây?<div style=\"margin:14px auto;text-align:center;max-width:300px;\"><svg viewBox=\"0 0 250 190\" style=\"background:#fff;border:1px solid #cbd5e1;border-radius:8px;width:100%;max-width:270px;height:auto;display:inline-block;\"><defs><pattern id=\"hatch6\" width=\"8\" height=\"8\" patternTransform=\"rotate(45 0 0)\" patternUnits=\"userSpaceOnUse\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"8\" stroke=\"#64748b\" stroke-width=\"1.2\"/></pattern><marker id=\"arrow6\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 2 L 8 5 L 0 8 z\" fill=\"#1e293b\"/></marker></defs><polygon points=\"-10,165 240,40 240,190 -10,190\" fill=\"url(#hatch6)\" opacity=\"0.75\"/><line x1=\"15\" y1=\"80\" x2=\"235\" y2=\"80\" stroke=\"#1e293b\" stroke-width=\"1.5\" marker-end=\"url(#arrow6)\"/><text x=\"235\" y=\"75\" font-size=\"14\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">x</text><line x1=\"80\" y1=\"175\" x2=\"80\" y2=\"15\" stroke=\"#1e293b\" stroke-width=\"1.5\" marker-end=\"url(#arrow6)\"/><text x=\"86\" y=\"22\" font-size=\"14\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">y</text><line x1=\"-10\" y1=\"165\" x2=\"240\" y2=\"40\" stroke=\"#1e40af\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"80\" r=\"3\" fill=\"#1e293b\"/><text x=\"158\" y=\"98\" font-size=\"13\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">2</text><circle cx=\"80\" cy=\"120\" r=\"3\" fill=\"#1e293b\"/><text x=\"58\" y=\"124\" font-size=\"13\" font-family=\"sans-serif\" fill=\"#1e293b\" font-weight=\"bold\">-1</text><circle cx=\"80\" cy=\"80\" r=\"2.5\" fill=\"#1e293b\"/><text x=\"66\" y=\"96\" font-size=\"13\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e293b\">O</text><text x=\"215\" y=\"35\" font-size=\"13\" font-style=\"italic\" font-family=\"sans-serif\" fill=\"#1e40af\" font-weight=\"bold\">d</text></svg></div>",
         [
-          "A. x - 2y &ge; 2",
-          "B. x - 2y &le; 2",
-          "C. 2x - y &le; 2",
-          "D. 2x - y &ge; 2"
+          "2x − y ≤ 0.",
+          "x − 2y ≤ 2.",
+          "x − 2y > 1.",
+          "x − 2y < 2."
         ],
         1,
         "Đường thẳng d cắt trục hoành tại điểm (2; 0) và cắt trục tung tại điểm (0; -1).<br>Phương trình đoạn chắn của đường thẳng d: x/2 + y/(-1) = 1 &hArr; x - 2y = 2.<br>Gốc tọa độ O(0; 0) nằm trong miền không bị gạch chéo. Thay O(0; 0) vào biểu thức: 0 - 2(0) = 0 &le; 2 (thỏa mãn).<br>Do miền nghiệm kể cả bờ d nên bất phương trình tương ứng là x - 2y &le; 2."
       ],
       [
-        "Mệnh đề phủ định của mệnh đề \"&exist; x &isin; ℝ, 2x - 1 < 0\" là:",
+        "Tìm mệnh đề phủ định của mệnh đề: P: \"∃x ∈ ℝ : 2x − 1 < 0\"",
         [
-          "A. \"&forall; x &isin; ℝ, 2x - 1 &ge; 0\"",
-          "B. \"&forall; x &isin; ℝ, 2x - 1 < 0\"",
-          "C. \"&forall; x &isin; ℝ, 2x - 1 &le; 0\"",
-          "D. \"&exist; x &isin; ℝ, 2x - 1 &ge; 0\""
+          "P̄: \"∀x ∈ ℝ : 2x − 1 ≥ 0\".",
+          "P̄: \"∃x ∈ ℝ : 2x − 1 > 0\".",
+          "P̄: \"∀x ∈ ℝ : 2x − 1 < 0\".",
+          "P̄: \"∀x ∈ ℝ : 2x − 1 > 0\"."
         ],
         0,
         "Phủ định của lượng từ &exist; là &forall;, phủ định của quan hệ nhỏ hơn (<) là lớn hơn hoặc bằng (&ge;).<br>Do đó mệnh đề phủ định là \"&forall; x &isin; ℝ, 2x - 1 &ge; 0\"."
       ],
       [
-        "Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?",
+        "Trong các bất phương trình sau đây, bất phương trình nào là bất phương trình bậc nhất hai ẩn?",
         [
-          "A. 2x + y &le; 1",
-          "B. 2x<sup>2</sup> + y &le; 1",
-          "C. 2x + y<sup>2</sup> &le; 1",
-          "D. 2x<sup>2</sup> + y<sup>2</sup> &le; 1"
+          "2x + y ≤ 1.",
+          "2x<sup>2</sup> − 3y ≥ 1.",
+          "3x + 1/y > 1.",
+          "3xy + 1 ≤ 0."
         ],
         0,
-        "Bất phương trình bậc nhất hai ẩn có dạng ax + by &le; c (hoặc &ge;, <, >) với a, b không đồng thời bằng 0 và các biến x, y có bậc là 1.<br>Chỉ có bất phương trình 2x + y &le; 1 thỏa mãn."
+        "Chỉ 2x + y ≤ 1 có dạng ax + by ≤ c, trong đó x, y đều bậc nhất."
       ],
       [
-        "Cặp số (x; y) nào sau đây là một nghiệm của hệ bất phương trình { x + y > 2 ; -2x + y &le; 7 }?",
+        "Cặp số nào là một nghiệm của hệ bất phương trình <span class=\"math-system\"><span>{</span><span>x + y > 2<br>−2x + y ≤ 7</span></span>?",
         [
-          "A. (4; -1)",
-          "B. (-2; 3)",
-          "C. (1; -1)",
-          "D. (-1; 2)"
+          "(4;−1)",
+          "(−1;12)",
+          "(−5;−2)",
+          "(2;−5)"
         ],
         0,
         "Thay cặp số (4; -1) vào hệ bất phương trình:<br>• 4 + (-1) = 3 > 2 (Đúng).<br>• -2(4) + (-1) = -9 &le; 7 (Đúng).<br>Vậy (4; -1) là một nghiệm của hệ bất phương trình."
       ],
       [
-        "Cho góc &alpha; thỏa mãn 90&deg; < &alpha; < 180&deg;. Khẳng định nào sau đây là đúng?",
+        "Cho α ∈ (90°;180°). Mệnh đề nào sau đây đúng?",
         [
-          "A. sin&alpha; < 0",
-          "B. tan&alpha; < 0",
-          "C. cot&alpha; > 0",
-          "D. cos&alpha; > 0"
+          "cos α > 0.",
+          "tan α < 0.",
+          "cot α > 0.",
+          "sin α < 0."
         ],
         1,
         "Với góc tù 90&deg; < &alpha; < 180&deg; (góc phần tư thứ II):<br>• sin&alpha; > 0<br>• cos&alpha; < 0<br>• tan&alpha; = sin&alpha; / cos&alpha; < 0<br>• cot&alpha; = cos&alpha; / sin&alpha; < 0.<br>Do đó khẳng định tan&alpha; < 0 là đúng."
       ],
       [
-        "Trong các câu sau, có bao nhiêu câu là mệnh đề?<br>(1) Huế là một thành phố của Việt Nam.<br>(2) Số 15 là số nguyên tố phải không?<br>(3) Hãy đứng dậy!<br>(4) 5 + 19 = 24.",
+        "Trong các câu sau có bao nhiêu câu là mệnh đề:<br>(1): Số 7 là một số lẻ.<br>(2): 2x + 1 = 6, với x là biến số thực.<br>(3): Các em hãy cố gắng làm bài thi cho tốt !<br>(4): 4 < 2",
         [
-          "A. 3",
-          "B. 4",
-          "C. 1",
-          "D. 2"
+          "1.",
+          "4.",
+          "3.",
+          "2."
         ],
         3,
-        "Mệnh đề là một câu khẳng định có tính đúng hoặc sai rõ ràng:<br>• (1) là câu khẳng định đúng &rArr; là mệnh đề.<br>• (2) là câu hỏi &rArr; không phải mệnh đề.<br>• (3) là câu cầu khiến/ra lệnh &rArr; không phải mệnh đề.<br>• (4) là khẳng định toán học đúng &rArr; là mệnh đề.<br>Vậy có tất cả 2 câu là mệnh đề (gồm (1) và (4))."
+        "(1) và (4) là các câu khẳng định có thể xác định đúng hoặc sai, nên là mệnh đề. (2) là mệnh đề chứa biến; (3) là câu cầu khiến. Vậy có 2 mệnh đề."
       ],
       [
-        "Cho tập hợp A = {x &isin; ℝ | -3 < x &le; 10}. Khẳng định nào sau đây là đúng?",
+        "Cho A = {x ∈ ℝ / −3 < x ≤ 10}. Khẳng định nào sau đây đúng?",
         [
-          "A. A = [-3; 10)",
-          "B. A = (-3; 10)",
-          "C. A = (-3; 10]",
-          "D. A = [-3; 10]"
+          "A = [−3;10)",
+          "A = [−3;10]",
+          "A = (−3;10]",
+          "A = (−3;10)"
         ],
         2,
         "Tập hợp các số thực x lớn hơn -3 và nhỏ hơn hoặc bằng 10 được viết dưới dạng nửa khoảng là (-3; 10]."
@@ -2967,7 +2967,7 @@ const suppliedExams = [
     ],
     "tf": [
       {
-        "stem": "Cho các tập hợp A = (-5; 4], B = {x &isin; ℝ | x + 2 > 3}, C = {x &isin; ℕ | x<sup>2</sup> + 6x = 0}.",
+        "stem": "Cho ba tập hợp: A = (−5;4], B = {x ∈ ℝ | x + 2 > 3}, C = {x ∈ ℕ | x<sup>2</sup> + 6x = 0}. Các khẳng định sau đúng hay sai?",
         "items": [
           [
             "a) Phương trình x<sup>2</sup> + 6x = 0 có hai nghiệm thực phân biệt.",
@@ -2975,24 +2975,24 @@ const suppliedExams = [
             "Phương trình x<sup>2</sup> + 6x = 0 &hArr; x(x + 6) = 0 &hArr; x = 0 hoặc x = -6. Cả hai nghiệm đều thuộc ℝ và phân biệt. Khẳng định ĐÚNG."
           ],
           [
-            "b) C = {0; -6}.",
+            "C = {0;−6}.",
             false,
             "Vì x &isin; ℕ (tập số tự nhiên) nên giá trị -6 bị loại, do đó C chỉ chứa phần tử 0, tức là C = {0}. Khẳng định C = {0; -6} là SAI."
           ],
           [
-            "c) B = (1; +&infin;).",
+            "B = (1;+∞).",
             true,
             "Bất phương trình x + 2 > 3 &hArr; x > 1 &hArr; x &isin; (1; +&infin;). Do đó B = (1; +&infin;). Khẳng định ĐÚNG."
           ],
           [
-            "d) A &cup; B = (-5; +&infin;).",
+            "A ∪ B = (−5;+∞).",
             true,
             "A = (-5; 4] và B = (1; +&infin;). Do 4 > 1 nên hai khoảng này chồng lên nhau trên trục số: (-5; 4] &cup; (1; +&infin;) = (-5; +&infin;). Khẳng định ĐÚNG."
           ]
         ]
       },
       {
-        "stem": "Cho tam giác ABC có AC = 16, AB = 13 và cos A = 12/13.",
+        "stem": "Cho tam giác ABC, biết AC = 16, AB = 13, cos A = 12/13. Các khẳng định sau đúng hay sai?",
         "items": [
           [
             "a) Tam giác ABC có góc A là góc nhọn.",
@@ -3010,7 +3010,7 @@ const suppliedExams = [
             "Diện tích tam giác ABC là S = (1/2).AB.AC.sin A = (1/2).13.16.(5/13) = 40. Khẳng định ĐÚNG."
           ],
           [
-            "d) Độ dài cạnh BC = 10.",
+            "BC = 10.",
             false,
             "Theo định lí côsin: BC<sup>2</sup> = AB<sup>2</sup> + AC<sup>2</sup> - 2.AB.AC.cos A = 13<sup>2</sup> + 16<sup>2</sup> - 2.13.16.(12/13) = 169 + 256 - 384 = 41 &rArr; BC = &radic;41 &approx; 6,403 &ne; 10. Khẳng định SAI."
           ]
@@ -3019,25 +3019,25 @@ const suppliedExams = [
     ],
     "short": [
       {
-        "question": "Cho hai tập hợp A = {x &isin; <b>Z</b> | 4 > x > -4} và B = {-2; 0; 2; 4; 6}. Số phần tử của tập hợp A &cup; B là bao nhiêu?",
+        "question": "Cho hai tập hợp A = {x ∈ ℤ | 4 > x > −4} và B = {−2;0;2;4;6}. Tập hợp A ∪ B có bao nhiêu phần tử?",
         "answer": "9",
         "unit": "",
         "explanation": "A = {-3; -2; -1; 0; 1; 2; 3} gồm 7 phần tử.<br>B = {-2; 0; 2; 4; 6} gồm 5 phần tử.<br>A &cup; B = {-3; -2; -1; 0; 1; 2; 3; 4; 6}.<br>Số phần tử của A &cup; B là 9."
       },
       {
-        "question": "Cho góc &alpha; thỏa mãn 90&deg; < &alpha; < 180&deg; và sin&alpha; = 5/13. Tính giá trị của biểu thức P = 3sin&alpha; + 2cos&alpha;.",
+        "question": "Cho góc α, với 90° < α < 180°, thỏa mãn sin α = 5/13. Tính giá trị của biểu thức<br>P = 3sin α + 2cos α.",
         "answer": "-9/13",
         "unit": "",
         "explanation": "Vì 90&deg; < &alpha; < 180&deg; nên cos&alpha; < 0.<br>Ta có cos&alpha; = -&radic;(1 - sin<sup>2</sup>&alpha;) = -&radic;(1 - 25/169) = -12/13.<br>Do đó: P = 3(5/13) + 2(-12/13) = (15 - 24)/13 = -9/13 &approx; -0,69."
       },
       {
-        "question": "Tính diện tích của miền nghiệm của hệ bất phương trình sau:<br>{ x + y &le; 8 ; x &ge; 0 ; y &ge; 1 }",
+        "question": "Miền nghiệm của hệ bất phương trình sau đây là đa giác có diện tích bằng bao nhiêu?<br><span class=\"math-system\"><span>{</span><span>x + y ≤ 8<br>x ≥ 0<br>y ≥ 1</span></span>",
         "answer": "24.5",
         "unit": "",
         "explanation": "Miền nghiệm là tam giác giới hạn bởi 3 đường thẳng x = 0 (trục tung Oy), y = 1 và x + y = 8.<br>Giao điểm của các đường thẳng:<br>• A(0; 1) là giao của x = 0 và y = 1.<br>• B(0; 8) là giao của x = 0 và x + y = 8.<br>• C(7; 1) là giao của y = 1 và x + y = 8.<br>Tam giác ABC vuông tại A có AB = 8 - 1 = 7 và AC = 7 - 0 = 7.<br>Diện tích miền nghiệm là: S = (1/2).AB.AC = (1/2).7.7 = 24,5."
       },
       {
-        "question": "Để đo khoảng cách từ một điểm C trên một cù lao giữa sông đến một bờ sông, người ta chọn hai điểm A và B trên bờ sông đó sao cho A, B cùng nhìn thấy điểm C. Đo được khoảng cách AB = 100 m, các góc &ang;CAB = 40&deg;, &ang;CBA = 45&deg;. Khoảng cách từ điểm C đến bờ sông AB là bao nhiêu mét? (làm tròn kết quả đến hàng phần mười).",
+        "question": "Trên bờ sông coi như là đường thẳng, bạn Minh đánh dấu hai điểm A và B cách nhau 100 m. Đứng tại A, bạn Minh đo được góc nghiêng so với bờ sông tới vị trí C trên cù lao ở giữa sông là CÂB = 40°. Sau đó, Minh di chuyển đến B và đo được góc CBA = 45°. Tính khoảng cách ngắn nhất từ vị trí C trên cù lao đến đường bờ sông AB, làm tròn kết quả đến hàng phần mười.",
         "answer": "45.6",
         "unit": "m",
         "explanation": "Trong tam giác ABC: góc &ang;ACB = 180&deg; - (40&deg; + 45&deg;) = 95&deg;.<br>Theo định lí sin: AC / sin(&ang;CBA) = AB / sin(&ang;ACB) &rArr; AC = 100 . sin45&deg; / sin95&deg; &approx; 70,98 m.<br>Khoảng cách từ C đến bờ sông AB là chiều cao CH của tam giác ABC:<br>h = CH = AC . sin(&ang;CAB) = 70,98 . sin40&deg; &approx; 45,6 m."
@@ -3045,36 +3045,43 @@ const suppliedExams = [
     ],
     "essay": [
       {
-        "title": "Câu 1 (0,5 điểm).",
-        "question": "Xét tính đúng sai của mệnh đề sau và lập mệnh đề phủ định của nó:<br>P: \"Có ít nhất một số thực x thỏa mãn x<sup>2</sup> - 3x + 2 = 0\".",
+        "title": "Câu 1:",
+        "question": "Xác định tính đúng sai của mệnh đề sau (có giải thích) và tìm mệnh đề phủ định của nó:<br>P: “Có ít nhất một số thực x thỏa mãn điều kiện x<sup>2</sup> − 3x + 2 = 0”",
         "solution": "• Mệnh đề P viết dưới dạng kí hiệu là: \"&exist; x &isin; ℝ : x<sup>2</sup> - 3x + 2 = 0\".<br>• Giải phương trình: x<sup>2</sup> - 3x + 2 = 0 &hArr; (x - 1)(x - 2) = 0 &hArr; x = 1 hoặc x = 2.<br>Vì 1 &isin; ℝ và 2 &isin; ℝ nên tồn tại số thực thỏa mãn phương trình. Vậy P là <b>MỆNH ĐỀ ĐÚNG</b> (0,25 điểm).<br>• Mệnh đề phủ định của P là P̄: \"Mọi số thực x đều không thỏa mãn x<sup>2</sup> - 3x + 2 = 0\" hay kí hiệu là: \"&forall; x &isin; ℝ, x<sup>2</sup> - 3x + 2 &ne; 0\" (0,25 điểm)."
       },
       {
-        "title": "Câu 2 (0,5 điểm).",
-        "question": "Biểu diễn miền nghiệm của bất phương trình 2x - y &ge; 2 trên mặt phẳng tọa độ Oxy.",
+        "title": "Câu 2:",
+        "question": "Biểu diễn miền nghiệm của bất phương trình 2x − y ≥ 2 trên mặt phẳng tọa độ Oxy.",
         "solution": "• Vẽ đường thẳng bờ d: 2x - y = 2 đi qua hai điểm (1; 0) và (0; -2) (0,25 điểm).<br>• Lấy gốc tọa độ O(0; 0) không thuộc d. Thay tọa độ (0; 0) vào vế trái của bất phương trình: 2(0) - 0 = 0 < 2 (không thỏa mãn 2x - y &ge; 2).<br>• Kết luận: Miền nghiệm của bất phương trình 2x - y &ge; 2 là nửa mặt phẳng có bờ là đường thẳng d, không chứa gốc tọa độ O(0; 0) (kể cả bờ d) (0,25 điểm)."
       },
       {
-        "title": "Câu 3 (0,5 điểm).",
-        "question": "Lớp 10A có 45 học sinh, trong đó có 18 bạn tham gia câu lạc bộ bóng đá, 15 bạn tham gia câu lạc bộ bóng rổ, và 10 bạn tham gia cả hai câu lạc bộ. Hỏi lớp 10A có bao nhiêu bạn không tham gia câu lạc bộ nào trong hai câu lạc bộ trên?",
+        "title": "Câu 3:",
+        "question": "Lớp 10A có 18 học sinh tham gia câu lạc bộ bóng đá và 15 học sinh tham gia câu lạc bộ bóng rổ. Biết rằng có 10 học sinh tham gia cả hai câu lạc bộ trên và lớp 10A có 45 học sinh. Hỏi có bao nhiêu học sinh không tham gia câu lạc bộ nào trong hai câu lạc bộ trên?",
         "solution": "• Gọi A là tập hợp học sinh tham gia CLB bóng đá &rArr; |A| = 18.<br>• Gọi B là tập hợp học sinh tham gia CLB bóng rổ &rArr; |B| = 15.<br>• Số học sinh tham gia cả hai CLB là |A &cap; B| = 10.<br>• Số học sinh tham gia ít nhất một trong hai CLB là:<br>|A &cup; B| = |A| + |B| - |A &cap; B| = 18 + 15 - 10 = 23 (học sinh) (0,25 điểm).<br>• Số học sinh không tham gia CLB nào trong hai CLB trên là:<br>45 - 23 = 22 (học sinh) (0,25 điểm).<br>Đáp số: 22 học sinh."
       },
       {
-        "title": "Câu 4 (0,5 điểm).",
-        "question": "Hai chiếc tàu thủy cùng xuất phát từ một vị trí O, đi thẳng theo hai hướng tạo với nhau một góc 60&deg;. Tàu thứ nhất chạy với vận tốc 50 km/h, tàu thứ hai chạy với vận tốc 60 km/h. Giả sử ra-đa của mỗi tàu có phạm vi bắt sóng tối đa là 30&radic;31 km. Hỏi sau tối đa bao nhiêu giờ kể từ khi xuất phát, hai tàu vẫn còn giữ được liên lạc với nhau qua ra-đa?",
+        "title": "Câu 4:",
+        "question": "Hai chiếc tàu đánh cá cùng xuất phát từ một cảng biển O, chuyển động thẳng đều theo hai hướng tạo với nhau một góc 60°. Tàu A chạy với tốc độ 50 km/h, tàu B chạy với tốc độ 60 km/h. Trên tàu A có trang bị một thiết bị ra-đa với bán kính quan sát tối đa là 30√31 km (nghĩa là ra-đa chỉ phát hiện được các vật thể cách tàu A một khoảng không vượt quá 30√31 km, bỏ qua mọi yếu tố ảnh hưởng khác). Giả sử hai tàu được xem như các chất điểm và vùng biển hai tàu di chuyển được coi là một mặt phẳng. Hỏi kể từ lúc xuất phát, ra-đa của tàu A quan sát được tàu B với thời gian tối đa là bao lâu?",
         "solution": "• Gọi t (giờ, t > 0) là thời gian tính từ khi xuất phát đến thời điểm xét khoảng cách hai tàu.<br>• Sau thời gian t, quãng đường tàu thứ nhất đi được là OM = 50t (km), tàu thứ hai đi được là ON = 60t (km) (0,1 điểm).<br>• Khoảng cách giữa hai tàu là MN. Áp dụng định lí côsin trong tam giác OMN có góc &ang;MON = 60&deg;:<br>MN<sup>2</sup> = OM<sup>2</sup> + ON<sup>2</sup> - 2.OM.ON.cos60&deg;<br>MN<sup>2</sup> = (50t)<sup>2</sup> + (60t)<sup>2</sup> - 2(50t)(60t).(1/2) = 2500t<sup>2</sup> + 3600t<sup>2</sup> - 3000t<sup>2</sup> = 3100t<sup>2</sup><br>&rArr; MN = &radic;(3100t<sup>2</sup>) = 10&radic;31 t (km) (0,2 điểm).<br>• Để hai tàu giữ được liên lạc qua ra-đa thì khoảng cách giữa chúng không vượt quá 30&radic;31 km:<br>10&radic;31 t &le; 30&radic;31 &hArr; t &le; 3 (giờ) (0,2 điểm).<br>Vậy sau tối đa 3 giờ kể từ khi xuất phát, hai tàu vẫn còn giữ được liên lạc với nhau."
       },
       {
-        "title": "Câu 5 (0,5 điểm).",
-        "question": "Một nhà hàng cần tuyển nhân viên phục vụ làm việc theo hai ca: ca I làm việc 8 tiếng/ngày với mức lương 20 nghìn đồng/giờ; ca II làm việc 8 tiếng/ngày với mức lương 22 nghìn đồng/giờ. Do yêu cầu công việc, mỗi ngày cần tuyển ít nhất 3 nhân viên ca I, không quá 10 nhân viên ca II, số nhân viên ca II phải ít nhất gấp 2 lần số nhân viên ca I, và tổng số nhân viên cả hai ca không ít hơn 12 người. Hãy xác định số nhân viên cần tuyển ở mỗi ca để chi phí trả lương hàng ngày là nhỏ nhất?",
+        "title": "Câu 5:",
+        "question": "Một nhà hàng bán đồ ăn từ 10h00 sáng đến 22h00 mỗi ngày. Nhân viên phục vụ của nhà hàng làm việc theo hai ca, mỗi ca 8 tiếng, ca I từ 10h00 đến 18h00 và ca II từ 14h00 đến 22h00. Tiền lương của nhân viên được tính theo giờ (bảng dưới).<br><table class=\"source-exam-table\"><tr><th>Ca làm việc</th><th>Tiền lương/giờ/người</th></tr><tr><td>Ca I</td><td>20 000 đồng</td></tr><tr><td>Ca II</td><td>22 000 đồng</td></tr></table>Để nhà hàng hoạt động được thì cần tối thiểu 3 nhân viên trong khoảng 10h00 – 18h00, tối thiểu 12 nhân viên trong khoảng thời gian cao điểm 14h00 – 18h00 và không quá 10 nhân viên trong khoảng 18h00 – 22h00. Do số lượng khách trong khoảng 14h00 – 22h00 thường đông hơn nên nhà hàng cần số nhân viên ca II ít nhất phải gấp đôi số nhân viên ca I. Em hãy giúp chủ nhà hàng đưa ra cách huy động số lượng nhân viên cho mỗi ca sao cho chi phí tiền lương mỗi ngày là ít nhất.",
         "solution": "• Gọi x và y (x, y &isin; ℕ) lần lượt là số nhân viên cần tuyển cho ca I và ca II trong một ngày.<br>• Tiền lương 1 ngày của nhân viên ca I: 8 &times; 20 = 160 (nghìn đồng).<br>• Tiền lương 1 ngày của nhân viên ca II: 8 &times; 22 = 176 (nghìn đồng).<br>• Tổng chi phí trả lương hàng ngày là: T(x, y) = 160x + 176y (nghìn đồng).<br>• Hệ điều kiện ràng buộc:<br>{ x &ge; 3 ; y &le; 10 ; y &ge; 2x ; x + y &ge; 12 } (0,15 điểm).<br>• Miền nghiệm của hệ là miền tứ giác ABCD với 4 đỉnh:<br>- A là giao của x = 3 và x + y = 12 &rArr; A(3; 9).<br>- B là giao của x = 3 và y = 10 &rArr; B(3; 10).<br>- C là giao của y = 10 và y = 2x &rArr; C(5; 10).<br>- D là giao của y = 2x và x + y = 12 &rArr; 3x = 12 &rArr; x = 4, y = 8 &rArr; D(4; 8) (0,15 điểm).<br>• Tính giá trị chi phí trả lương T(x, y) tại 4 đỉnh:<br>- T(A) = 160(3) + 176(9) = 480 + 1584 = 2064 (nghìn đồng).<br>- T(B) = 160(3) + 176(10) = 480 + 1760 = 2240 (nghìn đồng).<br>- T(C) = 160(5) + 176(10) = 800 + 1760 = 2560 (nghìn đồng).<br>- T(D) = 160(4) + 176(8) = 640 + 1408 = 2048 (nghìn đồng) (0,1 điểm).<br>• Chi phí thấp nhất là 2048 nghìn đồng (tức 2.048.000 đồng) khi x = 4 và y = 8.<br>Kết luận: Nhà hàng cần tuyển <b>4 nhân viên ca I</b> và <b>8 nhân viên ca II</b> để chi phí trả lương hàng ngày là nhỏ nhất (0,1 điểm)."
       },
       {
-        "title": "Câu 6 (0,5 điểm).",
-        "question": "Một cây cổ thụ CD mọc thẳng đứng trên một sườn đồi dốc. Sườn đồi có độ dốc nghiêng một góc 30&deg; so với phương nằm ngang. Từ một điểm A tại chân đồi, người ta nhìn thấy ngọn cây D dưới một góc nâng 45&deg; so với phương nằm ngang. Người đó đi một đoạn AB = 30 m theo sườn đồi hướng lên phía cây và từ điểm B nhìn thấy ngọn cây D dưới một góc nâng 55&deg; so với phương nằm ngang (biết điểm A, B và gốc cây C thẳng hàng theo sườn dốc). Tính chiều cao CD của cây cổ thụ (làm tròn kết quả đến hàng phần mười).",
+        "title": "Câu 6:",
+        "question": "Trên một sườn đồi phẳng có độ nghiêng 30° so với phương ngang, một cây CD mọc thẳng đứng tại điểm C. Nam đứng tại điểm A trên sườn đồi, ở phía dưới C. Nam quan sát ngọn cây D với góc nâng 45° so với phương ngang (góc giữa đường thẳng AD và phương ngang). Sau đó, Nam đi thẳng lên dốc từ A về phía C một đoạn 30 m đến điểm B, nằm giữa A và C. Tại B, góc nâng nhìn lên ngọn cây D là 55°. Biết các điểm A, B, C, D cùng nằm trong một mặt phẳng thẳng đứng, điểm quan sát để đo các góc nằm trên mặt đất. Tính chiều cao CD của cây theo đơn vị mét, làm tròn đến hàng phần mười.",
         "solution": "• Xét tam giác ABD:<br>- Góc tạo bởi tia ngắm AD và sườn đồi AB: &ang;DAB = 45&deg; - 30&deg; = 15&deg;.<br>- Tại B: góc nâng ngọn cây là 55&deg;, sườn đồi dốc 30&deg; &rArr; &ang;CBD = 55&deg; - 30&deg; = 25&deg;.<br>- Do A, B, C thẳng hàng trên sườn dốc nên &ang;ABD = 180&deg; - &ang;CBD = 180&deg; - 25&deg; = 155&deg;.<br>- Trong tam giác ABD: &ang;ADB = 180&deg; - (15&deg; + 155&deg;) = 10&deg; (0,2 điểm).<br>• Áp dụng định lí sin trong tam giác ABD:<br>BD / sin(&ang;DAB) = AB / sin(&ang;ADB) &rArr; BD = 30 . sin15&deg; / sin10&deg; &approx; 30 . (0,2588 / 0,1736) &approx; 44,714 m (0,15 điểm).<br>• Xét tam giác BCD:<br>- Cây CD mọc thẳng đứng, sườn đồi BC nghiêng 30&deg; so với phương ngang &rArr; &ang;BCD = 90&deg; - 30&deg; = 60&deg;.<br>- Ta có &ang;DBC = 25&deg; &rArr; &ang;BDC = 180&deg; - (60&deg; + 25&deg;) = 95&deg;.<br>• Áp dụng định lí sin trong tam giác BCD:<br>CD / sin(&ang;DBC) = BD / sin(&ang;BCD) &rArr; CD = BD . sin25&deg; / sin60&deg; &approx; 44,714 . (0,4226 / 0,8660) &approx; 21,8 m (0,15 điểm).<br>Vậy chiều cao của cây cổ thụ CD xấp xỉ <b>21,8 mét</b>."
       }
-    ]
+    ],
+    "source": {
+      "school": "Trường THPT Đông Hà",
+      "province": "Quảng Trị",
+      "year": "2026–2027",
+      "url": "",
+      "note": "Đối chiếu nguyên văn ba ảnh đề gốc mã 1003 do người dùng cung cấp."
+    }
   },
   {
     "id": "vatli-10-de-01",

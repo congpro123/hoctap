@@ -40,7 +40,7 @@ submitExam=function(reason){
     correct:score.correct,
     points:score.points,
     maxPoints:score.max,
-    questionSetVersion:2,
+    questionSetVersion:e.id==='toan-10-de-13'?3:2,
     answers:{...answers},
     date:new Date().toISOString(),
     reason,

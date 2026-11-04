@@ -1,6 +1,10 @@
 // Giữ câu xuất hiện đầu tiên; thay các câu trùng giữa những đề cùng môn bằng câu mới có đáp án tính được.
 const legacyExamMap=new Map(exams.map(e=>[e.id,JSON.parse(JSON.stringify(e))]));
-function historicalExamForResult(r){return (r.questionSetVersion===2?exams.find(e=>e.id===r.id):legacyExamMap.get(r.id))||null}
+if(typeof legacyDongHa1003!=='undefined')legacyExamMap.set('toan-10-de-13',legacyDongHa1003);
+function historicalExamForResult(r){
+  if(r.id==='toan-10-de-13')return (r.questionSetVersion===3?exams.find(e=>e.id===r.id):r.questionSetVersion===2&&typeof legacyDongHa1003v2!=='undefined'?legacyDongHa1003v2:legacyExamMap.get(r.id))||null;
+  return (r.questionSetVersion===2?exams.find(e=>e.id===r.id):legacyExamMap.get(r.id))||null;
+}
 function numericChoice(stem,answer,unit,reason,serial){
   const values=[answer,answer+1,answer+2,answer+3];
   const place=serial%4,correct=values[0];
@@ -50,6 +54,7 @@ const fallback={physics:{mc:physicsQuestion,tf:newPhysicsTF,short:newPhysicsShor
 for(const subject of Object.keys(fallback)){
   const seen={mc:new Set(),tf:new Set(),short:new Set()},serial={mc:0,tf:0,short:0};
   for(const exam of exams.filter(e=>e.subject===subject)){
+    if(exam.id==='toan-10-de-13')continue; // Preserve the supplied Dong Ha paper verbatim.
     for(const [part,key,field] of [['mc','questions',0],['tf','tf','stem'],['short','short','text']]){
       exam[key]=exam[key].map(question=>{
         let current=question,stem=current[field];
