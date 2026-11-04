@@ -3,7 +3,10 @@ function card(e){
   const labels={math:'Toán 10',physics:'Vật lý 10',chemistry:'Hóa học 10',english:'Tiếng Anh 10'};
   let status='<span class="exam-status-badge pending">Chưa làm</span>';
   let action=`<button class="primary" data-start="${esc(e.id)}">Làm bài</button>`;
-  if(window.auth && typeof window.auth.getExamStatus==='function'){
+  if(e.originalPdf){
+    status='<span class="exam-status-badge pending">Đề PDF gốc · 3 trang</span>';
+    action=`<button class="primary" data-start="${esc(e.id)}">Xem đề</button>`;
+  } else if(window.auth && typeof window.auth.getExamStatus==='function'){
     const st=window.auth.getExamStatus(e.id);
     if(st?.hasDone && st.bestResult){
       const best=st.bestResult;

@@ -1823,3 +1823,14 @@
   margin: 0;
   color: #166534;
 }
+/* Trang đề PDF gốc: giữ nguyên chữ, công thức và hình minh họa. */
+.original-pdf-exam{max-width:1050px;margin:0 auto}
+.original-pdf-toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.original-pdf-toolbar h1{font-size:24px;line-height:1.35;margin:10px 0 6px}
+.original-pdf-toolbar p{margin:0;color:#64748b}
+.original-pdf-actions{display:flex;gap:10px;flex-wrap:wrap}
+.original-pdf-actions a{display:inline-flex;align-items:center;text-decoration:none}
+.original-pdf-pages{display:grid;gap:24px}
+.original-pdf-page{margin:0;background:#fff;border:1px solid #dbe1e9;border-radius:8px;box-shadow:0 4px 18px rgba(15,23,42,.08);overflow:hidden}
+.original-pdf-page img{display:block;width:100%;height:auto}
+.original-pdf-page figcaption{text-align:center;padding:8px;color:#64748b;font-size:13px;border-top:1px solid #e2e8f0}

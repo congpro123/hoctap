@@ -469,9 +469,8 @@ function startExam(id) {
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('exam')) return;
   const e = exams.find(x => x.id === id);
   if (!e) return;
-  // Tài liệu PDF gốc không phải bài thi tương tác; mở nguyên bản thay vì tạo phòng thi rỗng.
-  if (e.originalPdf && e.source && e.source.url) {
-    window.open(e.source.url, '_blank', 'noopener,noreferrer');
+  if (e.originalPdf) {
+    renderOriginalPdfExam(e);
     return;
   }
   hidePauseModal();
@@ -528,6 +527,22 @@ function persistDraft() {
       remainingMs: isExamPaused ? remainingMs : Math.max(0, deadline - Date.now())
     }));
   }
+}
+
+function renderOriginalPdfExam(e) {
+  const pdf = e.source.url;
+  const base = pdf.replace(/\.pdf$/i, '');
+  app.innerHTML = `<div class="content original-pdf-exam">
+    <div class="original-pdf-toolbar">
+      <div><span class="subject-pill">TOÁN 10 · ĐỀ GỐC</span><h1>${esc(e.title)}</h1><p>Đề gồm 3 trang · Thời gian làm bài: 90 phút · Mã đề 101</p></div>
+      <div class="original-pdf-actions"><button class="secondary" data-subjectto="0">← Kho đề Toán</button><a class="primary" href="${esc(pdf)}" target="_blank" rel="noopener noreferrer">Mở PDF gốc ↗</a></div>
+    </div>
+    <div class="original-pdf-pages" aria-label="Nội dung nguyên bản của đề ôn tập số 1">
+      ${[1, 2, 3].map(n => `<figure class="original-pdf-page"><img src="${esc(base)}-page-${n}.png" alt="Trang ${n} trên 3 của đề ôn tập Toán 10, mã đề 101" loading="${n === 1 ? 'eager' : 'lazy'}"><figcaption>Trang ${n}/3</figcaption></figure>`).join('')}
+    </div>
+  </div>`;
+  setNav('exam');
+  window.scrollTo(0, 0);
 }
 
 function renderExam() {
