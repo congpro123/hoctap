@@ -121,6 +121,41 @@ if (rawData.length > 0) {
 
 const app = document.getElementById('app');
 let currentView = 'home', activeExam = null, answers = {}, deadline = 0, ticker = null;
+let selectedBankWord = null;
+
+function wordBankFor(e, index) {
+  const bank = e && e.wordBank;
+  return bank && index >= bank.start && index < bank.start + bank.answers.length ? bank : null;
+}
+
+function wordBankValue(e, index, value) {
+  if (value === undefined || value === null) return '';
+  if (typeof value === 'number') return cleanOptionText(e.questions[index][1][value] || '');
+  return String(value).trim();
+}
+
+function mcAnswerMatches(e, index, value, question = e.questions[index]) {
+  const bank = wordBankFor(e, index);
+  return bank
+    ? wordBankValue(e, index, value).toLowerCase() === bank.answers[index - bank.start].toLowerCase()
+    : value === question[2];
+}
+
+function renderWordBankQuestion(e) {
+  const bank = e.wordBank;
+  const used = new Set(bank.answers.map((_, j) => wordBankValue(e, bank.start + j, answers['m' + (bank.start + j)])).filter(Boolean));
+  const passage = e.questions[bank.start][0].replace(/\((26|27|28|29|30)\) _+/g, (_, number) => {
+    const index = bank.start + Number(number) - 26;
+    const word = wordBankValue(e, index, answers['m' + index]);
+    return `(${number}) <button type="button" id="q-${index}" class="word-bank-blank ${word ? 'filled' : ''}" data-bank-blank="${index}" aria-label="Chỗ trống ${number}${word ? ': ' + esc(word) : ', chưa điền'}">${word ? esc(word) : 'Kéo hoặc chạm để điền'}</button>`;
+  });
+  return `<div class="question word-bank-question" id="word-bank-card">
+    <div class="word-bank-heading">Câu ${bank.start + 1}–${bank.start + bank.answers.length} · Điền từ vào đoạn văn</div>
+    <p class="word-bank-help">Kéo một từ vào ô trống. Trên điện thoại, chạm vào từ rồi chạm vào ô. Chạm ô đã điền để bỏ từ.</p>
+    <div class="word-bank-words" aria-label="Ngân hàng từ">${bank.words.map(word => `<button type="button" class="word-bank-word ${used.has(word) ? 'used' : ''} ${selectedBankWord === word ? 'selected' : ''}" data-bank-word="${esc(word)}" draggable="true" aria-pressed="${selectedBankWord === word}">${esc(word)}</button>`).join('')}</div>
+    <div class="word-bank-passage">${passage}</div>
+  </div>`;
+}
 let isExamPaused = false, remainingMs = 0;
 function tryRenderKatex(root) {
   try {
@@ -502,6 +537,7 @@ function startExam(id) {
     deadline = Date.now() + (e.minutes || e.duration || 45) * 60000;
   }
   activeExam = e;
+  selectedBankWord = null;
   persistDraft();
   renderExam();
   if (isExamPaused) {
@@ -555,7 +591,7 @@ function renderExam() {
           <div>
             <span class="subject-pill" style="background:${sm.bg};color:${sm.color}">${sm.icon}&nbsp; PHÒNG THI ${sm.name}</span>
             <h1>${esc(e.title)}</h1>
-            <p>Phần I: ${qLen} trắc nghiệm (0,25đ/câu) · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)${(e.essay && e.essay.length > 0) ? ` · Phần IV: ${e.essay.length} câu tự luận` : ''}</p>
+            <p>Phần I: ${qLen} câu/ô ${e.wordBank ? '(gồm bài kéo thả từ)' : 'trắc nghiệm'} · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)${(e.essay && e.essay.length > 0) ? ` · Phần IV: ${e.essay.length} câu tự luận` : ''}</p>
           </div>
           <div class="exam-header-controls">
             <div class="timer" id="timer">--:--</div>
@@ -568,8 +604,10 @@ function renderExam() {
         ${sourceLine(e)}
         ${e.originalPdf ? `<div class="original-pdf-pages" aria-label="Ba trang đề gốc, gồm hình minh họa">${[1, 2, 3].map(n => `<figure class="original-pdf-page"><img src="${esc(e.source.url.replace(/\.pdf$/i, ''))}-page-${n}.png" alt="Trang ${n} trên 3 của đề Toán 10 mã đề 101" loading="${n === 1 ? 'eager' : 'lazy'}"><figcaption>Trang ${n}/3</figcaption></figure>`).join('')}</div><h2 class="part-heading">Phiếu trả lời · đối chiếu từng câu với đề gốc phía trên</h2>` : ''}
 
-        ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · Nhiều lựa chọn (${e.questions.length} câu)</h2>` : ''}
-        ${(e.questions || []).map((q, i) => `<div class="question" id="q-${i}">
+        ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · ${e.wordBank ? 'Trắc nghiệm và kéo thả từ' : 'Nhiều lựa chọn'} (${e.questions.length} câu/ô)</h2>` : ''}
+        ${(e.questions || []).map((q, i) => wordBankFor(e, i)
+          ? (i === e.wordBank.start ? renderWordBankQuestion(e) : '')
+          : `<div class="question" id="q-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
             <span>${q[0]}</span>
@@ -830,8 +868,21 @@ function renderResult(r) {
           <h2>Chi tiết lời giải & hướng dẫn chấm (Kiến thức Lớp 10)</h2>
         </div>
 
-        <h3>Phần I · Trắc nghiệm 4 lựa chọn (${(e.questions || []).length} câu)</h3>
+        <h3>Phần I · ${e.wordBank ? 'Trắc nghiệm và điền từ' : 'Trắc nghiệm 4 lựa chọn'} (${(e.questions || []).length} câu/ô)</h3>
         ${(e.questions || []).map((q, i) => {
+          const bank = wordBankFor(e, i);
+          if (bank && i !== bank.start) return '';
+          if (bank) {
+            return `<div class="review-item"><div class="review-item-header"><span class="review-part-tag">Điền từ vào đoạn văn</span><span class="review-item-number">Câu ${bank.start + 1}–${bank.start + bank.answers.length}</span></div>
+              <div class="review-q-text">${q[0]}</div>
+              ${bank.answers.map((key, j) => {
+                const index = bank.start + j;
+                const chosen = wordBankValue(e, index, r.answers['m' + index]);
+                const ok = chosen.toLowerCase() === key.toLowerCase();
+                return `<div class="review-status-row"><b>Ô (${26 + j})</b> ${chosen ? `<span class="badge-user-ans ${ok ? 'correct' : 'wrong'}">${ok ? '✓' : '✗'} ${esc(chosen)}</span>` : '<span class="badge-user-ans unanswered">Chưa điền</span>'}<span class="badge-correct-ans">Đáp án: ${esc(key)}</span></div>`;
+              }).join('')}
+            </div>`;
+          }
           const user = r.answers['m' + i];
           const ok = user === q[2];
           return `<div class="review-item">
@@ -939,6 +990,55 @@ function renderResult(r) {
 }
 
 // Lắng nghe sự kiện toàn cục
+function refreshWordBankCard() {
+  const card = document.getElementById('word-bank-card');
+  if (card && activeExam && activeExam.wordBank) card.outerHTML = renderWordBankQuestion(activeExam);
+  persistDraft();
+  updateProgress();
+}
+
+function placeBankWord(index, word) {
+  const bank = wordBankFor(activeExam, index);
+  if (!bank || !bank.words.includes(word)) return;
+  bank.answers.forEach((_, j) => {
+    const key = 'm' + (bank.start + j);
+    if (wordBankValue(activeExam, bank.start + j, answers[key]) === word) delete answers[key];
+  });
+  answers['m' + index] = word;
+  selectedBankWord = null;
+  refreshWordBankCard();
+}
+
+document.addEventListener('click', e => {
+  const token = e.target.closest('[data-bank-word]');
+  if (token) {
+    selectedBankWord = selectedBankWord === token.dataset.bankWord ? null : token.dataset.bankWord;
+    refreshWordBankCard();
+    return;
+  }
+  const blank = e.target.closest('[data-bank-blank]');
+  if (!blank) return;
+  const index = Number(blank.dataset.bankBlank);
+  if (selectedBankWord) placeBankWord(index, selectedBankWord);
+  else {
+    delete answers['m' + index];
+    refreshWordBankCard();
+  }
+});
+document.addEventListener('dragstart', e => {
+  const token = e.target.closest('[data-bank-word]');
+  if (token && e.dataTransfer) e.dataTransfer.setData('text/plain', token.dataset.bankWord);
+});
+document.addEventListener('dragover', e => {
+  if (e.target.closest('[data-bank-blank]')) e.preventDefault();
+});
+document.addEventListener('drop', e => {
+  const blank = e.target.closest('[data-bank-blank]');
+  if (!blank) return;
+  e.preventDefault();
+  placeBankWord(Number(blank.dataset.bankBlank), e.dataTransfer.getData('text/plain'));
+});
+
 document.addEventListener('click', e => {
   // Bắt tất cả các liên kết / nút mở Sổ tay kiến thức
   const hbLink = e.target.closest('a[href="#handbook"], a[href^="#handbook-"], [data-view="handbook"], [data-viewto="handbook"]');

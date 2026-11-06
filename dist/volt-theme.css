@@ -147,3 +147,16 @@ body { background: #f3f4f6; color: #1f2937; font-family: Inter, 'Segoe UI', Aria
   .stats-card-box, .exam-main, .exam-aside, .result-panel { border-radius: 10px; }
 }
 @media print { .sidebar, .topbar { display: none; } .workspace-heading { background: #fff; border: 0; box-shadow: none; } }
+
+.word-bank-question { line-height: 1.75; }
+.word-bank-heading { font-weight: 700; font-size: 1.05rem; }
+.word-bank-help { margin: 8px 0 14px; color: #526077; }
+.word-bank-words { display: flex; flex-wrap: wrap; gap: 9px; padding: 12px; margin-bottom: 16px; border: 1px solid #cbd5e1; border-radius: 9px; background: #f8fafc; }
+.word-bank-word { padding: 5px 13px; border: 1px solid #94a3b8; border-radius: 7px; background: #fff; color: #172554; font: inherit; cursor: grab; }
+.word-bank-word.used { opacity: .55; }
+.word-bank-word.selected { border-color: #2563eb; background: #dbeafe; box-shadow: 0 0 0 2px #93c5fd; opacity: 1; }
+.word-bank-blank { min-width: 145px; min-height: 33px; margin: 2px 3px; padding: 2px 9px; border: 1px dashed #2563eb; border-radius: 6px; background: #eff6ff; color: #1d4ed8; font: inherit; font-weight: 600; cursor: pointer; vertical-align: middle; }
+.word-bank-blank.filled { border-style: solid; background: #dbeafe; color: #172554; }
+.word-bank-word:focus-visible, .word-bank-blank:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+.word-bank-passage { overflow-wrap: anywhere; }
+.word-bank-passage b { display: inline-block; margin-top: 5px; }

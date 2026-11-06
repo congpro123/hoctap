@@ -11435,6 +11435,11 @@ const suppliedExams = [
     "note": "Đề số 3 trong tài liệu gốc"
   },
   "description": "Đề số 3 từ REVIEW 1: phát âm, từ vựng và ngữ pháp, hai bài đọc nguyên văn, chọn dạng động từ và viết lại câu.",
+  "wordBank": {
+    "start": 19,
+    "words": ["heritage", "occasions", "instrument", "regiments", "parade"],
+    "answers": ["instrument", "occasions", "regiments", "parade", "heritage"]
+  },
   "questions": [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
@@ -11646,7 +11651,7 @@ const suppliedExams = [
       "'eliminated' (bị loại) trái nghĩa với 'passed' (vượt qua, lọt vào vòng trong)."
     ],
     [
-      "<b>READING - CLOZE TEXT: BAGPIPES</b><br>Choose the word or phrase among A, B, C or D that best fits each blank in the following passage.<br><br><b>Bagpipes</b><br>Bagpipes are a woodwind (26) _____ that is played in Scotland during cultural festivals and celebrations. It is considered Scotland's national instrument. However, it is believed to have originally come from the Middle East.<br><br>It uses reeds and a bag to create its sound. The sound is produced by blowing into a blowpipe to make a sound from the three drones that come out of the top of the bag.<br><br>There are over thirty different types of bagpipes, but the one used in Scotland is the Highland Pipes. They are part of Scottish life, and they are used on special (27) _____. All Scottish Army (28) _____ have a piper to play the bagpipes when they go on (29) _____.<br><br>They are an essential feature in many songs, stories and poems as they represent the cultural (30) _____ of the Scots. One of the most popular songs played on the bagpipes is Scotland the Brave.<br><br><b>Choose the answer for blank (26).</b>",
+      "<b>READING - CLOZE TEXT: BAGPIPES</b><br>Drag each word into the correct blank, or tap a word and then a blank.<br><br><b>Bagpipes</b><br>Bagpipes are a woodwind (26) _____ that is played in Scotland during cultural festivals and celebrations. It is considered Scotland's national instrument. However, it is believed to have originally come from the Middle East.<br><br>It uses reeds and a bag to create its sound. The sound is produced by blowing into a blowpipe to make a sound from the three drones that come out of the top of the bag.<br><br>There are over thirty different types of bagpipes, but the one used in Scotland is the Highland Pipes. They are part of Scottish life, and they are used on special (27) _____. All Scottish Army (28) _____ have a piper to play the bagpipes when they go on (29) _____.<br><br>They are an essential feature in many songs, stories and poems as they represent the cultural (30) _____ of the Scots. One of the most popular songs played on the bagpipes is Scotland the Brave.",
       [
         "A. heritage",
         "B. occasions",

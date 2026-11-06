@@ -2,7 +2,7 @@
 const pointText=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
 function scoreExam(e,a={},legacy=false){
   const mcUnit = (e && typeof e.mcUnit === 'number') ? e.mcUnit : 0.25;
-  const mcCorrect=e.questions.reduce((n,q,i)=>n+(a['m'+i]===q[2]||a[i]===q[2]?1:0),0);
+  const mcCorrect=e.questions.reduce((n,q,i)=>n+(mcAnswerMatches(e,i,a['m'+i],q)||a[i]===q[2]?1:0),0);
   const mc=Math.round(mcCorrect*mcUnit*100)/100;
   let tfCorrect=0,tf=0,shortCorrectCount=0,short=0;
   const shortUnit = (e && typeof e.shortUnit === 'number') ? e.shortUnit : ((e && e.subject === 'chemistry') ? 0.25 : 0.5);
