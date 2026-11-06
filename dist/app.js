@@ -122,6 +122,7 @@ if (rawData.length > 0) {
 const app = document.getElementById('app');
 let currentView = 'home', activeExam = null, answers = {}, deadline = 0, ticker = null;
 let selectedBankWord = null;
+let isSubmittingExam = false;
 
 function wordBankFor(e, index) {
   const bank = e && e.wordBank;
@@ -577,6 +578,109 @@ function renderOriginalPdfExam(e) {
   window.scrollTo(0, 0);
 }
 
+function essayMode(index) {
+  return answers['tlMode' + index] === 'draft' ? 'draft' : 'ai';
+}
+
+function essayPointValue(question, exam) {
+  if (typeof question?.points === 'number') return question.points;
+  const match = String(question?.title || '').match(/\((\d+(?:[.,]\d+)?)\s*điểm/i);
+  if (match) return Number(match[1].replace(',', '.'));
+  const total = typeof exam?.essayPoints === 'number' ? exam.essayPoints : 3;
+  return Array.isArray(exam?.essay) && exam.essay.length ? total / exam.essay.length : 0;
+}
+
+function essayGradeResultHtml(index, store = answers) {
+  const grade = store['tlGrade' + index];
+  const error = store['tlGradeError' + index];
+  if (error) return `<div class="essay-ai-result is-error"><b>Không thể chấm lúc này</b><span>${esc(error)}</span></div>`;
+  if (!grade) return '<div class="essay-ai-empty">AI sẽ đối chiếu bài làm với barem và chấp nhận cách giải tương đương.</div>';
+  const labels = {
+    correct: ['Đúng', 'is-correct'],
+    partly_correct: ['Thiếu ý', 'is-partly'],
+    incorrect: ['Sai', 'is-incorrect']
+  };
+  const meta = labels[grade.verdict] || labels.incorrect;
+  const strengths = Array.isArray(grade.strengths) && grade.strengths.length
+    ? `<div><b>Điểm tốt:</b> ${grade.strengths.map(esc).join(' · ')}</div>` : '';
+  const improvements = Array.isArray(grade.improvements) && grade.improvements.length
+    ? `<div><b>Cần bổ sung:</b> ${grade.improvements.map(esc).join(' · ')}</div>` : '';
+  const tokenNote = grade.usage?.totalTokens ? ` · ${Number(grade.usage.totalTokens).toLocaleString('vi-VN')} token` : '';
+  return `<div class="essay-ai-result ${meta[1]}">
+    <div class="essay-ai-result-head"><span>${meta[0]}</span><strong>${grade.scorePercent}%</strong></div>
+    <p>${esc(grade.summary || '')}</p>
+    ${strengths}${improvements}
+    <small>Gemini ${esc(grade.model || '')}${grade.cached ? ' · dùng kết quả đã lưu' : tokenNote}</small>
+  </div>`;
+}
+
+function updateEssayModeUI(index) {
+  const mode = essayMode(index);
+  const card = document.getElementById('essay-' + index);
+  if (!card) return;
+  card.querySelectorAll('.essay-mode-option').forEach(option => {
+    option.classList.toggle('selected', option.dataset.mode === mode);
+  });
+  const aiArea = card.querySelector('[data-essay-ai-area]');
+  const draftArea = card.querySelector('[data-essay-draft-area]');
+  if (aiArea) aiArea.hidden = mode !== 'ai';
+  if (draftArea) draftArea.hidden = mode !== 'draft';
+}
+
+function updateEssayGradePanel(index, state = '') {
+  const panel = document.getElementById('essay-grade-result-' + index);
+  const button = document.querySelector(`[data-grade-essay="${index}"]`);
+  if (button) {
+    button.disabled = state === 'loading';
+    button.textContent = state === 'loading' ? 'AI đang chấm…' : (answers['tlGrade' + index] ? 'Chấm lại bằng AI' : 'Chấm câu này bằng AI');
+  }
+  if (!panel) return;
+  panel.innerHTML = state === 'loading'
+    ? '<div class="essay-ai-loading"><span></span>Gemini đang đối chiếu bài làm với barem…</div>'
+    : essayGradeResultHtml(index);
+}
+
+async function gradeEssay(index, options = {}) {
+  if (!activeExam || essayMode(index) !== 'ai') return null;
+  const question = (activeExam.essay || [])[index];
+  const studentAnswer = String(answers['tl' + index] || '').trim();
+  if (!question || !studentAnswer) {
+    answers['tlGradeError' + index] = 'Hãy nhập bài làm trước khi chấm.';
+    updateEssayGradePanel(index);
+    if (!options.silent) document.querySelector(`[data-kind="tl"][data-index="${index}"]`)?.focus();
+    return null;
+  }
+  const previous = answers['tlGrade' + index];
+  if (previous && previous.answerSnapshot === studentAnswer) return previous;
+  if (!window.AIGrading || typeof window.AIGrading.gradeEssay !== 'function') {
+    answers['tlGradeError' + index] = 'Dịch vụ chấm AI chưa sẵn sàng.';
+    updateEssayGradePanel(index);
+    return null;
+  }
+  delete answers['tlGradeError' + index];
+  updateEssayGradePanel(index, 'loading');
+  try {
+    const result = await window.AIGrading.gradeEssay({
+      subject: getSubjectMeta(activeExam.subject).name,
+      examTitle: activeExam.title,
+      question: question.question,
+      referenceAnswer: question.solution || 'Đối chiếu theo kiến thức Lớp 10.',
+      studentAnswer
+    });
+    answers['tlGrade' + index] = { ...result, answerSnapshot: studentAnswer };
+    delete answers['tlGradeError' + index];
+    persistDraft();
+    updateEssayGradePanel(index);
+    updateProgress();
+    return answers['tlGrade' + index];
+  } catch (error) {
+    answers['tlGradeError' + index] = error?.message || 'Không thể chấm bài lúc này.';
+    persistDraft();
+    updateEssayGradePanel(index);
+    return null;
+  }
+}
+
 function renderExam() {
   const e = activeExam;
   const sm = getSubjectMeta(e.subject);
@@ -650,19 +754,37 @@ function renderExam() {
 
         ${(e.essay && e.essay.length > 0) ? `
         <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu${e.subject === 'english' ? '' : ' · 3,0 điểm'})</h2>
-        <div class="essay-guide-banner" style="background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0 16px;font-size:13.5px;color:#1e3a8a;line-height:1.55;">
-          📝 <b>Lưu ý phần tự luận:</b> Bạn có thể làm bài ra giấy nháp. Nếu <b>không muốn gõ lại bài làm lên máy, bạn có thể bỏ qua các ô bên dưới</b> và bấm <b>"Nộp bài thi"</b> bất cứ lúc nào. Khi nộp bài, hệ thống sẽ mở <b>lời giải và đáp án</b> để bạn tự đối chiếu.
+        <div class="essay-guide-banner">
+          <b>Chọn cách làm riêng cho từng câu:</b> nhập bài trên web để Gemini chấm theo barem, hoặc chọn “Làm trên nháp” để câu đó không gửi tới AI và không tính điểm tự luận tự động.
         </div>
         ${e.essay.map((q, i) => `<div class="question" id="essay-${i}">
-          <div class="q-title" style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div class="q-title essay-question-title">
             <div>
               <span class="q-number">${e.subject === 'english' ? `Câu ${i + 1}.` : esc(q.title || `Câu ${i + 1}.`)}</span>
               <span>${q.question}</span>
             </div>
-            <span style="font-size:11px;font-weight:600;color:#64748b;background:#f1f5f9;padding:3px 8px;border-radius:6px;align-self:flex-start;">Tùy chọn ghi chú</span>
+            <span class="essay-point-pill">${typeof pointText === 'function' ? pointText(essayPointValue(q, e)) : essayPointValue(q, e)} điểm</span>
           </div>
-          <div class="essay-field" style="margin-top:10px;">
-            <textarea class="essay-input" data-kind="tl" data-index="${i}" rows="3" placeholder="Tùy chọn: Nhập nhanh lời giải hoặc ghi chú (hoặc bỏ trống nếu bạn đã làm ra nháp)..." style="width:100%;box-sizing:border-box;padding:10px 14px;border:1.5px solid #cbd5e1;border-radius:8px;font-family:inherit;font-size:14px;line-height:1.5;resize:vertical;background:#fafafa;">${esc(answers['tl' + i] ?? '')}</textarea>
+          <div class="essay-mode-picker" role="radiogroup" aria-label="Cách làm câu tự luận ${i + 1}">
+            <label class="essay-mode-option ${essayMode(i) === 'ai' ? 'selected' : ''}" data-mode="ai">
+              <input type="radio" name="tlmode${i}" value="ai" data-kind="tlmode" data-index="${i}" ${essayMode(i) === 'ai' ? 'checked' : ''}>
+              <span><b>Nhập đáp án và để AI chấm</b><small>Gemini đối chiếu barem, nhận xét đúng hoặc cần bổ sung.</small></span>
+            </label>
+            <label class="essay-mode-option ${essayMode(i) === 'draft' ? 'selected' : ''}" data-mode="draft">
+              <input type="radio" name="tlmode${i}" value="draft" data-kind="tlmode" data-index="${i}" ${essayMode(i) === 'draft' ? 'checked' : ''}>
+              <span><b>Làm trên nháp — không chấm AI</b><small>Không gửi nội dung và không tính điểm tự luận tự động.</small></span>
+            </label>
+          </div>
+          <div class="essay-field" data-essay-ai-area ${essayMode(i) === 'ai' ? '' : 'hidden'}>
+            <textarea class="essay-input" data-kind="tl" data-index="${i}" rows="6" placeholder="Trình bày lời giải của bạn tại đây…">${esc(answers['tl' + i] ?? '')}</textarea>
+            <div class="essay-ai-actions">
+              <button type="button" class="essay-grade-btn" data-grade-essay="${i}">${answers['tlGrade' + i] ? 'Chấm lại bằng AI' : 'Chấm câu này bằng AI'}</button>
+              <span>Chỉ gửi câu này, bài làm và barem để tiết kiệm token.</span>
+            </div>
+            <div id="essay-grade-result-${i}">${essayGradeResultHtml(i)}</div>
+          </div>
+          <div class="essay-draft-note" data-essay-draft-area ${essayMode(i) === 'draft' ? '' : 'hidden'}>
+            <b>Đã chọn làm trên nháp.</b> Câu này sẽ không được gửi tới Gemini. Sau khi nộp bài, bạn vẫn xem được lời giải chuẩn để tự đối chiếu.
           </div>
         </div>`).join('')}
         ` : ''}
@@ -709,20 +831,22 @@ function updateProgress() {
     });
   });
   const shortCount = (activeExam.short || []).filter((_, i) => answers['s' + i] !== undefined && String(answers['s' + i]).trim() !== '').length;
-  const essayCount = (activeExam.essay || []).filter((_, i) => answers['tl' + i] !== undefined && String(answers['tl' + i]).trim() !== '').length;
+  const essayCount = (activeExam.essay || []).filter((_, i) => essayMode(i) === 'draft' || (answers['tl' + i] !== undefined && String(answers['tl' + i]).trim() !== '')).length;
   const n = mcCount + tfCount + shortCount;
   const total = totalItems(activeExam);
+  const overallDone = n + essayCount;
+  const overallTotal = total + (activeExam.essay || []).length;
   const progText = document.getElementById('progress-text');
   const progFill = document.getElementById('progress-fill');
   if (progText) {
-    progText.textContent = `${total ? `${n}/${total} ý đã làm` : `${essayCount}/${(activeExam.essay || []).length} câu tự luận có ghi chú`}${total && essayCount > 0 ? ` · ${essayCount} câu TL có ghi chú` : ''}`;
+    progText.textContent = `${total ? `${n}/${total} ý khách quan` : ''}${(activeExam.essay || []).length ? `${total ? ' · ' : ''}${essayCount}/${(activeExam.essay || []).length} câu tự luận đã chọn` : ''}`;
   }
-  if (progFill) progFill.style.width = `${total > 0 ? (100 * n / total) : 0}%`;
+  if (progFill) progFill.style.width = `${overallTotal > 0 ? (100 * overallDone / overallTotal) : 0}%`;
   document.querySelectorAll('.q-jump[data-jump]').forEach((x, i) => {
     x.classList.toggle('done', answers['m' + i] !== undefined);
   });
   document.querySelectorAll('.essay-jump').forEach((x, i) => {
-    x.classList.toggle('done', answers['tl' + i] !== undefined && String(answers['tl' + i]).trim() !== '');
+    x.classList.toggle('done', essayMode(i) === 'draft' || (answers['tl' + i] !== undefined && String(answers['tl' + i]).trim() !== ''));
   });
 }
 
@@ -965,6 +1089,7 @@ function renderResult(r) {
         <h3>Phần IV · Tự luận (${e.essay.length} câu)</h3>
         ${e.essay.map((q, i) => {
           const userWork = r.answers['tl' + i];
+          const mode = r.answers['tlMode' + i] === 'draft' ? 'draft' : 'ai';
           return `<div class="review-item">
             <div class="review-item-header">
               <span class="review-part-tag" style="background:#fef3c7;color:#92400e;">Phần IV · Tự luận</span>
@@ -972,9 +1097,10 @@ function renderResult(r) {
             </div>
             <div class="review-q-text"><b>${esc(q.title || `Câu ${i + 1}.`)}</b> ${q.question}</div>
             <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
-              <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của bạn:</div>
-              <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">(Bỏ qua ô nhập / làm ra giấy nháp — đối chiếu lời giải chi tiết và barem điểm chấm bên dưới)</span>'}</div>
+              <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">${mode === 'draft' ? '✎ Làm trên nháp — không chấm AI' : '📝 Bài làm đã nhập trên web:'}</div>
+              <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${mode === 'draft' ? '<span style="color:#64748b;font-style:italic;">Không gửi bài làm tới Gemini; tự đối chiếu lời giải bên dưới.</span>' : (userWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">Chưa nhập bài làm.</span>')}</div>
             </div>
+            ${mode === 'ai' ? essayGradeResultHtml(i, r.answers) : ''}
             <div class="solution-box theme-study">
               <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM:</div>
               <div class="solution-body">${q.solution || 'Áp dụng định lý và kiến thức SGK để trình bày lời giải.'}</div>
@@ -1087,6 +1213,12 @@ document.addEventListener('click', e => {
     return;
   }
 
+  const essayGradeButton = e.target.closest('[data-grade-essay]');
+  if (essayGradeButton) {
+    gradeEssay(Number(essayGradeButton.dataset.gradeEssay));
+    return;
+  }
+
   const b = e.target.closest('[data-start],[data-viewto],[data-subjectto],[data-submit],[data-jump],[data-jump-essay],[data-exam-pause],[data-exam-resume],[data-exam-stop],[data-exam-stop-confirm],[data-exam-stop-submit],[data-exam-stop-cancel]');
   if (!b) return;
   if (b.dataset.start) startExam(b.dataset.start);
@@ -1153,7 +1285,21 @@ function handleExamInput(e) {
   if (t.dataset.kind === 'm') answers['m' + t.dataset.index] = Number(t.value);
   else if (t.dataset.kind === 't') answers['t' + t.dataset.index] = t.value === 'true';
   else if (t.dataset.kind === 's') answers['s' + t.dataset.index] = t.value;
-  else if (t.dataset.kind === 'tl') answers['tl' + t.dataset.index] = t.value;
+  else if (t.dataset.kind === 'tl') {
+    answers['tl' + t.dataset.index] = t.value;
+    const grade = answers['tlGrade' + t.dataset.index];
+    if (grade && grade.answerSnapshot !== String(t.value).trim()) delete answers['tlGrade' + t.dataset.index];
+    delete answers['tlGradeError' + t.dataset.index];
+    updateEssayGradePanel(Number(t.dataset.index));
+  }
+  else if (t.dataset.kind === 'tlmode') {
+    answers['tlMode' + t.dataset.index] = t.value === 'draft' ? 'draft' : 'ai';
+    if (t.value === 'draft') {
+      delete answers['tlGrade' + t.dataset.index];
+      delete answers['tlGradeError' + t.dataset.index];
+    }
+    updateEssayModeUI(Number(t.dataset.index));
+  }
   persistDraft();
   updateProgress();
 }

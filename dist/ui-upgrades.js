@@ -191,6 +191,7 @@ function reviewPast(index){
     e.essay.forEach((essay, i) => {
       const userWork = a['tl' + i];
       const hasWork = userWork !== undefined && String(userWork).trim() !== '';
+      const mode = a['tlMode' + i] === 'draft' ? 'draft' : 'ai';
       essayCards.push(`
         <div class="review-item" id="review-essay-${i}">
           <div class="review-item-header">
@@ -199,9 +200,10 @@ function reviewPast(index){
           </div>
           <div class="review-q-text"><b>${esc(essay.title || `Câu ${i + 1}.`)}</b> ${essay.question}</div>
           <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
-            <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của bạn:</div>
-            <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${hasWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">(Bỏ qua ô nhập / làm ra giấy nháp — đối chiếu lời giải chi tiết và barem điểm chấm bên dưới)</span>'}</div>
+            <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">${mode === 'draft' ? '✎ Làm trên nháp — không chấm AI' : '📝 Bài làm đã nhập trên web:'}</div>
+            <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${mode === 'draft' ? '<span style="color:#64748b;font-style:italic;">Không gửi bài làm tới Gemini; tự đối chiếu lời giải bên dưới.</span>' : (hasWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">Chưa nhập bài làm.</span>')}</div>
           </div>
+          ${mode === 'ai' && typeof essayGradeResultHtml === 'function' ? essayGradeResultHtml(i, a) : ''}
           <div class="solution-box theme-study">
             <div class="solution-header">${e.subject === 'english' ? '💡 LỜI GIẢI VÀ ĐÁP ÁN:' : '💡 HƯỚNG DẪN GIẢI CHI TIẾT & BAREM ĐIỂM CHẤM:'}</div>
             <div class="solution-body">${essay.solution || 'Áp dụng định lý và kiến thức SGK để trình bày lời giải.'}</div>
@@ -216,7 +218,7 @@ function reviewPast(index){
       <div class="section-head" style="margin-bottom:16px;">
         <div>
           <h2>Phần IV · Tự luận (${essayCards.length} câu)</h2>
-          <p>${e.subject === 'english' ? 'Xem lại bài làm / ghi chú bạn đã lưu cùng lời giải và đáp án.' : 'Xem lại bài làm / ghi chú bạn đã lưu cùng barem điểm chấm và hướng dẫn giải chi tiết.'}</p>
+          <p>Xem nhận xét của Gemini cho các câu đã chọn AI, hoặc tự đối chiếu barem với những câu làm trên nháp.</p>
         </div>
       </div>
       <div class="review-essay-list">${essayCards.join('')}</div>

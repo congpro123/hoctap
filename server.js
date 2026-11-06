@@ -129,7 +129,7 @@ function buildPrompt(data) {
     `Barem/lời giải tham khảo: ${data.referenceAnswer}`,
     `Bài làm của học sinh: ${data.studentAnswer}`,
     '',
-    'Hãy đối chiếu nội dung và lập luận. Chấp nhận cách giải khác nếu đúng. Không trừ điểm chỉ vì diễn đạt khác barem. Nếu bài làm chỉ nêu đáp số, hãy xét xem câu hỏi có yêu cầu trình bày hay không. Phản hồi thật ngắn gọn bằng tiếng Việt.'
+    'Hãy đối chiếu nội dung và lập luận. Chấp nhận cách giải khác nếu đúng. Không trừ điểm chỉ vì diễn đạt khác barem. Nếu bài làm chỉ nêu đáp số, hãy xét xem câu hỏi có yêu cầu trình bày hay không. Chỉ dùng verdict "correct" khi bài làm hoàn toàn đúng, đầy đủ mọi yêu cầu và đạt 100% điểm. Dùng "partly_correct" khi hướng làm đúng nhưng còn thiếu ý, thiếu bước hoặc chưa hoàn tất. Dùng "incorrect" khi cách làm/kết luận sai hoặc không giải đáp được câu hỏi. Phản hồi thật ngắn gọn bằng tiếng Việt.'
   ].join('\n');
 }
 
@@ -140,7 +140,7 @@ const gradeSchema = {
     verdict: {
       type: 'string',
       enum: ['correct', 'partly_correct', 'incorrect'],
-      description: 'Mức độ đúng của bài làm.'
+      description: 'correct chỉ khi hoàn hảo và đủ 100%; partly_correct khi đúng hướng nhưng thiếu; incorrect khi sai.'
     },
     answersQuestion: {
       type: 'boolean',
@@ -174,10 +174,14 @@ const gradeSchema = {
 
 function normalizeGrade(value) {
   const allowed = new Set(['correct', 'partly_correct', 'incorrect']);
+  const scorePercent = Math.max(0, Math.min(100, Math.round(Number(value.scorePercent) || 0)));
+  let verdict = allowed.has(value.verdict) ? value.verdict : 'incorrect';
+  if (verdict === 'correct' && scorePercent < 100) verdict = 'partly_correct';
+  if (verdict === 'partly_correct' && scorePercent === 100) verdict = 'correct';
   return {
-    verdict: allowed.has(value.verdict) ? value.verdict : 'incorrect',
+    verdict,
     answersQuestion: Boolean(value.answersQuestion),
-    scorePercent: Math.max(0, Math.min(100, Math.round(Number(value.scorePercent) || 0))),
+    scorePercent,
     summary: cleanText(value.summary, 500) || 'Chưa có nhận xét.',
     strengths: Array.isArray(value.strengths) ? value.strengths.slice(0, 2).map(item => cleanText(item, 220)).filter(Boolean) : [],
     improvements: Array.isArray(value.improvements) ? value.improvements.slice(0, 2).map(item => cleanText(item, 220)).filter(Boolean) : []

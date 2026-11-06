@@ -1834,3 +1834,44 @@
 .original-pdf-page{margin:0;background:#fff;border:1px solid #dbe1e9;border-radius:8px;box-shadow:0 4px 18px rgba(15,23,42,.08);overflow:hidden}
 .original-pdf-page img{display:block;width:100%;height:auto}
 .original-pdf-page figcaption{text-align:center;padding:8px;color:#64748b;font-size:13px;border-top:1px solid #e2e8f0}
+
+/* Chấm tự luận bằng Gemini */
+.essay-guide-banner{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:10px;padding:13px 16px;margin:12px 0 18px;font-size:13.5px;color:#1e3a8a;line-height:1.6}
+.essay-question-title{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.essay-point-pill{font-size:11px;font-weight:700;color:#475569;background:#f1f5f9;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.essay-mode-picker{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.essay-mode-option{display:flex;align-items:flex-start;gap:10px;border:1.5px solid #dbe3ee;border-radius:11px;padding:13px;background:#fff;cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s}
+.essay-mode-option:hover{border-color:#93c5fd}
+.essay-mode-option.selected{border-color:#3b82f6;background:#eff6ff;box-shadow:0 0 0 2px rgba(59,130,246,.08)}
+.essay-mode-option input{accent-color:#2563eb;margin-top:3px}
+.essay-mode-option span{display:grid;gap:3px;color:#1e293b;font-size:13px;line-height:1.45}
+.essay-mode-option small{font-weight:400;color:#64748b;font-size:11.5px}
+.essay-field{margin-top:10px}
+.essay-field[hidden],.essay-draft-note[hidden]{display:none!important}
+.essay-input{width:100%;box-sizing:border-box;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:9px;font-family:inherit;font-size:14px;line-height:1.55;resize:vertical;background:#fff;min-height:130px}
+.essay-input:focus{outline:0;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.essay-ai-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:10px 0}
+.essay-ai-actions span{font-size:11.5px;color:#64748b}
+.essay-grade-btn{border:0;border-radius:8px;padding:10px 14px;background:#2563eb;color:#fff;font-weight:700;font-size:12px;cursor:pointer}
+.essay-grade-btn:hover{background:#1d4ed8}
+.essay-grade-btn:disabled{background:#94a3b8;cursor:wait}
+.essay-ai-empty{border:1px dashed #cbd5e1;background:#f8fafc;border-radius:9px;padding:11px 13px;color:#64748b;font-size:12px;line-height:1.5}
+.essay-ai-loading{display:flex;align-items:center;gap:9px;border:1px solid #bfdbfe;background:#eff6ff;border-radius:9px;padding:12px 13px;color:#1d4ed8;font-size:12px;font-weight:600}
+.essay-ai-loading span,.ai-submit-notice>span{width:16px;height:16px;border:2px solid #bfdbfe;border-top-color:#2563eb;border-radius:50%;animation:essay-ai-spin .8s linear infinite;flex:0 0 auto}
+@keyframes essay-ai-spin{to{transform:rotate(360deg)}}
+.essay-ai-result{border:1px solid #dbe3ee;border-left:4px solid #64748b;border-radius:10px;padding:13px 14px;margin-top:10px;background:#f8fafc;color:#334155;font-size:12.5px;line-height:1.55}
+.essay-ai-result.is-correct{border-color:#86efac;border-left-color:#16a34a;background:#f0fdf4}
+.essay-ai-result.is-partly{border-color:#fde68a;border-left-color:#d97706;background:#fffbeb}
+.essay-ai-result.is-incorrect,.essay-ai-result.is-error{border-color:#fecaca;border-left-color:#dc2626;background:#fef2f2}
+.essay-ai-result-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px;font-size:13px;font-weight:800}
+.essay-ai-result-head strong{font-size:16px}
+.essay-ai-result p{margin:0 0 6px;color:inherit}
+.essay-ai-result>div:not(.essay-ai-result-head){margin-top:4px}
+.essay-ai-result small{display:block;margin-top:7px;color:#64748b}
+.essay-ai-result.is-error{display:grid;gap:3px}
+.essay-draft-note{border:1px solid #cbd5e1;border-left:4px solid #64748b;background:#f8fafc;border-radius:9px;padding:13px 14px;color:#475569;font-size:12.5px;line-height:1.55}
+.ai-submit-notice{position:fixed;z-index:10000;left:50%;bottom:24px;transform:translateX(-50%);display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center;min-width:min(430px,calc(100vw - 32px));box-sizing:border-box;padding:14px 18px;border-radius:12px;background:#0f172a;color:#fff;box-shadow:0 16px 45px rgba(15,23,42,.3)}
+.ai-submit-notice>span{grid-row:1/3}
+.ai-submit-notice b{font-size:13px}
+.ai-submit-notice small{color:#cbd5e1;font-size:11px}
+@media(max-width:700px){.essay-mode-picker{grid-template-columns:1fr}.essay-ai-actions{align-items:flex-start;flex-direction:column}.essay-grade-btn{width:100%}}
