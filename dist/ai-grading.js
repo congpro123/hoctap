@@ -1,14 +1,14 @@
 (function () {
   'use strict';
 
-  const API_URL = 'https://hoctap-ai-grading.onrender.com/api/grade';
-  const REQUEST_TIMEOUT_MS = 35000;
+  const API_BASE = 'https://hoctap-ai-grading.onrender.com/api';
+  const REQUEST_TIMEOUT_MS = 60000;
 
-  async function gradeEssay(payload) {
+  async function request(path, payload) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(`${API_BASE}/${path}`, {
         method: 'POST',
         signal: controller.signal,
         headers: { 'Content-Type': 'application/json' },
@@ -22,7 +22,7 @@
       }
       return data;
     } catch (error) {
-      if (error.name === 'AbortError') throw new Error('AI phản hồi quá lâu. Bạn hãy thử chấm lại.');
+      if (error.name === 'AbortError') throw new Error('AI phản hồi quá lâu. Bạn hãy thử nộp bài lại.');
       if (error instanceof TypeError) throw new Error('Không kết nối được dịch vụ chấm AI. Vui lòng thử lại sau.');
       throw error;
     } finally {
@@ -30,5 +30,8 @@
     }
   }
 
-  window.AIGrading = Object.freeze({ gradeEssay });
+  const gradeEssay = payload => request('grade', payload);
+  const gradeEssays = payload => request('grade-batch', payload);
+
+  window.AIGrading = Object.freeze({ gradeEssay, gradeEssays });
 })();

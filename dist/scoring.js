@@ -37,9 +37,10 @@ submitExam=async function(reason){
   if(pending.length){
     gradingNotice=document.createElement('div');
     gradingNotice.className='ai-submit-notice';
-    gradingNotice.innerHTML=`<span></span><b>Gemini đang chấm ${pending.length} câu tự luận…</b><small>Vui lòng giữ trang này mở.</small>`;
+    gradingNotice.innerHTML=`<span></span><b>Gemini đang chấm tổng hợp ${pending.length} câu tự luận…</b><small>Chỉ gửi một lượt khi nộp bài. Vui lòng giữ trang này mở.</small>`;
     document.body.appendChild(gradingNotice);
-    await Promise.allSettled(pending.map(i=>gradeEssay(i,{silent:true})));
+    if(typeof gradeEssays==='function')await gradeEssays(pending);
+    else await Promise.allSettled(pending.map(i=>gradeEssay(i,{silent:true})));
     gradingNotice.remove();
   }
   const score=scoreExam(e,answers);

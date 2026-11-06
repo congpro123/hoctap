@@ -1852,6 +1852,7 @@
 .essay-field[hidden],.essay-draft-note[hidden]{display:none!important}
 .essay-input{width:100%;box-sizing:border-box;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:9px;font-family:inherit;font-size:14px;line-height:1.55;resize:vertical;background:#fff;min-height:130px}
 .essay-input:focus{outline:0;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.essay-submit-hint{margin-top:8px;color:#64748b;font-size:11.5px;line-height:1.45}
 .essay-ai-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:10px 0}
 .essay-ai-actions span{font-size:11.5px;color:#64748b}
 .essay-grade-btn{border:0;border-radius:8px;padding:10px 14px;background:#2563eb;color:#fff;font-weight:700;font-size:12px;cursor:pointer}

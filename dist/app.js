@@ -681,6 +681,52 @@ async function gradeEssay(index, options = {}) {
   }
 }
 
+async function gradeEssays(indices) {
+  if (!activeExam || !Array.isArray(indices) || !indices.length) return [];
+  const items = indices.map(index => {
+    const question = (activeExam.essay || [])[index];
+    const studentAnswer = String(answers['tl' + index] || '').trim();
+    if (!question || essayMode(index) !== 'ai' || !studentAnswer) return null;
+    return {
+      id: String(index),
+      question: question.question,
+      referenceAnswer: question.solution || 'Đối chiếu theo kiến thức Lớp 10.',
+      studentAnswer
+    };
+  }).filter(Boolean);
+  if (!items.length) return [];
+  if (!window.AIGrading || typeof window.AIGrading.gradeEssays !== 'function') {
+    return Promise.allSettled(indices.map(index => gradeEssay(index, { silent: true })));
+  }
+  items.forEach(item => delete answers['tlGradeError' + item.id]);
+  try {
+    const response = await window.AIGrading.gradeEssays({
+      subject: getSubjectMeta(activeExam.subject).name,
+      examTitle: activeExam.title,
+      items
+    });
+    const byId = new Map((response.grades || []).map(grade => [String(grade.id), grade]));
+    items.forEach(item => {
+      const grade = byId.get(item.id);
+      if (!grade) {
+        answers['tlGradeError' + item.id] = 'Gemini chưa trả kết quả cho câu này.';
+        return;
+      }
+      const { id, ...gradeData } = grade;
+      answers['tlGrade' + item.id] = { ...gradeData, answerSnapshot: item.studentAnswer };
+      delete answers['tlGradeError' + item.id];
+    });
+    persistDraft();
+    updateProgress();
+    return response.grades || [];
+  } catch (error) {
+    const message = error?.message || 'Không thể chấm bài lúc này.';
+    items.forEach(item => { answers['tlGradeError' + item.id] = message; });
+    persistDraft();
+    return [];
+  }
+}
+
 function renderExam() {
   const e = activeExam;
   const sm = getSubjectMeta(e.subject);
@@ -781,11 +827,7 @@ function renderExam() {
           </div>
           <div class="essay-field" data-essay-ai-area ${essayMode(i) === 'ai' ? '' : 'hidden'}>
             <textarea class="essay-input" data-kind="tl" data-index="${i}" rows="6" placeholder="Trình bày lời giải của bạn tại đây…">${esc(answers['tl' + i] ?? '')}</textarea>
-            <div class="essay-ai-actions">
-              <button type="button" class="essay-grade-btn" data-grade-essay="${i}">${answers['tlGrade' + i] ? 'Chấm lại bằng AI' : 'Chấm câu này bằng AI'}</button>
-              <span>Chỉ gửi câu này, bài làm và barem để tiết kiệm token.</span>
-            </div>
-            <div id="essay-grade-result-${i}">${essayGradeResultHtml(i)}</div>
+            <div class="essay-submit-hint">Gemini sẽ chấm câu này cùng các câu C1 khác khi bạn bấm <b>Nộp bài</b>.</div>
           </div>
           <div class="essay-draft-note" data-essay-draft-area ${essayMode(i) === 'draft' ? '' : 'hidden'}>
             <b>Đã chọn làm trên nháp.</b> Câu này sẽ không được gửi tới Gemini. Sau khi nộp bài, bạn vẫn xem được lời giải chuẩn để tự đối chiếu.
@@ -1214,12 +1256,6 @@ document.addEventListener('click', e => {
       tick();
       persistDraft();
     }
-    return;
-  }
-
-  const essayGradeButton = e.target.closest('[data-grade-essay]');
-  if (essayGradeButton) {
-    gradeEssay(Number(essayGradeButton.dataset.gradeEssay));
     return;
   }
 
