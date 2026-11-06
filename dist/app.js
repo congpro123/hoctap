@@ -656,7 +656,7 @@ function renderExam() {
         ${e.essay.map((q, i) => `<div class="question" id="essay-${i}">
           <div class="q-title" style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;">
             <div>
-              <span class="q-number">${esc(q.title || `Câu ${i + 1}.`)}</span>
+              <span class="q-number">${e.subject === 'english' ? `Câu ${i + 1}.` : esc(q.title || `Câu ${i + 1}.`)}</span>
               <span>${q.question}</span>
             </div>
             <span style="font-size:11px;font-weight:600;color:#64748b;background:#f1f5f9;padding:3px 8px;border-radius:6px;align-self:flex-start;">Tùy chọn ghi chú</span>
