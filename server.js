@@ -196,28 +196,20 @@ const batchGradeSchema = {
   properties: {
     results: {
       type: 'array',
-      minItems: 1,
-      maxItems: 30,
       items: {
         type: 'object',
         additionalProperties: false,
         properties: {
           id: { type: 'string' },
-          ...gradeSchema.properties,
-          strengths: {
-            type: 'array',
-            maxItems: 1,
-            items: { type: 'string' },
-            description: 'Tối đa một điểm làm tốt, để trống nếu không có.'
+          verdict: {
+            type: 'string',
+            enum: ['correct', 'partly_correct', 'incorrect']
           },
-          improvements: {
-            type: 'array',
-            maxItems: 1,
-            items: { type: 'string' },
-            description: 'Tối đa một điểm cần sửa hoặc bổ sung, để trống nếu không có.'
-          }
+          scorePercent: { type: 'integer', minimum: 0, maximum: 100 },
+          summary: { type: 'string', description: 'Nhận xét đúng một câu ngắn.' },
+          improvement: { type: 'string', description: 'Ý cần sửa ngắn gọn; để chuỗi rỗng nếu hoàn toàn đúng.' }
         },
-        required: ['id', ...gradeSchema.required]
+        required: ['id', 'verdict', 'scorePercent', 'summary', 'improvement']
       }
     }
   },
@@ -336,7 +328,16 @@ async function gradeBatchWithGemini(data) {
     const expectedIds = new Set(data.items.map(item => item.id));
     const grades = (Array.isArray(parsed.results) ? parsed.results : [])
       .filter(item => expectedIds.has(String(item.id)))
-      .map(item => ({ id: String(item.id), ...normalizeGrade(item), model: GEMINI_MODEL }));
+      .map(item => ({
+        id: String(item.id),
+        ...normalizeGrade({
+          ...item,
+          answersQuestion: item.verdict !== 'incorrect',
+          strengths: [],
+          improvements: item.improvement ? [item.improvement] : []
+        }),
+        model: GEMINI_MODEL
+      }));
     if (grades.length !== data.items.length || new Set(grades.map(item => item.id)).size !== data.items.length) {
       throw Object.assign(new Error('Gemini chưa trả đủ kết quả cho tất cả câu tự luận.'), { status: 502 });
     }
