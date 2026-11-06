@@ -65,7 +65,7 @@ submitExam=async function(reason){
     correct:score.correct,
     points:score.points,
     maxPoints:score.max,
-    aiGradingVersion:1,
+    aiGradingVersion:2,
     questionSetVersion:e.id==='toan-10-de-13'?3:2,
     answers:{...answers},
     date:new Date().toISOString(),
@@ -156,10 +156,152 @@ function regradeAllSavedResults(){
     }
   }catch(_){}
 }
+
+const ENGLISH_AI_GRADING_VERSION=2;
+let legacyEnglishRegradePromise=null;
+
+function englishRegradeNotice(total){
+  const notice=document.createElement('div');
+  notice.className='ai-submit-notice';
+  notice.innerHTML=`<span></span><b>Đang chấm lại ${total} câu tự luận tiếng Anh cũ…</b><small>Câu có bài làm được mặc định là C1; ô trống và C2 được bỏ qua.</small>`;
+  document.body.appendChild(notice);
+  return notice;
+}
+
+async function regradeLegacyEnglishResults(){
+  if(legacyEnglishRegradePromise)return legacyEnglishRegradePromise;
+  legacyEnglishRegradePromise=(async()=>{
+    if(typeof window==='undefined'||!window.auth||!window.AIGrading||!Array.isArray(exams))return;
+    await window.auth.syncFromCloudSilently();
+    const all=window.auth.getLocalResults();
+    const groups=new Map();
+    const touched=new Set();
+    let changed=false;
+
+    all.forEach((result,resultIndex)=>{
+      if(!result||!result.answers)return;
+      const exam=exams.find(item=>item.id===result.id);
+      if(!exam||exam.subject!=='english'||!Array.isArray(exam.essay)||!exam.essay.length)return;
+      let needsVersion=Number(result.aiGradingVersion||0)<ENGLISH_AI_GRADING_VERSION;
+      exam.essay.forEach((question,questionIndex)=>{
+        const modeKey='tlMode'+questionIndex;
+        const answerKey='tl'+questionIndex;
+        const gradeKey='tlGrade'+questionIndex;
+        const answer=String(result.answers[answerKey]||'').trim();
+        if(result.answers[modeKey]===undefined){
+          result.answers[modeKey]='ai';
+          needsVersion=true;
+          changed=true;
+        }
+        if(!answer||result.answers[modeKey]==='draft')return;
+        const grade=result.answers[gradeKey];
+        if(!needsVersion&&grade&&grade.answerSnapshot===answer)return;
+        const key=exam.id;
+        if(!groups.has(key))groups.set(key,{exam,items:[]});
+        groups.get(key).items.push({
+          id:`${resultIndex}:${questionIndex}`,
+          question:question.question,
+          referenceAnswer:question.solution||'Đối chiếu theo kiến thức Lớp 10.',
+          studentAnswer:answer,
+          resultIndex,
+          questionIndex
+        });
+        touched.add(resultIndex);
+      });
+      if(needsVersion)touched.add(resultIndex);
+    });
+
+    const total=[...groups.values()].reduce((sum,group)=>sum+group.items.length,0);
+    const notice=total?englishRegradeNotice(total):null;
+    const failedResults=new Set();
+    let completed=0;
+    try{
+      for(const {exam,items} of groups.values()){
+        for(let offset=0;offset<items.length;offset+=30){
+          const chunk=items.slice(offset,offset+30);
+          try{
+            const response=await window.AIGrading.gradeEssays({
+              subject:'Tiếng Anh 10',
+              examTitle:exam.title,
+              items:chunk.map(({id,question,referenceAnswer,studentAnswer})=>({id,question,referenceAnswer,studentAnswer}))
+            });
+            const byId=new Map((response.grades||[]).map(grade=>[String(grade.id),grade]));
+            chunk.forEach(item=>{
+              const grade=byId.get(item.id);
+              const result=all[item.resultIndex];
+              if(!grade||!result){
+                failedResults.add(item.resultIndex);
+                return;
+              }
+              const {id,...gradeData}=grade;
+              result.answers['tlGrade'+item.questionIndex]={...gradeData,answerSnapshot:item.studentAnswer};
+              delete result.answers['tlGradeError'+item.questionIndex];
+              changed=true;
+            });
+          }catch(error){
+            chunk.forEach(item=>{
+              failedResults.add(item.resultIndex);
+              const result=all[item.resultIndex];
+              if(result)result.answers['tlGradeError'+item.questionIndex]=error?.message||'Không thể chấm lại lúc này.';
+            });
+          }
+          completed+=chunk.length;
+          if(notice){
+            const title=notice.querySelector('b');
+            if(title)title.textContent=`Đang chấm lại tự luận tiếng Anh… ${completed}/${total} câu`;
+          }
+        }
+      }
+
+      touched.forEach(resultIndex=>{
+        const result=all[resultIndex];
+        const exam=result&&exams.find(item=>item.id===result.id);
+        if(!result||!exam||failedResults.has(resultIndex))return;
+        result.aiGradingVersion=ENGLISH_AI_GRADING_VERSION;
+        const score=scoreExam(exam,result.answers);
+        result.points=score.points;
+        result.score=score.points;
+        result.correct=score.correct;
+        result.total=score.total;
+        result.maxPoints=score.max;
+        changed=true;
+      });
+
+      if(changed){
+        const synced=await window.auth.replaceAllResults(all);
+        if(!synced)throw new Error('Đã chấm nhưng chưa đồng bộ được dữ liệu lên máy chủ.');
+      }
+      if(notice){
+        const title=notice.querySelector('b');
+        const detail=notice.querySelector('small');
+        if(title)title.textContent=failedResults.size?'Đã chấm lại, còn một số bài sẽ tự thử lại sau':'Đã chấm lại toàn bộ bài tiếng Anh';
+        if(detail)detail.textContent=failedResults.size?`${failedResults.size} bài chưa chấm đủ do lỗi kết nối.`:`${total} câu có nội dung đã được cập nhật và đồng bộ.`;
+        setTimeout(()=>notice.remove(),5000);
+      }
+      if(changed&&typeof window.auth.refreshCurrentView==='function')window.auth.refreshCurrentView();
+    }catch(error){
+      if(notice){
+        const title=notice.querySelector('b');
+        const detail=notice.querySelector('small');
+        if(title)title.textContent='Chưa thể hoàn tất chấm lại';
+        if(detail)detail.textContent=error?.message||'Hệ thống sẽ tự thử lại khi tải trang lần sau.';
+        setTimeout(()=>notice.remove(),7000);
+      }
+      console.warn('Lỗi chấm lại bài tiếng Anh cũ:',error);
+    }
+  })().finally(()=>{legacyEnglishRegradePromise=null});
+  return legacyEnglishRegradePromise;
+}
+
+if(typeof window!=='undefined')window.regradeLegacyEnglishResults=regradeLegacyEnglishResults;
 if(typeof document !== 'undefined'){
   if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', regradeAllSavedResults);
+    document.addEventListener('DOMContentLoaded',()=>{
+      regradeAllSavedResults();
+      regradeLegacyEnglishResults();
+    });
   } else {
     regradeAllSavedResults();
+    regradeLegacyEnglishResults();
   }
 }

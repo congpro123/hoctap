@@ -284,6 +284,48 @@
       } catch (err) {
         console.warn('Lỗi lưu Cloud Result:', err);
       }
+    },
+
+    async replaceResults(results) {
+      const trimmed = keepResults(Array.isArray(results) ? results : []).slice(0, 500);
+      const fbUrl = this.getFirebaseUrl();
+      if (fbUrl) {
+        try {
+          const res = await fetch(`${fbUrl}/results.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(trimmed)
+          });
+          if (res.ok) {
+            this.status = 'online';
+            this.engine = 'firebase';
+            auth.saveLocalResults(trimmed);
+            return true;
+          }
+        } catch (err) {
+          console.warn('Firebase replaceResults err:', err);
+        }
+      }
+
+      try {
+        const res = await fetch(CLOUD_CONFIG.RESULTS_URL, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'hoctap_database_results',
+            data: { results: trimmed }
+          })
+        });
+        if (res.ok) {
+          this.status = 'online';
+          this.engine = 'rest';
+          auth.saveLocalResults(trimmed);
+          return true;
+        }
+      } catch (err) {
+        console.warn('REST replaceResults err:', err);
+      }
+      return false;
     }
   };
 
@@ -624,6 +666,12 @@
       CloudDB.pushResult(result).then(() => {
         console.log('✅ Đã lưu và đồng bộ bài làm lên Cloud Database:', result.id);
       }).catch(err => console.warn('Lỗi đồng bộ Cloud Result:', err));
+    },
+
+    async replaceAllResults(results) {
+      const normalized = keepResults(Array.isArray(results) ? results : []).slice(0, 500);
+      this.saveLocalResults(normalized);
+      return CloudDB.replaceResults(normalized);
     },
 
     // 5. Cập nhật giao diện khi đổi tài khoản / đăng xuất
