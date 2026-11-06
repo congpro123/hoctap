@@ -10625,19 +10625,19 @@ const suppliedExams = [
 ,
 {
   "id": "tienganh-10-de-01",
-  "title": "Tiếng Anh 10 - Đề 01 - Đề thi giữa học kì 1 (Global Success)",
+  "title": "Tiếng Anh 10 - REVIEW 1 - Đề số 1",
   "subject": "english",
   "duration": 45,
-  "school": "Bộ GD&ĐT - Tiếng Anh 10 Global Success",
+  "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
   "province": "Toàn quốc",
   "year": "2026–2027",
   "source": {
-    "school": "Tiếng Anh 10 Global Success",
-    "province": "Bộ GD&ĐT",
-    "year": "2026–2027",
-    "note": "Đề thi giữa học kì 1 chuẩn chương trình GDPT 2018 (Unit 1, 2, 3)"
+    "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
+    "province": "",
+    "year": "",
+    "note": "Đề số 1 trong tài liệu gốc"
   },
-  "description": "Đề thi giữa học kì 1 môn Tiếng Anh 10 Global Success (Đề số 1). Đầy đủ các phần: Phonetics, Grammar & Vocabulary, Word form, Reading (Julia Hill, The Zookeeper) và Writing (Sentence Transformation).",
+  "description": "Đề số 1 từ REVIEW 1: phát âm, từ vựng và ngữ pháp, hai bài đọc nguyên văn, dạng đúng của động từ và viết lại câu.",
   "questions": [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
@@ -10849,7 +10849,7 @@ const suppliedExams = [
       "'reduce' (giảm bớt) trái nghĩa với 'increase' (tăng lên)."
     ],
     [
-      "<b>READING - CLOZE TEXT</b><br>In late 1997, the Pacific Lumber Company was planning to cut down a 600-year-old, 61-metre-tall redwood tree in California, USA. To (26) _______ the tree, people camped in tents near it but, as winter approached, they went home.",
+      "<b>READING - CLOZE TEXT</b><br>Choose the word or phrase among A, B, C or D that best fits each blank in the following passage.<br><br>In late 1997, the Pacific Lumber Company was planning to cut down a 600-year-old, 61-metre-tall redwood tree in California, USA. To (26) _____ the tree, people camped in tents near it but, as winter approached, they went home.<br><br>Tree lover Julia Hill decided that she had to stay to (27) _____ the company from cutting down the tree, so she climbed it. Julia's 'home' was a 2-by-3-metre tree house where she slept, cooked meals and gave interviews on her phone. Friends visited her nightly and supplied her with food in a bucket. (28) _____ she had thought she might stay up there for perhaps a month, she stayed for much longer, nearly two years.<br><br>Julia had (29) _____ famous all over the world. It ended on December 17. 1999. The Pacific Lumber Company received $50,000, and the tree was (30) _____ to live. Finally, Julia was able to climb down and go home.<br><br><b>Choose the answer for blank (26).</b>",
       [
         "A. protect",
         "B. hold",
@@ -10904,7 +10904,7 @@ const suppliedExams = [
       "Cấu trúc bị động: be allowed to do something (được phép làm gì / được giữ lại sống)."
     ],
     [
-      "<b>READING COMPREHENSION</b><br>Read the text 'The Zookeeper' by Mark Porter and answer the question:<br><i>The Zookeeper</i><br>My name's Mark Porter. I've been interested in the natural world since I was very young...<br><br><b>What is the writer trying to do in this text?</b>",
+      "<b>READING COMPREHENSION</b><br>Read the text and answer the questions.<br><br><b>The Zookeeper</b><br>My name's Mark Porter. I've been interested in the natural world since I was very young. I used to keep insects, and I spent a lot of time drawing them. After I finished school, I went to work in a pet shop - that was great fun, but I knew I had to go to college if I wanted a better job. So I went to university to study Biology and then got a job in Florida working at a sea-life centre, looking after the dolphins.<br><br>While I was working there, I saw an advertisement for my current job - a keeper for the fish department at a zoo in California - and applied. Although it was for the same money, I was pleased when they immediately offered me the job because there are lots of different activities I'm involved in here. As part of my job, I get to do research, and I manage an education centre where I tell people of all ages about what they can do to protect fish and animals.<br><br>People think that my job is exciting because I go diving as part of my research work on sharks. However, I work long hours, and I worry if I have to call a medical specialist to come and look after a sick fish. Conditions at work can be uncomfortable too, as a lot of the fish I look after bite, so I have to be careful. Then there are the visitors. Some are OK, but some try to touch the fish or put sweet wrappers in the water - that makes me angry. However, my job is very rewarding, and I hope that you'll think about working with animals, too.<br><br><b>What is the writer trying to do in this text?</b>",
       [
         "A. how people can protect animals",
         "B. give an account of one day in his life",
@@ -11026,19 +11026,19 @@ const suppliedExams = [
 },
 {
   "id": "tienganh-10-de-02",
-  "title": "Tiếng Anh 10 - Đề 02 - Đề thi giữa học kì 1 (Global Success)",
+  "title": "Tiếng Anh 10 - REVIEW 1 - Đề số 2",
   "subject": "english",
   "duration": 45,
-  "school": "Bộ GD&ĐT - Tiếng Anh 10 Global Success",
+  "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
   "province": "Toàn quốc",
   "year": "2026–2027",
   "source": {
-    "school": "Tiếng Anh 10 Global Success",
-    "province": "Bộ GD&ĐT",
-    "year": "2026–2027",
-    "note": "Đề thi giữa học kì 1 chuẩn chương trình GDPT 2018 (Unit 1, 2, 3)"
+    "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
+    "province": "",
+    "year": "",
+    "note": "Đề số 2 trong tài liệu gốc"
   },
-  "description": "Đề thi giữa học kì 1 môn Tiếng Anh 10 Global Success (Đề số 2). Đầy đủ các phần: Phonetics, Grammar & Vocabulary, Error correction, Reading (Art & Artists, Feeling Special) và Writing (Sentence Transformation).",
+  "description": "Đề số 2 từ REVIEW 1: phát âm, từ vựng và ngữ pháp, sửa lỗi, hai bài đọc nguyên văn và viết lại câu.",
   "questions": [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
@@ -11250,7 +11250,7 @@ const suppliedExams = [
       "'develop' (phát triển, trau dồi) trái nghĩa với 'end' (chấm dứt, kết thúc)."
     ],
     [
-      "<b>READING - CLOZE TEXT</b><br>The ability to make a work of art is one of the most creative things anyone can do. It doesn't matter, whether it is a painter creating a landscape painting, or a sculptor carving a marble statue, as all artists share the same passion to capture a moment in (26) _______ life that has inspired them.",
+      "<b>READING - CLOZE TEXT</b><br>Choose the word or phrase among A, B, C or D that best fits each blank in the following passage.<br><br>The ability to make a work of art is one of the most creative things anyone can do. It doesn't matter, whether it is a painter creating a landscape painting, or a sculptor carving a marble statue, as all artists share the same passion to capture a moment in (26) _____ life that has inspired them.<br><br>(27) _____ artist needs to start somewhere. The moment may be at home with their first painting set, or in their first art class, but when it comes it will never leave them. However, (28) _____ is unique for every artist is the journey that drives them to complete their creation.<br><br>There are some artists who just (29) _____ their art at home, whereas others try to earn a living from it. You can take a visit to the local galleries to purchase one. If you are fortunate, you may find yourself (30) _____ bargain. And who knows this artist may be the next Picasso or Van Gogh?<br><br><b>Choose the answer for blank (26).</b>",
       [
         "A. their",
         "B. there",
@@ -11305,7 +11305,7 @@ const suppliedExams = [
       "Cụm từ: 'a bargain' (một món hời, mua được giá tốt); 'bargain' bắt đầu bằng phụ âm nên dùng mạo từ 'a'."
     ],
     [
-      "<b>READING COMPREHENSION</b><br>Read the text about feeling special and answer the question:<br><i>Everybody likes to feel special. Sadly, many of us grow up believing that we're not special at all...</i><br><br><b>What is the writer's main aim in writing the text?</b>",
+      "<b>READING COMPREHENSION</b><br>Read the text and answer the questions.<br><br>Everybody likes to feel special. Sadly, many of us grow up believing that we're not special at all. We wish that we could be more attractive or better at sports. We wish we had more money or more beautiful clothes. Like the Tin Man, the Scarecrow, or the Cowardly Lion from The Wizard of Oz, we think we're not good enough just as we are. In the film, The Tin Man wishes he had a heart. The Scarecrow wishes that he had a brain, and the Lion wants courage. Eventually, each of them realizes that he already has what he wants.<br><br>Nearly all parents want us to be the best we can be. They occasionally attempt to encourage us to do better by comparing us to others. They mean well, but the message we usually get is that we're not good enough. We start to believe that the only way we can be special is by being better than somebody else, but we are frequently disappointed. There will always be somebody out there that is better than we are at something. There are a lot of people around who may not be as intelligent as we are but who are better at sports. Or they may not be as handsome, but they have more money. It is unthinkable for us to be better than everybody else all the time. Like the Tin Man, the Scarecrow, and the Cowardly Lion, we all need what we believe will make us better people.<br><br>What we don't understand is that often we already have inside us the very things that we look for in life. Our parents often forget to tell us that we are special, that we are good enough just as we are. Perhaps no one told them when they were growing up, or maybe they just forgot. Either way, it's up to us to remind them sometimes that each of us, in our own way, is special. What we are is enough!<br><br><b>What is the writer's main aim in writing the text?</b>",
       [
         "A. to talk about your family problems",
         "B. to explain the importance of being yourself",
@@ -11422,19 +11422,19 @@ const suppliedExams = [
 },
 {
   "id": "tienganh-10-de-03",
-  "title": "Tiếng Anh 10 - Đề 03 - Đề thi giữa học kì 1 (Global Success)",
+  "title": "Tiếng Anh 10 - REVIEW 1 - Đề số 3",
   "subject": "english",
   "duration": 45,
-  "school": "Bộ GD&ĐT - Tiếng Anh 10 Global Success",
+  "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
   "province": "Toàn quốc",
   "year": "2026–2027",
   "source": {
-    "school": "Tiếng Anh 10 Global Success",
-    "province": "Bộ GD&ĐT",
-    "year": "2026–2027",
-    "note": "Đề thi giữa học kì 1 chuẩn chương trình GDPT 2018 (Unit 1, 2, 3)"
+    "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
+    "province": "",
+    "year": "",
+    "note": "Đề số 3 trong tài liệu gốc"
   },
-  "description": "Đề thi giữa học kì 1 môn Tiếng Anh 10 Global Success (Đề số 3). Đầy đủ các phần: Phonetics, Grammar & Vocabulary, Stative verbs & Tenses, Reading (Bagpipes, Snakebites) và Writing (Sentence Transformation).",
+  "description": "Đề số 3 từ REVIEW 1: phát âm, từ vựng và ngữ pháp, hai bài đọc nguyên văn, chọn dạng động từ và viết lại câu.",
   "questions": [
     [
       "<b>PHONETICS</b><br>Find the word which has a different sound in the part underlined:",
@@ -11646,7 +11646,7 @@ const suppliedExams = [
       "'eliminated' (bị loại) trái nghĩa với 'passed' (vượt qua, lọt vào vòng trong)."
     ],
     [
-      "<b>READING - CLOZE TEXT: BAGPIPES</b><br>Bagpipes are a woodwind (26) _______ that is played in Scotland during cultural festivals and celebrations. It is considered Scotland's national instrument.",
+      "<b>READING - CLOZE TEXT: BAGPIPES</b><br>Choose the word or phrase among A, B, C or D that best fits each blank in the following passage.<br><br><b>Bagpipes</b><br>Bagpipes are a woodwind (26) _____ that is played in Scotland during cultural festivals and celebrations. It is considered Scotland's national instrument. However, it is believed to have originally come from the Middle East.<br><br>It uses reeds and a bag to create its sound. The sound is produced by blowing into a blowpipe to make a sound from the three drones that come out of the top of the bag.<br><br>There are over thirty different types of bagpipes, but the one used in Scotland is the Highland Pipes. They are part of Scottish life, and they are used on special (27) _____. All Scottish Army (28) _____ have a piper to play the bagpipes when they go on (29) _____.<br><br>They are an essential feature in many songs, stories and poems as they represent the cultural (30) _____ of the Scots. One of the most popular songs played on the bagpipes is Scotland the Brave.<br><br><b>Choose the answer for blank (26).</b>",
       [
         "A. heritage",
         "B. occasions",
@@ -11668,7 +11668,7 @@ const suppliedExams = [
       "'on special occasions' mang nghĩa vào các dịp đặc biệt."
     ],
     [
-      "All Scottish Army (28) _______ have a piper to play the bagpipes...",
+      "Choose the answer for blank (28) in the Bagpipes passage above.",
       [
         "A. heritage",
         "B. occasions",
@@ -11679,7 +11679,7 @@ const suppliedExams = [
       "'Scottish Army regiments' mang nghĩa các trung đoàn quân đội Scotland."
     ],
     [
-      "...when they go on (29) _______.",
+      "Choose the answer for blank (29) in the Bagpipes passage above.",
       [
         "A. heritage",
         "B. parade",
@@ -11701,7 +11701,7 @@ const suppliedExams = [
       "'cultural heritage' mang nghĩa di sản văn hóa."
     ],
     [
-      "<b>READING COMPREHENSION: SNAKEBITES</b><br>Read the text about snakebites and answer the question:<br><i>You're hiking with a friend and then as you step over a tree log a snake beneath bites your leg...</i><br><br><b>What is the writer trying to do in this text?</b>",
+      "<b>READING COMPREHENSION: SNAKEBITES</b><br>Read the text and answer the questions.<br><br>You're hiking with a friend and then as you step over a tree log a snake beneath bites your leg. One thought races through your mind, 'If you get bitten by a snake, suck out the venom.’ Terrified, you turn to your friend, but he replies, 'No way! Then we'll both die.' Is he right?<br><br>Most likely, your friend wouldn't die. But if he has an open wound in his mouth, the venom could enter his bloodstream, which is no help to either of you. So, venom sucking isn't a solution.<br><br>To understand how to treat snakebites, you need to know the difference between poisons and venoms. Poisons are toxic, in other words dangerous, if you swallow or smell them. Venoms, on the other hand, are only toxic if they get into soft tissues and the bloodstream.<br><br>So, if you suck the venom out of a snake bite, you won't be affected. But that doesn't mean you should do it! Experts now strongly advise against it. Why? Venom enters the bloodstream extremely quickly, and trying to suck it out is ineffective because it’s faster than your reaction.<br><br>The best way to prevent the venom from quickly moving through the bloodstream is to remain calm, and avoid doing anything that would increase the heart rate.<br><br>So what else should we do? Well, be aware of what snakes are in the place you are walking in. That way you will have an idea which ones are dangerous.<br><br><b>What is the writer trying to do in this text?</b>",
       [
         "A. explain the dangers of snakes.",
         "B. advise against walking in the countryside.",
@@ -11818,10 +11818,10 @@ const suppliedExams = [
 },
 {
   "id": "tienganh-10-de-04",
-  "title": "Tiếng Anh 10 - Đề 04 - Chuyên đề: Câu bị động (Passive Voice)",
+  "title": "Tiếng Anh 10 - REVIEW 1 - Bài tập câu bị động",
   "subject": "english",
   "duration": 45,
-  "school": "Tiếng Anh 10 Global Success",
+  "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
   "province": "Toàn quốc",
   "year": "2026–2027",
   "source": {
@@ -11963,10 +11963,10 @@ const suppliedExams = [
 },
 {
   "id": "tienganh-10-de-05",
-  "title": "Tiếng Anh 10 - Đề 05 - Chuyên đề: To-infinitives và Bare infinitives",
+  "title": "Tiếng Anh 10 - REVIEW 1 - Bài tập động từ nguyên mẫu",
   "subject": "english",
   "duration": 45,
-  "school": "Tiếng Anh 10 Global Success",
+  "school": "Tài liệu REVIEW 1 do người dùng cung cấp",
   "province": "Toàn quốc",
   "year": "2026–2027",
   "source": {
@@ -12240,7 +12240,7 @@ const suppliedExams = [
       "explanation": "Cấu trúc decide to do something ➔ to cancel."
     },
     {
-      "question": "<b>Ex3 - Đoạn văn (1):</b> One day, Mr. Brown decided (1) _______ (buy) some flower seeds.",
+      "question": "<b>Ex3 - Choose the correct forms of the verbs.</b><br><br>Mr. Brown loved gardening and wanted to have a beautiful garden. One day, he decided (1) ________ (buy) some flower seeds. After that, he encouraged his son (2) ________ (help) him in the garden. Every morning, they would get up early and begin (3) ________ (water) the plants.<br><br>One afternoon, they saw some birds (4) ________ (eat) the seeds. Mr. Brown tried (5) ________ (chase) them away, but the birds kept coming back. His neighbor advised him (6) ________ (put) a scarecrow in the garden. Mr. Brown made his son (7) ________ (build) one from old clothes and sticks.<br><br>A few days later, they watched the birds (8) ________ (fly) away from the garden. Mr. Brown was delighted and hoped (9) ________ (grow) many beautiful flowers. In the end, his hard work helped him (10) ________ (create) a colorful and attractive garden.<br><br><b>Answer blank (1).</b>",
       "answer": "to buy",
       "explanation": "decide to do something ➔ to buy."
     },
