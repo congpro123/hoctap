@@ -85,7 +85,7 @@ function normalizeExam(e) {
 // Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
-  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
+  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
     : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
@@ -226,7 +226,7 @@ function sourceLine(e) {
   const yr = src.year || e.year || '';
   const note = src.note || '';
   const label = `${esc(school)}${prov ? ' · ' + esc(prov) : ''}${yr ? ' · ' + esc(yr) : ''}`;
-  return `<div class="source-line">${e.id === 'toan-10-de-13' ? 'Nguồn đề' : 'Nguồn tham khảo'}: ${url && url !== '#' ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>` : `<span>${label}</span>`}${note ? `<small>${esc(note)}</small>` : ''}</div>`;
+  return `<div class="source-line">${e.id === 'toan-10-de-13' || e.id === 'vatli-10-dong-ha-1004' ? 'Nguồn đề' : 'Nguồn tham khảo'}: ${url && url !== '#' ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>` : `<span>${label}</span>`}${note ? `<small>${esc(note)}</small>` : ''}</div>`;
 }
 
 function totalItems(e) {
