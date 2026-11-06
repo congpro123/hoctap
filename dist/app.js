@@ -755,7 +755,11 @@ function renderExam() {
         ${(e.essay && e.essay.length > 0) ? `
         <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu${e.subject === 'english' ? '' : ' · 3,0 điểm'})</h2>
         <div class="essay-guide-banner">
-          <b>Chọn cách làm riêng cho từng câu:</b> nhập bài trên web để Gemini chấm theo barem, hoặc chọn “Làm trên nháp” để câu đó không gửi tới AI và không tính điểm tự luận tự động.
+          <b>Chọn cách làm cho từng câu:</b>
+          <span class="essay-guide-legend">
+            <span><strong>C1</strong> AI chấm</span>
+            <span><strong>C2</strong> Làm trên nháp, không chấm AI</span>
+          </span>
         </div>
         ${e.essay.map((q, i) => `<div class="question" id="essay-${i}">
           <div class="q-title essay-question-title">
@@ -766,13 +770,13 @@ function renderExam() {
             <span class="essay-point-pill">${typeof pointText === 'function' ? pointText(essayPointValue(q, e)) : essayPointValue(q, e)} điểm</span>
           </div>
           <div class="essay-mode-picker" role="radiogroup" aria-label="Cách làm câu tự luận ${i + 1}">
-            <label class="essay-mode-option ${essayMode(i) === 'ai' ? 'selected' : ''}" data-mode="ai">
-              <input type="radio" name="tlmode${i}" value="ai" data-kind="tlmode" data-index="${i}" ${essayMode(i) === 'ai' ? 'checked' : ''}>
-              <span><b>Nhập đáp án và để AI chấm</b><small>Gemini đối chiếu barem, nhận xét đúng hoặc cần bổ sung.</small></span>
+            <label class="essay-mode-option ${essayMode(i) === 'ai' ? 'selected' : ''}" data-mode="ai" title="C1: Nhập đáp án và để AI chấm">
+              <input type="radio" name="tlmode${i}" value="ai" data-kind="tlmode" data-index="${i}" aria-label="C1: Nhập đáp án và để AI chấm" ${essayMode(i) === 'ai' ? 'checked' : ''}>
+              <span>C1</span>
             </label>
-            <label class="essay-mode-option ${essayMode(i) === 'draft' ? 'selected' : ''}" data-mode="draft">
-              <input type="radio" name="tlmode${i}" value="draft" data-kind="tlmode" data-index="${i}" ${essayMode(i) === 'draft' ? 'checked' : ''}>
-              <span><b>Làm trên nháp — không chấm AI</b><small>Không gửi nội dung và không tính điểm tự luận tự động.</small></span>
+            <label class="essay-mode-option ${essayMode(i) === 'draft' ? 'selected' : ''}" data-mode="draft" title="C2: Làm trên nháp, không chấm AI">
+              <input type="radio" name="tlmode${i}" value="draft" data-kind="tlmode" data-index="${i}" aria-label="C2: Làm trên nháp, không chấm AI" ${essayMode(i) === 'draft' ? 'checked' : ''}>
+              <span>C2</span>
             </label>
           </div>
           <div class="essay-field" data-essay-ai-area ${essayMode(i) === 'ai' ? '' : 'hidden'}>
