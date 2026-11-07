@@ -65,7 +65,7 @@ submitExam=async function(reason){
     correct:score.correct,
     points:score.points,
     maxPoints:score.max,
-    aiGradingVersion:2,
+    aiGradingVersion:3,
     questionSetVersion:e.id==='toan-10-de-13'?3:2,
     answers:{...answers},
     date:new Date().toISOString(),
@@ -157,7 +157,7 @@ function regradeAllSavedResults(){
   }catch(_){}
 }
 
-const ENGLISH_AI_GRADING_VERSION=2;
+const ENGLISH_AI_GRADING_VERSION=3;
 let legacyEnglishRegradePromise=null;
 
 function englishRegradeNotice(total){
