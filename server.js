@@ -16,7 +16,7 @@ const RATE_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT = Number(process.env.RATE_LIMIT || 20);
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 const CACHE_LIMIT = 500;
-const GRADING_PROMPT_VERSION = '2026-11-07-reconstructed-fill-v3';
+const GRADING_PROMPT_VERSION = '2026-11-07-reconstructed-fill-v4';
 const requestBuckets = new Map();
 const gradeCache = new Map();
 
@@ -119,6 +119,46 @@ function reconstructFillAnswer(question, studentAnswer) {
   return [base, suffix && !normalize(base).endsWith(normalize(suffix)) ? suffix : ''].filter(Boolean).join(' ').replace(/\s+([,.;:!?])/g, '$1').trim();
 }
 
+function extractProvidedPrefix(question) {
+  const lines = cleanText(question, 4000).split('\n').map(line => line.trim()).filter(Boolean);
+  const blankPattern = /_{3,}|\.{3,}|…{2,}|\[\s*\]/;
+  const line = [...lines].reverse().find(candidate => blankPattern.test(candidate));
+  if (!line) return '';
+  const withoutArrow = line.replace(/^[➔→⇒⟶]\s*/, '').trim();
+  const match = withoutArrow.match(blankPattern);
+  return match ? withoutArrow.slice(0, match.index).trim() : '';
+}
+
+function normalizeComparable(value) {
+  return cleanText(value, 500).toLowerCase().replace(/[^a-z0-9à-ỹ]+/gi, ' ').trim();
+}
+
+function falselyClaimsProvidedPrefixIsMissing(text, providedPrefix) {
+  if (!text || !providedPrefix || !/(thiếu|thêm|viết đầy đủ)/i.test(text)) return false;
+  const expected = normalizeComparable(providedPrefix);
+  const quoted = [...String(text).matchAll(/['"“”‘’]([^'"“”‘’]+)['"“”‘’]/g)].map(match => normalizeComparable(match[1]));
+  return quoted.includes(expected);
+}
+
+function sanitizeFillFeedback(grade, data) {
+  const prefix = data?.providedPrefix || '';
+  if (!prefix) return grade;
+  if (falselyClaimsProvidedPrefixIsMissing(grade.summary, prefix)) {
+    grade.summary = 'Phần điền vào chỗ trống chưa hoàn toàn chính xác so với barem.';
+  }
+  grade.improvements = grade.improvements.map(item => {
+    if (!falselyClaimsProvidedPrefixIsMissing(item, prefix)) return item;
+    const marker = item.toLowerCase().lastIndexOf(' và ');
+    if (marker < 0) return '';
+    const tail = item.slice(marker + 4).trim();
+    return tail ? `Cần ${tail.replace(/^cần\s+/i, '')}` : '';
+  }).filter(Boolean);
+  if (grade.verdict !== 'correct' && !grade.improvements.length) {
+    grade.improvements = ['Đối chiếu lại phần cần điền với barem của câu hỏi.'];
+  }
+  return grade;
+}
+
 function cacheKey(payload) {
   return crypto.createHash('sha256').update(`${GRADING_PROMPT_VERSION}\n${JSON.stringify(payload)}`).digest('hex');
 }
@@ -148,6 +188,7 @@ function buildPrompt(data) {
     `Câu hỏi: ${data.question}`,
     `Barem/lời giải tham khảo: ${data.referenceAnswer}`,
     `Bài làm của học sinh: ${data.studentAnswer}`,
+    data.providedPrefix ? `PHẦN ĐỀ ĐÃ CHO SẴN (TUYỆT ĐỐI KHÔNG ĐƯỢC BÁO THIẾU): ${data.providedPrefix}` : '',
     data.completedAnswer ? `CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP: ${data.completedAnswer}` : '',
     '',
     'QUY TẮC ĐIỀN CHỖ TRỐNG: Nếu đề đã cho sẵn một phần câu trước/sau dấu gạch trống, mũi tên hoặc ô nhập, thì "Bài làm của học sinh" chỉ là nội dung học sinh điền vào phần trống. Trước khi chấm, phải ghép phần học sinh nhập vào đúng vị trí để tạo câu hoàn chỉnh. Mọi từ đã in sẵn trong đề được xem là đã có; tuyệt đối không trừ điểm vì học sinh không gõ lại chúng. Chỉ đánh giá tính đúng, đủ và ngữ pháp của phần cần điền trong ngữ cảnh câu hoàn chỉnh. Ví dụ: đề cho "I expect ____" và học sinh nhập "her to give me some advice" thì phải chấm câu hoàn chỉnh "I expect her to give me some advice".',
@@ -162,6 +203,7 @@ function buildBatchPrompt(data) {
     `Câu hỏi: ${item.question}`,
     `Barem/lời giải tham khảo: ${item.referenceAnswer}`,
     `Bài làm của học sinh: ${item.studentAnswer}`,
+    item.providedPrefix ? `PHẦN ĐỀ ĐÃ CHO SẴN (TUYỆT ĐỐI KHÔNG ĐƯỢC BÁO THIẾU): ${item.providedPrefix}` : '',
     item.completedAnswer ? `CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP: ${item.completedAnswer}` : ''
   ].join('\n')).join('\n\n');
   return [
@@ -242,20 +284,20 @@ const batchGradeSchema = {
   required: ['results']
 };
 
-function normalizeGrade(value) {
+function normalizeGrade(value, data = {}) {
   const allowed = new Set(['correct', 'partly_correct', 'incorrect']);
   const scorePercent = Math.max(0, Math.min(100, Math.round(Number(value.scorePercent) || 0)));
   let verdict = allowed.has(value.verdict) ? value.verdict : 'incorrect';
   if (verdict === 'correct' && scorePercent < 100) verdict = 'partly_correct';
   if (verdict === 'partly_correct' && scorePercent === 100) verdict = 'correct';
-  return {
+  return sanitizeFillFeedback({
     verdict,
     answersQuestion: Boolean(value.answersQuestion),
     scorePercent,
     summary: cleanText(value.summary, 500) || 'Chưa có nhận xét.',
     strengths: Array.isArray(value.strengths) ? value.strengths.slice(0, 2).map(item => cleanText(item, 220)).filter(Boolean) : [],
     improvements: Array.isArray(value.improvements) ? value.improvements.slice(0, 2).map(item => cleanText(item, 220)).filter(Boolean) : []
-  };
+  }, data);
 }
 
 async function gradeWithGemini(data) {
@@ -296,7 +338,7 @@ async function gradeWithGemini(data) {
       .join('')
       .trim();
     if (!text) throw Object.assign(new Error('Gemini không trả về kết quả chấm.'), { status: 502 });
-    const grade = normalizeGrade(JSON.parse(text));
+    const grade = normalizeGrade(JSON.parse(text), data);
     return {
       ...grade,
       model: GEMINI_MODEL,
@@ -361,7 +403,7 @@ async function gradeBatchWithGemini(data) {
           answersQuestion: item.verdict !== 'incorrect',
           strengths: [],
           improvements: item.improvement ? [item.improvement] : []
-        }),
+        }, data.items.find(source => source.id === String(item.id)) || {}),
         model: GEMINI_MODEL
       }));
     if (grades.length !== data.items.length || new Set(grades.map(item => item.id)).size !== data.items.length) {
@@ -426,7 +468,8 @@ const server = http.createServer(async (req, res) => {
         question: cleanText(item?.question, 4000),
         referenceAnswer: cleanText(item?.referenceAnswer, 6000),
         studentAnswer: cleanText(item?.studentAnswer, 6000),
-        completedAnswer: reconstructFillAnswer(item?.question, item?.studentAnswer)
+        completedAnswer: reconstructFillAnswer(item?.question, item?.studentAnswer),
+        providedPrefix: extractProvidedPrefix(item?.question)
       }));
       const ids = items.map(item => item.id);
       if (items.some(item => !item.id || !item.question || !item.referenceAnswer || item.studentAnswer.length < 2) || new Set(ids).size !== ids.length) {
@@ -434,7 +477,7 @@ const server = http.createServer(async (req, res) => {
       }
 
       const prepared = items.map(item => {
-        const data = { subject, examTitle, question: item.question, referenceAnswer: item.referenceAnswer, studentAnswer: item.studentAnswer, completedAnswer: item.completedAnswer };
+        const data = { subject, examTitle, question: item.question, referenceAnswer: item.referenceAnswer, studentAnswer: item.studentAnswer, completedAnswer: item.completedAnswer, providedPrefix: item.providedPrefix };
         const key = cacheKey(data);
         return { ...item, key, cached: getCached(key) };
       });
@@ -468,6 +511,7 @@ const server = http.createServer(async (req, res) => {
       studentAnswer: cleanText(body.studentAnswer, 6000)
     };
     data.completedAnswer = reconstructFillAnswer(data.question, data.studentAnswer);
+    data.providedPrefix = extractProvidedPrefix(data.question);
     if (!data.question || !data.referenceAnswer || data.studentAnswer.length < 2) {
       return sendJson(res, 400, { error: 'Thiếu câu hỏi, barem hoặc bài làm cần chấm.' }, origin);
     }

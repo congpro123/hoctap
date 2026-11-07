@@ -65,7 +65,7 @@ submitExam=async function(reason){
     correct:score.correct,
     points:score.points,
     maxPoints:score.max,
-    aiGradingVersion:4,
+    aiGradingVersion:5,
     questionSetVersion:e.id==='toan-10-de-13'?3:2,
     answers:{...answers},
     date:new Date().toISOString(),
@@ -157,8 +157,8 @@ function regradeAllSavedResults(){
   }catch(_){}
 }
 
-const ENGLISH_AI_GRADING_VERSION=4;
-const REQUIRED_AI_BACKEND_VERSION='2026-11-07-reconstructed-fill-v3';
+const ENGLISH_AI_GRADING_VERSION=5;
+const REQUIRED_AI_BACKEND_VERSION='2026-11-07-reconstructed-fill-v4';
 let legacyEnglishRegradePromise=null;
 
 async function waitForRequiredAiBackend(){
@@ -196,7 +196,8 @@ async function regradeLegacyEnglishResults(){
       if(!result||!result.answers)return;
       const exam=exams.find(item=>item.id===result.id);
       if(!exam||exam.subject!=='english'||!Array.isArray(exam.essay)||!exam.essay.length)return;
-      let needsVersion=Number(result.aiGradingVersion||0)<ENGLISH_AI_GRADING_VERSION;
+      const currentVersion=Number(result.aiGradingVersion||0);
+      let needsVersion=currentVersion<ENGLISH_AI_GRADING_VERSION;
       exam.essay.forEach((question,questionIndex)=>{
         const modeKey='tlMode'+questionIndex;
         const answerKey='tl'+questionIndex;
@@ -209,7 +210,9 @@ async function regradeLegacyEnglishResults(){
         }
         if(!answer||result.answers[modeKey]==='draft')return;
         const grade=result.answers[gradeKey];
-        if(!needsVersion&&grade&&grade.answerSnapshot===answer)return;
+        const suspiciousOldFeedback=currentVersion===4&&/thiếu chủ ngữ/i.test(JSON.stringify(grade||{}));
+        const requiresFreshGrade=currentVersion<4||!grade||grade.answerSnapshot!==answer||suspiciousOldFeedback;
+        if(!requiresFreshGrade)return;
         const key=exam.id;
         if(!groups.has(key))groups.set(key,{exam,items:[]});
         groups.get(key).items.push({
