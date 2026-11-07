@@ -400,6 +400,7 @@ const server = http.createServer(async (req, res) => {
       ok: true,
       service: 'hoctap-ai-grading',
       model: GEMINI_MODEL,
+      gradingVersion: GRADING_PROMPT_VERSION,
       geminiConfigured: Boolean(GEMINI_API_KEY)
     }, origin);
   }

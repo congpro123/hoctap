@@ -65,7 +65,7 @@ submitExam=async function(reason){
     correct:score.correct,
     points:score.points,
     maxPoints:score.max,
-    aiGradingVersion:3,
+    aiGradingVersion:4,
     questionSetVersion:e.id==='toan-10-de-13'?3:2,
     answers:{...answers},
     date:new Date().toISOString(),
@@ -157,8 +157,21 @@ function regradeAllSavedResults(){
   }catch(_){}
 }
 
-const ENGLISH_AI_GRADING_VERSION=3;
+const ENGLISH_AI_GRADING_VERSION=4;
+const REQUIRED_AI_BACKEND_VERSION='2026-11-07-reconstructed-fill-v3';
 let legacyEnglishRegradePromise=null;
+
+async function waitForRequiredAiBackend(){
+  if(typeof window.AIGrading?.getHealth!=='function')return false;
+  for(let attempt=0;attempt<6;attempt++){
+    try{
+      const health=await window.AIGrading.getHealth();
+      if(health?.gradingVersion===REQUIRED_AI_BACKEND_VERSION)return true;
+    }catch(_){ }
+    if(attempt<5)await new Promise(resolve=>setTimeout(resolve,10000));
+  }
+  return false;
+}
 
 function englishRegradeNotice(total){
   const notice=document.createElement('div');
@@ -172,6 +185,7 @@ async function regradeLegacyEnglishResults(){
   if(legacyEnglishRegradePromise)return legacyEnglishRegradePromise;
   legacyEnglishRegradePromise=(async()=>{
     if(typeof window==='undefined'||!window.auth||!window.AIGrading||!Array.isArray(exams))return;
+    if(!await waitForRequiredAiBackend())return;
     await window.auth.syncFromCloudSilently();
     const all=window.auth.getLocalResults();
     const groups=new Map();

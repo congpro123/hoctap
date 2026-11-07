@@ -32,6 +32,11 @@
 
   const gradeEssay = payload => request('grade', payload);
   const gradeEssays = payload => request('grade-batch', payload);
+  const getHealth = async () => {
+    const response = await fetch(`${API_BASE.replace(/\/api$/, '')}/health`, { cache: 'no-store' });
+    if (!response.ok) throw new Error('Dịch vụ chấm AI chưa sẵn sàng.');
+    return response.json();
+  };
 
-  window.AIGrading = Object.freeze({ gradeEssay, gradeEssays });
+  window.AIGrading = Object.freeze({ gradeEssay, gradeEssays, getHealth });
 })();
