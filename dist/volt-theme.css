@@ -160,3 +160,9 @@ body { background: #f3f4f6; color: #1f2937; font-family: Inter, 'Segoe UI', Aria
 .word-bank-word:focus-visible, .word-bank-blank:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
 .word-bank-passage { overflow-wrap: anywhere; }
 .word-bank-passage b { display: inline-block; margin-top: 5px; }
+.exam-presence-panel { margin: 18px 0; padding: 18px 20px; }
+.exam-presence-panel h3 { margin: 0 0 10px; }
+.exam-presence-panel p { margin: 0; color: #64748b; }
+.exam-presence-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.exam-presence-list li { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; }
+.exam-presence-list span { color: #475569; }

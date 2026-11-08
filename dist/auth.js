@@ -1191,6 +1191,8 @@
             </div>
           </section>
 
+          <section class="stats-card-box exam-presence-panel" id="exam-presence-panel" aria-live="polite">Đang tải danh sách người làm bài…</section>
+
           <!-- Bảng danh sách tất cả học sinh -->
           <section class="stats-card-box">
             <div class="stats-box-header">
@@ -1337,6 +1339,7 @@
       `;
 
       if (typeof setNav === 'function') setNav('stats');
+      window.examPresence?.mountAdmin();
 
       // Nút Thêm học sinh thủ công
       const btnAddUser = document.getElementById('btn-stats-add-user');

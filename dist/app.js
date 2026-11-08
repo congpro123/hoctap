@@ -432,6 +432,7 @@ function pauseExam() {
   remainingMs = Math.max(0, deadline - Date.now());
   clearInterval(ticker);
   persistDraft();
+  window.examPresence?.setPaused(true);
   showPauseModal();
 }
 
@@ -440,6 +441,7 @@ function resumeExam() {
   isExamPaused = false;
   deadline = Date.now() + remainingMs;
   persistDraft();
+  window.examPresence?.setPaused(false);
   hidePauseModal();
   clearInterval(ticker);
   ticker = setInterval(tick, 1000);
@@ -521,6 +523,7 @@ function stopExamFinal() {
   hideStopModal();
   hidePauseModal();
   clearInterval(ticker);
+  window.examPresence?.stop();
   activeExam = null;
   answers = {};
   isExamPaused = false;
@@ -569,6 +572,7 @@ function startExam(id) {
   selectedBankWord = null;
   persistDraft();
   renderExam();
+  window.examPresence?.start(e, isExamPaused);
   if (isExamPaused) {
     showPauseModal();
   } else {
@@ -1036,6 +1040,7 @@ function submitExam(reason) {
   }
   localStorage.removeItem('hoctap-draft');
   activeExam = null;
+  window.examPresence?.stop();
   renderResult(result);
 }
 

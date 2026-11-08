@@ -30,6 +30,7 @@ function scoreForResult(r){const e=typeof historicalExamForResult==='function'?h
 submitExam=async function(reason){
   if(!activeExam||isSubmittingExam)return;
   isSubmittingExam=true;
+  window.examPresence?.stop();
   const e=activeExam;clearInterval(ticker);
   (e.essay||[]).forEach((_,i)=>{if(answers['tlMode'+i]===undefined)answers['tlMode'+i]=typeof essayMode==='function'?essayMode(i):'ai'});
   const pending=(e.essay||[]).map((_,i)=>i).filter(i=>answers['tlMode'+i]!=='draft'&&String(answers['tl'+i]||'').trim()&&(!answers['tlGrade'+i]||answers['tlGrade'+i].answerSnapshot!==String(answers['tl'+i]).trim()));
