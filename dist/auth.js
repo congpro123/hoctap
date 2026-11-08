@@ -290,6 +290,25 @@
       }
     },
 
+    async updateResult(updatedResult) {
+      const fbUrl = this.getFirebaseUrl();
+      if (!fbUrl) throw new Error('Không có kết nối lưu kết quả trực tuyến.');
+      const response = await fetch(`${fbUrl}/results.json`, { cache: 'no-store' });
+      if (!response.ok) throw new Error('Không đọc được bài nộp đã lưu.');
+      const data = await response.json();
+      const entries = data && typeof data === 'object' ? Object.entries(data) : [];
+      const matches = entries.filter(([, result]) => result && result.id === updatedResult.id && result.userId === updatedResult.userId && result.date === updatedResult.date);
+      if (matches.length !== 1) throw new Error('Không xác định được duy nhất bài nộp cần chấm lại.');
+      const key = encodeURIComponent(matches[0][0]);
+      const saved = await fetch(`${fbUrl}/results/${key}.json`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedResult)
+      });
+      if (!saved.ok) throw new Error('Chấm xong nhưng chưa lưu được điểm mới; vui lòng thử lại.');
+      return true;
+    },
+
     async replaceResults(results) {
       const trimmed = keepResults(Array.isArray(results) ? results : []).slice(0, 500);
       const fbUrl = this.getFirebaseUrl();
@@ -676,6 +695,15 @@
       const normalized = keepResults(Array.isArray(results) ? results : []).slice(0, 500);
       this.saveLocalResults(normalized);
       return CloudDB.replaceResults(normalized);
+    },
+
+    async updateSavedResult(result) {
+      await CloudDB.updateResult(result);
+      const all = this.getLocalResults();
+      const index = all.findIndex(item => item.id === result.id && item.userId === result.userId && item.date === result.date);
+      if (index >= 0) all[index] = result;
+      else all.unshift(result);
+      this.saveLocalResults(all);
     },
 
     // 5. Cập nhật giao diện khi đổi tài khoản / đăng xuất
@@ -1653,6 +1681,8 @@
             </div>
             <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
               <button class="primary" id="btn-return-stats">⬅ Quay lại Bảng thống kê</button>
+              ${(e.essay || []).some((_, i) => a['tlMode' + i] !== 'draft' && String(a['tl' + i] || '').trim() && a['tlGradeError' + i]) ? '<button class="primary" id="btn-regrade-essays">🔄 Chấm lại tự luận bị lỗi</button>' : ''}
+              <span id="regrade-status" role="status"></span>
             </div>
           </div>
 
@@ -1669,6 +1699,36 @@
       window.scrollTo(0, 0);
       const retBtn = document.getElementById('btn-return-stats');
       if (retBtn) retBtn.onclick = () => this.renderStatsView(studentUser ? studentUser.id : null);
+      const regradeBtn = document.getElementById('btn-regrade-essays');
+      if (regradeBtn) regradeBtn.onclick = async () => {
+        const status = document.getElementById('regrade-status');
+        regradeBtn.disabled = true;
+        status.textContent = 'Đang chấm lại các câu tự luận bị lỗi…';
+        try {
+          const items = e.essay.map((essay, i) => ({
+            id: String(i), question: essay.question,
+            referenceAnswer: essay.solution || 'Đối chiếu theo kiến thức Lớp 10.',
+            studentAnswer: String(a['tl' + i] || '').trim()
+          })).filter(item => item.studentAnswer && a['tlMode' + item.id] !== 'draft' && a['tlGradeError' + item.id]);
+          if (!items.length) throw new Error('Không còn câu tự luận bị lỗi để chấm lại.');
+          const response = await window.AIGrading.gradeEssays({ subject: 'Toán', examTitle: e.title, items });
+          const grades = new Map((response.grades || []).map(grade => [String(grade.id), grade]));
+          if (items.some(item => !grades.has(item.id))) throw new Error('Dịch vụ chấm chưa trả đủ kết quả cho các câu.');
+          const updated = { ...r, answers: { ...a } };
+          items.forEach(item => {
+            const { id, ...grade } = grades.get(item.id);
+            updated.answers['tlGrade' + item.id] = { ...grade, answerSnapshot: item.studentAnswer };
+            delete updated.answers['tlGradeError' + item.id];
+          });
+          const newScore = scoreExam(e, updated.answers);
+          Object.assign(updated, { points: newScore.points, maxPoints: newScore.max, correct: newScore.correct, total: newScore.total });
+          await this.updateSavedResult(updated);
+          this.renderStudentReview(updated, studentUser);
+        } catch (error) {
+          status.textContent = error.message || 'Chấm lại chưa thành công.';
+          regradeBtn.disabled = false;
+        }
+      };
       if (typeof renderMathInElement === 'function') {
         try {
           renderMathInElement(appEl, {
