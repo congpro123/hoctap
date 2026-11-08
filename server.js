@@ -77,7 +77,7 @@ function readJson(req) {
 }
 
 function cleanText(value, maxLength) {
-  return String(value || '')
+  return String(value ?? '')
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/<[^>]*>/g, ' ')
     .replace(/&nbsp;/gi, ' ')
@@ -533,8 +533,8 @@ const server = http.createServer(async (req, res) => {
         item.requiresWork = questionExplicitlyRequiresWork(item.question);
       });
       const ids = items.map(item => item.id);
-      if (items.some(item => !item.id || !item.question || !item.referenceAnswer || item.studentAnswer.length < 2) || new Set(ids).size !== ids.length) {
-        return sendJson(res, 400, { error: 'Có câu tự luận thiếu ID, câu hỏi, barem hoặc bài làm hợp lệ.' }, origin);
+      if (items.some(item => !item.id || !item.question || !item.referenceAnswer || !item.studentAnswer) || new Set(ids).size !== ids.length) {
+        return sendJson(res, 400, { error: 'Có câu tự luận thiếu ID, câu hỏi, barem hoặc bài làm trống.' }, origin);
       }
 
       const prepared = items.map(item => {
@@ -575,8 +575,8 @@ const server = http.createServer(async (req, res) => {
     data.providedPrefix = extractProvidedPrefix(data.question);
     data.inputIncludesPrefix = inputIncludesProvidedPrefix(data.studentAnswer, data.providedPrefix);
     data.requiresWork = questionExplicitlyRequiresWork(data.question);
-    if (!data.question || !data.referenceAnswer || data.studentAnswer.length < 2) {
-      return sendJson(res, 400, { error: 'Thiếu câu hỏi, barem hoặc bài làm cần chấm.' }, origin);
+    if (!data.question || !data.referenceAnswer || !data.studentAnswer) {
+      return sendJson(res, 400, { error: 'Thiếu câu hỏi, barem hoặc bài làm trống.' }, origin);
     }
 
     const key = cacheKey(data);
