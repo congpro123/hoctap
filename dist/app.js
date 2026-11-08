@@ -11,7 +11,9 @@ const subjects = [
 // Hàm lọc bỏ tiền tố trùng lặp 'A.', 'B.', 'C.', 'D.' hoặc 'a)', 'b)', 'c)', 'd)'
 function cleanOptionText(text) {
   if (!text) return '';
-  return String(text).replace(/^[A-Da-d][\)\.\:\-]\s*/, '').trim();
+  const value = String(text).trim();
+  // "a." có thể là chính nội dung đáp án, không phải nhãn cần loại bỏ.
+  return value.replace(/^[A-Da-d][\)\.\:\-]\s*(?=\S)/, '').trim();
 
 }
 
