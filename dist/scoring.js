@@ -158,7 +158,7 @@ function regradeAllSavedResults(){
 }
 
 const ENGLISH_AI_GRADING_VERSION=5;
-const REQUIRED_AI_BACKEND_VERSION='2026-11-08-flexible-fill-v5';
+const REQUIRED_AI_BACKEND_VERSION='2026-11-08-flexible-response-v6';
 let legacyEnglishRegradePromise=null;
 
 async function waitForRequiredAiBackend(){
