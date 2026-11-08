@@ -310,15 +310,15 @@ async function regradeLegacyEnglishResults(){
   return legacyEnglishRegradePromise;
 }
 
+// Chỉ cung cấp tác vụ chấm lại để quản trị viên chủ động gọi khi đã yêu cầu;
+// tuyệt đối không tự gọi Gemini trong lúc tải trang hoặc mở lịch sử.
 if(typeof window!=='undefined')window.regradeLegacyEnglishResults=regradeLegacyEnglishResults;
 if(typeof document !== 'undefined'){
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded',()=>{
       regradeAllSavedResults();
-      regradeLegacyEnglishResults();
     });
   } else {
     regradeAllSavedResults();
-    regradeLegacyEnglishResults();
   }
 }
