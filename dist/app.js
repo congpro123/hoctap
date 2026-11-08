@@ -85,7 +85,7 @@ function normalizeExam(e) {
 // Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
-  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
+  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
     : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
