@@ -1681,6 +1681,7 @@
             </div>
             <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
               <button class="primary" id="btn-return-stats">⬅ Quay lại Bảng thống kê</button>
+              ${e.id === 'toan-10-le-loi-102' && a.m7 === 2 && r.points !== score.points ? '<button class="primary" id="btn-rescore-corrected-answer">✓ Cập nhật điểm câu 8</button>' : ''}
               ${(e.essay || []).some((_, i) => a['tlMode' + i] !== 'draft' && String(a['tl' + i] || '').trim() && a['tlGradeError' + i]) ? '<button class="primary" id="btn-regrade-essays">🔄 Chấm lại tự luận bị lỗi</button>' : ''}
               <span id="regrade-status" role="status"></span>
             </div>
@@ -1699,6 +1700,20 @@
       window.scrollTo(0, 0);
       const retBtn = document.getElementById('btn-return-stats');
       if (retBtn) retBtn.onclick = () => this.renderStatsView(studentUser ? studentUser.id : null);
+      const rescoreBtn = document.getElementById('btn-rescore-corrected-answer');
+      if (rescoreBtn) rescoreBtn.onclick = async () => {
+        const status = document.getElementById('regrade-status');
+        rescoreBtn.disabled = true;
+        status.textContent = 'Đang lưu điểm đã chấm lại…';
+        try {
+          const updated = { ...r, points: score.points, maxPoints: score.max, correct: score.correct, total: score.total };
+          await this.updateSavedResult(updated);
+          this.renderStudentReview(updated, studentUser);
+        } catch (error) {
+          status.textContent = error.message || 'Chưa lưu được điểm mới.';
+          rescoreBtn.disabled = false;
+        }
+      };
       const regradeBtn = document.getElementById('btn-regrade-essays');
       if (regradeBtn) regradeBtn.onclick = async () => {
         const status = document.getElementById('regrade-status');
