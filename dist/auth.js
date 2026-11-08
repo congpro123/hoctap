@@ -11,6 +11,10 @@
   const STORAGE_RESULTS = 'hoctap-results';
   // One-time cleanup requested on 2026-11-03. Keep later attempts, even below 3 points.
   const LOW_SCORE_CUTOFF = Date.parse('2026-11-03T16:53:42Z');
+  const resultSubmittedAt = result => {
+    const parsed = Date.parse(result?.date);
+    return Number.isFinite(parsed) ? parsed : 0;
+  };
   const isRemovedLowScore = result => {
     const points = Number(result?.points ?? result?.score);
     const submittedAt = Date.parse(result?.date);
@@ -630,7 +634,7 @@
         if (targetUsername && r.username && r.username.toLowerCase() === targetUsername) return true;
         if ((targetId === 'u-congpro123' || targetId === 'u-thaithanhcong' || targetUsername === 'congpro123' || targetUsername === 'thaithanhcong') && (r.username === 'congpro123' || r.username === 'thaithanhcong' || !r.userId)) return true;
         return false;
-      });
+      }).sort((a, b) => resultSubmittedAt(b) - resultSubmittedAt(a));
     },
 
     getExamStatus(examId, userId) {
