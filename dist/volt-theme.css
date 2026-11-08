@@ -176,3 +176,4 @@ body { background: #f3f4f6; color: #1f2937; font-family: Inter, 'Segoe UI', Aria
 .exam-history-status.status-paused { color: #d97706; }
 .exam-history-status.status-submitted { color: #15803d; }
 .exam-history-status.status-cancelled, .exam-history-status.status-left { color: #64748b; }
+.exam-total-attempts { color: #2563eb; font-weight: 700; }

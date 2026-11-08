@@ -802,7 +802,13 @@
             });
           }
 
-          if (changedR) this.saveLocalResults(localR);
+          if (changedR) {
+            this.saveLocalResults(localR);
+            const hash = (typeof location !== 'undefined' ? location.hash : '') || '#home';
+            if (hash === '#home' && typeof home === 'function') home();
+            else if (hash === '#subjects' && typeof catalog === 'function') catalog();
+            else if (hash.startsWith('#subject-') && typeof catalog === 'function') catalog(Number(hash.split('-')[1]));
+          }
         }
       } catch (_) {}
     },

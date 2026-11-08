@@ -1,6 +1,11 @@
 // Mở rộng kho đề và cho phép xem lại các câu sai trong lịch sử.
+function examAttemptCount(examId){
+  if(!window.auth || typeof window.auth.getAllResults!=='function')return 0;
+  return window.auth.getAllResults().reduce((count,result)=>count+(result&&result.id===examId?1:0),0);
+}
 function card(e){
   const labels={math:'Toán 10',physics:'Vật lý 10',chemistry:'Hóa học 10',english:'Tiếng Anh 10'};
+  const totalAttempts=examAttemptCount(e.id);
   let status='<span class="exam-status-badge pending">Chưa làm</span>';
   let action=`<button class="primary" data-start="${esc(e.id)}">Làm bài</button>`;
   if(e.originalPdf){
@@ -14,7 +19,7 @@ function card(e){
       action=`<div class="card-action-group"><button class="secondary btn-card-review" data-review-exam="${esc(e.id)}">Xem lại</button><button class="primary" data-start="${esc(e.id)}">Làm lại</button></div>`;
     }
   }
-  return `<article class="exam-card" data-subject="${esc(e.subject)}"><div class="exam-body"><div class="card-top"><span class="subject-pill">${labels[e.subject]||'Lớp 10'}</span><span class="card-code">${esc(e.id)}</span></div><h3>${esc(e.title)}</h3><div class="meta"><span>${e.minutes} phút</span>${e.questions.length?`<span>${e.questions.length} nhiều lựa chọn</span>`:''}${e.tf.length?`<span>${e.tf.length} đúng/sai</span>`:''}${e.short.length?`<span>${e.short.length} trả lời ngắn</span>`:''}${e.essay?.length?`<span>${e.essay.length} tự luận</span>`:''}</div>${sourceLine(e)}</div><div class="exam-actions">${status}${action}</div></article>`;
+  return `<article class="exam-card" data-subject="${esc(e.subject)}"><div class="exam-body"><div class="card-top"><span class="subject-pill">${labels[e.subject]||'Lớp 10'}</span><span class="card-code">${esc(e.id)}</span></div><h3>${esc(e.title)}</h3><div class="meta"><span>${e.minutes} phút</span>${e.questions.length?`<span>${e.questions.length} nhiều lựa chọn</span>`:''}${e.tf.length?`<span>${e.tf.length} đúng/sai</span>`:''}${e.short.length?`<span>${e.short.length} trả lời ngắn</span>`:''}${e.essay?.length?`<span>${e.essay.length} tự luận</span>`:''}<span class="exam-total-attempts" title="Tổng số lượt đã nộp bài của đề này">👥 ${totalAttempts} lượt làm</span></div>${sourceLine(e)}</div><div class="exam-actions">${status}${action}</div></article>`;
 }
 
 function tiles(){
