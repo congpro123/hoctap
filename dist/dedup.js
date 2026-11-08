@@ -54,7 +54,7 @@ const fallback={physics:{mc:physicsQuestion,tf:newPhysicsTF,short:newPhysicsShor
 for(const subject of Object.keys(fallback)){
   const seen={mc:new Set(),tf:new Set(),short:new Set()},serial={mc:0,tf:0,short:0};
   for(const exam of exams.filter(e=>e.subject===subject)){
-    if(['toan-10-de-13','toan-10-de-04','toan-10-dak-lak-1001'].includes(exam.id))continue; // Preserve supplied original papers verbatim.
+    if(['toan-10-de-13','toan-10-de-04','toan-10-dak-lak-1001','toan-10-le-loi-102'].includes(exam.id))continue; // Preserve supplied original papers verbatim.
     for(const [part,key,field] of [['mc','questions',0],['tf','tf','stem'],['short','short','text']]){
       exam[key]=exam[key].map(question=>{
         let current=question,stem=current[field];
