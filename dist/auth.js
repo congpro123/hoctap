@@ -1681,7 +1681,7 @@
             </div>
             <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
               <button class="primary" id="btn-return-stats">⬅ Quay lại Bảng thống kê</button>
-              ${e.id === 'toan-10-le-loi-102' && a.m7 === 2 && r.points !== score.points ? '<button class="primary" id="btn-rescore-corrected-answer">✓ Cập nhật điểm câu 8</button>' : ''}
+              ${e.id === 'toan-10-le-loi-102' && a.m7 === 2 ? '<button class="primary" id="btn-rescore-corrected-answer">✓ Đồng bộ điểm câu 8 đã sửa</button>' : ''}
               ${(e.essay || []).some((_, i) => a['tlMode' + i] !== 'draft' && String(a['tl' + i] || '').trim() && a['tlGradeError' + i]) ? '<button class="primary" id="btn-regrade-essays">🔄 Chấm lại tự luận bị lỗi</button>' : ''}
               <span id="regrade-status" role="status"></span>
             </div>
