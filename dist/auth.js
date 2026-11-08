@@ -836,6 +836,7 @@
       const user = this.getCurrentUser();
       const topRight = document.querySelector('.top-right');
       if (!topRight) return;
+      const publicCount = topRight.querySelector('#public-exam-count');
 
       const todayStr = new Intl.DateTimeFormat('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date());
 
@@ -844,6 +845,7 @@
           <span class="today" id="today">${todayStr}</span>
           <button class="primary auth-topbar-login-btn" id="btn-topbar-login" style="padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700;">🔑 Đăng nhập / Đăng ký</button>
         `;
+        if (publicCount) topRight.prepend(publicCount);
         const b = document.getElementById('btn-topbar-login');
         if (b) b.onclick = () => this.openModal('login', false);
         return;
@@ -875,6 +877,7 @@
           </div>
         </div>
       `;
+      if (publicCount) topRight.prepend(publicCount);
 
       const btnProfile = document.getElementById('btn-user-profile');
       const menu = document.getElementById('user-dropdown-menu');
