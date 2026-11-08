@@ -16,7 +16,7 @@ const RATE_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT = Number(process.env.RATE_LIMIT || 20);
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 const CACHE_LIMIT = 500;
-const GRADING_PROMPT_VERSION = '2026-11-07-reconstructed-fill-v4';
+const GRADING_PROMPT_VERSION = '2026-11-08-flexible-fill-v5';
 const requestBuckets = new Map();
 const gradeCache = new Map();
 
@@ -133,11 +133,24 @@ function normalizeComparable(value) {
   return cleanText(value, 500).toLowerCase().replace(/[^a-z0-9à-ỹ]+/gi, ' ').trim();
 }
 
+function inputIncludesProvidedPrefix(studentAnswer, providedPrefix) {
+  const answer = normalizeComparable(studentAnswer);
+  const prefix = normalizeComparable(providedPrefix);
+  return Boolean(answer && prefix && (answer === prefix || answer.startsWith(`${prefix} `)));
+}
+
 function falselyClaimsProvidedPrefixIsMissing(text, providedPrefix) {
   if (!text || !providedPrefix || !/(thiếu|thêm|viết đầy đủ)/i.test(text)) return false;
   const expected = normalizeComparable(providedPrefix);
   const quoted = [...String(text).matchAll(/['"“”‘’]([^'"“”‘’]+)['"“”‘’]/g)].map(match => normalizeComparable(match[1]));
   return quoted.includes(expected);
+}
+
+function falselyRejectsFullSentence(text, data) {
+  if (!text || !data?.inputIncludesPrefix) return false;
+  const feedback = String(text).toLowerCase();
+  return /(lặp lại|lặp phần|bị lặp|thừa|dư|chỉ (?:cần|nên|ghi|viết|điền)|không (?:cần|nên|được) (?:ghi|viết|lặp))/.test(feedback)
+    && /(chủ ngữ|phần dẫn|phần đầu|tiền tố|đề đã cho|sau ['"“”‘’]|lan reminded|i expect|a new school)/.test(feedback);
 }
 
 function sanitizeFillFeedback(grade, data) {
@@ -153,6 +166,15 @@ function sanitizeFillFeedback(grade, data) {
     const tail = item.slice(marker + 4).trim();
     return tail ? `Cần ${tail.replace(/^cần\s+/i, '')}` : '';
   }).filter(Boolean);
+  const rejectedFullSentence = falselyRejectsFullSentence(grade.summary, data);
+  if (rejectedFullSentence) grade.summary = '';
+  grade.improvements = grade.improvements.filter(item => !falselyRejectsFullSentence(item, data));
+  if (rejectedFullSentence && !grade.improvements.length) {
+    grade.verdict = 'correct';
+    grade.answersQuestion = true;
+    grade.scorePercent = 100;
+    grade.summary = 'Câu trả lời đầy đủ và đúng yêu cầu; học sinh được phép viết lại cả phần dẫn.';
+  }
   if (grade.verdict !== 'correct' && !grade.improvements.length) {
     grade.improvements = ['Đối chiếu lại phần cần điền với barem của câu hỏi.'];
   }
@@ -190,8 +212,9 @@ function buildPrompt(data) {
     `Bài làm của học sinh: ${data.studentAnswer}`,
     data.providedPrefix ? `PHẦN ĐỀ ĐÃ CHO SẴN (TUYỆT ĐỐI KHÔNG ĐƯỢC BÁO THIẾU): ${data.providedPrefix}` : '',
     data.completedAnswer ? `CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP: ${data.completedAnswer}` : '',
+    data.inputIncludesPrefix ? 'CÁCH NHẬP: Học sinh đã viết trọn câu, bao gồm cả phần đề cho sẵn. Đây là cách nhập hợp lệ, không phải lỗi lặp từ.' : '',
     '',
-    'QUY TẮC ĐIỀN CHỖ TRỐNG: Nếu đề đã cho sẵn một phần câu trước/sau dấu gạch trống, mũi tên hoặc ô nhập, thì "Bài làm của học sinh" chỉ là nội dung học sinh điền vào phần trống. Trước khi chấm, phải ghép phần học sinh nhập vào đúng vị trí để tạo câu hoàn chỉnh. Mọi từ đã in sẵn trong đề được xem là đã có; tuyệt đối không trừ điểm vì học sinh không gõ lại chúng. Chỉ đánh giá tính đúng, đủ và ngữ pháp của phần cần điền trong ngữ cảnh câu hoàn chỉnh. Ví dụ: đề cho "I expect ____" và học sinh nhập "her to give me some advice" thì phải chấm câu hoàn chỉnh "I expect her to give me some advice".',
+    'QUY TẮC ĐIỀN CHỖ TRỐNG: Học sinh được phép nhập riêng phần còn thiếu HOẶC viết lại toàn bộ câu hoàn chỉnh gồm cả phần đề đã cho. Cả hai cách đều hợp lệ. Nếu bài làm đã bắt đầu bằng đúng phần tiền tố, không được ghép tiền tố thêm lần nữa và tuyệt đối không được báo lỗi lặp/thừa phần dẫn. Nếu học sinh chỉ nhập phần còn thiếu, hãy ghép nó vào đúng vị trí. Chỉ chấm CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP. Ví dụ: với "I expect ____", cả "her to give me some advice" và "I expect her to give me some advice" đều phải được hiểu là cùng một câu hoàn chỉnh.',
     '',
     'Nếu có dòng "CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP", bắt buộc chấm chính dòng đó và tuyệt đối không được nhận xét rằng học sinh thiếu phần tiền tố/hậu tố đã có trong dòng này. Hãy đối chiếu nội dung và lập luận. Chấp nhận cách giải khác nếu đúng. Không trừ điểm chỉ vì diễn đạt khác barem. Nếu bài làm chỉ nêu đáp số, hãy xét xem câu hỏi có yêu cầu trình bày hay không. Chỉ dùng verdict "correct" khi bài làm hoàn toàn đúng, đầy đủ mọi yêu cầu và đạt 100% điểm. Dùng "partly_correct" khi hướng/cấu trúc chính đúng nhưng còn một lỗi ngữ pháp, thiếu ý, thiếu bước hoặc chưa hoàn tất. Chỉ dùng "incorrect" khi cấu trúc/cách làm cốt lõi sai, kết luận sai hoặc không giải đáp được câu hỏi. Ví dụ "A new school are being built in West Street" là partly_correct vì đúng cấu trúc bị động nhưng sai hòa hợp chủ-vị; chỉ cần nhắc đổi "are" thành "is". Phản hồi thật ngắn gọn bằng tiếng Việt.'
   ].join('\n');
@@ -204,7 +227,8 @@ function buildBatchPrompt(data) {
     `Barem/lời giải tham khảo: ${item.referenceAnswer}`,
     `Bài làm của học sinh: ${item.studentAnswer}`,
     item.providedPrefix ? `PHẦN ĐỀ ĐÃ CHO SẴN (TUYỆT ĐỐI KHÔNG ĐƯỢC BÁO THIẾU): ${item.providedPrefix}` : '',
-    item.completedAnswer ? `CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP: ${item.completedAnswer}` : ''
+    item.completedAnswer ? `CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP: ${item.completedAnswer}` : '',
+    item.inputIncludesPrefix ? 'CÁCH NHẬP: Học sinh đã viết trọn câu, bao gồm cả phần đề cho sẵn. Đây là cách nhập hợp lệ, không phải lỗi lặp từ.' : ''
   ].join('\n')).join('\n\n');
   return [
     `Môn học: ${data.subject || 'Lớp 10'}`,
@@ -213,7 +237,7 @@ function buildBatchPrompt(data) {
     '',
     items,
     '',
-    'QUY TẮC ĐIỀN CHỖ TRỐNG: Với mỗi bài, nếu câu hỏi đã cho sẵn một phần câu trước/sau dấu gạch trống, mũi tên hoặc ô nhập, thì bài làm chỉ là phần học sinh điền. Hãy ghép nó vào đúng vị trí rồi chấm câu hoàn chỉnh. Mọi từ đã in sẵn trong đề được xem là đã có; tuyệt đối không yêu cầu học sinh gõ lại và không trừ điểm vì thiếu phần dẫn đó. Chỉ đánh giá phần cần điền trong ngữ cảnh hoàn chỉnh. Ví dụ: "I expect ____" + "her to give me some advice" phải được hiểu là "I expect her to give me some advice".',
+    'QUY TẮC ĐIỀN CHỖ TRỐNG: Với mỗi bài, học sinh được phép nhập riêng phần còn thiếu HOẶC viết lại toàn bộ câu hoàn chỉnh gồm cả phần đề đã cho. Cả hai cách đều hợp lệ. Nếu bài làm đã bắt đầu bằng đúng tiền tố, không ghép tiền tố thêm lần nữa và không báo lỗi lặp/thừa phần dẫn. Nếu chỉ nhập phần thiếu, hãy ghép vào đúng vị trí. Chỉ chấm CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP.',
     '',
     'Nếu có dòng "CÂU HOÀN CHỈNH HỆ THỐNG ĐÃ GHÉP", bắt buộc chấm chính dòng đó và tuyệt đối không được nhận xét rằng học sinh thiếu phần tiền tố/hậu tố đã có trong dòng này. Chấm độc lập từng bài theo đúng ID và trả đủ kết quả theo thứ tự đã cho. Chấp nhận cách giải khác nếu đúng. Không trừ điểm chỉ vì diễn đạt khác barem. Nếu bài làm chỉ nêu đáp số, hãy xét xem câu hỏi có yêu cầu trình bày hay không. Chỉ dùng verdict "correct" khi bài làm hoàn toàn đúng, đầy đủ mọi yêu cầu và đạt 100% điểm. Dùng "partly_correct" khi hướng/cấu trúc chính đúng nhưng còn một lỗi ngữ pháp, thiếu ý, thiếu bước hoặc chưa hoàn tất. Chỉ dùng "incorrect" khi cấu trúc/cách làm cốt lõi sai, kết luận sai hoặc không giải đáp được câu hỏi. Ví dụ "A new school are being built in West Street" là partly_correct vì đúng cấu trúc bị động nhưng sai hòa hợp chủ-vị; chỉ cần nhắc đổi "are" thành "is". Mỗi nhận xét chỉ một câu thật ngắn gọn bằng tiếng Việt.'
   ].join('\n');
@@ -471,6 +495,9 @@ const server = http.createServer(async (req, res) => {
         completedAnswer: reconstructFillAnswer(item?.question, item?.studentAnswer),
         providedPrefix: extractProvidedPrefix(item?.question)
       }));
+      items.forEach(item => {
+        item.inputIncludesPrefix = inputIncludesProvidedPrefix(item.studentAnswer, item.providedPrefix);
+      });
       const ids = items.map(item => item.id);
       if (items.some(item => !item.id || !item.question || !item.referenceAnswer || item.studentAnswer.length < 2) || new Set(ids).size !== ids.length) {
         return sendJson(res, 400, { error: 'Có câu tự luận thiếu ID, câu hỏi, barem hoặc bài làm hợp lệ.' }, origin);
@@ -512,6 +539,7 @@ const server = http.createServer(async (req, res) => {
     };
     data.completedAnswer = reconstructFillAnswer(data.question, data.studentAnswer);
     data.providedPrefix = extractProvidedPrefix(data.question);
+    data.inputIncludesPrefix = inputIncludesProvidedPrefix(data.studentAnswer, data.providedPrefix);
     if (!data.question || !data.referenceAnswer || data.studentAnswer.length < 2) {
       return sendJson(res, 400, { error: 'Thiếu câu hỏi, barem hoặc bài làm cần chấm.' }, origin);
     }
