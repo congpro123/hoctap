@@ -20,25 +20,25 @@ const mathLeLoi102 = [{
   questions: [
     ['Phát biểu nào sau đây không phải là một mệnh đề?', ['Hà Nội là thủ đô của Việt Nam.', 'Trái Đất quay quanh Mặt Trời.', '5+3=9.', 'Ngày mai bạn có đi chơi không?'], 3, 'Câu hỏi không có giá trị đúng hoặc sai xác định.'],
     ['Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?', ['{x+y≤10; 2x+y≤12}', '{x+y≤100; 2x+y²>0}', '{x²+y≤0; x−3y=12}', '{x+y>10; 2x+y+z≤12}'], 0, 'A gồm hai bất phương trình bậc nhất theo x và y.'],
-    ['Miền nghiệm của bất phương trình x+2y<−4 là nửa mặt phẳng chứa điểm nào?', ['(0;0).', '(0;−1).', '(−5;0).', '(1;−1).'], 2, 'Thay (−5;0) được −5<−4.'],
+    ['Miền nghiệm của bất phương trình x+2y<−4 là nửa mặt phẳng chứa điểm nào sau đây?', ['(0;0).', '(0;−1).', '(−5;0).', '(1;−1).'], 2, 'Thay (−5;0) được −5<−4.'],
     ['Điểm nào sau đây không thuộc miền nghiệm của hệ {2x+3y−1>0; 5x−y+4<0}?', ['(−2;4).', '(0;1).', '(−1;4).', '(−3;4).'], 1, 'Tại (0;1), 5x−y+4=3>0 nên không thỏa bất phương trình thứ hai.'],
     ['Trong các bất phương trình sau, bất phương trình nào là bất phương trình bậc nhất hai ẩn?', ['x+y+z<0.', '2x≥2yx+6.', '3x−y−4≤0.', '2x²−y>0.'], 2, 'Chỉ C có dạng ax+by+c≤0 với hai ẩn x,y.'],
     ['Cặp số (x₀;y₀) nào sau đây không là nghiệm của bất phương trình x−4y+5≥0?', ['(0;0).', '(1;−3).', '(−2;1).', '(−5;0).'], 2, 'Tại (−2;1), x−4y+5=−1<0.'],
     ['Cho mệnh đề Q: “∃x∈ℝ: x²−4x+3=0”. Mệnh đề phủ định của Q là', ['∀x∈ℝ: x²−4x+3≠0.', '∀x∈ℝ: x²−4x+3<0.', '∃x∈ℝ: x²−4x+3≠0.', '∀x∈ℝ: x²−4x+3=0.'], 0, 'Đổi ∃ thành ∀ và dấu = thành ≠.'],
     ['Miền nghiệm của bất phương trình 3x−2y>−6 được biểu diễn bởi hình nào? Vùng gạch sọc là miền nghiệm.', [ll102Plane('a','fallingA','below'), ll102Plane('b','rising','below'), ll102Plane('c','rising','above'), ll102Plane('d','fallingD','above')], 1, 'Đường biên y=3x/2+3 đi qua (−2;0),(0;3); điểm O thỏa 0>−6 nên miền nghiệm chứa O và nằm dưới đường thẳng.'],
-    ['Cho góc tù x (90°<x<180°). Khẳng định nào sau đây đúng?', ['tan x>0.', 'cos x>0.', 'sin x<0.', 'cot x<0.'], 3, 'Trong góc phần tư II, cot x âm.'],
-    ['Cho mệnh đề: “Nếu tứ giác ABCD là hình thoi thì tứ giác ABCD có hai đường chéo vuông góc”. Mệnh đề đảo là', ['Nếu ABCD là hình bình hành thì hai đường chéo vuông góc.', 'Nếu ABCD không là hình thoi thì hai đường chéo không vuông góc.', 'Nếu ABCD có hai đường chéo vuông góc thì ABCD là hình thoi.', 'Nếu hai đường chéo không vuông góc thì ABCD không là hình thoi.'], 2, 'Mệnh đề đảo hoán đổi giả thiết và kết luận.'],
-    ['Cho A={x∈ℤ | −2≤x<3}. Khi đó A là tập nào?', ['(−2;3).', '{−2;−1;0;1;2;3}.', '[−2;3).', '{−2;−1;0;1;2}.'], 3, 'Liệt kê các số nguyên từ −2 đến 2.'],
-    ['Cho tan α=3. Tính B=(2sin α−5cos α)/(sin α+2cos α).', ['1.', '−1/5.', '1/5.', '3/5.'], 2, 'Chia tử và mẫu cho cos α: B=(2·3−5)/(3+2)=1/5.']
+    ['Cho góc tù x (90°<x<180°). Khẳng định nào sau đây là đúng?', ['tan x>0.', 'cos x>0.', 'sin x<0.', 'cot x<0.'], 3, 'Trong góc phần tư II, cot x âm.'],
+    ['Cho tứ giác ABCD. Xét mệnh đề: “Nếu tứ giác ABCD là hình thoi thì tứ giác ABCD có hai đường chéo vuông góc”. Mệnh đề đảo của mệnh đề đó là', ['Nếu tứ giác ABCD là hình bình hành thì hai đường chéo vuông góc.', 'Nếu tứ giác ABCD không là hình thoi thì hai đường chéo không vuông góc.', 'Nếu tứ giác ABCD có hai đường chéo vuông góc thì tứ giác ABCD là hình thoi.', 'Nếu hai đường chéo không vuông góc thì tứ giác ABCD không là hình thoi.'], 2, 'Mệnh đề đảo hoán đổi giả thiết và kết luận.'],
+    ['Cho tập hợp A={x∈ℤ | −2≤x<3}. Khi đó A là tập hợp nào sau đây?', ['(−2;3).', '{−2;−1;0;1;2;3}.', '[−2;3).', '{−2;−1;0;1;2}.'], 3, 'Liệt kê các số nguyên từ −2 đến 2.'],
+    ['Cho tan α=3. Tính giá trị của biểu thức B=(2sin α−5cos α)/(sin α+2cos α) bằng', ['1.', '−1/5.', '1/5.', '3/5.'], 2, 'Chia tử và mẫu cho cos α: B=(2·3−5)/(3+2)=1/5.']
   ],
   tf: [
     { stem: 'Xét tính đúng sai của các mệnh đề sau:', items: [
       ['∃n∈ℕ, 4ⁿ≤2n+1.', true, 'Lấy n=0 thì 4⁰=1≤1.'],
       ['Nếu A={0;2;4;6;8}, B={2;3;4;5} thì A∩B={2;4}.', true, 'Hai phần tử chung là 2 và 4.'],
       ['−6<2 ⇒ (−6)²<2².', false, '36 không nhỏ hơn 4.'],
-      ['Cho P: “∀x∈ℝ, x²−x+2>0”. Khi đó phủ định của P là “∃x∈ℝ, x²−x+2≤0”.', true, 'Phủ định ∀ là ∃, phủ định >0 là ≤0.']
+      ['Cho mệnh đề P: “∀x∈ℝ, x²−x+2>0”. Khi đó P̄: “∃x∈ℝ, x²−x+2≤0”.', true, 'Phủ định ∀ là ∃, phủ định >0 là ≤0.']
     ] },
-    { stem: `Trên nửa đường tròn đơn vị, góc AOM=α như hình; M có tọa độ (a;b). Xét tính đúng sai. ${ll102Circle}`, items: [
+    { stem: `Trên nửa đường tròn đơn vị, cho góc AOM=α như hình vẽ sau. Khi đó: ${ll102Circle}`, items: [
       ['cos α<0.', true, 'M ở góc phần tư II nên hoành độ a=cos α<0.'],
       ['sin α=1−b.', false, 'Trên đường tròn đơn vị, sin α=b.'],
       ['tan α=b/a.', true, 'tan α=sin α/cos α=b/a.'],
@@ -46,17 +46,17 @@ const mathLeLoi102 = [{
     ] }
   ],
   short: [
-    { question: 'Trong 47 học sinh lớp 10A, 20 em thích bóng đá, 25 em thích cầu lông, 12 em không thích cả hai môn. Có bao nhiêu học sinh chỉ thích cầu lông?', answer: 15, explanation: 'Thích ít nhất một môn: 47−12=35. Thích cả hai: 20+25−35=10. Chỉ cầu lông: 25−10=15.' },
-    { question: `Mảnh đất hình thang ABCD có AD∥BC, AB=70 m, ∠DAC=22°, ∠BAC=54°, ∠ABD=73°. Tính diện tích mảnh đất, làm tròn đến mét vuông. ${ll102Trapezoid}`, answer: 9548, unit: 'm²', explanation: '∠BAD=76°, ∠ADB=31°. Chiều cao h=70sin76°; AD=70sin73°/sin31°. Vì AC tạo với AD góc 22°, BC=h/tan22°−70cos76°. Diện tích (AD+BC)h/2≈9547,9 m², làm tròn 9548 m².' },
-    { question: 'Cho D=(4;18] và B=[7;23). Tìm số phần tử là số nguyên thuộc D∪B.', answer: 18, explanation: 'D∪B=(4;23), gồm các số nguyên 5,6,…,22: có 18 số.' },
-    { question: 'Tính diện tích miền nghiệm của hệ {x≤0; y≥0; 2x−y≥−2}.', answer: 1, explanation: 'Miền tam giác có các đỉnh (−1;0), (0;0), (0;2). Diện tích bằng 1·2/2=1.' }
+    { question: 'Trong một cuộc phỏng vấn 47 học sinh của lớp 10A về việc tập luyện các môn thể dục thể thao vào ngày nghỉ cuối tuần, có 20 học sinh thích chơi bóng đá, 25 học sinh thích chơi cầu lông và 12 học sinh không thích cả hai môn trên. Có bao nhiêu học sinh chỉ thích chơi cầu lông?', answer: 15, explanation: 'Thích ít nhất một môn: 47−12=35. Thích cả hai: 20+25−35=10. Chỉ cầu lông: 25−10=15.' },
+    { question: `Ông An vừa được cấp một mảnh đất trồng lúa có dạng hình thang ABCD với AD∥BC. Cạnh AB dọc theo đường đi và có độ dài 70m. Sử dụng giác kế, người ta đo được các góc DAC=22°, BAC=54° và ABD=73°. Hãy tính gần đúng diện tích mảnh đất của ông An (đơn vị mét vuông, kết quả chính xác đến hàng đơn vị). ${ll102Trapezoid}`, answer: 9548, unit: 'm²', explanation: '∠BAD=76°, ∠ADB=31°. Chiều cao h=70sin76°; AD=70sin73°/sin31°. Vì AC tạo với AD góc 22°, BC=h/tan22°−70cos76°. Diện tích (AD+BC)h/2≈9547,9 m², làm tròn 9548 m².' },
+    { question: 'Cho hai tập hợp D=(4;18] và B=[7;23). Tìm số phần tử là số nguyên thuộc tập hợp D∪B.', answer: 18, explanation: 'D∪B=(4;23), gồm các số nguyên 5,6,…,22: có 18 số.' },
+    { question: 'Tính diện tích miền nghiệm của hệ bất phương trình {x≤0; y≥0; 2x−y≥−2}.', answer: 1, explanation: 'Miền tam giác có các đỉnh (−1;0), (0;0), (0;2). Diện tích bằng 1·2/2=1.' }
   ],
   essay: [
-    { title: 'Câu 1.', question: 'Cho mệnh đề: “Nếu một tứ giác là hình chữ nhật thì nó có hai đường chéo bằng nhau”. a) Phát biểu mệnh đề đảo. b) Mệnh đề đảo đúng hay sai? Giải thích.', solution: 'a) Nếu một tứ giác có hai đường chéo bằng nhau thì nó là hình chữ nhật. b) Sai: hình thang cân có hai đường chéo bằng nhau nhưng không nhất thiết là hình chữ nhật.' },
-    { title: 'Câu 2.', question: 'Cho tam giác ABC có AB=10, AC=5, ∠C=80°. Tính ∠B (độ), làm tròn đến hàng phần mười.', solution: 'Theo định lý sin: sin B/AC=sin C/AB, nên sin B=(5/10)sin80°. Vì B<C nên B≈29,5°.' },
-    { title: 'Câu 3.', question: 'Cho A=(−2;7] và B=[1;m+2]. Biết B≠∅, có bao nhiêu giá trị nguyên của m để A∪B=A?', solution: 'B≠∅ cho m+2≥1, tức m≥−1. B⊆A cho m+2≤7, tức m≤5. Có 7 giá trị nguyên m từ −1 đến 5.' },
-    { title: 'Câu 4.', question: 'Xưởng có máy cưa gỗ tự động và máy đánh bóng, mỗi máy làm việc không quá 12 giờ/ngày. Một bàn học sinh cần 3 giờ cưa và 2 giờ đánh bóng, lãi 113 nghìn đồng; một ghế gỗ cần 1 giờ cưa và 2 giờ đánh bóng, lãi 88 nghìn đồng. Mỗi máy không thể đồng thời sản xuất hai loại sản phẩm. Tính số tiền lãi lớn nhất (nghìn đồng).', solution: 'Gọi x,y là số bàn và ghế. Ràng buộc 3x+y≤12, x+y≤6, x,y≥0. Hàm lãi P=113x+88y. Xét các đỉnh (0;0),(4;0),(3;3),(0;6): giá trị lớn nhất là 603 nghìn đồng tại x=y=3.' },
-    { title: 'Câu 5.', question: `Một người đứng trên tháp cao 280 m muốn xác định khoảng cách giữa hai cột mốc trên mặt đất. Góc giữa hai đường ngắm là 43°; góc giữa phương thẳng đứng và đường ngắm tới một mốc là 62°, tới mốc còn lại là 54°. Tính khoảng cách giữa hai cột mốc. ${ll102Tower}`, solution: 'Khoảng cách từ đỉnh tháp đến hai mốc lần lượt là 280/cos62° và 280/cos54°. Áp dụng định lý cosin với góc xen giữa 43°: khoảng cách hai mốc =√[(280/cos62°)²+(280/cos54°)²−2(280/cos62°)(280/cos54°)cos43°]≈408,7 m.' }
+    { title: 'Câu 1.', question: 'Cho mệnh đề: “Nếu một tứ giác là hình chữ nhật thì nó có hai đường chéo bằng nhau”.<br>a) Phát biểu mệnh đề đảo của mệnh đề trên.<br>b) Mệnh đề đảo đúng hay sai? Giải thích.', solution: 'a) Nếu một tứ giác có hai đường chéo bằng nhau thì nó là hình chữ nhật. b) Sai: hình thang cân có hai đường chéo bằng nhau nhưng không nhất thiết là hình chữ nhật.' },
+    { title: 'Câu 2.', question: 'Cho tam giác ABC có AB=10; AC=5; Ĉ=80°. Tính góc B̂ (đơn vị độ, làm tròn đến hàng phần chục).', solution: 'Theo định lý sin: sin B/AC=sin C/AB, nên sin B=(5/10)sin80°. Vì B<C nên B≈29,5°.' },
+    { title: 'Câu 3.', question: 'Cho hai tập hợp A=(−2;7] và B=[1;m+2]. Biết B≠∅, có bao nhiêu giá trị nguyên của tham số m để tập hợp A∪B=A.', solution: 'B≠∅ cho m+2≥1, tức m≥−1. B⊆A cho m+2≤7, tức m≤5. Có 7 giá trị nguyên m từ −1 đến 5.' },
+    { title: 'Câu 4.', question: 'Một xưởng sản xuất có hai loại máy là máy cưa gỗ tự động và máy đánh bóng bề mặt để sản xuất hai loại sản phẩm bàn học sinh và ghế gỗ. Để sản xuất 1 cái bàn học sinh cần dùng máy cưa gỗ tự động trong 3 giờ và dùng máy đánh bóng bề mặt trong 2 giờ. Để sản xuất 1 cái ghế gỗ cần dùng máy cưa gỗ tự động trong 1 giờ và dùng máy đánh bóng bề mặt trong 2 giờ. Cho biết mỗi máy không thể sản xuất đồng thời hai loại sản phẩm. Máy cưa gỗ tự động làm việc không quá 12 giờ một ngày, máy đánh bóng bề mặt làm việc không quá 12 giờ một ngày. Một cái bàn học sinh lãi 113 ngàn đồng và một cái ghế gỗ lãi 88 ngàn đồng. Tính số tiền lãi (ngàn đồng) có thể thu được lớn nhất.', solution: 'Gọi x,y là số bàn và ghế. Ràng buộc 3x+y≤12, x+y≤6, x,y≥0. Hàm lãi P=113x+88y. Xét các đỉnh (0;0),(4;0),(3;3),(0;6): giá trị lớn nhất là 603 nghìn đồng tại x=y=3.' },
+    { title: 'Câu 5.', question: `Một người đứng ở trên một tháp truyền hình cao 280 m so với mặt đất, muốn xác định khoảng cách giữa hai cột mốc trên mặt đất bên dưới. Người đó quan sát thấy góc được tạo bởi hai đường ngắm tới hai mốc này là 43°, góc giữa phương thẳng đứng và đường ngắm tới một điểm mốc trên mặt đất là 62° và đến điểm mốc khác là 54° (Hình). Tính khoảng cách giữa hai cột mốc này. ${ll102Tower}`, solution: 'Khoảng cách từ đỉnh tháp đến hai mốc lần lượt là 280/cos62° và 280/cos54°. Áp dụng định lý cosin với góc xen giữa 43°: khoảng cách hai mốc =√[(280/cos62°)²+(280/cos54°)²−2(280/cos62°)(280/cos54°)cos43°]≈408,7 m.' }
   ]
 }];
 escapeExamMathFields(mathLeLoi102[0]);

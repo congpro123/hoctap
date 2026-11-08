@@ -12,56 +12,56 @@ const mathDakLak1001 = [{
   title: 'Toán 10 - THPT số 1 Phan Chu Trinh, Đắk Lắk - Giữa kỳ I 2026–2027 - Mã 1001',
   subject: 'math', minutes: 90, mcUnit: 0.25,
   school: 'Trường THPT số 1 Phan Chu Trinh', province: 'Đắk Lắk', year: '2026–2027',
-  description: 'Đề chính thức mã 1001: 12 câu chọn đáp án, 4 câu đúng/sai (mỗi câu 4 ý), 6 câu trả lời ngắn; đối chiếu bảng đáp án do người dùng cung cấp.',
+  description: 'Đề chính thức mã 1001: 12 câu chọn đáp án, 4 câu đúng/sai (mỗi câu 4 ý), 6 câu trả lời ngắn; giữ nguyên văn nội dung 5 trang ảnh đề.',
   source: { school: 'Trường THPT số 1 Phan Chu Trinh', province: 'Đắk Lắk', year: '2026–2027', url: '#', note: 'Nội dung từ 5 ảnh đề chính thức và bảng đáp án mã 1001 do người dùng cung cấp.' },
   questions: [
-    ['Cho X={x∈ℝ | −4<x≤7}. Tập hợp X viết dưới dạng khoảng, đoạn, nửa khoảng là', ['(−4;7).', '[−4;7).', '(−4;7].', '[−4;7].'], 2, '−4 không lấy, 7 được lấy nên X=(−4;7].'],
+    ['Cho tập hợp X={x∈ℝ | −4<x≤7}. Tập hợp X được viết dưới dạng kí hiệu khoảng, đoạn, nửa khoảng là', ['(−4;7).', '[−4;7).', '(−4;7].', '[−4;7].'], 2, '−4 không lấy, 7 được lấy nên X=(−4;7].'],
     ['Cho mệnh đề P: ∀x∈ℝ, x²−4x+7>0. Mệnh đề phủ định của P là', ['∀x∈ℝ, x²−4x+7≠0.', '∃x∈ℝ, x²−4x+7≤0.', '∃x∈ℝ, x²−4x+7=0.', '∃x∈ℝ, x²−4x+7>0.'], 1, 'Phủ định ∀ là ∃; phủ định >0 là ≤0.'],
-    [`Cho tập hợp S là phần không bị gạch sọc trên trục số. S là tập nào? ${dakInterval}`, ['[−2;3).', '(−2;3).', '(−∞;−2)∪(3;+∞).', '[−2;3].'], 1, 'Khoảng giữa −2 và 3 không chứa hai đầu mút.'],
-    ['Cho tam giác ABC có BC=a, CA=b, AB=c. Công thức tính diện tích S là', ['S=½bc sin A.', 'S=½bc cos A.', 'S=bc sin A.', 'S=bc cos A.'], 0, 'Diện tích bằng nửa tích hai cạnh kề nhân sin góc xen giữa.'],
-    ['Cho tam giác ABC có BC=a, CA=b, AB=c. Khẳng định nào đúng?', ['a²=b²+c²−bc cos A.', 'a²=b²+c²+2bc cos A.', 'a²=b²+c²+bc cos A.', 'a²=b²+c²−2bc cos A.'], 3, 'Định lý cosin: a²=b²+c²−2bc cos A.'],
-    ['Hệ nào sau đây là hệ bất phương trình bậc nhất hai ẩn x,y?', ['{2x+y−3=0; x−4y=1}', '{x+y>2; x²−y≤4}', '{2x+y−3<0; x−4y≥1}', '{3x−y≥0; xy+y<5}'], 2, 'C gồm hai bất phương trình bậc nhất theo x,y.'],
-    ['Cho M={a;b;c}, trong đó a,b,c phân biệt và khác 0. Tập nào là tập con của M?', ['{a;d}.', 'a.', '{0}.', '{a;c}.'], 3, 'Cả a và c đều thuộc M.'],
-    ['Cho bất phương trình 2x−3y+1>0. Cặp số nào là nghiệm?', ['(1;2).', '(−1;1).', '(1;1).', '(2;1).'], 3, 'Với (2;1): 2·2−3·1+1=2>0.'],
-    [`Cho biểu đồ Venn, phần gạch sọc biểu diễn tập hợp nào? ${dakVenn}`, ['A∩B.', 'B\\A.', 'A\\B.', 'A∪B.'], 0, 'Vùng chung của hai hình là giao A∩B.'],
-    [`Cho nửa đường tròn đơn vị tâm O. Điểm M trên đường tròn có hình chiếu lên Ox là −3/5 và lên Oy là 4/5. Giá trị cos α bằng bao nhiêu? ${dakCircle}`, ['−3/4.', '4/5.', '3/5.', '−3/5.'], 3, 'Trên đường tròn đơn vị, cos α là hoành độ của M: −3/5.'],
-    ['Bất phương trình nào là bất phương trình bậc nhất hai ẩn x,y?', ['3x−2y+5≤0.', 'x+3xy−4<0.', 'xy≥−2.', '2x²−y>3.'], 0, 'Chỉ A có dạng ax+by+c≤0.'],
-    ['Trong các câu sau, câu nào là một mệnh đề toán học?', ['Hình thoi có hai đường chéo vuông góc phải không?', 'Môn Toán thật là thú vị!', '19 là một số lẻ.', 'Phương trình x²−4x+3=0 có nghiệm không?'], 2, '“19 là một số lẻ” là câu khẳng định có giá trị đúng.']
+    [`Cho tập hợp S là tập con của tập số thực ℝ được biểu diễn trên trục số như hình vẽ bên dưới (phần không bị gạch sọc). Tập hợp S là tập hợp nào sau đây? ${dakInterval}`, ['[−2;3).', '(−2;3).', '(−∞;−2)∪(3;+∞).', '[−2;3].'], 1, 'Khoảng giữa −2 và 3 không chứa hai đầu mút.'],
+    ['Cho tam giác ABC có BC=a, CA=b, AB=c. Diện tích S của tam giác ABC được tính theo công thức nào sau đây?', ['S=½bc sin A.', 'S=½bc cos A.', 'S=bc sin A.', 'S=bc cos A.'], 0, 'Diện tích bằng nửa tích hai cạnh kề nhân sin góc xen giữa.'],
+    ['Cho tam giác ABC có BC=a, CA=b, AB=c. Khẳng định nào sau đây là đúng?', ['a²=b²+c²−bc cos A.', 'a²=b²+c²+2bc cos A.', 'a²=b²+c²+bc cos A.', 'a²=b²+c²−2bc cos A.'], 3, 'Định lý cosin: a²=b²+c²−2bc cos A.'],
+    ['Hệ nào sau đây là một hệ bất phương trình bậc nhất hai ẩn x,y?', ['{2x+y−3=0; x−4y=1}', '{x+y>2; x²−y≤4}', '{2x+y−3<0; x−4y≥1}', '{3x−y≥0; xy+y<5}'], 2, 'C gồm hai bất phương trình bậc nhất theo x,y.'],
+    ['Cho tập hợp M={a;b;c} (với a,b,c là các phần tử phân biệt và khác 0). Tập hợp nào sau đây là một tập con của tập hợp M?', ['{a;d}.', 'a.', '{0}.', '{a;c}.'], 3, 'Cả a và c đều thuộc M.'],
+    ['Cho bất phương trình bậc nhất hai ẩn 2x−3y+1>0. Cặp số (x₀;y₀) nào sau đây là một nghiệm của bất phương trình đã cho?', ['(1;2).', '(−1;1).', '(1;1).', '(2;1).'], 3, 'Với (2;1): 2·2−3·1+1=2>0.'],
+    [`Cho hai tập hợp A và B được biểu diễn bằng biểu đồ Ven như hình bên dưới. Phần gạch sọc trong hình vẽ là biểu diễn của tập hợp nào sau đây? ${dakVenn}`, ['A∩B.', 'B\\A.', 'A\\B.', 'A∪B.'], 0, 'Vùng chung của hai hình là giao A∩B.'],
+    [`Trong mặt phẳng tọa độ Oxy, cho nửa đường tròn đơn vị tâm O. Điểm M nằm trên nửa đường tròn đơn vị sao cho góc xOM=α và có tọa độ các hình chiếu vuông góc lên trục Ox, Oy như hình vẽ bên dưới. Giá trị của cos α bằng ${dakCircle}`, ['−3/4.', '4/5.', '3/5.', '−3/5.'], 3, 'Trên đường tròn đơn vị, cos α là hoành độ của M: −3/5.'],
+    ['Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn x,y?', ['3x−2y+5≤0.', 'x+3xy−4<0.', 'xy≥−2.', '2x²−y>3.'], 0, 'Chỉ A có dạng ax+by+c≤0.'],
+    ['Trong các câu sau đây, câu nào là một mệnh đề toán học?', ['Hình thoi có hai đường chéo vuông góc phải không?', 'Môn Toán thật là thú vị!', '19 là một số lẻ.', 'Phương trình x²−4x+3=0 có nghiệm không?'], 2, '“19 là một số lẻ” là câu khẳng định có giá trị đúng.']
   ],
   tf: [
-    { stem: `Cho hệ x≥0, y≥0, 3x+2y≤12, x+2y≤8. Miền nghiệm là tứ giác OABC với O(0;0), A(4;0), B(2;3), C(0;4), kể cả bốn cạnh. ${dakRegion}`,
+    { stem: `Cho hệ bất phương trình bậc nhất hai ẩn {x≥0; y≥0; 3x+2y≤12; x+2y≤8} có miền nghiệm được biểu diễn bởi phần tô màu trên mặt phẳng tọa độ Oxy có lưới ô vuông như hình vẽ bên dưới. Xét tính đúng sai của các mệnh đề sau: ${dakRegion}`,
       items: [
-        ['F(x;y)=2x+3y tại O(0;0) bằng 0.', true, 'F(0;0)=0.'],
-        ['Đỉnh B có tọa độ (3;2).', false, 'Giải hai đường biên cho B=(2;3).'],
-        ['M(1;2) thuộc miền nghiệm.', true, '3·1+2·2=7≤12 và 1+2·2=5≤8; x,y≥0.'],
-        ['Miền nghiệm là tứ giác OABC, kể cả bốn cạnh.', true, 'Bốn đỉnh O,A,B,C đều trên miền nghiệm; dấu ≤,≥ cho lấy cả biên.']
+        ['Giá trị của biểu thức F(x;y)=2x+3y tại đỉnh O(0;0) bằng 0.', true, 'F(0;0)=0.'],
+        ['Đỉnh B của miền nghiệm có tọa độ là (3;2).', false, 'Giải hai đường biên cho B=(2;3).'],
+        ['Điểm M(1;2) thuộc miền nghiệm của hệ bất phương trình đã cho.', true, '3·1+2·2=7≤12 và 1+2·2=5≤8; x,y≥0.'],
+        ['Miền nghiệm của hệ bất phương trình đã cho là miền tứ giác OABC (kể cả bốn cạnh).', true, 'Bốn đỉnh O,A,B,C đều trên miền nghiệm; dấu ≤,≥ cho lấy cả biên.']
       ] },
-    { stem: 'Cho A=[−2;4), B={x∈ℝ | 1<x≤6}.', items: [
-      ['A∪B=[−2;6].', true, 'Hai khoảng giao nhau, hợp từ −2 đến 6.'],
+    { stem: 'Cho hai tập hợp con của tập hợp số thực ℝ là A=[−2;4) và B={x∈ℝ | 1<x≤6}. Xét tính đúng sai của các mệnh đề sau:', items: [
+      ['Tập hợp A∪B=[−2;6].', true, 'Hai khoảng giao nhau, hợp từ −2 đến 6.'],
       ['B=(1;6].', true, 'Đây là cách viết B dưới dạng khoảng.'],
-      ['Phần bù của A trong ℝ là (−∞;−2]∪(4;+∞).', false, 'Phần bù đúng là (−∞;−2)∪[4;+∞).'],
-      ['A có vô số phần tử.', true, 'A là một khoảng liên tục khác rỗng.']
+      ['Phần bù của tập hợp A trong ℝ là CℝA=(−∞;−2]∪(4;+∞).', false, 'Phần bù đúng là (−∞;−2)∪[4;+∞).'],
+      ['Tập hợp A có vô số phần tử.', true, 'A là một khoảng liên tục khác rỗng.']
     ] },
-    { stem: `Lớp 10A khảo sát hai môn Bóng đá và Cầu lông: chỉ thích Bóng đá 14 học sinh; thích cả hai 8; chỉ thích Cầu lông 11; không thích môn nào 7. ${dakSports}`, items: [
-      ['Chỉ thích Bóng đá, không thích Cầu lông là 22 học sinh.', false, 'Chỉ Bóng đá có 14 học sinh.'],
-      ['Thích cả hai môn là 8 học sinh.', true, 'Số ở vùng giao là 8.'],
-      ['Tổng số học sinh lớp 10A là 33.', false, 'Tổng lớp =14+8+11+7=40.'],
-      ['Thích ít nhất một trong hai môn là 33 học sinh.', true, 'Hợp hai môn gồm 14+8+11=33 học sinh.']
+    { stem: `Để chuẩn bị cho Hội khỏe Phù Đổng cấp trường, giáo viên chủ nhiệm lớp 10A đã khảo sát sở thích chơi thể thao của toàn bộ học sinh trong lớp đối với hai môn là Bóng đá và Cầu lông. Kết quả số lượng học sinh của từng nhóm trong lớp được biểu diễn hoàn chỉnh bằng biểu đồ Venn dưới đây (mỗi số ghi trên hình là số học sinh thuộc miền tương ứng và không có học sinh nào vắng mặt). Dựa vào số liệu trên biểu đồ Venn, hãy xét tính đúng sai của các mệnh đề sau: ${dakSports}`, items: [
+      ['Số học sinh chỉ thích chơi Bóng đá mà không thích chơi Cầu lông là 22.', false, 'Chỉ Bóng đá có 14 học sinh.'],
+      ['Số học sinh thích chơi cả hai môn Bóng đá và Cầu lông là 8.', true, 'Số ở vùng giao là 8.'],
+      ['Tổng số học sinh của lớp 10A là 33 học sinh.', false, 'Tổng lớp =14+8+11+7=40.'],
+      ['Số học sinh thích chơi ít nhất một trong hai môn thể thao Bóng đá hoặc Cầu lông là 33.', true, 'Hợp hai môn gồm 14+8+11=33 học sinh.']
     ] },
-    { stem: `Cho tam giác ABC có A=45°, B=60° và BC=6√2. ${dakTriangle}`, items: [
-      ['sin A=√2/2.', true, 'sin45°=√2/2.'],
-      ['Bán kính đường tròn nội tiếp r=S/p, với S là diện tích, p là nửa chu vi.', true, 'Công thức chuẩn r=S/p.'],
-      ['CA=7√2.', false, 'Theo định lý sin: CA=BC·sin60°/sin45°=6√3.'],
-      ['C=75°.', true, 'C=180°−45°−60°=75°.']
+    { stem: `Cho tam giác ABC có Â=45°, B̂=60° và cạnh BC=6√2. Xét tính đúng sai của các mệnh đề sau: ${dakTriangle}`, items: [
+      ['Giá trị của sin A bằng √2/2.', true, 'sin45°=√2/2.'],
+      ['Bán kính r của đường tròn nội tiếp tam giác ABC được tính theo công thức r=S/p, trong đó S và p lần lượt là diện tích và nửa chu vi của tam giác ABC.', true, 'Công thức chuẩn r=S/p.'],
+      ['Độ dài cạnh CA bằng 7√2.', false, 'Theo định lý sin: CA=BC·sin60°/sin45°=6√3.'],
+      ['Số đo góc C của tam giác ABC bằng 75°.', true, 'C=180°−45°−60°=75°.']
     ] }
   ],
   short: [
-    { question: 'Nhóm Lan rảnh trong A=[14;18], nhóm Minh rảnh trong B=(15;20]. Có bao nhiêu số nguyên trong khoảng thời gian chung A∩B?', answer: 3, explanation: 'A∩B=(15;18], gồm các số nguyên 16,17,18.' },
-    { question: 'Biết tan x=2. Tính P=(4sin x+cos x)/(2sin x−cos x).', answer: 3, explanation: 'Chia tử mẫu cho cos x: P=(4tan x+1)/(2tan x−1)=(8+1)/(4−1)=3.' },
-    { question: 'Ba bồn hoa ở A,B,C tạo tam giác có AB=14 m, BC=30 m, CA=40 m. Tính bán kính R (mét) của đường tròn ngoại tiếp tam giác ABC.', answer: 25, unit: 'm', explanation: 'p=(14+30+40)/2=42, S=√[42·28·12·2]=168; R=abc/(4S)=14·30·40/(4·168)=25 m.' },
-    { question: 'Ba danh sách số thứ tự học sinh A={4;7}, B={7;x}, C={4;y} bằng nhau: A=B=C. Tính x+y.', answer: 11, explanation: 'Từ A=B suy ra x=4; từ A=C suy ra y=7; x+y=11.' },
-    { question: 'Câu lạc bộ làm hai loại nến “Ban Mai” và “Hoàng Hôn”. Mỗi bộ Ban Mai cần 200 g sáp và 40 ml tinh dầu; Hoàng Hôn cần 300 g sáp và 20 ml tinh dầu. Có tối đa 6 kg sáp và 800 ml tinh dầu. Sáp giá 60 nghìn đồng/kg, tinh dầu 50 nghìn đồng/100 ml; mỗi bộ dùng thêm cốc 8 nghìn đồng và hộp 10 nghìn đồng. Phí gian hàng 120 nghìn và trang trí 60 nghìn. Giá bán Ban Mai 100 nghìn, Hoàng Hôn 86 nghìn đồng/bộ; sản phẩm làm ra bán hết. Lợi nhuận ròng lớn nhất là bao nhiêu nghìn đồng?', answer: 970, unit: 'nghìn đồng', explanation: 'Gọi x,y là số bộ. Ràng buộc 2x+3y≤60, 2x+y≤40, x,y≥0. Lãi mỗi bộ lần lượt 50 và 40 nghìn; chi phí cố định 180 nghìn. Tối đa 50x+40y−180 tại x=15,y=10, được 970 nghìn đồng.' },
-    { question: `Trên thảm cỏ tam giác ABC có AB=20 m, BC=42 m, CA=34 m. D nằm trên BC (khác B,C), bán kính đường tròn ngoại tiếp tam giác ABD là 12,5 m. M chọn trên AB, N chọn trên AD (kể cả hai đầu mút). Tìm giá trị nhỏ nhất của DM+CN, làm tròn đến hàng phần mười (mét). ${dakCable}`, answer: 37.2, unit: 'm', explanation: 'Đặt B=(0,0), C=(42,0). Từ AB=20, AC=34 suy ra A=(12,16). Bán kính ngoại tiếp ABD bằng 5AD/8=12,5 nên AD=20; D=(24,0). Khoảng cách nhỏ nhất DM là khoảng cách D đến AB, bằng 19,2 m (hình chiếu nằm trên AB). Hình chiếu của C lên đường AD nằm ngoài đoạn AD, nên CN nhỏ nhất tại N=D: CD=18 m. Tổng nhỏ nhất 37,2 m.' }
+    { question: 'Để chuẩn bị cho buổi tập văn nghệ tại trường THPT, nhóm của Lan rảnh trong khung thời gian từ 14 giờ đến 18 giờ chiều và được biểu diễn bởi tập hợp A=[14;18] (tập con của ℝ). Nhóm của Minh rảnh trong khung thời gian sau 15 giờ đến 20 giờ tối và được biểu diễn bởi tập hợp B=(15;20] (tập con của ℝ). Hỏi trong tập hợp thời gian chung A∩B mà cả hai nhóm cùng rảnh, có bao nhiêu số nguyên?', answer: 3, explanation: 'A∩B=(15;18], gồm các số nguyên 16,17,18.' },
+    { question: 'Trong giờ thực hành môn Vật lí tại sân trường THPT, một học sinh đo góc nghiêng x của một tấm ván trượt thí nghiệm so với mặt đất và xác định được tan x=2. Để hoàn thành phiếu học tập, bạn học sinh đó cần tính giá trị của biểu thức: P=(4sin x+cos x)/(2sin x−cos x). Hãy tính giá trị của biểu thức P.', answer: 3, explanation: 'Chia tử mẫu cho cos x: P=(4tan x+1)/(2tan x−1)=(8+1)/(4−1)=3.' },
+    { question: 'Trên sân trường THPT có ba bồn hoa tại ba vị trí A, B, C tạo thành một tam giác có khoảng cách giữa các bồn hoa lần lượt là AB=14m, BC=30m và CA=40m (minh họa như hình vẽ bên dưới). Nhà trường dự định làm một đường đi hình tròn đi qua cả ba vị trí A, B, C (đường tròn ngoại tiếp tam giác ABC). Tính bán kính R (đơn vị: mét) của đường tròn đó.', answer: 25, unit: 'm', explanation: 'p=(14+30+40)/2=42, S=√[42·28·12·2]=168; R=abc/(4S)=14·30·40/(4·168)=25 m.' },
+    { question: 'Trong buổi lao động vệ sinh lớp học, ba bạn An, Bình và Chi cùng ghi lại danh sách số thứ tự của hai tổ được phân công trực nhật trong tuần. Danh sách của An ghi là tập hợp A={4;7}, danh sách của Bình ghi là tập hợp B={7;x} và danh sách của Chi ghi là tập hợp C={4;y}. Biết rằng cả ba bạn đều ghi đúng danh sách hai tổ đó (tức là A=B=C). Tính tổng x+y.', answer: 11, explanation: 'Từ A=B suy ra x=4; từ A=C suy ra y=7; x+y=11.' },
+    { question: 'Trong Ngày hội STEM cấp trường, Câu lạc bộ Khởi nghiệp của khối 10 dự định chế tác và mở bán hai dòng bộ quà tặng nến thơm thủ công là "Ban Mai" và "Hoàng Hôn" để gây quỹ từ thiện. Qua khảo sát định mức kĩ thuật và tài chính, nhóm thu thập được các dữ liệu sau:<br>➢ Định mức nguyên liệu: Mỗi bộ nến "Ban Mai" cần 200 g sáp đậu nành hữu cơ và 40 ml tinh dầu thảo mộc; mỗi bộ nến "Hoàng Hôn" cần 300 g sáp đậu nành hữu cơ và 20 ml tinh dầu thảo mộc. Kho nguyên liệu của nhà cung cấp chỉ có tối đa 6 kg sáp đậu nành và 800 ml tinh dầu thảo mộc.<br>➢ Chi phí và Giá bán: Câu lạc bộ chỉ phải thanh toán tiền nguyên liệu theo đúng khối lượng thực tế sử dụng với đơn giá sáp đậu nành là 60 nghìn đồng/kg và tinh dầu thảo mộc là 50 nghìn đồng/100 ml (phần nguyên liệu không dùng hết được nhà cung cấp nhận lại). Ngoài ra, mỗi bộ sản phẩm xuất xưởng đều phải dùng 1 cốc thủy tinh chịu nhiệt kèm bấc gỗ (dây bấc nến bằng gỗ) giá 8 nghìn đồng/cốc và 1 vỏ hộp quà kèm thiệp giá 10 nghìn đồng/hộp. Đồng thời, Câu lạc bộ phải nộp khoản phí cố định thuê gian hàng là 120 nghìn đồng cùng chi phí trang trí, in ấn ấn phẩm là 60 nghìn đồng. Giá bán niêm yết là 100 nghìn đồng cho mỗi bộ "Ban Mai" và 86 nghìn đồng cho mỗi bộ "Hoàng Hôn".<br>Biết rằng tất cả các bộ sản phẩm làm ra đều được bán hết theo bộ nguyên vẹn. Hỏi lợi nhuận ròng thực tế lớn nhất (sau khi đã trừ toàn bộ chi phí nguyên liệu đã dùng, cốc nến, vỏ hộp, phí gian hàng và trang trí) mà Câu lạc bộ có thể thu về là bao nhiêu nghìn đồng?', answer: 970, unit: 'nghìn đồng', explanation: 'Gọi x,y là số bộ. Ràng buộc 2x+3y≤60, 2x+y≤40, x,y≥0. Lãi mỗi bộ lần lượt 50 và 40 nghìn; chi phí cố định 180 nghìn. Tối đa 50x+40y−180 tại x=15,y=10, được 970 nghìn đồng.' },
+    { question: `Trong đợt cắm trại 26/3, Câu lạc bộ STEM của một trường THPT thiết kế hệ thống truyền dẫn điện và phát sóng không dây trên một thảm cỏ phẳng hình tam giác ABC có kích thước ba cạnh là AB=20m, BC=42m và CA=34m. Ban tổ chức dựng một hàng rào thẳng nối từ đỉnh A đến một chốt kỹ thuật D nằm trên cạnh BC (D khác B,C) để chia thảm cỏ thành hai phân khu: Khu vực I (△ABD) và Khu vực II (△ADC). Biết rằng để phủ sóng vừa khít Khu vực I, một trạm phát Wi-Fi đặt tại tâm đường tròn ngoại tiếp △ABD cần bán kính phủ sóng tới ba đỉnh A, B, D đúng bằng R₁=12,5m. Tiếp theo, đội kỹ thuật cần kéo hai đoạn dây cáp nguồn đi thẳng trên mặt đất gồm:<br>• Tuyến cáp 1: Nối từ chốt D đến một hộp tiếp điện M có thể chọn vị trí tùy ý trên đoạn rào AB (kể cả hai đầu mút).<br>• Tuyến cáp 2: Nối từ đỉnh C đến một bộ thu tín hiệu N có thể chọn vị trí tùy ý trên đoạn rào phân cách AD (kể cả hai đầu mút).<br>Để tiết kiệm chi phí nhất, tổng chiều dài của hai tuyến cáp DM và CN đạt giá trị nhỏ nhất bằng bao nhiêu mét (kết quả viết dưới dạng số thập phân, làm tròn đến hàng phần mười)? ${dakCable}`, answer: 37.2, unit: 'm', explanation: 'Đặt B=(0,0), C=(42,0). Từ AB=20, AC=34 suy ra A=(12,16). Bán kính ngoại tiếp ABD bằng 5AD/8=12,5 nên AD=20; D=(24,0). Khoảng cách nhỏ nhất DM là khoảng cách D đến AB, bằng 19,2 m (hình chiếu nằm trên AB). Hình chiếu của C lên đường AD nằm ngoài đoạn AD, nên CN nhỏ nhất tại N=D: CD=18 m. Tổng nhỏ nhất 37,2 m.' }
   ],
   essay: []
 }];
