@@ -66,6 +66,8 @@ for(const subject of Object.keys(fallback)){
     }
   }
 }
+// Chỉ đổi thứ tự hiển thị sau khi đã xử lý trùng lặp theo thứ tự gốc.
+exams.sort((a, b) => examAddedAt(b) - examAddedAt(a));
 // Giữ trang được yêu cầu khi nạp lại dữ liệu thay vì luôn quay về Tổng quan.
 if (typeof location !== 'undefined' && location.hash && typeof window !== 'undefined' && window.dispatchEvent) {
   window.dispatchEvent(new Event('hashchange'));

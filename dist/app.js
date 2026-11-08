@@ -94,6 +94,32 @@ const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedE
       ? [...mathExams, ...extraExams]
       : [];
 
+// Thời điểm đề được đưa vào kho (theo lịch sử Git), không phải năm học ghi trên đề.
+// Các đề cùng một đợt được giữ nguyên thứ tự có sẵn nhờ phép sort ổn định.
+function examAddedAt(exam) {
+  if (exam.addedAt) {
+    const timestamp = Date.parse(exam.addedAt);
+    if (Number.isFinite(timestamp)) return timestamp;
+  }
+  const id = exam.id;
+  const added = {
+    'toan-10-le-loi-102': '2026-11-08T17:02:37+07:00',
+    'toan-10-dak-lak-1001': '2026-11-08T15:56:05+07:00',
+    'toan-10-de-04': '2026-11-08T15:56:05+07:00', // Đề Lê Lợi mã 146 được thay vào vị trí đề 04.
+    'vatli-10-dong-ha-1004': '2026-11-06T22:40:12+07:00',
+    'TOAN10-ON-TAP-GKI-MA101': '2026-11-04T17:18:36+07:00',
+    'toan-10-de-13': '2026-11-02T16:39:01+07:00',
+    'hoahoc-10-de-17': '2026-11-02T23:12:50+07:00'
+  };
+  if (added[id]) return Date.parse(added[id]);
+  if (/^toan-10-pho-thong-\d+$/.test(id)) return Date.parse('2026-11-04T17:30:17+07:00');
+  if (/^tienganh-10-de-\d+$/.test(id)) return Date.parse('2026-11-03T23:22:25+07:00');
+  if (/^hoahoc-10-de-1[3-6]$/.test(id)) return Date.parse('2026-11-01T22:05:16+07:00');
+  if (/^hoahoc-10-de-1[12]$/.test(id)) return Date.parse('2026-11-01T21:52:37+07:00');
+  if (/^toan-10-de-1[12]$/.test(id)) return Date.parse('2026-11-01T18:16:18+07:00');
+  return Date.parse('2026-10-31T22:21:26+07:00');
+}
+
 if (rawData.length > 0) {
   exams = rawData.map(normalizeExam);
   exams.filter(e => e.subject === 'english').forEach(e => {
