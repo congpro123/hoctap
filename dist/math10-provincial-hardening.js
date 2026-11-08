@@ -11,7 +11,7 @@
   const abc = 'ABCD';
   const fmt = x => Number.isInteger(x) ? String(x) : String(Math.round(x * 100) / 100).replace('.', ',');
   const gcd = (a,b) => b ? gcd(b,a%b) : Math.abs(a);
-  function frac(a,b) { const g=gcd(a,b); a/=g; b/=g; return b===1 ? String(a) : `${a}/${b}`; }
+  function frac(a,b) { if(b<0){a=-a;b=-b;} const g=gcd(a,b); a/=g; b/=g; return b===1 ? String(a) : `${a}/${b}`; }
   function mc(stem, correct, wrong, why, shift) {
     const base=[String(correct),...wrong.map(String)], s=shift%4;
     const opts=base.slice(s).concat(base.slice(0,s));
