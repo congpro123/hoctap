@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css?v=20261104-dh101-v3">
   <link rel="stylesheet" href="vendor/volt/volt.css">
   <link rel="stylesheet" href="design-refresh.css?v=20261104-tabler">
-  <link rel="stylesheet" href="volt-theme.css?v=20261108-exam-counts">
+  <link rel="stylesheet" href="volt-theme.css?v=20261108-presence-stable-public">
 </head>
 <body>
   <div class="shell">
@@ -28,7 +28,7 @@
       <div class="side-footer">Học kỳ I · 2026–2027</div>
     </aside>
     <main class="main">
-      <header class="topbar"><div class="breadcrumb">LỚP HỌC <span>/</span> <strong id="crumb">TỔNG QUAN</strong></div><div class="top-right"><span class="today" id="today"></span><span class="avatar">10</span></div></header>
+      <header class="topbar"><div class="breadcrumb">LỚP HỌC <span>/</span> <strong id="crumb">TỔNG QUAN</strong></div><div class="top-right"><span id="public-exam-count" class="public-exam-count" aria-live="polite">Đang cập nhật số người làm bài</span><span class="today" id="today"></span><span class="avatar">10</span></div></header>
       <div id="app"></div>
     </main>
   </div>
@@ -49,7 +49,7 @@
   <script src="handbook.js?v=20261104-tabler"></script>
   <script src="handbook-english.js?v=20261104"></script>
   <script src="auth.js?v=20261108-exam-counts"></script>
-  <script src="exam-presence.js?v=20261108-exam-history"></script>
+  <script src="exam-presence.js?v=20261108-presence-stable-public"></script>
   <script src="ai-grading.js?v=20261107-backend-version-lock"></script>
   <script src="app.js?v=20261108-exam-history"></script>
   <script src="ui-upgrades.js?v=20261108-exam-counts"></script>
@@ -57,5 +57,6 @@
   <script src="legacy_dong_ha.js?v=20261104-dongha-verified"></script>
   <script src="dedup.js?v=20261108-newest-exams-first"></script>
   <script src="analytics.js"></script>
+  <script>window.examPresence?.mountPublic();</script>
 </body>
 </html>

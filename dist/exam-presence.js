@@ -3,7 +3,7 @@
   'use strict';
   const DEFAULT_DB = 'https://hoctap-b7d06-default-rtdb.asia-southeast1.firebasedatabase.app';
   const HEARTBEAT_MS = 15000;
-  const ACTIVE_FOR_MS = 60000;
+  const ACTIVE_FOR_MS = 120000;
   const newId = () => {
     try { return crypto.randomUUID(); }
     catch (_) { return 'session-' + Date.now() + '-' + Math.random().toString(36).slice(2); }
@@ -14,6 +14,14 @@
   let paused = false;
   let heartbeatTimer = null;
   let adminTimer = null;
+  let publicTimer = null;
+  let lastPublicCount = null;
+  let emptySince = 0;
+  let lastAdminRecords = null;
+  let adminEmptySince = 0;
+  let publicRefreshing = false;
+  let adminRefreshing = false;
+  let presenceWrite = Promise.resolve();
 
   function endpoint() {
     let base = DEFAULT_DB;
@@ -33,10 +41,6 @@
   function send() {
     const account = user();
     if (!currentExam || !account) return;
-    if (!document.querySelector('.exam-layout') && !document.querySelector('.original-pdf-exam')) {
-      stop();
-      return;
-    }
     const now = Date.now();
     const payload = {
       userId: account.id,
@@ -48,10 +52,11 @@
       startedAt,
       updatedAt: now
     };
-    fetch(`${endpoint()}/${encodeURIComponent(currentAttemptId)}.json`, {
+    const attemptId = currentAttemptId;
+    presenceWrite = presenceWrite.catch(() => {}).then(() => fetch(`${endpoint()}/${encodeURIComponent(attemptId)}.json`, {
       method: 'PUT', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload), keepalive: true
-    }).catch(() => {});
+    })).catch(() => {});
     fetch(`${historyEndpoint()}/${encodeURIComponent(currentAttemptId)}.json`, {
       method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload), keepalive: true
@@ -72,9 +77,9 @@
         method: 'PATCH', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: finalStatus, updatedAt: now, endedAt: now }), keepalive: true
       }).catch(() => {});
-      fetch(`${endpoint()}/${encodeURIComponent(attemptId)}.json`, {
+      presenceWrite = presenceWrite.catch(() => {}).then(() => fetch(`${endpoint()}/${encodeURIComponent(attemptId)}.json`, {
         method: 'DELETE', keepalive: true
-      }).catch(() => {});
+      })).catch(() => {});
     }
     currentExam = null;
     currentAttemptId = null;
@@ -117,19 +122,21 @@
     return ({ active: 'Đang làm', paused: 'Tạm dừng', submitted: 'Đã nộp', cancelled: 'Đã hủy', left: 'Đã rời trang' })[record.status] || 'Không rõ';
   }
 
-  function renderAdmin(root, records, historyRecords) {
-    const recent = Object.values(records || {}).filter(record =>
-      record && record.status === 'active' &&
-      Number.isFinite(Number(record.updatedAt)) &&
-      Date.now() - Number(record.updatedAt) >= 0 &&
-      Date.now() - Number(record.updatedAt) < ACTIVE_FOR_MS
-    );
+  function activePeople(records) {
+    const now = Date.now();
     const byUser = new Map();
-    recent.forEach(record => {
+    Object.values(records || {}).forEach(record => {
+      if (!record || !['active', 'paused'].includes(record.status)) return;
+      const updatedAt = Number(record.updatedAt);
+      if (!Number.isFinite(updatedAt) || updatedAt > now + 30000 || now - updatedAt >= ACTIVE_FOR_MS) return;
       const key = record.userId || record.username;
-      if (key && (!byUser.has(key) || byUser.get(key).updatedAt < record.updatedAt)) byUser.set(key, record);
+      if (key && (!byUser.has(key) || Number(byUser.get(key).updatedAt) < updatedAt)) byUser.set(key, record);
     });
-    const people = [...byUser.values()].sort((a, b) => b.updatedAt - a.updatedAt);
+    return [...byUser.values()].sort((a, b) => Number(b.updatedAt) - Number(a.updatedAt));
+  }
+
+  function renderAdmin(root, records, historyRecords) {
+    const people = activePeople(records);
     root.replaceChildren();
     const heading = document.createElement('h3');
     heading.textContent = `🔴 Đang làm bài: ${people.length} người`;
@@ -200,26 +207,72 @@
     const root = document.getElementById('exam-presence-panel');
     if (!root || !window.auth || !window.auth.isAdmin()) return;
     const refresh = async () => {
+      if (adminRefreshing) return;
       if (!root.isConnected || location.hash !== '#stats') {
         clearInterval(adminTimer);
         adminTimer = null;
         return;
       }
+      adminRefreshing = true;
       try {
         const [presenceResponse, historyResponse] = await Promise.all([
           fetch(`${endpoint()}.json`, { cache: 'no-store' }),
           fetch(`${historyEndpoint()}.json`, { cache: 'no-store' })
         ]);
         if (!presenceResponse.ok || !historyResponse.ok) throw new Error('Không kết nối được dữ liệu trực tuyến.');
-        renderAdmin(root, await presenceResponse.json(), await historyResponse.json());
+        const records = await presenceResponse.json();
+        const historyRecords = await historyResponse.json();
+        if (!activePeople(records).length && lastAdminRecords && activePeople(lastAdminRecords).length) {
+          if (!adminEmptySince) adminEmptySince = Date.now();
+          if (Date.now() - adminEmptySince < 20000) {
+            renderAdmin(root, lastAdminRecords, historyRecords);
+            return;
+          }
+        } else adminEmptySince = 0;
+        lastAdminRecords = records;
+        renderAdmin(root, records, historyRecords);
       } catch (_) {
-        root.textContent = 'Chưa tải được danh sách người đang làm bài. Sẽ tự thử lại.';
+        if (!lastAdminRecords) root.textContent = 'Chưa tải được danh sách người đang làm bài. Sẽ tự thử lại.';
+      } finally {
+        adminRefreshing = false;
       }
     };
     refresh();
     adminTimer = setInterval(refresh, 10000);
   }
 
+  function mountPublic() {
+    clearInterval(publicTimer);
+    const badge = document.getElementById('public-exam-count');
+    if (!badge) return;
+    const refresh = async () => {
+      if (publicRefreshing) return;
+      publicRefreshing = true;
+      try {
+        const response = await fetch(`${endpoint()}.json`, { cache: 'no-store' });
+        if (!response.ok) throw new Error('Presence unavailable');
+        const count = activePeople(await response.json()).length;
+        // Wait for a second empty sample before showing zero after a live count.
+        if (count === 0 && lastPublicCount > 0) {
+          if (!emptySince) emptySince = Date.now();
+          if (Date.now() - emptySince < 20000) return;
+        } else emptySince = 0;
+        lastPublicCount = count;
+        badge.textContent = `${count} người đang làm bài`;
+        badge.title = 'Số người đang làm hoặc tạm dừng bài thi';
+      } catch (_) {
+        if (lastPublicCount === null) badge.textContent = 'Đang cập nhật số người làm bài';
+      } finally {
+        publicRefreshing = false;
+      }
+    };
+    refresh();
+    publicTimer = setInterval(refresh, 10000);
+  }
+
   window.addEventListener('pagehide', stop);
-  window.examPresence = { start, setPaused, stop, mountAdmin };
+  window.addEventListener('pageshow', () => { if (currentExam) send(); });
+  window.addEventListener('focus', () => { if (currentExam) send(); });
+  window.addEventListener('visibilitychange', () => { if (!document.hidden && currentExam) send(); });
+  window.examPresence = { start, setPaused, stop, mountAdmin, mountPublic };
 })();

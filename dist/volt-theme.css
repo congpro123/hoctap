@@ -161,6 +161,8 @@ body { background: #f3f4f6; color: #1f2937; font-family: Inter, 'Segoe UI', Aria
 .word-bank-passage { overflow-wrap: anywhere; }
 .word-bank-passage b { display: inline-block; margin-top: 5px; }
 .exam-presence-panel { margin: 18px 0; padding: 18px 20px; }
+.public-exam-count { display: inline-flex; align-items: center; white-space: nowrap; padding: 5px 10px; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: 12px; font-weight: 700; }
+@media (max-width: 600px) { .public-exam-count { font-size: 11px; padding: 4px 7px; } .top-right .today { display: none; } }
 .exam-presence-panel h3 { margin: 0 0 10px; }
 .exam-presence-panel p { margin: 0; color: #64748b; }
 .exam-presence-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
