@@ -523,7 +523,7 @@ function stopExamFinal() {
   hideStopModal();
   hidePauseModal();
   clearInterval(ticker);
-  window.examPresence?.stop();
+  window.examPresence?.stop('cancelled');
   activeExam = null;
   answers = {};
   isExamPaused = false;
@@ -1040,7 +1040,7 @@ function submitExam(reason) {
   }
   localStorage.removeItem('hoctap-draft');
   activeExam = null;
-  window.examPresence?.stop();
+  window.examPresence?.stop(reason === 'time' ? 'time' : 'submitted');
   renderResult(result);
 }
 

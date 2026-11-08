@@ -4,18 +4,13 @@
   const DEFAULT_DB = 'https://hoctap-b7d06-default-rtdb.asia-southeast1.firebasedatabase.app';
   const HEARTBEAT_MS = 15000;
   const ACTIVE_FOR_MS = 60000;
-  const sessionId = (() => {
-    try {
-      const existing = sessionStorage.getItem('hoctap-exam-session');
-      if (existing) return existing;
-      const created = crypto.randomUUID();
-      sessionStorage.setItem('hoctap-exam-session', created);
-      return created;
-    } catch (_) {
-      return 'session-' + Date.now() + '-' + Math.random().toString(36).slice(2);
-    }
-  })();
+  const newId = () => {
+    try { return crypto.randomUUID(); }
+    catch (_) { return 'session-' + Date.now() + '-' + Math.random().toString(36).slice(2); }
+  };
   let currentExam = null;
+  let currentAttemptId = null;
+  let startedAt = null;
   let paused = false;
   let heartbeatTimer = null;
   let adminTimer = null;
@@ -24,6 +19,10 @@
     let base = DEFAULT_DB;
     try { base = localStorage.getItem('hoctap-firebase-url') || base; } catch (_) {}
     return base.replace(/\/+$/, '') + '/exam-presence';
+  }
+
+  function historyEndpoint() {
+    return endpoint().replace(/\/exam-presence$/, '/exam-attempt-history');
   }
 
   function user() {
@@ -38,6 +37,7 @@
       stop();
       return;
     }
+    const now = Date.now();
     const payload = {
       userId: account.id,
       username: account.username,
@@ -45,25 +45,49 @@
       examId: currentExam.id,
       examTitle: currentExam.title,
       status: paused ? 'paused' : 'active',
-      updatedAt: Date.now()
+      startedAt,
+      updatedAt: now
     };
-    fetch(`${endpoint()}/${encodeURIComponent(sessionId)}.json`, {
+    fetch(`${endpoint()}/${encodeURIComponent(currentAttemptId)}.json`, {
       method: 'PUT', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload), keepalive: true
+    }).catch(() => {});
+    fetch(`${historyEndpoint()}/${encodeURIComponent(currentAttemptId)}.json`, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload), keepalive: true
     }).catch(() => {});
   }
 
-  function stop() {
+  function stop(reason = 'left') {
     clearInterval(heartbeatTimer);
     heartbeatTimer = null;
+    const attemptId = currentAttemptId;
+    const account = user();
+    const exam = currentExam;
+    if (attemptId && account && exam) {
+      const now = Date.now();
+      const finalStatus = reason === 'submitted' || reason === 'time' ? 'submitted'
+        : reason === 'cancelled' ? 'cancelled' : 'left';
+      fetch(`${historyEndpoint()}/${encodeURIComponent(attemptId)}.json`, {
+        method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status: finalStatus, updatedAt: now, endedAt: now }), keepalive: true
+      }).catch(() => {});
+      fetch(`${endpoint()}/${encodeURIComponent(attemptId)}.json`, {
+        method: 'DELETE', keepalive: true
+      }).catch(() => {});
+    }
     currentExam = null;
-    fetch(`${endpoint()}/${encodeURIComponent(sessionId)}.json`, {
-      method: 'DELETE', keepalive: true
-    }).catch(() => {});
+    currentAttemptId = null;
+    startedAt = null;
   }
 
   function start(exam, isPaused) {
     if (!exam) return;
+    if (currentExam && currentExam.id !== exam.id) stop('left');
+    if (!currentAttemptId) {
+      currentAttemptId = newId();
+      startedAt = Date.now();
+    }
     currentExam = { id: exam.id, title: exam.title };
     paused = !!isPaused;
     clearInterval(heartbeatTimer);
@@ -77,7 +101,23 @@
     send();
   }
 
-  function renderAdmin(root, records) {
+  function formatTime(value) {
+    const time = Number(value);
+    if (!Number.isFinite(time)) return 'Không rõ thời gian';
+    return new Intl.DateTimeFormat('vi-VN', {
+      hour: '2-digit', minute: '2-digit', second: '2-digit',
+      day: '2-digit', month: '2-digit', year: 'numeric'
+    }).format(new Date(time));
+  }
+
+  function statusText(record) {
+    if ((record.status === 'active' || record.status === 'paused') && Date.now() - Number(record.updatedAt || 0) >= ACTIVE_FOR_MS) {
+      return 'Mất kết nối';
+    }
+    return ({ active: 'Đang làm', paused: 'Tạm dừng', submitted: 'Đã nộp', cancelled: 'Đã hủy', left: 'Đã rời trang' })[record.status] || 'Không rõ';
+  }
+
+  function renderAdmin(root, records, historyRecords) {
     const recent = Object.values(records || {}).filter(record =>
       record && record.status === 'active' &&
       Number.isFinite(Number(record.updatedAt)) &&
@@ -98,20 +138,61 @@
       const empty = document.createElement('p');
       empty.textContent = 'Hiện không có ai đang làm bài thi.';
       root.appendChild(empty);
+    } else {
+      const list = document.createElement('ul');
+      list.className = 'exam-presence-list';
+      people.forEach(record => {
+        const item = document.createElement('li');
+        const name = document.createElement('strong');
+        name.textContent = `${record.name || record.username || 'Học sinh'} (@${record.username || '?'})`;
+        const exam = document.createElement('span');
+        exam.textContent = record.examTitle || record.examId || 'Đề thi';
+        item.append(name, exam);
+        list.appendChild(item);
+      });
+      root.appendChild(list);
+    }
+
+    const historyHeading = document.createElement('h3');
+    historyHeading.className = 'exam-history-heading';
+    historyHeading.textContent = '🕘 Lịch sử làm bài gần nhất';
+    root.appendChild(historyHeading);
+    const history = Object.values(historyRecords || {})
+      .filter(record => record && (record.userId || record.username) && record.examId)
+      .sort((a, b) => Number(b.updatedAt || b.startedAt || 0) - Number(a.updatedAt || a.startedAt || 0))
+      .slice(0, 50);
+    if (!history.length) {
+      const empty = document.createElement('p');
+      empty.textContent = 'Chưa có lịch sử làm bài được ghi nhận.';
+      root.appendChild(empty);
       return;
     }
-    const list = document.createElement('ul');
-    list.className = 'exam-presence-list';
-    people.forEach(record => {
-      const item = document.createElement('li');
-      const name = document.createElement('strong');
-      name.textContent = `${record.name || record.username || 'Học sinh'} (@${record.username || '?'})`;
-      const exam = document.createElement('span');
-      exam.textContent = record.examTitle || record.examId || 'Đề thi';
-      item.append(name, exam);
-      list.appendChild(item);
+    const tableWrap = document.createElement('div');
+    tableWrap.className = 'exam-history-table-wrap';
+    const table = document.createElement('table');
+    table.className = 'exam-history-table';
+    table.innerHTML = '<thead><tr><th>Học sinh</th><th>Đề thi</th><th>Bắt đầu</th><th>Cập nhật</th><th>Trạng thái</th></tr></thead>';
+    const body = document.createElement('tbody');
+    history.forEach(record => {
+      const row = document.createElement('tr');
+      const values = [
+        `${record.name || record.username || 'Học sinh'} (@${record.username || '?'})`,
+        record.examTitle || record.examId || 'Đề thi',
+        formatTime(record.startedAt),
+        formatTime(record.endedAt || record.updatedAt),
+        statusText(record)
+      ];
+      values.forEach((value, index) => {
+        const cell = document.createElement('td');
+        cell.textContent = value;
+        if (index === 4) cell.className = `exam-history-status status-${record.status || 'unknown'}`;
+        row.appendChild(cell);
+      });
+      body.appendChild(row);
     });
-    root.appendChild(list);
+    table.appendChild(body);
+    tableWrap.appendChild(table);
+    root.appendChild(tableWrap);
   }
 
   function mountAdmin() {
@@ -125,9 +206,12 @@
         return;
       }
       try {
-        const response = await fetch(`${endpoint()}.json`, { cache: 'no-store' });
-        if (!response.ok) throw new Error('Không kết nối được dữ liệu trực tuyến.');
-        renderAdmin(root, await response.json());
+        const [presenceResponse, historyResponse] = await Promise.all([
+          fetch(`${endpoint()}.json`, { cache: 'no-store' }),
+          fetch(`${historyEndpoint()}.json`, { cache: 'no-store' })
+        ]);
+        if (!presenceResponse.ok || !historyResponse.ok) throw new Error('Không kết nối được dữ liệu trực tuyến.');
+        renderAdmin(root, await presenceResponse.json(), await historyResponse.json());
       } catch (_) {
         root.textContent = 'Chưa tải được danh sách người đang làm bài. Sẽ tự thử lại.';
       }

@@ -166,3 +166,13 @@ body { background: #f3f4f6; color: #1f2937; font-family: Inter, 'Segoe UI', Aria
 .exam-presence-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .exam-presence-list li { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; }
 .exam-presence-list span { color: #475569; }
+.exam-history-heading { margin-top: 22px !important; padding-top: 18px; border-top: 1px solid #e2e8f0; }
+.exam-history-table-wrap { overflow-x: auto; }
+.exam-history-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.exam-history-table th, .exam-history-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+.exam-history-table th { color: #475569; background: #f8fafc; white-space: nowrap; }
+.exam-history-status { font-weight: 700; white-space: nowrap; }
+.exam-history-status.status-active { color: #dc2626; }
+.exam-history-status.status-paused { color: #d97706; }
+.exam-history-status.status-submitted { color: #15803d; }
+.exam-history-status.status-cancelled, .exam-history-status.status-left { color: #64748b; }
