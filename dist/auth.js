@@ -1609,6 +1609,10 @@
       if (Array.isArray(e.essay) && e.essay.length > 0) {
         e.essay.forEach((essay, i) => {
           const userWork = a['tl' + i];
+          const mode = a['tlMode' + i] === 'draft' ? 'draft' : 'ai';
+          const aiGradeHtml = mode === 'ai' && typeof essayGradeResultHtml === 'function'
+            ? essayGradeResultHtml(i, a)
+            : '';
           reviewCards.push(`
             <div class="review-item">
               <div class="review-item-header">
@@ -1617,9 +1621,10 @@
               </div>
               <div class="review-q-text"><b>${escapeHtml(essay.title || `Câu ${i + 1}.`)}</b> ${essay.question}</div>
               <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">📝 Bài làm / ghi chú của học sinh:</div>
-                <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${userWork ? escapeHtml(userWork) : '<span style="color:#64748b;font-style:italic;">(Học sinh làm bài ra giấy nháp / bỏ qua ô nhập trên máy)</span>'}</div>
+                <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">${mode === 'draft' ? '✎ C2 · Làm trên nháp — không chấm AI' : '📝 C1 · Bài làm đã nhập trên web:'}</div>
+                <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${mode === 'draft' ? '<span style="color:#64748b;font-style:italic;">Học sinh chọn làm trên nháp; câu này không được gửi tới Gemini.</span>' : (userWork ? escapeHtml(userWork) : '<span style="color:#64748b;font-style:italic;">Chưa nhập bài làm.</span>')}</div>
               </div>
+              ${aiGradeHtml}
               <div class="solution-box theme-study">
                 <div class="solution-header">💡 HƯỚNG DẪN CHẤM & LỜI GIẢI CHI TIẾT:</div>
                 <div class="solution-body">${essay.solution || 'Áp dụng kiến thức chuẩn SGK.'}</div>
