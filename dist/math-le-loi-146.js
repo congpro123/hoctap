@@ -41,3 +41,19 @@ if (leLoi146) Object.assign(leLoi146, {
     { title: 'Câu 30.', question: 'Một đội có tối đa 24 g hương liệu, 9 lít nước, 210 g đường. Mỗi lít nước cam cần 30 g đường, 1 lít nước, 1 g hương liệu và được 60 điểm; mỗi lít nước táo cần 10 g đường, 1 lít nước, 4 g hương liệu và được 80 điểm. Pha mỗi loại bao nhiêu lít để được điểm cao nhất?', solution: 'Gọi x,y là số lít cam,táo. Ràng buộc: x+4y≤24; x+y≤9; 3x+y≤21; x,y≥0. Tối đa P=60x+80y. So sánh tại các đỉnh miền nghiệm, lớn nhất là P=640 tại (x,y)=(4,5). Vậy pha 4 lít cam và 5 lít táo.' }
   ]
 });
+
+// Câu hỏi được chèn vào HTML: mã hóa dấu so sánh, giữ nguyên thẻ xuống dòng.
+function escapeExamMathText(value) {
+  if (typeof value !== 'string') return value;
+  return value.split(/(<svg\b[\s\S]*?<\/svg>|<br\s*\/?>)/gi).map(part =>
+    /^<(?:svg\b|br\s*\/?>)/i.test(part) ? part : part.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  ).join('');
+}
+function escapeExamMathFields(exam) {
+  if (!exam) return;
+  exam.questions.forEach(q => { q[0] = escapeExamMathText(q[0]); q[1] = q[1].map(escapeExamMathText); q[3] = escapeExamMathText(q[3]); });
+  (exam.tf || []).forEach(q => { q.stem = escapeExamMathText(q.stem); q.items.forEach(item => { item[0] = escapeExamMathText(item[0]); item[2] = escapeExamMathText(item[2]); }); });
+  (exam.short || []).forEach(q => { q.question = escapeExamMathText(q.question); q.explanation = escapeExamMathText(q.explanation); });
+  (exam.essay || []).forEach(q => { q.question = escapeExamMathText(q.question); q.solution = escapeExamMathText(q.solution); });
+}
+escapeExamMathFields(leLoi146);

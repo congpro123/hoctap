@@ -65,3 +65,4 @@ const mathDakLak1001 = [{
   ],
   essay: []
 }];
+escapeExamMathFields(mathDakLak1001[0]);
