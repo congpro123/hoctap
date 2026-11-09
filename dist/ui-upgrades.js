@@ -1,4 +1,5 @@
 // Mở rộng kho đề và cho phép xem lại các câu sai trong lịch sử.
+const uiPointText=n=>Number(n||0).toLocaleString('vi-VN',{maximumFractionDigits:2});
 function examAttemptCount(examId){
   if(!window.auth || typeof window.auth.getAllResults!=='function')return 0;
   return window.auth.getAllResults().reduce((count,result)=>count+(result&&result.id===examId?1:0),0);
@@ -15,7 +16,7 @@ function card(e){
     const st=window.auth.getExamStatus(e.id);
     if(st?.hasDone && st.bestResult){
       const best=st.bestResult;
-      status=`<span class="exam-status-badge completed">Đã làm · <b>${pointText(best.points)} / ${pointText(best.maxPoints)}</b></span>`;
+      status=`<span class="exam-status-badge completed">Đã làm · <b>${uiPointText(best.points)} / ${uiPointText(best.maxPoints)}</b></span>`;
       action=`<div class="card-action-group"><button class="secondary btn-card-review" data-review-exam="${esc(e.id)}">Xem lại</button><button class="primary" data-start="${esc(e.id)}">Làm lại</button></div>`;
     }
   }
