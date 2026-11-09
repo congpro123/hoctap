@@ -222,6 +222,14 @@ a { color: inherit; text-decoration: none; }
 .handbook-table { width: 100%; border-collapse: collapse; font-size: 12px; background: #fff; }
 .handbook-table :is(th,td) { padding: 9px 10px; border: 1px solid #dfe5ec; text-align: left; vertical-align: top; min-width: 130px; }
 .handbook-table th { background: #f1f5f9; font-weight: 500; }
+.agri-key-list, .agri-check-list, .agri-steps { margin: 0; padding-left: 20px; display: grid; gap: 7px; }
+.agri-key-list li::marker, .agri-steps li::marker { color: #4f8a2f; font-weight: 700; }
+.agri-check-list { list-style: none; padding-left: 0; }
+.agri-process, .agri-answer-frame { display: grid; gap: 8px; }
+.agri-process p, .agri-answer-frame p { margin: 0; }
+.agri-answer-frame { border-left: 3px solid #85a96c; padding-left: 12px; }
+.agri-matrix-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.agri-matrix-grid > span { background: #eef7e7; border: 1px solid #d7e8ca; border-radius: 5px; padding: 9px; text-align: center; }
 .auth-gate-card, .auth-modal-card { border-radius: 6px; border-color: var(--line); box-shadow: 0 8px 30px #18243312; }
 .auth-gate-logo { font-size: 23px; font-weight: 600; letter-spacing: -.4px; }
 .auth-gate-logo small { display: block; font-size: 12px; color: #8b96a5; font-weight: 400; letter-spacing: 0; margin-top: 4px; }

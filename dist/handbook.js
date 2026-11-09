@@ -328,13 +328,12 @@ function renderHandbook(selectedSubject, filterQuery) {
     if (btn) btn.classList.add('active');
   }
 
-  const activeSubject = Object.prototype.hasOwnProperty.call(handbookData, selectedSubject) ? selectedSubject : 'all';
+  // Mỗi lần chỉ hiển thị một môn để sổ tay ngắn, dễ đọc và dễ học.
+  const activeSubject = Object.prototype.hasOwnProperty.call(handbookData, selectedSubject) ? selectedSubject : 'agriculture';
   const query = (filterQuery || '').trim().toLowerCase();
   const safeQuery = query.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-  const subjectsToRender = activeSubject === 'all'
-    ? Object.keys(handbookData)
-    : [activeSubject];
+  const subjectsToRender = [activeSubject];
 
   const contentHtml = subjectsToRender.map(subjKey => {
     const subj = handbookData[subjKey];
@@ -399,11 +398,11 @@ function renderHandbook(selectedSubject, filterQuery) {
       <div class="handbook-subject-block" id="hb-${subj.id}">
         <div class="handbook-subject-header" style="border-left: 5px solid ${subj.color}">
           <div style="display:flex;align-items:center;gap:12px">
-            <span class="handbook-subject-icon">${({math:'T',physics:'L',chemistry:'H',english:'EN'})[subj.id]}</span>
+            <span class="handbook-subject-icon">${({math:'T',physics:'L',chemistry:'H',english:'EN',agriculture:'CN'})[subj.id] || subj.icon || '10'}</span>
             <div>
               <h2 style="font-size:20px;font-weight:700;margin:0;color:#1e293b">${subj.name}</h2>
               <small style="color:#64748b;font-size:12.5px">Công thức, cách dùng và các điểm cần chú ý khi làm bài</small>
-              ${subj.source ? `<p class="handbook-source">${subj.source} <a href="supplied/REVIEW-1.docx" download>Xem tài liệu REVIEW 1</a></p>` : ''}
+              ${subj.source ? `<p class="handbook-source">${subj.source}${subj.sourceHref ? ` <a href="${subj.sourceHref}" target="_blank" rel="noopener noreferrer">${subj.sourceLabel || 'Mở tài liệu nguồn'} ↗</a>` : ''}</p>` : ''}
             </div>
           </div>
           <div class="handbook-subject-actions">
@@ -427,7 +426,7 @@ function renderHandbook(selectedSubject, filterQuery) {
         <div>
           <span class="eyebrow">LỚP 10 · KIẾN THỨC TRỌNG TÂM</span>
           <h1 style="font-size:clamp(22px, 2.5vw, 30px);font-weight:700;margin:10px 0 8px">Sổ tay Công thức & Lý thuyết Trọng tâm (Lớp 10)</h1>
-          <p style="font-size:14px;color:#cbd5e1;line-height:1.6;margin:0">Ôn tập Toán, Vật lý, Hóa học và Tiếng Anh theo các dạng bài trong kho đề. Tra cứu công thức, xem ví dụ và ghi nhớ những lỗi dễ gặp.</p>
+          <p style="font-size:14px;color:#cbd5e1;line-height:1.6;margin:0">Mỗi môn là một trang riêng. Chọn môn cần học, tra cứu nhanh theo từ khóa và ghi nhớ những lỗi dễ gặp trong đề.</p>
         </div>
         <div style="text-align:right">
           <button class="btn btn-secondary" onclick="window.print()" style="white-space:nowrap;background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.3)">
@@ -438,7 +437,7 @@ function renderHandbook(selectedSubject, filterQuery) {
 
       <div class="handbook-toolbar">
         <div class="handbook-tabs">
-          ${[['all', 'Tất cả môn'], ...Object.values(handbookData).map(s => [s.id, s.id === 'english' ? 'Tiếng Anh 10' : s.name])].map(([id, label]) => `<button class="btn ${activeSubject === id ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('${id}', document.getElementById('handbookSearchInput').value)">${label}</button>`).join('')}
+          ${Object.values(handbookData).map(s => [s.id, s.id === 'english' ? 'Tiếng Anh 10' : s.name]).map(([id, label]) => `<button class="btn ${activeSubject === id ? 'btn-primary' : 'btn-outline'} btn-sm" onclick="renderHandbook('${id}', '')">${label}</button>`).join('')}
         </div>
 
         <div class="handbook-search-wrap">

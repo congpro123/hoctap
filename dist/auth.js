@@ -1302,6 +1302,7 @@
                   <button class="filter ${!filterSubject ? 'active' : ''}" data-filter-sub="">Tất cả môn (${this.getUserResults(selectedUser.id).length})</button>
                   <button class="filter ${filterSubject === 'math' ? 'active' : ''}" data-filter-sub="math">Toán (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'math').length})</button>
                   <button class="filter ${filterSubject === 'physics' ? 'active' : ''}" data-filter-sub="physics">Vật lí (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'physics').length})</button>
+                  <button class="filter ${filterSubject === 'agriculture' ? 'active' : ''}" data-filter-sub="agriculture">Công nghệ NN (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'agriculture').length})</button>
                   <button class="filter ${filterSubject === 'english' ? 'active' : ''}" data-filter-sub="english">Tiếng Anh (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'english').length})</button>
                   <button class="filter ${filterSubject === 'chemistry' ? 'active' : ''}" data-filter-sub="chemistry">Hóa học (${this.getUserResults(selectedUser.id).filter(r => r.subject === 'chemistry').length})</button>
                 </div>

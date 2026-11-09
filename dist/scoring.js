@@ -88,7 +88,7 @@ renderExam=function(){
     const sUnit = typeof activeExam.shortUnit === 'number' ? activeExam.shortUnit : (activeExam.subject === 'chemistry' ? 0.25 : 0.5);
     const essayPoints = typeof activeExam.essayPoints === 'number' ? activeExam.essayPoints : 3.0;
     const graded=[activeExam.questions.length?`Phần I ${pointText(mcUnit)} điểm/câu`:null,activeExam.tf.length?'Phần II tối đa 1 điểm/câu':null,activeExam.short.length?`Phần III ${pointText(sUnit)} điểm/câu`:null].filter(Boolean);
-    line.insertAdjacentHTML('afterend',`<p class="grading-note">${graded.length?`Thang điểm tự chấm: ${graded.join(' · ')}.`:'Bài tự luyện.'}${activeExam.essay?.length && essayPoints>0?` Phần IV tối đa ${pointText(essayPoints)} điểm; chỉ các câu chọn AI mới được Gemini chấm tự động.`:''}</p>`);
+    line.insertAdjacentHTML('afterend',`<p class="grading-note">${graded.length?`Thang điểm tự chấm: ${graded.join(' · ')}.`:'Bài tự luyện.'}${activeExam.essay?.length && essayPoints>0?` Phần ${activeExam.short?.length ? 'IV' : 'III'} tối đa ${pointText(essayPoints)} điểm; chỉ các câu chọn AI mới được Gemini chấm tự động.`:''}</p>`);
   }
 };
 const previousRenderResult=renderResult;
@@ -107,7 +107,7 @@ renderResult=function(r){
     panel.querySelector('.result-icon').textContent='📖';
   }
   detail.textContent=score.max === 0 ? 'Bài này gồm câu tự luận, hệ thống không tự chấm điểm.' : `${score.correct}/${score.total} ý đúng · Điểm theo bố cục bài luyện, không quy đổi về thang 10.`;
-  const essayBadge=(examObj && Array.isArray(examObj.essay) && examObj.essay.length > 0)?`<span>Phần IV <b>${pointText(score.essay||0)} / ${pointText(score.essayMax||0)}</b></span>`:'';
+  const essayBadge=(examObj && Array.isArray(examObj.essay) && examObj.essay.length > 0)?`<span>Phần ${examObj.short?.length ? 'IV' : 'III'} <b>${pointText(score.essay||0)} / ${pointText(score.essayMax||0)}</b></span>`:'';
   detail.insertAdjacentHTML('afterend',`<div class="score-breakdown"><span>Phần I <b>${pointText(score.mc)} / ${pointText(examObj.questions.length*mcUnit)}</b></span>${r.total===examObj.questions.length?'':`<span>Phần II <b>${pointText(score.tf)} / ${pointText(examObj.tf.length)}</b></span><span>Phần III <b>${pointText(score.short)} / ${pointText(examObj.short.length*sUnit)}</b></span>`}${essayBadge}</div>`);
 };
 const previousHistory=history;
@@ -128,7 +128,7 @@ reviewPast=function(index){
     const sUnit = typeof e.shortUnit === 'number' ? e.shortUnit : (e.subject === 'chemistry' ? 0.25 : 0.5);
     const detail=panel.querySelectorAll(':scope > p')[1];
     if(detail){
-      const essayBadge = (Array.isArray(e.essay) && e.essay.length > 0) ? `<span>Phần IV <b>${pointText(score.essay||0)} / ${pointText(score.essayMax||0)}</b></span>` : '';
+    const essayBadge = (Array.isArray(e.essay) && e.essay.length > 0) ? `<span>Phần ${e.short?.length ? 'IV' : 'III'} <b>${pointText(score.essay||0)} / ${pointText(score.essayMax||0)}</b></span>` : '';
       detail.insertAdjacentHTML('afterend',`<div class="score-breakdown"><span>Phần I <b>${pointText(score.mc)} / ${pointText(e.questions.length*mcUnit)}</b></span>${r.total===e.questions.length?'':`<span>Phần II <b>${pointText(score.tf)} / ${pointText(e.tf.length)}</b></span><span>Phần III <b>${pointText(score.short)} / ${pointText(e.short.length*sUnit)}</b></span>`}${essayBadge}</div>`);
     }
   }

@@ -87,7 +87,7 @@ function normalizeExam(e) {
 // Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
-  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
+  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof agricultureExams !== 'undefined' ? agricultureExams : []), ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
     : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
@@ -228,6 +228,7 @@ function getSubjectMeta(subj) {
   if (subj === 'math') return { icon: '∑', name: 'TOÁN 10', color: '#6155e8', bg: '#e9e7ff', id: 0 };
   if (subj === 'chemistry') return { icon: '🧪', name: 'HÓA HỌC 10', color: '#d76fab', bg: '#fceaf4', id: 5 };
   if (subj === 'english') return { icon: 'Aa', name: 'TIẾNG ANH 10', color: '#ec8e63', bg: '#fff0e8', id: 4 };
+  if (subj === 'agriculture') return { icon: '♣', name: 'CÔNG NGHỆ NÔNG NGHIỆP 10', color: '#4f8a2f', bg: '#eef7e7', id: 3 };
   return { icon: '⚛️', name: 'VẬT LÝ 10', color: '#4b9ad8', bg: '#e7f4ff', id: 1 };
 }
 
@@ -773,7 +774,7 @@ function renderExam() {
           <div>
             <span class="subject-pill" style="background:${sm.bg};color:${sm.color}">${sm.icon}&nbsp; PHÒNG THI ${sm.name}</span>
             <h1>${esc(e.title)}</h1>
-            <p>Phần I: ${qLen} câu/ô ${e.wordBank ? '(gồm bài kéo thả từ)' : 'trắc nghiệm'} · Phần II: ${tfLen} câu đúng/sai · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)${(e.essay && e.essay.length > 0) ? ` · Phần IV: ${e.essay.length} câu tự luận` : ''}</p>
+            <p>Phần I: ${qLen} ${e.wordBank ? 'câu/ô (gồm bài kéo thả từ)' : 'câu trắc nghiệm'} · Phần II: ${tfLen} câu đúng/sai${shortLen ? ` · Phần III: ${shortLen} câu trả lời ngắn (0,5đ/câu)` : ''}${(e.essay && e.essay.length > 0) ? ` · Phần ${shortLen ? 'IV' : 'III'}: ${e.essay.length} câu tự luận` : ''}</p>
           </div>
           <div class="exam-header-controls">
             <div class="timer" id="timer">--:--</div>
@@ -786,7 +787,7 @@ function renderExam() {
         ${sourceLine(e)}
         ${e.originalPdf ? `<div class="original-pdf-pages" aria-label="Ba trang đề gốc, gồm hình minh họa">${[1, 2, 3].map(n => `<figure class="original-pdf-page"><img src="${esc(e.source.url.replace(/\.pdf$/i, ''))}-page-${n}.png" alt="Trang ${n} trên 3 của đề Toán 10 mã đề 101" loading="${n === 1 ? 'eager' : 'lazy'}"><figcaption>Trang ${n}/3</figcaption></figure>`).join('')}</div><h2 class="part-heading">Phiếu trả lời · đối chiếu từng câu với đề gốc phía trên</h2>` : ''}
 
-        ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · ${e.wordBank ? 'Trắc nghiệm và kéo thả từ' : 'Nhiều lựa chọn'} (${e.questions.length} câu/ô)</h2>` : ''}
+        ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · ${e.wordBank ? 'Trắc nghiệm và kéo thả từ' : 'Nhiều lựa chọn'} (${e.questions.length} ${e.wordBank ? 'câu/ô' : 'câu'})</h2>` : ''}
         ${(e.questions || []).map((q, i) => wordBankFor(e, i)
           ? (i === e.wordBank.start ? renderWordBankQuestion(e) : '')
           : `<div class="question" id="q-${i}">
@@ -831,7 +832,7 @@ function renderExam() {
         </div>`).join('')}
 
         ${(e.essay && e.essay.length > 0) ? `
-        <h2 class="part-heading">Phần IV · Tự luận (${e.essay.length} câu${e.subject === 'english' ? '' : ' · 3,0 điểm'})</h2>
+        <h2 class="part-heading">Phần ${shortLen ? 'IV' : 'III'} · Tự luận (${e.essay.length} câu${e.subject === 'english' ? '' : ' · 3,0 điểm'})</h2>
         <div class="essay-guide-banner">
           <b>Chọn cách làm cho từng câu:</b>
           <span class="essay-guide-legend">
@@ -1165,13 +1166,13 @@ function renderResult(r) {
         }).join('')}
 
         ${(e.essay && e.essay.length > 0) ? `
-        <h3>Phần IV · Tự luận (${e.essay.length} câu)</h3>
+        <h3>Phần ${e.short?.length ? 'IV' : 'III'} · Tự luận (${e.essay.length} câu)</h3>
         ${e.essay.map((q, i) => {
           const userWork = r.answers['tl' + i];
           const mode = r.answers['tlMode' + i] === 'draft' ? 'draft' : 'ai';
           return `<div class="review-item">
             <div class="review-item-header">
-              <span class="review-part-tag" style="background:#fef3c7;color:#92400e;">Phần IV · Tự luận</span>
+              <span class="review-part-tag" style="background:#fef3c7;color:#92400e;">Phần ${e.short?.length ? 'IV' : 'III'} · Tự luận</span>
               <span class="review-item-number">${esc(q.title || `Câu ${i + 1}`)}</span>
             </div>
             <div class="review-q-text"><b>${esc(q.title || `Câu ${i + 1}.`)}</b> ${q.question}</div>
