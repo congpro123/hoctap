@@ -339,7 +339,7 @@ function renderHandbook(selectedSubject, filterQuery) {
     const subj = handbookData[subjKey];
     if (!subj) return '';
 
-    const matchingSections = subj.sections.map(sec => {
+    const matchingSections = subj.sections.map((sec, sectionIndex) => {
       const filteredItems = sec.items.filter(item => {
         if (!query) return true;
         return item.name.toLowerCase().includes(query) ||
@@ -354,33 +354,46 @@ function renderHandbook(selectedSubject, filterQuery) {
 
       if (filteredItems.length === 0) return '';
 
-      const itemsHtml = filteredItems.map(item => `
-        <div class="handbook-item-card">
-          <div class="handbook-item-title">
-            <span>${item.name}</span>
-            ${item.freq ? `<span class="handbook-freq-badge">${item.freq}</span>` : ''}
+      const itemsHtml = filteredItems.map((item, itemIndex) => `
+        <details class="handbook-item-card${item.formula.includes('handbook-table') ? ' handbook-item-wide' : ''}" ${query || (sectionIndex === 0 && itemIndex === 0) ? 'open' : ''}>
+          <summary class="handbook-item-summary">
+            <span class="handbook-item-title">${item.name}</span>
+            <span class="handbook-item-summary-meta">
+              ${item.freq ? `<span class="handbook-freq-badge">${item.freq}</span>` : ''}
+              <span class="handbook-item-chevron" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="handbook-item-content">
+            ${item.forms ? `<div class="handbook-forms-line"><b>Dạng đề thi:</b> ${item.forms}</div>` : ''}
+            <div class="handbook-reading-grid">
+              <div class="handbook-core-content">
+                <div class="formula-box">${item.formula}</div>
+                <div class="handbook-item-desc">${item.desc}</div>
+              </div>
+              ${(item.example || item.reference || item.traps) ? `
+                <aside class="handbook-note-stack">
+                  ${item.example ? `
+                    <div class="example-box">
+                      <span class="example-title">VÍ DỤ TRONG TÀI LIỆU</span>
+                      <p>${item.example}</p>
+                    </div>
+                  ` : ''}
+                  ${item.reference ? `<div class="handbook-reference">Đối chiếu: ${item.reference}</div>` : ''}
+                  ${item.traps ? `
+                    <div class="trap-box">
+                      <span class="trap-title">LƯU Ý KHI LÀM BÀI</span>
+                      <p>${item.traps}</p>
+                    </div>
+                  ` : ''}
+                </aside>
+              ` : ''}
+            </div>
           </div>
-          ${item.forms ? `<div class="handbook-forms-line"><b>Dạng đề thi:</b> ${item.forms}</div>` : ''}
-          <div class="formula-box">${item.formula}</div>
-          <div class="handbook-item-desc">${item.desc}</div>
-          ${item.example ? `
-            <div class="example-box">
-              <span class="example-title">VÍ DỤ TRONG TÀI LIỆU</span>
-              <p>${item.example}</p>
-            </div>
-          ` : ''}
-          ${item.reference ? `<div class="handbook-reference">Đối chiếu: ${item.reference}</div>` : ''}
-          ${item.traps ? `
-            <div class="trap-box">
-              <span class="trap-title">LƯU Ý KHI LÀM BÀI</span>
-              <p>${item.traps}</p>
-            </div>
-          ` : ''}
-        </div>
+        </details>
       `).join('');
 
       return `
-        <div class="handbook-chapter-card">
+        <section class="handbook-chapter-card" id="hb-${subj.id}-section-${sectionIndex}">
           <div class="handbook-chapter-head">
             <h3>${sec.title}</h3>
             <span class="badge" style="background:${subj.bg};color:${subj.color};font-weight:600">${sec.badge}</span>
@@ -388,7 +401,7 @@ function renderHandbook(selectedSubject, filterQuery) {
           <div class="handbook-grid">
             ${itemsHtml}
           </div>
-        </div>
+        </section>
       `;
     }).filter(Boolean).join('');
 
@@ -406,11 +419,16 @@ function renderHandbook(selectedSubject, filterQuery) {
             </div>
           </div>
           <div class="handbook-subject-actions">
-            <button class="btn btn-outline btn-sm handbook-jump-btn" onclick="document.getElementById('hb-${subj.id}').scrollIntoView({behavior:'smooth'})">
-              Lên đầu mục
-            </button>
+            <button class="btn btn-outline btn-sm" onclick="toggleHandbookDetails(true)">Mở tất cả</button>
+            <button class="btn btn-outline btn-sm" onclick="toggleHandbookDetails(false)">Thu gọn</button>
           </div>
         </div>
+        ${!query ? `
+          <nav class="handbook-section-nav" aria-label="Mục lục nhanh ${subj.name}">
+            <span>Mục lục:</span>
+            ${subj.sections.map((sec, index) => `<button type="button" onclick="document.getElementById('hb-${subj.id}-section-${index}').scrollIntoView({behavior:'smooth',block:'start'})">${sec.title.replace(/^Bài\s+\d+\s*·\s*/i, '')}</button>`).join('')}
+          </nav>
+        ` : ''}
         ${matchingSections}
       </div>
     `;
@@ -511,6 +529,11 @@ function renderHandbook(selectedSubject, filterQuery) {
 }
 
 if (typeof window !== "undefined") {
+  window.toggleHandbookDetails = function(open) {
+    document.querySelectorAll('.handbook-content-area .handbook-item-card').forEach(item => {
+      item.open = Boolean(open);
+    });
+  };
   window.renderHandbook = renderHandbook;
   window.handbookData = handbookData;
 }
