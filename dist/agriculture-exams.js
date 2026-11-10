@@ -97,11 +97,11 @@ const agricultureTfSets = [
       ["Độ dài chiếu sáng trong ngày có thể ảnh hưởng sự ra hoa.", true, "Đó là tác động của quang chu kì."],
       ["Chỉ rễ cây, không phải phần trên mặt đất, chịu ảnh hưởng của ánh sáng.", false, "Ánh sáng tác động trực tiếp đến bộ phận quang hợp và toàn bộ sinh trưởng của cây."]
     ]},
-    { stem: "Một thửa đất có tỉ lệ hạt sét cao, thường được gọi là đất nặng.", items: [
-      ["Hạt sét có kích thước nhỏ hơn 0,002 mm.", true, "Đây là ngưỡng kích thước hạt sét trong bài học."],
-      ["Đất này thường giữ nước và chất dinh dưỡng tốt.", true, "Tỉ lệ hạt nhỏ cao làm tăng khả năng giữ nước, dinh dưỡng."],
-      ["Đất nặng thường thoát nước và thoáng khí rất tốt.", false, "Khe hở nhỏ khiến đất thường thoát nước và thoáng khí kém."],
-      ["Khi ướt đất dễ dính, còn khi khô có thể cứng.", true, "Đây là đặc điểm thường suy ra từ tỉ lệ sét cao." ]
+    { stem: "Cuối mùa khô, một ruộng ven biển xuất hiện lớp muối trắng trên mặt đất và cây trồng sinh trưởng kém.", items: [
+      ["Hiện tượng này có thể do muối tan tích tụ trong đất.", true, "Lớp muối trên mặt và cây sinh trưởng kém là dấu hiệu thường gặp khi đất bị mặn."],
+      ["Nồng độ muối cao có thể làm rễ khó hút nước dù trong đất vẫn có nước.", true, "Dung dịch đất quá mặn cản trở quá trình hút nước của rễ."],
+      ["Dùng thêm nước mặn để tưới là biện pháp rửa mặn phù hợp.", false, "Rửa mặn cần nguồn nước ngọt và hệ thống tiêu thoát để đưa muối ra khỏi đất."],
+      ["Mọi loài và giống cây đều có khả năng chịu mặn như nhau.", false, "Khả năng chịu mặn khác nhau theo loài, giống và giai đoạn sinh trưởng." ]
     ]}
   ],
   [
@@ -111,11 +111,11 @@ const agricultureTfSets = [
       ["Thay đổi quang chu kì không bao giờ làm thay đổi thời điểm ra hoa.", false, "Quang chu kì có thể điều khiển sự ra hoa ở nhiều loài."],
       ["Tăng ánh sáng vô hạn luôn làm mọi cây sinh trưởng tốt hơn.", false, "Mỗi loài có nhu cầu và giới hạn ánh sáng khác nhau." ]
     ]},
-    { stem: "Sau mưa, một ruộng đất sét cao bị đọng nước lâu.", items: [
-      ["Hiện tượng này phù hợp với khả năng thoát nước kém của đất nặng.", true, "Đất nhiều sét có khe hở nhỏ và thoát nước chậm."],
-      ["Thành phần cơ giới của đất được xác định từ tỉ lệ cát, limon và sét.", true, "Đây là căn cứ phân loại đất theo thành phần cơ giới."],
-      ["Tỉ lệ hạt sét càng cao thì đất luôn giữ dinh dưỡng kém hơn.", false, "Hạt nhỏ thường làm tăng khả năng giữ dinh dưỡng."],
-      ["Vì giữ nước tốt nên đất nặng không thể gây úng.", false, "Giữ nước cao và thoát nước kém chính là điều kiện dễ gây úng." ]
+    { stem: "Một cánh đồng gần cửa sông bị nước biển xâm nhập trong thời gian triều cường.", items: [
+      ["Nước biển xâm nhập là một nguyên nhân làm đất bị mặn.", true, "Nước biển đưa lượng muối hòa tan lớn vào đất."],
+      ["Đắp đê ngăn mặn và xây dựng hệ thống tưới – tiêu hợp lí giúp hạn chế mặn.", true, "Các công trình thủy lợi vừa ngăn nguồn muối mới vừa hỗ trợ rửa và tiêu mặn."],
+      ["Độ mặn càng cao thì phần lớn cây trồng càng hút nước dễ hơn.", false, "Nồng độ muối cao làm rễ khó hút nước và cây có thể héo sinh lí."],
+      ["Chọn cây hoặc giống chịu mặn là một biện pháp sử dụng đất phù hợp.", true, "Giống chịu mặn giúp giảm thiệt hại nhưng vẫn cần kết hợp cải tạo đất." ]
     ]}
   ],
   [
@@ -125,11 +125,11 @@ const agricultureTfSets = [
       ["Độ dài ngày và cường độ ánh sáng là hai khái niệm hoàn toàn giống nhau.", false, "Một đại lượng nói thời gian, đại lượng kia nói độ mạnh ánh sáng."],
       ["Bố trí mật độ cây không liên quan đến khả năng nhận ánh sáng.", false, "Mật độ ảnh hưởng sự che bóng và lượng ánh sáng mỗi cây nhận được." ]
     ]},
-    { stem: "Mẫu đất A có nhiều hạt dưới 0,002 mm hơn mẫu đất B.", items: [
-      ["Mẫu A có tỉ lệ hạt sét cao hơn.", true, "Hạt sét có kích thước dưới 0,002 mm."],
-      ["Mẫu A có xu hướng giữ nước tốt hơn mẫu B.", true, "Tỉ lệ hạt nhỏ cao tăng khả năng giữ nước."],
-      ["Có thể kết luận mẫu A chắc chắn giàu mọi chất dinh dưỡng.", false, "Khả năng giữ dinh dưỡng không đồng nghĩa đất chắc chắn đã giàu dinh dưỡng."],
-      ["Nếu quá nhiều sét, rễ có thể gặp bất lợi do đất kém thoáng.", true, "Đất nặng thường có độ thoáng khí thấp." ]
+    { stem: "Ở một vùng khô, nước ngầm mặn dâng lên theo mao quản rồi nước bốc hơi mạnh trên bề mặt đất.", items: [
+      ["Quá trình này có thể làm muối tích tụ ở tầng đất mặt.", true, "Nước bốc hơi còn muối hòa tan lưu lại và tích tụ dần."],
+      ["Đây là một con đường hình thành đất mặn ngoài hiện tượng nước biển xâm nhập.", true, "Nước ngầm mặn dâng và bốc hơi cũng có thể làm đất mặn hóa."],
+      ["Giữ ruộng ngập thường xuyên bằng nước mặn sẽ làm lượng muối giảm.", false, "Nước mặn bổ sung thêm muối; rửa mặn phải dùng nước ngọt và có tiêu thoát."],
+      ["Tăng phân hữu cơ có thể hỗ trợ cải thiện đất nhưng không thay thế việc ngăn và rửa mặn.", true, "Hữu cơ cải thiện đất, còn thủy lợi mới giúp kiểm soát nguồn muối và đưa muối ra ngoài." ]
     ]}
   ],
   [
@@ -139,11 +139,11 @@ const agricultureTfSets = [
       ["Ánh sáng không liên quan đến năng suất cây trồng.", false, "Ánh sáng ảnh hưởng quang hợp, sinh trưởng và năng suất."],
       ["Bất kể loài cây nào, chiếu sáng 24 giờ đều là phương án tối ưu.", false, "Nhu cầu ánh sáng khác nhau và cây cũng cần chế độ phù hợp." ]
     ]},
-    { stem: "Nông dân cải tạo một chân ruộng nhiều sét để trồng rau.", items: [
-      ["Đây là loại đất có thành phần cơ giới nặng.", true, "Nhiều sét là đặc trưng của đất nặng."],
-      ["Đất thường dễ dính, dẻo khi ướt.", true, "Hàm lượng sét cao làm đất dính dẻo khi ẩm."],
-      ["Đất luôn tơi xốp và thoát nước nhanh mà không cần cải tạo.", false, "Đất nhiều sét thường nặng, chặt và thoát nước kém."],
-      ["Tăng độ thoáng và tiêu nước hợp lí có thể có lợi cho vùng rễ.", true, "Cải thiện thoáng khí, tiêu nước giúp hạn chế úng và thiếu ôxi." ]
+    { stem: "Nông dân lập kế hoạch cải tạo một thửa ruộng bị mặn để tiếp tục sản xuất.", items: [
+      ["Cần có đường tiêu nước trước hoặc đồng thời với việc dùng nước ngọt rửa mặn.", true, "Nước tiêu mang lượng muối đã hòa tan ra khỏi tầng đất canh tác."],
+      ["Chỉ bón vôi một lần, không cần tưới – tiêu, là có thể loại hết muối tan khỏi đất.", false, "Bón vôi cần được phối hợp với rửa và tiêu nước; vôi không tự đưa muối ra khỏi đất."],
+      ["Bổ sung phân hữu cơ hợp lí có thể góp phần cải thiện độ phì và tính chất đất.", true, "Chất hữu cơ hỗ trợ cấu trúc đất và hoạt động sinh học."],
+      ["Tưới nước biển định kì là cách ngăn đất tái mặn.", false, "Nước biển là nguồn đưa thêm muối vào đất." ]
     ]}
   ],
   [
@@ -153,11 +153,11 @@ const agricultureTfSets = [
       ["Ánh sáng còn ảnh hưởng tích lũy chất hữu cơ của cây.", true, "Ánh sáng cần cho quang hợp."],
       ["Nhu cầu ánh sáng không thay đổi giữa các loài và giống.", false, "Nhu cầu ánh sáng phụ thuộc loài và giống." ]
     ]},
-    { stem: "Khi khô hạn, một mẫu đất nhiều sét trở nên cứng và khó làm đất.", items: [
-      ["Đây là biểu hiện thường gặp ở đất nặng.", true, "Đất nhiều sét có thể cứng khi khô."],
-      ["Hạt chủ yếu quyết định tính nặng của đất là hạt sét.", true, "Tỉ lệ sét cao làm thành phần cơ giới nặng."],
-      ["Hạt sét có kích thước lớn hơn hạt cát.", false, "Hạt sét nhỏ nhất, hạt cát lớn nhất."],
-      ["Đất nặng thường có khả năng giữ nước thấp hơn đất cát.", false, "Đất nhiều sét thường giữ nước cao hơn đất cát." ]
+    { stem: "Hai giống cây được trồng thử trên cùng một thửa đất có nồng độ muối tan cao; giống A sống tốt hơn giống B.", items: [
+      ["Kết quả cho thấy khả năng chịu mặn có thể khác nhau giữa các giống.", true, "Mỗi giống có ngưỡng chịu mặn khác nhau."],
+      ["Muối cao có thể làm cây sinh trưởng kém do cản trở hút nước và gây mất cân bằng ion.", true, "Đó là các tác hại quan trọng của đất mặn đối với cây."],
+      ["Có lớp muối trên mặt chứng tỏ đất chắc chắn giàu dinh dưỡng và không cần cải tạo.", false, "Nhiều muối tan không đồng nghĩa đất có độ phì cao hoặc đủ dinh dưỡng cho cây."],
+      ["Theo dõi độ mặn, nguồn nước và khả năng tiêu thoát là cần thiết khi bố trí sản xuất.", true, "Quản lí đất mặn phải kiểm soát cả nguồn muối, nước tưới và đường tiêu." ]
     ]}
   ]
 ];

@@ -21,14 +21,14 @@ handbookData.agriculture = {
           freq: 'Học đúng trọng tâm cô dặn',
           forms: '20 nhiều lựa chọn · 2 đúng/sai · 2 tự luận',
           formula: '<div class="agri-matrix-grid"><span><b>Phần I</b><strong>20 câu</strong><small>5,0 điểm · 0,25 điểm/câu</small></span><span><b>Phần II</b><strong>2 câu × 4 ý</strong><small>2,0 điểm · 0,25 điểm/ý</small></span><span><b>Phần III</b><strong>2 câu</strong><small>3,0 điểm</small></span></div>',
-          desc: 'Tỉ lệ mức độ theo ma trận: <b>40% nhận biết – 30% thông hiểu – 30% vận dụng</b>. Phần nhiều lựa chọn phủ từ Bài 1 đến Bài 5; phần đúng/sai tập trung vào ánh sáng và đất nặng; phần tự luận tập trung vào giá thể và đất xám bạc màu.',
+          desc: 'Tỉ lệ mức độ theo ma trận: <b>40% nhận biết – 30% thông hiểu – 30% vận dụng</b>. Phần nhiều lựa chọn phủ từ Bài 1 đến Bài 5; phần đúng/sai tập trung vào ánh sáng và đất mặn; phần tự luận tập trung vào giá thể và đất xám bạc màu.',
           traps: 'Gợi ý của giáo viên là trọng tâm ôn tập, không phải giới hạn tuyệt đối. Khi học một ý, luôn nhớ đủ ba vế: đặc điểm – tác động/ý nghĩa – biện pháp hoặc quy trình.'
         },
         {
           name: '2. Bản đồ ưu tiên trước giờ thi',
           freq: 'Dùng để ôn nhanh',
           forms: 'Mọi phần của đề',
-          formula: '<ol class="agri-steps"><li><b>Ưu tiên 1:</b> đất xám bạc màu và ba giá thể than bùn, xơ dừa, trấu hun.</li><li><b>Ưu tiên 2:</b> ánh sáng và đất nặng để xử lí đúng/sai.</li><li><b>Ưu tiên 3:</b> học trọn Bài 1, Bài 3; đất chua ở Bài 4.</li><li><b>Ưu tiên 4:</b> phân loại cây trồng và các yếu tố nhiệt độ, nước, độ ẩm, ánh sáng ở Bài 2; nhớ thêm perlite.</li></ol>',
+          formula: '<ol class="agri-steps"><li><b>Ưu tiên 1:</b> đất xám bạc màu và ba giá thể than bùn, xơ dừa, trấu hun.</li><li><b>Ưu tiên 2:</b> ánh sáng và đất mặn để xử lí đúng/sai.</li><li><b>Ưu tiên 3:</b> học trọn Bài 1, Bài 3; đất chua ở Bài 4.</li><li><b>Ưu tiên 4:</b> phân loại cây trồng và các yếu tố nhiệt độ, nước, độ ẩm, ánh sáng ở Bài 2; nhớ thêm perlite.</li></ol>',
           desc: 'Cách học hiệu quả: tự che cột đáp án, nói lại bằng từ khóa; sau đó làm một đề 45 phút và đối chiếu lời giải. Với tự luận, viết theo gạch đầu dòng, mỗi ý có từ khóa khoa học rõ ràng.',
           traps: 'Không học lẫn <b>nguyên nhân</b> với <b>biện pháp</b>; không viết “bón phân” chung chung khi đề yêu cầu nêu loại phân và tác dụng.'
         }
@@ -143,12 +143,12 @@ handbookData.agriculture = {
           traps: 'Không nhầm keo đất với dung dịch đất. Keo không hòa tan hoàn toàn trong nước.'
         },
         {
-          name: '3. Thành phần cơ giới và đất nặng',
-          freq: 'Chắc chắn ôn cho đúng/sai',
-          forms: 'Nhiều lựa chọn · Đúng/sai',
+          name: '3. Thành phần cơ giới của đất',
+          freq: 'Học toàn bộ Bài 3',
+          forms: 'Nhận biết · Thông hiểu',
           formula: '<div class="handbook-table-wrap"><table class="handbook-table"><thead><tr><th>Hạt</th><th>Kích thước</th><th>Ghi nhớ</th></tr></thead><tbody><tr><td>Cát</td><td>0,02–2 mm</td><td>Lớn nhất</td></tr><tr><td>Limon</td><td>0,002–0,02 mm</td><td>Trung gian</td></tr><tr><td>Sét</td><td>&lt; 0,002 mm</td><td>Nhỏ nhất</td></tr></tbody></table></div><p><b>Quy luật:</b> tỉ lệ hạt nhỏ càng cao thì khả năng giữ nước và dinh dưỡng càng lớn. Căn cứ tỉ lệ cát–limon–sét, chia thành đất cát, đất thịt, đất sét và các loại trung gian.</p>',
-          desc: '<b>Đất nặng</b> là cách gọi đất có tỉ lệ hạt sét cao. Từ đặc điểm hạt sét rất nhỏ có thể suy ra đất giữ nước, giữ dinh dưỡng tốt nhưng thường thoát nước và thoáng khí kém; dễ dính, dẻo khi ướt và cứng khi khô.',
-          traps: 'Phát biểu “đất nặng có hạt lớn, giữ nước kém và thoát nước rất nhanh” là sai. Tuy nhiên giữ nước tốt không đồng nghĩa luôn thuận lợi, vì úng và thiếu khí vẫn có thể xảy ra.'
+          desc: 'Thành phần cơ giới cho biết tỉ lệ các cấp hạt cát, limon và sét trong đất. Đất cát có nhiều hạt lớn nên thoát nước nhanh; đất sét có nhiều hạt nhỏ nên giữ nước và dinh dưỡng tốt hơn nhưng thường thoát nước, thoáng khí kém; đất thịt có tính chất trung gian.',
+          traps: 'Không nhầm <b>thành phần cơ giới</b> của Bài 3 với chuyên đề <b>đất mặn</b> ở Bài 4. “Mặn” nói đến lượng muối tan cao, không phải tên gọi theo tỉ lệ hạt sét.'
         },
         {
           name: '4. Phản ứng của dung dịch đất',
@@ -162,7 +162,7 @@ handbookData.agriculture = {
     },
     {
       title: 'Bài 4 · Sử dụng, cải tạo và bảo vệ đất trồng',
-      badge: 'Đất chua · Đất xám bạc màu',
+      badge: 'Đất chua · Đất mặn · Đất xám bạc màu',
       items: [
         {
           name: '1. Nguyên tắc sử dụng và bảo vệ đất',
@@ -189,16 +189,25 @@ handbookData.agriculture = {
           traps: 'Bón vôi có mục tiêu chính là giảm độ chua và độc Al/Fe; không xem vôi là nguồn cung cấp đầy đủ mọi chất dinh dưỡng cho cây.'
         },
         {
-          name: '4. Đất xám bạc màu: đặc điểm và nguyên nhân',
+          name: '4. Đất mặn: đặc điểm, nguyên nhân và cải tạo',
+          freq: 'Chắc chắn ôn cho đúng/sai',
+          forms: 'Đúng/sai · Tình huống thực tế',
+          formula: '<div class="agri-answer-frame"><p><b>Khái niệm:</b> đất mặn là đất có nồng độ muối tan cao, gây bất lợi cho sinh trưởng của phần lớn cây trồng.</p><p><b>Nguyên nhân:</b> nước biển xâm nhập; nước ngầm mặn dâng theo mao quản rồi bốc hơi làm muối tích tụ; tưới hoặc tiêu thoát nước không hợp lí cũng có thể làm mặn tăng.</p><p><b>Đặc điểm:</b> chứa nhiều muối tan, thường gặp NaCl và Na<sub>2</sub>SO<sub>4</sub>; cây khó hút nước, có thể bị ngộ độc ion; hoạt động của vi sinh vật và độ phì đất giảm.</p><p><b>Cải tạo:</b> ngăn nước mặn, xây dựng hệ thống tưới – tiêu và dùng nước ngọt rửa mặn; bón vôi khi phù hợp kết hợp rửa; tăng phân hữu cơ; chọn cây hoặc giống chịu mặn.</p></div>',
+          desc: 'Chuỗi cần nhớ: <b>muối tan tích tụ → nồng độ dung dịch đất tăng → rễ khó hút nước → cây sinh trưởng kém</b>. Muốn cải tạo bền vững phải phối hợp thủy lợi, bón phân và bố trí cây trồng, trong đó rửa mặn chỉ hiệu quả khi có đường tiêu thoát nước.',
+          example: 'Ở vùng ven biển, đê ngăn mặn giúp hạn chế nguồn muối mới; kênh tưới – tiêu đưa nước ngọt vào hòa tan muối và dẫn nước mặn ra ngoài.',
+          traps: 'Không nhầm đất mặn với đất chua hoặc đất có nhiều sét. Bón vôi đơn độc mà không rửa và tiêu nước không thể đưa lượng muối đã hòa tan ra khỏi đất.'
+        },
+        {
+          name: '5. Đất xám bạc màu: đặc điểm và nguyên nhân',
           freq: 'Chắc chắn ôn cho tự luận',
           forms: 'Tự luận · Thông hiểu',
           formula: '<b>Đặc điểm:</b> tầng canh tác mỏng; thành phần cơ giới nhẹ; nghèo dinh dưỡng; đất chua; ít vi sinh vật có ích.<br><b>Nguyên nhân tự nhiên:</b> thường ở vùng chuyển tiếp chân núi, địa hình dốc nên bị rửa trôi.<br><b>Nguyên nhân canh tác:</b> độc canh lâu năm, làm đất và bố trí mùa vụ không hợp lí, nhất là canh tác trong mùa mưa.',
           desc: 'Đất xám bạc màu phân bố rộng, trong đó có Đông Nam Bộ và Tây Nguyên. Suy giảm dinh dưỡng và rửa trôi kéo dài làm độ phì thấp.',
           example: '<b>Độ phì đất</b> là khả năng đáp ứng nhu cầu của cây về dinh dưỡng, nước, không khí, nhiệt độ và môi trường lí – hóa thuận lợi để cây sinh trưởng bình thường.',
-          traps: 'Không mô tả đất xám bạc màu là đất nặng, giàu mùn hoặc có tầng canh tác dày.'
+          traps: 'Không nhầm đất xám bạc màu với đất mặn; cũng không mô tả loại đất này là giàu mùn hoặc có tầng canh tác dày.'
         },
         {
-          name: '5. Cải tạo đất xám bạc màu',
+          name: '6. Cải tạo đất xám bạc màu',
           freq: 'Chắc chắn ôn cho tự luận',
           forms: 'Tự luận · Vận dụng',
           formula: '<div class="agri-answer-frame"><b>Ba nhóm biện pháp phải đủ:</b><p><strong>Phân bón:</strong> bón hữu cơ, vô cơ, phân xanh; chú trọng phân hữu cơ để tăng dinh dưỡng và độ phì; bón vôi để nâng pH và cải thiện tính chất vật lí.</p><p><strong>Thủy lợi:</strong> tưới, tiêu hợp lí để tránh rửa trôi dinh dưỡng.</p><p><strong>Canh tác:</strong> xây dựng hệ thống cây trồng phù hợp, chọn giống ngắn ngày; luân canh, tăng vụ, xen canh cây họ Đậu để vừa tăng thu nhập vừa cải tạo đất.</p></div>',
@@ -274,12 +283,12 @@ handbookData.agriculture = {
           traps: 'Từ tuyệt đối như “mọi”, “luôn”, “không bao giờ” thường là dấu hiệu cần kiểm tra kĩ.'
         },
         {
-          name: '2. Checklist đúng/sai về đất nặng',
+          name: '2. Checklist đúng/sai về đất mặn',
           freq: 'Câu đúng/sai số 2',
           forms: '4 ý đúng/sai',
-          formula: '<ul class="agri-check-list"><li>✓ Tỉ lệ hạt sét cao; hạt sét nhỏ hơn 0,002 mm.</li><li>✓ Giữ nước và dinh dưỡng tốt.</li><li>✓ Thường thoát nước, thoáng khí kém; dễ dính khi ướt, cứng khi khô.</li><li>✗ Thành phần chủ yếu là hạt cát lớn.</li><li>✗ Giữ nước kém và thoát nước rất nhanh.</li></ul>',
-          desc: 'Chuỗi suy luận: hạt rất nhỏ → tổng diện tích bề mặt lớn → giữ nước, giữ chất tốt; khe hở nhỏ → nước thoát chậm và khí lưu thông kém.',
-          traps: 'Đất giữ nước tốt vẫn có thể gây úng. “Giữ nước” và “thoát nước” là hai ý phải đọc tách biệt.'
+          formula: '<ul class="agri-check-list"><li>✓ Nồng độ muối tan cao gây bất lợi cho phần lớn cây trồng.</li><li>✓ Nước biển xâm nhập và nước ngầm mặn bốc hơi có thể làm đất mặn.</li><li>✓ Muối cao làm rễ khó hút nước dù đất vẫn có nước.</li><li>✓ Cần ngăn mặn, tưới – tiêu hợp lí và dùng nước ngọt rửa mặn.</li><li>✗ Chỉ bón vôi một lần là loại hết muối khỏi đất.</li><li>✗ Mọi giống cây đều chịu mặn như nhau.</li></ul>',
+          desc: 'Khi xét một tình huống, hãy tách bốn ý: <b>nguồn muối – tác hại lên cây – đường đưa muối ra khỏi đất – giống cây phù hợp</b>. Biện pháp thủy lợi giữ vai trò đặc biệt quan trọng.',
+          traps: 'Có nước trong đất không có nghĩa rễ hút được nước: nồng độ muối cao làm cây khó hút nước. Rửa mặn phải đi kèm tiêu thoát nước, nếu không muối vẫn lưu lại trong tầng đất.'
         },
         {
           name: '3. Dàn ý tự luận đất xám bạc màu',
