@@ -537,6 +537,13 @@ function startExam(id) {
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('exam')) return;
   const e = exams.find(x => x.id === id);
   if (!e) return;
+  if (e.originalPdf) {
+    clearInterval(ticker);
+    window.examPresence?.stop('viewed');
+    activeExam = e;
+    renderOriginalPdfExam(e);
+    return;
+  }
   hidePauseModal();
   hideStopModal();
   isExamPaused = false;
@@ -598,13 +605,17 @@ function persistDraft() {
 function renderOriginalPdfExam(e) {
   const pdf = e.source.url;
   const base = pdf.replace(/\.pdf$/i, '');
+  const pageCount = Math.max(1, Number(e.pageCount) || 1);
+  const sm = getSubjectMeta(e.subject);
+  const subjectIndex = { math: 0, physics: 1, agriculture: 3, english: 4, chemistry: 5 }[e.subject];
+  const subjectLabel = String(sm.name || 'Lớp 10').toUpperCase();
   app.innerHTML = `<div class="content original-pdf-exam">
     <div class="original-pdf-toolbar">
-      <div><span class="subject-pill">TOÁN 10 · ĐỀ GỐC</span><h1>${esc(e.title)}</h1><p>Đề gồm 3 trang · Thời gian làm bài: 90 phút · Mã đề 101</p></div>
-      <div class="original-pdf-actions"><button class="secondary" data-subjectto="0">← Kho đề Toán</button><a class="primary" href="${esc(pdf)}" target="_blank" rel="noopener noreferrer">Mở PDF gốc ↗</a></div>
+      <div><span class="subject-pill" style="background:${sm.bg};color:${sm.color}">${esc(subjectLabel)} · ĐỀ NGUYÊN GỐC</span><h1>${esc(e.title)}</h1><p>Đề gồm ${pageCount} trang · Thời gian làm bài: ${Number(e.minutes) || 45} phút</p></div>
+      <div class="original-pdf-actions"><button class="secondary" data-subjectto="${subjectIndex ?? 0}">← Kho đề ${esc(sm.name || '')}</button><a class="primary" href="${esc(pdf)}" target="_blank" rel="noopener noreferrer">Mở PDF gốc ↗</a></div>
     </div>
-    <div class="original-pdf-pages" aria-label="Nội dung nguyên bản của đề ôn tập số 1">
-      ${[1, 2, 3].map(n => `<figure class="original-pdf-page"><img src="${esc(base)}-page-${n}.png" alt="Trang ${n} trên 3 của đề ôn tập Toán 10, mã đề 101" loading="${n === 1 ? 'eager' : 'lazy'}"><figcaption>Trang ${n}/3</figcaption></figure>`).join('')}
+    <div class="original-pdf-pages" aria-label="Nội dung nguyên bản gồm ${pageCount} trang của ${esc(e.title)}">
+      ${Array.from({length: pageCount}, (_, index) => index + 1).map(n => `<figure class="original-pdf-page"><img src="${esc(base)}-page-${n}.png" alt="Trang ${n} trên ${pageCount} của ${esc(e.title)}" loading="${n === 1 ? 'eager' : 'lazy'}"><figcaption>Trang ${n}/${pageCount}</figcaption></figure>`).join('')}
     </div>
   </div>`;
   setNav('exam');
@@ -762,6 +773,10 @@ async function gradeEssays(indices) {
 
 function renderExam() {
   const e = activeExam;
+  if (e.originalPdf) {
+    renderOriginalPdfExam(e);
+    return;
+  }
   const sm = getSubjectMeta(e.subject);
   const qLen = e.questions ? e.questions.length : 0;
   const tfLen = e.tf ? e.tf.length : 0;
@@ -785,8 +800,6 @@ function renderExam() {
           </div>
         </div>
         ${sourceLine(e)}
-        ${e.originalPdf ? `<div class="original-pdf-pages" aria-label="Ba trang đề gốc, gồm hình minh họa">${[1, 2, 3].map(n => `<figure class="original-pdf-page"><img src="${esc(e.source.url.replace(/\.pdf$/i, ''))}-page-${n}.png" alt="Trang ${n} trên 3 của đề Toán 10 mã đề 101" loading="${n === 1 ? 'eager' : 'lazy'}"><figcaption>Trang ${n}/3</figcaption></figure>`).join('')}</div><h2 class="part-heading">Phiếu trả lời · đối chiếu từng câu với đề gốc phía trên</h2>` : ''}
-
         ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · ${e.wordBank ? 'Trắc nghiệm và kéo thả từ' : 'Nhiều lựa chọn'} (${e.questions.length} ${e.wordBank ? 'câu/ô' : 'câu'})</h2>` : ''}
         ${(e.questions || []).map((q, i) => wordBankFor(e, i)
           ? (i === e.wordBank.start ? renderWordBankQuestion(e) : '')

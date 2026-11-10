@@ -1,6 +1,96 @@
 // Tài liệu PDF gốc do người dùng cung cấp; giữ nguyên toàn bộ nội dung và hình minh họa.
 const originalPdfExams = [
   {
+    id: 'vatli-10-tailieu-so-5',
+    title: 'Vật lí 10 - Kiểm tra giữa kì I - Số 5',
+    description: 'Bản đề nguyên gốc 06 trang từ tệp Word do người dùng cung cấp.',
+    subject: 'physics',
+    minutes: 45,
+    pageCount: 6,
+    addedAt: '2026-11-10T12:05:00+07:00',
+    originalPdf: true,
+    source: {
+      school: 'Kiểm tra giữa kì I - Số 5',
+      province: '',
+      year: '',
+      url: 'supplied/physics-tailieu-05.pdf',
+      note: 'Giữ nguyên từng trang, công thức và hình minh họa của tài liệu Word gốc.'
+    },
+    questions: [], tf: [], short: [], essay: []
+  },
+  {
+    id: 'vatli-10-tailieu-so-4',
+    title: 'Vật lí 10 - Kiểm tra giữa kì I - Số 4',
+    description: 'Bản đề nguyên gốc 06 trang từ tệp Word do người dùng cung cấp.',
+    subject: 'physics',
+    minutes: 45,
+    pageCount: 6,
+    addedAt: '2026-11-10T12:04:00+07:00',
+    originalPdf: true,
+    source: {
+      school: 'Kiểm tra giữa kì I - Số 4',
+      province: '',
+      year: '',
+      url: 'supplied/physics-tailieu-04.pdf',
+      note: 'Giữ nguyên từng trang, công thức và hình minh họa của tài liệu Word gốc.'
+    },
+    questions: [], tf: [], short: [], essay: []
+  },
+  {
+    id: 'vatli-10-tailieu-so-3',
+    title: 'Vật lí 10 - Kiểm tra giữa kì I - Số 3 (minh họa của Bộ)',
+    description: 'Bản đề nguyên gốc 04 trang từ tệp Word do người dùng cung cấp.',
+    subject: 'physics',
+    minutes: 45,
+    pageCount: 4,
+    addedAt: '2026-11-10T12:03:00+07:00',
+    originalPdf: true,
+    source: {
+      school: 'Đề minh họa của Bộ - Kiểm tra giữa kì I - Số 3',
+      province: '',
+      year: '',
+      url: 'supplied/physics-tailieu-03.pdf',
+      note: 'Giữ nguyên từng trang, công thức và hình minh họa của tài liệu Word gốc.'
+    },
+    questions: [], tf: [], short: [], essay: []
+  },
+  {
+    id: 'vatli-10-tailieu-de-2',
+    title: 'Vật lí 10 - Ôn tập kiểm tra giữa kì I - Số 2',
+    description: 'Bản đề nguyên gốc 04 trang từ tệp Word do người dùng cung cấp.',
+    subject: 'physics',
+    minutes: 45,
+    pageCount: 4,
+    addedAt: '2026-11-10T12:02:00+07:00',
+    originalPdf: true,
+    source: {
+      school: 'Ôn tập kiểm tra giữa kì I - Số 2',
+      province: '',
+      year: '',
+      url: 'supplied/physics-tailieu-02.pdf',
+      note: 'Giữ nguyên từng trang, công thức và hình minh họa của tài liệu Word gốc.'
+    },
+    questions: [], tf: [], short: [], essay: []
+  },
+  {
+    id: 'vatli-10-tailieu-de-1',
+    title: 'Vật lí 10 - Ôn tập kiểm tra giữa kì I - Số 1',
+    description: 'Bản đề nguyên gốc 05 trang từ tệp Word do người dùng cung cấp.',
+    subject: 'physics',
+    minutes: 45,
+    pageCount: 5,
+    addedAt: '2026-11-10T12:01:00+07:00',
+    originalPdf: true,
+    source: {
+      school: 'Ôn tập kiểm tra giữa kì I - Số 1',
+      province: '',
+      year: '',
+      url: 'supplied/physics-tailieu-01.pdf',
+      note: 'Giữ nguyên từng trang, công thức và hình minh họa của tài liệu Word gốc.'
+    },
+    questions: [], tf: [], short: [], essay: []
+  },
+  {
     id: 'TOAN10-ON-TAP-GKI-MA101',
     title: 'Toán 10 - Đề ôn tập kiểm tra giữa kỳ I - Mã đề 101',
     description: 'Đề gốc 03 trang, giữ nguyên định dạng và hình minh họa trong PDF.',

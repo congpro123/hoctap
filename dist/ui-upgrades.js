@@ -10,7 +10,7 @@ function card(e){
   let status='<span class="exam-status-badge pending">Chưa làm</span>';
   let action=`<button class="primary" data-start="${esc(e.id)}">Làm bài</button>`;
   if(e.originalPdf){
-    status='<span class="exam-status-badge pending">Đề PDF gốc · 3 trang</span>';
+    status=`<span class="exam-status-badge pending">Đề nguyên gốc · ${Number(e.pageCount)||1} trang</span>`;
     action=`<button class="primary" data-start="${esc(e.id)}">Xem đề</button>`;
   } else if(window.auth && typeof window.auth.getExamStatus==='function'){
     const st=window.auth.getExamStatus(e.id);
