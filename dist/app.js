@@ -87,7 +87,7 @@ function normalizeExam(e) {
 // Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
-  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof agricultureExams !== 'undefined' ? agricultureExams : []), ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams : [])]
+  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof agricultureExams !== 'undefined' ? agricultureExams : []), ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof window !== 'undefined' && Array.isArray(window.physicsPaperExams) ? window.physicsPaperExams : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams.filter(e => !String(e.id || '').startsWith('vatli-10-tailieu')) : [])]
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
     : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
@@ -800,6 +800,16 @@ function renderExam() {
           </div>
         </div>
         ${sourceLine(e)}
+        ${e.paperExam ? `<section class="paper-exam-source">
+          <div class="paper-exam-source-head">
+            <div><span class="paper-exam-kicker">ĐỀ NGUYÊN BẢN</span><h2>Đọc đề trực tiếp trên từng trang</h2><p>Công thức và hình minh họa được giữ theo tài liệu gốc. Điền câu trả lời vào phiếu trực tuyến bên dưới.</p></div>
+            <a class="secondary" href="${esc(e.source?.url || '#')}" target="_blank" rel="noopener noreferrer">Mở PDF ↗</a>
+          </div>
+          <div class="paper-page-links">${Array.from({length:Number(e.pageCount)||1},(_,i)=>`<a href="#paper-page-${i+1}">Trang ${i+1}</a>`).join('')}</div>
+          <div class="original-pdf-pages paper-exam-pages" aria-label="${Number(e.pageCount)||1} trang đề nguyên bản">
+            ${Array.from({length:Number(e.pageCount)||1},(_,i)=>i+1).map(n=>`<figure class="original-pdf-page" id="paper-page-${n}"><img src="${esc(e.paperBase)}-page-${n}.png" alt="Trang ${n} trên ${Number(e.pageCount)||1} của ${esc(e.title)}" loading="${n===1?'eager':'lazy'}"><figcaption>Trang ${n}/${Number(e.pageCount)||1}</figcaption></figure>`).join('')}
+          </div>
+        </section><h2 class="paper-answer-heading">Phiếu trả lời trực tuyến</h2>` : ''}
         ${(e.questions || []).length ? `<h2 class="part-heading">Phần I · ${e.wordBank ? 'Trắc nghiệm và kéo thả từ' : 'Nhiều lựa chọn'} (${e.questions.length} ${e.wordBank ? 'câu/ô' : 'câu'})</h2>` : ''}
         ${(e.questions || []).map((q, i) => wordBankFor(e, i)
           ? (i === e.wordBank.start ? renderWordBankQuestion(e) : '')
@@ -1074,6 +1084,7 @@ function renderResult(r) {
       <p style="color:#64748b;font-size:15px;margin-bottom:24px;">Trả lời đúng: <b>${r.correct}</b> / ${r.total} ý hỏi · Điểm chuẩn cấu trúc Bộ GD&ĐT 2026–2027.</p>
       
       ${sourceLine(e)}
+      ${e.paperExam ? `<details class="paper-review-source"><summary>Xem lại đề nguyên bản (${Number(e.pageCount)||1} trang)</summary><div class="original-pdf-pages paper-exam-pages">${Array.from({length:Number(e.pageCount)||1},(_,i)=>i+1).map(n=>`<figure class="original-pdf-page"><img src="${esc(e.paperBase)}-page-${n}.png" alt="Trang ${n} trên ${Number(e.pageCount)||1} của ${esc(e.title)}" loading="lazy"><figcaption>Trang ${n}/${Number(e.pageCount)||1}</figcaption></figure>`).join('')}</div></details>` : ''}
       
       <div style="display:flex;gap:12px;justify-content:center;margin:24px 0;">
         <button class="primary" data-start="${esc(r.id)}">Làm lại đề này ↺</button>
