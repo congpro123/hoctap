@@ -1873,12 +1873,12 @@ window.physicsPaperExams = [
         "Đáp án theo tài liệu nguồn: B."
       ],
       [
-        "Câu 8: Một chiếc thuyền đi từ bờ bên này sang bờ bên kia của một con sông rộng <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-2/image044.gif\" alt=\"Công thức hoặc hình minh họa trong đề\"> với vận tốc đối với nước là <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-2/image045.gif\" alt=\"Công thức hoặc hình minh họa trong đề\"> vuông góc với dòng chảy. Nước chảy với vận tốc <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-2/image046.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">. Độ dịch chuyển của thuyền khi sang đến bờ bên kia theo phương dọc dòng sông là",
+        "Câu 8: Một chiếc thuyền đi từ bờ bên này sang bờ bên kia của một con sông rộng $w$ với vận tốc đối với nước là $\\vec{v}_{tn}$ vuông góc với dòng chảy. Nước chảy với vận tốc $\\vec{v}_{nb}$. Độ dịch chuyển của thuyền khi sang đến bờ bên kia theo phương dọc dòng sông là",
         [
-          "<img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-2/image047.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">.<br>",
-          "<img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-2/image048.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">.",
-          "<img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-2/image049.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">.<br>",
-          "<img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-2/image050.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">."
+          "$d_x=v_{nb}\\dfrac{w}{v_{tn}}$.",
+          "$d_x=v_{tn}\\dfrac{w}{v_{nb}}$.",
+          "$d_x=w$.",
+          "$d_x=\\sqrt{v_{tn}^{2}+v_{nb}^{2}}\\,w$."
         ],
         0,
         "Đáp án theo tài liệu nguồn: A."
@@ -2288,14 +2288,14 @@ window.physicsPaperExams = [
     if (/nhanh dần|gia tốc/.test(value)) {
       return "Dùng a = Δv/Δt, v = v₀ + at và s = v₀t + ½at²; vật nhanh dần khi gia tốc cùng hướng vận tốc";
     }
+    if (/ca nô|thuyền|dòng nước|vận tốc tương đối/.test(value)) {
+      return "Thời gian qua sông là t = w/vₜₙ. Trong thời gian đó, dòng nước làm thuyền trôi dọc sông một đoạn dₓ = vₙᵦt = vₙᵦw/vₜₙ";
+    }
     if (/độ dịch chuyển|quãng đường/.test(value)) {
       return "Quãng đường là độ dài quỹ đạo và luôn không âm; độ dịch chuyển nối vị trí đầu với vị trí cuối, có hướng và có thể bằng 0 khi vật trở về chỗ cũ";
     }
     if (/tốc độ|vận tốc/.test(value)) {
       return "Tốc độ chỉ cho biết độ nhanh chậm, còn vận tốc có cả độ lớn và hướng; tốc độ trung bình bằng tổng quãng đường chia tổng thời gian, vận tốc trung bình bằng độ dịch chuyển chia thời gian";
-    }
-    if (/ca nô|dòng nước|vận tốc tương đối/.test(value)) {
-      return "Dùng quy tắc cộng vận tốc: xuôi dòng thì cộng tốc độ dòng nước, ngược dòng thì lấy tốc độ ca nô đối với nước trừ tốc độ dòng nước";
     }
     if (/an toàn|phòng thực hành|dây điện/.test(value)) {
       return "Trong phòng thực hành phải ngắt hoặc tránh xa nguồn nguy hiểm và báo giáo viên; không tự ý chạm, sửa hay tiếp tục thí nghiệm";
