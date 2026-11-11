@@ -1835,11 +1835,12 @@
 .original-pdf-page img{display:block;width:100%;height:auto}
 .original-pdf-page figcaption{text-align:center;padding:8px;color:#64748b;font-size:13px;border-top:1px solid #e2e8f0}
 .exam-inline-media{display:inline-block;max-width:min(100%,760px);max-height:320px;width:auto;height:auto;margin:3px 5px;vertical-align:middle;object-fit:contain}
-.exam-inline-media.exam-formula-media{max-width:100%;max-height:1.65em;margin:0 .18em;vertical-align:-.38em}
+.exam-inline-media.exam-formula-media{max-width:100%;max-height:2em;margin:0 .18em;vertical-align:-.46em;filter:contrast(1.28);image-rendering:-webkit-optimize-contrast}
 .exam-inline-media.exam-figure-media{display:block;margin:12px auto;max-height:320px}
 .exam-source-crop{position:relative;overflow:hidden;max-width:100%;margin:14px auto 8px;border:1px solid #dbe4ef;border-radius:10px;background:#fff}
 .exam-source-crop img{display:block;max-width:none;height:auto;transform-origin:top left}
 .option .exam-inline-media,.review-option-row .exam-inline-media{max-height:90px;margin:0 4px}
+.option .exam-inline-media.exam-formula-media,.review-option-row .exam-inline-media.exam-formula-media{max-height:2.15em}
 .paper-exam-source{margin:22px 0 30px;padding:18px;border:1px solid #cbd5e1;border-radius:14px;background:#f8fafc}
 .paper-exam-source-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:14px}
 .paper-exam-source-head h2{margin:4px 0 5px;font-size:20px;color:#172033}
