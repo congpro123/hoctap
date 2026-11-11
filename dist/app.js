@@ -985,17 +985,40 @@ function tick() {
   if (left <= 0) submitExam('time');
 }
 
-function shortCorrect(input, answer) {
+function shortAnswerRoundingPlaces(question) {
+  const prompt = String(question?.question || question?.text || '').toLowerCase();
+  if (/hàng\s+(?:đơn vị|phần nguyên)|số nguyên|phần nguyên/.test(prompt)) return 0;
+  if (/hàng\s+phần mười|(?:1|một)\s+chữ số\s+sau\s+dấu\s+(?:phẩy|chấm)/.test(prompt)) return 1;
+  if (/hàng\s+phần trăm|(?:2|hai)\s+chữ số\s+sau\s+dấu\s+(?:phẩy|chấm)/.test(prompt)) return 2;
+  if (/hàng\s+phần nghìn|(?:3|ba)\s+chữ số\s+sau\s+dấu\s+(?:phẩy|chấm)/.test(prompt)) return 3;
+  return null;
+}
+
+function roundHalfAwayFromZero(value, places) {
+  const factor = 10 ** places;
+  const magnitude = Math.abs(value);
+  const epsilon = Number.EPSILON * Math.max(1, magnitude) * factor;
+  return Math.sign(value || 1) * Math.round(magnitude * factor + epsilon) / factor;
+}
+
+function shortCorrect(input, answer, question = null) {
   if (input === undefined || String(input).trim() === '') return false;
   const normInput = String(input).trim().replace(',', '.');
   const normAns = String(answer).trim().replace(',', '.');
+  const numericMatches = (inputValue, answerValue) => {
+    const inputNumber = Number(inputValue);
+    const answerNumber = Number(answerValue);
+    if (Math.abs(inputNumber - answerNumber) < 0.001) return true;
+    const places = shortAnswerRoundingPlaces(question);
+    return places !== null && Math.abs(roundHalfAwayFromZero(inputNumber, places) - answerNumber) < 10 ** (-(places + 4));
+  };
   if (/^-?\d+(\.\d+)?$/.test(normInput) && /^-?\d+(\.\d+)?$/.test(normAns)) {
-    return Math.abs(Number(normInput) - Number(normAns)) < 0.001;
+    return numericMatches(normInput, normAns);
   }
   const strippedInput = normInput.replace(/\s*[^\d.-]+$/, '').trim();
   const strippedAns = normAns.replace(/\s*[^\d.-]+$/, '').trim();
   if (/^-?\d+(\.\d+)?$/.test(strippedInput) && /^-?\d+(\.\d+)?$/.test(strippedAns)) {
-    return Math.abs(Number(strippedInput) - Number(strippedAns)) < 0.001;
+    return numericMatches(strippedInput, strippedAns);
   }
   const normalizeWords = value => String(value).trim().toLowerCase()
     .replace(/[’‘`]/g, "'").replace(/\s+/g, ' ').replace(/[.!?]+$/g, '');
@@ -1037,7 +1060,7 @@ function submitExam(reason) {
 
   let scoreP3 = 0;
   (e.short || []).forEach((q, i) => {
-    if (shortCorrect(answers['s' + i], q.answer)) {
+    if (shortCorrect(answers['s' + i], q.answer, q)) {
       correct++;
       scoreP3 += 0.5;
     }
@@ -1191,7 +1214,7 @@ function renderResult(r) {
         <h3>Phần III · Trả lời ngắn (4 câu)</h3>
         ${(e.short || []).map((q, i) => {
           const user = r.answers['s' + i];
-          const ok = shortCorrect(user, q.answer);
+          const ok = shortCorrect(user, q.answer, q);
           return `<div class="review-item">
             <div class="review-item-header">
               <span class="review-part-tag">Phần III · Trả lời ngắn</span>
