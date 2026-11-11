@@ -261,7 +261,7 @@ function setNav(view) {
   document.querySelectorAll('.subject-link').forEach(x => x.classList.toggle('active', view == 'subject-' + x.dataset.subjectto));
   const crumbEl = document.getElementById('crumb');
   if (crumbEl) {
-    crumbEl.textContent = ({ home: 'TỔNG QUAN', subjects: 'KHO ĐỀ THI', handbook: 'SỔ TAY KIẾN THỨC', history: 'LỊCH SỬ LÀM BÀI', stats: 'THỐNG KÊ LỚP HỌC', exam: 'PHÒNG THI', result: 'KẾT QUẢ' })[view] || 'MÔN HỌC';
+    crumbEl.textContent = ({ home: 'TỔNG QUAN', subjects: 'KHO ĐỀ THI', handbook: 'SỔ TAY KIẾN THỨC', history: 'LỊCH SỬ LÀM BÀI', ranking: 'BẢNG XẾP HẠNG', stats: 'THỐNG KÊ LỚP HỌC', exam: 'PHÒNG THI', result: 'KẾT QUẢ' })[view] || 'MÔN HỌC';
   }
   if (typeof window !== 'undefined' && window.auth && typeof window.auth.renderTopBarUser === 'function') {
     window.auth.renderTopBarUser();
@@ -1337,6 +1337,8 @@ document.addEventListener('click', e => {
       catalog(); return;
     } else if (v === 'history') {
       history(); return;
+    } else if (v === 'ranking') {
+      if (typeof window.renderLeaderboardView === 'function') { window.renderLeaderboardView(); return; }
     } else if (v === 'stats') {
       if (typeof window !== 'undefined' && window.auth && typeof window.auth.renderStatsView === 'function') {
         window.auth.renderStatsView(); return;
@@ -1363,7 +1365,7 @@ document.addEventListener('click', e => {
   const b = e.target.closest('[data-start],[data-viewto],[data-subjectto],[data-submit],[data-jump],[data-jump-essay],[data-exam-pause],[data-exam-resume],[data-exam-stop],[data-exam-stop-confirm],[data-exam-stop-submit],[data-exam-stop-cancel]');
   if (!b) return;
   if (b.dataset.start) startExam(b.dataset.start);
-  else if (b.dataset.viewto) ({ home, subjects: () => catalog(), handbook: () => (typeof renderHandbook === 'function' ? renderHandbook('all') : null), history })[b.dataset.viewto]();
+  else if (b.dataset.viewto) ({ home, subjects: () => catalog(), handbook: () => (typeof renderHandbook === 'function' ? renderHandbook('all') : null), history, ranking: () => window.renderLeaderboardView?.() })[b.dataset.viewto]();
   else if (b.dataset.subjectto !== undefined) catalog(Number(b.dataset.subjectto));
   else if (b.dataset.submit) {
     if (activeExam) {
@@ -1451,6 +1453,7 @@ if (typeof window !== 'undefined' && window.addEventListener) {
   window.addEventListener('hashchange', () => {
     const h = (typeof location !== 'undefined' && location.hash) ? location.hash : '';
     if (h === '#history') history();
+    else if (h === '#ranking') { if (typeof window.renderLeaderboardView === 'function') window.renderLeaderboardView(); }
     else if (h === '#stats') { if (typeof window !== 'undefined' && window.auth && typeof window.auth.renderStatsView === 'function') window.auth.renderStatsView(); }
     else if (h.startsWith('#subject-')) catalog(Number(h.split('-')[1]));
     else if (h === '#subjects') catalog();

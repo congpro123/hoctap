@@ -20,6 +20,7 @@
   let lastAdminRecords = null;
   let adminEmptySince = 0;
   let publicRefreshing = false;
+  let lastPublicPeople = [];
   let adminRefreshing = false;
   let presenceWrite = Promise.resolve();
 
@@ -245,21 +246,73 @@
     clearInterval(publicTimer);
     const badge = document.getElementById('public-exam-count');
     if (!badge) return;
+    badge.setAttribute('role', 'button');
+    badge.setAttribute('tabindex', '0');
+    badge.setAttribute('aria-expanded', 'false');
+    let panel = document.getElementById('public-exam-people-panel');
+    if (!panel) {
+      panel = document.createElement('section');
+      panel.id = 'public-exam-people-panel';
+      panel.className = 'public-exam-people-panel';
+      panel.hidden = true;
+      document.body.appendChild(panel);
+    }
+    const renderPanel = people => {
+      panel.replaceChildren();
+      const title = document.createElement('h3');
+      title.textContent = `Đang làm bài: ${people.length} người`;
+      panel.appendChild(title);
+      if (!people.length) {
+        const empty = document.createElement('p');
+        empty.textContent = 'Hiện chưa có ai đang làm bài.';
+        panel.appendChild(empty);
+        return;
+      }
+      const list = document.createElement('ul');
+      people.forEach(record => {
+        const item = document.createElement('li');
+        const dot = document.createElement('span');
+        dot.className = 'live-dot';
+        const info = document.createElement('div');
+        const name = document.createElement('strong');
+        name.textContent = record.name || record.username || 'Tài khoản';
+        const detail = document.createElement('small');
+        detail.textContent = `@${record.username || '?'} · ${record.status === 'paused' ? 'Tạm dừng' : 'Đang làm'}`;
+        const exam = document.createElement('span');
+        exam.textContent = record.examTitle || record.examId || 'Đề thi';
+        info.append(name, detail);
+        item.append(dot, info, exam);
+        list.appendChild(item);
+      });
+      panel.appendChild(list);
+    };
+    const togglePanel = () => {
+      panel.hidden = !panel.hidden;
+      badge.setAttribute('aria-expanded', String(!panel.hidden));
+      if (!panel.hidden) renderPanel(lastPublicPeople);
+    };
+    badge.onclick = togglePanel;
+    badge.onkeydown = event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); togglePanel(); }
+    };
     const refresh = async () => {
       if (publicRefreshing) return;
       publicRefreshing = true;
       try {
         const response = await fetch(`${endpoint()}.json`, { cache: 'no-store' });
         if (!response.ok) throw new Error('Presence unavailable');
-        const count = activePeople(await response.json()).length;
+        const people = activePeople(await response.json());
+        const count = people.length;
         // Wait for a second empty sample before showing zero after a live count.
         if (count === 0 && lastPublicCount > 0) {
           if (!emptySince) emptySince = Date.now();
           if (Date.now() - emptySince < 20000) return;
         } else emptySince = 0;
         lastPublicCount = count;
+        lastPublicPeople = people;
         badge.textContent = `${count} người đang làm bài`;
-        badge.title = 'Số người đang làm hoặc tạm dừng bài thi';
+        badge.title = 'Bấm để xem ai đang làm bài và đề đang làm';
+        if (!panel.hidden) renderPanel(people);
       } catch (_) {
         if (lastPublicCount === null) badge.textContent = 'Đang cập nhật số người làm bài';
       } finally {
