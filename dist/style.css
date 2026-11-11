@@ -1835,7 +1835,8 @@
 .original-pdf-page img{display:block;width:100%;height:auto}
 .original-pdf-page figcaption{text-align:center;padding:8px;color:#64748b;font-size:13px;border-top:1px solid #e2e8f0}
 .exam-inline-media{display:inline-block;max-width:min(100%,760px);max-height:320px;width:auto;height:auto;margin:3px 5px;vertical-align:middle;object-fit:contain}
-.q-title>span:last-child>.exam-inline-media,.review-q-text>.exam-inline-media,.review-stem-content>.exam-inline-media{display:block;margin:12px auto}
+.exam-inline-media.exam-formula-media{max-width:100%;max-height:1.65em;margin:0 .18em;vertical-align:-.38em}
+.exam-inline-media.exam-figure-media{display:block;margin:12px auto;max-height:320px}
 .exam-source-crop{position:relative;overflow:hidden;max-width:100%;margin:14px auto 8px;border:1px solid #dbe4ef;border-radius:10px;background:#fff}
 .exam-source-crop img{display:block;max-width:none;height:auto;transform-origin:top left}
 .option .exam-inline-media,.review-option-row .exam-inline-media{max-height:90px;margin:0 4px}

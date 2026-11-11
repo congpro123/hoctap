@@ -186,7 +186,26 @@ function renderWordBankQuestion(e) {
   </div>`;
 }
 let isExamPaused = false, remainingMs = 0;
+function classifyExamMedia(root) {
+  if (!root?.querySelectorAll) return;
+  root.querySelectorAll('img.exam-inline-media').forEach(img => {
+    const applyClass = () => {
+      const width = img.naturalWidth || 0;
+      const height = img.naturalHeight || 0;
+      const isFigure = width >= 180 || height >= 100;
+      img.classList.toggle('exam-figure-media', isFigure);
+      img.classList.toggle('exam-formula-media', !isFigure);
+    };
+    if (img.complete) applyClass();
+    else if (!img.dataset.mediaClassifyBound) {
+      img.dataset.mediaClassifyBound = '1';
+      img.addEventListener('load', applyClass, { once: true });
+    }
+  });
+}
+
 function tryRenderKatex(root) {
+  classifyExamMedia(root);
   try {
     if (typeof renderMathInElement === 'function' && root) {
       renderMathInElement(root, {
@@ -203,6 +222,7 @@ function tryRenderKatex(root) {
 }
 
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const questionText = value => String(value || '').replace(/^((?:\s*<img\b[^>]*>\s*)*)Câu\s+\d+\s*[.:)]\s*/i, '$1');
 const saved = () => { try { return window.auth?.getLocalResults?.() || JSON.parse(localStorage.getItem('hoctap-results') || '[]'); } catch { return []; } };
 const formatDate = d => {
   try {
@@ -816,7 +836,7 @@ function renderExam() {
           : `<div class="question" id="q-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
-            <span>${q[0]}</span>
+            <span>${questionText(q[0])}</span>
           </div>
           <div class="options">
             ${q[1].map((o, j) => `<label class="option ${answers['m' + i] === j ? 'selected' : ''}">
@@ -830,7 +850,7 @@ function renderExam() {
         ${(e.tf || []).map((q, i) => `<div class="question" id="tf-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
-            <span>${q.stem}</span>
+            <span>${questionText(q.stem)}</span>
           </div>
           ${(q.items || []).map((item, j) => `<div class="tf-row">
             <span><b>${'abcd'[j]})</b> ${cleanItemText(item[0])}</span>
@@ -846,7 +866,7 @@ function renderExam() {
         ${(e.short || []).map((q, i) => `<div class="question" id="short-${i}">
           <div class="q-title">
             <span class="q-number">Câu ${i + 1}.</span>
-            <span>${q.text || q.question}</span>
+            <span>${questionText(q.text || q.question)}</span>
           </div>
           <div class="short-field">
             <input type="text" inputmode="${e.subject === 'english' ? 'text' : 'decimal'}" autocomplete="off" data-kind="s" data-index="${i}" value="${esc(answers['s' + i] ?? '')}" aria-label="Trả lời ngắn câu ${i + 1}">
@@ -867,7 +887,7 @@ function renderExam() {
           <div class="q-title essay-question-title">
             <div>
               <span class="q-number">${e.subject === 'english' ? `Câu ${i + 1}.` : esc(q.title || `Câu ${i + 1}.`)}</span>
-              <span>${q.question}</span>
+              <span>${questionText(q.question)}</span>
             </div>
             <span class="essay-point-pill">${typeof pointText === 'function' ? pointText(essayPointValue(q, e)) : essayPointValue(q, e)} điểm</span>
           </div>
@@ -1118,7 +1138,7 @@ function renderResult(r) {
               <span class="review-part-tag">Phần I · Trắc nghiệm</span>
               <span class="review-item-number">Câu ${i + 1}</span>
             </div>
-            <div class="review-q-text"><b>Câu ${i + 1}.</b> ${q[0]}</div>
+            <div class="review-q-text"><b>Câu ${i + 1}.</b> ${questionText(q[0])}</div>
             ${Array.isArray(q[1]) && q[1].length ? `
             <div class="review-options-list">
               ${q[1].map((opt, optIdx) => {
@@ -1148,7 +1168,7 @@ function renderResult(r) {
           </div>
           <div class="review-stem-box">
             <div class="review-stem-title">📖 Đề bài chung (Câu ${i + 1}):</div>
-            <div class="review-stem-content">${q.stem}</div>
+            <div class="review-stem-content">${questionText(q.stem)}</div>
           </div>
           ${(q.items || []).map((item, j) => {
             const user = r.answers['t' + i + '-' + j];
@@ -1177,7 +1197,7 @@ function renderResult(r) {
               <span class="review-part-tag">Phần III · Trả lời ngắn</span>
               <span class="review-item-number">Câu ${i + 1}</span>
             </div>
-            <div class="review-q-text"><b>Câu ${i + 1}.</b> ${q.text || q.question}</div>
+            <div class="review-q-text"><b>Câu ${i + 1}.</b> ${questionText(q.text || q.question)}</div>
             <div class="review-status-row">
               ${ok ? `<span class="badge-user-ans correct">✓ Bạn điền: ${esc(user)} (Chính xác)</span>` : user === undefined || String(user).trim() === '' ? `<span class="badge-user-ans unanswered">⚪ Chưa điền kết quả</span>` : `<span class="badge-user-ans wrong">✗ Bạn đã điền: ${esc(user)}</span>`}
               <span class="badge-correct-ans">✓ Đáp án chuẩn: <b>${esc(q.answer)}${q.unit ? ' ' + esc(q.unit) : ''}</b></span>
@@ -1199,7 +1219,7 @@ function renderResult(r) {
               <span class="review-part-tag" style="background:#fef3c7;color:#92400e;">Phần ${e.short?.length ? 'IV' : 'III'} · Tự luận</span>
               <span class="review-item-number">${esc(q.title || `Câu ${i + 1}`)}</span>
             </div>
-            <div class="review-q-text"><b>${esc(q.title || `Câu ${i + 1}.`)}</b> ${q.question}</div>
+            <div class="review-q-text"><b>${esc(q.title || `Câu ${i + 1}.`)}</b> ${questionText(q.question)}</div>
             <div class="student-essay-box" style="margin:12px 0;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
               <div style="font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;">${mode === 'draft' ? '✎ Làm trên nháp — không chấm AI' : '📝 Bài làm đã nhập trên web:'}</div>
               <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;font-family:inherit;">${mode === 'draft' ? '<span style="color:#64748b;font-style:italic;">Không gửi bài làm tới Gemini; tự đối chiếu lời giải bên dưới.</span>' : (userWork ? esc(userWork) : '<span style="color:#64748b;font-style:italic;">Chưa nhập bài làm.</span>')}</div>
