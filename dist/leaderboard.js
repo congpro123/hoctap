@@ -36,7 +36,7 @@
       row.latest = Math.max(row.latest, Date.parse(result.date || '') || 0);
     });
     return [...groups.values()].map(row => ({ ...row, average: row.total / row.attempts }))
-      .sort((a, b) => b.average - a.average || b.attempts - a.attempts || b.best - a.best || b.latest - a.latest)
+      .sort((a, b) => b.attempts - a.attempts || b.average - a.average || b.best - a.best || b.latest - a.latest)
       .map((row, index) => ({ ...row, rank: index + 1 }));
   }
 
@@ -87,11 +87,11 @@
       const people = activePeople(data.presence);
       const podium = rows.slice(0, 3);
       app.innerHTML = `<div class="content leaderboard-page">
-        <div class="page-heading leaderboard-heading"><div><span class="eyebrow leaderboard-eyebrow">THÀNH TÍCH TOÀN TRANG</span><h1>🏆 Bảng xếp hạng tài khoản</h1><p>Xếp theo điểm trung bình quy đổi về thang 10; nếu bằng điểm, tài khoản có nhiều lượt làm hơn đứng trước, sau đó xét điểm cao nhất. Tài khoản chưa làm bài không xuất hiện.</p></div><button class="secondary" id="refresh-leaderboard">↻ Cập nhật</button></div>
+        <div class="page-heading leaderboard-heading"><div><span class="eyebrow leaderboard-eyebrow">MỨC ĐỘ CHĂM CHỈ TOÀN TRANG</span><h1>🏆 Bảng xếp hạng chăm chỉ</h1><p>Xếp theo số lượt hoàn thành bài thi. Nếu bằng lượt, tài khoản có điểm trung bình cao hơn đứng trước, sau đó xét điểm cao nhất. Bài 0 điểm vẫn được tính là một lượt đã làm; tài khoản chưa làm bài không xuất hiện.</p></div><button class="secondary" id="refresh-leaderboard">↻ Cập nhật</button></div>
         <section class="leaderboard-live-card"><div class="stats-box-header"><div><h2>🔴 Đang làm bài: ${people.length} người</h2><p>Công khai theo thời gian thực cho mọi tài khoản</p></div></div>${renderLive(people)}</section>
-        ${podium.length ? `<section class="leaderboard-podium">${podium.map((row, index) => `<article class="podium-card rank-${index + 1}"><span class="podium-medal">${['🥇','🥈','🥉'][index]}</span><strong>${esc(row.name)}</strong><small>@${esc(row.username)} · ${roleLabel(row.role)}</small><b>${formatScore(row.average)} điểm</b><span>${row.attempts} lượt làm · cao nhất ${formatScore(row.best)}</span></article>`).join('')}</section>` : ''}
+        ${podium.length ? `<section class="leaderboard-podium">${podium.map((row, index) => `<article class="podium-card rank-${index + 1}"><span class="podium-medal">${['🥇','🥈','🥉'][index]}</span><strong>${esc(row.name)}</strong><small>@${esc(row.username)} · ${roleLabel(row.role)}</small><b>${row.attempts} lượt làm</b><span>Điểm TB ${formatScore(row.average)} · cao nhất ${formatScore(row.best)}</span></article>`).join('')}</section>` : ''}
         <section class="stats-card-box leaderboard-table-card"><div class="stats-box-header"><div><h2>Xếp hạng đầy đủ</h2><p>${rows.length} tài khoản đã có bài làm</p></div></div>
-          ${rows.length ? `<div class="stats-table-responsive"><table class="stats-table leaderboard-table"><thead><tr><th>Hạng</th><th>Tài khoản</th><th>Vai trò</th><th>Lượt làm</th><th>Điểm TB (/10)</th><th>Cao nhất (/10)</th></tr></thead><tbody>${rows.map(row => `<tr><td class="rank-cell">${row.rank <= 3 ? ['🥇','🥈','🥉'][row.rank - 1] : `#${row.rank}`}</td><td><strong>${esc(row.name)}</strong><small>@${esc(row.username)}</small></td><td><span class="role-badge ${row.role === 'admin' ? 'admin' : 'student'}">${roleLabel(row.role)}</span></td><td>${row.attempts}</td><td><strong>${formatScore(row.average)}</strong></td><td>${formatScore(row.best)}</td></tr>`).join('')}</tbody></table></div>` : '<p class="leaderboard-empty">Chưa có tài khoản nào nộp bài.</p>'}
+          ${rows.length ? `<div class="stats-table-responsive"><table class="stats-table leaderboard-table"><thead><tr><th>Hạng</th><th>Tài khoản</th><th>Vai trò</th><th>Lượt đã làm</th><th>Điểm TB (/10)</th><th>Cao nhất (/10)</th></tr></thead><tbody>${rows.map(row => `<tr><td class="rank-cell">${row.rank <= 3 ? ['🥇','🥈','🥉'][row.rank - 1] : `#${row.rank}`}</td><td><strong>${esc(row.name)}</strong><small>@${esc(row.username)}</small></td><td><span class="role-badge ${row.role === 'admin' ? 'admin' : 'student'}">${roleLabel(row.role)}</span></td><td><strong>${row.attempts}</strong></td><td>${formatScore(row.average)}</td><td>${formatScore(row.best)}</td></tr>`).join('')}</tbody></table></div>` : '<p class="leaderboard-empty">Chưa có tài khoản nào nộp bài.</p>'}
         </section>
       </div>`;
       document.getElementById('refresh-leaderboard')?.addEventListener('click', renderLeaderboardView);
