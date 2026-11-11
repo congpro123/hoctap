@@ -1126,12 +1126,12 @@ function renderResult(r) {
                 const isChosen = optIdx === user;
                 const cls = isKey ? 'review-option-row key-correct' : (isChosen && !ok ? 'review-option-row user-wrong' : 'review-option-row');
                 const icon = isKey ? '✓' : (isChosen && !ok ? '✗' : '○');
-                return `<div class="${cls}"><b>${'ABCD'[optIdx]}.</b> <span>${esc(cleanOptionText(opt))}</span> <span style="margin-left:auto;font-weight:700;">${icon}</span></div>`;
+                return `<div class="${cls}"><b>${'ABCD'[optIdx]}.</b> <span>${cleanOptionText(opt)}</span> <span style="margin-left:auto;font-weight:700;">${icon}</span></div>`;
               }).join('')}
             </div>` : ''}
             <div class="review-status-row">
-              ${ok ? `<span class="badge-user-ans correct">✓ Bạn đã chọn: ${'ABCD'[user]} (Đúng)</span>` : user === undefined ? `<span class="badge-user-ans unanswered">⚪ Chưa trả lời câu này</span>` : `<span class="badge-user-ans wrong">✗ Bạn chọn: ${'ABCD'[user]}. ${esc(cleanOptionText(q[1][user]))}</span>`}
-              <span class="badge-correct-ans">✓ Đáp án chuẩn: ${'ABCD'[q[2]]}. ${esc(cleanOptionText(q[1][q[2]]))}</span>
+              ${ok ? `<span class="badge-user-ans correct">✓ Bạn đã chọn: ${'ABCD'[user]} (Đúng)</span>` : user === undefined ? `<span class="badge-user-ans unanswered">⚪ Chưa trả lời câu này</span>` : `<span class="badge-user-ans wrong">✗ Bạn chọn: ${'ABCD'[user]}. ${cleanOptionText(q[1][user])}</span>`}
+              <span class="badge-correct-ans">✓ Đáp án chuẩn: ${'ABCD'[q[2]]}. ${cleanOptionText(q[1][q[2]])}</span>
             </div>
             <div class="solution-box theme-study">
               <div class="solution-header">💡 HƯỚNG DẪN GIẢI CHI TIẾT (KIẾN THỨC LỚP 10):</div>
