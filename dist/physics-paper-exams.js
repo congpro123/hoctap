@@ -2251,3 +2251,80 @@ window.physicsPaperExams = [
     "nativeExam": true
   }
 ];
+
+// Thay các lời giải nhập tự động từ bảng đáp án bằng hướng dẫn có căn cứ vật lí.
+// Nội dung đề và khóa chấm vẫn được giữ nguyên; chỉ phần giải thích sau khi nộp bài được làm rõ.
+(function enrichPhysicsPaperSolutions(exams) {
+  const sourceOnly = /(?:đáp án|theo).*(?:tài liệu nguồn|đề gốc|bảng đáp án)/i;
+  const clean = (value) => String(value || "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const letter = (index) => String.fromCharCode(65 + Number(index || 0));
+
+  function principle(text) {
+    const value = clean(text).toLowerCase();
+    if (/đối tượng nghiên cứu|lĩnh vực vật lí/.test(value)) {
+      return "Vật lí nghiên cứu chuyển động, các dạng năng lượng, điện–từ–ánh sáng, cấu trúc vật chất và tương tác. Sự biến đổi chất này thành chất khác thuộc Hóa học";
+    }
+    if (/sai số|phép đo|độ chia nhỏ nhất|giá trị trung bình/.test(value)) {
+      return "Với phép đo, cần phân biệt giá trị trung bình, sai số ngẫu nhiên và sai số dụng cụ; kết quả được viết dưới dạng giá trị trung bình ± sai số tuyệt đối";
+    }
+    if (/ném xiên|ném ngang|tầm bay|quỹ đạo/.test(value)) {
+      return "Tách chuyển động thành hai phương: phương ngang chuyển động đều, phương thẳng đứng biến đổi đều với gia tốc g; tại đỉnh chỉ thành phần vận tốc thẳng đứng bằng 0";
+    }
+    if (/rơi tự do/.test(value)) {
+      return "Rơi tự do từ trạng thái nghỉ dùng v = gt và h = ½gt²; nếu có vận tốc đầu thì dùng các công thức chuyển động thẳng biến đổi đều với a = g";
+    }
+    if (/đồ thị.*vận tốc|vận tốc.*thời gian/.test(value)) {
+      return "Trên đồ thị vận tốc–thời gian, độ dốc biểu diễn gia tốc và diện tích đại số dưới đồ thị biểu diễn độ dịch chuyển";
+    }
+    if (/đồ thị.*dịch chuyển|dịch chuyển.*thời gian/.test(value)) {
+      return "Trên đồ thị độ dịch chuyển–thời gian, độ dốc của từng đoạn chính là vận tốc; đoạn ngang có vận tốc bằng 0";
+    }
+    if (/chậm dần|hãm phanh/.test(value)) {
+      return "Chuyển động chậm dần có gia tốc ngược hướng vận tốc; dùng v = v₀ + at hoặc v² − v₀² = 2as và chú ý dấu của a";
+    }
+    if (/nhanh dần|gia tốc/.test(value)) {
+      return "Dùng a = Δv/Δt, v = v₀ + at và s = v₀t + ½at²; vật nhanh dần khi gia tốc cùng hướng vận tốc";
+    }
+    if (/độ dịch chuyển|quãng đường/.test(value)) {
+      return "Quãng đường là độ dài quỹ đạo và luôn không âm; độ dịch chuyển nối vị trí đầu với vị trí cuối, có hướng và có thể bằng 0 khi vật trở về chỗ cũ";
+    }
+    if (/tốc độ|vận tốc/.test(value)) {
+      return "Tốc độ chỉ cho biết độ nhanh chậm, còn vận tốc có cả độ lớn và hướng; tốc độ trung bình bằng tổng quãng đường chia tổng thời gian, vận tốc trung bình bằng độ dịch chuyển chia thời gian";
+    }
+    if (/ca nô|dòng nước|vận tốc tương đối/.test(value)) {
+      return "Dùng quy tắc cộng vận tốc: xuôi dòng thì cộng tốc độ dòng nước, ngược dòng thì lấy tốc độ ca nô đối với nước trừ tốc độ dòng nước";
+    }
+    if (/an toàn|phòng thực hành|dây điện/.test(value)) {
+      return "Trong phòng thực hành phải ngắt hoặc tránh xa nguồn nguy hiểm và báo giáo viên; không tự ý chạm, sửa hay tiếp tục thí nghiệm";
+    }
+    if (/đơn vị|thứ nguyên/.test(value)) {
+      return "Kiểm tra thứ nguyên của từng đại lượng và đổi về cùng hệ SI trước khi thay số; m/s là đơn vị của tốc độ hoặc vận tốc, còn gia tốc có đơn vị m/s²";
+    }
+    return "Đối chiếu từng phương án với định nghĩa và công thức vật lí liên quan, đồng thời kiểm tra đơn vị và điều kiện của bài toán";
+  }
+
+  for (const exam of exams || []) {
+    for (const question of exam.questions || []) {
+      if (!sourceOnly.test(question[3] || "")) continue;
+      const answerIndex = Number(question[2]);
+      const answerText = clean((question[1] || [])[answerIndex]).replace(/[.。]+$/, "");
+      const reason = principle(`${question[0]} ${answerText}`);
+      question[3] = `${reason}. Vì vậy chọn ${letter(answerIndex)}: “${answerText}”.`;
+    }
+    for (const group of exam.tf || []) {
+      for (const item of group.items || []) {
+        if (!sourceOnly.test(item[2] || "")) continue;
+        const reason = principle(`${group.stem || ""} ${item[0] || ""}`);
+        item[2] = `${reason}. Do đó phát biểu này ${item[1] ? "đúng" : "sai"}.`;
+      }
+    }
+    for (const question of exam.short || []) {
+      if (!sourceOnly.test(question.explanation || "")) continue;
+      const reason = principle(question.question);
+      question.explanation = `${reason}. Thực hiện đổi đơn vị, thay đúng dữ kiện vào công thức rồi làm tròn theo yêu cầu của đề; kết quả là ${question.answer}.`;
+    }
+  }
+})(window.physicsPaperExams);
