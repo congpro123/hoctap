@@ -2221,17 +2221,17 @@ window.physicsPaperExams = [
       {
         "question": "Câu 1: Một ca nô chạy ngược dòng sông từ bến <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image006.gif\" alt=\"Công thức hoặc hình minh họa trong đề\"> đến bến <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image017.gif\" alt=\"Công thức hoặc hình minh họa trong đề\"> mất <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image058.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">. Biết khoảng cách <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image059.gif\" alt=\"Công thức hoặc hình minh họa trong đề\"> và tốc độ của dòng nước đối với bờ sông là <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image060.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">. Tốc độ của ca nô đối với dòng nước là bao nhiêu <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image030.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">? (viết kết quả đến hàng đơn vị)",
         "answer": "18",
-        "explanation": "Đáp án theo tài liệu nguồn: 18."
+        "explanation": "Khi ca nô đi ngược dòng: v_bờ = v_ca nô/nước − v_nước/bờ. Từ quãng đường và thời gian trong đề, tính v_bờ = s/t, rồi suy ra v_ca nô/nước = s/t + v_nước/bờ = 18 km/h."
       },
       {
         "question": "Câu 2: Một ô tô đang chuyển động với vận tốc <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image061.gif\" alt=\"Công thức hoặc hình minh họa trong đề\"> thì hãm phanh, chuyển động chậm dần đều với gia tốc <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image062.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">. Quãng đường ô tô đi được từ lúc hãm phanh cho đến khi dừng lại hẳn là bao nhiêu mét? (viết kết quả đến hàng đơn vị)",
-        "answer": "12.5",
-        "explanation": "Đáp án theo tài liệu nguồn: 12.5."
+        "answer": "13",
+        "explanation": "Đổi 18 km/h = 5 m/s. Khi xe dừng, v = 0. Dùng công thức v² − v₀² = 2as: 0² − 5² = 2·(−1)·s, suy ra s = 12,5 m. Đề yêu cầu viết kết quả đến hàng đơn vị nên phải làm tròn 12,5 thành 13 m. Nếu nhập 12,5 thì mới là kết quả chưa làm tròn."
       },
       {
         "question": "Câu 3: Một vật rơi tự do không vận tốc đầu từ độ cao <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image063.gif\" alt=\"Công thức hoặc hình minh họa trong đề\"> xuống đất tại nơi có gia tốc trọng trường <img class=\"exam-inline-media\" src=\"supplied/physics-native/vatli-10-tailieu-de-1/image064.gif\" alt=\"Công thức hoặc hình minh họa trong đề\">. Thời gian rơi của vật đến khi chạm đất là bao nhiêu giây? (viết kết quả đến hàng phần 10)",
         "answer": "3",
-        "explanation": "Đáp án theo tài liệu nguồn: 3."
+        "explanation": "Vật rơi tự do từ trạng thái nghỉ nên h = ½gt². Suy ra t = √(2h/g). Thay độ cao và gia tốc trọng trường đã cho vào công thức, ta được t ≈ 3,0 s (làm tròn đến hàng phần mười)."
       }
     ],
     "essay": [
