@@ -21,15 +21,60 @@
     answer,
     explanation: explanations[index] || `Đáp án theo tài liệu nguồn: ${answer}.`
   }));
-  const source = (name, url) => ({
+  const source = (name, url, note = 'Nội dung, công thức và hình minh họa lấy nguyên bản từ tài liệu Word do người dùng cung cấp; chỉ loại dấu lộ đáp án trên bản thi.') => ({
     school: name,
     province: '',
     year: '',
     url,
-    note: 'Nội dung, công thức và hình minh họa lấy nguyên bản từ tài liệu Word do người dùng cung cấp; chỉ loại dấu lộ đáp án trên bản thi.'
+    note
   });
 
   window.physicsPaperExams = [
+    {
+      id: 'vatli-10-de-11-11',
+      title: 'Vật lí 10 - Kiểm tra số 11-11',
+      description: 'Đề tương tác nguyên bản: 18 câu nhiều lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn.',
+      subject: 'physics', minutes: 45, addedAt: '2026-11-10T23:26:16+07:00',
+      paperExam: true, pageCount: 2, paperBase: 'supplied/physics-de-11-11',
+      source: source('Kiểm tra số 11-11', 'supplied/physics-de-11-11.pdf', 'Hai trang đề, công thức và hình minh họa lấy nguyên bản từ PDF do người dùng cung cấp. Trang đáp án không hiển thị khi làm bài và được dùng làm khóa chấm.'),
+      mcUnit: 0.25, shortUnit: 0.25, essayPoints: 0,
+      questions: makeMc(['C','C','C','C','C','B','B','B','D','D','B','D','C','D','C','B','A','C']),
+      tf: makeTf([
+        [true, false, false, true],
+        [false, true, true, true],
+        [true, false, true, false],
+        [true, true, false, false]
+      ]),
+      short: makeShort(['2','0.57','2.14','2.86','-0.5','0']),
+      essay: []
+    },
+    {
+      id: 'vatli-10-de-10-11',
+      title: 'Vật lí 10 - Đề số 10-11',
+      description: 'Đề tương tác nguyên bản: 16 câu nhiều lựa chọn, 2 câu đúng/sai, 4 câu trả lời ngắn và 2 bài tự luận.',
+      subject: 'physics', minutes: 45, addedAt: '2026-11-10T23:26:07+07:00',
+      paperExam: true, pageCount: 2, paperBase: 'supplied/physics-de-10-11',
+      source: source('Đề số 10-11 - Mã đề 101', 'supplied/physics-de-10-11.pdf', 'Hai trang đề, công thức và hình minh họa lấy nguyên bản từ PDF do người dùng cung cấp. Trang đáp án không hiển thị khi làm bài và được dùng làm khóa chấm.'),
+      mcUnit: 0.25, shortUnit: 0.5, essayPoints: 2,
+      questions: makeMc(['D','D','D','B','A','C','C','C','C','A','A','B','B','D','A','B']),
+      tf: makeTf([
+        [true, false, true, false],
+        [true, false, true, true]
+      ]),
+      short: makeShort(['3','32.5','8.5','11.8']),
+      essay: [
+        {
+          title: 'Câu 1 (1 điểm)', points: 1,
+          question: 'Lúc 10 giờ có một ô tô xuất phát từ A chuyển động thẳng đều về B với vận tốc 60 km/h. a) Tính quãng đường ô tô đi được sau 1,5 giờ? b) Cùng lúc đó, một xe máy xuất phát từ B đi về A chuyển động đều với vận tốc 40 km/h. Cho AB = 200 km. Hai xe gặp nhau lúc mấy giờ và vị trí gặp nhau cách A bao xa?',
+          solution: 'a) s = v.t = 60.1,5 = 90 m. b) Hai xe gặp nhau khi s₁ + s₂ = AB, suy ra t = 2 h. Hai xe gặp nhau lúc 12 h; vị trí gặp nhau cách A: s₁ = 60.2 = 120 km.'
+        },
+        {
+          title: 'Câu 2 (1 điểm)', points: 1,
+          question: 'Một xe máy đang chuyển động thẳng với tốc độ 8 m/s thì tăng tốc. Sau 4 s đạt tốc độ 12 m/s. a) Tính gia tốc của xe? b) Tính vận tốc và quãng đường đi được của xe sau khi tăng tốc 6 giây?',
+          solution: 'a) Áp dụng v = v₀ + at: 12 = 8 + a.4, suy ra a = 1 m/s². b) v = 8 + 1.6 = 14 m/s; s = 8.6 + 1/2.1.6² = 66 m.'
+        }
+      ]
+    },
     {
       id: 'vatli-10-tailieu-so-5',
       title: 'Vật lí 10 - Kiểm tra giữa kì I - Số 5',
