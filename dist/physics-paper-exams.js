@@ -76,12 +76,12 @@ window.physicsPaperExams = [
         "Đáp án theo bảng đáp án của đề gốc: C."
       ],
       [
-        "Một vật chuyển động thẳng biến đổi đều, vận tốc ban đầu của vật là $v_1$, sau thời gian $Delta t$ thì vận tốc của vật là $v_2$. Vận tốc trung bình của vật trong thời gian $Delta t$ có giá trị là",
+        "Một vật chuyển động thẳng biến đổi đều, vận tốc ban đầu của vật là $v_1$, sau thời gian $\\Delta t$ thì vận tốc của vật là $v_2$. Vận tốc trung bình của vật trong thời gian $\\Delta t$ có giá trị là",
         [
-          "$dfrac{v_1+v_2}{Delta t}$.",
-          "$dfrac{v_1+v_2}{2}$.",
-          "$dfrac{v_2-v_1}{Delta t}$.",
-          "$dfrac{v_2-v_1}{2}$."
+          "$\\dfrac{v_1+v_2}{\\Delta t}$.",
+          "$\\dfrac{v_1+v_2}{2}$.",
+          "$\\dfrac{v_2-v_1}{\\Delta t}$.",
+          "$\\dfrac{v_2-v_1}{2}$."
         ],
         1,
         "Đáp án theo bảng đáp án của đề gốc: B."
@@ -120,12 +120,12 @@ window.physicsPaperExams = [
         "Đáp án theo bảng đáp án của đề gốc: D."
       ],
       [
-        "Đo đại lượng A thông qua đo trực tiếp đại lượng $x$. Gọi sai số tuyệt đối của A, x là $Delta A,Delta x$; sai số tỉ đối của A, x là $delta A,delta x$. Biết $A=ax^2$, với $a$ là hằng số. Hệ thức nào sau đây đúng?",
+        "Đo đại lượng A thông qua đo trực tiếp đại lượng $x$. Gọi sai số tuyệt đối của A, x là $\\Delta A,\\Delta x$; sai số tỉ đối của A, x là $\\delta A,\\delta x$. Biết $A=ax^2$, với $a$ là hằng số. Hệ thức nào sau đây đúng?",
         [
-          "$Delta A=aDelta x$.",
-          "$delta A=adelta x$.",
-          "$Delta A=2Delta x$.",
-          "$delta A=2delta x$."
+          "$\\Delta A=a\\Delta x$.",
+          "$\\delta A=a\\delta x$.",
+          "$\\Delta A=2\\Delta x$.",
+          "$\\delta A=2\\delta x$."
         ],
         3,
         "Đáp án theo bảng đáp án của đề gốc: D."
@@ -175,7 +175,7 @@ window.physicsPaperExams = [
         "Đáp án theo bảng đáp án của đề gốc: D."
       ],
       [
-        "Một vật chuyển động thẳng biến đổi đều, biểu thức vận tốc của vật phụ thuộc thời gian là $v_t=3-2t$ (v tính bằng m/s, t tính bằng s). Tại thời điểm $t=3,s$",
+        "Một vật chuyển động thẳng biến đổi đều, biểu thức vận tốc của vật phụ thuộc thời gian là $v_t=3-2t$ (v tính bằng m/s, t tính bằng s). Tại thời điểm $t=3\\,s$",
         [
           "gia tốc ngược hướng chuyển động.",
           "vận tốc ngược hướng gia tốc.",
@@ -249,22 +249,22 @@ window.physicsPaperExams = [
         "stem": "Đồ thị độ dịch chuyển – thời gian của một vật chuyển động thẳng như Hình 1. <figure class=\"exam-source-crop\" style=\"width:324px;height:191px\"><img src=\"supplied/physics-de-11-11-page-2.png\" alt=\"Hình minh họa nguyên bản trong đề\" style=\"width:841px;transform:translate(-472px,-245px)\"></figure>",
         "items": [
           [
-            "Trong thời gian từ $t=0,s$ đến $t=2,s$ vật chuyển động thẳng nhanh dần đều.",
+            "Trong thời gian từ $t=0\\,s$ đến $t=2\\,s$ vật chuyển động thẳng nhanh dần đều.",
             false,
             "Theo đáp án gốc: Sai."
           ],
           [
-            "Trong khoảng thời gian từ $t=4,s$ đến $t=9,s$, tốc độ của vật không đổi.",
+            "Trong khoảng thời gian từ $t=4\\,s$ đến $t=9\\,s$, tốc độ của vật không đổi.",
             true,
             "Theo đáp án gốc: Đúng."
           ],
           [
-            "Trong khoảng thời gian từ $t=9,s$ đến $t=10,s$, tốc độ của vật luôn bằng không.",
+            "Trong khoảng thời gian từ $t=9\\,s$ đến $t=10\\,s$, tốc độ của vật luôn bằng không.",
             true,
             "Theo đáp án gốc: Đúng."
           ],
           [
-            "Quãng đường vật đi được trong thời gian từ $t=0,s$ đến $t=10,s$ bằng 9 m.",
+            "Quãng đường vật đi được trong thời gian từ $t=0\\,s$ đến $t=10\\,s$ bằng 9 m.",
             true,
             "Theo đáp án gốc: Đúng."
           ]
@@ -333,17 +333,17 @@ window.physicsPaperExams = [
         "explanation": "Đáp án theo tài liệu nguồn: 0.57."
       },
       {
-        "question": "Sử dụng dữ liệu Câu 4, Phần 2: Tốc độ của A đối với B tại $t=1{,}5,s$ là bao nhiêu m/s? (Làm tròn kết quả đến chữ số hàng phần trăm.)",
+        "question": "Sử dụng dữ liệu Câu 4, Phần 2: Tốc độ của A đối với B tại $t=1{,}5\\,s$ là bao nhiêu m/s? (Làm tròn kết quả đến chữ số hàng phần trăm.)",
         "answer": "2.14",
         "explanation": "Đáp án theo tài liệu nguồn: 2.14."
       },
       {
-        "question": "Sử dụng dữ liệu Câu 4, Phần 2: Khoảng cách giữa hai vật tại $t=2,s$ là bao nhiêu m? (Làm tròn kết quả đến chữ số hàng phần trăm.)",
+        "question": "Sử dụng dữ liệu Câu 4, Phần 2: Khoảng cách giữa hai vật tại $t=2\\,s$ là bao nhiêu m? (Làm tròn kết quả đến chữ số hàng phần trăm.)",
         "answer": "2.86",
         "explanation": "Đáp án theo tài liệu nguồn: 2.86."
       },
       {
-        "question": "Một vật chuyển động thẳng, đồ thị độ dịch chuyển – thời gian được cho như hình vẽ. Chỉ xét chuyển động của vật từ 0 đến 8 s. Vận tốc tức thời của vật tại $t=3,s$ bằng bao nhiêu m/s? <figure class=\"exam-source-crop\" style=\"width:223px;height:166px\"><img src=\"supplied/physics-de-11-11-page-2.png\" alt=\"Hình minh họa nguyên bản trong đề\" style=\"width:841px;transform:translate(-572px,-806px)\"></figure>",
+        "question": "Một vật chuyển động thẳng, đồ thị độ dịch chuyển – thời gian được cho như hình vẽ. Chỉ xét chuyển động của vật từ 0 đến 8 s. Vận tốc tức thời của vật tại $t=3\\,s$ bằng bao nhiêu m/s? <figure class=\"exam-source-crop\" style=\"width:223px;height:166px\"><img src=\"supplied/physics-de-11-11-page-2.png\" alt=\"Hình minh họa nguyên bản trong đề\" style=\"width:841px;transform:translate(-572px,-806px)\"></figure>",
         "answer": "-0.5",
         "explanation": "Đáp án theo tài liệu nguồn: -0.5."
       },
@@ -400,10 +400,10 @@ window.physicsPaperExams = [
       [
         "Một vật đi trên quỹ đạo giống hình. Độ dịch chuyển và quãng đường vật đi được là <figure class=\"exam-source-crop\" style=\"width:396px;height:194px\"><img src=\"supplied/physics-de-10-11-page-1.png\" alt=\"Hình minh họa nguyên bản trong đề\" style=\"width:841px;transform:translate(-205px,-216px)\"></figure>",
         [
-          "$d=2{,}5pi,m; s=2{,}5pi,m$.",
-          "$d=2{,}5pi,m; s=5,m$.",
-          "$d=5,m; s=5,m$.",
-          "$d=5,m; s=2{,}5pi,m$."
+          "$d=2{,}5\\pi\\,m; s=2{,}5\\pi\\,m$.",
+          "$d=2{,}5\\pi\\,m; s=5\\,m$.",
+          "$d=5\\,m; s=5\\,m$.",
+          "$d=5\\,m; s=2{,}5\\pi\\,m$."
         ],
         3,
         "Đáp án theo bảng đáp án của đề gốc: D."
@@ -433,10 +433,10 @@ window.physicsPaperExams = [
       [
         "Một đoàn tàu bắt đầu rời ga, chuyển động nhanh dần đều, sau 20 s đạt vận tốc 36 km/h. Tàu đạt vận tốc 54 km/h tại thời điểm",
         [
-          "$t=54,s$.",
-          "$t=60,s$.",
-          "$t=30,s$.",
-          "$t=36,s$."
+          "$t=54\\,s$.",
+          "$t=60\\,s$.",
+          "$t=30\\,s$.",
+          "$t=36\\,s$."
         ],
         2,
         "Đáp án theo bảng đáp án của đề gốc: C."
@@ -455,10 +455,10 @@ window.physicsPaperExams = [
       [
         "Một người chuyển động thẳng có độ dịch chuyển $d_1$ tại thời điểm $t_1$ và độ dịch chuyển $d_2$ tại thời điểm $t_2$. Vận tốc trung bình của vật trong khoảng thời gian từ $t_1$ đến $t_2$ là",
         [
-          "$v_{tb}=dfrac{d_1+d_2}{t_2-t_1}$.",
-          "$v_{tb}=dfrac{d_1-d_2}{t_1+t_2}$.",
-          "$v_{tb}=dfrac{d_2-d_1}{t_2-t_1}$.",
-          "$v_{tb}=dfrac12left(dfrac{d_1}{t_1}+dfrac{d_2}{t_2}\right)$."
+          "$v_{tb}=\\dfrac{d_1+d_2}{t_2-t_1}$.",
+          "$v_{tb}=\\dfrac{d_1-d_2}{t_1+t_2}$.",
+          "$v_{tb}=\\dfrac{d_2-d_1}{t_2-t_1}$.",
+          "$v_{tb}=\\dfrac12\\left(\\dfrac{d_1}{t_1}+\\dfrac{d_2}{t_2}\\right)$."
         ],
         2,
         "Đáp án theo bảng đáp án của đề gốc: C."
@@ -519,18 +519,18 @@ window.physicsPaperExams = [
         "Đáp án theo bảng đáp án của đề gốc: B."
       ],
       [
-        "Từ một sân thượng có độ cao $h=80,m$, một người thả tự do một hòn sỏi. Một giây sau, cũng từ vị trí sân thượng, người này ném thẳng đứng hướng xuống một hòn sỏi thứ hai với vận tốc $v_0$; hai hòn sỏi chạm đất cùng lúc. Lấy $g=10,m/s^2$, $v_0$ có giá trị là",
+        "Từ một sân thượng có độ cao $h=80\\,m$, một người thả tự do một hòn sỏi. Một giây sau, cũng từ vị trí sân thượng, người này ném thẳng đứng hướng xuống một hòn sỏi thứ hai với vận tốc $v_0$; hai hòn sỏi chạm đất cùng lúc. Lấy $g=10\\,m/s^2$, $v_0$ có giá trị là",
         [
-          "$v_0=5{,}5,m/s$.",
-          "$v_0=20{,}4,m/s$.",
-          "$v_0=15{,}5,m/s$.",
-          "$v_0=11{,}7,m/s$."
+          "$v_0=5{,}5\\,m/s$.",
+          "$v_0=20{,}4\\,m/s$.",
+          "$v_0=15{,}5\\,m/s$.",
+          "$v_0=11{,}7\\,m/s$."
         ],
         3,
         "Đáp án theo bảng đáp án của đề gốc: D."
       ],
       [
-        "Một vật được ném từ độ cao $h=45,m$ với vận tốc đầu $v_0=20,m/s$ theo phương nằm ngang. Bỏ qua sức cản của không khí, lấy $g=10,m/s^2$. Tầm ném xa của vật là",
+        "Một vật được ném từ độ cao $h=45\\,m$ với vận tốc đầu $v_0=20\\,m/s$ theo phương nằm ngang. Bỏ qua sức cản của không khí, lấy $g=10\\,m/s^2$. Tầm ném xa của vật là",
         [
           "60 m.",
           "90 m.",
@@ -557,7 +557,7 @@ window.physicsPaperExams = [
         "stem": "Đồ thị bên dưới mô tả sự thay đổi vận tốc theo thời gian trong chuyển động của một vật đang chuyển động từ A đến B. <figure class=\"exam-source-crop\" style=\"width:324px;height:227px\"><img src=\"supplied/physics-de-10-11-page-2.png\" alt=\"Hình minh họa nguyên bản trong đề\" style=\"width:841px;transform:translate(-284px,-594px)\"></figure>",
         "items": [
           [
-            "Vật chuyển động thẳng đều từ thời điểm $t=4,s$ đến thời điểm $t=12,s$.",
+            "Vật chuyển động thẳng đều từ thời điểm $t=4\\,s$ đến thời điểm $t=12\\,s$.",
             true,
             "Theo đáp án gốc: Đúng."
           ],
@@ -567,12 +567,12 @@ window.physicsPaperExams = [
             "Theo đáp án gốc: Sai."
           ],
           [
-            "Gia tốc của ô tô từ giây thứ 12 đến giây thứ 20 là $-2{,}5,m/s^2$.",
+            "Gia tốc của ô tô từ giây thứ 12 đến giây thứ 20 là $-2{,}5\\,m/s^2$.",
             true,
             "Theo đáp án gốc: Đúng."
           ],
           [
-            "Quãng đường ô tô đi được từ thời điểm $t=0,s$ đến thời điểm $t=4,s$ là 80 m.",
+            "Quãng đường ô tô đi được từ thời điểm $t=0\\,s$ đến thời điểm $t=4\\,s$ là 80 m.",
             false,
             "Theo đáp án gốc: Sai."
           ]
@@ -621,7 +621,7 @@ window.physicsPaperExams = [
         "explanation": "Đáp án theo tài liệu nguồn: 8.5."
       },
       {
-        "question": "Ở một đồi cao $h_0=100,m$, người ta đặt một súng cối nằm ngang và muốn bắn sao cho quả đạn rơi về phía bên kia của tòa nhà, gần bức tường AB nhất. Biết tòa nhà cao $h=20,m$ và tường AB cách đường thẳng đứng qua chỗ bắn $l=100,m$. Lấy $g=10,m/s^2$. Coi chuyển động của quả đạn là chuyển động ném ngang. Khoảng cách từ chỗ viên đạn chạm đất đến chân tường AB là bao nhiêu mét? (Kết quả lấy 1 chữ số sau dấu phẩy.)",
+        "question": "Ở một đồi cao $h_0=100\\,m$, người ta đặt một súng cối nằm ngang và muốn bắn sao cho quả đạn rơi về phía bên kia của tòa nhà, gần bức tường AB nhất. Biết tòa nhà cao $h=20\\,m$ và tường AB cách đường thẳng đứng qua chỗ bắn $l=100\\,m$. Lấy $g=10\\,m/s^2$. Coi chuyển động của quả đạn là chuyển động ném ngang. Khoảng cách từ chỗ viên đạn chạm đất đến chân tường AB là bao nhiêu mét? (Kết quả lấy 1 chữ số sau dấu phẩy.)",
         "answer": "11.8",
         "explanation": "Đáp án theo tài liệu nguồn: 11.8."
       }
