@@ -33,4 +33,7 @@ for (const exam of context.window.physicsPaperExams) {
 }
 assert(context.window.physicsPaperExams.length === 7, 'Expected seven physics exams');
 assert(context.window.physicsPaperExams.find(exam => exam.id === 'vatli-10-tailieu-so-4').questions[6][0].includes('<table'), 'Số 4 Câu 7 must render a data table');
+const so5 = context.window.physicsPaperExams.find(exam => exam.id === 'vatli-10-tailieu-so-5');
+assert(images(so5.questions[3][0]).join() === 'image003.png', 'Số 5 Câu 4 must show the digital timer');
+assert(images(so5.questions[5][0]).join() === 'image004.png', 'Số 5 Câu 6 must show the fire warning');
 process.exitCode = errors ? 1 : 0;

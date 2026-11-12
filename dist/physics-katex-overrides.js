@@ -91,6 +91,8 @@
   // Giữ ảnh đồ thị thật, còn công thức và bảng số liệu được dựng lại bằng HTML/KaTeX.
   const so5 = byId('vatli-10-tailieu-so-5');
   if (so5) {
+    so5.questions[3][0] = 'Dụng cụ ở hình bên là <img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image003.png" alt="Đồng hồ đo thời gian hiện số có màn hình và các cổng kết nối">';
+    so5.questions[5][0] = 'Biển báo dưới đây có ý nghĩa gì? <img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image004.png" alt="Biển cảnh báo hình tam giác màu vàng có ngọn lửa">';
     setMc(so5, 6, 'Công thức đúng để tính quãng đường trong chuyển động rơi tự do không vận tốc đầu là', [
       R`$s=\dfrac{1}{2}gt^2$.`, R`$s=gt^2$.`, R`$s=\dfrac{1}{2}g^2t$.`, R`$s=\dfrac{g}{2t^2}$.`
     ]);
