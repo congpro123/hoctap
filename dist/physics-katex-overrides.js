@@ -86,4 +86,76 @@
     de2.essay[0].question = R`Từ thí nghiệm rơi tự do thu được quan hệ $h=kt^2$ với $k=4{,}905\pm0{,}025\,\text{m/s}^2$.<br>a) Xác định giá trị trung bình $\overline g$ và sai số tuyệt đối $\Delta g$.<br>b) Tính sai số tương đối $\delta g$ và nhận xét độ chính xác.`;
     de2.essay[1].question = R`Hai ô tô $A$ và $B$ chuyển động cùng chiều. Xe $A$ chuyển động đều với $v_A=20\,\text{m/s}$. Khi $A$ vừa vượt $B$ thì $B$ khởi hành từ nghỉ, nhanh dần đều với $a_B=2\,\text{m/s}^2$.<br>a) Viết $d_A(t)$ và $d_B(t)$.<br>b) Xác định thời điểm và vị trí hai xe gặp lại.<br>c) Tìm khoảng cách cực đại giữa hai xe trước khi $B$ đuổi kịp và vượt $A$.`;
   }
+
+  // Đề số 5 từng bị ghép nhầm các ảnh OCR liên tiếp vào cùng một câu.
+  // Giữ ảnh đồ thị thật, còn công thức và bảng số liệu được dựng lại bằng HTML/KaTeX.
+  const so5 = byId('vatli-10-tailieu-so-5');
+  if (so5) {
+    setMc(so5, 6, 'Công thức đúng để tính quãng đường trong chuyển động rơi tự do không vận tốc đầu là', [
+      R`$s=\dfrac{1}{2}gt^2$.`, R`$s=gt^2$.`, R`$s=\dfrac{1}{2}g^2t$.`, R`$s=\dfrac{g}{2t^2}$.`
+    ]);
+    so5.questions[6][3] = R`Vật rơi tự do từ trạng thái nghỉ có $v_0=0$ và gia tốc $g$, nên $s=v_0t+\dfrac12gt^2=\dfrac12gt^2$.`;
+
+    setMc(so5, 9,
+      `Đồ thị vận tốc – thời gian nào sau đây mô tả chuyển động có độ lớn gia tốc lớn nhất?
+       <img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image011.png" alt="Bốn đồ thị vận tốc theo thời gian, lần lượt là hình a, b, c và d">`,
+      ['Hình a.', 'Hình b.', 'Hình c.', 'Hình d.']
+    );
+    so5.questions[9][3] = 'Trên đồ thị vận tốc – thời gian, độ lớn gia tốc bằng độ lớn hệ số góc của đường biểu diễn. Hình d có đường thẳng dốc nhất nên có độ lớn gia tốc lớn nhất.';
+
+    setMc(so5, 10,
+      `Cho bảng số liệu kết quả 5 lần đo đường kính một viên bi thép bằng thước kẹp:
+       <div class="stats-table-responsive"><table class="stats-table exam-data-table"><thead><tr><th>Lần đo</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><th>d (mm)</th><td>6,32</td><td>6,32</td><td>6,34</td><td>6,24</td><td>6,32</td></tr></tbody></table></div>
+       Giá trị trung bình của phép đo là`,
+      ['6,308 mm.', '6,304 mm.', '6,299 mm.', '6,302 mm.']
+    );
+    so5.questions[10][3] = R`Giá trị trung bình là $\overline d=\dfrac{6{,}32+6{,}32+6{,}34+6{,}24+6{,}32}{5}=6{,}308\,\text{mm}$.`;
+
+    setMc(so5, 11,
+      `Chuyển động của một xe máy có đồ thị vận tốc – thời gian như hình vẽ. Chuyển động của xe máy là
+       <img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image012.png" alt="Đồ thị vận tốc theo thời gian gồm các đoạn OA, AB và BC">`,
+      so5.questions[11][1]
+    );
+    so5.questions[11][3] = 'Đoạn OA dốc lên nên xe nhanh dần đều; đoạn AB nằm ngang nên xe chuyển động đều; đoạn BC dốc xuống nên xe chậm dần đều. Vì vậy chọn D.';
+
+    setMc(so5, 12,
+      R`Đồ thị vận tốc – thời gian của một vật chuyển động thẳng được cho như hình dưới. Quãng đường vật đi được sau $30\,\text{s}$ là
+       <img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image013.jpg" alt="Đồ thị vận tốc tăng đều từ 0 đến 10 mét trên giây trong 10 giây rồi giữ không đổi đến 30 giây">`,
+      so5.questions[12][1]
+    );
+    so5.questions[12][3] = R`Quãng đường bằng diện tích dưới đồ thị: $s=\dfrac12\cdot10\cdot10+10\cdot20=250\,\text{m}$.`;
+
+    setMc(so5, 14, R`Kết quả đo gia tốc rơi tự do là $g=(9{,}78\pm0{,}44)\,\text{m/s}^2$. Sai số tỉ đối của phép đo là`, [
+      R`$4{,}0\%$.`, R`$4{,}5\%$.`, R`$5{,}0\%$.`, R`$3{,}5\%$.`
+    ]);
+    so5.questions[14][3] = R`Sai số tỉ đối $\delta g=\dfrac{\Delta g}{\overline g}\cdot100\%=\dfrac{0{,}44}{9{,}78}\cdot100\%\approx4{,}5\%$.`;
+
+    setTf(so5, 2,
+      R`Trong bài đo tốc độ trung bình của xe đồ chơi chuyển động thẳng, bạn An đo được thời gian $t=(1{,}25\pm0{,}03)\,\text{s}$ trên quãng đường $s=(250{,}0\pm0{,}5)\,\text{cm}$.`,
+      [
+        'Phép đo tốc độ là phép đo gián tiếp.',
+        R`Sai số tỉ đối của phép đo thời gian là $0{,}03\,\text{s}$.`,
+        R`Sai số tuyệt đối của phép đo chiều dài là $0{,}5\,\text{cm}$.`,
+        R`Sai số tỉ đối của phép đo tốc độ là $4{,}4\%$.`
+      ]
+    );
+    so5.essay[0].question += `<img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image032.jpg" alt="Sơ đồ lộ trình ABC từ nhà đến trường">`;
+  }
+
+  // Bộ hiển thị đã tự đánh số câu; bỏ nhãn "Câu n/Bài n" nằm trong dữ liệu nguồn
+  // để không còn hiện lặp kiểu "Câu 10. Câu 10." ở mọi đề Vật lí nhập từ Word/PDF.
+  const stripEmbeddedNumber = value => {
+    if (typeof value !== 'string') return value;
+    return value
+      .replace(/^(?:\s*<br\s*\/?>(?:\s|&nbsp;)*)*((?:\s*<img\b[^>]*>\s*)*)(?:Câu|Bài)\s*\d+(?:\s*\([^)]*\))?\s*[.:]\s*/i, '$1')
+      .replace(/<br>\s*HƯỚNG DẪN GIẢI VÀ ĐÁP ÁN[\s\S]*$/i, '')
+      .replace(/(?:…|\.){12,}/g, ' ')
+      .trim();
+  };
+  (exams || []).forEach(exam => {
+    (exam.questions || []).forEach(question => { if (Array.isArray(question)) question[0] = stripEmbeddedNumber(question[0]); });
+    (exam.tf || []).forEach(group => { if (group) group.stem = stripEmbeddedNumber(group.stem); });
+    (exam.short || []).forEach(question => { if (question) question.question = stripEmbeddedNumber(question.question); });
+    (exam.essay || []).forEach(question => { if (question) question.question = stripEmbeddedNumber(question.question); });
+  });
 })(window.physicsPaperExams);
