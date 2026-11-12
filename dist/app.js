@@ -87,7 +87,7 @@ function normalizeExam(e) {
 // Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
-  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof agricultureExams !== 'undefined' ? agricultureExams : []), ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof window !== 'undefined' && Array.isArray(window.physicsPaperExams) ? window.physicsPaperExams : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams.filter(e => !String(e.id || '').startsWith('vatli-10-tailieu')) : [])]
+  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof window !== 'undefined' && Array.isArray(window.chemistryIllustrative02) ? window.chemistryIllustrative02 : []), ...(typeof agricultureExams !== 'undefined' ? agricultureExams : []), ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof window !== 'undefined' && Array.isArray(window.physicsPaperExams) ? window.physicsPaperExams : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams.filter(e => !String(e.id || '').startsWith('vatli-10-tailieu')) : [])]
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
     : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
