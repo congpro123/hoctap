@@ -140,6 +140,62 @@
       ]
     );
     so5.essay[0].question += `<img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image032.jpg" alt="Sơ đồ lộ trình ABC từ nhà đến trường">`;
+    so5.questions[16][0] += `<img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-5/image028.png" alt="Đồ thị độ dịch chuyển theo thời gian của hai vật A và B, các đường tạo góc 30 và 60 độ">`;
+  }
+
+  const so4 = byId('vatli-10-tailieu-so-4');
+  if (so4) {
+    const picture = (name, alt) => `<img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-4/${name}" alt="${alt}">`;
+    setMc(so4, 2, 'Biển báo nào sau đây mang ý nghĩa là nơi chứa chất phóng xạ?', [
+      picture('image003.png', 'Biển cảnh báo phóng xạ'),
+      picture('image004.png', 'Biển trang phục bảo hộ'),
+      picture('image005.jpg', 'Biển cảnh báo chất độc'),
+      picture('image006.png', 'Biển cảnh báo chất ăn mòn')
+    ]);
+    setMc(so4, 4, R`[NB] Sai số tuyệt đối trung bình của $n$ lần đo đại lượng vật lí $A$ được tính theo công thức`, [
+      R`$A=\overline A\pm\Delta A$.`,
+      R`$\delta A=\dfrac{\Delta A}{\overline A}\cdot100\%$.`,
+      R`$\overline A=\dfrac{A_1+A_2+\cdots+A_n}{n}$.`,
+      R`$\overline{\Delta A}=\dfrac{\Delta A_1+\Delta A_2+\cdots+\Delta A_n}{n}$.`
+    ]);
+    setMc(so4, 5, R`[TH] Kết quả đo gia tốc rơi tự do được viết dưới dạng $g=(9{,}78\pm0{,}44)\,\text{m/s}^2$. Sai số tỉ đối của phép đo là`, [
+      R`$4{,}0\%$.`, R`$4{,}5\%$.`, R`$5{,}0\%$.`, R`$3{,}5\%$.`
+    ]);
+    setMc(so4, 6, `[VD] Trong giờ thực hành, một học sinh đo chu kì dao động của con lắc đơn bằng đồng hồ bấm giây. Kết quả 5 lần đo được cho ở bảng sau:
+      <div class="stats-table-responsive"><table class="stats-table exam-data-table"><thead><tr><th>Lần đo</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><th>Chu kì T (s)</th><td>2,01</td><td>2,11</td><td>2,05</td><td>2,03</td><td>2,00</td></tr></tbody></table></div>
+      Cho biết thang chia nhỏ nhất của đồng hồ là 0,02 s. Sai số tuyệt đối của phép đo này có giá trị là`, so4.questions[6][1]);
+    so4.questions[6][3] = R`$\overline T=2{,}04\,\text{s}$. Sai số ngẫu nhiên trung bình là $(0{,}03+0{,}07+0{,}01+0{,}01+0{,}04)/5=0{,}032\,\text{s}$. Cộng sai số dụng cụ $0{,}01\,\text{s}$ rồi làm tròn được $0{,}04\,\text{s}$.`;
+    so4.questions[10][0] = `Hình vẽ bên là đồ thị độ dịch chuyển – thời gian của một người đi bộ trên một đường thẳng. Trong giai đoạn OA, người đó ${picture('image017.png', 'Đồ thị độ dịch chuyển theo thời gian gồm đoạn OA tăng và AB giảm')}`;
+    setMc(so4, 12, 'Gọi vật 1 là thuyền, vật 2 là dòng nước, vật 3 là bờ sông. Vận tốc của thuyền so với bờ sông được tính bằng biểu thức nào?', [
+      R`$\vec v_{13}=\vec v_{12}+\vec v_{23}$.`, R`$\vec v_{13}=\vec v_{12}-\vec v_{23}$.`,
+      R`$\vec v_{12}=\vec v_{13}+\vec v_{23}$.`, R`$\vec v_{23}=\vec v_{12}+\vec v_{13}$.`
+    ]);
+    so4.questions[13][0] = `Trong cuộc đuổi bắt giữa mèo và chuột được mô tả như hình vẽ. Vận tốc của chuột so với mèo là bao nhiêu km/h? ${picture('image022.png', 'Mèo chạy cùng chiều với chuột với vận tốc 40 km/h, chuột 10 km/h')}`;
+    so4.questions[17][0] = `Trong thí nghiệm đo vận tốc của bi thép (3) chuyển động thẳng, cổng quang điện là bộ phận số mấy trong sơ đồ? ${picture('image024.png', 'Sơ đồ thí nghiệm gồm bi thép, thước và hai cổng quang điện số 7')}`;
+    so4.tf[2].stem = `Bạn A đi học từ nhà đến trường theo lộ trình ABC (hình vẽ). Biết AB = 600 m trong 6 phút và BC = 800 m trong 4 phút. ${picture('image025.jpg', 'Lộ trình vuông góc từ nhà A qua B đến trường C')}`;
+    so4.tf[1].items[3][0] = so4.tf[1].items[3][0].replace(/<br><img[^>]+>/, '');
+    so4.tf[1].stem = so4.tf[1].stem.replace(/<img[^>]+>/g, '');
+    so4.short[0].question = R`Khi phép đo khối lượng có sai số trung bình của các lần đo là $2{,}3\,\text{g}$ và sai số dụng cụ của cân là $0{,}5\,\text{g}$, sai số tuyệt đối của phép đo bằng bao nhiêu gam?`;
+    so4.short[1].question = R`Hai anh em bơi trong bể bơi dài $20\,\text{m}$. Cả hai bơi từ đầu đến cuối bể; người em dừng lại, còn người anh quay về đầu bể. Người anh đã bơi bao nhiêu mét?`;
+    so4.short[2].question = `Hình dưới là đồ thị độ dịch chuyển – thời gian của hai vật chuyển động thẳng cùng hướng. Tỉ lệ vận tốc vA/vB bằng bao nhiêu? (Viết kết quả với 2 chữ số có nghĩa.) ${picture('image029.png', 'Hai đồ thị độ dịch chuyển theo thời gian, A nghiêng 30 độ và B nghiêng 60 độ')}`;
+    so4.short[3].question = R`Một chất điểm chuyển động trên trục $Ox$ có phương trình tọa độ – thời gian $x=35-5t$ (m). Quãng đường vật đi được trong $2\,\text{s}$ là bao nhiêu mét?`;
+    so4.short[4].question = `Đồ thị tọa độ – thời gian của hai xe 1 và 2 được biểu diễn như hình. Hai xe gặp nhau tại vị trí cách vị trí xuất phát của xe 2 bao nhiêu km? ${picture('image031.png', 'Hai đường tọa độ thời gian cắt nhau tại t bằng 2 giờ và x bằng 40 km')}`;
+    so4.short[5].question = R`Một máy bay bay theo hướng Bắc với vận tốc $200\,\text{m/s}$, gió thổi từ Tây sang Đông với vận tốc $10\,\text{m/s}$. Tính độ lớn vận tốc tổng hợp của máy bay theo m/s (làm tròn đến hàng đơn vị).`;
+    so4.essay[0].question = `Đồ thị độ dịch chuyển theo thời gian của một chuyển động như hình vẽ. a) Tính quãng đường và độ dịch chuyển từ 0 đến 5 s. b) Tính vận tốc trung bình từ 1 s đến 2,5 s. ${picture('image033.png', 'Đồ thị độ dịch chuyển d tính bằng cm theo thời gian t tính bằng giây')}`;
+  }
+
+  const so3 = byId('vatli-10-tailieu-so-3');
+  if (so3) {
+    const picture = (name, alt) => `<img class="exam-inline-media exam-figure-media" src="supplied/physics-native/vatli-10-tailieu-so-3/${name}" alt="${alt}">`;
+    setMc(so3, 9, `Hình bên là đồ thị độ dịch chuyển – thời gian của ô tô chuyển động thẳng theo một hướng xác định. Tốc độ lớn nhất của ô tô tương ứng với đoạn nào trên đồ thị? ${picture('image004.png', 'Đồ thị độ dịch chuyển theo thời gian gồm bốn đoạn đánh số 1 đến 4')}`, ['1.', '2.', '3.', '4.']);
+    setMc(so3, 11, `Một xe ô tô đồ chơi chuyển động trên đường thẳng có đồ thị độ dịch chuyển – thời gian như hình bên. Tốc độ của xe ô tô đồ chơi tại thời điểm 10 s là ${picture('image006.png', 'Đồ thị độ dịch chuyển theo thời gian của ô tô đồ chơi')}`, ['0,7 m/s.', '1,5 m/s.', '0 m/s.', '1 m/s.']);
+    setTf(so3, 0, `Khi chơi gôn (golf), người chơi cần đánh quả bóng gôn từ điểm xuất phát (Tee) sao cho quả bóng đến được lỗ (Hole) trong vùng xanh (Green). Biết điểm gần nhất của vùng xanh cách điểm xuất phát 250 m. Lấy $g=10\\,\\text{m/s}^2$. ${picture('image008.png', 'Sơ đồ đường bay của bóng gôn đến vùng xanh')}`, so3.tf[0].items.map(item => item[0].replace(/<br><img[^>]+>/, '').replace(/\s*\/\s*$/, '')));
+    setTf(so3, 1, `Một thiết bị tạo ra các chấm trên một băng giấy chuyển động với khoảng thời gian giữa hai chấm liên tiếp là 0,02 s. Hình 1, Hình 2 và Hình 3 biểu diễn kết quả ba chuyển động thẳng của băng giấy. Mốc thời gian được chọn tại chấm 0. ${picture('image009.png', 'Ba băng giấy Hình 1, Hình 2 và Hình 3')}`, so3.tf[1].items.map(item => item[0].replace(/<br><img[^>]+>/, '').replace(/\s*\/\s*$/, '')));
+    setTf(so3, 2, `Trong một tình huống bóng đá, thủ môn xuất phát từ vạch ngang nối hai cột của khung thành chạy thẳng lên phía trước để bắt bóng. Hình bên là đồ thị độ dịch chuyển – thời gian của thủ môn. Điểm A tương ứng với điểm xuất phát, đoạn AB có dạng parabol, BC là đoạn thẳng. ${picture('image010.png', 'Đồ thị độ dịch chuyển theo thời gian của thủ môn')}`, [so3.tf[2].items[0][0], so3.tf[2].items[1][0].replace(/<br><img[^>]+>/, ''), so3.tf[2].items[2][0], 'Từ 4 giây đến 6 giây, vận tốc chuyển động của thủ môn có giá trị $-10\\,\\text{m/s}$.']);
+    setTf(so3, 3, `Từ tầng cao của một tòa nhà tại nơi có gia tốc trọng trường $g=9{,}8\\,\\text{m/s}^2$, một vật rơi tự do chạm mặt đất hết thời gian 3,00 s (lúc $t=0$ vật bắt đầu rơi, chiều dương là chiều chuyển động). ${picture('image013.png', 'Hình 4 đồ thị vận tốc thời gian và Hình 5 đồ thị độ dịch chuyển thời gian')}`, so3.tf[3].items.map(item => item[0].replace(/<br><img[^>]+>/, '').replace(/\s*\/\s*$/, '')));
+    so3.short[3].question = R`Một viên đạn chuyển động có các thành phần vận tốc theo hai trục vuông góc $Ox$ và $Oy$ với độ lớn lần lượt $v_x=10\,\text{m/s}$ và $v_y=30\,\text{m/s}$. Góc tạo bởi vận tốc của viên đạn và phương $Oy$ là $\alpha$ có $\tan\alpha$ là bao nhiêu? (Kết quả lấy đến 2 chữ số có nghĩa).`;
+    so3.short[5].question = `Chuyển động của hai viên bi $B_1$ và $B_2$ có đồ thị vận tốc – thời gian như hình bên. Gọi $s_1$ và $s_2$ là quãng đường đi được tương ứng của $B_1$ và $B_2$ trong cùng thời gian. Tỉ số $s_1/s_2$ là bao nhiêu? (Kết quả lấy đến 1 chữ số có nghĩa). ${picture('image025.png', 'Đồ thị vận tốc thời gian của hai viên bi B1 và B2')}`;
+    so3.questions[3][0] = R`Một học sinh đo tốc độ trung bình của viên bi được giá trị $v=(2{,}50\pm0{,}04)\,\text{m/s}$. Sai số tỉ đối của phép đo này là`;
   }
 
   // Bộ hiển thị đã tự đánh số câu; bỏ nhãn "Câu n/Bài n" nằm trong dữ liệu nguồn
@@ -149,6 +205,7 @@
     return value
       .replace(/^(?:\s*<br\s*\/?>(?:\s|&nbsp;)*)*((?:\s*<img\b[^>]*>\s*)*)(?:Câu|Bài)\s*\d+(?:\s*\([^)]*\))?\s*[.:]\s*/i, '$1')
       .replace(/<br>\s*HƯỚNG DẪN GIẢI VÀ ĐÁP ÁN[\s\S]*$/i, '')
+      .replace(/\s*-{5,}\s*HẾT\s*-{5,}[\s\S]*$/i, '')
       .replace(/(?:…|\.){12,}/g, ' ')
       .trim();
   };
