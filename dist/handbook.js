@@ -355,7 +355,7 @@ function renderHandbook(selectedSubject, filterQuery) {
       if (filteredItems.length === 0) return '';
 
       const itemsHtml = filteredItems.map((item, itemIndex) => `
-        <details class="handbook-item-card${item.formula.includes('handbook-table') ? ' handbook-item-wide' : ''}" ${query || (sectionIndex === 0 && itemIndex === 0) ? 'open' : ''}>
+        <details class="handbook-item-card${item.formula.includes('handbook-table') ? ' handbook-item-wide' : ''}${item.lesson ? ' handbook-item-lesson' : ''}" ${query || (sectionIndex === 0 && itemIndex === 0) ? 'open' : ''}>
           <summary class="handbook-item-summary">
             <span class="handbook-item-title">${item.name}</span>
             <span class="handbook-item-summary-meta">
@@ -414,7 +414,7 @@ function renderHandbook(selectedSubject, filterQuery) {
             <span class="handbook-subject-icon">${({math:'T',physics:'L',chemistry:'H',english:'EN',agriculture:'CN'})[subj.id] || subj.icon || '10'}</span>
             <div>
               <h2 style="font-size:20px;font-weight:700;margin:0;color:#1e293b">${subj.name}</h2>
-              <small style="color:#64748b;font-size:12.5px">${subj.id === 'history' ? `${subj.sections.length} chủ đề lớn · ${subj.sections.reduce((total, section) => total + section.items.length, 0)} mục kiến thức, ví dụ và cách làm bài` : 'Công thức, cách dùng và các điểm cần chú ý khi làm bài'}</small>
+              <small style="color:#64748b;font-size:12.5px">${subj.id === 'history' ? `${subj.sections.length} chủ đề · ${subj.sections.reduce((total, section) => total + section.items.length, 0)} bài học tổng hợp, có ví dụ và cách làm bài` : 'Công thức, cách dùng và các điểm cần chú ý khi làm bài'}</small>
               ${subj.source ? `<p class="handbook-source">${subj.source}${subj.sourceHref ? ` <a href="${subj.sourceHref}" target="_blank" rel="noopener noreferrer">${subj.sourceLabel || 'Mở tài liệu nguồn'} ↗</a>` : ''}</p>` : ''}
             </div>
           </div>

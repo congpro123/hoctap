@@ -231,16 +231,42 @@
     ]
   };
 
-  // Trình bày theo bốn chủ đề lớn để mục lục gọn hơn, nhưng giữ đủ 40 mục chi tiết.
+  // Gộp 40 ý nguồn thành 8 bài học (mỗi chủ đề chỉ còn 2 hàng để mở).
+  // Nội dung của từng ý vẫn nằm trong bài học tương ứng, không bị lược bỏ.
+  const lesson = (name, summary, parts) => ({
+    name, formula: summary, lesson: true, freq: `${parts.length} ý`, forms: '',
+    sourceItems: parts.map(part => part.name),
+    desc: `<div class="history-study-notes">${parts.map(part => `
+      <section class="history-study-topic">
+        <h4>${part.name}</h4>
+        <div class="history-study-core">${part.formula}</div>
+        <p>${part.desc}</p>
+        <p class="history-study-example"><b>Ví dụ:</b> ${part.example}</p>
+        <p class="history-study-trap"><b>Lưu ý:</b> ${part.traps}</p>
+        <small>Đối chiếu: ${part.reference}</small>
+      </section>`).join('')}</div>`
+  });
   const [guide, foundation, learning, heritage, eastern, western, influence] = handbookData.history.sections;
   handbookData.history.sections = [
     {title: 'Nền tảng Sử học và cách ôn (Bài 1–2)', badge: 'Khái niệm · sử liệu · phương pháp',
-      items: [...guide.items, ...foundation.items, ...learning.items]},
+      items: [
+        lesson('Lịch sử, Sử học và cách đọc sử liệu', 'Nắm sự khác nhau giữa quá khứ khách quan và hiểu biết về quá khứ; dùng chứng cứ để giải thích.', foundation.items),
+        lesson('Vì sao học sử và vận dụng vào cuộc sống?', 'Học cội nguồn, cập nhật tri thức, xử lí nguồn và liên hệ vấn đề hiện tại.', learning.items)
+      ]},
     {title: 'Di sản và du lịch (Bài 3)', badge: 'Bảo tồn · phát huy · vận dụng',
-      items: heritage.items},
+      items: [
+        lesson('Nhận diện, bảo tồn và phát huy di sản', 'Phân loại di sản; dùng Sử học xác định giá trị và chọn cách bảo tồn phù hợp.', heritage.items.slice(0, 3)),
+        lesson('Du lịch bền vững và bài tập tình huống', 'Phân tích cả lợi ích, rủi ro của du lịch và đề xuất giải pháp có căn cứ.', heritage.items.slice(3))
+      ]},
     {title: 'Văn minh phương Đông và ảnh hưởng (Bài 4)', badge: 'Ai Cập · Ấn Độ · Trung Hoa · Nho giáo',
-      items: [...eastern.items, ...influence.items.slice(0, -1)]},
+      items: [
+        lesson('Văn minh, Ai Cập và Ấn Độ', 'Phân biệt văn hóa–văn minh, định vị trung tâm và hiểu thành tựu của Ai Cập, Ấn Độ.', eastern.items.slice(0, 6)),
+        lesson('Trung Hoa, Nho giáo và ảnh hưởng đến Việt Nam', 'Học thành tựu Trung Hoa, ảnh hưởng Ấn Độ–Trung Hoa và đánh giá hai mặt Nho giáo.', [...eastern.items.slice(6), ...influence.items.slice(0, -1)])
+      ]},
     {title: 'Văn minh phương Tây và luyện tự luận (Bài 5)', badge: 'Hy Lạp–La Mã · so sánh Đông–Tây',
-      items: [...western.items, influence.items[influence.items.length - 1]]}
+      items: [
+        lesson('Hy Lạp–La Mã và so sánh Đông–Tây', 'So sánh theo điều kiện tự nhiên, kinh tế, thành tựu và sự lan tỏa; tránh khái quát tuyệt đối.', western.items.slice(0, 3)),
+        lesson('Cách làm trắc nghiệm, đúng/sai và tự luận', 'Đọc chứng cứ, lập luận theo tiêu chí, dùng ví dụ và tự luyện nhiều dạng vận dụng.', [...guide.items, western.items[3], influence.items[influence.items.length - 1]])
+      ]}
   ];
 }

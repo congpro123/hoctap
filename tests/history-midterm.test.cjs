@@ -43,12 +43,14 @@ for (const exam of exams) {
 
 assert.equal(global.handbookData.history.id, 'history');
 assert.equal(global.handbookData.history.sections.length, 4);
-assert.deepEqual(global.handbookData.history.sections.map(section => section.items.length), [14, 6, 15, 5]);
+assert.deepEqual(global.handbookData.history.sections.map(section => section.items.length), [2, 2, 2, 2]);
 const handbookItems = global.handbookData.history.sections.flatMap(section => section.items);
-assert.equal(handbookItems.length, 40, `Sổ tay có ${handbookItems.length} mục, không phải 40`);
+assert.equal(handbookItems.length, 8);
 assert.equal(new Set(handbookItems.map(item => item.name)).size, handbookItems.length);
-assert.ok(handbookItems.every(item => item.name && item.formula && item.desc && item.example && item.traps && item.reference));
-assert.ok(handbookItems.some(item => item.name.includes('Nho giáo')));
-assert.ok(handbookItems.some(item => item.name.includes('Đông–Tây')));
-assert.ok(handbookItems.some(item => item.name.includes('Sử học')));
+assert.ok(handbookItems.every(item => item.name && item.formula && item.desc && item.lesson));
+assert.equal(handbookItems.reduce((total, item) => total + item.sourceItems.length, 0), 40);
+assert.equal(new Set(handbookItems.flatMap(item => item.sourceItems)).size, 40);
+assert.ok(handbookItems.some(item => item.desc.includes('Nho giáo: giá trị tích cực')));
+assert.ok(handbookItems.some(item => item.desc.includes('Đông–Tây: điều kiện tự nhiên')));
+assert.ok(handbookItems.some(item => item.desc.includes('Chức năng và nhiệm vụ của Sử học')));
 console.log('10 đề Lịch sử, ma trận, đáp án/giải thích, thang điểm và sổ tay: OK');
