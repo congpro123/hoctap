@@ -3,29 +3,31 @@ const path = require('node:path');
 global.window = global;
 global.handbookData = {};
 const examModule = path.join(__dirname, '../dist/history-midterm-exams.js');
-require(examModule);
-const previousExams = global.historyMidtermExams;
 require(path.join(__dirname, '../dist/history-midterm-hard-bank.js'));
-delete require.cache[require.resolve(examModule)];
 require(examModule);
+const legacyExams = global.historyMidtermExams;
+require(path.join(__dirname, '../dist/history-midterm-advanced.js'));
 require(path.join(__dirname, '../dist/handbook-history.js'));
 
 const exams = global.historyMidtermExams;
+assert.equal(global.historyMidtermLegacyExams, legacyExams, 'Giữ bộ đề cũ để xem lại bài đã nộp');
 assert.equal(exams.length, 10);
 assert.equal(new Set(exams.map(exam => exam.id)).size, 10);
+assert.ok(exams.every((exam, i) => exam.version === 2 && exam.id !== legacyExams[i].id));
 assert.equal(new Set(exams.map(exam => exam.essay[0].question)).size, 10);
 assert.equal(new Set(exams.map(exam => exam.essay[1].question)).size, 10);
 assert.equal(new Set(exams.map(exam => JSON.stringify([exam.questions, exam.tf, exam.essay]))).size, 10);
-assert.deepEqual(exams.map(exam => exam.questions.map(q => q[2])), previousExams.map(exam => exam.questions.map(q => q[2])), 'Không tự đổi vị trí đáp án của bài cũ');
-assert.deepEqual(exams.map(exam => exam.tf.map(group => group.items.map(item => item[1]))), previousExams.map(exam => exam.tf.map(group => group.items.map(item => item[1]))), 'Không tự đổi đúng/sai của bài cũ');
-assert.ok(exams.every((exam, i) => exam.questions.every((q, j) => q[0] !== previousExams[i].questions[j][0])), 'Mỗi câu trắc nghiệm phải được biên tập lại');
+assert.ok(exams.every((exam, i) => exam.questions.every((q, j) => q[0] !== legacyExams[i].questions[j][0])), 'Mỗi câu trắc nghiệm phải được ra mới');
+assert.ok(new Set(exams.flatMap(exam => exam.questions.map(q => q[0]))).size >= 50, 'Ngân hàng câu hỏi quá lặp');
+assert.equal(new Set(exams.flatMap(exam => exam.tf.map(group => group.stem))).size, 20, 'Thiếu dạng tư liệu đúng/sai');
 assert.deepEqual(Object.fromEntries(Object.entries(global.historyMidtermHardBanks).map(([tag, bank]) => [tag, bank.length])), {b1n:8,b1h:10,b2h:8,b3n:10,b4n:10,b4h:10});
-const lengthRanks = [0, 0, 0, 0];
+const answerPositions = [0, 0, 0, 0];
 for (const question of exams.flatMap(exam => exam.questions)) {
-  const lengths = question[1].map(option => option.length);
-  lengthRanks[lengths.filter(length => length > lengths[question[2]]).length]++;
+  answerPositions[question[2]]++;
+  const foilLength = Math.max(...question[1].filter((_, index) => index !== question[2]).map(option => option.length));
+  assert.ok(question[1][question[2]].length <= foilLength * 1.31, `Đáp án lộ vì dài bất thường: ${question[0]}`);
 }
-assert.ok(lengthRanks.every(count => count >= 18 && count <= 45), `Độ dài đáp án tạo mẹo đoán: ${lengthRanks}`);
+assert.ok(answerPositions.every(count => count >= 20 && count <= 40), `Vị trí đáp án lệch: ${answerPositions}`);
 
 const expectedTags = ['b1n','b1n','b1h','b2h','b2h','b3n','b3n','b3n','b4n','b4n','b4n','b4h'];
 for (const exam of exams) {
@@ -44,7 +46,9 @@ for (const exam of exams) {
   assert.equal(exam.tf.length, 4);
   assert.equal(new Set(exam.tf.map(group => group.stem)).size, 4);
   for (const group of exam.tf) {
+    assert.ok(group.stem.length >= 130, `${exam.id}: đoạn tư liệu quá ngắn`);
     assert.equal(group.items.length, 4);
+    assert.ok(group.items.some(item => item[1]) && group.items.some(item => !item[1]), `${exam.id}: nhóm Đ/S một chiều`);
     for (const [statement, truth, explanation] of group.items) {
       assert.ok(statement && explanation);
       assert.equal(typeof truth, 'boolean');

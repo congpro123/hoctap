@@ -1121,7 +1121,11 @@ function submitExam(reason) {
 function renderResult(r) {
   hidePauseModal();
   hideStopModal();
-  const e = exams.find(x => x.id === r.id) || { title: r.title, questions: [], tf: [], short: [] };
+  const currentExam = exams.find(x => x.id === r.id);
+  const legacyHistory = typeof window !== 'undefined' && Array.isArray(window.historyMidtermLegacyExams) ? window.historyMidtermLegacyExams : [];
+  const legacyIndex = legacyHistory.findIndex(x => x.id === r.id);
+  const e = currentExam || legacyHistory[legacyIndex] || { title: r.title, questions: [], tf: [], short: [] };
+  const redoExam = currentExam || (legacyIndex >= 0 ? window.historyMidtermExams?.[legacyIndex] : null);
   const scoreNum = r.score !== undefined ? r.score : (r.correct / r.total * 10);
   
   app.innerHTML = `<div class="content">
@@ -1137,7 +1141,7 @@ function renderResult(r) {
       ${e.paperExam ? `<details class="paper-review-source"><summary>Xem lại đề nguyên bản (${Number(e.pageCount)||1} trang)</summary><div class="original-pdf-pages paper-exam-pages">${Array.from({length:Number(e.pageCount)||1},(_,i)=>i+1).map(n=>`<figure class="original-pdf-page"><img src="${esc(e.paperBase)}-page-${n}.png" alt="Trang ${n} trên ${Number(e.pageCount)||1} của ${esc(e.title)}" loading="lazy"><figcaption>Trang ${n}/${Number(e.pageCount)||1}</figcaption></figure>`).join('')}</div></details>` : ''}
       
       <div style="display:flex;gap:12px;justify-content:center;margin:24px 0;">
-        <button class="primary" data-start="${esc(r.id)}">Làm lại đề này ↺</button>
+        ${redoExam ? `<button class="primary" data-start="${esc(redoExam.id)}">${currentExam ? 'Làm lại đề này ↺' : 'Làm đề phiên bản mới ↺'}</button>` : ''}
         <button class="secondary" data-viewto="subjects">Về kho đề thi ➔</button>
       </div>
 
