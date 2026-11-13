@@ -5,7 +5,7 @@ function examAttemptCount(examId){
   return window.auth.getAllResults().reduce((count,result)=>count+(result&&result.id===examId?1:0),0);
 }
 function card(e){
-  const labels={math:'Toán 10',physics:'Vật lý 10',chemistry:'Hóa học 10',english:'Tiếng Anh 10',agriculture:'Công nghệ nông nghiệp 10'};
+  const labels={math:'Toán 10',physics:'Vật lý 10',chemistry:'Hóa học 10',english:'Tiếng Anh 10',agriculture:'Công nghệ nông nghiệp 10',history:'Lịch sử 10'};
   const totalAttempts=examAttemptCount(e.id);
   let status='<span class="exam-status-badge pending">Chưa làm</span>';
   let action=`<button class="primary" data-start="${esc(e.id)}">Làm bài</button>`;
@@ -24,7 +24,7 @@ function card(e){
 }
 
 function tiles(){
-  const counts={0:'math',1:'physics',3:'agriculture',4:'english',5:'chemistry'};
+  const counts={0:'math',1:'physics',3:'agriculture',4:'english',5:'chemistry',6:'history'};
   return `<div class="subject-grid">${subjects.map((s,i)=>`<button class="subject-tile" data-subjectto="${i}"><span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span><b>${s[0]}</b><small>${counts[i]?exams.filter(e=>e.subject===counts[i]).length+' đề thi':'Sắp cập nhật đề thi'}</small></button>`).join('')}</div>`;
 }
 function home(){
@@ -34,7 +34,8 @@ function home(){
     ['physics',1,'Vật lý','Đo lường và chuyển động','L'],
     ['agriculture',3,'Công nghệ nông nghiệp','Trồng trọt, đất và giá thể','CN'],
     ['chemistry',5,'Hóa học','Nguyên tử và bảng tuần hoàn','H'],
-    ['english',4,'Tiếng Anh','REVIEW 1 · Ngữ pháp và kỹ năng','EN']
+    ['english',4,'Tiếng Anh','REVIEW 1 · Ngữ pháp và kỹ năng','EN'],
+    ['history',6,'Lịch sử','Sử học và các nền văn minh cổ đại','S']
   ];
   const featured = groups.map(([subject])=>exams.find(e=>e.subject===subject)).filter(Boolean);
   app.innerHTML = `<div class="content dashboard-page">
@@ -55,9 +56,9 @@ function home(){
 
 function catalog(index){
   if (typeof window !== 'undefined' && window.auth && !window.auth.requireAuth('subjects')) return;
-  const mapping={0:'math',1:'physics',3:'agriculture',4:'english',5:'chemistry'},list=index===undefined?exams:exams.filter(e=>e.subject===mapping[index]);
+  const mapping={0:'math',1:'physics',3:'agriculture',4:'english',5:'chemistry',6:'history'},list=index===undefined?exams:exams.filter(e=>e.subject===mapping[index]);
   const name=index===undefined?'Kho đề thi':subjects[index][0];
-  app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện lớp 10 · Xem cấu trúc từng bài trên thẻ đề và lời giải sau khi nộp.`:'Môn học này đang được cập nhật đề thi.'}</p>${mapping[index]?`<div style="margin:14px 0 10px;"><a href="#handbook-${mapping[index]}" class="secondary handbook-quick-btn" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:8px 16px;border-radius:8px;"><span>📖</span> Xem sổ tay công thức & lý thuyết ${name} ➔</a></div>`:''}</div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${[[0,'Toán'],[1,'Vật lý'],[3,'Công nghệ NN'],[4,'Tiếng Anh'],[5,'Hóa học']].map(([i,n])=>`<button class="filter" data-subjectto="${i}">${n} (${exams.filter(e=>e.subject===mapping[i]).length})</button>`).join('')}</div>`:''}${list.length?`<div class="catalog-toolbar"><label class="catalog-search"><img src="vendor/tabler/icons/search.svg" alt="" width="18" height="18"><input class="form-control" type="search" data-exam-search aria-label="Tìm đề thi" placeholder="Tìm tên đề, trường hoặc tỉnh…"></label><span class="catalog-count" data-catalog-count aria-live="polite">${list.length} đề thi</span></div><div class="cards exam-list">${list.map(card).join('')}</div><div class="catalog-empty notice" data-catalog-empty hidden>Không tìm thấy đề phù hợp. Hãy thử tên trường, tỉnh hoặc từ khóa khác.</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;
+  app.innerHTML=`<div class="content"><div class="page-heading"><h1>${name}</h1><p>${list.length?`${list.length} bài luyện lớp 10 · Xem cấu trúc từng bài trên thẻ đề và lời giải sau khi nộp.`:'Môn học này đang được cập nhật đề thi.'}</p>${mapping[index]?`<div style="margin:14px 0 10px;"><a href="#handbook-${mapping[index]}" class="secondary handbook-quick-btn" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:8px 16px;border-radius:8px;"><span>📖</span> Xem sổ tay kiến thức ${name} ➔</a></div>`:''}</div>${index===undefined?`<div class="filter-row"><button class="filter active" data-viewto="subjects">Tất cả</button>${[[0,'Toán'],[1,'Vật lý'],[3,'Công nghệ NN'],[4,'Tiếng Anh'],[5,'Hóa học'],[6,'Lịch sử']].map(([i,n])=>`<button class="filter" data-subjectto="${i}">${n} (${exams.filter(e=>e.subject===mapping[i]).length})</button>`).join('')}</div>`:''}${list.length?`<div class="catalog-toolbar"><label class="catalog-search"><img src="vendor/tabler/icons/search.svg" alt="" width="18" height="18"><input class="form-control" type="search" data-exam-search aria-label="Tìm đề thi" placeholder="Tìm tên đề, trường hoặc tỉnh…"></label><span class="catalog-count" data-catalog-count aria-live="polite">${list.length} đề thi</span></div><div class="cards exam-list">${list.map(card).join('')}</div><div class="catalog-empty notice" data-catalog-empty hidden>Không tìm thấy đề phù hợp. Hãy thử tên trường, tỉnh hoặc từ khóa khác.</div>`:`<div class="notice"><b>Đề thi đang được cập nhật</b>Môn ${name} chưa có bộ đề.<br><br><button class="primary" data-viewto="subjects">Xem kho đề →</button></div>`}${index===undefined?`<section class="lower-section"><div class="section-head"><h2>Danh sách môn học</h2></div>${tiles()}</section>`:''}</div>`;
   setNav(index===undefined?'subjects':'subject-'+index);
 }
 function history(){
