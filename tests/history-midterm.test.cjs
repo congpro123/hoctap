@@ -42,6 +42,12 @@ for (const exam of exams) {
 }
 
 assert.equal(global.handbookData.history.id, 'history');
-assert.ok(global.handbookData.history.sections.length >= 6);
-assert.ok(global.handbookData.history.sections.every(section => section.items.every(item => item.name && item.formula && item.desc)));
+assert.ok(global.handbookData.history.sections.length >= 7);
+const handbookItems = global.handbookData.history.sections.flatMap(section => section.items);
+assert.ok(handbookItems.length >= 38, `Sổ tay chỉ có ${handbookItems.length} mục`);
+assert.equal(new Set(handbookItems.map(item => item.name)).size, handbookItems.length);
+assert.ok(handbookItems.every(item => item.name && item.formula && item.desc && item.example && item.traps && item.reference));
+assert.ok(handbookItems.some(item => item.name.includes('Nho giáo')));
+assert.ok(handbookItems.some(item => item.name.includes('Đông–Tây')));
+assert.ok(handbookItems.some(item => item.name.includes('Sử học')));
 console.log('10 đề Lịch sử, ma trận, đáp án/giải thích, thang điểm và sổ tay: OK');
