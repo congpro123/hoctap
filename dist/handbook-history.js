@@ -6,12 +6,12 @@
 
   handbookData.history = {
     id: 'history', name: 'Lịch sử 10', icon: 'S', color: '#8a4d0e', bg: '#fff2dd',
-    source: 'Biên soạn từ SGK Lịch sử 10 do bạn cung cấp (Bài 1–5, tr. 6–37), ma trận giữa kì chuyên Sử và gợi ý trên bảng lớp. Gợi ý ôn tập không phải nội dung đề thi đã được xác nhận.',
+    source: 'Biên soạn từ Đề cương ôn tập Lịch sử giữa kì I bạn gửi (Bài 1–4), đối chiếu SGK Lịch sử 10 và ma trận chuyên Sử. Đây là tài liệu luyện tập, không phải nội dung đề thi đã được xác nhận.',
     sections: [
       {title: 'Lộ trình ôn tập và cách làm bài', badge: '90 phút · 10 điểm', items: [
         item('Ma trận: học đủ nội dung, đúng trọng số', 'Ma trận giữa kì chuyên Sử, mục phân bố câu và điểm',
           '12 câu nhiều lựa chọn × 0,25 = 3 điểm.<br>4 nhóm đúng/sai × 4 ý, tối đa 4 điểm.<br>2 câu tự luận: 1 + 2 = 3 điểm.<br>Trọng số: Bài 1 27,5%; Bài 2 15%; Bài 3 27,5%; Bài 4 10%; vận dụng mở rộng 20%.',
-          'Bài 1 kiểm tra khái niệm và cách nhận thức quá khứ; Bài 2 kiểm tra việc học lịch sử gắn với cuộc sống; Bài 3 hỏi di sản, du lịch; Bài 4 hỏi thành tựu văn minh phương Đông. Phần so sánh Đông–Tây và liên hệ là nơi cần lập luận, không chỉ thuộc tên thành tựu.',
+          'Bài 1 kiểm tra khái niệm và cách nhận thức quá khứ; Bài 2 kiểm tra việc học lịch sử gắn với cuộc sống; Bài 3 hỏi di sản, du lịch; Bài 4 hỏi văn minh phương Đông và ảnh hưởng ở Việt Nam. Khi vận dụng cần lập luận, không chỉ thuộc tên thành tựu.',
           'Tự kiểm tra: bạn có giải thích được vì sao một di vật là nguồn sử liệu nhưng lời diễn giải về di vật vẫn cần đối chiếu không? Nếu chưa, hãy ôn Bài 1 trước khi làm đề.',
           'Không học tủ một đoạn Nho giáo vì lời nhắc trong lớp chưa xác nhận đề chính thức.', 'Định hướng ôn', 'Theo ma trận'),
         item('Cách xử lí câu đúng/sai có tư liệu', 'Ma trận: 4 nhóm đúng/sai; SGK Bài 1–3, tr. 6–20',
@@ -168,27 +168,27 @@
           'Đừng dùng một thành tựu để kết luận nền văn minh này “cao hơn” nền văn minh khác.', 'Bảng so sánh · trắc nghiệm · tự luận', 'Thông hiểu')
       ]},
 
-      {title: 'Bài 5 · Văn minh Hy Lạp–La Mã và so sánh Đông–Tây', badge: 'Phần vận dụng mở rộng', items: [
-        item('Hy Lạp–La Mã: không gian và thành tựu nổi bật', 'SGK Bài 5, tr. 31–35',
-          'Không gian: các bán đảo Nam Âu ven Địa Trung Hải.<br>Thành tựu: bảng chữ cái Hy Lạp và La-tinh; văn học, sử học, khoa học, triết học; kiến trúc, điêu khắc, thể thao.',
-          'Thành tựu đáp ứng đời sống xã hội và để lại ảnh hưởng lâu dài. Khi đối chiếu với phương Đông, so sánh từng lĩnh vực tương ứng, không so một công trình với toàn bộ nền văn minh.',
-          'Có thể lấy chữ La-tinh, đền Pác-tê-nông, đấu trường Cô-li-dê hoặc Thế vận hội làm ví dụ; giải thích đúng lĩnh vực và ý nghĩa.',
-          'Không gọi chữ La-tinh là chữ tượng hình; không coi toàn bộ phương Tây cổ đại chỉ gồm một mô hình thành bang.'),
-        item('Đông–Tây: điều kiện tự nhiên và kinh tế', 'SGK Bài 4, tr. 22–27; Bài 5, tr. 31–32',
-          'Nhiều trung tâm phương Đông hình thành ở lưu vực sông lớn, nông nghiệp và thủy lợi nổi bật.<br>Hy Lạp–La Mã ở ven Địa Trung Hải, biển, đô thị, thủ công và trao đổi hàng hóa nổi bật.',
-          'Đây là xu hướng thường dùng để so sánh, không phải mô tả mọi nơi và mọi giai đoạn. Cần giải thích điều kiện tự nhiên tạo thuận lợi hoặc khó khăn gì, rồi mới liên hệ kinh tế và tổ chức xã hội. Cả hai khu vực đều có nông nghiệp, thương mại và giao lưu.',
-          'Lưu vực sông Nin giúp Ai Cập có nguồn nước và phù sa; vị trí ven biển Địa Trung Hải góp phần thuận lợi cho giao thông, giao thương của Hy Lạp.',
-          'Câu “phương Đông chỉ nông nghiệp, phương Tây chỉ thương mại” là sai vì tuyệt đối hóa.'),
-        item('Đông–Tây: thành tựu và ảnh hưởng', 'SGK Bài 4, tr. 21–30; Bài 5, tr. 31–35',
-          'So theo cùng tiêu chí: <b>chữ viết</b>, <b>khoa học</b>, <b>tư tưởng/tôn giáo</b>, <b>kiến trúc/nghệ thuật</b>, <b>sự lan tỏa</b>.',
-          'Phương Đông có nhiều hệ chữ và thành tựu như chữ tượng hình, chữ Hán, hệ chữ số Ấn Độ; Hy Lạp–La Mã có bảng chữ cái, các đóng góp triết học, khoa học, nghệ thuật. Mỗi thành tựu cần gắn với bối cảnh và ảnh hưởng, không xếp hạng cao/thấp một cách chung chung.',
-          'Đối chiếu chữ tượng hình Ai Cập với chữ La-tinh: nêu đúng nguồn gốc, cách phát triển và vai trò ghi chép; không kết luận một chữ “văn minh hơn” chữ kia.',
-          'Không bê nguyên một bảng đối lập “Đông = tập thể, Tây = cá nhân” cho mọi nước, mọi thời.'),
-        item('Dàn ý tự luận 2 điểm so sánh Đông–Tây', 'Ma trận tự luận vận dụng; SGK Bài 4–5, tr. 21–35',
-          '1. Nêu điểm chung: đều sáng tạo và trao đổi tri thức.<br>2. Chỉ ra khác biệt theo 2–3 tiêu chí có dẫn chứng.<br>3. Giải thích từ bối cảnh tự nhiên, kinh tế, xã hội.<br>4. Kết luận: khác biệt là xu hướng, có giao lưu và ngoại lệ.',
-          'Ví dụ nếu đề hỏi vì sao thành tựu khác nhau: không đủ viết mỗi “vì điều kiện địa lí”. Hãy nối một đặc điểm cụ thể với nhu cầu thực tiễn và thành tựu cụ thể, rồi nêu điều tương tự ở khu vực kia.',
-          'Ai Cập cần đo đạc đất đai và tính thời gian nên phát triển toán học, lịch; hoạt động hàng hải, đô thị và tranh luận tư tưởng góp phần tạo bối cảnh cho những thành tựu Hy Lạp–La Mã.',
-          'Dàn ý này là cách luyện lập luận; không khẳng định câu thi chính thức sẽ hỏi đúng một kiểu so sánh.', 'Tự luận · 2 điểm', 'Bài mẫu')
+      {title: 'Bài 4 · Đối chiếu thành tựu và vận dụng', badge: 'Ai Cập · Ấn Độ · Trung Hoa', items: [
+        item('Văn minh nông nghiệp: bốn trung tâm ven sông', 'Đề cương giữa kì I, Bài 4',
+          'Ai Cập — sông Nin; Lưỡng Hà — Ti-grơ và Ơ-phơ-rát; Ấn Độ — sông Ấn và sông Hằng; Trung Hoa — Hoàng Hà và Trường Giang.',
+          'Nguồn nước, phù sa và nhu cầu tổ chức thủy lợi góp phần làm nông nghiệp quan trọng. Nhưng cư dân còn phát triển đô thị, thủ công, chữ viết, toán học và giao lưu; đừng hiểu “nông nghiệp” là chỉ có trồng trọt.',
+          'Ai Cập phát triển lịch và toán học gắn với nhu cầu sản xuất, đo đạc; Trung Hoa có chữ viết và nhiều kĩ thuật.',
+          'Không ghép nhầm sông Hằng với Trung Hoa hay cho rằng mọi trung tâm chỉ gắn với một con sông.'),
+        item('Đối chiếu thành tựu cùng lĩnh vực', 'Đề cương giữa kì I, Bài 4',
+          'Chữ viết: Ai Cập — tượng hình; Ấn Độ — Kha-rốt-thi, Bra-mi; Trung Hoa — giáp cốt, chữ Hán.<br>Toán học: Ai Cập — tính diện tích, pi xấp xỉ 3,16; Ấn Độ — mười chữ số; Trung Hoa — bàn tính, tính pi chính xác hơn.',
+          'So theo cùng lĩnh vực và nêu đúng nguồn gốc, công dụng. Một thành tựu truyền sang nơi khác vẫn có nguồn hình thành riêng; tên giống nhau không có nghĩa được tạo ra cùng lúc hay cùng địa điểm.',
+          'Lịch mặt trời gắn với Ai Cập; bốn phát minh lớn giấy, in, thuốc súng, la bàn gắn với Trung Hoa.',
+          'Không gộp chữ số 0–9, lịch mặt trời và kĩ thuật in vào một nền văn minh.'),
+        item('Tôn giáo, văn học và kiến trúc phương Đông', 'Đề cương giữa kì I, Bài 4',
+          'Ấn Độ: Phật giáo, Ấn Độ giáo; Kinh Vê-đa, Ma-ha-bha-ra-ta, Ra-ma-ya-na; chùa, tháp và đền.<br>Trung Hoa: Nho giáo, Đạo giáo; Đường thi, tiểu thuyết chương hồi; Vạn Lý Trường Thành, Tử Cấm Thành.<br>Ai Cập: kim tự tháp, tượng Nhân sư.',
+          'Gắn mỗi thành tựu với nền văn minh và chức năng cụ thể. Tư tưởng, văn học và kiến trúc có thể lan tỏa, nhưng cộng đồng tiếp nhận sẽ chọn lọc và biến đổi.',
+          'Kim tự tháp là kiến trúc gắn lăng mộ; chùa tháp Phật giáo có chức năng tôn giáo; Trường Thành có chức năng phòng thủ.',
+          'Đừng xếp Nho giáo vào Ấn Độ hoặc cho rằng mọi công trình cổ đều là đền thờ.'),
+        item('Dàn ý tự luận 2 điểm: ảnh hưởng và tiếp biến', 'Đề cương giữa kì I, Bài 4; ma trận vận dụng',
+          '1. Xác định nguồn gốc thành tựu và con đường giao lưu.<br>2. Nêu biểu hiện ở Việt Nam/Đông Nam Á bằng ví dụ cụ thể.<br>3. Phân biệt tiếp nhận với sao chép nguyên xi.<br>4. Đánh giá tác động hoặc giới hạn trong bối cảnh.',
+          'Nếu hỏi về Nho giáo, trình bày cả mặt tích cực (hiếu học, đạo đức, quản lí) và giới hạn (gia trưởng, bất bình đẳng giới); đề xuất kế thừa có chọn lọc. Nếu hỏi Phật giáo, chỉ ra nguồn gốc Ấn Độ và sự hòa nhập với văn hóa bản địa.',
+          'Một văn bản chữ Hán ở Việt Nam không đủ chứng minh tác giả là người Trung Hoa; cần xét tác giả, thời điểm và nội dung.',
+          'Không quy mọi biến đổi xã hội hoặc kinh tế cho một học thuyết; không khẳng định câu thi chính thức chỉ có một kiểu liên hệ.', 'Tự luận · 2 điểm', 'Bài mẫu')
       ]},
 
       {title: 'Liên hệ Việt Nam, Đông Nam Á và Nho giáo', badge: 'Ôn vận dụng nhiều dạng', items: [
@@ -222,8 +222,8 @@
           'Đây là khung phân tích, không phải ba giai đoạn bắt buộc tuần tự cho mọi trường hợp. Bài vận dụng cần nêu ví dụ thật cụ thể: tên thành tựu, nơi tiếp nhận, nét biến đổi và ý nghĩa.',
           'Chữ Hán ảnh hưởng đời sống học thuật Việt Nam; người Việt dùng chữ Hán đồng thời sáng tạo chữ Nôm. Câu trả lời vì vậy không dừng ở “chịu ảnh hưởng”.',
           'Tránh kết luận một dân tộc mất bản sắc chỉ vì dùng một chữ viết hay tôn giáo từ bên ngoài.'),
-        item('Tự luyện: bốn kiểu câu vận dụng khác nhau', 'SGK Bài 1–5, tr. 6–37; ma trận tự luận',
-          'Kiểu 1 — đánh giá nguồn: nguồn nào đáng tin hơn, vì sao?<br>Kiểu 2 — tình huống di sản: giải pháp bảo tồn nào có căn cứ?<br>Kiểu 3 — so sánh: Đông–Tây theo cùng tiêu chí.<br>Kiểu 4 — đánh giá ảnh hưởng: đóng góp, hạn chế, sự tiếp biến.',
+        item('Tự luyện: bốn kiểu câu vận dụng khác nhau', 'Đề cương giữa kì I, Bài 1–4; ma trận tự luận',
+          'Kiểu 1 — đánh giá nguồn: nguồn nào đáng tin hơn, vì sao?<br>Kiểu 2 — tình huống di sản: giải pháp bảo tồn nào có căn cứ?<br>Kiểu 3 — đối chiếu: thành tựu Ai Cập, Ấn Độ, Trung Hoa theo cùng lĩnh vực.<br>Kiểu 4 — đánh giá ảnh hưởng: đóng góp, hạn chế, sự tiếp biến.',
           'Hãy tự viết 4 đoạn, mỗi đoạn 5–7 câu. Đánh dấu trong mỗi đoạn một nhận định, một chứng cứ, một câu giải thích và một giới hạn. Sau đó đối chiếu lại trang SGK tương ứng, không học thuộc một bài duy nhất cho mọi dạng.',
           'Câu hỏi luyện: “Một địa phương muốn dựng lại toàn bộ cổng thành theo tranh dân gian. Em cần kiểm tra những nguồn nào trước khi đồng ý?” Gợi ý: khảo cổ, ảnh cũ, bản vẽ, hồ sơ tu bổ.',
           'Các tình huống luyện do sổ tay biên soạn để rèn tư duy, không phải câu hỏi nguyên văn SGK.', 'Luyện tập · tự luận', 'Vận dụng')
@@ -263,9 +263,9 @@
         lesson('Văn minh, Ai Cập và Ấn Độ', 'Phân biệt văn hóa–văn minh, định vị trung tâm và hiểu thành tựu của Ai Cập, Ấn Độ.', eastern.items.slice(0, 6)),
         lesson('Trung Hoa, Nho giáo và ảnh hưởng đến Việt Nam', 'Học thành tựu Trung Hoa, ảnh hưởng Ấn Độ–Trung Hoa và đánh giá hai mặt Nho giáo.', [...eastern.items.slice(6), ...influence.items.slice(0, -1)])
       ]},
-    {title: 'Văn minh phương Tây và luyện tự luận (Bài 5)', badge: 'Hy Lạp–La Mã · so sánh Đông–Tây',
+    {title: 'Đối chiếu văn minh phương Đông và luyện tự luận (Bài 4)', badge: 'Đúng phạm vi đề cương giữa kì I',
       items: [
-        lesson('Hy Lạp–La Mã và so sánh Đông–Tây', 'So sánh theo điều kiện tự nhiên, kinh tế, thành tựu và sự lan tỏa; tránh khái quát tuyệt đối.', western.items.slice(0, 3)),
+        lesson('Bốn trung tâm và các thành tựu phương Đông', 'Đối chiếu địa lí, chữ viết, khoa học, tôn giáo và kiến trúc theo đúng nền văn minh.', western.items.slice(0, 3)),
         lesson('Cách làm trắc nghiệm, đúng/sai và tự luận', 'Đọc chứng cứ, lập luận theo tiêu chí, dùng ví dụ và tự luyện nhiều dạng vận dụng.', [...guide.items, western.items[3], influence.items[influence.items.length - 1]])
       ]}
   ];

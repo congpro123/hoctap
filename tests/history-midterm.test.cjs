@@ -66,6 +66,10 @@ assert.ok(handbookItems.every(item => item.name && item.formula && item.desc && 
 assert.equal(handbookItems.reduce((total, item) => total + item.sourceItems.length, 0), 40);
 assert.equal(new Set(handbookItems.flatMap(item => item.sourceItems)).size, 40);
 assert.ok(handbookItems.some(item => item.desc.includes('Nho giáo: giá trị tích cực')));
-assert.ok(handbookItems.some(item => item.desc.includes('Đông–Tây: điều kiện tự nhiên')));
+assert.ok(handbookItems.some(item => item.desc.includes('Văn minh nông nghiệp: bốn trung tâm ven sông')));
 assert.ok(handbookItems.some(item => item.desc.includes('Chức năng và nhiệm vụ của Sử học')));
+assert.ok(handbookItems.every(item => !item.desc.includes('SGK Bài 5')));
+assert.ok(exams.every(exam => exam.essay.every(item => !/Hy Lạp|La Mã|phương Tây/.test(item.question))));
+assert.ok(exams.every(exam => exam.questions.every(([stem, options]) => !/Hy Lạp|La Mã|phương Tây/.test([stem, ...options].join(' ')))));
+assert.ok(exams.some(exam => exam.tf.some(group => /Quan họ|Vơ-ni-dơ|Hoàng thành|Điện Biên Phủ/.test(group.stem))));
 console.log('10 đề Lịch sử, ma trận, đáp án/giải thích, thang điểm và sổ tay: OK');
