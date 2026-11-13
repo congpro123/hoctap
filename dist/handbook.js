@@ -414,7 +414,7 @@ function renderHandbook(selectedSubject, filterQuery) {
             <span class="handbook-subject-icon">${({math:'T',physics:'L',chemistry:'H',english:'EN',agriculture:'CN'})[subj.id] || subj.icon || '10'}</span>
             <div>
               <h2 style="font-size:20px;font-weight:700;margin:0;color:#1e293b">${subj.name}</h2>
-              <small style="color:#64748b;font-size:12.5px">${subj.id === 'history' ? 'Kiến thức theo SGK, ví dụ vận dụng, cách lập luận và lỗi dễ mắc' : 'Công thức, cách dùng và các điểm cần chú ý khi làm bài'}</small>
+              <small style="color:#64748b;font-size:12.5px">${subj.id === 'history' ? `${subj.sections.length} chủ đề lớn · ${subj.sections.reduce((total, section) => total + section.items.length, 0)} mục kiến thức, ví dụ và cách làm bài` : 'Công thức, cách dùng và các điểm cần chú ý khi làm bài'}</small>
               ${subj.source ? `<p class="handbook-source">${subj.source}${subj.sourceHref ? ` <a href="${subj.sourceHref}" target="_blank" rel="noopener noreferrer">${subj.sourceLabel || 'Mở tài liệu nguồn'} ↗</a>` : ''}</p>` : ''}
             </div>
           </div>

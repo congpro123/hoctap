@@ -42,9 +42,10 @@ for (const exam of exams) {
 }
 
 assert.equal(global.handbookData.history.id, 'history');
-assert.ok(global.handbookData.history.sections.length >= 7);
+assert.equal(global.handbookData.history.sections.length, 4);
+assert.deepEqual(global.handbookData.history.sections.map(section => section.items.length), [14, 6, 15, 5]);
 const handbookItems = global.handbookData.history.sections.flatMap(section => section.items);
-assert.ok(handbookItems.length >= 38, `Sổ tay chỉ có ${handbookItems.length} mục`);
+assert.equal(handbookItems.length, 40, `Sổ tay có ${handbookItems.length} mục, không phải 40`);
 assert.equal(new Set(handbookItems.map(item => item.name)).size, handbookItems.length);
 assert.ok(handbookItems.every(item => item.name && item.formula && item.desc && item.example && item.traps && item.reference));
 assert.ok(handbookItems.some(item => item.name.includes('Nho giáo')));

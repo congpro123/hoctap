@@ -230,4 +230,17 @@
       ]}
     ]
   };
+
+  // Trình bày theo bốn chủ đề lớn để mục lục gọn hơn, nhưng giữ đủ 40 mục chi tiết.
+  const [guide, foundation, learning, heritage, eastern, western, influence] = handbookData.history.sections;
+  handbookData.history.sections = [
+    {title: 'Nền tảng Sử học và cách ôn (Bài 1–2)', badge: 'Khái niệm · sử liệu · phương pháp',
+      items: [...guide.items, ...foundation.items, ...learning.items]},
+    {title: 'Di sản và du lịch (Bài 3)', badge: 'Bảo tồn · phát huy · vận dụng',
+      items: heritage.items},
+    {title: 'Văn minh phương Đông và ảnh hưởng (Bài 4)', badge: 'Ai Cập · Ấn Độ · Trung Hoa · Nho giáo',
+      items: [...eastern.items, ...influence.items.slice(0, -1)]},
+    {title: 'Văn minh phương Tây và luyện tự luận (Bài 5)', badge: 'Hy Lạp–La Mã · so sánh Đông–Tây',
+      items: [...western.items, influence.items[influence.items.length - 1]]}
+  ];
 }
