@@ -2,7 +2,12 @@ const assert = require('node:assert/strict');
 const path = require('node:path');
 global.window = global;
 global.handbookData = {};
-require(path.join(__dirname, '../dist/history-midterm-exams.js'));
+const examModule = path.join(__dirname, '../dist/history-midterm-exams.js');
+require(examModule);
+const previousExams = global.historyMidtermExams;
+require(path.join(__dirname, '../dist/history-midterm-hard-bank.js'));
+delete require.cache[require.resolve(examModule)];
+require(examModule);
 require(path.join(__dirname, '../dist/handbook-history.js'));
 
 const exams = global.historyMidtermExams;
@@ -11,6 +16,16 @@ assert.equal(new Set(exams.map(exam => exam.id)).size, 10);
 assert.equal(new Set(exams.map(exam => exam.essay[0].question)).size, 10);
 assert.equal(new Set(exams.map(exam => exam.essay[1].question)).size, 10);
 assert.equal(new Set(exams.map(exam => JSON.stringify([exam.questions, exam.tf, exam.essay]))).size, 10);
+assert.deepEqual(exams.map(exam => exam.questions.map(q => q[2])), previousExams.map(exam => exam.questions.map(q => q[2])), 'Không tự đổi vị trí đáp án của bài cũ');
+assert.deepEqual(exams.map(exam => exam.tf.map(group => group.items.map(item => item[1]))), previousExams.map(exam => exam.tf.map(group => group.items.map(item => item[1]))), 'Không tự đổi đúng/sai của bài cũ');
+assert.ok(exams.every((exam, i) => exam.questions.every((q, j) => q[0] !== previousExams[i].questions[j][0])), 'Mỗi câu trắc nghiệm phải được biên tập lại');
+assert.deepEqual(Object.fromEntries(Object.entries(global.historyMidtermHardBanks).map(([tag, bank]) => [tag, bank.length])), {b1n:8,b1h:10,b2h:8,b3n:10,b4n:10,b4h:10});
+const lengthRanks = [0, 0, 0, 0];
+for (const question of exams.flatMap(exam => exam.questions)) {
+  const lengths = question[1].map(option => option.length);
+  lengthRanks[lengths.filter(length => length > lengths[question[2]]).length]++;
+}
+assert.ok(lengthRanks.every(count => count >= 18 && count <= 45), `Độ dài đáp án tạo mẹo đoán: ${lengthRanks}`);
 
 const expectedTags = ['b1n','b1n','b1h','b2h','b2h','b3n','b3n','b3n','b4n','b4n','b4n','b4h'];
 for (const exam of exams) {

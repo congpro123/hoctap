@@ -73,53 +73,55 @@
       q('Một bảo tàng giới thiệu chữ tượng hình Ai Cập là “nguồn gốc trực tiếp của chữ Hán”. Cách đánh giá thận trọng là', ['không thể khẳng định quan hệ trực tiếp đó nếu thiếu chứng cứ; hai hệ chữ thuộc bối cảnh khác nhau.','đúng vì đều là chữ cổ.','đúng vì đều có nét vẽ.','mọi hệ chữ đều bắt nguồn trực tiếp từ Ai Cập.'],0,'Tương đồng bề ngoài không chứng minh quan hệ nguồn gốc trực tiếp.')
     ]
   };
+  // Bộ câu có phương án nhiễu cùng chủ đề; giữ vị trí đáp án để không đổi điểm bài cũ.
+  if (window.historyMidtermHardBanks) Object.assign(banks, window.historyMidtermHardBanks);
   // Các cột ma trận: Bài 1 = 2 NB + 1 TH; Bài 2 = 2 TH;
   // Bài 3 = 3 NB; Bài 4 = 3 NB + 1 TH.
   const plan = ['b1n','b1n','b1h','b2h','b2h','b3n','b3n','b3n','b4n','b4n','b4n','b4h'];
   const pick = (arr, exam, slot) => arr[(exam * 3 + slot * 2 + Math.floor(exam / 3)) % arr.length];
   // Ma trận: hai nhóm Đ/S Bài 1 và hai nhóm Đ/S Bài 3.
   const contexts = [
-    ['Một thư viện số đăng ảnh một sắc phong, chưa ghi nơi lưu giữ.', 'Ảnh tư liệu cần xác minh xuất xứ trước khi dùng làm kết luận.', true, 'Không thể khẳng định mọi lời chú thích ảnh đều đúng.', false],
-    ['Hai người kể khác nhau về ngày diễn ra một lễ hội làng.', 'Lời kể truyền miệng là tư liệu có thể khảo cứu.', true, 'Sự khác nhau trong lời kể chứng tỏ quá khứ tự thay đổi.', false],
-    ['Một đoàn khảo cổ tìm được lớp hiện vật mới dưới nền di tích.', 'Hiện vật mới có thể bổ sung nhận thức về lịch sử di tích.', true, 'Cần loại bỏ toàn bộ tư liệu cũ ngay lập tức.', false],
-    ['Bảo tàng trưng bày hai bản đồ cổ có chú thích niên đại khác nhau.', 'Đối chiếu xuất xứ, niên đại là cần thiết.', true, 'Chỉ cần chọn bản có màu sắc rõ hơn.', false],
-    ['Một bài đăng mạng dùng phim truyện làm chứng cứ duy nhất về sự kiện.', 'Phim truyện có thể gợi vấn đề tìm hiểu lịch sử.', true, 'Phim truyện luôn tương đương nguồn tư liệu gốc.', false],
-    ['Nhà nghiên cứu đọc hồi kí của người tham gia một biến cố.', 'Hồi kí có thể chứa thông tin về quá khứ.', true, 'Hồi kí không thể có góc nhìn chủ quan.', false],
-    ['Một ngôi đình được phục dựng sau khi tìm thấy bản vẽ và di vật.', 'Tư liệu giúp xác định đặc điểm lịch sử của đình.', true, 'Có tư liệu thì phục dựng sẽ chính xác tuyệt đối ở mọi chi tiết.', false],
-    ['Một tấm bia có văn tự cổ vừa được phát hiện ở di tích.', 'Tấm bia là tư liệu để nghiên cứu di tích.', true, 'Có thể đọc ngay nội dung mà không cần giải mã và đối chiếu.', false],
-    ['Một hướng dẫn viên kể hai phiên bản về nguồn gốc tên làng.', 'Các phiên bản là manh mối cần kiểm chứng.', true, 'Chỉ phiên bản kể hấp dẫn nhất mới là hiện thực lịch sử.', false],
-    ['Trường học làm chuyên đề lịch sử địa phương từ hồ sơ và phỏng vấn.', 'Có thể kết hợp tư liệu chữ viết và lời kể.', true, 'Nguồn nào nhiều người chia sẻ hơn thì tự động chính xác hơn.', false]
+    ['Một thư viện số đăng ảnh một sắc phong, chưa ghi nơi lưu giữ.', 'Ảnh là tư liệu có thể khảo cứu nhưng thông tin xuất xứ vẫn cần kiểm tra.', true, 'Vì sắc phong có chữ viết nên ngày đăng ảnh chính là niên đại văn bản.', false],
+    ['Hai người kể khác nhau về ngày diễn ra một lễ hội làng.', 'Cả hai lời kể có thể được ghi lại như nguồn truyền miệng để đối chiếu.', true, 'Nếu một người kể tham gia lễ hội thì ngày người ấy nhớ mặc nhiên chính xác hơn hồ sơ lưu trữ.', false],
+    ['Một đoàn khảo cổ tìm được lớp hiện vật mới dưới nền di tích.', 'Địa tầng và niên đại hiện vật có thể bổ sung cách hiểu về các giai đoạn di tích.', true, 'Lớp nằm sâu hơn chắc chắn cùng niên đại với mọi công trình còn thấy trên mặt đất.', false],
+    ['Bảo tàng trưng bày hai bản đồ cổ có chú thích niên đại khác nhau.', 'Cần xem ngày lập bản đồ khác ngày được vẽ lại hay in lại hay không.', true, 'Hai bản đồ cùng vẽ một địa điểm thì phải được lập trong cùng một năm.', false],
+    ['Một bài đăng mạng dùng phim truyện làm chứng cứ duy nhất về sự kiện.', 'Chi tiết trong phim có thể gợi câu hỏi để tìm nguồn độc lập kiểm chứng.', true, 'Cảnh phim ghi đúng tên nhân vật thì toàn bộ lời thoại trong cảnh là tư liệu gốc.', false],
+    ['Nhà nghiên cứu đọc hồi kí của người tham gia một biến cố.', 'Hồi kí có thể cho biết trải nghiệm của người viết và cần đối chiếu mốc thời gian.', true, 'Hồi kí là tư liệu của người trong cuộc nên mọi số liệu trong đó không cần kiểm tra lại.', false],
+    ['Một ngôi đình được phục dựng sau khi tìm thấy bản vẽ và di vật.', 'Bản vẽ và di vật có thể làm căn cứ xác định phần nào được dựng lại.', true, 'Công trình phục dựng theo bản vẽ có thể giới thiệu toàn bộ là di tích gốc.', false],
+    ['Một tấm bia có văn tự cổ vừa được phát hiện ở di tích.', 'Tấm bia có thể là sử liệu về một giai đoạn của di tích khi xác định được bối cảnh.', true, 'Ngày khắc trên bia, nếu đọc được, tự động là ngày xây toàn bộ di tích.', false],
+    ['Một hướng dẫn viên kể hai phiên bản về nguồn gốc tên làng.', 'Nên ghi rõ ai kể mỗi phiên bản và đối chiếu với nguồn khác.', true, 'Hai phiên bản khác nhau thì không thể cùng chứa chi tiết có giá trị lịch sử.', false],
+    ['Trường học làm chuyên đề lịch sử địa phương từ hồ sơ và phỏng vấn.', 'Hồ sơ và lời kể có thể bổ sung cho nhau nếu được ghi nguồn, kiểm tra.', true, 'Phỏng vấn nhiều người cùng một nhóm là đủ thay thế mọi nguồn chữ viết khác.', false]
   ];
   const heritage = [
-    ['Một di tích đón lượng khách tăng nhanh, nền gạch cổ bắt đầu mòn.', 'Giới hạn lối đi và lượng khách có thể giúp bảo vệ di tích.', true, 'Tăng doanh thu luôn quan trọng hơn bảo tồn hiện vật.', false],
-    ['Bảo tàng chuẩn bị bảng giới thiệu một trống đồng.', 'Nên ghi xuất xứ, niên đại và chú thích phần còn chưa chắc chắn.', true, 'Có thể bịa thêm câu chuyện để thu hút khách mà không cần ghi rõ.', false],
-    ['Một làng nghề muốn mở tuyến du lịch gắn với lịch sử địa phương.', 'Nghiên cứu lịch sử giúp thuyết minh có căn cứ.', true, 'Du lịch phát triển thì không cần bảo tồn nghề truyền thống.', false],
-    ['Di tích được dựng lại một phần theo bản vẽ cũ.', 'Cần phân biệt phần gốc với phần phục dựng cho người xem.', true, 'Phần phục dựng phải được giới thiệu như hiện vật gốc.', false],
-    ['Một triển lãm dùng bản sao để bảo vệ hiện vật dễ hư hại.', 'Chú thích rõ bản sao là cách phù hợp.', true, 'Dùng bản sao đồng nghĩa mọi nghiên cứu lịch sử đều vô ích.', false],
-    ['Cộng đồng ghi âm lời kể về một lễ hội lâu đời.', 'Lời kể là nguồn để nghiên cứu di sản phi vật thể.', true, 'Không cần kiểm chứng hay lưu thông tin người kể.', false],
-    ['Một phim tài liệu giới thiệu thành cổ trước khi mở tour tham quan.', 'Thông tin lịch sử cần được đối chiếu nguồn.', true, 'Phim càng hấp dẫn thì càng có thể bỏ qua chứng cứ.', false],
-    ['Một di tích bị vẽ bậy khi mùa du lịch đông khách.', 'Quản lí khách tham quan là một phần bảo tồn.', true, 'Cứ có nhiều khách là di tích chắc chắn được bảo vệ tốt.', false],
-    ['Nhóm học sinh xây bản đồ số các địa chỉ đỏ địa phương.', 'Nên kèm nguồn tư liệu cho mỗi địa điểm.', true, 'Tên gọi dân gian là đủ để xác định mọi mốc thời gian.', false],
-    ['Một nhà trưng bày nhận hiện vật được hiến tặng nhưng thiếu hồ sơ.', 'Cần tìm hiểu nguồn gốc trước khi khẳng định giá trị lịch sử.', true, 'Chỉ cần hiện vật cũ là đủ kết luận mọi điều về nó.', false]
+    ['Một di tích đón lượng khách tăng nhanh, nền gạch cổ bắt đầu mòn.', 'Giới hạn lối đi và lượng khách là biện pháp có thể giảm tác động lên nền gạch.', true, 'Thay hết nền gạch cũ bằng gạch mới giống màu vẫn giữ nguyên tính xác thực của di tích.', false],
+    ['Bảo tàng chuẩn bị bảng giới thiệu một trống đồng.', 'Nên ghi xuất xứ, niên đại và đánh dấu phần thông tin còn là giả thuyết.', true, 'Hoa văn trống giống hiện vật khác là đủ khẳng định hai hiện vật có cùng niên đại.', false],
+    ['Một làng nghề muốn mở tuyến du lịch gắn với lịch sử địa phương.', 'Lịch sử nghề và sản phẩm có thể là cơ sở cho nội dung thuyết minh.', true, 'Khi một sản phẩm được khách ưa chuộng thì có thể giới thiệu nó là sản phẩm cổ truyền mà không cần tìm nguồn.', false],
+    ['Di tích được dựng lại một phần theo bản vẽ cũ.', 'Bảng giới thiệu cần cho biết đâu là phần nguyên gốc và đâu là phần dựng lại.', true, 'Bản vẽ cũ có mặt thì phần dựng lại trở thành hiện vật gốc về mặt lịch sử.', false],
+    ['Một triển lãm dùng bản sao để bảo vệ hiện vật dễ hư hại.', 'Bản sao có ghi chú rõ vẫn có thể hỗ trợ giáo dục và bảo vệ hiện vật gốc.', true, 'Bản sao đặt cùng vị trí trưng bày với hiện vật gốc thì không cần ghi chú phân biệt.', false],
+    ['Cộng đồng ghi âm lời kể về một lễ hội lâu đời.', 'Ghi người kể, thời điểm và hoàn cảnh kể giúp khai thác lời kể về sau.', true, 'Nhiều người cùng kể một chi tiết thì chi tiết ấy tự động thành sự kiện đã được kiểm chứng.', false],
+    ['Một phim tài liệu giới thiệu thành cổ trước khi mở tour tham quan.', 'Thông tin về niên đại và các lần tu sửa cần có nguồn để đối chiếu.', true, 'Phim có phỏng vấn chuyên gia thì mọi cảnh dựng lại đều là tư liệu gốc.', false],
+    ['Một di tích bị vẽ bậy khi mùa du lịch đông khách.', 'Tổ chức lối đi và giám sát hành vi khách là một phần bảo tồn.', true, 'Chỉ cần tăng ngân sách quảng bá thì tình trạng hư hại sẽ tự giảm.', false],
+    ['Nhóm học sinh xây bản đồ số các địa chỉ đỏ địa phương.', 'Mỗi mốc địa điểm nên có nguồn cho tên gọi, thời gian và ý nghĩa.', true, 'Một địa điểm còn tên dân gian từ xưa thì mọi mốc thời gian do dân kể đều chính xác.', false],
+    ['Một nhà trưng bày nhận hiện vật được hiến tặng nhưng thiếu hồ sơ.', 'Cần xác minh xuất xứ trước khi giới thiệu niên đại như thông tin đã chắc chắn.', true, 'Chất liệu của hiện vật, nếu nhìn bằng mắt thấy cũ, là đủ xác định nơi tạo tác.', false]
   ];
   function tfHistory(exam, variant) {
     const [stem, a, aKey, b, bKey] = pick(contexts, exam, variant);
     const flip = (exam + variant) % 2 === 1;
     return {stem, items:[
-      flip ? ['Chỉ cần tư liệu xuất hiện trên mạng là đã xác minh được nguồn gốc của nó.',false,'Cần kiểm tra xuất xứ, niên đại và bối cảnh.'] : [a,aKey,'Nguồn tư liệu cần được thẩm định trong bối cảnh.'],
+      flip ? ['Tư liệu do một cơ quan lưu trữ đăng lên mạng thì mọi chú thích kèm theo đều có thể dùng làm kết luận cuối cùng.',false,'Nguồn lưu trữ đáng tham khảo, nhưng từng chú thích vẫn cần xét căn cứ và bối cảnh.'] : [a,aKey,'Nguồn tư liệu cần được thẩm định trong bối cảnh.'],
       flip ? ['Nhận thức lịch sử có thể khác nhau do nguồn tư liệu và cách tiếp cận khác nhau.',true,'Cùng một hiện thực có thể được nhận thức khác nhau.'] : [b,bKey,'Không thể đồng nhất nhận thức hoặc lời kể với toàn bộ hiện thực lịch sử.'],
-      exam % 3 === 0 ? ['Phát hiện nguồn mới làm cho chính sự kiện đã qua xảy ra theo một cách khác.',false,'Tư liệu mới thay đổi nhận thức, không thay đổi sự kiện.'] : ['Nếu có tư liệu mới đáng tin cậy, cách lí giải về sự kiện có thể được điều chỉnh.',true,'Tư liệu mới bổ sung nhận thức, không thay đổi quá khứ.'],
-      flip ? ['Đối chiếu nguồn độc lập giúp phát hiện điểm mâu thuẫn và giới hạn của tư liệu.',true,'Kiểm chứng chéo giúp nâng độ tin cậy.'] : ['Chỉ một nguồn đơn lẻ là đủ để kết luận chắc chắn về toàn bộ sự kiện.',false,'Cần kiểm chứng chéo và xét giới hạn của nguồn.']
+      exam % 3 === 0 ? ['Khi tìm được một nguồn mới khác nguồn cũ, sự kiện quá khứ phải được xem là đã diễn ra theo hai cách.',false,'Hai nguồn có thể chứa cách ghi hoặc góc nhìn khác nhau; sự kiện đã xảy ra không vì vậy tách thành hai.'] : ['Nếu có tư liệu mới đáng tin cậy, cách lí giải về sự kiện có thể được điều chỉnh.',true,'Tư liệu mới bổ sung nhận thức, không thay đổi quá khứ.'],
+      flip ? ['Đối chiếu nguồn độc lập giúp phát hiện điểm mâu thuẫn và giới hạn của tư liệu.',true,'Kiểm chứng chéo giúp nâng độ tin cậy.'] : ['Một nguồn đương thời ghi rất chi tiết thì không cần xét ai tạo nguồn và nhằm mục đích gì.',false,'Ngay cả nguồn đương thời có thể mang góc nhìn và mục đích riêng.']
     ]};
   }
   function tfHeritage(exam, variant) {
     const [stem, a, aKey, b, bKey] = pick(heritage, exam, variant);
     const flip = (exam + variant) % 2 === 1;
     return {stem, items:[
-      flip ? ['Sử học không có vai trò trong việc xác định nguồn gốc hay giá trị của di sản.',false,'Nghiên cứu lịch sử là cơ sở nhận diện di sản.'] : [a,aKey,'Bảo tồn và giới thiệu phải dựa trên tư liệu và quản lí tác động.'],
+      flip ? ['Khi di sản đã có hồ sơ xếp hạng thì việc nghiên cứu các lớp tu sửa sau đó không còn cần thiết.',false,'Hồ sơ xếp hạng không thay thế việc tìm hiểu lịch sử biến đổi và hiện trạng di sản.'] : [a,aKey,'Bảo tồn và giới thiệu phải dựa trên tư liệu và quản lí tác động.'],
       flip ? ['Bảo tồn cần dựa trên chứng cứ về phần gốc và phần phục dựng.',true,'Cần giữ và giới thiệu tính xác thực.'] : [b,bKey,'Không được hy sinh tính xác thực của di sản.'],
-      exam % 3 === 1 ? ['Khi khai thác du lịch, có thể bỏ qua tác động lên hiện vật miễn là doanh thu tăng.',false,'Khai thác phải gắn với bảo tồn lâu dài.'] : ['Tìm hiểu lịch sử giúp thiết kế cách phát huy giá trị di sản phù hợp với bối cảnh.',true,'Nghiên cứu lịch sử là cơ sở của bảo tồn và khai thác.'],
-      flip ? ['Để thu hút khách, có thể khẳng định suy đoán chưa kiểm chứng là sự thật lịch sử.',false,'Cần nêu rõ mức độ chắc chắn của thông tin.'] : ['Khi có mâu thuẫn giữa truyền thuyết và hồ sơ, cần ghi rõ mức độ xác thực thay vì khẳng định tùy tiện.',true,'Phân biệt truyền thuyết, giả thuyết và kết luận đã kiểm chứng.']
+      exam % 3 === 1 ? ['Nếu doanh thu du lịch đủ trả chi phí tu bổ thì không cần theo dõi mức độ hư hại của hiện vật.',false,'Nguồn thu không thay thế việc theo dõi tác động và ngăn hư hại.'] : ['Tìm hiểu lịch sử giúp thiết kế cách phát huy giá trị di sản phù hợp với bối cảnh.',true,'Nghiên cứu lịch sử là cơ sở của bảo tồn và khai thác.'],
+      flip ? ['Một cách giải thích hấp dẫn, dù mới là giả thuyết, có thể ghi như sự kiện đã chắc chắn trên bảng thuyết minh.',false,'Cần công khai mức độ chắc chắn của thông tin, phân biệt giả thuyết với sự kiện.'] : ['Khi có mâu thuẫn giữa truyền thuyết và hồ sơ, cần ghi rõ mức độ xác thực thay vì khẳng định tùy tiện.',true,'Phân biệt truyền thuyết, giả thuyết và kết luận đã kiểm chứng.']
     ]};
   }
   const understanding = [

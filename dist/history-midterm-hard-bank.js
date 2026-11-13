@@ -1,0 +1,165 @@
+// Phương án nhiễu cùng miền kiến thức, đối chiếu SGK Lịch sử 10 Bài 1–5.
+// Giữ vị trí đáp án của ngân hàng v1 để các bài làm cũ không đổi điểm.
+(() => {
+  const q = (stem, options, key, why) => [stem, options, key, why];
+  window.historyMidtermHardBanks = {
+    b1n: [
+      q('Định nghĩa nào bao quát đầy đủ hiện thực lịch sử?', ['Những sự việc đã diễn ra trong quá khứ, không phụ thuộc cách người sau nhận thức.','Những sự việc đã diễn ra và được người đời sau ghi chép đầy đủ.','Những sự việc được đa số nhà sử học giải thích giống nhau.','Những sự việc trong quá khứ đã được tái hiện bằng tư liệu.'],0,'Hiện thực lịch sử bao gồm cái đã xảy ra khách quan, kể cả những phần chưa được ghi chép hoặc tái hiện.'),
+      q('Nếu nghiên cứu quá trình hình thành một làng nghề qua nhiều thế kỉ, đối tượng của Sử học là', ['chỉ những sản phẩm còn được trưng bày của làng nghề.','hoạt động của con người và sự biến đổi của làng nghề trong quá khứ.','chỉ bản chép tay cổ nhất nhắc đến làng nghề.','chỉ tiểu sử những người khai lập làng nghề.'],1,'Sử học tìm hiểu quá trình và đời sống con người trong quá khứ; sản phẩm, văn bản, nhân vật là nguồn hoặc một phần đối tượng chứ không thay toàn bộ quá trình.'),
+      q('Một văn bản mới được phát hiện khiến cách hiểu về một sự kiện thay đổi. Điều nào sau đây vẫn giữ nguyên?', ['Nội dung mà các sách đã xuất bản viết về sự kiện.','Những nhận định của người nghiên cứu về sự kiện.','Bản thân sự kiện đã xảy ra trong quá khứ.','Mức độ đầy đủ của hồ sơ tư liệu hiện có.'],2,'Nguồn mới có thể đổi nhận định và hồ sơ, không làm sự kiện trong quá khứ xảy ra khác đi.'),
+      q('Câu nào nói về lịch sử được con người nhận thức, không phải hiện thực lịch sử?', ['Một bia đá được dựng tại di tích trong thế kỉ XVII.','Nhà nghiên cứu từ bia đá và địa tầng xác định niên đại di tích.','Người thợ xưa khắc chữ lên bia đá.','Một trận lũ xưa làm đổi dòng sông cạnh di tích.'],1,'Việc xác định niên đại từ tư liệu là hoạt động nhận thức, giải thích quá khứ; ba lựa chọn còn lại là những sự việc đã diễn ra.'),
+      q('Khi muốn phục dựng quá khứ của một di tích, nhà sử học cần ưu tiên việc nào?', ['Chọn lời kể có chi tiết đầy đủ nhất rồi xem như sự thật.','Chỉ dùng hiện vật vì văn bản có thể mang góc nhìn chủ quan.','Thu thập, thẩm định và đối chiếu các nguồn tư liệu liên quan.','Chỉ dùng văn bản đương thời vì hiện vật không có lời chú giải.'],2,'Mỗi loại nguồn có giá trị và giới hạn riêng; phục dựng phải dựa trên thẩm định và đối chiếu.'),
+      q('Hoạt động nào thể hiện chức năng xã hội của Sử học rõ nhất?', ['Dùng kết quả nghiên cứu có căn cứ để giáo dục và rút kinh nghiệm cho hiện tại.','Xác định niên đại một hiện vật bằng phân tích chất liệu.','Lập mục lục, phân loại các bản chép tay của một thư viện.','So sánh các bản dịch để xác định nguyên văn một bia ký.'],0,'Xác định, phân loại, đối chiếu là công việc nghiên cứu; giáo dục và vận dụng tri thức là biểu hiện trực tiếp của chức năng xã hội.'),
+      q('Nhận định nào đúng về giá trị của lời kể truyền miệng trong nghiên cứu lịch sử?', ['Có thể dùng để xác định mọi niên đại mà không cần nguồn khác.','Có thể là nguồn sử liệu nhưng phải xét người kể, bối cảnh và đối chiếu.','Chỉ có giá trị khi người kể trực tiếp tạo ra hiện vật liên quan.','Không có giá trị vì khác tư liệu chữ viết.'],1,'Lời kể là một loại sử liệu, song kí ức và mục đích kể có thể ảnh hưởng nội dung.'),
+      q('Giả thuyết về chức năng của một công trình cổ được chỉnh sửa khi xuất hiện tư liệu mới. Nguyên nhân trực tiếp là', ['công trình đã đổi chức năng trong chính thời kì quá khứ ấy.','căn cứ và cách lí giải của người nghiên cứu được bổ sung.','mọi chứng cứ từng thu thập đều tự động mất giá trị.','các sự kiện xảy ra xung quanh công trình được thay thế.'],1,'Tư liệu mới làm thay đổi cơ sở nhận thức, không làm đổi hiện thực đã xảy ra hay xóa toàn bộ nguồn cũ.')
+    ],
+    b1h: [
+      q('Hai công trình đưa ra niên đại khác nhau cho cùng di tích. Cách xử lí phù hợp nhất là', ['xem hai niên đại như hai lần di tích được xây.','chọn công trình ra đời sau vì luôn có nhiều tư liệu hơn.','kiểm tra cách định niên đại, nguồn được dùng và phần di tích được khảo sát.','lấy trung bình cộng hai niên đại để tránh thiên lệch.'],2,'Một di tích có thể có nhiều lớp xây dựng; phải đối chiếu nguồn và phương pháp trước khi kết luận.'),
+      q('Ảnh chụp một đình cổ không có chú thích thời gian. Muốn dùng ảnh chứng minh đình đã tồn tại vào năm 1900, cần làm gì?', ['Dựa vào việc ảnh có màu đen trắng để khẳng định chụp trước 1900.','Xác minh xuất xứ, niên đại ảnh và đối chiếu đặc điểm đình với nguồn khác.','Dựa vào tên tệp ảnh được đăng trên mạng làm niên đại.','Dựa vào tuổi của đình hiện tại để suy ra năm chụp.'],1,'Hình thức ảnh, tên tệp hoặc tuổi công trình không đủ chứng minh năm chụp; cần xuất xứ và kiểm chứng chéo.'),
+      q('Một bản đồ khảo cổ mới dẫn tới chỉnh sửa giả thuyết về vị trí một thành cổ. Nhận xét nào đúng?', ['Thành cổ đã chuyển vị trí khi bản đồ được công bố.','Mọi tài liệu cũ đều phải hủy bỏ.','Chứng cứ mới làm thay đổi nhận thức, còn vị trí thành cổ trong quá khứ không đổi.','Bản đồ mới là hiện thực lịch sử còn các bản đồ cũ là sử liệu.'],2,'Bản đồ cũ và mới đều là tư liệu; thay đổi nằm ở nhận thức về thành cổ.'),
+      q('Hồi kí và sổ đăng kí cùng ghi về một cuộc di cư nhưng số người khác nhau. Bước đầu hợp lí nhất là', ['tin hồi kí vì người viết từng tham gia.','tin sổ đăng kí vì có biểu mẫu hành chính.','xem phạm vi thống kê, thời điểm ghi và mục đích tạo mỗi nguồn.','cộng hai con số để ước tính tổng người di cư.'],2,'Hai nguồn có thể đếm những nhóm và thời điểm khác nhau; phải xác định cách hình thành số liệu trước khi so sánh.'),
+      q('Tìm thấy mảnh gốm tại một di tích được cho là có từ thế kỉ XI. Kết luận nào có cơ sở nhất khi chưa xác định niên đại mảnh gốm?', ['Mảnh gốm chứng minh di tích được lập đúng thế kỉ XI.','Cần xét lớp địa tầng và niên đại mảnh gốm trước khi liên hệ với thời điểm hình thành di tích.','Mảnh gốm chắc chắn thuộc đợt tu sửa gần nhất.','Không thể dùng mảnh gốm vì nó không có chữ viết.'],1,'Một địa điểm có thể chứa nhiều lớp hiện vật; niên đại và vị trí phát hiện quyết định giá trị chứng cứ.'),
+      q('Hai bài viết gán cùng một ảnh cho hai sự kiện cách nhau nhiều năm. Cách kiểm tra có giá trị nhất là', ['so sánh số lượt xem của hai bài.','chọn bài có lời chú thích dài hơn.','tìm bản ảnh gốc, hồ sơ lưu trữ và thời điểm tạo ảnh.','xem sự kiện nào được kể hấp dẫn hơn.'],2,'Chỉ dấu bên ngoài của bài đăng không xác nhận được lai lịch ảnh.'),
+      q('Sách mới điều chỉnh niên đại một công trình sau phát hiện khảo cổ. Điều nào không phụ thuộc việc xuất bản sách?', ['Cách giải thích về quá trình xây dựng.','Thông tin giảng dạy trong trường.','Thời điểm công trình thực sự được xây trong quá khứ.','Mức độ tin cậy của giả thuyết cũ.'],2,'Việc công bố nghiên cứu có thể đổi hiểu biết, không đổi thời điểm sự việc đã xảy ra.'),
+      q('Nhân chứng nhớ ngày diễn ra một sự kiện khác với nhật kí đương thời. Cách đánh giá đúng là', ['coi nhật kí đúng tuyệt đối vì ghi gần thời điểm sự kiện.','giữ lời kể như một nguồn, kiểm tra nhật kí và đối chiếu nguồn độc lập.','loại hẳn lời kể vì kí ức có thể sai.','coi hai ngày là chứng cứ sự kiện diễn ra hai lần.'],1,'Cả hồi ức lẫn nhật kí đều có giới hạn; cần xét tác giả, thời điểm và chứng cứ khác.'),
+      q('Bia ký ghi tên một người lập làng, truyền thuyết địa phương ghi tên khác. Bảng thuyết minh nên', ['nêu rõ nguồn của từng thông tin và phần chưa đủ căn cứ để kết luận.','chỉ chép bia ký vì chữ viết luôn chính xác.','chỉ chép truyền thuyết vì gần gũi cộng đồng.','ghép hai tên thành một người mà không cần chứng cứ.'],0,'Không thể loại một nguồn chỉ vì loại hình của nó; cần phân biệt nội dung và mức độ xác thực.'),
+      q('Một bài viết trích một câu trong sắc phong để chứng minh cả làng đã đổi tên, nhưng bỏ phần ghi đối tượng được phong. Cần', ['đọc toàn văn sắc phong và đối chiếu tài liệu hành chính liên quan.','dùng riêng câu trích vì đã xuất hiện trong văn bản cổ.','dựa vào nhan đề bài viết vì tác giả đã chọn tư liệu.','đổi cách đọc sắc phong theo tên làng hiện nay.'],0,'Một câu trích mất bối cảnh có thể bị hiểu sai; xác định đối tượng, thời điểm và văn bản liên quan.')
+    ],
+    b2h: [
+      q('Lí do quan trọng để tiếp tục học lịch sử sau khi rời trường phổ thông là', ['nhận thức lịch sử còn được bổ sung và mỗi bối cảnh hiện tại đặt ra câu hỏi mới.','kiến thức đã học ở trường luôn sai khi xuất hiện tài liệu mới.','chỉ tư liệu được công bố sau này mới có giá trị nghiên cứu.','mọi bài học quá khứ đều có thể áp dụng nguyên xi cho hiện tại.'],0,'Nguồn và phương pháp mới có thể bổ sung hiểu biết; các kiến thức cũ không vì thế tự động sai.'),
+      q('Một nhóm muốn viết lịch sử trường học từ hồ sơ, kỉ yếu và phỏng vấn cựu học sinh. Cách làm đáng tin cậy nhất là', ['lấy kỉ yếu làm chuẩn và bỏ thông tin khác biệt.','ghi xuất xứ từng nguồn, xác định mốc thời gian và đối chiếu các điểm khác nhau.','chỉ dùng phỏng vấn vì người tham gia nhớ rõ nhất.','gộp mọi lời kể thành một câu chuyện thống nhất mà không chú nguồn.'],1,'Mỗi nguồn phản ánh một phần quá khứ; phải ghi lai lịch và kiểm chứng những chỗ không khớp.'),
+      q('Một cộng đồng muốn mở lại lễ hội sau nhiều năm gián đoạn. Tri thức lịch sử hữu ích nhất khi', ['phục dựng mọi nghi thức theo trí nhớ một người cao tuổi.','xác định nguồn gốc, các lần biến đổi và giá trị để chọn cách tổ chức phù hợp hiện nay.','giữ mọi tập quán cũ bất kể điều kiện và quy định mới.','chỉ giới thiệu phần được du khách yêu thích nhất.'],1,'Hiểu lịch sử giúp phân biệt yếu tố gốc và biến đổi, rồi cân nhắc bối cảnh hiện tại.'),
+      q('Hai bài đăng đưa ra hai năm lập làng khác nhau. Bước nào giúp đánh giá trực tiếp sự khác biệt?', ['chọn bài có nhiều hình minh họa hơn.','xem hai tác giả dựa vào nguồn nào và họ có đang nói cùng một sự kiện lập làng không.','chọn bài đăng gần đây hơn vì thông tin luôn mới hơn.','dùng tên làng hiện nay để suy ra năm thành lập.'],1,'Có thể một mốc là khai khẩn, mốc kia là lập đơn vị hành chính; cần làm rõ đối tượng và chứng cứ.'),
+      q('Hoạt động nào vận dụng tri thức lịch sử vào đời sống nhưng vẫn tôn trọng chứng cứ?', ['Dựng lại toàn bộ đình theo hình dung của nhóm thiết kế.','Làm tuyến tham quan nêu rõ phần di tích gốc, phần phục dựng và căn cứ thuyết minh.','Lấy phim truyện làm nguồn duy nhất cho bảng giới thiệu.','Chỉ nêu truyền thuyết mà không phân biệt với hồ sơ di tích.'],1,'Ứng dụng phải dựa vào nguồn và nêu giới hạn của phần phục dựng, không đánh đồng các loại thông tin.'),
+      q('Muốn kiểm tra một ảnh cũ có liên quan tới đề tài “chợ tỉnh trước năm 1945”, thông tin cần xác định trước là', ['nơi lưu ảnh, người chụp (nếu biết), thời điểm và địa điểm chụp.','số lượt ảnh được tải lại trên mạng xã hội.','màu sắc ảnh có giống màu ảnh thời ấy không.','mức độ đẹp của khung cảnh trong ảnh.'],0,'Xuất xứ, niên đại, địa điểm giúp xác định ảnh có phù hợp đề tài; hình thức và mức độ lan truyền không đủ.'),
+      q('Khi hai nguồn độc lập thống nhất về địa điểm một trận đánh nhưng khác về quy mô, kết luận hợp lí là', ['chỉ giữ nguồn ghi quy mô lớn hơn.','địa điểm có thêm cơ sở xác nhận, còn quy mô cần kiểm chứng tiếp.','mọi thông tin trong cả hai nguồn đều đúng.','cả hai nguồn đều vô giá trị vì có chi tiết mâu thuẫn.'],1,'Đối chiếu cho phép đánh giá riêng từng thông tin, không chấp nhận hoặc bác bỏ toàn bộ nguồn.'),
+      q('Một lớp muốn dùng kinh nghiệm chống lũ của địa phương xưa cho kế hoạch hiện nay. Cách làm nào cần tránh?', ['Đối chiếu địa hình và dân cư giữa hai thời kì.','Kết hợp kinh nghiệm cũ với số liệu thủy văn hiện nay.','Sao chép nguyên thiết kế công trình cũ vì đã từng hiệu quả.','Kiểm tra nguồn ghi chép kinh nghiệm chống lũ.'],2,'Thiết kế cũ có thể không phù hợp điều kiện hiện nay; ba cách còn lại đều là bước kiểm chứng và vận dụng có điều kiện.')
+    ],
+    b3n: [
+      q('Trước khi quyết định tu bổ một cổng thành, đóng góp đặc thù của Sử học là', ['xác định các giai đoạn xây dựng, phần gốc và giá trị lịch sử từ tư liệu.','chọn vật liệu xây mới có tuổi thọ cao nhất.','tính sức chịu tải hiện tại của nền móng.','thiết kế hệ thống bán vé và đón khách.'],0,'Lịch sử cung cấp căn cứ về nguồn gốc và các lớp biến đổi; kĩ thuật tu bổ, kết cấu và vận hành là các công việc liên ngành khác.'),
+      q('Nhận định nào diễn đạt đúng mối quan hệ giữa Sử học và du lịch di sản?', ['Du lịch tạo ra toàn bộ giá trị lịch sử của di tích.','Nghiên cứu lịch sử giúp thuyết minh có căn cứ; du lịch được quản lí tốt có thể hỗ trợ bảo tồn.','Sử học chỉ cần thiết trước khi một di tích bắt đầu đón khách.','Có khách tham quan thì mọi cách phục dựng đều được chấp nhận.'],1,'Quan hệ hai chiều có điều kiện: tri thức lịch sử làm rõ giá trị, còn nguồn lực du lịch chỉ hỗ trợ nếu bảo tồn đúng.'),
+      q('Xác định niên đại một hiện vật trước khi ghi nhãn trưng bày chủ yếu để', ['khẳng định người hiến tặng cũng là người chế tác.','đặt hiện vật vào bối cảnh lịch sử và tránh gán sai thời kì.','suy ra chính xác địa điểm chế tác dù chưa rõ xuất xứ.','xác nhận tất cả hiện vật cùng kiểu dáng có chung niên đại.'],1,'Niên đại giúp đặt hiện vật đúng giai đoạn nhưng riêng nó không cho biết chắc tác giả, nơi chế tác hay tuổi của mọi hiện vật tương tự.'),
+      q('Phương án nào thể hiện phát huy giá trị di sản mà không làm mờ tính xác thực?', ['Giới thiệu di tích theo hồ sơ nghiên cứu, phân biệt phần gốc và phần phục dựng.','Phục dựng phần đã mất theo truyền thuyết và ghi là cấu trúc gốc.','Giấu các lần tu sửa để khách tin công trình còn nguyên vẹn.','Chỉ nêu niên đại sớm nhất dù công trình đã qua nhiều giai đoạn.'],0,'Người xem cần biết những phần nào là chứng tích gốc và những phần nào được dựng lại.'),
+      q('Một phim lịch sử lấy bối cảnh ở di tích địa phương. Vai trò phù hợp của Sử học là', ['cung cấp tư liệu về bối cảnh và nêu rõ chi tiết nào còn là giả thuyết.','khôi phục nguyên văn mọi cuộc đối thoại từng diễn ra ở di tích.','xác nhận cảnh hư cấu của phim là nguồn chứng cứ đương thời.','dùng thành công của phim để xác định niên đại của di tích.'],0,'Nghiên cứu có thể hỗ trợ tái hiện bối cảnh trong phạm vi chứng cứ; không thể biết nguyên văn mọi lời thoại hay dùng phim làm sử liệu gốc.'),
+      q('Bảo tồn một bản chép tay cổ có ý nghĩa lâu dài nhất ở điểm nào?', ['Tăng số vé tham quan ngay trong năm đầu.','Giữ nguồn chứng cứ và tri thức để các thế hệ tiếp tục nghiên cứu, học tập.','Đảm bảo mọi cách giải thích văn bản đều giống nhau.','Khiến bản chép tay không bao giờ hư hại nữa.'],1,'Giá trị cốt lõi là bảo vệ nguồn sử liệu, không bảo đảm doanh thu hoặc một cách hiểu duy nhất.'),
+      q('Một di tích còn nền gạch cổ dễ bị mòn. Khi mở tuyến tham quan, ưu tiên phù hợp là', ['cho đi trực tiếp lên nền gạch nhưng giảm thời gian đứng lại.','thiết kế lối đi phù hợp và giới hạn tác động lên phần gốc.','thay toàn bộ nền gạch bằng gạch mới giống màu mà không chú thích.','đóng cửa vĩnh viễn, không nghiên cứu hay giới thiệu nữa.'],1,'Phát huy và bảo tồn cần phối hợp; kiểm soát lối đi giữ phần gốc đồng thời cho phép tìm hiểu.'),
+      q('Khi thuyết minh về một trống đồng chưa rõ nơi phát hiện, cách trình bày phù hợp là', ['nêu niên đại, đặc điểm có căn cứ và ghi rõ phần xuất xứ còn chưa xác định.','suy nơi phát hiện từ địa chỉ bảo tàng đang lưu giữ trống.','chọn xuất xứ của chiếc trống có hoa văn gần giống nhất.','bỏ qua mọi thông tin đã nghiên cứu vì thiếu nơi phát hiện.'],0,'Thiếu xuất xứ không khiến toàn bộ nghiên cứu mất giá trị, nhưng không được suy xuất xứ từ nơi lưu giữ hay chỉ từ hình dáng giống nhau.'),
+      q('Hồ sơ một ngôi đình gồm bia ký, ảnh tu sửa năm 1930 và lời kể của dân làng. Cách dùng nguồn phù hợp là', ['thẩm định từng loại nguồn và đối chiếu thông tin về từng giai đoạn đình.','chỉ dùng bia ký vì có chữ khắc trên đá.','chỉ dùng ảnh vì máy ảnh ghi chép khách quan hoàn toàn.','chỉ dùng lời kể vì gắn với cộng đồng địa phương.'],0,'Tư liệu vật chất, hình ảnh, truyền miệng đều có giá trị và giới hạn; không loại nguồn theo hình thức.'),
+      q('Một di tích đón khách ngày càng đông. Biện pháp nào đáp ứng yêu cầu du lịch bền vững?', ['phân luồng khách, theo dõi tác động và dùng nguồn thu cho bảo tồn minh bạch.','tăng khách bằng cách mở cả khu vực đang xuống cấp.','chỉ đầu tư khu bán hàng vì công trình đã có biển báo.','chỉ đổi lời thuyết minh mà không kiểm tra hiện trạng di tích.'],0,'Phân luồng, theo dõi hiện trạng và tái đầu tư bảo tồn giúp cân bằng tham quan với giữ gìn di tích.')
+    ],
+    b4n: [
+      q('Theo cách phân biệt trong SGK, nhận định nào nêu đúng mối quan hệ giữa văn hóa và văn minh?', ['Văn minh thể hiện trình độ phát triển cao của văn hóa trong một giai đoạn xã hội.','Văn hóa chỉ gồm giá trị tinh thần, còn văn minh chỉ gồm giá trị vật chất.','Văn minh xuất hiện cùng lúc với mọi biểu hiện văn hóa đầu tiên.','Văn hóa chỉ có ở cộng đồng đã hình thành nhà nước và đô thị.'],0,'Văn hóa bao quát giá trị con người tạo ra; văn minh chỉ giai đoạn phát triển cao, không tách cứng vật chất và tinh thần.'),
+      q('Tổ hợp dấu hiệu nào thường gắn với sự hình thành một nền văn minh cổ đại?', ['Nhà nước, đô thị và chữ viết.','Công cụ lao động, đời sống săn bắt và lời kể truyền miệng.','Nghề thủ công, tập quán và một nhóm cư trú nhỏ.','Kĩ thuật trồng trọt, tín ngưỡng và quan hệ họ hàng.'],0,'Các phương án khác đều có thể là biểu hiện văn hóa/xã hội nhưng chưa phải tổ hợp dấu hiệu đặc trưng để nhận diện trình độ văn minh.'),
+      q('Dãy nào gồm bốn trung tâm văn minh phương Đông cổ đại thường được học trong chương trình?', ['Ai Cập, Lưỡng Hà, Ấn Độ, Trung Hoa.','Ai Cập, Lưỡng Hà, Hy Lạp, Trung Hoa.','Ai Cập, Ấn Độ, Hy Lạp, Trung Hoa.','Lưỡng Hà, Ấn Độ, La Mã, Trung Hoa.'],0,'Hy Lạp và La Mã thuộc văn minh Địa Trung Hải phương Tây; phương án đúng gồm bốn trung tâm phương Đông.'),
+      q('Thành tựu nào gắn với toán học Ấn Độ cổ–trung đại, cần phân biệt với cách ghi số của La Mã?', ['Hệ mười chữ số, trong đó có chữ số 0.','Cách ghi số bằng các chữ I, V, X, L.','Lịch mặt trời tính năm gần 365 ngày của Ai Cập.','Hệ chữ viết chữ hình nêm dùng ở Lưỡng Hà.'],0,'Ấn Độ đóng góp hệ chữ số thập phân; các lựa chọn khác thuộc hệ La Mã, lịch Ai Cập hoặc chữ viết Lưỡng Hà.'),
+      q('Dãy nào gồm đúng bốn phát minh kĩ thuật lớn của Trung Hoa cổ–trung đại?', ['Giấy, kĩ thuật in, la bàn, thuốc súng.','Giấy, kĩ thuật in, la bàn, guồng nước.','Giấy, kĩ thuật in, gốm sứ, thuốc súng.','La bàn, thuốc súng, tơ lụa, kĩ thuật in.'],0,'Guồng nước, gốm sứ, tơ lụa đều là thành tựu kĩ thuật/vật chất nhưng không nằm trong nhóm “bốn phát minh lớn”.'),
+      q('Cặp tôn giáo nào đều khởi nguồn tại Ấn Độ cổ đại?', ['Ấn Độ giáo và Phật giáo.','Phật giáo và Nho giáo.','Ấn Độ giáo và Đạo giáo.','Phật giáo và Đạo giáo.'],0,'Ấn Độ giáo, Phật giáo gắn với Ấn Độ; Nho giáo và Đạo giáo hình thành ở Trung Hoa.'),
+      q('Khi xếp các hệ chữ viết theo nền văn minh, cặp ghép nào đúng?', ['Trung Hoa — chữ Hán.','Trung Hoa — chữ Phạn.','Trung Hoa — chữ hình nêm.','Trung Hoa — chữ tượng hình Ai Cập.'],0,'Chữ Hán phát triển ở Trung Hoa; chữ Phạn gắn với Ấn Độ, chữ hình nêm với Lưỡng Hà, chữ tượng hình kia với Ai Cập.'),
+      q('Trong bảng ghép công trình với nền văn minh, dòng nào đúng?', ['Kim tự tháp Ghi-da — Ai Cập.','Kim tự tháp Ghi-da — Lưỡng Hà.','Đền Pác-tê-nông — Ai Cập.','Chùa hang A-gian-ta — Ai Cập.'],0,'Ghi-da thuộc Ai Cập; Pác-tê-nông thuộc Hy Lạp; A-gian-ta thuộc Ấn Độ.'),
+      q('Công trình nào thể hiện rõ ảnh hưởng tôn giáo trong nghệ thuật Ấn Độ cổ–trung đại?', ['Chùa hang A-gian-ta.','Kim tự tháp Ghi-da.','Đền Pác-tê-nông.','Vạn Lý Trường Thành.'],0,'A-gian-ta gắn với Phật giáo tại Ấn Độ; ba công trình kia thuộc các nền văn minh khác.'),
+      q('Tác phẩm/loại hình nào là thành tựu văn học Trung Hoa thời cổ–trung đại?', ['Đường thi.','Sử thi Ra-ma-ya-na.','Sử thi I-li-át.','Sử thi Ô-đi-xê.'],0,'Đường thi thuộc Trung Hoa; Ra-ma-ya-na của Ấn Độ, hai sử thi còn lại thuộc truyền thống Hy Lạp.')
+    ],
+    b4h: [
+      q('Một di tích Đông Nam Á có tượng Phật nhưng hoa văn trang trí bản địa. Kết luận nào không vượt quá chứng cứ?', ['Có dấu ấn giao lưu từ Ấn Độ và sự tiếp biến tại địa phương; cần thêm tư liệu để xác định quá trình hình thành.','Chỉ riêng tượng Phật chứng minh toàn bộ công trình do người Ấn Độ xây.','Hoa văn bản địa chứng minh công trình không chịu ảnh hưởng bên ngoài.','Tượng Phật chứng minh mọi hạng mục được xây cùng thời điểm.'],0,'Dấu ấn tôn giáo và trang trí cho phép nói về khả năng giao lưu, không đủ xác định tác giả và niên đại mọi phần.'),
+      q('Khi so sánh văn hóa với văn minh, nhận định nào chính xác nhất?', ['Văn hóa có mặt từ khi con người tạo ra giá trị; văn minh gắn với trình độ phát triển cao.','Văn hóa chỉ xuất hiện sau khi có chữ viết; văn minh xuất hiện trước.','Văn minh chỉ là tiến bộ vật chất, còn văn hóa chỉ là đời sống tinh thần.','Mọi dấu tích văn hóa thời tiền sử đều được xem là một nền văn minh.'],0,'Phạm vi văn hóa rộng hơn; văn minh gắn với một trình độ xã hội nhất định.'),
+      q('Văn bản ở Việt Nam thời trung đại viết bằng chữ Hán. Từ riêng dữ kiện này, kết luận nào hợp lí?', ['Người Việt sử dụng một hệ chữ có nguồn gốc Trung Hoa nhưng nội dung văn bản phải xét theo tác giả và bối cảnh Việt Nam.','Văn bản chắc chắn do một tác giả Trung Hoa sáng tác.','Nội dung văn bản không thể phản ánh đời sống Việt Nam.','Chữ Hán ở Việt Nam không có bất cứ sự tiếp nhận hay biến đổi nào.'],0,'Chữ viết được tiếp nhận không tự quyết định chủ thể sáng tạo và nội dung của văn bản.'),
+      q('Một nhãn trưng bày ghi “người La Mã tạo ra hệ chữ số 0–9”. Cách sửa phù hợp nhất là', ['ghi nhận đóng góp của toán học Ấn Độ đối với hệ mười chữ số và phân biệt với chữ số La Mã.','ghi người La Mã sáng tạo chữ số 0, còn Ấn Độ sáng tạo I, V, X.','ghi hệ 0–9 vốn là hệ chữ tượng hình Ai Cập.','giữ nhãn cũ vì chữ số La Mã và hệ thập phân là một.'],0,'SGK gắn hệ mười chữ số với Ấn Độ; hệ chữ số La Mã dùng kí hiệu khác.'),
+      q('Một bản thuyết minh xếp giấy, in, la bàn vào thành tựu Ấn Độ. Cách chỉnh chính xác nhất là', ['xếp chúng vào nhóm phát minh Trung Hoa, đồng thời không nhầm với hệ chữ số Ấn Độ.','chỉ chuyển giấy và in sang Trung Hoa, giữ la bàn ở Ấn Độ.','chuyển cả ba sang Ai Cập vì cùng xuất hiện thời cổ đại.','giữ nguyên vì mọi thành tựu phương Đông đều phát sinh ở Ấn Độ.'],0,'Giấy, kĩ thuật in, la bàn thuộc nhóm phát minh Trung Hoa; hệ chữ số là đóng góp Ấn Độ.'),
+      q('Một triển lãm chỉ giới thiệu kim tự tháp và đền thờ để giải thích “văn minh”. Điều cần bổ sung là', ['tổ chức nhà nước, đô thị, chữ viết và các thành tựu vật chất, tinh thần khác.','chỉ thêm công cụ đá để chứng minh mọi cộng đồng đều đã có văn minh.','loại kiến trúc khỏi triển lãm vì nó không thuộc văn minh.','chỉ thêm tranh hiện đại vì văn minh không có ở thời cổ đại.'],0,'Kiến trúc là một biểu hiện; nhận diện văn minh cần xét nhiều lĩnh vực và trình độ tổ chức xã hội.'),
+      q('Ngôi chùa ở Đông Nam Á có hình tượng Phật và bố cục kiến trúc địa phương. Cách giải thích phù hợp là', ['yếu tố từ Ấn Độ được tiếp nhận rồi biến đổi trong bối cảnh bản địa.','hình tượng Phật là bằng chứng tất cả thiết kế đều sao chép nguyên xi.','bố cục địa phương phủ nhận mọi giao lưu tôn giáo.','chỉ công trình xây tại Ấn Độ mới có thể gắn với Phật giáo.'],0,'Sự kết hợp yếu tố ngoại lai và bản địa là dấu hiệu tiếp biến văn hóa.'),
+      q('Bảng giới thiệu ghi Nho giáo, Đạo giáo và Mặc gia thuộc tư tưởng Ấn Độ. Cách sửa đúng là', ['xếp chúng vào truyền thống tư tưởng Trung Hoa; không đồng nhất với Phật giáo và Ấn Độ giáo.','chỉ chuyển Nho giáo sang Trung Hoa, giữ hai học thuyết còn lại.','chuyển cả ba sang Ai Cập vì cùng thuộc thời cổ đại.','xếp chúng vào các tôn giáo có nguồn gốc Hy Lạp.'],0,'Ba học thuyết hình thành ở Trung Hoa; Phật giáo, Ấn Độ giáo gắn với Ấn Độ.'),
+      q('Muốn chứng minh ảnh hưởng của một thành tựu ngoại lai ở Việt Nam, lập luận nào đủ chặt chẽ nhất?', ['Chỉ ra nguồn gốc, dấu vết tiếp nhận, thời điểm và cách người Việt biến đổi, sử dụng nó.','Chỉ cần hai hiện vật có hình thức giống nhau là kết luận có ảnh hưởng trực tiếp.','Chỉ cần thành tựu xuất hiện sớm hơn ở nước khác là kết luận Việt Nam sao chép.','Chỉ cần tên gọi tương tự là kết luận công dụng và ý nghĩa hoàn toàn như nhau.'],0,'Tương đồng hoặc thứ tự thời gian chưa đủ; cần chứng cứ về giao lưu và sự tiếp biến.'),
+      q('Hai hệ chữ cổ có nét vẽ giống nhau. Một người khẳng định chữ Hán bắt nguồn trực tiếp từ chữ tượng hình Ai Cập. Đánh giá phù hợp là', ['sự giống nhau về hình dạng chưa chứng minh quan hệ nguồn gốc; cần chuỗi tư liệu về thời gian và giao lưu.','cứ cùng dùng hình vẽ thì một hệ chữ nhất định bắt nguồn từ hệ còn lại.','hệ chữ xuất hiện sau luôn sao chép nguyên xi hệ xuất hiện trước.','không thể nghiên cứu quan hệ giữa các hệ chữ bằng tư liệu khảo cổ.'],0,'Quan hệ nguồn gốc cần chứng cứ về quá trình truyền bá, không chỉ dựa vào tương đồng bề mặt.')
+    ]
+  };
+  // Mỗi câu dưới đây có thêm một phương án gần đúng về mặt chủ đề và độ dài,
+  // nhưng sai ở suy luận hoặc nguồn chứng cứ. Không đổi vị trí đáp án đúng.
+  const closeFoils = {
+    b1n: {
+      1:'những văn bản và hiện vật phản ánh hoạt động của con người tại làng nghề qua nhiều giai đoạn.',
+      3:'Một bia đá được chuyển tới phòng lưu trữ sau khi nhóm nghiên cứu hoàn thành đối chiếu tư liệu.',
+      4:'Chỉ chọn một nguồn có niên đại sớm nhất vì nó gần thời điểm hình thành di tích hơn các nguồn khác.',
+      5:'Dùng tri thức lịch sử để xác định niên đại và xuất xứ tư liệu, đồng thời dừng ở bước phân loại nguồn.',
+      6:'Chỉ lời kể có người trực tiếp chứng kiến mới là sử liệu; lời kể được truyền lại không thể khảo cứu.',
+      7:'Tư liệu mới chỉ làm thay đổi nhận thức khi nó thuộc cùng loại với những tư liệu đã được sử dụng.'
+    },
+    b1h: {
+      0:'ưu tiên niên đại của công trình công bố sau vì lớp khảo sát mới luôn phản ánh thời điểm xây dựng đầu tiên.',
+      1:'dựa vào phong cách kiến trúc trong ảnh để xác định năm chụp mà không cần tìm hồ sơ lưu ảnh.',
+      2:'coi bản đồ khảo cổ mới là bằng chứng đủ để xác định vị trí thành cổ trong mọi thời kì tồn tại.',
+      3:'chọn số liệu của sổ đăng kí vì biểu mẫu hành chính phản ánh đầy đủ mọi người từng di cư.',
+      4:'Mảnh gốm chắc chắn thuộc lần xây đầu tiên nếu được đào thấy trong khuôn viên di tích.',
+      5:'chọn ảnh kèm bài viết được đăng sớm hơn vì chú thích ở thời điểm sớm gần sự kiện hơn.',
+      6:'Năm xây công trình trong quá khứ thay đổi theo niên đại được giới nghiên cứu chấp nhận gần đây nhất.',
+      7:'coi nhật kí ghi gần sự kiện là nguồn đáng tin hơn về mọi chi tiết mà không cần xét tác giả và mục đích ghi.',
+      8:'chọn tên trong bia ký rồi xem truyền thuyết chỉ là cách diễn đạt khác của cùng tên ấy.',
+      9:'dùng câu trích làm căn cứ nếu nó có tên làng, còn phần đối tượng được phong trong sắc phong không cần xét.'
+    },
+    b2h: {
+      1:'ưu tiên kỉ yếu vì được biên tập trước khi in, chỉ phỏng vấn để bổ sung những năm kỉ yếu không đề cập.',
+      3:'chọn bài có bản quét văn bản cổ mà không cần xét văn bản nói về khai khẩn hay lập đơn vị hành chính.',
+      4:'Dùng phim truyện về di tích để điền vào những chi tiết mà hồ sơ và hiện vật không còn lưu lại.',
+      5:'xác định nội dung ảnh theo lời kể của người đăng vì họ có thể đã tiếp cận bản gốc trước người xem.',
+      6:'nếu hai nguồn độc lập trùng địa điểm thì có thể dùng số liệu quy mô của nguồn chi tiết hơn làm kết luận.',
+      7:'Kiểm tra số liệu thủy văn hiện tại trước khi chọn một kinh nghiệm phòng lũ từ tư liệu xưa.'
+    },
+    b3n: {
+      1:'Sử học xác định giá trị di tích, còn du lịch chỉ có thể tạo nguồn thu chứ không liên quan tới bảo tồn.',
+      3:'Phục dựng phần đã mất theo bản vẽ còn lưu và ghi phần ấy là cấu trúc gốc, vì có tư liệu xác nhận.',
+      5:'Ưu tiên cách giải thích đã in trong sách cũ dù phát hiện tư liệu mới về xuất xứ bản chép tay.',
+      6:'đưa khách đi trực tiếp trên nền gạch cổ vào giờ vắng để vẫn giữ nguyên trải nghiệm gốc của di tích.',
+      7:'suy xuất xứ theo nơi trống được bảo tàng tiếp nhận rồi ghi điều đó như thông tin đã xác nhận.',
+      8:'chọn bia ký làm nguồn chính và chỉ dùng ảnh, lời kể nếu chúng thống nhất hoàn toàn với nội dung bia.',
+      9:'tăng thu phí tham quan để có ngân sách tu bổ về sau mà chưa cần theo dõi tác động hiện tại.'
+    },
+    b4h: {
+      0:'Tượng Phật và hoa văn bản địa cho thấy thợ địa phương xây di tích, không cần xét thêm các nguồn về tác giả.',
+      1:'Văn hóa có trước văn minh nhưng chỉ gồm giá trị tinh thần, còn văn minh là toàn bộ giá trị vật chất.',
+      2:'Văn bản dùng chữ Hán thì phải do người am hiểu Trung Hoa sáng tác, không cần xét nội dung và xuất xứ.',
+      3:'ghi người Ấn Độ sáng tạo chữ số 0, còn hệ các chữ số 1–9 phát triển độc lập từ cách ghi số La Mã.',
+      4:'chỉ chuyển giấy và in sang Trung Hoa; giữ la bàn ở Ấn Độ vì đều thuộc tuyến giao lưu phương Đông.',
+      5:'Chỉ cần thêm tên các công trình kiến trúc cổ ở nhiều vùng là đủ đại diện cho mọi mặt của văn minh.',
+      6:'hình tượng Phật cho biết công trình tiếp nhận tôn giáo Ấn Độ, còn mọi trang trí bản địa là phần thêm muộn.',
+      7:'chỉ chuyển Nho giáo sang Trung Hoa; giữ Đạo giáo và Mặc gia trong nhóm Ấn Độ vì cùng bàn về đạo đức.',
+      8:'nếu một thành tựu có trước ở nước khác thì đủ kết luận Việt Nam tiếp nhận trực tiếp, dù thiếu dấu vết giao lưu.',
+      9:'các nét giống nhau cho phép giả định chữ Hán bắt nguồn từ Ai Cập mà không cần kiểm tra mốc thời gian.'
+    }
+  };
+  for (const [tag, replacements] of Object.entries(closeFoils)) {
+    for (const [index, text] of Object.entries(replacements)) {
+      const question = window.historyMidtermHardBanks[tag][Number(index)];
+      question[1][(question[2] + 1) % 4] = text;
+    }
+  }
+  // Phân tán độ dài các đáp án: không để phương án đúng luôn dài nhất hoặc dài nhì.
+  const additionalFoils = {
+    b1n: {
+      1:['chỉ những người tham gia lập làng nghề và các tác phẩm do họ để lại, không xét sự biến đổi về sau.'],
+      3:['Một trận lũ làm đổi hướng dòng sông cạnh di tích, sau đó được người dân ghi lại trong nhiều hồi kí.','Một bia đá được dựng tại di tích vào thế kỉ XVII và được chuyển đến nơi lưu giữ sau này.']
+    },
+    b1h: {
+      0:['xem niên đại sớm hơn là niên đại xây toàn bộ di tích vì các giai đoạn sửa chữa không tạo nên di tích mới.'],
+      1:['so sánh bề mặt giấy ảnh với các ảnh cùng kiểu rồi lấy niên đại phổ biến nhất làm thời điểm chụp.']
+    },
+    b2h: {
+      1:['ghép lời kể và hồ sơ thành một bản tường thuật chung, sau đó chỉ ghi nguồn khi hai loại tư liệu khác nhau.','lấy niên đại trong kỉ yếu làm chuẩn, còn lời kể chỉ được dùng nếu người kể trực tiếp học tại trường.'],
+      3:['dùng sự trùng nhau của tên làng hiện nay trong hai bài để xác nhận cả hai đang nói về cùng mốc lập làng.']
+    },
+    b3n: {
+      1:['có khách tham quan đông thì thông tin lịch sử có thể được điều chỉnh theo thị hiếu để gây quỹ bảo tồn.','Sử học chủ yếu xác định niên đại trước khi mở cửa di tích, còn sau đó nội dung du lịch ít cần cập nhật.'],
+      3:['giấu những đợt tu sửa không có hồ sơ vì người xem chỉ cần biết niên đại xây dựng được ghi trên bia.'],
+      5:['ưu tiên diễn giải quen thuộc của bản chép tay dù nguồn mới cho thấy nó từng được sửa ở thời kì sau.','tăng trưng bày bản chép tay để thu hút khách rồi dùng doanh thu ấy thay cho công tác lưu trữ.'],
+      7:['chọn xuất xứ của chiếc trống có hoa văn gần giống nhất, vì kiểu trang trí là căn cứ đủ để xác định nơi tìm thấy.']
+    },
+    b4h: {
+      0:['hoa văn địa phương chứng minh ngôi chùa chỉ sử dụng ảnh hưởng Ấn Độ ở tượng, còn bố cục ban đầu là bản địa.'],
+      1:['văn minh là trình độ phát triển cao nhưng chỉ xét tổ chức nhà nước, còn văn hóa chỉ xét đời sống tinh thần.']
+    }
+  };
+  for (const [tag, replacements] of Object.entries(additionalFoils)) {
+    for (const [index, texts] of Object.entries(replacements)) {
+      const question = window.historyMidtermHardBanks[tag][Number(index)];
+      texts.forEach((text, offset) => { question[1][(question[2] + offset + 2) % 4] = text; });
+    }
+  }
+})();
