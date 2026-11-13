@@ -108,7 +108,7 @@ renderResult=function(r){
   }
   detail.textContent=score.max === 0 ? 'Bài này gồm câu tự luận, hệ thống không tự chấm điểm.' : `${score.correct}/${score.total} ý đúng · Điểm theo bố cục bài luyện, không quy đổi về thang 10.`;
   const essayBadge=(examObj && Array.isArray(examObj.essay) && examObj.essay.length > 0)?`<span>Phần ${examObj.short?.length ? 'IV' : 'III'} <b>${pointText(score.essay||0)} / ${pointText(score.essayMax||0)}</b></span>`:'';
-  detail.insertAdjacentHTML('afterend',`<div class="score-breakdown"><span>Phần I <b>${pointText(score.mc)} / ${pointText(examObj.questions.length*mcUnit)}</b></span>${r.total===examObj.questions.length?'':`<span>Phần II <b>${pointText(score.tf)} / ${pointText(examObj.tf.length)}</b></span><span>Phần III <b>${pointText(score.short)} / ${pointText(examObj.short.length*sUnit)}</b></span>`}${essayBadge}</div>`);
+  detail.insertAdjacentHTML('afterend',`<div class="score-breakdown"><span>Phần I <b>${pointText(score.mc)} / ${pointText(examObj.questions.length*mcUnit)}</b></span>${r.total===examObj.questions.length?'':`<span>Phần II <b>${pointText(score.tf)} / ${pointText(examObj.tf.length)}</b></span>${examObj.short.length?`<span>Phần III <b>${pointText(score.short)} / ${pointText(examObj.short.length*sUnit)}</b></span>`:''}`}${essayBadge}</div>`);
 };
 const previousHistory=history;
 history=function(){previousHistory();document.querySelectorAll('.history-item').forEach(item=>{const index=Number(item.querySelector('[data-review]')?.dataset.review),r=saved()[index],score=r&&scoreForResult(r);if(!score)return;item.querySelector('.history-score').textContent=score.max===0?'Tự luyện':`${pointText(score.points)} / ${pointText(score.max)} điểm`;if(score.max>0)item.querySelector('small').textContent+=` · ${score.correct}/${score.total} ý đúng`})};
@@ -129,7 +129,7 @@ reviewPast=function(index){
     const detail=panel.querySelectorAll(':scope > p')[1];
     if(detail){
     const essayBadge = (Array.isArray(e.essay) && e.essay.length > 0) ? `<span>Phần ${e.short?.length ? 'IV' : 'III'} <b>${pointText(score.essay||0)} / ${pointText(score.essayMax||0)}</b></span>` : '';
-      detail.insertAdjacentHTML('afterend',`<div class="score-breakdown"><span>Phần I <b>${pointText(score.mc)} / ${pointText(e.questions.length*mcUnit)}</b></span>${r.total===e.questions.length?'':`<span>Phần II <b>${pointText(score.tf)} / ${pointText(e.tf.length)}</b></span><span>Phần III <b>${pointText(score.short)} / ${pointText(e.short.length*sUnit)}</b></span>`}${essayBadge}</div>`);
+      detail.insertAdjacentHTML('afterend',`<div class="score-breakdown"><span>Phần I <b>${pointText(score.mc)} / ${pointText(e.questions.length*mcUnit)}</b></span>${r.total===e.questions.length?'':`<span>Phần II <b>${pointText(score.tf)} / ${pointText(e.tf.length)}</b></span>${e.short.length?`<span>Phần III <b>${pointText(score.short)} / ${pointText(e.short.length*sUnit)}</b></span>`:''}`}${essayBadge}</div>`);
     }
   }
   if(typeof tryRenderKatex==='function')tryRenderKatex(panel);

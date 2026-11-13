@@ -39,7 +39,7 @@ function normalizeExam(e) {
   if (!e.minutes && e.duration) e.minutes = e.duration;
   if (!e.minutes) e.minutes = e.subject === 'math' ? 90 : 45;
   if (!e.description) {
-    e.description = `Bộ đề kiểm tra giữa học kì I môn ${e.subject === 'math' ? 'Toán 10' : e.subject === 'chemistry' ? 'Hóa học 10' : e.subject === 'english' ? 'Tiếng Anh 10' : 'Vật lí 10'}.`;
+    e.description = `Bộ đề kiểm tra giữa học kì I môn ${e.subject === 'math' ? 'Toán 10' : e.subject === 'chemistry' ? 'Hóa học 10' : e.subject === 'english' ? 'Tiếng Anh 10' : e.subject === 'history' ? 'Lịch sử 10' : 'Vật lí 10'}.`;
   }
   
   const letterMap = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 };
@@ -87,7 +87,7 @@ function normalizeExam(e) {
 // Khởi tạo danh sách đề thi (dùng let để an toàn không lỗi const)
 let exams = [];
 const rawData = (typeof suppliedExams !== 'undefined' && Array.isArray(suppliedExams) && suppliedExams.length > 0)
-  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof window !== 'undefined' && Array.isArray(window.chemistryIllustrative02) ? window.chemistryIllustrative02 : []), ...(typeof agricultureExams !== 'undefined' ? agricultureExams : []), ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof window !== 'undefined' && Array.isArray(window.physicsPaperExams) ? window.physicsPaperExams : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams.filter(e => !String(e.id || '').startsWith('vatli-10-tailieu')) : [])]
+  ? [...(typeof newMathExams !== 'undefined' ? newMathExams : []), ...suppliedExams, ...(typeof window !== 'undefined' && Array.isArray(window.historyMidtermExams) ? window.historyMidtermExams : []), ...(typeof window !== 'undefined' && Array.isArray(window.chemistryIllustrative02) ? window.chemistryIllustrative02 : []), ...(typeof agricultureExams !== 'undefined' ? agricultureExams : []), ...(typeof mathDakLak1001 !== 'undefined' ? mathDakLak1001 : []), ...(typeof mathLeLoi102 !== 'undefined' ? mathLeLoi102 : []), ...(typeof physicsDongHa1004 !== 'undefined' ? physicsDongHa1004 : []), ...(typeof window !== 'undefined' && Array.isArray(window.physicsPaperExams) ? window.physicsPaperExams : []), ...(typeof originalPdfExams !== 'undefined' ? originalPdfExams.filter(e => !String(e.id || '').startsWith('vatli-10-tailieu')) : [])]
   : (typeof window !== 'undefined' && Array.isArray(window.suppliedExams) && window.suppliedExams.length > 0)
     ? window.suppliedExams
     : (typeof mathExams !== 'undefined' && typeof extraExams !== 'undefined')
@@ -249,6 +249,7 @@ function getSubjectMeta(subj) {
   if (subj === 'chemistry') return { icon: '🧪', name: 'HÓA HỌC 10', color: '#d76fab', bg: '#fceaf4', id: 5 };
   if (subj === 'english') return { icon: 'Aa', name: 'TIẾNG ANH 10', color: '#ec8e63', bg: '#fff0e8', id: 4 };
   if (subj === 'agriculture') return { icon: '♣', name: 'CÔNG NGHỆ NÔNG NGHIỆP 10', color: '#4f8a2f', bg: '#eef7e7', id: 3 };
+  if (subj === 'history') return { icon: '☸', name: 'LỊCH SỬ 10', color: '#a66a0a', bg: '#fff4df', id: 6 };
   return { icon: '⚛️', name: 'VẬT LÝ 10', color: '#4b9ad8', bg: '#e7f4ff', id: 1 };
 }
 
@@ -303,7 +304,7 @@ function card(e) {
       <span>⏱&nbsp; ${minutes} phút</span>
       <span>📋&nbsp; ${qCount} trắc nghiệm</span>
       <span>☑&nbsp; ${tfCount} đúng/sai</span>
-      <span>✍&nbsp; ${shortCount} trả lời ngắn</span>
+      ${shortCount ? `<span>✍&nbsp; ${shortCount} trả lời ngắn</span>` : ''}
       ${(e.essay && e.essay.length > 0) ? `<span>📝&nbsp; ${e.essay.length} tự luận</span>` : ''}
     </div>
     ${sourceLine(e)}
@@ -320,6 +321,7 @@ function tiles() {
     if (i === 0) cnt = exams.filter(e => e.subject === 'math').length;
     else if (i === 1) cnt = exams.filter(e => e.subject === 'physics').length;
     else if (i === 5) cnt = exams.filter(e => e.subject === 'chemistry').length;
+    else if (i === 6) cnt = exams.filter(e => e.subject === 'history').length;
     const label = cnt > 0 ? `${cnt} đề thi sẵn sàng` : 'Sắp cập nhật đề thi';
     return `<button class="subject-tile" data-subjectto="${i}">
       <span class="tile-icon" style="background:${s[2]};color:${s[3]}">${s[1]}</span>
@@ -337,7 +339,7 @@ function home() {
       <div class="hero-copy">
         <span class="eyebrow">🚀&nbsp; PHÒNG LUYỆN THI TRỰC TUYẾN 2026–2027</span>
         <h1>Học tập hôm nay,<br>tự tin ngày mai.</h1>
-        <p>Hệ thống ôn luyện trực tuyến với trọn bộ ${exams.length} đề thi chuẩn cấu trúc mới Bộ GD&ĐT (Toán 10, Vật lí 10, Hóa học 10), chấm điểm tức thì và hướng dẫn giải chi tiết.</p>
+        <p>Hệ thống ôn luyện trực tuyến với ${exams.length} đề thuộc nhiều môn lớp 10, trong đó có đề luyện Lịch sử theo ma trận chuyên Sử; nộp bài, xem điểm và hướng dẫn giải.</p>
       </div>
       <div class="hero-art">
         <div class="orbit"></div>
@@ -395,6 +397,10 @@ function catalog(index) {
     filtered = exams.filter(e => e.subject === 'chemistry');
     title = 'Hóa học 10 · Kho đề thi giữa kì I';
     subtitle = `Trọn bộ ${filtered.length} đề thi Hóa học 10 (thời gian làm bài 45 phút), cấu trúc chuẩn 3 phần có lời giải chi tiết.`;
+  } else if (index === 6) {
+    filtered = exams.filter(e => e.subject === 'history');
+    title = 'Lịch sử 10 · Đề luyện giữa kì I';
+    subtitle = `${filtered.length} đề luyện tập 90 phút, mỗi đề gồm 12 câu nhiều lựa chọn, 4 nhóm đúng/sai và 2 câu tự luận theo ma trận chuyên Sử.`;
   } else if (index !== undefined) {
     filtered = [];
     title = subjects[index][0];
@@ -411,6 +417,7 @@ function catalog(index) {
       <button class="filter ${index === 0 ? 'active' : ''}" data-subjectto="0">Toán 10 (${exams.filter(e => e.subject === 'math').length})</button>
       <button class="filter ${index === 1 ? 'active' : ''}" data-subjectto="1">Vật lý 10 (${exams.filter(e => e.subject === 'physics').length})</button>
       <button class="filter ${index === 5 ? 'active' : ''}" data-subjectto="5">Hóa học 10 (${exams.filter(e => e.subject === 'chemistry').length})</button>
+      <button class="filter ${index === 6 ? 'active' : ''}" data-subjectto="6">Lịch sử 10 (${exams.filter(e => e.subject === 'history').length})</button>
     </div>
     ${filtered.length ? `<div class="cards">${filtered.map(card).join('')}</div>` : `<div class="notice"><b>Bộ đề ${esc(title)} sẽ xuất hiện tại đây.</b><br>Hiện tại, bạn có thể luyện tập với trọn bộ ${exams.length} đề Toán 10, Vật lý 10 và Hóa học 10.<br><br><button class="primary" data-viewto="subjects">Xem tất cả đề thi ➔</button></div>`}
     ${index === undefined ? `<section class="lower-section"><div class="section-head"><h2>Danh mục môn học</h2></div>${tiles()}</section>` : ''}
@@ -627,7 +634,7 @@ function renderOriginalPdfExam(e) {
   const base = pdf.replace(/\.pdf$/i, '');
   const pageCount = Math.max(1, Number(e.pageCount) || 1);
   const sm = getSubjectMeta(e.subject);
-  const subjectIndex = { math: 0, physics: 1, agriculture: 3, english: 4, chemistry: 5 }[e.subject];
+  const subjectIndex = { math: 0, physics: 1, agriculture: 3, english: 4, chemistry: 5, history: 6 }[e.subject];
   const subjectLabel = String(sm.name || 'Lớp 10').toUpperCase();
   app.innerHTML = `<div class="content original-pdf-exam">
     <div class="original-pdf-toolbar">
@@ -1183,7 +1190,7 @@ function renderResult(r) {
           </div>`;
         }).join('')}
 
-        <h3>Phần II · Trắc nghiệm Đúng / Sai (2 câu)</h3>
+        <h3>Phần II · Trắc nghiệm Đúng / Sai (${(e.tf || []).length} câu)</h3>
         ${(e.tf || []).map((q, i) => `<div class="review-item">
           <div class="review-item-header">
             <span class="review-part-tag">Phần II · Đúng / Sai</span>
@@ -1211,7 +1218,7 @@ function renderResult(r) {
           }).join('')}
         </div>`).join('')}
 
-        <h3>Phần III · Trả lời ngắn (4 câu)</h3>
+        ${(e.short || []).length ? `<h3>Phần III · Trả lời ngắn (${e.short.length} câu)</h3>` : ''}
         ${(e.short || []).map((q, i) => {
           const user = r.answers['s' + i];
           const ok = shortCorrect(user, q.answer, q);
